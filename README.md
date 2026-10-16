@@ -51,6 +51,18 @@ npm start                     # 打开 http://127.0.0.1:8787
 
 本机用 http 访问时，务必把 `.env` 里的 `COOKIE_SECURE` 设为 `false`，否则浏览器不会保存会话 cookie（表现为"登录后仍是未登录"）。
 
+### 构建报 `remove ...\Temp\esbuild-xxxx: Access is denied.` 怎么办
+
+不用处理，已经内置解决了。`web` 的 `dev` / `build` / `preview` 都走 `scripts/run-vite.mjs` 包装，
+它在启动 Vite 前把 `TMPDIR` / `TEMP` / `TMP` 指向项目内的 `.tmp/`，于是 esbuild 的中间文件
+不再落在系统临时目录，也就不会出现"删不掉系统 Temp 文件"的失败。
+
+已验证：包装脚本下 `os.tmpdir()` 返回 `<项目>/.tmp`，默认环境则是 `C:\Users\...\Temp\dsh-xxxx`。
+如果你的机器上仍然报这个错，说明有别的进程（杀毒软件、同步盘）锁住了 `.tmp/`，可以删掉该目录重试。
+
+> 另有一个不同的错误值得区分：`Error: spawn EPERM` 表示**当前环境禁止启动子进程或 worker 线程**，
+> 这是沙箱/受管终端的限制，不是项目问题——换一个普通终端或在 Docker 里构建即可。
+
 ### 开发模式（前后端分离，带热更新）
 
 ```bash
