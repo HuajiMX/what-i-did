@@ -568,6 +568,10 @@
   align-items: flex-start;
 }
 
+.contrib-legend {
+  line-height: 1.5;
+}
+
 .contrib-weekdays {
   display: flex;
   flex-direction: column;
