@@ -785,33 +785,24 @@
 }
 
 /*
- * 列宽与间距的取舍：
- *   间距固定 3px（不要动它——收到 2px 会明显发闷）
- *   格子略小靠"给列宽封顶"实现，而不是压间距：
- *     移动端 minmax(0, 12px)  —— 容器更窄时列可收缩，不会溢出
- *     桌面端 minmax(10px, 1fr) 且用 max-height 把格子压成矮矩形 ——
- *       这样 53 列铺满容器，行距仍是 格高 + 3px，周标签的定位算得准；
- *       若让格子保持正方形，行距会变成 格子宽 + 3px（约 18px），标签模板就跟着变
+ * 列宽策略：格子必须始终是正方形，两端共用同一套尺寸。
+ *
+ *   53 列 × (12 + 3) 约 800px，桌面容器约 990px —— 两者无法同时满足
+ *   "格子正方形"和"铺满容器"。这里选择几何正确：格子保持 12×12，
+ *   多余空间留在右侧。
+ *
+ *   反面方案（已试过、不要再用）：把列设成 minmax(10px, 1fr) 并把格子 max-height 封在
+ *   12px —— 那样列会被拉到 15.8px、格子变成 15.8×12 的长方形。视觉上很别扭。
+ *
+ *   移动端容器放不下就横向滚动（不能用 minmax(0, 12px)：下限为 0 会让列无限收缩，
+ *   实测 53 列被塞进 310px、每格只剩 2.9px）。
  */
 .contrib-grid {
   display: inline-grid;
-  /* 移动端列宽固定 12px：容器放不下就横向滚动。
-     这里不能用 minmax(0, 12px)——那允许列无限收缩，
-     53 列会被塞进 310px 的容器里、每格剩 2.9px（实测踩过）。 */
   grid-template-columns: repeat(var(--weeks, 53), 12px);
   grid-template-rows: 16px repeat(7, 12px);
   gap: 3px;
   grid-auto-flow: column;
-}
-
-/* 桌面端：53 列铺满容器（下限 10px 仅为兜底，正常情况下由 1fr 分配） */
-@media (min-width: 900px) {
-  .contrib-grid {
-    display: grid;
-    grid-template-columns: repeat(var(--weeks, 53), minmax(10px, 1fr));
-    /* 行轨道给 auto：列被放大后格子靠 max-height 压成矮矩形，行高仍以 12px 为准 */
-    grid-template-rows: 16px repeat(7, 12px);
-  }
 }
 
 /*
@@ -858,16 +849,12 @@
   pointer-events: none;
 }
 
-/* 列优先：每周一列、周内 7 天向下排列。
-   高度封顶在 12px：桌面端列被放大到约 15px 时，格子仍是矮矩形而不是正方形，
-   行距因此稳定为 12 + 3 = 15px，周标签的定位模板才算得准。 */
+/* 列优先：每周一列、周内 7 天向下排列。格子恒为 12×12 正方形。 */
 .contrib-cell {
   width: 100%;
   aspect-ratio: 1 / 1;
-  max-height: 12px;
   border-radius: 3px;
-  /* 选中环用 inset 阴影而不是 border：border 会把格子撑大 2px，
-     而桌面端 53 列刚好铺满容器，多出的宽度会让最右侧格子溢出 */
+  /* 选中环用 inset 阴影而不是 border：border 会把格子撑大 2px、破坏列对齐 */
   border: none;
   box-shadow: inset 0 0 0 1px transparent;
   background: var(--surface-3);
