@@ -44,10 +44,9 @@ async function call(method, url, body, { retries = 6 } = {}) {
 
     if (response.status === 429 && attempt < retries) {
       throttledRetries += 1;
-      const text = await response.text();
-      const waitMatch = /(\d+)\s*分钟/.exec(text);
-      // 服务端只回报"还有几分钟"，这里按分钟粒度退避；上限 65 秒避免脚本卡太久
-      const waitMs = waitMatch ? Math.min(Number(waitMatch[1]) * 60_000, 65_000) : 5_000;
+      await response.text();
+      // 写限速是"每分钟"窗口，固定退避 12 秒；等待次数上限由 retries 控制（默认可等约 2 分钟）
+      const waitMs = 12_000;
       console.log(`· 触发写限速，等待 ${Math.round(waitMs / 1000)} 秒后重试 ${method} ${url}`);
       await new Promise((resolve) => setTimeout(resolve, waitMs));
       continue;
@@ -118,16 +117,27 @@ for (const tag of TAGS) {
 
 // ── 第四步：活动记录（覆盖 75 天，含跨月）──────────────────────────────
 console.log("\n--- 活动记录 ---");
+const rangeFrom = isoDate(74);
+const rangeTo = isoDate(0);
+// 记下写入前的存量，最后用"增量"核对，避免库里已有旧数据时误报
+const totalBefore = (await call("GET", `/api/stats/summary?from=${rangeFrom}&to=${rangeTo}`)).body?.overall?.total ?? 0;
 // 分开统计：combos 是 (日期,Tag) 组合数，rows 是活动记录行数（同一 Tag 记多次就是多行）
 let combos = 0;
 let rows = 0;
 let noteCount = 0;
 let writeErrors = 0;
 
+/** 写入类请求统一用更多重试次数：一次批量导入会撞上每分钟 120 次的写限速 */
+const WRITE_OPTS = { retries: 20 };
+
 /** 记录一次活动的写结果，写失败必须计数（否则就是静默丢数据） */
 async function addActivity(date, tagId, times = 1) {
-  const res = await call("POST", times > 1 ? "/api/activities/bulk" : "/api/activities",
-    times > 1 ? { date, tag_id: tagId, times } : { date, tag_id: tagId });
+  const res = await call(
+    "POST",
+    times > 1 ? "/api/activities/bulk" : "/api/activities",
+    times > 1 ? { date, tag_id: tagId, times } : { date, tag_id: tagId },
+    WRITE_OPTS,
+  );
   if (res.status !== 201) {
     writeErrors += 1;
     console.error(`✗ 写入活动失败 ${date} tag=${tagId} times=${times} → ${res.status} ${JSON.stringify(res.body)}`);
@@ -138,7 +148,7 @@ async function addActivity(date, tagId, times = 1) {
 }
 
 async function addNote(date, content) {
-  const res = await call("POST", "/api/notes", { date, content });
+  const res = await call("POST", "/api/notes", { date, content }, WRITE_OPTS);
   if (res.status !== 201) {
     writeErrors += 1;
     console.error(`✗ 写入随手记失败 ${date} → ${res.status} ${JSON.stringify(res.body)}`);
@@ -202,10 +212,12 @@ console.log("\n--- 核对 ---");
 const from = isoDate(74);
 const to = isoDate(0);
 const summary = await call("GET", `/api/stats/summary?from=${from}&to=${to}`);
+// 与"写入前的存量"做差比较：库里可能已有旧数据，直接比总数会误报
+const delta = (summary.body?.overall?.total ?? -1) - totalBefore;
 check(
-  "统计总次数与写入行数一致",
-  summary.body?.overall?.total === rows,
-  `区间 ${from} ~ ${to}，写入 ${rows} 行，接口返回 ${summary.body?.overall?.total}，活跃 ${summary.body?.overall?.activeDays} 天`,
+  "统计总次数的增量与写入行数一致",
+  delta === rows,
+  `区间 ${from} ~ ${to}：写入 ${rows} 行，接口总数 ${summary.body?.overall?.total}（写入前 ${totalBefore}，增量 ${delta}）`,
 );
 // 当前连续天数取决于"今天/昨天是否有记录"，随机数据下可能为 0，只要在合理范围内即可
 const streak = summary.body?.streak?.current ?? -1;

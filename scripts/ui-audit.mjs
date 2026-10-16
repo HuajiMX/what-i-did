@@ -58,10 +58,7 @@ for (const file of files.filter((f) => f.endsWith(".tsx"))) {
 }
 
 // 模板串拼接前缀（如 `level-${n}`）单独核对：检查 CSS 里是否存在同前缀的类名
-const TEMPLATE_PREFIXES = [
-  { prefix: "level-", where: "web/src/pages/NotesPage.tsx" },
-  { prefix: "sheet-", where: "web/src/components/Sheet.tsx" },
-];
+const TEMPLATE_PREFIXES = [{ prefix: "level-", where: "web/src/pages/NotesPage.tsx" }];
 for (const { prefix, where } of TEMPLATE_PREFIXES) {
   const has = [...defined].some((name) => name.startsWith(prefix));
   if (!has) missing.push({ token: `${prefix}*（模板串拼接）`, file: where });

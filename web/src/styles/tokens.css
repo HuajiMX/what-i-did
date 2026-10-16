@@ -5,7 +5,8 @@
    ========================================================================== */
 
 :root {
-  /* 中性色 */
+  /* 中性色。text-dim / text-faint 的取值由 scripts/audit-contrast.mjs 保证：
+     两者在最差背景上都不低于 WCAG AA 的 4.5:1（原来的 #97979d 只有 2.8:1，小字看不清）。 */
   --bg: #fbfbfa;
   --surface: #ffffff;
   --surface-2: #f4f4f2;
@@ -14,7 +15,7 @@
   --border-strong: #d2d2ce;
   --text: #1a1a1c;
   --text-dim: #6b6b70;
-  --text-faint: #97979d;
+  --text-faint: #717177;
 
   /* 主色（用于强调、链接、选中态） */
   --accent: #4f46e5;
@@ -22,9 +23,9 @@
   --accent-soft: #eef2ff;
   --accent-ring: rgba(79, 70, 229, 0.35);
 
-  --danger: #dc2626;
+  --danger: #c9241c;
   --danger-soft: #fef2f2;
-  --success: #16a34a;
+  --success: #15803d;
 
   /* Tag 配色调色板：与 server/src/validate.js 的 TAG_COLORS 一一对应 */
   --tag-red: #e5484d;
@@ -58,6 +59,20 @@
   /* 过渡 */
   --t-fast: 120ms ease;
   --t-base: 200ms ease;
+
+  /* 间距刻度。所有卡片、区块、控件间距都从这里取值，
+     避免各处手写 padding 导致"边距看起来总差一点"。 */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+
+  /* 区块纵向间距与卡片内边距：移动端收紧，桌面端放宽（见文件末尾） */
+  --gap-block: 16px;
+  --card-pad: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,14 +85,15 @@
     --border-strong: #3d3d44;
     --text: #f2f2f4;
     --text-dim: #a3a3ab;
-    --text-faint: #75757e;
+    --text-faint: #8f8f98;
 
-    --accent: #8b85f5;
-    --accent-hover: #a29cff;
+    /* 深色下主色要更暗一点：白字放在亮紫上对比度不足（原 #a29cff 只有 2.4:1） */
+    --accent: #8079f2;
+    --accent-hover: #8a82f4;
     --accent-soft: #1e1b3a;
-    --accent-ring: rgba(139, 133, 245, 0.4);
+    --accent-ring: rgba(128, 121, 242, 0.45);
 
-    --danger: #f87171;
+    --danger: #e5645f;
     --danger-soft: #2a1618;
     --success: #4ade80;
 
@@ -94,5 +110,13 @@
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* 桌面端放宽区块间距，避免窄屏的紧凑节奏在大屏上显得拥挤 */
+@media (min-width: 900px) {
+  :root {
+    --gap-block: 24px;
+    --card-pad: 20px;
   }
 }

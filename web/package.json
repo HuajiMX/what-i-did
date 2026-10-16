@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node ../scripts/run-vite.mjs",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
-    "build": "node ../scripts/run-vite.mjs build && node ../scripts/check-bundle-size.mjs && node ../scripts/check-icon-names.mjs && node ../scripts/ui-audit.mjs",
+    "build": "node ../scripts/run-vite.mjs build && node ../scripts/check-bundle-size.mjs && node ../scripts/check-icon-names.mjs && node ../scripts/ui-audit.mjs && node ../scripts/audit-contrast.mjs",
     "preview": "node ../scripts/run-vite.mjs preview"
   },
   "dependencies": {

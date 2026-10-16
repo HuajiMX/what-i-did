@@ -86,6 +86,10 @@ const CHROME_FLAGS = [
   "--disable-crash-reporter",
   "--disable-breakpad",
   "--disable-setuid-sandbox",
+  // 必须禁用 HTTP 缓存：否则浏览器可能拿上一次构建的 index.html（引用早已不存在的
+  // assets 哈希），页面会白屏，而报错信息只会说"模块 MIME 类型不对"，极难排查。
+  "--disable-http-cache",
+  "--disk-cache-size=1",
   "--disable-features=NetworkServiceSandbox,RendererCodeIntegrity,Crashpad",
 ];
 

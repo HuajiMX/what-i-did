@@ -141,18 +141,23 @@
 /* ── 内容区 ─────────────────────────────────────────────────────────────── */
 
 .content {
-  padding: 16px;
-  padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  /* 显式 width:100% + 居中：只写 max-width + margin:auto 时，
+     "宽度自适应"会退化成收缩到内容宽度，桌面端表现为内容挤在中间一条窄栏里。
+     显式声明宽度后，内容区稳定铺满所在列，再由 max-width 限制上限。 */
+  width: 100%;
   max-width: var(--content-max);
   margin: 0 auto;
+  padding: 16px;
+  padding-bottom: calc(72px + env(safe-area-inset-bottom));
 }
 
 .page-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  flex-wrap: wrap;
 }
 
 .page-title {
@@ -168,32 +173,38 @@
 .stack {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--gap-block);
 }
 
 .stack-sm {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--sp-2);
+}
+
+.stack-xs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
 }
 
 .row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--sp-2);
 }
 
 .row-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: var(--sp-3);
 }
 
 .row-wrap {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--sp-2);
   flex-wrap: wrap;
 }
 

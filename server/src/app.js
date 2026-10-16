@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { serveStatic } from "@hono/node-server/serve-static";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -97,13 +97,29 @@ export function createApp({ db, clock = () => new Date() } = {}) {
     // 带内容哈希的产物可以长缓存；index.html 必须每次校验，否则更新后用户会一直看到旧版本
     app.use("/assets/*", serveStatic({ root: config.webDist, onFound: (p, c) => c.header("Cache-Control", "public, max-age=31536000, immutable") }));
     app.use("/*", serveStatic({ root: config.webDist }));
-    const indexHtml = readFileSync(path.join(config.webDist, "index.html"));
-    // 前端路由深链接（/stats、/notes）在服务端没有对应文件，回退到 index.html
+
+    // 前端路由深链接（/stats、/notes）在服务端没有对应文件，回退到 index.html。
+    //
+    // index.html 按修改时间缓存：重建后无需重启服务即可生效。
+    // 这个细节值得写清楚——曾经因为"启动时读一次就常驻内存"，重建后旧实例仍返回引用
+    // 已不存在 assets 的旧页面，浏览器只报"MIME 类型不对"，排查了很久。
+    const indexFile = path.join(config.webDist, "index.html");
+    let cached = { mtimeMs: -1, body: readFileSync(indexFile) };
+    const readIndex = () => {
+      try {
+        const { mtimeMs } = statSync(indexFile);
+        if (mtimeMs !== cached.mtimeMs) cached = { mtimeMs, body: readFileSync(indexFile) };
+      } catch {
+        // 文件暂时读不到（正在重建）时继续用上一份，避免出现空响应
+      }
+      return cached.body;
+    };
+
     app.notFound((c) => {
       if (c.req.path.startsWith("/api/")) return c.json({ error: "接口不存在" }, 404);
       c.header("Content-Type", "text/html; charset=utf-8");
       c.header("Cache-Control", "no-cache");
-      return c.body(indexHtml);
+      return c.body(readIndex());
     });
   } else {
     app.notFound((c) =>

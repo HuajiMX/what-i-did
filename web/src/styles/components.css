@@ -6,11 +6,14 @@
   max-width: 460px;
 }
 
+.filter-label {
+  margin-right: var(--sp-1);
+}
+
 /* ── 日历 ───────────────────────────────────────────────────────────────── */
 
 .calendar {
-  padding: 10px;
-  transition: opacity var(--t-base);
+  padding: var(--sp-3);
 }
 
 .calendar.is-loading {
@@ -20,7 +23,7 @@
 .calendar-head {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  padding-bottom: 6px;
+  padding-bottom: var(--sp-2);
 }
 
 .calendar-weekday {
@@ -33,115 +36,184 @@
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
+  gap: var(--sp-1);
 }
 
 .day-cell {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
   gap: 2px;
   aspect-ratio: 1 / 1;
-  min-height: 40px;
-  padding: 4px 2px;
+  min-height: 46px;
+  padding: 5px 6px;
   border: 1px solid transparent;
   border-radius: var(--radius);
   background: var(--surface-2);
-  transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+  text-align: left;
+  transition: background var(--t-fast), border-color var(--t-fast), box-shadow var(--t-fast);
 }
 
 .day-cell:hover {
   background: var(--surface-3);
-  border-color: var(--border-strong);
 }
 
-.day-cell:active {
-  transform: scale(0.97);
-}
-
-.day-cell-outside {
-  background: transparent;
-  opacity: 0.45;
-}
-
-.day-cell-weekend .day-number {
-  color: var(--text-faint);
-}
-
-.day-cell-today {
-  border-color: var(--accent);
-  box-shadow: inset 0 0 0 1px var(--accent);
-}
-
+/* 有记录的日子：白底 + 描边，让数据"浮"在无记录的日子之上 */
 .day-cell-has {
   background: var(--surface);
   border-color: var(--border);
 }
 
-.day-number {
-  font-size: 12px;
-  color: var(--text-dim);
-  line-height: 1;
+.day-cell-outside {
+  opacity: 0.4;
 }
 
 .day-cell-today .day-number {
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.day-count {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.1;
+/* 选中态要足够明显：环形高亮，避免与"今天"的强调混淆 */
+.day-cell-selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-ring);
 }
 
-.day-dots {
+.day-number {
+  font-size: 12px;
+  line-height: 1;
+  color: var(--text-dim);
+}
+
+/* 活动预览：缩略图标 + 次数（1 次不显示数字）。
+   数字排在图标旁边而不是叠在上面——叠加在小格子里会互相压住看不清。 */
+.day-preview {
   display: flex;
-  gap: 2px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+  width: 100%;
+  min-height: 16px;
 }
 
-.day-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
+.day-preview-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  line-height: 0;
 }
 
-/* ── 记录列表（日详情） ─────────────────────────────────────────────────── */
+.day-preview-count {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
 
-.record-list,
-.note-list,
-.tag-list,
-.donut-legend {
+.day-preview-more {
+  font-size: 10px;
+  color: var(--text-faint);
+  line-height: 1;
+}
+
+.day-preview-more {
+  font-size: 10px;
+  color: var(--text-faint);
+}
+
+/* ── 当天面板：活动记录 ─────────────────────────────────────────────────── */
+
+.record-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-2);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.record-row {
+.record-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
 }
 
-.record-row:last-child {
-  border-bottom: none;
+/* 当天有记录的行加重强调，一眼能看出哪些记过了 */
+.record-item-on {
+  border-color: var(--border-strong);
+  background: var(--surface-2);
 }
 
 .record-name {
+  flex: 1;
+  min-width: 0;
   font-size: 14px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.record-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
 }
 
 .record-count {
-  min-width: 26px;
+  min-width: 28px;
   text-align: center;
   font-size: 15px;
   font-weight: 600;
+}
+
+/* 加减按钮：做到 32px 的可点面积，但不至于撑高整行 */
+.stepper {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  transition: all var(--t-fast);
+}
+
+.stepper:hover:not(:disabled) {
+  border-color: var(--border-strong);
+  color: var(--text);
+  background: var(--surface-3);
+}
+
+.stepper:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.stepper:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.stepper-add {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.stepper-add:hover:not(:disabled) {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+  color: #fff;
 }
 
 .tag-icon {
@@ -162,7 +234,7 @@
   flex-shrink: 0;
 }
 
-/* ── 弹层 ───────────────────────────────────────────────────────────────── */
+/* ── 弹层（只剩确认对话框在用：删除 Tag 这类破坏性操作必须二次确认） ───── */
 
 .overlay {
   position: fixed;
@@ -182,43 +254,16 @@
   }
 }
 
-.sheet {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-height: 86vh;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  box-shadow: var(--shadow-lg);
-  animation: slide-up var(--t-base);
-}
-
 @keyframes slide-up {
   from {
     transform: translateY(12px);
   }
 }
 
-.sheet-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--border);
-}
-
-.sheet-body {
-  padding: 16px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 .dialog {
   width: min(420px, calc(100vw - 32px));
   margin: auto;
-  padding: 20px;
+  padding: var(--sp-5);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -226,7 +271,7 @@
 }
 
 .dialog-body {
-  margin: 12px 0 20px;
+  margin: var(--sp-3) 0 var(--sp-5);
   font-size: 14px;
   color: var(--text-dim);
   line-height: 1.7;
@@ -235,17 +280,29 @@
 .dialog-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 8px;
+  gap: var(--sp-2);
 }
 
 /* ── Tag 管理 ───────────────────────────────────────────────────────────── */
 
+/* 列表铺满可用宽度：以前没写 flex 方向，在桌面端被挤成中间一条窄栏 */
+.tag-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  width: 100%;
+  max-width: var(--content-max);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .tag-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 12px;
-  margin-bottom: 8px;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
+  width: 100%;
 }
 
 .tag-name {
@@ -271,7 +328,7 @@
 
 .color-dots {
   display: flex;
-  gap: 8px;
+  gap: var(--sp-2);
   flex-wrap: wrap;
 }
 
@@ -293,8 +350,8 @@
 .icon-picker {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 12px;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface-2);
@@ -305,14 +362,14 @@
 }
 
 .picker-group-label {
-  margin: 6px 0 4px;
+  margin: var(--sp-2) 0 var(--sp-1);
   font-weight: 500;
 }
 
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
-  gap: 4px;
+  gap: var(--sp-1);
 }
 
 .icon-cell {
@@ -345,7 +402,7 @@
 }
 
 .picker-loading {
-  padding: 12px;
+  padding: var(--sp-3);
   color: var(--text-faint);
   font-size: 13px;
 }
@@ -355,20 +412,20 @@
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: var(--sp-3);
 }
 
 .stat-card {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 14px;
+  padding: var(--sp-4);
 }
 
 .stat-value {
   display: flex;
   align-items: baseline;
-  gap: 6px;
+  gap: var(--sp-2);
   font-size: 26px;
   font-weight: 600;
   line-height: 1.2;
@@ -390,7 +447,7 @@
 .chart-wrap {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--sp-2);
 }
 
 .chart {
@@ -435,7 +492,7 @@
 .chart-x-labels {
   display: flex;
   justify-content: space-between;
-  gap: 4px;
+  gap: var(--sp-1);
   padding-left: 34px;
   padding-right: 12px;
 }
@@ -445,7 +502,7 @@
 .donut {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: var(--sp-5);
   flex-wrap: wrap;
 }
 
@@ -487,15 +544,18 @@
 .donut-legend {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--sp-2);
   flex: 1;
   min-width: 180px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .donut-legend-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--sp-2);
   font-size: 13px;
 }
 
@@ -520,7 +580,7 @@
 
 .stat-table th,
 .stat-table td {
-  padding: 8px 6px;
+  padding: var(--sp-2) var(--sp-2);
   border-bottom: 1px solid var(--border);
   text-align: left;
   font-weight: 400;
@@ -530,6 +590,11 @@
   font-size: 12px;
   font-weight: 500;
   color: var(--text-faint);
+}
+
+.stat-table tbody tr:last-child th,
+.stat-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 .stat-table tbody th {
@@ -564,12 +629,9 @@
 
 .contrib {
   display: flex;
-  gap: 8px;
+  gap: var(--sp-2);
   align-items: flex-start;
-}
-
-.contrib-legend {
-  line-height: 1.5;
+  overflow: hidden;
 }
 
 .contrib-weekdays {
@@ -585,7 +647,7 @@
 
 .contrib-scroll {
   overflow-x: auto;
-  padding-bottom: 4px;
+  padding-bottom: var(--sp-1);
   -webkit-overflow-scrolling: touch;
 }
 
@@ -627,6 +689,11 @@
   background: transparent;
 }
 
+/* 无记录的日子在 CSS 里已有底色，但图例刻度需要显式引用 level-0 */
+.contrib-cell.level-0 {
+  background: var(--surface-3);
+}
+
 .contrib-cell:hover {
   border-color: var(--text-faint);
 }
@@ -652,14 +719,41 @@
   box-shadow: 0 0 0 1px var(--text);
 }
 
+/* 图例与深浅刻度 */
+.contrib-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-top: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.contrib-scale {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.note-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .note-item {
-  padding: 10px 0;
+  padding: var(--sp-3) 0;
   border-bottom: 1px solid var(--border);
   font-size: 14px;
 }
 
+.note-item:first-child {
+  padding-top: 0;
+}
+
 .note-item:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 
 .note-content {
@@ -668,7 +762,7 @@
 }
 
 .note-actions {
-  margin-top: 6px;
+  margin-top: var(--sp-1);
 }
 
 /* ── 提示条 ─────────────────────────────────────────────────────────────── */
@@ -680,7 +774,7 @@
   z-index: 200;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--sp-2);
   align-items: center;
   transform: translateX(-50%);
   pointer-events: none;
@@ -712,50 +806,41 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .calendar {
+    padding: var(--sp-4);
+  }
+
+  .calendar-grid {
+    gap: 6px;
+  }
+
   .day-cell {
-    padding: 6px 4px;
-    gap: 3px;
+    min-height: 64px;
+    padding: 7px 8px;
   }
 
   .day-number {
     font-size: 13px;
   }
 
-  .day-count {
-    font-size: 17px;
+  .day-preview {
+    gap: var(--sp-1);
   }
 
-  .day-dot {
-    width: 6px;
-    height: 6px;
+  /* 桌面端一行放两个 Tag，减少纵向滚动 */
+  .record-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .day-preview-item svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* 桌面端对话框居中显示，不再需要抽屉形态 */
   .overlay {
-    align-items: stretch;
-    justify-content: flex-end;
-  }
-
-  /* 桌面端：抽屉从右侧滑入，保持页面上下文可见 */
-  .sheet-drawer {
-    width: min(420px, 40vw);
-    max-height: none;
-    height: 100%;
-    border-radius: 0;
-    animation: slide-left var(--t-base);
-  }
-
-  .sheet-sheet {
-    margin: auto;
-    max-width: 560px;
-    border-radius: var(--radius-lg);
-    animation: fade-in var(--t-base);
-  }
-
-  @keyframes slide-left {
-    from {
-      transform: translateX(16px);
-      opacity: 0.6;
-    }
+    align-items: center;
+    justify-content: center;
   }
 
   .toast-stack {

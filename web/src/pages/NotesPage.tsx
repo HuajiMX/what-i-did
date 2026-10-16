@@ -1,15 +1,20 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ApiError, endpoints } from "../api";
-import Sheet from "../components/Sheet";
 import { useAsync } from "../lib/useAsync";
-import { contributionWeeks, humanDate, lastWeeksRange, shortDate } from "../lib/date";
+import { contributionWeeks, humanDate, lastWeeksRange, shortDate, today } from "../lib/date";
 import { useAuth } from "../state/auth";
 import { useToast } from "../state/toast";
 
 /** 贡献图窗口：53 周 ≈ 一年，与 GitHub 的默认观感一致 */
 const WEEKS = 53;
 
+/**
+ * 随手记页。
+ *
+ * 布局：热力图在上，下方直接是选中日期的随手记列表与编辑框。
+ * 刻意不用弹层：写随手记需要一边看日期分布一边写，弹层会遮住热力图本身。
+ */
 export default function NotesPage() {
   const [params, setParams] = useSearchParams();
   const admin = useAuth().admin;
@@ -18,34 +23,43 @@ export default function NotesPage() {
   const range = useMemo(() => lastWeeksRange(WEEKS), []);
   const weeks = useMemo(() => contributionWeeks(range.from, range.to), [range.from, range.to]);
 
-  const [openDate, setOpenDate] = useState<string | null>(params.get("date"));
+  const selectedDate = params.get("date") ?? today();
   const [draft, setDraft] = useState("");
   const [busy, setBusy] = useState(false);
   const [editing, setEditing] = useState<{ id: number; content: string } | null>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const skipScroll = useRef(true);
 
   const counts = useAsync(() => endpoints.notesRange(range.from, range.to), [range.from, range.to]);
-  const dayNotes = useAsync(() => (openDate ? endpoints.notesOfDay(openDate) : Promise.resolve(null)), [openDate]);
+  const dayNotes = useAsync(() => endpoints.notesOfDay(selectedDate), [selectedDate]);
 
   const total = counts.data?.total ?? 0;
   const activeDays = Object.keys(counts.data?.counts ?? {}).length;
-  const max = Math.max(0, ...Object.values(counts.data?.counts ?? {}));
+  const max = Math.max(1, ...Object.values(counts.data?.counts ?? {}));
 
-  function selectDate(date: string | null) {
-    setOpenDate(date);
-    setDraft("");
+  // 首次进入不滚动，之后点格子才滚到列表，避免用户一进来就被强行跳转
+  useEffect(() => {
+    if (skipScroll.current) {
+      skipScroll.current = false;
+      return;
+    }
+    panelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [selectedDate]);
+
+  function selectDate(date: string) {
     setEditing(null);
+    setDraft("");
     const merged = new URLSearchParams(params);
-    if (date) merged.set("date", date);
-    else merged.delete("date");
+    merged.set("date", date);
     setParams(merged, { replace: true });
   }
 
   async function handleCreate(event: React.FormEvent) {
     event.preventDefault();
-    if (!openDate || !draft.trim()) return;
+    if (!draft.trim()) return;
     setBusy(true);
     try {
-      await endpoints.createNote(openDate, draft.trim());
+      await endpoints.createNote(selectedDate, draft.trim());
       setDraft("");
       dayNotes.reload();
       counts.reload();
@@ -87,115 +101,166 @@ export default function NotesPage() {
             近 {WEEKS} 周共 <span className="num">{total}</span> 条，分布在 <span className="num">{activeDays}</span> 天
           </p>
         </div>
+        <span className="faint tiny">点格子选日期，列表在下方</span>
       </div>
 
       {counts.error ? <div className="alert alert-danger">{counts.error}</div> : null}
 
-      <div className="card stack">
-        <div className="contrib-legend">
-          <span className="faint tiny">颜色越深表示当天记的条数越多（按本区间最大值分档，当前最多 {max} 条/天）</span>
-        </div>
+      <section className="card">
         <ContributionGraph
           weeks={weeks}
           counts={counts.data?.counts ?? {}}
           max={max}
-          selected={openDate}
-          onSelect={(date) => selectDate(date === openDate ? null : date)}
+          selected={selectedDate}
+          onSelect={selectDate}
         />
-        <p className="faint tiny">点任意格子查看并编辑当天的随手记（手机可左右滑动查看全年）。</p>
-      </div>
+        <div className="contrib-legend">
+          <span className="faint tiny">颜色越深表示当天条数越多（按本区间最大值 {max} 条/天 分档）</span>
+          <span className="contrib-scale" aria-hidden="true">
+            <span className="faint tiny">少</span>
+            <span className="contrib-cell level-0" />
+            <span className="contrib-cell level-1" />
+            <span className="contrib-cell level-2" />
+            <span className="contrib-cell level-3" />
+            <span className="contrib-cell level-4" />
+            <span className="faint tiny">多</span>
+          </span>
+        </div>
+      </section>
 
-      <Sheet open={openDate !== null} onClose={() => selectDate(null)} title={openDate ? humanDate(openDate) : ""} variant="sheet">
-        {openDate ? (
-          <div className="stack">
-            {dayNotes.loading ? <div className="empty">加载中…</div> : null}
+      <section className="card" ref={panelRef} id="notes-panel">
+        <div className="card-head">
+          <div>
+            <h2>{humanDate(selectedDate)}</h2>
+            <p className="card-head-sub">
+              {dayNotes.data ? `${dayNotes.data.notes.length} 条随手记` : "加载中…"}
+            </p>
+          </div>
+          {selectedDate !== today() ? (
+            <button type="button" className="btn btn-sm" onClick={() => selectDate(today())}>
+              回到今天
+            </button>
+          ) : null}
+        </div>
 
-            {dayNotes.data?.notes.length === 0 ? (
-              <p className="faint tiny">这天还没有随手记。</p>
-            ) : (
-              <ul className="note-list">
-                {dayNotes.data?.notes.map((note) => (
-                  <li key={note.id} className="note-item">
-                    {editing?.id === note.id ? (
-                      <NoteEditor
-                        value={editing.content}
-                        onChange={(content) => setEditing({ id: note.id, content })}
-                        onSubmit={() => handleUpdate(note.id, editing.content)}
-                        onCancel={() => setEditing(null)}
-                        submitLabel="保存"
-                      />
-                    ) : (
-                      <>
-                        <p className="note-content">{note.content}</p>
-                        {admin ? (
-                          <div className="row note-actions">
-                            <span className="faint tiny">{note.updated_at.slice(0, 10)}</span>
-                            <span className="grow" />
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-ghost"
-                              onClick={() => setEditing({ id: note.id, content: note.content })}
-                            >
-                              编辑
-                            </button>
-                            <button type="button" className="btn btn-sm btn-ghost btn-danger" onClick={() => handleDelete(note.id)}>
-                              删除
-                            </button>
-                          </div>
-                        ) : null}
-                      </>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            )}
+        {dayNotes.error ? <div className="alert alert-danger">{dayNotes.error}</div> : null}
 
-            {admin ? (
-              <form className="stack-sm" onSubmit={handleCreate}>
-                <label className="field-label" htmlFor="note-draft">
-                  新增一条（{openDate}）
-                </label>
-                <textarea
-                  id="note-draft"
-                  className="textarea"
-                  value={draft}
-                  maxLength={5000}
-                  placeholder="今天做了什么、想到什么…"
-                  onChange={(event) => setDraft(event.target.value)}
+        {dayNotes.data && dayNotes.data.notes.length === 0 ? (
+          <p className="faint tiny">这天还没有随手记。{admin ? "在下面写第一条。" : ""}</p>
+        ) : null}
+
+        <ul className="note-list">
+          {dayNotes.data?.notes.map((note) => (
+            <li key={note.id} className="note-item">
+              {editing?.id === note.id ? (
+                <EditForm
+                  value={editing.content}
+                  onChange={(content) => setEditing({ id: note.id, content })}
+                  onSubmit={() => handleUpdate(note.id, editing.content)}
+                  onCancel={() => setEditing(null)}
                 />
+              ) : (
+                <>
+                  <p className="note-content">{note.content}</p>
+                  <div className="row note-actions">
+                    <span className="faint tiny">{formatTime(note.created_at)}</span>
+                    {note.updated_at !== note.created_at ? <span className="faint tiny">已编辑</span> : null}
+                    <span className="grow" />
+                    {admin ? (
+                      <>
+                        <button
+                          type="button"
+                          className="btn btn-sm btn-ghost"
+                          onClick={() => setEditing({ id: note.id, content: note.content })}
+                        >
+                          编辑
+                        </button>
+                        <button
+                          type="button"
+                          className="btn btn-sm btn-ghost btn-danger"
+                          onClick={() => handleDelete(note.id)}
+                        >
+                          删除
+                        </button>
+                      </>
+                    ) : null}
+                  </div>
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        {admin ? (
+          <>
+            <div className="card-divider" />
+            <form className="stack-sm" onSubmit={handleCreate}>
+              <label className="field-label" htmlFor="note-draft">
+                写一条（{selectedDate}）
+              </label>
+              <textarea
+                id="note-draft"
+                className="textarea"
+                value={draft}
+                maxLength={5000}
+                placeholder="今天做了什么、想到什么…（Ctrl/⌘ + Enter 保存）"
+                onChange={(event) => setDraft(event.target.value)}
+                onKeyDown={(event) => {
+                  if ((event.metaKey || event.ctrlKey) && event.key === "Enter" && draft.trim()) {
+                    event.preventDefault();
+                    void handleCreate(event);
+                  }
+                }}
+              />
+              <div className="row">
                 <button type="submit" className="btn btn-primary" disabled={busy || !draft.trim()}>
                   {busy ? "保存中…" : "保存"}
                 </button>
-              </form>
-            ) : (
-              <p className="faint tiny">只有管理员可以编辑随手记。</p>
-            )}
-          </div>
-        ) : null}
-      </Sheet>
+                {draft ? (
+                  <button type="button" className="btn" onClick={() => setDraft("")}>
+                    清空
+                  </button>
+                ) : null}
+              </div>
+            </form>
+          </>
+        ) : (
+          <p className="faint tiny">只有管理员可以编辑随手记。</p>
+        )}
+      </section>
     </div>
   );
 }
 
-function NoteEditor({
+function EditForm({
   value,
   onChange,
   onSubmit,
   onCancel,
-  submitLabel,
 }: {
   value: string;
   onChange: (value: string) => void;
   onSubmit: () => void;
   onCancel: () => void;
-  submitLabel: string;
 }) {
   return (
     <div className="stack-sm">
-      <textarea className="textarea" value={value} maxLength={5000} onChange={(event) => onChange(event.target.value)} autoFocus />
+      <textarea
+        className="textarea"
+        value={value}
+        maxLength={5000}
+        autoFocus
+        onChange={(event) => onChange(event.target.value)}
+        onKeyDown={(event) => {
+          if ((event.metaKey || event.ctrlKey) && event.key === "Enter") {
+            event.preventDefault();
+            onSubmit();
+          }
+        }}
+      />
       <div className="row">
         <button type="button" className="btn btn-sm btn-primary" onClick={onSubmit} disabled={!value.trim()}>
-          {submitLabel}
+          保存
         </button>
         <button type="button" className="btn btn-sm" onClick={onCancel}>
           取消
@@ -203,6 +268,13 @@ function NoteEditor({
       </div>
     </div>
   );
+}
+
+/** 只显示时分，日期已经在标题里了 */
+function formatTime(iso: string): string {
+  const date = new Date(iso);
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${pad(date.getHours())}:${pad(date.getMinutes())}`;
 }
 
 /**
@@ -222,7 +294,7 @@ function ContributionGraph({
   weeks: ReturnType<typeof contributionWeeks>;
   counts: Record<string, number>;
   max: number;
-  selected: string | null;
+  selected: string;
   onSelect: (date: string) => void;
 }) {
   const scroller = useRef<HTMLDivElement>(null);
@@ -234,15 +306,14 @@ function ContributionGraph({
   }, []);
 
   function levelOf(count: number): number {
-    if (count <= 0 || max <= 0) return 0;
+    if (count <= 0) return 0;
     return Math.min(4, Math.ceil((count / max) * 4));
   }
 
   const monthMarkers = weeks.map((week, index) => {
     const first = week.days[0]!.date;
     const prev = index > 0 ? weeks[index - 1]!.days[0]!.date : null;
-    const month = first.slice(0, 7);
-    return prev?.slice(0, 7) === month ? null : shortDate(first);
+    return prev?.slice(0, 7) === first.slice(0, 7) ? null : shortDate(first);
   });
 
   return (
@@ -267,15 +338,15 @@ function ContributionGraph({
                 return <span key={day.date} className="contrib-cell contrib-cell-empty" aria-hidden="true" />;
               }
               const count = counts[day.date] ?? 0;
-              const level = levelOf(count);
               return (
                 <button
                   key={day.date}
                   type="button"
                   role="gridcell"
-                  className={`contrib-cell level-${level} ${selected === day.date ? "contrib-cell-selected" : ""}`}
+                  className={`contrib-cell level-${levelOf(count)} ${selected === day.date ? "contrib-cell-selected" : ""}`}
                   title={`${day.date}：${count} 条`}
                   aria-label={`${day.date}，${count} 条随手记`}
+                  aria-current={selected === day.date ? "date" : undefined}
                   onClick={() => onSelect(day.date)}
                 />
               );
