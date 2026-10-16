@@ -608,8 +608,8 @@
 }
 
 /*
- * 图表区域横向滚动：放不下时滑动图表，纵轴刻度（画在 SVG 内部左侧）与
- * 横轴标签（与画布同宽）都保持不动。
+ * 图表区域横向滚动：只有在窄屏（SVG 被设了 min-width）时才真正出现滚动条。
+ * 宽屏时 SVG 用 width:100% 跟随容器，宽度由浏览器算，不会出现"差 0.5px 就冒滚动条"。
  */
 .chart-scroll {
   overflow-x: auto;
@@ -619,12 +619,15 @@
   -webkit-overflow-scrolling: touch;
 }
 
-/* 高度固定，宽度由 SVG 的 width 属性给出（max(容器宽, 数据点所需宽)） */
+/*
+ * 宽度交给 CSS：宽屏跟随容器（无人为像素差），窄屏由 .chart-scroll 的 min-width 撑开并滚动。
+ * 高度固定，绝不随宽度变化——否则折线会被纵向压扁。
+ */
 .chart {
   display: block;
+  width: 100%;
   height: 200px;
   max-width: none;
-  overflow: visible;
 }
 
 .chart-grid {
@@ -661,14 +664,22 @@
 }
 
 /*
- * 横轴标签：宽度由行内 style 设成与画布相同，因此与折线的列严格对齐；
- * 标签本身留出与 SVG 相同的左右内边距，避免第一个标签被裁掉。
+ * 横轴标签：绝对定位到与数据点相同的比例位置，因此与折线严格对齐。
+ * 这里**不能设左右 padding**：百分比 left 与 padding 的相互作用会让标签整体偏移
+ * （实测 left:0% 落在 padding 之外，偏移量正好等于 PAD_LEFT）。
+ * 标签的横向位置完全由组件按画布宽度算出，见 TrendChart 的 labelRatios。
  */
 .chart-x-labels {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--sp-1);
-  padding-top: 2px;
+  position: relative;
+  height: 16px;
+  margin-top: 2px;
+}
+
+.chart-x-labels span {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 /* 环形图 */
