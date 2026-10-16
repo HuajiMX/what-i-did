@@ -189,6 +189,8 @@ export default function CalendarPage() {
       <DayPanel
         date={selectedDate}
         tags={tagList}
+        /* 日历页只管活动记录：随手记有自己的页面，两处都放会让日历页变长、职责也重复 */
+        showNotes={false}
         onChanged={() => {
           activities.reload();
           tags.reload();
