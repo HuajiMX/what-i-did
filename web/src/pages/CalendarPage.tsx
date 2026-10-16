@@ -124,7 +124,7 @@ export default function CalendarPage() {
 
       {activities.error ? <div className="alert alert-danger">{activities.error}</div> : null}
 
-      <div className={`card card-flush calendar ${activities.loading ? "is-loading" : ""}`}>
+      <div className={`card card-flush calendar bleed ${activities.loading ? "is-loading" : ""}`}>
         <div className="calendar-head">
           {WEEKDAY_LABELS.map((label) => (
             <span key={label} className="calendar-weekday">

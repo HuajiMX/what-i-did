@@ -73,6 +73,11 @@
   /* 区块纵向间距与卡片内边距：移动端收紧，桌面端放宽（见文件末尾） */
   --gap-block: 16px;
   --card-pad: 16px;
+
+  /* 页面留白。移动端用较小的边距把宽度尽量让给内容（日历再用 .bleed 换回满宽）；
+     桌面端恢复正常留白。 */
+  --page-gutter: 14px;
+  --page-pad-y: 12px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -118,5 +123,7 @@
   :root {
     --gap-block: 24px;
     --card-pad: 20px;
+    --page-gutter: 32px;
+    --page-pad-y: 28px;
   }
 }

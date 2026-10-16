@@ -12,8 +12,15 @@
 
 /* ── 日历 ───────────────────────────────────────────────────────────────── */
 
+/* 移动端不用卡片外壳：屏幕本来就窄，卡片的圆角、描边与内边距会白白吃掉
+   左右二十多像素，导致月历显示不全。这里直接贴边铺满，让每一格都拿到最大宽度。
+   桌面端空间充裕，仍用卡片把日历与下方的当天面板区分开。 */
 .calendar {
-  padding: var(--sp-3);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .calendar.is-loading {
@@ -37,6 +44,23 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: var(--sp-1);
+}
+
+/* 移动端：格子不再用 1:1。
+   贴边铺满后每格有 50px 宽，若仍按正方形就有 50px 高，6 行加起来把首屏占满，
+   下面的当天面板要被推出去。改成"更矮的矩形 + 紧凑间距"，月历一屏看得全，
+   上下留出空间给当天活动。 */
+@media (max-width: 899px) {
+  .calendar-grid {
+    gap: 2px;
+  }
+
+  .day-cell {
+    aspect-ratio: auto;
+    min-height: 44px;
+    padding: 4px 5px;
+    border-radius: var(--radius-sm);
+  }
 }
 
 .day-cell {
@@ -87,13 +111,14 @@
 }
 
 /* 活动预览：缩略图标 + 次数（1 次不显示数字）。
-   数字排在图标旁边而不是叠在上面——叠加在小格子里会互相压住看不清。 */
+   数字排在图标旁边而不是叠在上面——叠加在小格子里会互相压住看不清。
+   紧跟在日期数字下方，不用 margin-top:auto 顶到底部：那会在格子变高时留出一段空白，
+   看起来像"内容和格子脱节"。 */
 .day-preview {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 4px;
-  margin-top: auto;
   width: 100%;
   min-height: 16px;
 }
@@ -807,7 +832,12 @@
   }
 
   .calendar {
+    /* 桌面端恢复卡片形态 */
     padding: var(--sp-4);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
   }
 
   .calendar-grid {
@@ -815,7 +845,11 @@
   }
 
   .day-cell {
-    min-height: 64px;
+    /* 桌面端也不再用 1:1：内容区铺满后每列约 150px 宽，
+       正方形格子会有大片空白，而内容只需要 40 多像素高。
+       固定一个紧凑高度，让整月 6 行不至于占满整屏。 */
+    aspect-ratio: auto;
+    min-height: 76px;
     padding: 7px 8px;
   }
 
