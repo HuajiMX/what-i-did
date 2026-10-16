@@ -236,3 +236,22 @@ scripts/         图标清单生成、密码哈希、产物体积断言
 4. Tag 管理：新建 Tag 时图标选择器能打开（首次打开会下载约 2.4 MB 的图标 chunk），"全部图标"标签页可搜索英文名；删除 Tag 时弹窗显示将影响的记录条数。
 5. 深色模式：切换系统偏好后刷新，页面配色随之变化且文字仍清晰。
 6. 登录：登录后出现"Tag 管理"入口与各处的编辑按钮；退出后写操作入口消失。
+
+### Docker 构建未经实机验证
+
+`Dockerfile` 与 `docker-compose.yml` 按 Node 官方镜像的常规做法编写，但**开发机上没有安装 Docker，因此没有真正执行过镜像构建**。首次构建时最可能出问题的是下面两处，以及对应处理方式：
+
+1. **`better-sqlite3` 需要编译**（Alpine 上没有匹配的预编译包时）。
+   Dockerfile 已在安装依赖期间临时装上 `python3 make g++` 并在完成后删除，这一步通常是通的。
+   若仍在此失败，把基础镜像从 `node:22-alpine` 换成 `node:22-bookworm-slim`（Debian 变体，预编译包覆盖更全）。
+2. **容器启动即退出**。镜像里没有 `.env`，配置全部由 `env_file` 在运行时注入；
+   缺 `SESSION_SECRET` 或 `ADMIN_PASSWORD_HASH` 时服务会拒绝启动并打印明确原因，先看 `docker compose logs app`。
+
+验证镜像可用的最小步骤：
+
+```bash
+docker compose build          # 能构建成功即通过第一关
+docker compose up -d
+docker compose logs app       # 应看到监听地址与数据库路径
+curl -sS http://127.0.0.1:8787/api/health
+```
