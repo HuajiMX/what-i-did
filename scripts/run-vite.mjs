@@ -15,6 +15,10 @@
  * 正常环境下这一项没有副作用（只是换个临时目录），好处是消除"换台机器就构建失败"的环境差异。
  * 已验证：wrapper 下 os.tmpdir() = <项目>/.tmp，而默认环境是 C:\Users\...\Temp\dsh-xxxx。
  *
+ * 但**已有的 TMPDIR 会优先保留**：某些环境（容器、CI）已经把 TMPDIR 指到合适的位置，
+ * 覆盖它反而会在项目目录里凭空建出一个 .tmp（镜像里也会多一层无用目录）。
+ * 只有 TMPDIR 未设置时才回落到项目内的 .tmp。
+ *
  * 用法：node scripts/run-vite.mjs build   /   node scripts/run-vite.mjs
  */
 import { spawn } from "node:child_process";
@@ -23,8 +27,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const tempDir = path.join(root, ".tmp");
-mkdirSync(tempDir, { recursive: true });
+// 尊重环境里已有的 TMPDIR/TEMP/TMP，只在都没有时才落到项目内的 .tmp
+const presetTemp = process.env.TMPDIR || process.env.TEMP || process.env.TMP;
+const tempDir = presetTemp || path.join(root, ".tmp");
+if (!presetTemp) mkdirSync(tempDir, { recursive: true });
 
 const viteBin = path.join(root, "node_modules", "vite", "bin", "vite.js");
 const args = [viteBin, ...process.argv.slice(2)];
