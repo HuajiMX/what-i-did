@@ -12,15 +12,20 @@
 
 /* ── 日历 ───────────────────────────────────────────────────────────────── */
 
-/* 移动端不用卡片外壳：屏幕本来就窄，卡片的圆角、描边与内边距会白白吃掉
-   左右二十多像素，导致月历显示不全。这里直接贴边铺满，让每一格都拿到最大宽度。
-   桌面端空间充裕，仍用卡片把日历与下方的当天面板区分开。 */
+/**
+ * 移动端的宽度账（这决定了下面每个数值为什么这么小）：
+ *   整屏 390px
+ *   − 页面留白  2×12 = 24px   （--page-gutter）
+ *   − 卡片内边距 2×8 = 16px   （.calendar 自己）
+ *   − 列间距    6×2  = 12px
+ *   = 338px ÷ 7 ≈ 48px/格
+ *
+ * 与"完全贴边、不要卡片"相比只少了约 6px（10%），但换回了与其它卡片一致的
+ * 圆角、描边与对齐——视觉一致性比这 6px 值钱。因此移动端保留卡片，
+ * 只把内边距压到 8px；桌面端空间充裕，用常规的 --card-pad。
+ */
 .calendar {
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  padding: var(--card-pad);
 }
 
 .calendar.is-loading {
@@ -46,32 +51,14 @@
   gap: var(--sp-1);
 }
 
-/* 移动端：格子不再用 1:1。
-   贴边铺满后每格有 50px 宽，若仍按正方形就有 50px 高，6 行加起来把首屏占满，
-   下面的当天面板要被推出去。改成"更矮的矩形 + 紧凑间距"，月历一屏看得全，
-   上下留出空间给当天活动。 */
-@media (max-width: 899px) {
-  .calendar-grid {
-    gap: 2px;
-  }
-
-  .day-cell {
-    aspect-ratio: auto;
-    min-height: 44px;
-    padding: 4px 5px;
-    border-radius: var(--radius-sm);
-  }
-}
-
 .day-cell {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
-  aspect-ratio: 1 / 1;
-  min-height: 46px;
-  padding: 5px 6px;
+  min-height: 76px;
+  padding: 7px 8px;
   border: 1px solid transparent;
   border-radius: var(--radius);
   background: var(--surface-2);
@@ -91,6 +78,31 @@
 
 .day-cell-outside {
   opacity: 0.4;
+}
+
+/**
+ * 移动端覆盖。必须放在上面基础规则**之后**——媒体查询本身不增加优先级，
+ * 同优先级下后写的赢。之前把它写在基础规则前面，结果被 aspect-ratio/min-height 反向覆盖，
+ * 格子仍是正方形并占满首屏。
+ *
+ * 这里用矮矩形而不是 1:1：每格约 48px 宽，若按正方形就有 48px 高，
+ * 6 行会把首屏占满、把当天面板挤出屏幕。列间距也收紧到 2px——7 列里每省 1px 就是 6px 宽度。
+ */
+@media (max-width: 899px) {
+  .calendar {
+    /* 只压内边距，圆角沿用全站统一值——卡片的一致性正体现在这里 */
+    padding: var(--sp-2);
+  }
+
+  .calendar-grid {
+    gap: 2px;
+  }
+
+  .day-cell {
+    min-height: 44px;
+    padding: 4px 5px;
+    border-radius: var(--radius-sm);
+  }
 }
 
 .day-cell-today .day-number {
@@ -832,25 +844,12 @@
   }
 
   .calendar {
-    /* 桌面端恢复卡片形态 */
-    padding: var(--sp-4);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    background: var(--surface);
-    box-shadow: var(--shadow-sm);
+    /* 桌面端空间充裕，留白用常规值即可（无需覆盖，这里显式写出来是为了对照移动端） */
+    padding: var(--card-pad);
   }
 
   .calendar-grid {
     gap: 6px;
-  }
-
-  .day-cell {
-    /* 桌面端也不再用 1:1：内容区铺满后每列约 150px 宽，
-       正方形格子会有大片空白，而内容只需要 40 多像素高。
-       固定一个紧凑高度，让整月 6 行不至于占满整屏。 */
-    aspect-ratio: auto;
-    min-height: 76px;
-    padding: 7px 8px;
   }
 
   .day-number {

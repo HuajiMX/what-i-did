@@ -74,9 +74,9 @@
   --gap-block: 16px;
   --card-pad: 16px;
 
-  /* 页面留白。移动端用较小的边距把宽度尽量让给内容（日历再用 .bleed 换回满宽）；
+  /* 页面留白。移动端压到 12px，把宽度尽量让给 7 列日历网格；
      桌面端恢复正常留白。 */
-  --page-gutter: 14px;
+  --page-gutter: 12px;
   --page-pad-y: 12px;
 }
 
