@@ -1,0 +1,98 @@
+/* ============================================================================
+   设计令牌。所有颜色、间距、尺寸都在这里定义，组件样式只引用变量。
+   主题策略：浅色为默认，深色跟随系统偏好。刻意不做手动切换开关——
+   系统偏好已经表达了意图，多一个开关就多一处需要持久化的状态。
+   ========================================================================== */
+
+:root {
+  /* 中性色 */
+  --bg: #fbfbfa;
+  --surface: #ffffff;
+  --surface-2: #f4f4f2;
+  --surface-3: #ececea;
+  --border: #e4e4e1;
+  --border-strong: #d2d2ce;
+  --text: #1a1a1c;
+  --text-dim: #6b6b70;
+  --text-faint: #97979d;
+
+  /* 主色（用于强调、链接、选中态） */
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-soft: #eef2ff;
+  --accent-ring: rgba(79, 70, 229, 0.35);
+
+  --danger: #dc2626;
+  --danger-soft: #fef2f2;
+  --success: #16a34a;
+
+  /* Tag 配色调色板：与 server/src/validate.js 的 TAG_COLORS 一一对应 */
+  --tag-red: #e5484d;
+  --tag-orange: #f76b15;
+  --tag-yellow: #f5a524;
+  --tag-green: #30a46c;
+  --tag-teal: #12a594;
+  --tag-blue: #0091ff;
+  --tag-purple: #6e56cf;
+  --tag-pink: #e93d82;
+
+  /* 阴影：极轻，只用 1px 描边分层 */
+  --shadow-sm: 0 1px 2px rgba(16, 16, 20, 0.04);
+  --shadow-md: 0 4px 12px rgba(16, 16, 20, 0.08);
+  --shadow-lg: 0 12px 32px rgba(16, 16, 20, 0.14);
+
+  /* 尺寸 */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --radius-full: 999px;
+
+  --sidebar-width: 232px;
+  --content-max: 1120px;
+  --tap-target: 44px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* 过渡 */
+  --t-fast: 120ms ease;
+  --t-base: 200ms ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101012;
+    --surface: #18181b;
+    --surface-2: #202024;
+    --surface-3: #29292e;
+    --border: #2c2c31;
+    --border-strong: #3d3d44;
+    --text: #f2f2f4;
+    --text-dim: #a3a3ab;
+    --text-faint: #75757e;
+
+    --accent: #8b85f5;
+    --accent-hover: #a29cff;
+    --accent-soft: #1e1b3a;
+    --accent-ring: rgba(139, 133, 245, 0.4);
+
+    --danger: #f87171;
+    --danger-soft: #2a1618;
+    --success: #4ade80;
+
+    /* 深色下整体提亮，保证在深底上的对比度 */
+    --tag-red: #ff6369;
+    --tag-orange: #ff8b3d;
+    --tag-yellow: #ffca16;
+    --tag-green: #46d17f;
+    --tag-teal: #22c9b6;
+    --tag-blue: #3aa8ff;
+    --tag-purple: #9d8df1;
+    --tag-pink: #ff6ba6;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
+  }
+}
