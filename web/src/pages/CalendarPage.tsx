@@ -164,7 +164,8 @@ export default function CalendarPage() {
                   <span className="day-preview">
                     {entries.slice(0, MAX_PREVIEW).map((entry) => (
                       <span key={entry.tag.id} className="day-preview-item" style={{ color: entry.tag.color }}>
-                        <Icon name={entry.tag.icon} size={14} stroke={2} />
+                        {/* 用专门的紧凑尺寸：移动端格子里要放下两行「图标+数字」 */}
+                        <Icon name={entry.tag.icon} size={11} stroke={2.4} />
                         {/* 只记了 1 次就不写数字，避免整屏都是 1 */}
                         {entry.count > 1 ? <span className="day-preview-count num">{entry.count}</span> : null}
                       </span>

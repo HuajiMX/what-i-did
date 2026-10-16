@@ -82,11 +82,12 @@
 
 /**
  * 移动端覆盖。必须放在上面基础规则**之后**——媒体查询本身不增加优先级，
- * 同优先级下后写的赢。之前把它写在基础规则前面，结果被 aspect-ratio/min-height 反向覆盖，
- * 格子仍是正方形并占满首屏。
+ * 同优先级下后写的赢。之前把它写在基础规则前面，结果被 aspect-ratio/min-height 反向覆盖。
  *
- * 这里用矮矩形而不是 1:1：每格约 48px 宽，若按正方形就有 48px 高，
- * 6 行会把首屏占满、把当天面板挤出屏幕。列间距也收紧到 2px——7 列里每省 1px 就是 6px 宽度。
+ * 移动端格子的高度账（每格约 48×48，正方形）：
+ *   上内边距 3 + 日期行 12 + 间距 2 + 预览两行 2×12 + 下内边距 3 = 44px ≤ 48px
+ * 因此日期下方能放下两行「图标+数字」（例如「图标+3 图标」「图标 图标」再带一个 +1）。
+ * 图标、数字、行间距都必须收紧到下面这些值，否则第二行会被挤出去、格子被拉长。
  */
 @media (max-width: 899px) {
   .calendar {
@@ -99,9 +100,39 @@
   }
 
   .day-cell {
-    min-height: 44px;
-    padding: 4px 5px;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+    /* 上 2 + 日期行 12 + 预览两行 2×12 + 下 2 = 40px ≤ 48px 的内容区，正方形不会被撑高 */
+    padding: 2px 4px;
     border-radius: var(--radius-sm);
+  }
+
+  .day-number {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  /* 固定两列：保证排成两行（而不是靠 flex 自动换行碰运气，那样每格行数不一致会显得参差）。
+     行间距 1px、图标与数字之间不留缝。 */
+  .day-preview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 2px;
+    min-height: 0;
+    align-content: flex-start;
+  }
+
+  .day-preview-item {
+    gap: 0;
+    /* 每行 12px，与上面的高度账对应 */
+    line-height: 12px;
+    height: 12px;
+    overflow: hidden;
+  }
+
+  .day-preview-count,
+  .day-preview-more {
+    font-size: 9px;
   }
 }
 
