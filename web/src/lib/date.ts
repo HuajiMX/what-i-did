@@ -197,3 +197,43 @@ export function lastWeeksRange(weeks = 53, anchor = today()): { from: string; to
   const from = addDays(to, -(weeks * 7 - 1));
   return { from, to };
 }
+
+/**
+ * 贡献图用的区间：向外扩到完整周（周一起、周日止）。
+ * 这样区间两端都不会出现"半个空列"，网格宽度只由周数决定。
+ */
+export function contributionRange(from: string, to: string): { from: string; to: string } {
+  return { from: startOfWeek(from), to: addDays(startOfWeek(to), 6) };
+}
+
+/** 自然年区间：1 月 1 日 ~ 12 月 31 日 */
+export function yearRange(year: number): { from: string; to: string } {
+  return { from: `${year}-01-01`, to: `${year}-12-31` };
+}
+
+/**
+ * 每个月的第一周在周列表中的下标与标签，用于给热力图顶端画月份。
+ *
+ * 标签用「1月」这种短格式，而不是「1月13日」：后者约 45px 宽，在 15.8px 的列距下
+ * 必须空出 3 列才不重叠，很容易叠字（实测开头几个月的标签糊成一团）。
+ *
+ * minGap 是"与上一个标签至少相隔几列"。按列数判断是因为列宽随设备变化：
+ * 移动端只有 12px，同样宽度需要更多列才放得下。
+ */
+export function monthMarkers(weeks: ContributionWeek[], minGap = 4): { index: number; label: string }[] {
+  const out: { index: number; label: string }[] = [];
+  let lastMonth = "";
+  let lastIndex = -Infinity;
+  weeks.forEach((week, index) => {
+    const month = week.days[0]!.date.slice(0, 7);
+    if (month === lastMonth) return;
+    lastMonth = month;
+    if (index - lastIndex < minGap) return; // 太近就不标，避免叠字
+    lastIndex = index;
+    // 该周第一天可能还在上个月（补位），用周内第一个属于本月的那天来取月份
+    const firstOfMonth = week.days.find((day) => day.date.slice(0, 7) === month);
+    const date = firstOfMonth?.date ?? week.days[0]!.date;
+    out.push({ index, label: `${Number.parseInt(date.slice(5, 7), 10)}月` });
+  });
+  return out;
+}
