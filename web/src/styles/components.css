@@ -51,29 +51,66 @@
   gap: var(--sp-1);
 }
 
+/**
+ * 日历格子。设计参考与取舍：
+ *
+ * 主流日历（Material 3 日期选择器、Google 日历、Notion 日历、各处贡献热力图）
+ * 都**不给网格画边框**，而是用状态区分：
+ *   · 网格边界交给间距，不用线 —— 7×6 个框会显得密密麻麻，而且这些线不表达任何信息
+ *   · 有内容的日子用底色标出（与随手记页的贡献热力图同一套语言）
+ *   · 今天有专属标记；选中态用主色描边环
+ * 因此这里没有 border：状态全部由 background 与 box-shadow 表达。
+ */
 .day-cell {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2px;
-  min-height: 76px;
-  padding: 7px 8px;
-  border: 1px solid transparent;
+  /* 高度按"内容 + 底部留白"定：日期行 ~15 + 预览 ~16 + 上 7 + 下 10 ≈ 48。
+     之前用 76px，实测内容只占 38px，格子空得发虚。 */
+  min-height: 52px;
+  /* 下边比上边宽：图标排在日期下方，底部需要更多呼吸空间 */
+  padding: 7px 8px 10px;
+  border: none;
   border-radius: var(--radius);
-  background: var(--surface-2);
+  background: transparent;
   text-align: left;
-  transition: background var(--t-fast), border-color var(--t-fast), box-shadow var(--t-fast);
+  transition: background var(--t-fast), box-shadow var(--t-fast);
 }
 
 .day-cell:hover {
+  background: var(--surface-2);
+}
+
+/* 有记录的日子：一层浅底色。比"描边"更安静，也更容易在整月里扫出规律 */
+.day-cell-has {
+  background: var(--surface-2);
+}
+
+.day-cell-has:hover {
   background: var(--surface-3);
 }
 
-/* 有记录的日子：白底 + 描边，让数据"浮"在无记录的日子之上 */
-.day-cell-has {
-  background: var(--surface);
-  border-color: var(--border);
+/* 日期与"今天"标记同一行 */
+.day-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  width: 100%;
+}
+
+/* 今天的专属标记。只在格子放得下时显示（移动端格子太窄，见下面的媒体查询） */
+.day-today-mark {
+  padding: 0 5px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 13px;
+  white-space: nowrap;
 }
 
 .day-cell-outside {
@@ -84,10 +121,11 @@
  * 移动端覆盖。必须放在上面基础规则**之后**——媒体查询本身不增加优先级，
  * 同优先级下后写的赢。之前把它写在基础规则前面，结果被 aspect-ratio/min-height 反向覆盖。
  *
- * 移动端格子的高度账（每格约 48×48，正方形）：
- *   上内边距 3 + 日期行 12 + 间距 2 + 预览两行 2×12 + 下内边距 3 = 44px ≤ 48px
- * 因此日期下方能放下两行「图标+数字」（例如「图标+3 图标」「图标 图标」再带一个 +1）。
- * 图标、数字、行间距都必须收紧到下面这些值，否则第二行会被挤出去、格子被拉长。
+ * 移动端格子的高度账（每格 48×48 正方形）：
+ *   上内边距 4 + 日期行 ~11 + 间隙 2 + 预览两行 2×10 + 下内边距 8 = 45px ≤ 48px
+ * 关键点：预览区**不预留两行高度**，按内容自然高度、紧贴格子底部排。
+ * 之前给它 min-height 撑两行，正方形固定高度下 Chrome 会压缩内容区并把行拉高，
+ * 结果底部间距被吃掉（实测只有 7px）。现在底部间距由 padding 精确决定，与行数无关。
  */
 @media (max-width: 899px) {
   .calendar {
@@ -102,32 +140,47 @@
   .day-cell {
     aspect-ratio: 1 / 1;
     min-height: 0;
-    /* 上 2 + 日期行 12 + 预览两行 2×12 + 下 2 = 40px ≤ 48px 的内容区，正方形不会被撑高 */
-    padding: 2px 4px;
+    gap: 1px;
+    padding: 3px 4px 11px;
     border-radius: var(--radius-sm);
+  }
+
+  /* 日期行固定高度，避免字号行高盒把可用空间吃掉 */
+  .day-head {
+    height: 11px;
+    align-items: flex-start;
+  }
+
+  /* 48px 宽放不下"日期 + 今天标记"并排，今天仍由主色数字表达 */
+  .day-today-mark {
+    display: none;
   }
 
   .day-number {
     font-size: 10px;
-    line-height: 1.2;
+    line-height: 11px;
   }
 
   /* 固定两列：保证排成两行（而不是靠 flex 自动换行碰运气，那样每格行数不一致会显得参差）。
-     行间距 1px、图标与数字之间不留缝。 */
+     推到底部：这样"内容底边到格子底边"的距离就等于 padding-bottom，不被行拉伸影响。 */
   .day-preview {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0 2px;
     min-height: 0;
-    align-content: flex-start;
+    margin-top: auto;
   }
 
   .day-preview-item {
     gap: 0;
-    /* 每行 12px，与上面的高度账对应 */
-    line-height: 12px;
-    height: 12px;
-    overflow: hidden;
+    /* 每行 9px，与上面的高度账对应（图标 11px 会被行高盒放大，因此显式压到 9px） */
+    line-height: 9px;
+    height: 9px;
+  }
+
+  .day-preview-item svg {
+    width: 11px;
+    height: 11px;
   }
 
   .day-preview-count,
@@ -136,15 +189,22 @@
   }
 }
 
+/* 今天：数字用主色加重（标记本身在 .day-today-mark 里） */
 .day-cell-today .day-number {
   color: var(--accent);
   font-weight: 700;
 }
 
-/* 选中态要足够明显：环形高亮，避免与"今天"的强调混淆 */
+/**
+ * 选中态：主色描边环（inset 阴影，不占布局空间）。
+ * 与"今天"的区分：今天靠实心标记 + 主色数字，选中靠环；两者同时存在时也读得清。
+ */
 .day-cell-selected {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px var(--accent-ring);
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.day-cell-selected:hover {
+  box-shadow: inset 0 0 0 2px var(--accent);
 }
 
 .day-number {

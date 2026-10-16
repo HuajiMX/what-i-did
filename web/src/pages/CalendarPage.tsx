@@ -158,23 +158,28 @@ export default function CalendarPage() {
                 aria-label={`${cell.date}，${total} 次活动`}
                 aria-current={hasSelection ? "date" : undefined}
               >
-                <span className="day-number num">{cell.day}</span>
+                <span className="day-head">
+                  <span className="day-number num">{cell.day}</span>
+                  {/* 今天单独给一个标记：今天的格子可能同时是"有活动"和"被选中"，
+                      把标记独立出来才不会和那两种状态抢视觉 */}
+                  {cell.isToday ? <span className="day-today-mark">今天</span> : null}
+                </span>
 
-                {total > 0 ? (
-                  <span className="day-preview">
-                    {entries.slice(0, MAX_PREVIEW).map((entry) => (
-                      <span key={entry.tag.id} className="day-preview-item" style={{ color: entry.tag.color }}>
-                        {/* 用专门的紧凑尺寸：移动端格子里要放下两行「图标+数字」 */}
-                        <Icon name={entry.tag.icon} size={11} stroke={2.4} />
-                        {/* 只记了 1 次就不写数字，避免整屏都是 1 */}
-                        {entry.count > 1 ? <span className="day-preview-count num">{entry.count}</span> : null}
-                      </span>
-                    ))}
-                    {entries.length > MAX_PREVIEW ? (
-                      <span className="day-preview-more num">+{entries.length - MAX_PREVIEW}</span>
-                    ) : null}
-                  </span>
-                ) : null}
+                {/* 预览区始终渲染：移动端给它预留高度，空的格子也保持与有活动的一致，
+                    否则行高会不统一、整月看着参差 */}
+                <span className="day-preview">
+                  {entries.slice(0, MAX_PREVIEW).map((entry) => (
+                    <span key={entry.tag.id} className="day-preview-item" style={{ color: entry.tag.color }}>
+                      {/* 用专门的紧凑尺寸：移动端格子里要放下两行「图标+数字」 */}
+                      <Icon name={entry.tag.icon} size={11} stroke={2.4} />
+                      {/* 只记了 1 次就不写数字，避免整屏都是 1 */}
+                      {entry.count > 1 ? <span className="day-preview-count num">{entry.count}</span> : null}
+                    </span>
+                  ))}
+                  {entries.length > MAX_PREVIEW ? (
+                    <span className="day-preview-more num">+{entries.length - MAX_PREVIEW}</span>
+                  ) : null}
+                </span>
               </button>
             );
           })}
