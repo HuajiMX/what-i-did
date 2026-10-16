@@ -109,6 +109,23 @@ npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真
 | `COOKIE_SECURE` | `true` | 是否给会话 cookie 加 `Secure`。走 HTTPS 时保持 `true` |
 | `NODE_ENV` | 无 | `production` 时会强制校验上面的密钥类配置 |
 
+### 写入频率上限（批量补记历史时需要注意）
+
+服务端对写操作有一个**每 IP 每分钟 120 次**的保护性上限（在 `server/src/app.js` 的中间件里），
+防止脚本失控或误操作把库写坏。正常手点记录不可能碰到。
+
+但如果你打算**批量补记历史**（例如用脚本把过去一年的记录灌进去），会撞到这个上限并收到 429。
+`scripts/seed-demo.mjs` 已经内置了"遇到 429 就退避重试并计数"的处理，可以直接参考它的写法。
+上限值本身是常量 `120`，若你有长期批量导入需求，改大它即可（位置见上面的中间件）。
+
+演示数据与截图：
+
+```bash
+npm start                                      # 另开一个终端
+ADMIN_PASSWORD='你的密码' node scripts/seed-demo.mjs
+node scripts/screenshot.mjs                    # 需要放宽权限，见下
+```
+
 管理员密码是运行时读取的，改完 `.env` 重启容器即可生效，不需要重新构建镜像。
 
 ---
