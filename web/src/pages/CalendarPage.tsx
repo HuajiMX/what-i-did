@@ -5,11 +5,15 @@ import DayPanel from "../components/DayPanel";
 import { Icon } from "../icons/Icon";
 import { useAsync } from "../lib/useAsync";
 import { addMonths, monthGrid, monthLabel, today } from "../lib/date";
+import { pickPreviewSlots } from "../lib/preview";
 
 const WEEKDAY_LABELS = ["一", "二", "三", "四", "五", "六", "日"];
 
-/** 格子里最多预览几个 Tag：再多会挤，多余的用 +n 表示 */
-const MAX_PREVIEW = 3;
+/**
+ * 格子里最多预览几个 Tag。移动端两列两行 = 4；
+ * 桌面端一行能放更多，但这个上限同时约束两端（取舍规则见 pickPreviewSlots）。
+ */
+const MAX_PREVIEW = 4;
 
 export default function CalendarPage() {
   const [params, setParams] = useSearchParams();
@@ -168,17 +172,22 @@ export default function CalendarPage() {
                 {/* 预览区始终渲染：移动端给它预留高度，空的格子也保持与有活动的一致，
                     否则行高会不统一、整月看着参差 */}
                 <span className="day-preview">
-                  {entries.slice(0, MAX_PREVIEW).map((entry) => (
-                    <span key={entry.tag.id} className="day-preview-item" style={{ color: entry.tag.color }}>
-                      {/* 用专门的紧凑尺寸：移动端格子里要放下两行「图标+数字」 */}
-                      <Icon name={entry.tag.icon} size={11} stroke={2.4} />
-                      {/* 只记了 1 次就不写数字，避免整屏都是 1 */}
-                      {entry.count > 1 ? <span className="day-preview-count num">{entry.count}</span> : null}
-                    </span>
-                  ))}
-                  {entries.length > MAX_PREVIEW ? (
-                    <span className="day-preview-more num">+{entries.length - MAX_PREVIEW}</span>
-                  ) : null}
+                  {(() => {
+                    const { visible, hidden } = pickPreviewSlots(entries, MAX_PREVIEW);
+                    return (
+                      <>
+                        {visible.map((entry) => (
+                          <span key={entry.tag.id} className="day-preview-item" style={{ color: entry.tag.color }}>
+                            <Icon name={entry.tag.icon} size={11} stroke={2.4} />
+                            {/* 只记了 1 次就不写数字，避免整屏都是 1 */}
+                            {entry.count > 1 ? <span className="day-preview-count num">{entry.count}</span> : null}
+                          </span>
+                        ))}
+                        {/* hidden 为 1 时不写「+1」：那个 Tag 已被直接显示（见 pickPreviewSlots） */}
+                        {hidden > 1 ? <span className="day-preview-more num">+{hidden}</span> : null}
+                      </>
+                    );
+                  })()}
                 </span>
               </button>
             );

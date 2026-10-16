@@ -216,6 +216,9 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1px 2px;
     min-height: 0;
+    /* 条目在行内居中：grid 默认 stretch 会让同行里"有数字的条目"与"只有图标的条目"
+       基线对不齐（数字看起来比图标低） */
+    align-items: center;
     /* 紧跟日期、不往下飘（配合 .day-cell 的 padding-top 让内容整体靠上） */
     margin-bottom: auto;
   }

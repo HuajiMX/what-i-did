@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node ../scripts/run-vite.mjs",
-    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.test.json",
+    "test": "node --test --experimental-test-isolation=none test/*.test.ts",
     "build": "node ../scripts/run-vite.mjs build && node ../scripts/check-bundle-size.mjs && node ../scripts/check-icon-names.mjs && node ../scripts/ui-audit.mjs && node ../scripts/audit-contrast.mjs",
     "preview": "node ../scripts/run-vite.mjs preview"
   },
