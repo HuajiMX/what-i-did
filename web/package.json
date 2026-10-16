@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
-    "build": "vite build && node ../scripts/check-bundle-size.mjs",
+    "build": "vite build && node ../scripts/check-bundle-size.mjs && node ../scripts/check-icon-names.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

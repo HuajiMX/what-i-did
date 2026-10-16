@@ -15,8 +15,10 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    // 主包（公开页面）必须保持小体积，超限直接构建失败。
-    // 见 scripts/check-bundle-size.mjs 里的说明。
-    chunkSizeWarningLimit: 400,
+    // 与 scripts/check-bundle-size.mjs 的上限保持一致。
+    // 全库图标是一个有意的懒加载 chunk（约 2.4 MB，仅管理员打开图标选择器时下载），
+    // 因此把默认的 500 KB 警告阈值调高，避免留下无意义的噪音警告。
+    // 真正的防线是那个脚本里的体积断言与入口包特征串检查。
+    chunkSizeWarningLimit: 2700,
   },
 });

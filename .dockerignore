@@ -1,0 +1,13 @@
+node_modules
+.npm-cache
+.tools
+.tmp
+data
+web/dist
+.git
+.gitignore
+.env
+.env.local
+*.log
+*.tsbuildinfo
+.DS_Store

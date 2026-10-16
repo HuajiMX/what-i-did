@@ -1,0 +1,221 @@
+# 我做了什么（what-i-did）
+
+个人生活记录与统计网站。用日历记录每天做过的事，用随手记做流水账，并在任意时段上做统计。
+
+- **公开只读**：任何人都能浏览日历、统计与随手记。
+- **私有可写**：只有管理员（你本人）能管理 Tag、记录活动、编写随手记。
+- **一个进程 + 一个 SQLite 文件**：没有外部数据库、没有对象存储、没有消息队列。
+
+---
+
+## 功能
+
+| 页面 | 内容 |
+| --- | --- |
+| 日历 | 月网格，每格显示当天活动次数与各 Tag 的色点；点开某天可 `+1` / `−1` 记录；可按 Tag 筛选，筛选状态写在 URL 里，可直接分享 |
+| 统计 | 本月 / 今年 / 自定义时段 × 多 Tag 筛选；汇总卡（总次数、活跃天数、当前连续、最活跃 Tag）、趋势折线图、Tag 分布环形图、Tag 明细表 |
+| 随手记 | GitHub 风格贡献图（53 周，按当天条数着色），点格子筛选当天的随手记并直接增删改 |
+| Tag 管理 | 管理员专属：新建 / 编辑（名称、图标、颜色）/ 删除，删除前提示将影响的记录条数 |
+
+响应式：≥ 900px 用左侧栏 + 右侧抽屉，< 900px 用底部 Tab Bar + 底部抽屉。
+
+---
+
+## 技术选择（以及为什么不用别的）
+
+| 选择 | 理由 |
+| --- | --- |
+| SQLite（better-sqlite3） | 数据量是"个人 × 每天几条"，十年也就几万行。不需要数据库服务 |
+| 无 ORM，`schema.sql` + `db.prepare()` | 只有 4 张表、5 种查询模式，`CREATE TABLE IF NOT EXISTS` 幂等执行即可，不需要迁移引擎 |
+| 统计在 JS 纯函数里算 | 每个统计口径都能被单测覆盖（连续天数这类边界密集的逻辑尤其需要），写复杂 SQL 反而难测 |
+| 自绘 SVG 图表 | 只需要一条折线 + 一个环形，图表库是 200 KB+ 依赖和一整套要覆盖的默认样式 |
+| 手写 CSS + CSS 变量 | 视觉完全可控，深色模式跟随系统偏好，无 UI 框架 |
+| 活动一行一条记录 | 次数由 `COUNT(*)` 天然得出，不维护冗余的 count 字段 |
+| 日期存 `YYYY-MM-DD` 字符串 | 避免时区把深夜记录挪到相邻日期——这是这类应用最常见的错误来源 |
+| 单管理员、无用户表 | 鉴权是一个二值判断，不是权限系统 |
+
+---
+
+## 快速开始（本地）
+
+需要 Node 22 或更高。
+
+```bash
+npm install
+cp .env.example .env          # Windows: copy .env.example .env
+npm run hash-password -- '你的密码'   # 把输出写入 .env 的 ADMIN_PASSWORD_HASH
+node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"  # 写入 SESSION_SECRET
+npm run build                 # 构建前端
+npm start                     # 打开 http://127.0.0.1:8787
+```
+
+本机用 http 访问时，务必把 `.env` 里的 `COOKIE_SECURE` 设为 `false`，否则浏览器不会保存会话 cookie（表现为"登录后仍是未登录"）。
+
+### 开发模式（前后端分离，带热更新）
+
+```bash
+npm run dev:server            # 后端 http://127.0.0.1:8787
+npm run dev:web               # 前端 http://127.0.0.1:5173（/api 自动代理到后端）
+```
+
+> 在受限的沙箱环境里，`npm install` 需要加 `--ignore-scripts`、`vite build` 需要放宽权限，
+> 原因是 esbuild 必须启动带管道的子进程。详见 [docs/probe-node24.md](docs/probe-node24.md)。
+
+### 测试
+
+```bash
+npm test          # server 单测：日期边界、统计口径、鉴权、接口行为（45 个用例）
+npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真静态文件（29 项检查）
+```
+
+`test:smoke` 会在 8791 端口用独立的临时数据库起一个真实服务实例，覆盖跨年连续天数、
+按周/按月趋势分桶、级联删除、未授权写入拒绝、深层路由回退与静态资源缓存头等，
+跑完自动关闭。它不 spawn 子进程（服务在测试进程内启动），因此不依赖任何外部环境。
+
+前端类型检查：`npm run typecheck --workspace web`。
+
+---
+
+## 环境变量
+
+| 变量 | 默认值 | 说明 |
+| --- | --- | --- |
+| `PORT` | `8787` | 监听端口 |
+| `HOST` | `127.0.0.1` | 监听地址。默认只允许本机/反向代理访问；容器里设为 `0.0.0.0` |
+| `DB_PATH` | `./data/what-i-did.db` | SQLite 文件路径 |
+| `SESSION_SECRET` | 无 | 至少 32 字符。生产环境缺失时**拒绝启动** |
+| `ADMIN_PASSWORD_HASH` | 无 | 由 `npm run hash-password` 生成。服务端只存哈希 |
+| `SESSION_DAYS` | `30` | 会话有效期 |
+| `COOKIE_SECURE` | `true` | 是否给会话 cookie 加 `Secure`。走 HTTPS 时保持 `true` |
+| `NODE_ENV` | 无 | `production` 时会强制校验上面的密钥类配置 |
+
+管理员密码是运行时读取的，改完 `.env` 重启容器即可生效，不需要重新构建镜像。
+
+---
+
+## 部署（Docker Compose）
+
+```bash
+cp .env.example .env
+# 1) 生成 SESSION_SECRET
+node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"
+# 2) 生成密码哈希
+node scripts/hash-password.mjs '你的密码'
+# 3) 把两个值填进 .env，并确认 COOKIE_SECURE=true
+
+docker compose up -d --build
+```
+
+数据存在 Docker 命名卷 `what-i-did-data` 里，容器重建不影响数据。
+
+> 为什么用命名卷而不是 `./data` 绑定挂载：绑定挂载的目录在宿主机上默认属于 root，
+> 而容器以非 root 用户运行，SQLite 会因权限不足无法创建数据库文件。
+> 若你确实想直接看到宿主机上的 db 文件，把 compose 里的卷改成 `./data:/app/data`，
+> 并在启动前执行 `mkdir -p data && sudo chown 1000:1000 data`。
+
+### 反向代理
+
+`docker-compose.yml` 默认把端口绑到 `127.0.0.1:8787`，也就是只接受本机/反向代理访问——这样容器里的"客户端 IP"才是可信的（登录限速按 IP 统计）。用一个最小的 Nginx 配置：
+
+```nginx
+server {
+  listen 443 ssl http2;
+  server_name example.com;
+
+  ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+
+  location / {
+    proxy_pass http://127.0.0.1:8787;
+    proxy_set_header Host              $host;
+    proxy_set_header X-Real-IP         $remote_addr;
+    proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+}
+```
+
+如果暂时不做 HTTPS、直接用 `http://IP:8787` 访问：把 compose 里的端口改成 `"8787:8787"`，并把 `COOKIE_SECURE` 设为 `"false"`。此时**密码与会话 cookie 都是明文传输**，只建议在可信内网这么做。
+
+---
+
+## 数据备份与恢复
+
+SQLite 开了 WAL 模式，**活动中的数据库不能直接 `cp` 文件**——最新的写入可能在同目录的 `-wal` 文件里，只复制主文件会丢数据。两种正确做法：
+
+```bash
+# 做法一（推荐）：用 SQLite 自己的备份命令，不中断服务
+docker compose exec app sh -c 'node -e "
+  const D=require(\"better-sqlite3\");
+  const db=new D(\"/app/data/what-i-did.db\",{readonly:true});
+  db.backup(\"/app/data/backup-\"+new Date().toISOString().slice(0,10)+\".db\").then(()=>console.log(\"ok\"));
+"'
+
+# 做法二：先停容器，再复制文件（此时 WAL 已合并）
+docker compose stop
+cp data/what-i-did.db ~/backups/what-i-did-$(date +%F).db
+docker compose start
+```
+
+恢复：停容器 → 用备份文件覆盖 `data/what-i-did.db` → 删除残留的 `data/what-i-did.db-wal` 与 `-shm` → 启动容器。
+
+## 回滚
+
+镜像按提交构建，回滚就是切回上一个能用的提交：
+
+```bash
+git log --oneline                 # 找到上一个好版本
+git checkout <commit>
+docker compose up -d --build
+```
+
+数据库结构目前只有 `CREATE TABLE IF NOT EXISTS`，因此回滚代码不会破坏已有数据。若某次提交修改了列定义，需要在 README 的提交说明里单独写迁移步骤。
+
+---
+
+## 图标系统
+
+Tag 图标来自 [@tabler/icons-react](https://tabler.io/icons)（MIT，共 6238 个图标）。按三层组织，避免把整个图标库塞给访客：
+
+| 层 | 内容 | 谁加载 | 体积（实测） |
+| --- | --- | --- | --- |
+| 常用 | `web/src/icons/common.ts` 里显式具名 import 的约 60 个图标 | 所有访客（在入口包里） | 入口包合计 316.8 KB / gzip 100 KB |
+| 按需 | 全库图标折叠成一个懒加载 chunk | 只有真的用到冷门图标的访客 | 2390.5 KB / gzip 454 KB / brotli 338 KB |
+| 选择器 | `IconPicker`，含中文分类与搜索 | 仅管理员，点开选择器时 | 同上（同一个 chunk） |
+
+**不要写 `import * as Icons from "@tabler/icons-react"` 或 `Icons["Icon" + name]`**：那会把 6238 个图标（约 5 MB）静默打进公开页面的入口包，构建不会报错、只是访客变慢。`scripts/check-bundle-size.mjs` 会在构建时拦住这种情况（体积上限 + 入口包内图标特征串检查）。
+
+服务端的图标名白名单由 `scripts/gen-icon-catalog.mjs` 从图标包生成到 `server/src/icon-names.json`，改图标库版本后执行 `npm run icons` 重新生成。
+
+---
+
+## 目录结构
+
+```
+server/src/
+  app.js         应用组装：中间件、路由挂载、静态托管、错误处理
+  index.js       入口：配置自检、启动、优雅关闭
+  db.js          SQLite 打开与 schema 执行
+  schema.sql     4 张表，全部幂等
+  dates.js       日期纯函数（月末钳制、闰年、周对齐）
+  stats.js       统计纯函数（聚合、连续天数、趋势分桶）
+  auth.js        scrypt 校验、会话、限速
+  validate.js    入参校验与 Tag 调色板
+  routes/        tags / activities / notes / stats / auth
+server/test/     45 个用例（node --test）
+web/src/
+  icons/         图标三层结构
+  pages/         日历 / 统计 / 随手记 / Tag 管理 / 登录
+  components/    抽屉、确认弹窗、趋势图、环形图
+  lib/           日期工具、useAsync
+  state/         登录态、提示条
+  styles/        tokens / base / layout / components
+scripts/         图标清单生成、密码哈希、产物体积断言
+```
+
+## 已知限制
+
+- 没有自动化浏览器端到端测试；验收靠 `npm test` 的接口测试 + 人工核对界面。
+- 登录限速是内存实现，重启进程即清零。单管理员场景下够用；若将来需要多实例部署，需要改成共享存储。
+- 时区按服务器本地时间判定"今天"。若服务器时区与你所在地不同，跨日边界会有偏差，建议容器设置 `TZ`。
+- 深色模式跟随系统偏好，没有手动切换开关。

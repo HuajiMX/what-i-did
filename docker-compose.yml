@@ -1,0 +1,28 @@
+services:
+  app:
+    build: .
+    image: what-i-did:latest
+    container_name: what-i-did
+    restart: unless-stopped
+    # 只监听宿主机回环地址：由反向代理（Nginx/Caddy）对外提供 HTTPS。
+    # 若暂时没有反代、想直接用 IP:端口 访问，把下面这行改成 "8787:8787"。
+    ports:
+      - "127.0.0.1:8787:8787"
+    env_file:
+      # .env 不进镜像，只在运行时注入。复制 .env.example 得到它。
+      - .env
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      DB_PATH: /app/data/what-i-did.db
+      # 经反向代理提供 HTTPS 时保持 true；直接 http 访问时改成 false，否则浏览器不保存会话 cookie
+      COOKIE_SECURE: "true"
+    volumes:
+      # 用命名卷而不是 ./data 绑定挂载：绑定挂载的目录在宿主机上默认属于 root，
+      # 而容器里以 node(uid 1000) 运行，SQLite 会因权限不足无法写入。
+      # 命名卷由 Docker 负责属主，避免这个必现的坑。
+      # 若你确实想要宿主目录，改成 "./data:/app/data" 并先执行 chown 1000:1000 data。
+      - what-i-did-data:/app/data
+
+volumes:
+  what-i-did-data:
