@@ -1,0 +1,24 @@
+{
+  "name": "what-i-did",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "个人生活记录与统计网站：日历活动 Tag、随手记热力图、时段统计",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "postinstall": "node scripts/gen-icon-catalog.mjs || echo \"图标清单生成失败（可能依赖尚未装好），请手动执行: npm run icons\"",
+    "icons": "node scripts/gen-icon-catalog.mjs",
+    "build": "npm run build --workspace web",
+    "start": "node server/src/index.js",
+    "dev:server": "npm run dev --workspace server",
+    "dev:web": "npm run dev --workspace web",
+    "test": "npm test --workspace server",
+    "hash-password": "node scripts/hash-password.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

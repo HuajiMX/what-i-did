@@ -1,0 +1,8 @@
+node_modules/
+.npm-cache/
+.probe/
+data/
+*.log
+.env
+.env.local
+web/dist/
