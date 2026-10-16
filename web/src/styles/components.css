@@ -122,10 +122,9 @@
  * 同优先级下后写的赢。之前把它写在基础规则前面，结果被 aspect-ratio/min-height 反向覆盖。
  *
  * 移动端格子的高度账（每格 48×48 正方形）：
- *   上内边距 4 + 日期行 ~11 + 间隙 2 + 预览两行 2×10 + 下内边距 8 = 45px ≤ 48px
- * 关键点：预览区**不预留两行高度**，按内容自然高度、紧贴格子底部排。
- * 之前给它 min-height 撑两行，正方形固定高度下 Chrome 会压缩内容区并把行拉高，
- * 结果底部间距被吃掉（实测只有 7px）。现在底部间距由 padding 精确决定，与行数无关。
+ *   上内边距 3 + 日期行 11 + 间隙 1 + 预览两行 2×9 + 下内边距 12 = 45px ≤ 48px
+ * 预览每行一个「图标 8px + 数字 7px」，横向排列共约 15px；
+ * 列宽约 19px，因此一行一个 Tag、两列放两个，两行共可放 4 个（超出显示 +N）。
  */
 @media (max-width: 899px) {
   .calendar {
@@ -141,7 +140,7 @@
     aspect-ratio: 1 / 1;
     min-height: 0;
     gap: 1px;
-    padding: 3px 4px 11px;
+    padding: 3px 4px 12px;
     border-radius: var(--radius-sm);
   }
 
@@ -166,26 +165,34 @@
   .day-preview {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0 2px;
+    gap: 1px 2px;
     min-height: 0;
     margin-top: auto;
   }
 
+  /*
+   * 每列可用宽度只有 (48 − 左右内边距 8 − 列间距 2) / 2 ≈ 19px，非常紧。
+   * 因此图标压到 8px、数字 7px 单字符并紧贴图标，一个 Tag 约占 15px。
+   * 若图标回到 11px、数字 9px，一个 Tag 要 22px 就放不下两个（实测会被挤到一起）。
+   */
   .day-preview-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 0;
-    /* 每行 9px，与上面的高度账对应（图标 11px 会被行高盒放大，因此显式压到 9px） */
-    line-height: 9px;
-    height: 9px;
+    line-height: 1;
   }
 
   .day-preview-item svg {
-    width: 11px;
-    height: 11px;
+    width: 8px;
+    height: 8px;
   }
 
   .day-preview-count,
   .day-preview-more {
-    font-size: 9px;
+    font-size: 8px;
+    line-height: 8px;
+    font-weight: 600;
   }
 }
 

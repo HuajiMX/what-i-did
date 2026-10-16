@@ -26,8 +26,16 @@
   border-radius: 9px;
   background: var(--accent);
   color: #fff;
-  font-weight: 700;
-  font-size: 15px;
+}
+
+/* 图标铺满容器。
+   之前 BrandMark 组件里写死 width/height=16 而容器是 30px，只填了一半，
+   四周多出一圈紫色，看着像"主体外面又套了个边框"。图形本身自带 7/32 的圆角留白，
+   铺满后视觉尺寸才是对的。 */
+.brand-mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .brand-text {

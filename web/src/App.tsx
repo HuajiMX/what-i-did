@@ -60,7 +60,7 @@ function Sidebar({ admin }: { admin: boolean }) {
     <aside className="sidebar">
       <div className="brand">
         <span className="brand-mark" aria-hidden="true">
-          <BrandMark size={16} />
+          <BrandMark />
         </span>
         <span className="brand-text">
           <span className="brand-title">我做了什么</span>
