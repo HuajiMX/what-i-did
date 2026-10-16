@@ -603,11 +603,27 @@
   display: flex;
   flex-direction: column;
   gap: var(--sp-2);
+  /* 让滚动容器可以收缩到比内容窄（flex 子项默认 min-width:auto 会撑破卡片） */
+  min-width: 0;
 }
 
+/*
+ * 图表区域横向滚动：放不下时滑动图表，纵轴刻度（画在 SVG 内部左侧）与
+ * 横轴标签（与画布同宽）都保持不动。
+ */
+.chart-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 0;
+  padding-bottom: var(--sp-1);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 高度固定，宽度由 SVG 的 width 属性给出（max(容器宽, 数据点所需宽)） */
 .chart {
-  width: 100%;
+  display: block;
   height: 200px;
+  max-width: none;
   overflow: visible;
 }
 
@@ -644,12 +660,15 @@
   vector-effect: non-scaling-stroke;
 }
 
+/*
+ * 横轴标签：宽度由行内 style 设成与画布相同，因此与折线的列严格对齐；
+ * 标签本身留出与 SVG 相同的左右内边距，避免第一个标签被裁掉。
+ */
 .chart-x-labels {
   display: flex;
   justify-content: space-between;
   gap: var(--sp-1);
-  padding-left: 34px;
-  padding-right: 12px;
+  padding-top: 2px;
 }
 
 /* 环形图 */
