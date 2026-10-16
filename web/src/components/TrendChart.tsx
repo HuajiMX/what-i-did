@@ -7,16 +7,14 @@ interface Props {
   bucketType: "day" | "week" | "month";
 }
 
-/** 逻辑坐标系的基准宽度（容器更宽时再撑满） */
-const WIDTH = 720;
+/** 画布的最小宽度：只有比这更窄时才横向滚动（移动端），桌面端一律铺满不滚动 */
+const MIN_CANVAS = 360;
 /** 固定高度：不随容器宽度变化，避免折线被纵向压扁 */
 const HEIGHT = 200;
 const PAD_TOP = 12;
 const PAD_RIGHT = 12;
 const PAD_BOTTOM = 24;
 const PAD_LEFT = 34;
-/** 每个数据点至少占这么多像素：点多了就让画布变宽、横向滚动，而不是把点挤在一起 */
-const MIN_POINT_PITCH = 28;
 
 /**
  * 趋势图。自绘 SVG 而不是引图表库：只需要一条折线 + 面积 + 稀疏的横轴标签，
@@ -26,17 +24,28 @@ const MIN_POINT_PITCH = 28;
  * 尺寸策略（两个方向分开处理）：
  *   高度固定 200px，**不使用** preserveAspectRatio="none"——
  *   那会让宽度与高度各自独立缩放，折线被压扁、圆点变成椭圆（之前就是这个毛病）。
- *   宽度取 max(容器可用宽, 数据点所需宽)：容器更宽就铺满，放不下就由
- *   .chart-scroll 横向滚动。纵轴刻度画在 SVG 左侧、横轴标签与画布同宽，
- *   因此滚动时坐标轴保持不动。
+ *
+ *   宽度的取值顺序（关键是不要让桌面端出现"放得下却还有滚动条"）：
+ *     1. 容器可用宽 ≥ 理想宽（点数 × 28px）→ 用容器宽，铺满、不滚动
+ *     2. 容器介于 MIN_CANVAS 与理想宽之间 → 仍用容器宽，把点排紧一点、**不滚动**
+ *     3. 容器 < MIN_CANVAS（窄屏）→ 用 MIN_CANVAS，横向滚动
+ *   早期版本让"理想宽"直接做下限，于是窄一点的桌面窗口（<1100px）装不下 914px
+ *   就冒出一条横向滚动条——内容明明是全的，看着像 bug。
+ *
+ *   纵轴刻度画在 SVG 左侧、横轴标签与画布同宽，因此滚动时坐标轴保持不动。
  */
 export default function TrendChart({ points, bucketType }: Props) {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
   const [available, setAvailable] = useState(0);
 
-  // 量出滚动容器的可用宽度：撑满它就能避免"放得下却留白"
+  /*
+   * 量的是**外层 .chart-wrap** 而不是滚动容器自身：
+   * 滚动容器一旦出现横向滚动条，它的 clientWidth 就会变小，用它反推画布宽会形成反馈环
+   * （画布变宽 → 出滚动条 → 可用宽变小 → 画布变窄 → 滚动条消失 → 循环）。
+   * 外层宽度与滚动条无关，稳定。
+   */
   useEffect(() => {
-    const el = scrollRef.current;
+    const el = wrapRef.current;
     if (!el) return;
     const measure = () => setAvailable(el.clientWidth);
     measure();
@@ -47,9 +56,14 @@ export default function TrendChart({ points, bucketType }: Props) {
 
   const { canvasWidth, chart, padding } = useMemo(() => {
     const pad = { top: PAD_TOP, right: PAD_RIGHT, bottom: PAD_BOTTOM, left: PAD_LEFT };
-    // 数据点越多画布越宽；容器更宽时铺满容器
-    const needed = Math.max(WIDTH, points.length * MIN_POINT_PITCH + pad.left + pad.right);
-    const canvas = Math.max(needed, available);
+    /*
+     * 宽度的取舍：
+     *   容器 ≥ MIN_CANVAS → 铺满容器（桌面端不滚动；点密一点也无妨）
+     *   容器 < MIN_CANVAS → 用 MIN_CANVAS，横向滚动（手机）
+     * 不再按"点数 × 28px"设下限——那会让窄一点的桌面窗口（<1100px）装不下而冒出滚动条，
+     * 内容明明是全的，看着像 bug。每点的间距交给宽度自动分配。
+     */
+    const canvas = Math.max(available > 0 ? available : MIN_CANVAS, MIN_CANVAS);
     const max = Math.max(1, ...points.map((point) => point.count));
     const innerW = canvas - pad.left - pad.right;
     const innerH = HEIGHT - pad.top - pad.bottom;
@@ -84,9 +98,9 @@ export default function TrendChart({ points, bucketType }: Props) {
   }
 
   return (
-    <div className="chart-wrap">
+    <div className="chart-wrap" ref={wrapRef}>
       {/* 只有这块横向滚动；纵轴刻度画在 SVG 内左侧，横轴标签与画布同宽，滚动时都保持不动 */}
-      <div className="chart-scroll" ref={scrollRef}>
+      <div className="chart-scroll">
         <svg
           className="chart"
           width={canvasWidth}
