@@ -10,10 +10,15 @@ COPY package.json package-lock.json .npmrc ./
 COPY server/package.json ./server/package.json
 COPY web/package.json ./web/package.json
 
-# 这里刻意不加 --ignore-scripts：better-sqlite3 需要跑安装脚本落预编译二进制，
+# 编译工具必须在 npm ci **之前**装好。
+# Alpine(musl) 上 better-sqlite3 没有预编译二进制，安装时必然走 node-gyp 现场编译；
+# 缺 python3/make/g++ 会直接失败（实测报错：gyp ERR! find Python）。
+# 刻意不加 --ignore-scripts：better-sqlite3 需要编译原生模块，
 # postinstall 还会生成图标清单（server/src/icon-names.json）。
-# 开发机上加该参数只是绕开本地沙箱限制，容器里没有这个限制。
-RUN npm ci
+# 装完立即删除这些构建依赖，不留在最终层里。
+RUN apk add --no-cache --virtual .build-deps python3 make g++ \
+ && npm ci \
+ && apk del .build-deps
 
 COPY scripts ./scripts
 COPY web ./web
@@ -30,7 +35,7 @@ COPY package.json package-lock.json .npmrc ./
 COPY server/package.json ./server/package.json
 COPY web/package.json ./web/package.json
 
-# 只装生产依赖，并编译原生模块（若对应平台没有预编译包，这里需要构建工具）
+# 只装生产依赖。同样需要构建工具：musl 平台没有 better-sqlite3 的预编译包
 RUN apk add --no-cache --virtual .build-deps python3 make g++ \
  && npm ci --omit=dev --workspace server --include-workspace-root \
  && npm cache clean --force \

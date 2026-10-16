@@ -17,6 +17,12 @@ services:
       DB_PATH: /app/data/what-i-did.db
       # 经反向代理提供 HTTPS 时保持 true；直接 http 访问时改成 false，否则浏览器不保存会话 cookie
       COOKIE_SECURE: "true"
+      # 时区决定"今天"是几号。容器默认 UTC，若不设置，北京时间 0:00–8:00 的记录
+      # 会被算到前一天。默认给上海，按需改（也可在 .env 里覆盖）。
+      TZ: ${TZ:-Asia/Shanghai}
+    # SQLite 需要时间把 WAL 内容回写主库；默认 10s 在某些磁盘上不够，
+    # 提前终止可能留下未合并的 -wal（不至于损坏，但下次启动要做恢复）
+    stop_grace_period: 20s
     volumes:
       # 用命名卷而不是 ./data 绑定挂载：绑定挂载的目录在宿主机上默认属于 root，
       # 而容器里以 node(uid 1000) 运行，SQLite 会因权限不足无法写入。
