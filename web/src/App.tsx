@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { BrandMark } from "./components/BrandMark";
 import { Icon } from "./icons/Icon";
 import { useAuth } from "./state/auth";
 import { useToast } from "./state/toast";
@@ -58,7 +59,9 @@ function Sidebar({ admin }: { admin: boolean }) {
   return (
     <aside className="sidebar">
       <div className="brand">
-        <span className="brand-mark">我</span>
+        <span className="brand-mark" aria-hidden="true">
+          <BrandMark size={16} />
+        </span>
         <span className="brand-text">
           <span className="brand-title">我做了什么</span>
           <span className="faint tiny">生活记录与统计</span>

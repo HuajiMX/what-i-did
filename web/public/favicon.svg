@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="我做了什么">
+  <title>我做了什么</title>
+  <!--
+    应用图标：圆角方块 + 3×3 格点，其中三个格子被点亮。
+    "点亮的格子"对应项目核心——在日历上标记今天做过的事。
+    格子只画 3×3，是为了在 16px 的 favicon 尺寸下每个点仍大于 1 个像素、不会糊成一团。
+  -->
+  <rect width="32" height="32" rx="7" fill="#4f46e5"/>
+
+  <!-- 底纹方格：半透明白，给"日历"提供结构感但不抢主体 -->
+  <g fill="#ffffff" fill-opacity="0.26">
+    <rect x="8" y="8" width="4" height="4" rx="1"/>
+    <rect x="14" y="8" width="4" height="4" rx="1"/>
+    <rect x="20" y="8" width="4" height="4" rx="1"/>
+    <rect x="8" y="14" width="4" height="4" rx="1"/>
+    <rect x="14" y="14" width="4" height="4" rx="1"/>
+    <rect x="20" y="14" width="4" height="4" rx="1"/>
+    <rect x="8" y="20" width="4" height="4" rx="1"/>
+    <rect x="14" y="20" width="4" height="4" rx="1"/>
+    <rect x="20" y="20" width="4" height="4" rx="1"/>
+  </g>
+
+  <!-- 被点亮的三个格子：一道对角线，暗示"连续记录" -->
+  <g fill="#ffffff">
+    <rect x="8" y="8" width="4" height="4" rx="1"/>
+    <rect x="14" y="14" width="4" height="4" rx="1"/>
+    <rect x="20" y="20" width="4" height="4" rx="1"/>
+  </g>
+</svg>
