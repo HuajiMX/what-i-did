@@ -298,6 +298,7 @@ function ContributionGraph({
   onSelect: (date: string) => void;
 }) {
   const scroller = useRef<HTMLDivElement>(null);
+  const todayValue = today();
 
   // 默认滚动到最右侧（最近的日期），与 GitHub 一致
   useEffect(() => {
@@ -336,6 +337,11 @@ function ContributionGraph({
             week.days.map((day) => {
               if (!day.inRange) {
                 return <span key={day.date} className="contrib-cell contrib-cell-empty" aria-hidden="true" />;
+              }
+              // 超过今天的格子用 visibility 隐藏而不是不渲染：网格是列优先布局，
+              // 少渲染一个会把后面所有格子往前挪、整列错位。隐藏则占着位置但不显形。
+              if (day.date > todayValue) {
+                return <span key={day.date} className="contrib-cell contrib-cell-hidden" aria-hidden="true" />;
               }
               const count = counts[day.date] ?? 0;
               return (

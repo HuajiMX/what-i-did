@@ -817,6 +817,11 @@
   background: transparent;
 }
 
+/* 超过今天的格子：占位但不显形，避免打乱列优先布局的列对齐 */
+.contrib-cell-hidden {
+  visibility: hidden;
+}
+
 /* 无记录的日子在 CSS 里已有底色，但图例刻度需要显式引用 level-0 */
 .contrib-cell.level-0 {
   background: var(--surface-3);
