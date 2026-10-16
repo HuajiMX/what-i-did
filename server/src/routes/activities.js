@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { nowIso } from "../db.js";
 import { isDateString, normalizeRange } from "../dates.js";
 import { groupByDateTag } from "../stats.js";
-import { parseIdList, requireBody, requireDate, requireInt, ValidationError } from "../validate.js";
+import { parseIdList, readJsonBody, requireDate, requireInt, ValidationError } from "../validate.js";
 
 /**
  * 活动记录。一行 = 一次。
@@ -56,7 +56,7 @@ export function activityRoutes({ db }) {
   });
 
   routes.post("/", async (c) => {
-    const body = requireBody(await c.req.json());
+    const body = await readJsonBody(c);
     const date = requireDate(body.date, "date");
     const tagId = requireInt(body.tag_id, "tag_id", { min: 1 });
     if (!tagExists.get(tagId)) throw new ValidationError("指定的 Tag 不存在");
@@ -66,7 +66,7 @@ export function activityRoutes({ db }) {
 
   /** 连续记 n 次：点一次 +1 是最高频操作，避免前端循环发 n 个请求 */
   routes.post("/bulk", async (c) => {
-    const body = requireBody(await c.req.json());
+    const body = await readJsonBody(c);
     const date = requireDate(body.date, "date");
     const tagId = requireInt(body.tag_id, "tag_id", { min: 1 });
     const times = body.times === undefined ? 1 : requireInt(body.times, "times", { min: 1, max: 100 });

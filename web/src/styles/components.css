@@ -784,14 +784,15 @@
   position: relative;
 }
 
-/* 移动端：固定 12px 格子，53 周约 800px，超出容器就横向滚动（窄屏看全年只能这样） */
+/* 移动端：固定 12px 格子、间距 2px，53 周约 740px，超出容器就横向滚动（窄屏看全年只能这样） */
 .contrib-grid {
   display: inline-grid;
   grid-template-columns: repeat(var(--weeks, 53), 12px);
   /* 行轨道用 minmax(12px, auto) 而不是固定 12px：桌面端列被 1fr 放大后
      格子（aspect-ratio 正方形）会高于 12px，固定轨道会让格子溢出行、行间距失真 */
   grid-template-rows: 16px repeat(7, minmax(12px, auto));
-  gap: 3px;
+  /* 间距从 3px 收到 2px：桌面端 53 列刚好铺满，留一点余量给选中环等可能的溢出 */
+  gap: 2px;
   grid-auto-flow: column;
 }
 
@@ -832,13 +833,15 @@
 }
 
 /*
- * 月份标签层：绝对定位铺满滚动内容宽度，标签按百分比偏移落在对应列上方。
- * 这样它不参与网格的尺寸计算（否则标签比格子宽，会把滚动宽度撑大、桌面端多出滚动条）。
+ * 月份标签行：作为网格的一项跨满所有列，宽度因此精确等于网格宽度。
+ * 上一版它放在网格外、以滚动容器为百分比基准，而容器比网格宽 20px，
+ * 结果标签越往右偏得越多、末尾多出一片空白。
  */
 .contrib-months {
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 19px;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  position: relative;
+  /* 高度由网格的月份行轨道给定，标签贴顶即可 */
 }
 
 .contrib-month {
@@ -857,7 +860,10 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 3px;
-  border: 1px solid transparent;
+  /* 选中环用 inset 阴影而不是 border：border 会把格子撑大 2px，
+     而桌面端 53 列刚好铺满容器，多出的宽度会让最右侧格子溢出 */
+  border: none;
+  box-shadow: inset 0 0 0 1px transparent;
   background: var(--surface-3);
   padding: 0;
 }
@@ -877,7 +883,7 @@
 }
 
 .contrib-cell:hover {
-  border-color: var(--text-faint);
+  box-shadow: inset 0 0 0 1px var(--text-faint);
 }
 
 .contrib-cell.level-1 {
@@ -896,12 +902,14 @@
   background: var(--accent);
 }
 
+/* 选中：inset 环画在格子内部，不改变尺寸、也不占用容器宽度 */
 .contrib-cell-selected {
-  border-color: var(--text);
-  box-shadow: 0 0 0 1px var(--text);
+  box-shadow: inset 0 0 0 2px var(--text);
 }
 
-/* 图例与深浅刻度 */
+/* 图例与深浅刻度。
+   图例里的色块复用 .contrib-cell，而格子宽度改为 100% 后会跟着父容器伸缩——
+   在 flex 行里会被压扁/撑开，所以这里给回固定尺寸。 */
 .contrib-legend {
   display: flex;
   align-items: center;
@@ -915,6 +923,13 @@
   display: inline-flex;
   align-items: center;
   gap: var(--sp-1);
+}
+
+.contrib-scale .contrib-cell {
+  width: 12px;
+  height: 12px;
+  aspect-ratio: auto;
+  flex: 0 0 auto;
 }
 
 .note-list {

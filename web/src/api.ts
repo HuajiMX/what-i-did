@@ -142,6 +142,7 @@ export const endpoints = {
       `/api/notes?from=${from}&to=${to}`,
     ),
   notesOfDay: (date: string) => api.get<{ date: string; notes: Note[] }>(`/api/notes/day?date=${date}`),
+  noteYears: () => api.get<{ years: number[] }>("/api/notes/years"),
   createNote: (date: string, content: string) => api.post<{ note: Note }>("/api/notes", { date, content }),
   updateNote: (id: number, content: string) => api.patch<{ note: Note }>(`/api/notes/${id}`, { content }),
   deleteNote: (id: number) => api.del<{ removed: { id: number } }>(`/api/notes/${id}`),

@@ -17,9 +17,6 @@ import { useToast } from "../state/toast";
 /** 默认窗口：近 53 周 ≈ 一年，与 GitHub 的默认观感一致 */
 const WEEKS = 53;
 
-/** 年份筛选里"往前可选几年" */
-const YEAR_SPAN = 4;
-
 /**
  * 随手记页。
  *
@@ -53,16 +50,20 @@ export default function NotesPage() {
 
   const counts = useAsync(() => endpoints.notesRange(range.from, range.to), [range.from, range.to]);
   const dayNotes = useAsync(() => endpoints.notesOfDay(selectedDate), [selectedDate]);
+  // 年份筛选只列出真的有记录的年份，避免一排点进去空空的按钮
+  const noteYears = useAsync(() => endpoints.noteYears(), []);
 
   const total = counts.data?.total ?? 0;
   const activeDays = Object.keys(counts.data?.counts ?? {}).length;
   const max = Math.max(1, ...Object.values(counts.data?.counts ?? {}));
 
-  /** 可选年份：今年往前数 YEAR_SPAN 年 */
+  /** 可选年份：只列有记录的年份（服务端返回），再补上"选中但在列表里"的年份以防状态不一致 */
   const years = useMemo(() => {
-    const current = Number.parseInt(today().slice(0, 4), 10);
-    return Array.from({ length: YEAR_SPAN + 1 }, (_, index) => current - index);
-  }, []);
+    const list = noteYears.data?.years ?? [];
+    const selectedYear = Number.parseInt(rangeParam, 10);
+    const merged = Number.isInteger(selectedYear) && !list.includes(selectedYear) ? [selectedYear, ...list] : list;
+    return merged.sort((a, b) => b - a);
+  }, [noteYears.data, rangeParam]);
 
   function selectRange(value: string) {
     const merged = new URLSearchParams(params);
@@ -389,29 +390,28 @@ function ContributionGraph({
 
       <div className="contrib-scroll" ref={scroller}>
         {/*
-          月份标签单独放一层，用百分比偏移定位。
-          为什么不用"把标签放进网格 + 绝对定位"：绝对定位的元素会脱离网格区域，
-          justify-self 不再生效，所有标签会叠在最左边（实测全挤在一起）。
-          这里按列算百分比，既不占据网格宽度（避免把滚动宽度撑大），也能精确对列。
+          月份标签行是网格的一项（跨满所有列），因此它的宽度精确等于网格宽度——
+          上一版把它放到网格外、按百分比定位，结果宽度基准是滚动容器（比网格宽 20px），
+          标签越往右偏得越多、末尾多出一片空白。
+          行内的标签再用百分比偏移落在对应列上方；不占列宽，也不会撑大滚动宽度。
         */}
-        <div className="contrib-months" aria-hidden="true">
-          {markers.map((marker) => (
-            <span
-              key={marker.index}
-              className="contrib-month"
-              style={{ left: `calc(${(marker.index / weeks.length) * 100}% + ${marker.index * 3}px)` }}
-            >
-              {marker.label}
-            </span>
-          ))}
-        </div>
-
         <div
           className="contrib-grid"
           style={{ "--weeks": weeks.length } as React.CSSProperties}
           role="grid"
           aria-label="随手记贡献图"
         >
+          <div className="contrib-months" aria-hidden="true">
+            {markers.map((marker) => (
+              <span
+                key={marker.index}
+                className="contrib-month"
+                style={{ left: `${(marker.index / weeks.length) * 100}%` }}
+              >
+                {marker.label}
+              </span>
+            ))}
+          </div>
 
           {weeks.map((week) =>
             week.days.map((day, dayIndex) => {

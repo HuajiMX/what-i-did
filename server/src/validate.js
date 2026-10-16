@@ -84,3 +84,19 @@ export function requireBody(body) {
   }
   return body;
 }
+
+/**
+ * 解析请求体并校验为对象。
+ * 单独封一层是为了让"非法 JSON"返回 400 而不是 500：
+ * Hono 的 c.req.json() 会直接抛 SyntaxError，落到统一错误处理里就成了服务端错误，
+ * 但请求体格式错误明明是客户端的问题（实测手工拼错的 JSON 会拿到 500）。
+ */
+export async function readJsonBody(c) {
+  let raw;
+  try {
+    raw = await c.req.json();
+  } catch {
+    throw new ValidationError("请求体不是合法的 JSON");
+  }
+  return requireBody(raw);
+}

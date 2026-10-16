@@ -8,7 +8,7 @@ import {
   verifyPassword,
 } from "../auth.js";
 import { config } from "../config.js";
-import { requireBody, requireString, ValidationError } from "../validate.js";
+import { readJsonBody, requireString, ValidationError } from "../validate.js";
 
 /** 登录窗口：同一 IP 15 分钟内最多 5 次失败 */
 const LOGIN_WINDOW_MS = 15 * 60 * 1000;
@@ -35,7 +35,7 @@ export function authRoutes({ sessions, rateLimiter, isAdmin }) {
       return c.json({ error: `登录失败次数过多，请 ${minutes} 分钟后再试` }, 429);
     }
 
-    const body = requireBody(await c.req.json());
+    const body = await readJsonBody(c);
     const password = requireString(body.password, "password", { max: 256 });
 
     if (!config.adminPasswordHash) {

@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { nowIso } from "../db.js";
-import { requireBody, requireColor, requireIconName, requireInt, requireString, ValidationError, MAX_TAG_NAME } from "../validate.js";
+import { readJsonBody, requireColor, requireIconName, requireInt, requireString, ValidationError, MAX_TAG_NAME } from "../validate.js";
 
 /**
  * Tag 的增删改查。
@@ -27,7 +27,7 @@ export function tagRoutes({ db, iconNames }) {
   routes.get("/", (c) => c.json({ tags: listWithCounts.all() }));
 
   routes.post("/", async (c) => {
-    const body = requireBody(await c.req.json());
+    const body = await readJsonBody(c);
     const name = requireString(body.name, "name", { max: MAX_TAG_NAME });
     const icon = requireIconName(body.icon, iconNames);
     const color = requireColor(body.color);
@@ -42,7 +42,7 @@ export function tagRoutes({ db, iconNames }) {
     const current = selectById.get(id);
     if (!current) return c.json({ error: "Tag 不存在" }, 404);
 
-    const body = requireBody(await c.req.json());
+    const body = await readJsonBody(c);
     const name = body.name === undefined ? current.name : requireString(body.name, "name", { max: MAX_TAG_NAME });
     const icon = body.icon === undefined ? current.icon : requireIconName(body.icon, iconNames);
     const color = body.color === undefined ? current.color : requireColor(body.color);

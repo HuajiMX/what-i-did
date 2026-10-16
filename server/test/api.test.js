@@ -46,6 +46,10 @@ function client() {
     get(url) {
       return this.fetch("GET", url);
     },
+    /** 供需要直接构造 Request 的用例复用会话 */
+    cookieHeader() {
+      return cookie ?? "";
+    },
     async login(password = PASSWORD) {
       return this.fetch("POST", "/api/auth/login", { password });
     },
@@ -313,6 +317,39 @@ test("随手记的增改删与按日筛选", async () => {
 
   assert.equal((await c.fetch("POST", "/api/notes", { date: TODAY, content: "   " })).status, 400);
   assert.equal((await c.fetch("POST", "/api/notes", { date: "bad", content: "x" })).status, 400);
+});
+
+test("年份筛选只返回有记录的年份（降序、去重）", async () => {
+  const c = client();
+  const empty = await c.get("/api/notes/years");
+  assert.equal(empty.status, 200);
+  assert.deepEqual(empty.body.years, [], "没有随手记时不应列出任何年份");
+
+  const admin = await adminClient();
+  for (const [date, content] of [
+    ["2024-03-05", "前年的记录"],
+    ["2024-11-20", "同年前的另一条"],
+    ["2025-01-02", "去年的记录"],
+    ["2026-05-12", "今年的记录"],
+  ]) {
+    assert.equal((await admin.fetch("POST", "/api/notes", { date, content })).status, 201);
+  }
+  // 空档年份（2023）不该出现
+  const result = await c.get("/api/notes/years");
+  assert.deepEqual(result.body.years, [2026, 2025, 2024]);
+});
+
+test("请求体不是合法 JSON 时返回 400 而不是 500", async () => {
+  const c = await adminClient();
+  // 直接发原始字符串，绕过 JSON.stringify（模拟手工拼错 / 客户端 bug）
+  const broken = await app.fetch(
+    new Request("http://localhost/api/notes", {
+      method: "POST",
+      headers: { "content-type": "application/json", cookie: c.cookieHeader() },
+      body: `{"date":"2026-05-12", "content":}`,
+    }),
+  );
+  assert.equal(broken.status, 400, "格式错误的 JSON 属于客户端错误");
 });
 
 // ── 登录 ─────────────────────────────────────────────────────────────────
