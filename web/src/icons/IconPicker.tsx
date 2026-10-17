@@ -8,6 +8,13 @@ import { IconOf } from "./Icon";
 /** 每次渲染的图标数量上限。全库 6238 个一次性挂到 DOM 会明显卡顿，多出来的靠"加载更多"分批渲染。 */
 const PAGE = 240;
 
+/**
+ * 选中态 chip 的背景。
+ * `.chip-active` 只负责白色文字与透明边框，背景要调用方给（统计页、日历页、随手记页都这么写）。
+ * 少了这一段，浅色主题下就是"白字 + 白底"——选中标签完全看不见。
+ */
+const activeChipStyle = (active: boolean) => (active ? { background: "var(--accent)", borderColor: "var(--accent)" } : undefined);
+
 interface Props {
   value: string;
   onChange: (name: string) => void;
@@ -82,10 +89,22 @@ export default function IconPicker({ value, onChange }: Props) {
   return (
     <div className="icon-picker">
       <div className="row-wrap picker-tabs">
-        <button type="button" className={`chip ${tab === "common" ? "chip-active" : ""}`} onClick={() => setTab("common")}>
+        <button
+          type="button"
+          className={`chip ${tab === "common" ? "chip-active" : ""}`}
+          style={activeChipStyle(tab === "common")}
+          aria-pressed={tab === "common"}
+          onClick={() => setTab("common")}
+        >
           常用（{COMMON_ORDER.length}）
         </button>
-        <button type="button" className={`chip ${tab === "all" ? "chip-active" : ""}`} onClick={() => setTab("all")}>
+        <button
+          type="button"
+          className={`chip ${tab === "all" ? "chip-active" : ""}`}
+          style={activeChipStyle(tab === "all")}
+          aria-pressed={tab === "all"}
+          onClick={() => setTab("all")}
+        >
           全部图标{index ? `（${index.names.length}）` : ""}
         </button>
         {tab === "all" && !index ? <span className="spinner" aria-label="正在加载图标库" /> : null}
