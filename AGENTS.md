@@ -204,10 +204,12 @@ systemctl start what-i-did
 
 ### 关于 Docker
 
-仓库根目录曾有 `Dockerfile` / `docker-compose.yml`，线上已删除（当前部署不用容器）。若以后要在同类小内存 VPS 上重建，注意两点：
+仓库里保留了 `Dockerfile` / `docker-compose.yml` 作为**可选**的部署方式，但**当前线上不用容器**——这台 1.6 GB 内存的 VPS 上，直接跑 Node 更省事，也没有镜像拉取开销。
 
-- **用 glibc 镜像（`node:22-bookworm-slim`），不要 Alpine。** `better-sqlite3` 包内自带全平台预编译二进制（`prebuilds/linux-x64.node` 等），glibc 上装依赖只要十几秒、无需编译；Alpine 上会走 `node-gyp` 现场编译，在小内存机器上能卡到超时。
-- 编译依赖（`python3 make g++`）必须在 `npm ci` **之前**装好。
+如果以后要用，注意两点（都已写进 Dockerfile）：
+
+- **基础镜像用 glibc（`node:22-bookworm-slim`），不要 Alpine。** `better-sqlite3` 包内自带全平台预编译二进制（`node_modules/better-sqlite3/prebuilds/linux-x64.node`）。实测 glibc 上安装走预编译、8 秒完成且不生成 `build/Release`；Alpine 上会退化成 `node-gyp` 现场编译，在小内存机器上能卡到超时（实测 `gyp ERR! find Python`）。
+- **编译依赖（`python3 make g++`）必须在 `npm ci` 之前装好**，装完立即清理，不留在最终层里。
 
 ---
 

@@ -148,7 +148,11 @@ node scripts/screenshot.mjs                    # 需要放宽权限，见下
 
 ---
 
-## 部署（Docker Compose）
+## 部署（Docker Compose，可选）
+
+> **当前线上部署用的是 Node + systemd，不是容器。** 这一节保留给"想用容器"的场景。
+> 在内存较小的 VPS（例如 1.6 GB）上直接跑 Node 更省事：装依赖只要十几秒，
+> 容器方案还要额外拉镜像。两种方式的取舍与踩坑记录见 [AGENTS.md](AGENTS.md) 的部署章节。
 
 ```bash
 cp .env.example .env
@@ -160,6 +164,8 @@ node scripts/hash-password.mjs '你的密码'
 
 docker compose up -d --build
 ```
+
+`.env` 里记得设 `TZ`（例如 `TZ=Asia/Shanghai`）。容器默认 UTC，不设会让"今天"算错——北京时间 0:00–8:00 的记录会落到前一天。
 
 数据存在 Docker 命名卷 `what-i-did-data` 里，容器重建不影响数据。
 
@@ -285,15 +291,19 @@ scripts/         图标清单生成、密码哈希、体积断言、类名与对
 6. 深色模式：切换系统偏好后刷新，页面配色随之变化且文字仍清晰（对比度已由 `audit-contrast.mjs` 校验）。
 7. 登录：登录后出现"Tag 管理"入口与各处的编辑控件；退出后写操作入口消失。
 
-### Docker 构建未经实机验证
+### Docker 方案的实测结论
 
-`Dockerfile` 与 `docker-compose.yml` 按 Node 官方镜像的常规做法编写，但**开发机上没有安装 Docker，因此没有真正执行过镜像构建**。首次构建时最可能出问题的是下面两处，以及对应处理方式：
+`Dockerfile` 与 `docker-compose.yml` 保留作为可选路径。**在真实 VPS 上构建过一次，结论如下**（这台机器 2 核 / 1.6 GB 内存，Docker Hub 直连很慢、靠国内加速器也不快）：
 
-1. **`better-sqlite3` 需要编译**（Alpine 上没有匹配的预编译包时）。
-   Dockerfile 已在安装依赖期间临时装上 `python3 make g++` 并在完成后删除，这一步通常是通的。
-   若仍在此失败，把基础镜像从 `node:22-alpine` 换成 `node:22-bookworm-slim`（Debian 变体，预编译包覆盖更全）。
-2. **容器启动即退出**。镜像里没有 `.env`，配置全部由 `env_file` 在运行时注入；
-   缺 `SESSION_SECRET` 或 `ADMIN_PASSWORD_HASH` 时服务会拒绝启动并打印明确原因，先看 `docker compose logs app`。
+1. **必须用 glibc 基础镜像（`node:22-bookworm-slim`），不能用 Alpine。**
+   `better-sqlite3` 包内自带全平台预编译二进制（`node_modules/better-sqlite3/prebuilds/`），
+   glibc 上安装走预编译、约 8 秒完成且不生成 `build/Release`；
+   Alpine(musl) 会退化成 `node-gyp` 现场编译，在这种小内存机器上直接卡死
+   （实测报错 `gyp ERR! find Python`，以及在装编译工具前跑到超时）。
+2. **编译依赖必须在 `npm ci` 之前装好**，装完立即清理。Dockerfile 现在就是这个顺序。
+
+> 同类机器上更省事的选择其实是直接跑 Node + systemd（装依赖十几秒，无需拉镜像）。
+> 具体步骤与踩坑记录见 [AGENTS.md](AGENTS.md)。
 
 验证镜像可用的最小步骤：
 
