@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { COMMON_ICONS, type IconComponent } from "./common";
+import { commonIcon, type IconComponent } from "./common";
 import { COMMON_ORDER, ICON_CATEGORIES } from "./categories";
 import { ensureIconIndex, loadedIconIndex } from "./lazy";
+import { findIcon, normalizeIconKey, type IconIndex } from "./index-build";
 import { IconOf } from "./Icon";
 
 /** 每次渲染的图标数量上限。全库 6238 个一次性挂到 DOM 会明显卡顿，多出来的靠"加载更多"分批渲染。 */
@@ -27,50 +28,56 @@ const SEARCH_ALIASES: Record<string, string[]> = {
   目标: ["target"], 时间: ["clock"], 日历: ["calendar"], 图表: ["chart-bar"], 统计: ["chart-bar"],
 };
 
-const normalizeKey = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
-
 /**
- * 图标选择器。整个组件被 IconPickerButton 懒加载，
+ * 图标选择器。整个组件被 IconField 懒加载，
  * 因此它引用的整库索引与 6238 个图标定义都不会进入公开页面的主包。
+ *
+ * 「全部」标签下的名字来自构建期生成的官方清单（kebab 名），
+ * 不是从组件名反推的——反推在 `crop-1-1`/`a-b-2` 这类数字边界上会错，
+ * 更不允许从运行时对象里"猜"出 `render` 这种非图标键（见 index-build.ts 的说明）。
  */
 export default function IconPicker({ value, onChange }: Props) {
   const [tab, setTab] = useState<"common" | "all">("common");
   const [query, setQuery] = useState("");
-  const [allIcons, setAllIcons] = useState<Map<string, IconComponent> | null>(() => loadedIconIndex());
+  const [index, setIndex] = useState<IconIndex | null>(() => loadedIconIndex());
   const [visible, setVisible] = useState(PAGE);
 
-  // 切到"全部"时才去加载整库索引（约 1.3 MB，会被浏览器缓存）
+  // 切到"全部"时才去加载整库索引（约 2.4 MB，会被浏览器缓存）
   useEffect(() => {
-    if (tab !== "all" || allIcons) return;
+    if (tab !== "all" || index) return;
     let cancelled = false;
-    void ensureIconIndex().then((map) => {
-      if (!cancelled) setAllIcons(map);
+    void ensureIconIndex().then((loaded) => {
+      if (!cancelled) setIndex(loaded);
     });
     return () => {
       cancelled = true;
     };
-  }, [tab, allIcons]);
+  }, [tab, index]);
 
   useEffect(() => setVisible(PAGE), [tab, query]);
 
   const { names, isSearching } = useMemo(() => {
+    const allNames = index?.names ?? [];
     const q = query.trim();
     if (!q) {
-      return { names: tab === "common" ? COMMON_ORDER.filter((n) => n in COMMON_ICONS) : [...(allIcons?.keys() ?? [])], isSearching: false };
+      return {
+        names: tab === "common" ? COMMON_ORDER.filter((n) => commonIcon(n) !== null) : allNames,
+        isSearching: false,
+      };
     }
     const lower = q.toLowerCase();
-    const key = normalizeKey(q);
+    const key = normalizeIconKey(q);
     const aliasHits = new Set<string>();
     for (const [alias, iconNames] of Object.entries(SEARCH_ALIASES)) {
       if (alias.includes(q) || q.includes(alias)) for (const n of iconNames) aliasHits.add(n);
     }
-    const pool = tab === "common" ? COMMON_ORDER : [...(allIcons?.keys() ?? [])];
+    const pool = tab === "common" ? COMMON_ORDER : allNames;
     const matched = pool.filter((name) => {
-      const normalized = normalizeKey(name);
+      const normalized = normalizeIconKey(name);
       return aliasHits.has(name) || (key.length > 0 && normalized.includes(key)) || name.toLowerCase().includes(lower);
     });
     return { names: matched, isSearching: true };
-  }, [query, tab, allIcons]);
+  }, [query, tab, index]);
 
   return (
     <div className="icon-picker">
@@ -79,9 +86,9 @@ export default function IconPicker({ value, onChange }: Props) {
           常用（{COMMON_ORDER.length}）
         </button>
         <button type="button" className={`chip ${tab === "all" ? "chip-active" : ""}`} onClick={() => setTab("all")}>
-          全部图标{allIcons ? `（${allIcons.size}）` : ""}
+          全部图标{index ? `（${index.names.length}）` : ""}
         </button>
-        {tab === "all" && !allIcons ? <span className="spinner" aria-label="正在加载图标库" /> : null}
+        {tab === "all" && !index ? <span className="spinner" aria-label="正在加载图标库" /> : null}
       </div>
 
       <input
@@ -100,9 +107,9 @@ export default function IconPicker({ value, onChange }: Props) {
               <div className="faint tiny picker-group-label">{group.label}</div>
               <div className="icon-grid">
                 {group.icons
-                  .filter((name) => name in COMMON_ICONS)
+                  .filter((name) => commonIcon(name) !== null)
                   .map((name) => (
-                    <IconCell key={name} name={name} selected={name === value} onSelect={onChange} />
+                    <IconCell key={name} name={name} index={index} selected={name === value} onSelect={onChange} />
                   ))}
               </div>
             </div>
@@ -112,12 +119,12 @@ export default function IconPicker({ value, onChange }: Props) {
         <>
           <div className="icon-grid">
             {names.slice(0, visible).map((name) => (
-              <IconCell key={name} name={name} selected={name === value} onSelect={onChange} />
+              <IconCell key={name} name={name} index={index} selected={name === value} onSelect={onChange} />
             ))}
           </div>
           {names.length === 0 ? (
             <p className="empty">
-              {tab === "all" && !allIcons ? "正在加载图标库…" : "没有匹配的图标，试试英文名（如 run、book）"}
+              {tab === "all" && !index ? "正在加载图标库…" : "没有匹配的图标，试试英文名（如 run、book）"}
             </p>
           ) : null}
           {names.length > visible ? (
@@ -131,7 +138,17 @@ export default function IconPicker({ value, onChange }: Props) {
   );
 }
 
-function IconCell({ name, selected, onSelect }: { name: string; selected: boolean; onSelect: (name: string) => void }) {
+function IconCell({
+  name,
+  index,
+  selected,
+  onSelect,
+}: {
+  name: string;
+  index: IconIndex | null;
+  selected: boolean;
+  onSelect: (name: string) => void;
+}) {
   return (
     <button
       type="button"
@@ -141,35 +158,21 @@ function IconCell({ name, selected, onSelect }: { name: string; selected: boolea
       aria-pressed={selected}
       onClick={() => onSelect(name)}
     >
-      <AnyIcon name={name} />
+      <AnyIcon name={name} index={index} />
     </button>
   );
 }
 
 /**
  * 单元格里的图标渲染。
- * 常用图标走 IconOf（同步）；其余走 Icon 的懒加载解析（未就绪时显示占位）。
- * 这里刻意不直接用 COMMON_ICONS[name]，因为选择器在"全部"标签下会渲染整库图标。
+ * 常用图标走 COMMON_ICONS（同步）；其余从已加载的整库索引里取。
+ * 索引未就绪（或名字真的不存在）时渲染同尺寸占位方块，不崩溃、不留空白。
+ *
+ * 这里刻意**不**用每格一个 useState + effect 去解析图标：全库标签有 240 格，
+ * 每格都 setState 一次既慢，也是"把组件塞进 setState"那个白屏事故的温床。
  */
-function AnyIcon({ name }: { name: string }) {
-  const direct = COMMON_ICONS[name];
-  if (direct) return <IconOf Component={direct} size={22} />;
-  return <LazyCell name={name} />;
-}
-
-function LazyCell({ name }: { name: string }) {
-  const [Component, setComponent] = useState<IconComponent | null>(null);
-  useEffect(() => {
-    let cancelled = false;
-    void ensureIconIndex().then((map) => {
-      if (!cancelled) setComponent(map.get(normalizeKey(name)) ?? null);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [name]);
-  if (!Component) {
-    return <span className="icon-cell-placeholder" aria-hidden="true" />;
-  }
+function AnyIcon({ name, index }: { name: string; index: IconIndex | null }) {
+  const Component: IconComponent | null = commonIcon(name) ?? findIcon(index, name);
+  if (!Component) return <span className="icon-cell-placeholder" aria-hidden="true" />;
   return <IconOf Component={Component} size={22} />;
 }

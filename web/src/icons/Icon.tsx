@@ -19,7 +19,7 @@ interface IconProps {
  *  3. 名字不存在 → 渲染一个中性方块，不崩溃也不留空白。
  */
 function IconImpl({ name, size = 18, color, stroke = 1.8, className }: IconProps) {
-  const Resolved = useLazyIcon(name, COMMON_ICONS);
+  const Resolved = useLazyIcon(name);
   if (!Resolved) {
     return (
       <span

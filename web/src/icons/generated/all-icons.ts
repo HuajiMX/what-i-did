@@ -2,6245 +2,12489 @@
  * 自动生成，请勿手工编辑。由 scripts/gen-icons.mjs 生成。
  * 来源：@tabler/icons-react，共 6238 个图标。
  *
+ * 配对表的顺序与图标库官方清单一致；名字一律是官方 kebab 名。
  * 这个文件只被 web/src/icons/lazy.ts 通过动态 import 引用，
  * 因此会被 Rollup 打成独立 chunk，不会进入公开页面的主包。
  */
+import {
+  IconAB2,
+  IconABOff,
+  IconAB,
+  IconAbacusOff,
+  IconAbacus,
+  IconAbc,
+  IconAccessPointOff,
+  IconAccessPoint,
+  IconAccessibleOff,
+  IconAccessible,
+  IconAcorn,
+  IconAcrobatic,
+  IconActivityHeartbeat,
+  IconActivity,
+  IconAd2,
+  IconAdCircleOff,
+  IconAdCircle,
+  IconAdOff,
+  IconAd,
+  IconAddressBookOff,
+  IconAddressBook,
+  IconAdjustmentsAlt,
+  IconAdjustmentsBolt,
+  IconAdjustmentsCancel,
+  IconAdjustmentsCheck,
+  IconAdjustmentsCode,
+  IconAdjustmentsCog,
+  IconAdjustmentsDollar,
+  IconAdjustmentsDown,
+  IconAdjustmentsExclamation,
+  IconAdjustmentsHeart,
+  IconAdjustmentsHorizontal,
+  IconAdjustmentsMinus,
+  IconAdjustmentsOff,
+  IconAdjustmentsPause,
+  IconAdjustmentsPin,
+  IconAdjustmentsPlus,
+  IconAdjustmentsQuestion,
+  IconAdjustmentsSearch,
+  IconAdjustmentsShare,
+  IconAdjustmentsSpark,
+  IconAdjustmentsStar,
+  IconAdjustmentsUp,
+  IconAdjustmentsX,
+  IconAdjustments,
+  IconAerialLift,
+  IconAffiliate,
+  IconAiAgent,
+  IconAiAgents,
+  IconAiGateway,
+  IconAi,
+  IconAirBalloon,
+  IconAirConditioningDisabled,
+  IconAirConditioning,
+  IconAirTrafficControl,
+  IconAirpodsL,
+  IconAirpodsR,
+  IconAlarmAverage,
+  IconAlarmMinus,
+  IconAlarmOff,
+  IconAlarmPlus,
+  IconAlarmSmoke,
+  IconAlarmSnooze,
+  IconAlarm,
+  IconAlbumOff,
+  IconAlbum,
+  IconAlertCircleOff,
+  IconAlertCircle,
+  IconAlertHexagonOff,
+  IconAlertHexagon,
+  IconAlertOctagon,
+  IconAlertSmallOff,
+  IconAlertSmall,
+  IconAlertSquareRoundedOff,
+  IconAlertSquareRounded,
+  IconAlertSquare,
+  IconAlertTriangleOff,
+  IconAlertTriangle,
+  IconAlien,
+  IconAlignBoxBottomCenter,
+  IconAlignBoxBottomLeft,
+  IconAlignBoxBottomRight,
+  IconAlignBoxCenterBottom,
+  IconAlignBoxCenterMiddle,
+  IconAlignBoxCenterStretch,
+  IconAlignBoxCenterTop,
+  IconAlignBoxLeftBottom,
+  IconAlignBoxLeftMiddle,
+  IconAlignBoxLeftStretch,
+  IconAlignBoxLeftTop,
+  IconAlignBoxRightBottom,
+  IconAlignBoxRightMiddle,
+  IconAlignBoxRightStretch,
+  IconAlignBoxRightTop,
+  IconAlignBoxTopCenter,
+  IconAlignBoxTopLeft,
+  IconAlignBoxTopRight,
+  IconAlignCenter,
+  IconAlignJustified,
+  IconAlignLeft2,
+  IconAlignLeft,
+  IconAlignRight2,
+  IconAlignRight,
+  IconAlpha,
+  IconAlphabetArabic,
+  IconAlphabetBangla,
+  IconAlphabetChinese,
+  IconAlphabetCyrillic,
+  IconAlphabetDevanagari,
+  IconAlphabetEthiopic,
+  IconAlphabetGeorgian,
+  IconAlphabetGreek,
+  IconAlphabetHebrew,
+  IconAlphabetJapanese,
+  IconAlphabetKorean,
+  IconAlphabetLatin,
+  IconAlphabetPolish,
+  IconAlphabetRunes,
+  IconAlphabetThai,
+  IconAlt,
+  IconAmbulance,
+  IconAmpersand,
+  IconAnalyzeOff,
+  IconAnalyze,
+  IconAnchorOff,
+  IconAnchor,
+  IconAngle,
+  IconAnkh,
+  IconAntennaBars1,
+  IconAntennaBars2,
+  IconAntennaBars3,
+  IconAntennaBars4,
+  IconAntennaBars5,
+  IconAntennaBarsOff,
+  IconAntennaOff,
+  IconAntenna,
+  IconApertureOff,
+  IconAperture,
+  IconApiAppOff,
+  IconApiApp,
+  IconApiBook,
+  IconApiOff,
+  IconApi,
+  IconAppWindowBottomLeft,
+  IconAppWindowBottomRight,
+  IconAppWindowBottom,
+  IconAppWindowCenter,
+  IconAppWindow,
+  IconApple,
+  IconAppsOff,
+  IconApps,
+  IconArcheryArrow,
+  IconArchiveOff,
+  IconArchive,
+  IconArmchair2Off,
+  IconArmchair2,
+  IconArmchairOff,
+  IconArmchair,
+  IconArrowAutofitContent,
+  IconArrowAutofitDown,
+  IconArrowAutofitHeight,
+  IconArrowAutofitLeft,
+  IconArrowAutofitRight,
+  IconArrowAutofitUp,
+  IconArrowAutofitWidth,
+  IconArrowBackUpDouble,
+  IconArrowBackUp,
+  IconArrowBack,
+  IconArrowBadgeDown,
+  IconArrowBadgeLeft,
+  IconArrowBadgeRight,
+  IconArrowBadgeUp,
+  IconArrowBarBoth,
+  IconArrowBarDown,
+  IconArrowBarLeft,
+  IconArrowBarRight,
+  IconArrowBarToDownDashed,
+  IconArrowBarToDown,
+  IconArrowBarToLeftDashed,
+  IconArrowBarToLeft,
+  IconArrowBarToRightDashed,
+  IconArrowBarToRight,
+  IconArrowBarToUpDashed,
+  IconArrowBarToUp,
+  IconArrowBarUp,
+  IconArrowBearLeft2,
+  IconArrowBearLeft,
+  IconArrowBearRight2,
+  IconArrowBearRight,
+  IconArrowBigDownLine,
+  IconArrowBigDownLines,
+  IconArrowBigDown,
+  IconArrowBigLeftLine,
+  IconArrowBigLeftLines,
+  IconArrowBigLeft,
+  IconArrowBigRightLine,
+  IconArrowBigRightLines,
+  IconArrowBigRight,
+  IconArrowBigUpLine,
+  IconArrowBigUpLines,
+  IconArrowBigUp,
+  IconArrowBounce,
+  IconArrowCapsule,
+  IconArrowCurveLeft,
+  IconArrowCurveRight,
+  IconArrowDownBar,
+  IconArrowDownCircle,
+  IconArrowDownDashed,
+  IconArrowDownFromArc,
+  IconArrowDownLeftCircle,
+  IconArrowDownLeft,
+  IconArrowDownRhombus,
+  IconArrowDownRightCircle,
+  IconArrowDownRight,
+  IconArrowDownSquare,
+  IconArrowDownTail,
+  IconArrowDownToArc,
+  IconArrowDown,
+  IconArrowElbowLeft,
+  IconArrowElbowRight,
+  IconArrowForkTriple,
+  IconArrowFork,
+  IconArrowForwardUpDouble,
+  IconArrowForwardUp,
+  IconArrowForward,
+  IconArrowGuide,
+  IconArrowIteration,
+  IconArrowLeftBar,
+  IconArrowLeftCircle,
+  IconArrowLeftDashed,
+  IconArrowLeftFromArc,
+  IconArrowLeftRhombus,
+  IconArrowLeftRight,
+  IconArrowLeftSquare,
+  IconArrowLeftTail,
+  IconArrowLeftToArc,
+  IconArrowLeft,
+  IconArrowLoopLeft2,
+  IconArrowLoopLeft,
+  IconArrowLoopRight2,
+  IconArrowLoopRight,
+  IconArrowMergeAltLeft,
+  IconArrowMergeAltRight,
+  IconArrowMergeBoth,
+  IconArrowMergeLeft,
+  IconArrowMergeRight,
+  IconArrowMerge,
+  IconArrowMoveDown,
+  IconArrowMoveLeft,
+  IconArrowMoveRight,
+  IconArrowMoveUp,
+  IconArrowNarrowDownDashed,
+  IconArrowNarrowDown,
+  IconArrowNarrowLeftDashed,
+  IconArrowNarrowLeft,
+  IconArrowNarrowRightDashed,
+  IconArrowNarrowRight,
+  IconArrowNarrowUpDashed,
+  IconArrowNarrowUp,
+  IconArrowRampLeft2,
+  IconArrowRampLeft3,
+  IconArrowRampLeft,
+  IconArrowRampRight2,
+  IconArrowRampRight3,
+  IconArrowRampRight,
+  IconArrowRightBar,
+  IconArrowRightCircle,
+  IconArrowRightDashed,
+  IconArrowRightFromArc,
+  IconArrowRightRhombus,
+  IconArrowRightSquare,
+  IconArrowRightTail,
+  IconArrowRightToArc,
+  IconArrowRight,
+  IconArrowRotaryFirstLeft,
+  IconArrowRotaryFirstRight,
+  IconArrowRotaryLastLeft,
+  IconArrowRotaryLastRight,
+  IconArrowRotaryLeft,
+  IconArrowRotaryRight,
+  IconArrowRotaryStraight,
+  IconArrowRoundaboutLeft,
+  IconArrowRoundaboutRight,
+  IconArrowSharpTurnLeft,
+  IconArrowSharpTurnRight,
+  IconArrowUpBar,
+  IconArrowUpCircle,
+  IconArrowUpDashed,
+  IconArrowUpFromArc,
+  IconArrowUpLeftCircle,
+  IconArrowUpLeft,
+  IconArrowUpRhombus,
+  IconArrowUpRightCircle,
+  IconArrowUpRight,
+  IconArrowUpSquare,
+  IconArrowUpTail,
+  IconArrowUpToArc,
+  IconArrowUp,
+  IconArrowWaveLeftDown,
+  IconArrowWaveLeftUp,
+  IconArrowWaveRightDown,
+  IconArrowWaveRightUp,
+  IconArrowZigZag,
+  IconArrowsCross,
+  IconArrowsDiagonal2,
+  IconArrowsDiagonalMinimize2,
+  IconArrowsDiagonalMinimize,
+  IconArrowsDiagonal,
+  IconArrowsDiff,
+  IconArrowsDoubleNeSw,
+  IconArrowsDoubleNwSe,
+  IconArrowsDoubleSeNw,
+  IconArrowsDoubleSwNe,
+  IconArrowsDownUp,
+  IconArrowsDown,
+  IconArrowsExchange2,
+  IconArrowsExchange,
+  IconArrowsHorizontal,
+  IconArrowsJoin2,
+  IconArrowsJoin,
+  IconArrowsLeftDown,
+  IconArrowsLeftRight,
+  IconArrowsLeft,
+  IconArrowsMaximize,
+  IconArrowsMinimize,
+  IconArrowsMoveHorizontal,
+  IconArrowsMoveVertical,
+  IconArrowsMove,
+  IconArrowsRandom,
+  IconArrowsRightDown,
+  IconArrowsRightLeft,
+  IconArrowsRight,
+  IconArrowsShuffle2,
+  IconArrowsShuffle,
+  IconArrowsSort,
+  IconArrowsSplit2,
+  IconArrowsSplit,
+  IconArrowsTransferDown,
+  IconArrowsTransferUpDown,
+  IconArrowsTransferUp,
+  IconArrowsUpDown,
+  IconArrowsUpLeft,
+  IconArrowsUpRight,
+  IconArrowsUp,
+  IconArrowsVertical,
+  IconArtboardOff,
+  IconArtboard,
+  IconArticleOff,
+  IconArticle,
+  IconAspectRatioOff,
+  IconAspectRatio,
+  IconAssemblyOff,
+  IconAssembly,
+  IconAsset,
+  IconAsteriskSimple,
+  IconAsterisk,
+  IconAtOff,
+  IconAt,
+  IconAtom2,
+  IconAtomOff,
+  IconAtom,
+  IconAugmentedReality2,
+  IconAugmentedRealityOff,
+  IconAugmentedReality,
+  IconAuth2fa,
+  IconAutomaticGearbox,
+  IconAutomation,
+  IconAvocado,
+  IconAwardOff,
+  IconAward,
+  IconAxe,
+  IconAxisX,
+  IconAxisY,
+  IconBabyBottle,
+  IconBabyCarriage,
+  IconBackground,
+  IconBackhoe,
+  IconBackpackOff,
+  IconBackpack,
+  IconBackslash,
+  IconBackspace,
+  IconBadge2k,
+  IconBadge3d,
+  IconBadge3k,
+  IconBadge4k,
+  IconBadge5k,
+  IconBadge8k,
+  IconBadgeAdOff,
+  IconBadgeAd,
+  IconBadgeAr,
+  IconBadgeCc,
+  IconBadgeHd,
+  IconBadgeOff,
+  IconBadgeSd,
+  IconBadgeTm,
+  IconBadgeVo,
+  IconBadgeVr,
+  IconBadgeWc,
+  IconBadge,
+  IconBadgesOff,
+  IconBadges,
+  IconBaguette,
+  IconBallAmericanFootballOff,
+  IconBallAmericanFootball,
+  IconBallBaseball,
+  IconBallBasketball,
+  IconBallBowling,
+  IconBallFootballOff,
+  IconBallFootball,
+  IconBallTennis,
+  IconBallVolleyball,
+  IconBalloonOff,
+  IconBalloon,
+  IconBallpenOff,
+  IconBallpen,
+  IconBan,
+  IconBanana,
+  IconBandageOff,
+  IconBandage,
+  IconBarbellOff,
+  IconBarbell,
+  IconBarcodeOff,
+  IconBarcode,
+  IconBarrelOff,
+  IconBarrel,
+  IconBarrierBlockOff,
+  IconBarrierBlock,
+  IconBaselineDensityLarge,
+  IconBaselineDensityMedium,
+  IconBaselineDensitySmall,
+  IconBaseline,
+  IconBasketBolt,
+  IconBasketCancel,
+  IconBasketCheck,
+  IconBasketCode,
+  IconBasketCog,
+  IconBasketDiscount,
+  IconBasketDollar,
+  IconBasketDown,
+  IconBasketExclamation,
+  IconBasketHeart,
+  IconBasketMinus,
+  IconBasketOff,
+  IconBasketPause,
+  IconBasketPin,
+  IconBasketPlus,
+  IconBasketQuestion,
+  IconBasketSearch,
+  IconBasketShare,
+  IconBasketStar,
+  IconBasketUp,
+  IconBasketX,
+  IconBasket,
+  IconBat,
+  IconBathOff,
+  IconBath,
+  IconBattery1,
+  IconBattery2,
+  IconBattery3,
+  IconBattery4,
+  IconBatteryAutomotive,
+  IconBatteryCharging2,
+  IconBatteryCharging,
+  IconBatteryEco,
+  IconBatteryExclamation,
+  IconBatteryOff,
+  IconBatterySpark,
+  IconBatteryVertical1,
+  IconBatteryVertical2,
+  IconBatteryVertical3,
+  IconBatteryVertical4,
+  IconBatteryVerticalCharging2,
+  IconBatteryVerticalCharging,
+  IconBatteryVerticalEco,
+  IconBatteryVerticalExclamation,
+  IconBatteryVerticalOff,
+  IconBatteryVertical,
+  IconBattery,
+  IconBeachOff,
+  IconBeach,
+  IconBedFlat,
+  IconBedOff,
+  IconBed,
+  IconBeerOff,
+  IconBeer,
+  IconBellBolt,
+  IconBellCancel,
+  IconBellCheck,
+  IconBellCode,
+  IconBellCog,
+  IconBellDollar,
+  IconBellDown,
+  IconBellExclamation,
+  IconBellHeart,
+  IconBellMinus,
+  IconBellOff,
+  IconBellPause,
+  IconBellPin,
+  IconBellPlus,
+  IconBellQuestion,
+  IconBellRinging2,
+  IconBellRinging,
+  IconBellSchool,
+  IconBellSearch,
+  IconBellShare,
+  IconBellStar,
+  IconBellUp,
+  IconBellX,
+  IconBellZ,
+  IconBell,
+  IconBeta,
+  IconBible,
+  IconBikeOff,
+  IconBike,
+  IconBinaryOff,
+  IconBinaryTree2,
+  IconBinaryTree,
+  IconBinary,
+  IconBinoculars,
+  IconBiohazardOff,
+  IconBiohazard,
+  IconBlade,
+  IconBleachChlorine,
+  IconBleachNoChlorine,
+  IconBleachOff,
+  IconBleach,
+  IconBlendMode,
+  IconBlender,
+  IconBlind,
+  IconBlobDashed,
+  IconBlob,
+  IconBlockquote,
+  IconBlocks,
+  IconBluetoothConnected,
+  IconBluetoothOff,
+  IconBluetoothX,
+  IconBluetooth,
+  IconBlurOff,
+  IconBlur,
+  IconBmp,
+  IconBodyScan,
+  IconBoldOff,
+  IconBold,
+  IconBoltOff,
+  IconBolt,
+  IconBomb,
+  IconBoneOff,
+  IconBone,
+  IconBongOff,
+  IconBong,
+  IconBook2,
+  IconBookDownload,
+  IconBookOff,
+  IconBookUpload,
+  IconBook,
+  IconBookmarkAi,
+  IconBookmarkEdit,
+  IconBookmarkMinus,
+  IconBookmarkOff,
+  IconBookmarkPlus,
+  IconBookmarkQuestion,
+  IconBookmark,
+  IconBookmarksOff,
+  IconBookmarks,
+  IconBooksOff,
+  IconBooks,
+  IconBoom,
+  IconBorderAll,
+  IconBorderBottomPlus,
+  IconBorderBottom,
+  IconBorderCornerIos,
+  IconBorderCornerPill,
+  IconBorderCornerRounded,
+  IconBorderCornerSquare,
+  IconBorderCorners,
+  IconBorderHorizontal,
+  IconBorderInner,
+  IconBorderLeftPlus,
+  IconBorderLeft,
+  IconBorderNone,
+  IconBorderOuter,
+  IconBorderRadius,
+  IconBorderRightPlus,
+  IconBorderRight,
+  IconBorderSides,
+  IconBorderStyle2,
+  IconBorderStyle,
+  IconBorderTopPlus,
+  IconBorderTop,
+  IconBorderVertical,
+  IconBotId,
+  IconBottleOff,
+  IconBottle,
+  IconBounceLeft,
+  IconBounceRight,
+  IconBow,
+  IconBowlChopsticks,
+  IconBowlSpoon,
+  IconBowl,
+  IconBowling,
+  IconBoxAlignBottomLeft,
+  IconBoxAlignBottomRight,
+  IconBoxAlignBottom,
+  IconBoxAlignLeft,
+  IconBoxAlignRight,
+  IconBoxAlignTopLeft,
+  IconBoxAlignTopRight,
+  IconBoxAlignTop,
+  IconBoxMargin,
+  IconBoxModel2Off,
+  IconBoxModel2,
+  IconBoxModelOff,
+  IconBoxModel,
+  IconBoxMultiple0,
+  IconBoxMultiple1,
+  IconBoxMultiple2,
+  IconBoxMultiple3,
+  IconBoxMultiple4,
+  IconBoxMultiple5,
+  IconBoxMultiple6,
+  IconBoxMultiple7,
+  IconBoxMultiple8,
+  IconBoxMultiple9,
+  IconBoxMultiple,
+  IconBoxOff,
+  IconBoxPadding,
+  IconBox,
+  IconBracesOff,
+  IconBraces,
+  IconBracketsAngleOff,
+  IconBracketsAngle,
+  IconBracketsContainEnd,
+  IconBracketsContainStart,
+  IconBracketsContain,
+  IconBracketsOff,
+  IconBrackets,
+  IconBraille,
+  IconBrain,
+  IconBrand4chan,
+  IconBrandAbstract,
+  IconBrandAdobeAfterEffects,
+  IconBrandAdobeIllustrator,
+  IconBrandAdobeIndesign,
+  IconBrandAdobePhotoshop,
+  IconBrandAdobePremiere,
+  IconBrandAdobeXd,
+  IconBrandAdobe,
+  IconBrandAdonisJs,
+  IconBrandAirbnb,
+  IconBrandAirtable,
+  IconBrandAlgolia,
+  IconBrandAlipay,
+  IconBrandAlpineJs,
+  IconBrandAmazon,
+  IconBrandAmd,
+  IconBrandAmie,
+  IconBrandAmigo,
+  IconBrandAmongUs,
+  IconBrandAndroid,
+  IconBrandAngular,
+  IconBrandAnsible,
+  IconBrandAo3,
+  IconBrandAppgallery,
+  IconBrandAppleArcade,
+  IconBrandAppleNews,
+  IconBrandApplePodcast,
+  IconBrandApple,
+  IconBrandAppstore,
+  IconBrandArc,
+  IconBrandAsana,
+  IconBrandAstro,
+  IconBrandAudible,
+  IconBrandAuth0,
+  IconBrandAws,
+  IconBrandAzure,
+  IconBrandBackbone,
+  IconBrandBadoo,
+  IconBrandBaidu,
+  IconBrandBandcamp,
+  IconBrandBandlab,
+  IconBrandBeats,
+  IconBrandBebo,
+  IconBrandBehance,
+  IconBrandBilibili,
+  IconBrandBinance,
+  IconBrandBing,
+  IconBrandBitbucket,
+  IconBrandBlackberry,
+  IconBrandBlender,
+  IconBrandBlogger,
+  IconBrandBluesky,
+  IconBrandBooking,
+  IconBrandBootstrap,
+  IconBrandBulma,
+  IconBrandBumble,
+  IconBrandBunpo,
+  IconBrandCSharp,
+  IconBrandCake,
+  IconBrandCakephp,
+  IconBrandCampaignmonitor,
+  IconBrandCarbon,
+  IconBrandCashapp,
+  IconBrandChrome,
+  IconBrandCinema4d,
+  IconBrandCitymapper,
+  IconBrandCloudflare,
+  IconBrandCodecov,
+  IconBrandCodepen,
+  IconBrandCodesandbox,
+  IconBrandCohost,
+  IconBrandCoinbase,
+  IconBrandComedyCentral,
+  IconBrandCoreos,
+  IconBrandCouchdb,
+  IconBrandCouchsurfing,
+  IconBrandCpp,
+  IconBrandCraft,
+  IconBrandCrunchbase,
+  IconBrandCss3,
+  IconBrandCtemplar,
+  IconBrandCucumber,
+  IconBrandCupra,
+  IconBrandCypress,
+  IconBrandD3,
+  IconBrandDatabricks,
+  IconBrandDaysCounter,
+  IconBrandDcos,
+  IconBrandDebian,
+  IconBrandDeezer,
+  IconBrandDeliveroo,
+  IconBrandDeno,
+  IconBrandDenodo,
+  IconBrandDeviantart,
+  IconBrandDigg,
+  IconBrandDingtalk,
+  IconBrandDiscord,
+  IconBrandDisney,
+  IconBrandDisqus,
+  IconBrandDjango,
+  IconBrandDocker,
+  IconBrandDoctrine,
+  IconBrandDolbyDigital,
+  IconBrandDouban,
+  IconBrandDribbble,
+  IconBrandDropbox,
+  IconBrandDrops,
+  IconBrandDrupal,
+  IconBrandEdge,
+  IconBrandElastic,
+  IconBrandElectronicArts,
+  IconBrandEmber,
+  IconBrandEnvato,
+  IconBrandEtsy,
+  IconBrandEvernote,
+  IconBrandFacebook,
+  IconBrandFeedly,
+  IconBrandFigma,
+  IconBrandFilezilla,
+  IconBrandFinder,
+  IconBrandFirebase,
+  IconBrandFirefox,
+  IconBrandFiverr,
+  IconBrandFlickr,
+  IconBrandFlightradar24,
+  IconBrandFlipboard,
+  IconBrandFlutter,
+  IconBrandFortnite,
+  IconBrandFoursquare,
+  IconBrandFramerMotion,
+  IconBrandFramer,
+  IconBrandFunimation,
+  IconBrandGatsby,
+  IconBrandGit,
+  IconBrandGithubCopilot,
+  IconBrandGithub,
+  IconBrandGitlab,
+  IconBrandGmail,
+  IconBrandGolang,
+  IconBrandGoogleAnalytics,
+  IconBrandGoogleBigQuery,
+  IconBrandGoogleDrive,
+  IconBrandGoogleFit,
+  IconBrandGoogleHome,
+  IconBrandGoogleMaps,
+  IconBrandGoogleOne,
+  IconBrandGooglePhotos,
+  IconBrandGooglePlay,
+  IconBrandGooglePodcasts,
+  IconBrandGoogle,
+  IconBrandGrammarly,
+  IconBrandGraphql,
+  IconBrandGravatar,
+  IconBrandGrindr,
+  IconBrandGuardian,
+  IconBrandGumroad,
+  IconBrandHackerrank,
+  IconBrandHbo,
+  IconBrandHeadlessui,
+  IconBrandHexo,
+  IconBrandHipchat,
+  IconBrandHtml5,
+  IconBrandInertia,
+  IconBrandInfakt,
+  IconBrandInstagram,
+  IconBrandIntercom,
+  IconBrandItch,
+  IconBrandJavascript,
+  IconBrandJira,
+  IconBrandJuejin,
+  IconBrandKakaoTalk,
+  IconBrandKbin,
+  IconBrandKick,
+  IconBrandKickstarter,
+  IconBrandKotlin,
+  IconBrandLaravel,
+  IconBrandLastfm,
+  IconBrandLeetcode,
+  IconBrandLetterboxd,
+  IconBrandLine,
+  IconBrandLinkedin,
+  IconBrandLinktree,
+  IconBrandLinqpad,
+  IconBrandLivewire,
+  IconBrandLoom,
+  IconBrandMailgun,
+  IconBrandMantine,
+  IconBrandMastercard,
+  IconBrandMastodon,
+  IconBrandMatrix,
+  IconBrandMcdonalds,
+  IconBrandMedium,
+  IconBrandMeetup,
+  IconBrandMercedes,
+  IconBrandMessenger,
+  IconBrandMeta,
+  IconBrandMetabrainz,
+  IconBrandMinecraft,
+  IconBrandMiniprogram,
+  IconBrandMixpanel,
+  IconBrandMonday,
+  IconBrandMongodb,
+  IconBrandMyOppo,
+  IconBrandMysql,
+  IconBrandNationalGeographic,
+  IconBrandNem,
+  IconBrandNetbeans,
+  IconBrandNeteaseMusic,
+  IconBrandNetflix,
+  IconBrandNexo,
+  IconBrandNextcloud,
+  IconBrandNextjs,
+  IconBrandNodejs,
+  IconBrandNordVpn,
+  IconBrandNotion,
+  IconBrandNpm,
+  IconBrandNuxt,
+  IconBrandNytimes,
+  IconBrandOauth,
+  IconBrandOffice,
+  IconBrandOkRu,
+  IconBrandOnedrive,
+  IconBrandOnlyfans,
+  IconBrandOpenSource,
+  IconBrandOpenai,
+  IconBrandOpenvpn,
+  IconBrandOpera,
+  IconBrandPagekit,
+  IconBrandParsinta,
+  IconBrandPatreon,
+  IconBrandPaypal,
+  IconBrandPaypay,
+  IconBrandPeanut,
+  IconBrandPepsi,
+  IconBrandPhp,
+  IconBrandPicsart,
+  IconBrandPinterest,
+  IconBrandPlanetscale,
+  IconBrandPnpm,
+  IconBrandPocket,
+  IconBrandPolymer,
+  IconBrandPowershell,
+  IconBrandPrintables,
+  IconBrandPrisma,
+  IconBrandProducthunt,
+  IconBrandPushbullet,
+  IconBrandPushover,
+  IconBrandPython,
+  IconBrandQq,
+  IconBrandRadixUi,
+  IconBrandReactNative,
+  IconBrandReact,
+  IconBrandReason,
+  IconBrandReddit,
+  IconBrandRedhat,
+  IconBrandRedux,
+  IconBrandRevolut,
+  IconBrandRumble,
+  IconBrandRust,
+  IconBrandSafari,
+  IconBrandSamsungpass,
+  IconBrandSass,
+  IconBrandSentry,
+  IconBrandSharik,
+  IconBrandShazam,
+  IconBrandShopee,
+  IconBrandSignal,
+  IconBrandSketch,
+  IconBrandSkype,
+  IconBrandSlack,
+  IconBrandSnapchat,
+  IconBrandSnapseed,
+  IconBrandSnowflake,
+  IconBrandSocketIo,
+  IconBrandSolidjs,
+  IconBrandSoundcloud,
+  IconBrandSpacehey,
+  IconBrandSpeedtest,
+  IconBrandSpotify,
+  IconBrandStackoverflow,
+  IconBrandStackshare,
+  IconBrandSteam,
+  IconBrandStellar,
+  IconBrandStocktwits,
+  IconBrandStorj,
+  IconBrandStorybook,
+  IconBrandStorytel,
+  IconBrandStrava,
+  IconBrandStripe,
+  IconBrandSublimeText,
+  IconBrandSugarizer,
+  IconBrandSupabase,
+  IconBrandSuperhuman,
+  IconBrandSupernova,
+  IconBrandSurfshark,
+  IconBrandSvelte,
+  IconBrandSwift,
+  IconBrandSymfony,
+  IconBrandTabler,
+  IconBrandTabnine,
+  IconBrandTailwind,
+  IconBrandTaobao,
+  IconBrandTeams,
+  IconBrandTed,
+  IconBrandTelegram,
+  IconBrandTerraform,
+  IconBrandTesla,
+  IconBrandTether,
+  IconBrandThingiverse,
+  IconBrandThreads,
+  IconBrandThreejs,
+  IconBrandTidal,
+  IconBrandTiktok,
+  IconBrandTinder,
+  IconBrandTopbuzz,
+  IconBrandTorchain,
+  IconBrandToyota,
+  IconBrandTrello,
+  IconBrandTripadvisor,
+  IconBrandTumblr,
+  IconBrandTwilio,
+  IconBrandTwitch,
+  IconBrandTwitter,
+  IconBrandTypescript,
+  IconBrandUber,
+  IconBrandUbuntu,
+  IconBrandUnity,
+  IconBrandUnsplash,
+  IconBrandUpwork,
+  IconBrandValorant,
+  IconBrandVechain,
+  IconBrandVercel,
+  IconBrandVimeo,
+  IconBrandVinted,
+  IconBrandVisa,
+  IconBrandVisualStudio,
+  IconBrandVite,
+  IconBrandVivaldi,
+  IconBrandVk,
+  IconBrandVlc,
+  IconBrandVolkswagen,
+  IconBrandVsco,
+  IconBrandVscode,
+  IconBrandVue,
+  IconBrandWalmart,
+  IconBrandWaze,
+  IconBrandWebflow,
+  IconBrandWechat,
+  IconBrandWeibo,
+  IconBrandWhatsapp,
+  IconBrandWikipedia,
+  IconBrandWindows,
+  IconBrandWindy,
+  IconBrandWish,
+  IconBrandWix,
+  IconBrandWordpress,
+  IconBrandX,
+  IconBrandXamarin,
+  IconBrandXbox,
+  IconBrandXdeep,
+  IconBrandXing,
+  IconBrandYahoo,
+  IconBrandYandex,
+  IconBrandYarn,
+  IconBrandYatse,
+  IconBrandYcombinator,
+  IconBrandYoutubeKids,
+  IconBrandYoutube,
+  IconBrandZalando,
+  IconBrandZapier,
+  IconBrandZeit,
+  IconBrandZhihu,
+  IconBrandZoom,
+  IconBrandZulip,
+  IconBrandZwift,
+  IconBreadOff,
+  IconBread,
+  IconBriefcase2,
+  IconBriefcaseOff,
+  IconBriefcase,
+  IconBrightness2,
+  IconBrightnessAuto,
+  IconBrightnessDown,
+  IconBrightnessHalf,
+  IconBrightnessOff,
+  IconBrightnessUp,
+  IconBrightness,
+  IconBroadcastOff,
+  IconBroadcast,
+  IconBrowserCheck,
+  IconBrowserMaximize,
+  IconBrowserMinus,
+  IconBrowserOff,
+  IconBrowserPlus,
+  IconBrowserShare,
+  IconBrowserX,
+  IconBrowser,
+  IconBrushOff,
+  IconBrush,
+  IconBubbleMinus,
+  IconBubblePlus,
+  IconBubbleTea2,
+  IconBubbleTea,
+  IconBubbleText,
+  IconBubbleX,
+  IconBubble,
+  IconBucketDroplet,
+  IconBucketOff,
+  IconBucket,
+  IconBugOff,
+  IconBug,
+  IconBuildingAirport,
+  IconBuildingArch,
+  IconBuildingBank,
+  IconBuildingBridge2,
+  IconBuildingBridge,
+  IconBuildingBroadcastTower,
+  IconBuildingBurjAlArab,
+  IconBuildingCarousel,
+  IconBuildingCastle,
+  IconBuildingChurch,
+  IconBuildingCircus,
+  IconBuildingCog,
+  IconBuildingCommunity,
+  IconBuildingCottage,
+  IconBuildingEiffelTower,
+  IconBuildingEstate,
+  IconBuildingFactory2,
+  IconBuildingFactory,
+  IconBuildingFortress,
+  IconBuildingHospital,
+  IconBuildingLighthouse,
+  IconBuildingMinus,
+  IconBuildingMonument,
+  IconBuildingMosque,
+  IconBuildingOff,
+  IconBuildingPavilion,
+  IconBuildingPlus,
+  IconBuildingSkyscraper,
+  IconBuildingStadium,
+  IconBuildingStore,
+  IconBuildingTunnel,
+  IconBuildingWarehouse,
+  IconBuildingWindTurbine,
+  IconBuilding,
+  IconBuildings,
+  IconBulbOff,
+  IconBulb,
+  IconBulldozer,
+  IconBurger,
+  IconBusOff,
+  IconBusStop,
+  IconBus,
+  IconBusinessplan,
+  IconButterfly,
+  IconCactusOff,
+  IconCactus,
+  IconCakeOff,
+  IconCakeRoll,
+  IconCake,
+  IconCalculatorOff,
+  IconCalculator,
+  IconCalendarBolt,
+  IconCalendarCancel,
+  IconCalendarCheck,
+  IconCalendarClock,
+  IconCalendarCode,
+  IconCalendarCog,
+  IconCalendarDollar,
+  IconCalendarDot,
+  IconCalendarDown,
+  IconCalendarDue,
+  IconCalendarEvent,
+  IconCalendarExclamation,
+  IconCalendarHeart,
+  IconCalendarMinus,
+  IconCalendarMonth,
+  IconCalendarOff,
+  IconCalendarPause,
+  IconCalendarPin,
+  IconCalendarPlus,
+  IconCalendarQuestion,
+  IconCalendarRepeat,
+  IconCalendarSad,
+  IconCalendarSearch,
+  IconCalendarShare,
+  IconCalendarSmile,
+  IconCalendarStar,
+  IconCalendarStats,
+  IconCalendarTime,
+  IconCalendarUp,
+  IconCalendarUser,
+  IconCalendarWeek,
+  IconCalendarX,
+  IconCalendar,
+  IconCameraAi,
+  IconCameraBitcoin,
+  IconCameraBolt,
+  IconCameraCancel,
+  IconCameraCheck,
+  IconCameraCode,
+  IconCameraCog,
+  IconCameraDollar,
+  IconCameraDown,
+  IconCameraExclamation,
+  IconCameraHeart,
+  IconCameraMinus,
+  IconCameraMoon,
+  IconCameraOff,
+  IconCameraPause,
+  IconCameraPin,
+  IconCameraPlus,
+  IconCameraQuestion,
+  IconCameraRotate,
+  IconCameraSearch,
+  IconCameraSelfie,
+  IconCameraShare,
+  IconCameraSpark,
+  IconCameraStar,
+  IconCameraUp,
+  IconCameraX,
+  IconCamera,
+  IconCamper,
+  IconCampfire,
+  IconCanary,
+  IconCancel,
+  IconCandle,
+  IconCandyOff,
+  IconCandy,
+  IconCane,
+  IconCannabis,
+  IconCapProjecting,
+  IconCapRounded,
+  IconCapStraight,
+  IconCapsuleHorizontal,
+  IconCapsule,
+  IconCaptureOff,
+  IconCapture,
+  IconCar4wd,
+  IconCarCrane,
+  IconCarCrash,
+  IconCarDoor,
+  IconCarFan1,
+  IconCarFan2,
+  IconCarFan3,
+  IconCarFanAuto,
+  IconCarFan,
+  IconCarGarage,
+  IconCarLifter,
+  IconCarOffRoad,
+  IconCarOff,
+  IconCarSuspension,
+  IconCarSuv,
+  IconCarTurbine,
+  IconCar,
+  IconCarambola,
+  IconCaravan,
+  IconCardboardsOff,
+  IconCardboards,
+  IconCards,
+  IconCaretDown,
+  IconCaretLeftRight,
+  IconCaretLeft,
+  IconCaretRight,
+  IconCaretUpDown,
+  IconCaretUp,
+  IconCarouselHorizontal,
+  IconCarouselVertical,
+  IconCarrotOff,
+  IconCarrot,
+  IconCashBanknoteEdit,
+  IconCashBanknoteHeart,
+  IconCashBanknoteMinus,
+  IconCashBanknoteMoveBack,
+  IconCashBanknoteMove,
+  IconCashBanknoteOff,
+  IconCashBanknotePlus,
+  IconCashBanknote,
+  IconCashCoin,
+  IconCashEdit,
+  IconCashHeart,
+  IconCashMinus,
+  IconCashMoveBack,
+  IconCashMove,
+  IconCashOff,
+  IconCashPlus,
+  IconCashRegister,
+  IconCash,
+  IconCastOff,
+  IconCast,
+  IconCat,
+  IconCategory2,
+  IconCategoryMinus,
+  IconCategoryPlus,
+  IconCategory,
+  IconCeOff,
+  IconCe,
+  IconCellSignal1,
+  IconCellSignal2,
+  IconCellSignal3,
+  IconCellSignal4,
+  IconCellSignal5,
+  IconCellSignalOff,
+  IconCell,
+  IconCertificate2Off,
+  IconCertificate2,
+  IconCertificateOff,
+  IconCertificate,
+  IconChairDirector,
+  IconChalkboardOff,
+  IconChalkboardTeacher,
+  IconChalkboard,
+  IconChargingPile,
+  IconChartArcs3,
+  IconChartArcs,
+  IconChartAreaLine,
+  IconChartArea,
+  IconChartArrowsVertical,
+  IconChartArrows,
+  IconChartBarOff,
+  IconChartBarPopular,
+  IconChartBar,
+  IconChartBubble,
+  IconChartCandle,
+  IconChartCircles,
+  IconChartCohort,
+  IconChartColumn,
+  IconChartCovariate,
+  IconChartDonut2,
+  IconChartDonut3,
+  IconChartDonut4,
+  IconChartDonut,
+  IconChartDots2,
+  IconChartDots3,
+  IconChartDots,
+  IconChartFunnel,
+  IconChartGridDots,
+  IconChartHistogram,
+  IconChartInfographic,
+  IconChartLine,
+  IconChartPie2,
+  IconChartPie3,
+  IconChartPie4,
+  IconChartPieOff,
+  IconChartPie,
+  IconChartPpf,
+  IconChartRadar,
+  IconChartSankey,
+  IconChartScatter3d,
+  IconChartScatter,
+  IconChartTreemap,
+  IconCheck,
+  IconCheckbox,
+  IconChecklist,
+  IconChecks,
+  IconCheckupList,
+  IconCheese,
+  IconChefHatOff,
+  IconChefHat,
+  IconCherry,
+  IconChessBishop,
+  IconChessKing,
+  IconChessKnight,
+  IconChessQueen,
+  IconChessRook,
+  IconChess,
+  IconChevronCompactDown,
+  IconChevronCompactLeft,
+  IconChevronCompactRight,
+  IconChevronCompactUp,
+  IconChevronDownLeft,
+  IconChevronDownRight,
+  IconChevronDown,
+  IconChevronLeftPipe,
+  IconChevronLeft,
+  IconChevronRightPipe,
+  IconChevronRight,
+  IconChevronUpLeft,
+  IconChevronUpRight,
+  IconChevronUp,
+  IconChevronsDownLeft,
+  IconChevronsDownRight,
+  IconChevronsDown,
+  IconChevronsLeft,
+  IconChevronsRight,
+  IconChevronsUpLeft,
+  IconChevronsUpRight,
+  IconChevronsUp,
+  IconChisel,
+  IconChocolate,
+  IconChristmasBall,
+  IconChristmasTreeOff,
+  IconChristmasTree,
+  IconCircleArrowDownLeft,
+  IconCircleArrowDownRight,
+  IconCircleArrowDown,
+  IconCircleArrowLeft,
+  IconCircleArrowRight,
+  IconCircleArrowUpLeft,
+  IconCircleArrowUpRight,
+  IconCircleArrowUp,
+  IconCircleAsterisk,
+  IconCircleCaretDown,
+  IconCircleCaretLeft,
+  IconCircleCaretRight,
+  IconCircleCaretUp,
+  IconCircleCheck,
+  IconCircleChevronDown,
+  IconCircleChevronLeft,
+  IconCircleChevronRight,
+  IconCircleChevronUp,
+  IconCircleChevronsDown,
+  IconCircleChevronsLeft,
+  IconCircleChevronsRight,
+  IconCircleChevronsUp,
+  IconCircleDashedCheck,
+  IconCircleDashedLetterA,
+  IconCircleDashedLetterB,
+  IconCircleDashedLetterC,
+  IconCircleDashedLetterD,
+  IconCircleDashedLetterE,
+  IconCircleDashedLetterF,
+  IconCircleDashedLetterG,
+  IconCircleDashedLetterH,
+  IconCircleDashedLetterI,
+  IconCircleDashedLetterJ,
+  IconCircleDashedLetterK,
+  IconCircleDashedLetterL,
+  IconCircleDashedLetterM,
+  IconCircleDashedLetterN,
+  IconCircleDashedLetterO,
+  IconCircleDashedLetterP,
+  IconCircleDashedLetterQ,
+  IconCircleDashedLetterR,
+  IconCircleDashedLetterS,
+  IconCircleDashedLetterT,
+  IconCircleDashedLetterU,
+  IconCircleDashedLetterV,
+  IconCircleDashedLetterW,
+  IconCircleDashedLetterX,
+  IconCircleDashedLetterY,
+  IconCircleDashedLetterZ,
+  IconCircleDashedMinus,
+  IconCircleDashedNumber0,
+  IconCircleDashedNumber1,
+  IconCircleDashedNumber2,
+  IconCircleDashedNumber3,
+  IconCircleDashedNumber4,
+  IconCircleDashedNumber5,
+  IconCircleDashedNumber6,
+  IconCircleDashedNumber7,
+  IconCircleDashedNumber8,
+  IconCircleDashedNumber9,
+  IconCircleDashedPercentage,
+  IconCircleDashedPlus,
+  IconCircleDashedX,
+  IconCircleDashed,
+  IconCircleDot,
+  IconCircleDottedLetterA,
+  IconCircleDottedLetterB,
+  IconCircleDottedLetterC,
+  IconCircleDottedLetterD,
+  IconCircleDottedLetterE,
+  IconCircleDottedLetterF,
+  IconCircleDottedLetterG,
+  IconCircleDottedLetterH,
+  IconCircleDottedLetterI,
+  IconCircleDottedLetterJ,
+  IconCircleDottedLetterK,
+  IconCircleDottedLetterL,
+  IconCircleDottedLetterM,
+  IconCircleDottedLetterN,
+  IconCircleDottedLetterO,
+  IconCircleDottedLetterP,
+  IconCircleDottedLetterQ,
+  IconCircleDottedLetterR,
+  IconCircleDottedLetterS,
+  IconCircleDottedLetterT,
+  IconCircleDottedLetterU,
+  IconCircleDottedLetterV,
+  IconCircleDottedLetterW,
+  IconCircleDottedLetterX,
+  IconCircleDottedLetterY,
+  IconCircleDottedLetterZ,
+  IconCircleDotted,
+  IconCircleHalf2,
+  IconCircleHalfVertical,
+  IconCircleHalf,
+  IconCircleHeart,
+  IconCircleKey,
+  IconCircleLetterA,
+  IconCircleLetterB,
+  IconCircleLetterC,
+  IconCircleLetterD,
+  IconCircleLetterE,
+  IconCircleLetterF,
+  IconCircleLetterG,
+  IconCircleLetterH,
+  IconCircleLetterI,
+  IconCircleLetterJ,
+  IconCircleLetterK,
+  IconCircleLetterL,
+  IconCircleLetterM,
+  IconCircleLetterN,
+  IconCircleLetterO,
+  IconCircleLetterP,
+  IconCircleLetterQ,
+  IconCircleLetterR,
+  IconCircleLetterS,
+  IconCircleLetterT,
+  IconCircleLetterU,
+  IconCircleLetterV,
+  IconCircleLetterW,
+  IconCircleLetterX,
+  IconCircleLetterY,
+  IconCircleLetterZ,
+  IconCircleMinus2,
+  IconCircleMinus,
+  IconCircleNumber0,
+  IconCircleNumber1,
+  IconCircleNumber2,
+  IconCircleNumber3,
+  IconCircleNumber4,
+  IconCircleNumber5,
+  IconCircleNumber6,
+  IconCircleNumber7,
+  IconCircleNumber8,
+  IconCircleNumber9,
+  IconCircleOff,
+  IconCircleOpenArrowDown,
+  IconCircleOpenArrowLeft,
+  IconCircleOpenArrowRight,
+  IconCircleOpenArrowUp,
+  IconCirclePause,
+  IconCirclePercentage,
+  IconCirclePlay,
+  IconCirclePlus2,
+  IconCirclePlusMinus,
+  IconCirclePlus,
+  IconCircleRectangleOff,
+  IconCircleRectangle,
+  IconCircleSquare,
+  IconCircleStop,
+  IconCircleTriangle,
+  IconCircleX,
+  IconCircle,
+  IconCirclesRelation,
+  IconCircles,
+  IconCircuitAmmeter,
+  IconCircuitBattery,
+  IconCircuitBulb,
+  IconCircuitCapacitorPolarized,
+  IconCircuitCapacitor,
+  IconCircuitCellPlus,
+  IconCircuitCell,
+  IconCircuitChangeover,
+  IconCircuitDiodeZener,
+  IconCircuitDiode,
+  IconCircuitGroundDigital,
+  IconCircuitGround,
+  IconCircuitInductor,
+  IconCircuitMotor,
+  IconCircuitPushbutton,
+  IconCircuitResistor,
+  IconCircuitSwitchClosed,
+  IconCircuitSwitchOpen,
+  IconCircuitVoltmeter,
+  IconClearAll,
+  IconClearFormatting,
+  IconClefStaff,
+  IconClef,
+  IconClick,
+  IconCliffJumping,
+  IconClipboardCheck,
+  IconClipboardCopy,
+  IconClipboardData,
+  IconClipboardHeart,
+  IconClipboardList,
+  IconClipboardOff,
+  IconClipboardPlus,
+  IconClipboardSearch,
+  IconClipboardSmile,
+  IconClipboardText,
+  IconClipboardTypography,
+  IconClipboardX,
+  IconClipboard,
+  IconClock12,
+  IconClock2,
+  IconClock24,
+  IconClockBitcoin,
+  IconClockBolt,
+  IconClockCancel,
+  IconClockCheck,
+  IconClockCode,
+  IconClockCog,
+  IconClockDollar,
+  IconClockDown,
+  IconClockEdit,
+  IconClockExclamation,
+  IconClockHeart,
+  IconClockHour1,
+  IconClockHour10,
+  IconClockHour11,
+  IconClockHour12,
+  IconClockHour2,
+  IconClockHour3,
+  IconClockHour4,
+  IconClockHour5,
+  IconClockHour6,
+  IconClockHour7,
+  IconClockHour8,
+  IconClockHour9,
+  IconClockMinus,
+  IconClockOff,
+  IconClockPause,
+  IconClockPin,
+  IconClockPlay,
+  IconClockPlus,
+  IconClockQuestion,
+  IconClockRecord,
+  IconClockSearch,
+  IconClockShare,
+  IconClockShield,
+  IconClockStar,
+  IconClockStop,
+  IconClockUp,
+  IconClockX,
+  IconClock,
+  IconClothesRackOff,
+  IconClothesRack,
+  IconCloudBitcoin,
+  IconCloudBolt,
+  IconCloudCancel,
+  IconCloudCheck,
+  IconCloudCode,
+  IconCloudCog,
+  IconCloudComputing,
+  IconCloudDataConnection,
+  IconCloudDollar,
+  IconCloudDown,
+  IconCloudDownload,
+  IconCloudExclamation,
+  IconCloudFog,
+  IconCloudHeart,
+  IconCloudLockOpen,
+  IconCloudLock,
+  IconCloudMinus,
+  IconCloudNetwork,
+  IconCloudOff,
+  IconCloudPause,
+  IconCloudPin,
+  IconCloudPlus,
+  IconCloudQuestion,
+  IconCloudRain,
+  IconCloudSearch,
+  IconCloudShare,
+  IconCloudSnow,
+  IconCloudStar,
+  IconCloudStorm,
+  IconCloudUp,
+  IconCloudUpload,
+  IconCloudX,
+  IconCloud,
+  IconClover2,
+  IconClover,
+  IconClubs,
+  IconCodeAi,
+  IconCodeAsterisk,
+  IconCodeCircle2,
+  IconCodeCircle,
+  IconCodeDots,
+  IconCodeMinus,
+  IconCodeOff,
+  IconCodePlus,
+  IconCodeVariableMinus,
+  IconCodeVariablePlus,
+  IconCodeVariable,
+  IconCode,
+  IconCodeblock,
+  IconCoffeeOff,
+  IconCoffee,
+  IconCoffin,
+  IconCoinBitcoin,
+  IconCoinEuro,
+  IconCoinMonero,
+  IconCoinOff,
+  IconCoinPound,
+  IconCoinRupee,
+  IconCoinTaka,
+  IconCoinYen,
+  IconCoinYuan,
+  IconCoin,
+  IconCoins,
+  IconColorFilter,
+  IconColorPickerOff,
+  IconColorPicker,
+  IconColorSwatchOff,
+  IconColorSwatch,
+  IconColumnInsertLeft,
+  IconColumnInsertRight,
+  IconColumnRemove,
+  IconColumns1,
+  IconColumns2,
+  IconColumns3,
+  IconColumnsOff,
+  IconColumns,
+  IconComet,
+  IconCommandOff,
+  IconCommand,
+  IconCompassOff,
+  IconCompass,
+  IconComponentsOff,
+  IconComponents,
+  IconCone2,
+  IconConeOff,
+  IconConePlus,
+  IconCone,
+  IconConfettiOff,
+  IconConfetti,
+  IconConfucius,
+  IconCongruentTo,
+  IconConnection,
+  IconContainerOff,
+  IconContainer,
+  IconContract,
+  IconContrast2Off,
+  IconContrast2,
+  IconContrastOff,
+  IconContrast,
+  IconCooker,
+  IconCookieMan,
+  IconCookieOff,
+  IconCookie,
+  IconCopyCheck,
+  IconCopyMinus,
+  IconCopyOff,
+  IconCopyPlus,
+  IconCopyX,
+  IconCopy,
+  IconCopyleftOff,
+  IconCopyleft,
+  IconCopyrightOff,
+  IconCopyright,
+  IconCornerDownLeftDouble,
+  IconCornerDownLeft,
+  IconCornerDownRightDouble,
+  IconCornerDownRight,
+  IconCornerLeftDownDouble,
+  IconCornerLeftDown,
+  IconCornerLeftUpDouble,
+  IconCornerLeftUp,
+  IconCornerRightDownDouble,
+  IconCornerRightDown,
+  IconCornerRightUpDouble,
+  IconCornerRightUp,
+  IconCornerUpLeftDouble,
+  IconCornerUpLeft,
+  IconCornerUpRightDouble,
+  IconCornerUpRight,
+  IconCpu2,
+  IconCpuOff,
+  IconCpu,
+  IconCraneOff,
+  IconCrane,
+  IconCreativeCommonsBy,
+  IconCreativeCommonsNc,
+  IconCreativeCommonsNd,
+  IconCreativeCommonsOff,
+  IconCreativeCommonsSa,
+  IconCreativeCommonsZero,
+  IconCreativeCommons,
+  IconCreditCardHand,
+  IconCreditCardOff,
+  IconCreditCardPay,
+  IconCreditCardRefund,
+  IconCreditCard,
+  IconCredits,
+  IconCricket,
+  IconCrop11,
+  IconCrop169,
+  IconCrop32,
+  IconCrop54,
+  IconCrop75,
+  IconCropLandscape,
+  IconCropPortrait,
+  IconCrop,
+  IconCrossOff,
+  IconCross,
+  IconCrosshair,
+  IconCrownOff,
+  IconCrown,
+  IconCrutchesOff,
+  IconCrutches,
+  IconCrystalBall,
+  IconCsv,
+  IconCube3dSphereOff,
+  IconCube3dSphere,
+  IconCubeOff,
+  IconCubePlus,
+  IconCubeSend,
+  IconCubeSpark,
+  IconCubeUnfolded,
+  IconCube,
+  IconCupOff,
+  IconCup,
+  IconCurling,
+  IconCurlyLoop,
+  IconCurrencyAfghani,
+  IconCurrencyBahraini,
+  IconCurrencyBaht,
+  IconCurrencyBitcoin,
+  IconCurrencyCent,
+  IconCurrencyDinar,
+  IconCurrencyDirham,
+  IconCurrencyDogecoin,
+  IconCurrencyDollarAustralian,
+  IconCurrencyDollarBrunei,
+  IconCurrencyDollarCanadian,
+  IconCurrencyDollarGuyanese,
+  IconCurrencyDollarOff,
+  IconCurrencyDollarSingapore,
+  IconCurrencyDollarZimbabwean,
+  IconCurrencyDollar,
+  IconCurrencyDong,
+  IconCurrencyDram,
+  IconCurrencyEthereum,
+  IconCurrencyEuroOff,
+  IconCurrencyEuro,
+  IconCurrencyFlorin,
+  IconCurrencyForint,
+  IconCurrencyFrank,
+  IconCurrencyGuarani,
+  IconCurrencyHryvnia,
+  IconCurrencyHusd,
+  IconCurrencyIranianRial,
+  IconCurrencyKip,
+  IconCurrencyKroneCzech,
+  IconCurrencyKroneDanish,
+  IconCurrencyKroneSwedish,
+  IconCurrencyLari,
+  IconCurrencyLeu,
+  IconCurrencyLira,
+  IconCurrencyLitecoin,
+  IconCurrencyLyd,
+  IconCurrencyManat,
+  IconCurrencyMonero,
+  IconCurrencyNaira,
+  IconCurrencyNano,
+  IconCurrencyOff,
+  IconCurrencyPaanga,
+  IconCurrencyPeso,
+  IconCurrencyPoundOff,
+  IconCurrencyPound,
+  IconCurrencyQuetzal,
+  IconCurrencyReal,
+  IconCurrencyRenminbi,
+  IconCurrencyRipple,
+  IconCurrencyRiyal,
+  IconCurrencyRuble,
+  IconCurrencyRufiyaa,
+  IconCurrencyRupeeNepalese,
+  IconCurrencyRupee,
+  IconCurrencyShekel,
+  IconCurrencySolana,
+  IconCurrencySom,
+  IconCurrencyTaka,
+  IconCurrencyTenge,
+  IconCurrencyTether,
+  IconCurrencyTugrik,
+  IconCurrencyWon,
+  IconCurrencyXrp,
+  IconCurrencyYenOff,
+  IconCurrencyYen,
+  IconCurrencyYuan,
+  IconCurrencyZcash,
+  IconCurrencyZloty,
+  IconCurrency,
+  IconCurrentLocationOff,
+  IconCurrentLocation,
+  IconCursorOff,
+  IconCursorText,
+  IconCut,
+  IconCylinderOff,
+  IconCylinderPlus,
+  IconCylinder,
+  IconDashboardOff,
+  IconDashboard,
+  IconDatabaseCog,
+  IconDatabaseDollar,
+  IconDatabaseEdit,
+  IconDatabaseExclamation,
+  IconDatabaseExport,
+  IconDatabaseHeart,
+  IconDatabaseImport,
+  IconDatabaseLeak,
+  IconDatabaseMinus,
+  IconDatabaseOff,
+  IconDatabasePlus,
+  IconDatabaseSearch,
+  IconDatabaseShare,
+  IconDatabaseSmile,
+  IconDatabaseStar,
+  IconDatabaseX,
+  IconDatabase,
+  IconDeaf,
+  IconDecimal,
+  IconDeer,
+  IconDelta,
+  IconDentalBroken,
+  IconDentalOff,
+  IconDental,
+  IconDeselect,
+  IconDesk,
+  IconDetailsOff,
+  IconDetails,
+  IconDevice3dCamera,
+  IconDevice3dLens,
+  IconDeviceAirpodsCase,
+  IconDeviceAirpods,
+  IconDeviceAirtag,
+  IconDeviceAnalytics,
+  IconDeviceAudioTape,
+  IconDeviceCameraPhone,
+  IconDeviceCctvOff,
+  IconDeviceCctv,
+  IconDeviceComputerCamera2,
+  IconDeviceComputerCameraOff,
+  IconDeviceComputerCamera,
+  IconDeviceDesktopAnalytics,
+  IconDeviceDesktopBolt,
+  IconDeviceDesktopCancel,
+  IconDeviceDesktopCheck,
+  IconDeviceDesktopCode,
+  IconDeviceDesktopCog,
+  IconDeviceDesktopDollar,
+  IconDeviceDesktopDown,
+  IconDeviceDesktopExclamation,
+  IconDeviceDesktopHeart,
+  IconDeviceDesktopMinus,
+  IconDeviceDesktopOff,
+  IconDeviceDesktopPause,
+  IconDeviceDesktopPin,
+  IconDeviceDesktopPlus,
+  IconDeviceDesktopQuestion,
+  IconDeviceDesktopSearch,
+  IconDeviceDesktopShare,
+  IconDeviceDesktopStar,
+  IconDeviceDesktopUp,
+  IconDeviceDesktopX,
+  IconDeviceDesktop,
+  IconDeviceFloppy,
+  IconDeviceGamepad2,
+  IconDeviceGamepad3,
+  IconDeviceGamepad,
+  IconDeviceHeartMonitor,
+  IconDeviceImacBolt,
+  IconDeviceImacCancel,
+  IconDeviceImacCheck,
+  IconDeviceImacCode,
+  IconDeviceImacCog,
+  IconDeviceImacDollar,
+  IconDeviceImacDown,
+  IconDeviceImacExclamation,
+  IconDeviceImacHeart,
+  IconDeviceImacMinus,
+  IconDeviceImacOff,
+  IconDeviceImacPause,
+  IconDeviceImacPin,
+  IconDeviceImacPlus,
+  IconDeviceImacQuestion,
+  IconDeviceImacSearch,
+  IconDeviceImacShare,
+  IconDeviceImacStar,
+  IconDeviceImacUp,
+  IconDeviceImacX,
+  IconDeviceImac,
+  IconDeviceIpadBolt,
+  IconDeviceIpadCancel,
+  IconDeviceIpadCheck,
+  IconDeviceIpadCode,
+  IconDeviceIpadCog,
+  IconDeviceIpadDollar,
+  IconDeviceIpadDown,
+  IconDeviceIpadExclamation,
+  IconDeviceIpadHeart,
+  IconDeviceIpadHorizontalBolt,
+  IconDeviceIpadHorizontalCancel,
+  IconDeviceIpadHorizontalCheck,
+  IconDeviceIpadHorizontalCode,
+  IconDeviceIpadHorizontalCog,
+  IconDeviceIpadHorizontalDollar,
+  IconDeviceIpadHorizontalDown,
+  IconDeviceIpadHorizontalExclamation,
+  IconDeviceIpadHorizontalHeart,
+  IconDeviceIpadHorizontalMinus,
+  IconDeviceIpadHorizontalOff,
+  IconDeviceIpadHorizontalPause,
+  IconDeviceIpadHorizontalPin,
+  IconDeviceIpadHorizontalPlus,
+  IconDeviceIpadHorizontalQuestion,
+  IconDeviceIpadHorizontalSearch,
+  IconDeviceIpadHorizontalShare,
+  IconDeviceIpadHorizontalStar,
+  IconDeviceIpadHorizontalUp,
+  IconDeviceIpadHorizontalX,
+  IconDeviceIpadHorizontal,
+  IconDeviceIpadMinus,
+  IconDeviceIpadOff,
+  IconDeviceIpadPause,
+  IconDeviceIpadPin,
+  IconDeviceIpadPlus,
+  IconDeviceIpadQuestion,
+  IconDeviceIpadSearch,
+  IconDeviceIpadShare,
+  IconDeviceIpadStar,
+  IconDeviceIpadUp,
+  IconDeviceIpadX,
+  IconDeviceIpad,
+  IconDeviceLandlinePhone,
+  IconDeviceLaptopOff,
+  IconDeviceLaptop,
+  IconDeviceMobileBolt,
+  IconDeviceMobileCancel,
+  IconDeviceMobileCharging,
+  IconDeviceMobileCheck,
+  IconDeviceMobileCode,
+  IconDeviceMobileCog,
+  IconDeviceMobileDollar,
+  IconDeviceMobileDown,
+  IconDeviceMobileExclamation,
+  IconDeviceMobileHeart,
+  IconDeviceMobileMessage,
+  IconDeviceMobileMinus,
+  IconDeviceMobileOff,
+  IconDeviceMobilePause,
+  IconDeviceMobilePin,
+  IconDeviceMobilePlus,
+  IconDeviceMobileQuestion,
+  IconDeviceMobileRotated,
+  IconDeviceMobileSearch,
+  IconDeviceMobileShare,
+  IconDeviceMobileStar,
+  IconDeviceMobileUp,
+  IconDeviceMobileVibration,
+  IconDeviceMobileX,
+  IconDeviceMobile,
+  IconDeviceNintendoOff,
+  IconDeviceNintendo,
+  IconDeviceProjector,
+  IconDeviceRemote,
+  IconDeviceScreen,
+  IconDeviceSdCard,
+  IconDeviceSim1,
+  IconDeviceSim2,
+  IconDeviceSim3,
+  IconDeviceSim,
+  IconDeviceSpeakerOff,
+  IconDeviceSpeaker,
+  IconDeviceTabletBolt,
+  IconDeviceTabletCancel,
+  IconDeviceTabletCheck,
+  IconDeviceTabletCode,
+  IconDeviceTabletCog,
+  IconDeviceTabletDollar,
+  IconDeviceTabletDown,
+  IconDeviceTabletExclamation,
+  IconDeviceTabletHeart,
+  IconDeviceTabletMinus,
+  IconDeviceTabletOff,
+  IconDeviceTabletPause,
+  IconDeviceTabletPin,
+  IconDeviceTabletPlus,
+  IconDeviceTabletQuestion,
+  IconDeviceTabletSearch,
+  IconDeviceTabletShare,
+  IconDeviceTabletStar,
+  IconDeviceTabletUp,
+  IconDeviceTabletX,
+  IconDeviceTablet,
+  IconDeviceTvOff,
+  IconDeviceTvOld,
+  IconDeviceTv,
+  IconDeviceUnknown,
+  IconDeviceUsb,
+  IconDeviceVisionProWifi,
+  IconDeviceVisionPro,
+  IconDeviceWatchBolt,
+  IconDeviceWatchCancel,
+  IconDeviceWatchCheck,
+  IconDeviceWatchCode,
+  IconDeviceWatchCog,
+  IconDeviceWatchDollar,
+  IconDeviceWatchDown,
+  IconDeviceWatchExclamation,
+  IconDeviceWatchHeart,
+  IconDeviceWatchMinus,
+  IconDeviceWatchOff,
+  IconDeviceWatchPause,
+  IconDeviceWatchPin,
+  IconDeviceWatchPlus,
+  IconDeviceWatchQuestion,
+  IconDeviceWatchSearch,
+  IconDeviceWatchShare,
+  IconDeviceWatchStar,
+  IconDeviceWatchStats2,
+  IconDeviceWatchStats,
+  IconDeviceWatchUp,
+  IconDeviceWatchX,
+  IconDeviceWatch,
+  IconDeviceWorkstation,
+  IconDevices2,
+  IconDevicesBolt,
+  IconDevicesCancel,
+  IconDevicesCheck,
+  IconDevicesCode,
+  IconDevicesCog,
+  IconDevicesDollar,
+  IconDevicesDown,
+  IconDevicesExclamation,
+  IconDevicesHeart,
+  IconDevicesMinus,
+  IconDevicesOff,
+  IconDevicesPause,
+  IconDevicesPcOff,
+  IconDevicesPc,
+  IconDevicesPin,
+  IconDevicesPlus,
+  IconDevicesQuestion,
+  IconDevicesSearch,
+  IconDevicesShare,
+  IconDevicesStar,
+  IconDevicesUp,
+  IconDevicesX,
+  IconDevices,
+  IconDiaboloOff,
+  IconDiaboloPlus,
+  IconDiabolo,
+  IconDialpadOff,
+  IconDialpad,
+  IconDiamondOff,
+  IconDiamond,
+  IconDiamonds,
+  IconDiaper,
+  IconDice1,
+  IconDice2,
+  IconDice3,
+  IconDice4,
+  IconDice5,
+  IconDice6,
+  IconDice,
+  IconDimensions,
+  IconDirectionArrows,
+  IconDirectionHorizontal,
+  IconDirectionSignOff,
+  IconDirectionSign,
+  IconDirection,
+  IconDirectionsOff,
+  IconDirections,
+  IconDisabled2,
+  IconDisabledOff,
+  IconDisabled,
+  IconDiscGolf,
+  IconDiscOff,
+  IconDisc,
+  IconDiscountOff,
+  IconDiscount,
+  IconDivide,
+  IconDna2Off,
+  IconDna2,
+  IconDnaOff,
+  IconDna,
+  IconDogBowl,
+  IconDog,
+  IconDoorEnter,
+  IconDoorExit,
+  IconDoorHanger,
+  IconDoorOff,
+  IconDoor,
+  IconDotsCircleHorizontal,
+  IconDotsDiagonal2,
+  IconDotsDiagonal,
+  IconDotsVertical,
+  IconDots,
+  IconDownloadOff,
+  IconDownload,
+  IconDragDrop2,
+  IconDragDrop,
+  IconDragon,
+  IconDroneOff,
+  IconDrone,
+  IconDropCircle,
+  IconDropletBolt,
+  IconDropletCancel,
+  IconDropletCheck,
+  IconDropletCode,
+  IconDropletCog,
+  IconDropletDollar,
+  IconDropletDown,
+  IconDropletExclamation,
+  IconDropletHalf2,
+  IconDropletHalf,
+  IconDropletHeart,
+  IconDropletMinus,
+  IconDropletOff,
+  IconDropletPause,
+  IconDropletPin,
+  IconDropletPlus,
+  IconDropletQuestion,
+  IconDropletSearch,
+  IconDropletShare,
+  IconDropletStar,
+  IconDropletUp,
+  IconDropletX,
+  IconDroplet,
+  IconDroplets,
+  IconDualScreen,
+  IconDumbbell,
+  IconDumpling,
+  IconDuplicate,
+  IconEPassport,
+  IconEarOff,
+  IconEarScan,
+  IconEar,
+  IconEarphoneBluetooth,
+  IconEaseInControlPoint,
+  IconEaseInOutControlPoints,
+  IconEaseInOut,
+  IconEaseIn,
+  IconEaseOutControlPoint,
+  IconEaseOut,
+  IconEditBulk,
+  IconEditCircleOff,
+  IconEditCircle,
+  IconEditOff,
+  IconEdit,
+  IconEggCracked,
+  IconEggFried,
+  IconEggOff,
+  IconEgg,
+  IconEggs,
+  IconElevatorOff,
+  IconElevator,
+  IconEmailStamp,
+  IconEmergencyBed,
+  IconEmpathizeOff,
+  IconEmpathize,
+  IconEmphasis,
+  IconEngineOff,
+  IconEngine,
+  IconEqualDouble,
+  IconEqualNot,
+  IconEqual,
+  IconEraserOff,
+  IconEraser,
+  IconError404Off,
+  IconError404,
+  IconEscalatorDown,
+  IconEscalatorUp,
+  IconEscalator,
+  IconExchangeOff,
+  IconExchange,
+  IconExclamationCircle,
+  IconExclamationMarkOff,
+  IconExclamationMark,
+  IconExerciseBall,
+  IconExplicitOff,
+  IconExplicit,
+  IconExposure0,
+  IconExposureMinus1,
+  IconExposureMinus2,
+  IconExposureOff,
+  IconExposurePlus1,
+  IconExposurePlus2,
+  IconExposure,
+  IconExternalLinkOff,
+  IconExternalLink,
+  IconEyeBitcoin,
+  IconEyeBolt,
+  IconEyeCancel,
+  IconEyeCheck,
+  IconEyeClosed,
+  IconEyeCode,
+  IconEyeCog,
+  IconEyeDiscount,
+  IconEyeDollar,
+  IconEyeDotted,
+  IconEyeDown,
+  IconEyeEdit,
+  IconEyeExclamation,
+  IconEyeHeart,
+  IconEyeMinus,
+  IconEyeOff,
+  IconEyePause,
+  IconEyePin,
+  IconEyePlus,
+  IconEyeQuestion,
+  IconEyeSearch,
+  IconEyeShare,
+  IconEyeSpark,
+  IconEyeStar,
+  IconEyeTable,
+  IconEyeUp,
+  IconEyeX,
+  IconEye,
+  IconEyeglass2,
+  IconEyeglassOff,
+  IconEyeglass,
+  IconFaceIdError,
+  IconFaceId,
+  IconFaceMaskOff,
+  IconFaceMask,
+  IconFall,
+  IconFavicon,
+  IconFeatherOff,
+  IconFeather,
+  IconFenceOff,
+  IconFence,
+  IconFerry,
+  IconFidgetSpinner,
+  IconFile3d,
+  IconFileAi,
+  IconFileAlert,
+  IconFileAnalytics,
+  IconFileArrowLeft,
+  IconFileArrowRight,
+  IconFileBarcode,
+  IconFileBitcoin,
+  IconFileBroken,
+  IconFileCertificate,
+  IconFileChart,
+  IconFileCheck,
+  IconFileCode2,
+  IconFileCode,
+  IconFileCv,
+  IconFileDatabase,
+  IconFileDelta,
+  IconFileDescription,
+  IconFileDiff,
+  IconFileDigit,
+  IconFileDislike,
+  IconFileDollar,
+  IconFileDots,
+  IconFileDownload,
+  IconFileEuro,
+  IconFileExcel,
+  IconFileExport,
+  IconFileFunction,
+  IconFileHorizontal,
+  IconFileImport,
+  IconFileInfinity,
+  IconFileInfo,
+  IconFileInvoice,
+  IconFileIsr,
+  IconFileLambda,
+  IconFileLike,
+  IconFileLock,
+  IconFileMinus,
+  IconFileMusic,
+  IconFileNeutral,
+  IconFileOff,
+  IconFileOrientation,
+  IconFilePencil,
+  IconFilePercent,
+  IconFilePhone,
+  IconFilePlus,
+  IconFilePower,
+  IconFileReport,
+  IconFileRss,
+  IconFileSad,
+  IconFileScissors,
+  IconFileSearch,
+  IconFileSettings,
+  IconFileShredder,
+  IconFileSignal,
+  IconFileSmile,
+  IconFileSpark,
+  IconFileSpreadsheet,
+  IconFileStack,
+  IconFileStar,
+  IconFileSymlink,
+  IconFileTextAi,
+  IconFileTextShield,
+  IconFileTextSpark,
+  IconFileText,
+  IconFileTime,
+  IconFileTypeBmp,
+  IconFileTypeCss,
+  IconFileTypeCsv,
+  IconFileTypeDoc,
+  IconFileTypeDocx,
+  IconFileTypeHtml,
+  IconFileTypeJpg,
+  IconFileTypeJs,
+  IconFileTypeJsx,
+  IconFileTypePdf,
+  IconFileTypePhp,
+  IconFileTypePng,
+  IconFileTypePpt,
+  IconFileTypeRs,
+  IconFileTypeSql,
+  IconFileTypeSvg,
+  IconFileTypeTs,
+  IconFileTypeTsx,
+  IconFileTypeTxt,
+  IconFileTypeVue,
+  IconFileTypeXls,
+  IconFileTypeXml,
+  IconFileTypeZip,
+  IconFileTypography,
+  IconFileUnknown,
+  IconFileUpload,
+  IconFileVector,
+  IconFileWord,
+  IconFileX,
+  IconFileZip,
+  IconFile,
+  IconFilesOff,
+  IconFiles,
+  IconFilter2Bolt,
+  IconFilter2Cancel,
+  IconFilter2Check,
+  IconFilter2Code,
+  IconFilter2Cog,
+  IconFilter2Discount,
+  IconFilter2Dollar,
+  IconFilter2Down,
+  IconFilter2Edit,
+  IconFilter2Exclamation,
+  IconFilter2Minus,
+  IconFilter2Pause,
+  IconFilter2Pin,
+  IconFilter2Plus,
+  IconFilter2Question,
+  IconFilter2Search,
+  IconFilter2Share,
+  IconFilter2Spark,
+  IconFilter2Up,
+  IconFilter2X,
+  IconFilter2,
+  IconFilterBolt,
+  IconFilterCancel,
+  IconFilterCheck,
+  IconFilterCode,
+  IconFilterCog,
+  IconFilterDiscount,
+  IconFilterDollar,
+  IconFilterDown,
+  IconFilterEdit,
+  IconFilterExclamation,
+  IconFilterHeart,
+  IconFilterMinus,
+  IconFilterOff,
+  IconFilterPause,
+  IconFilterPin,
+  IconFilterPlus,
+  IconFilterQuestion,
+  IconFilterSearch,
+  IconFilterShare,
+  IconFilterSpark,
+  IconFilterStar,
+  IconFilterUp,
+  IconFilterX,
+  IconFilter,
+  IconFilters,
+  IconFingerprintOff,
+  IconFingerprintScan,
+  IconFingerprint,
+  IconFireExtinguisher,
+  IconFireHydrantOff,
+  IconFireHydrant,
+  IconFiretruck,
+  IconFirewallCheck,
+  IconFirewallFlame,
+  IconFirstAidKitOff,
+  IconFirstAidKit,
+  IconFishBone,
+  IconFishChristianity,
+  IconFishHookOff,
+  IconFishHook,
+  IconFishOff,
+  IconFish,
+  IconFlag2Off,
+  IconFlag2,
+  IconFlag3,
+  IconFlagBitcoin,
+  IconFlagBolt,
+  IconFlagCancel,
+  IconFlagCheck,
+  IconFlagCode,
+  IconFlagCog,
+  IconFlagDiscount,
+  IconFlagDollar,
+  IconFlagDown,
+  IconFlagExclamation,
+  IconFlagHeart,
+  IconFlagMinus,
+  IconFlagOff,
+  IconFlagPause,
+  IconFlagPin,
+  IconFlagPlus,
+  IconFlagQuestion,
+  IconFlagSearch,
+  IconFlagShare,
+  IconFlagSpark,
+  IconFlagStar,
+  IconFlagUp,
+  IconFlagX,
+  IconFlag,
+  IconFlameOff,
+  IconFlame,
+  IconFlare,
+  IconFlask2Off,
+  IconFlask2,
+  IconFlaskOff,
+  IconFlask,
+  IconFlipFlops,
+  IconFlipHorizontal,
+  IconFlipVertical,
+  IconFloatCenter,
+  IconFloatLeft,
+  IconFloatNone,
+  IconFloatRight,
+  IconFlood,
+  IconFlowerOff,
+  IconFlower,
+  IconFocus2,
+  IconFocusAuto,
+  IconFocusCentered,
+  IconFocus,
+  IconFoldDown,
+  IconFoldUp,
+  IconFold,
+  IconFolderAi,
+  IconFolderBolt,
+  IconFolderCancel,
+  IconFolderCheck,
+  IconFolderCode,
+  IconFolderCog,
+  IconFolderDollar,
+  IconFolderDown,
+  IconFolderExclamation,
+  IconFolderHeart,
+  IconFolderLock,
+  IconFolderMinus,
+  IconFolderOff,
+  IconFolderOpen,
+  IconFolderPause,
+  IconFolderPin,
+  IconFolderPlus,
+  IconFolderQuestion,
+  IconFolderRoot,
+  IconFolderSearch,
+  IconFolderShare,
+  IconFolderSparkle,
+  IconFolderStar,
+  IconFolderStats,
+  IconFolderSymlink,
+  IconFolderUp,
+  IconFolderUser,
+  IconFolderX,
+  IconFolder,
+  IconFoldersOff,
+  IconFolders,
+  IconFootsteps,
+  IconForbid2,
+  IconForbid,
+  IconForklift,
+  IconForms,
+  IconFountainOff,
+  IconFountain,
+  IconFrameOff,
+  IconFrame,
+  IconFreeRights,
+  IconFreezeColumn,
+  IconFreezeRowColumn,
+  IconFreezeRow,
+  IconFridgeOff,
+  IconFridge,
+  IconFriendsOff,
+  IconFriends,
+  IconFrustumOff,
+  IconFrustumPlus,
+  IconFrustum,
+  IconFunctionOff,
+  IconFunction,
+  IconGalaxy,
+  IconGardenCartOff,
+  IconGardenCart,
+  IconGasStationOff,
+  IconGasStation,
+  IconGaugeOff,
+  IconGauge,
+  IconGavel,
+  IconGenderAgender,
+  IconGenderAndrogyne,
+  IconGenderBigender,
+  IconGenderDemiboy,
+  IconGenderDemigirl,
+  IconGenderEpicene,
+  IconGenderFemale,
+  IconGenderFemme,
+  IconGenderGenderfluid,
+  IconGenderGenderless,
+  IconGenderGenderqueer,
+  IconGenderHermaphrodite,
+  IconGenderIntergender,
+  IconGenderMale,
+  IconGenderNeutrois,
+  IconGenderThird,
+  IconGenderTransgender,
+  IconGenderTravesti,
+  IconGeometry,
+  IconGhost2,
+  IconGhost3,
+  IconGhostOff,
+  IconGhost,
+  IconGif,
+  IconGiftCard,
+  IconGiftOff,
+  IconGift,
+  IconGitBranchCheck,
+  IconGitBranchDeleted,
+  IconGitBranchX,
+  IconGitBranch,
+  IconGitCherryPick,
+  IconGitCommit,
+  IconGitCompare,
+  IconGitFork,
+  IconGitMergeQueue,
+  IconGitMerge,
+  IconGitPullRequestClosed,
+  IconGitPullRequestConflict,
+  IconGitPullRequestDraft,
+  IconGitPullRequestLocked,
+  IconGitPullRequestUnlisted,
+  IconGitPullRequest,
+  IconGizmo,
+  IconGlassChampagne,
+  IconGlassCocktail,
+  IconGlassFull,
+  IconGlassGin,
+  IconGlassOff,
+  IconGlass,
+  IconGlobeOff,
+  IconGlobe,
+  IconGoGame,
+  IconGolfOff,
+  IconGolf,
+  IconGps,
+  IconGpu2,
+  IconGpu,
+  IconGradienter,
+  IconGrain,
+  IconGrape,
+  IconGraphOff,
+  IconGraph,
+  IconGrave2,
+  IconGrave,
+  IconGrid3x3,
+  IconGrid4x4,
+  IconGridDots,
+  IconGridGoldenratio,
+  IconGridPattern,
+  IconGridScan,
+  IconGrillFork,
+  IconGrillOff,
+  IconGrillSpatula,
+  IconGrill,
+  IconGripHorizontal,
+  IconGripVertical,
+  IconGrowth,
+  IconGuitarPick,
+  IconGymnastics,
+  IconH1,
+  IconH2,
+  IconH3,
+  IconH4,
+  IconH5,
+  IconH6,
+  IconHammerDrill,
+  IconHammerOff,
+  IconHammer,
+  IconHandClickOff,
+  IconHandClick,
+  IconHandFingerDown,
+  IconHandFingerLeft,
+  IconHandFingerOff,
+  IconHandFingerRight,
+  IconHandFinger,
+  IconHandGrab,
+  IconHandLittleFinger,
+  IconHandLoveYou,
+  IconHandMiddleFinger,
+  IconHandMove,
+  IconHandOff,
+  IconHandRingFinger,
+  IconHandSanitizer,
+  IconHandStop,
+  IconHandThreeFingers,
+  IconHandTwoFingers,
+  IconHanger2,
+  IconHangerOff,
+  IconHanger,
+  IconHash,
+  IconHazeMoon,
+  IconHaze,
+  IconHdr,
+  IconHeadingOff,
+  IconHeading,
+  IconHeadphonesOff,
+  IconHeadphones,
+  IconHeadsetOff,
+  IconHeadset,
+  IconHealthRecognition,
+  IconHeartBitcoin,
+  IconHeartBolt,
+  IconHeartBroken,
+  IconHeartCancel,
+  IconHeartCheck,
+  IconHeartCode,
+  IconHeartCog,
+  IconHeartDiscount,
+  IconHeartDollar,
+  IconHeartDown,
+  IconHeartExclamation,
+  IconHeartHandshake,
+  IconHeartMinus,
+  IconHeartOff,
+  IconHeartPause,
+  IconHeartPin,
+  IconHeartPlus,
+  IconHeartQuestion,
+  IconHeartRateMonitor,
+  IconHeartSearch,
+  IconHeartShare,
+  IconHeartSpark,
+  IconHeartStar,
+  IconHeartUp,
+  IconHeartX,
+  IconHeart,
+  IconHeartbeat,
+  IconHeartsOff,
+  IconHearts,
+  IconHelicopterLanding,
+  IconHelicopter,
+  IconHelmetOff,
+  IconHelmet,
+  IconHelpCircle,
+  IconHelpHexagon,
+  IconHelpOctagon,
+  IconHelpOff,
+  IconHelpSmall,
+  IconHelpSquareRounded,
+  IconHelpSquare,
+  IconHelpTriangle,
+  IconHelp,
+  IconHemisphereOff,
+  IconHemispherePlus,
+  IconHemisphere,
+  IconHexagon3d,
+  IconHexagonAsterisk,
+  IconHexagonLetterA,
+  IconHexagonLetterB,
+  IconHexagonLetterC,
+  IconHexagonLetterD,
+  IconHexagonLetterE,
+  IconHexagonLetterF,
+  IconHexagonLetterG,
+  IconHexagonLetterH,
+  IconHexagonLetterI,
+  IconHexagonLetterJ,
+  IconHexagonLetterK,
+  IconHexagonLetterL,
+  IconHexagonLetterM,
+  IconHexagonLetterN,
+  IconHexagonLetterO,
+  IconHexagonLetterP,
+  IconHexagonLetterQ,
+  IconHexagonLetterR,
+  IconHexagonLetterS,
+  IconHexagonLetterT,
+  IconHexagonLetterU,
+  IconHexagonLetterV,
+  IconHexagonLetterW,
+  IconHexagonLetterX,
+  IconHexagonLetterY,
+  IconHexagonLetterZ,
+  IconHexagonMinus2,
+  IconHexagonMinus,
+  IconHexagonNumber0,
+  IconHexagonNumber1,
+  IconHexagonNumber2,
+  IconHexagonNumber3,
+  IconHexagonNumber4,
+  IconHexagonNumber5,
+  IconHexagonNumber6,
+  IconHexagonNumber7,
+  IconHexagonNumber8,
+  IconHexagonNumber9,
+  IconHexagonOff,
+  IconHexagonPlus2,
+  IconHexagonPlus,
+  IconHexagon,
+  IconHexagonalPrismOff,
+  IconHexagonalPrismPlus,
+  IconHexagonalPrism,
+  IconHexagonalPyramidOff,
+  IconHexagonalPyramidPlus,
+  IconHexagonalPyramid,
+  IconHexagonsOff,
+  IconHexagons,
+  IconHierarchy2,
+  IconHierarchy3,
+  IconHierarchyOff,
+  IconHierarchy,
+  IconHighlightOff,
+  IconHighlight,
+  IconHistoryOff,
+  IconHistoryToggle,
+  IconHistory,
+  IconHome2,
+  IconHomeBitcoin,
+  IconHomeBolt,
+  IconHomeCancel,
+  IconHomeCheck,
+  IconHomeCog,
+  IconHomeDollar,
+  IconHomeDot,
+  IconHomeDown,
+  IconHomeEco,
+  IconHomeEdit,
+  IconHomeExclamation,
+  IconHomeHand,
+  IconHomeHeart,
+  IconHomeInfinity,
+  IconHomeLink,
+  IconHomeLock,
+  IconHomeMinus,
+  IconHomeMove,
+  IconHomeOff,
+  IconHomePlus,
+  IconHomeQuestion,
+  IconHomeRibbon,
+  IconHomeSearch,
+  IconHomeShare,
+  IconHomeShield,
+  IconHomeSignal,
+  IconHomeSpark,
+  IconHomeStar,
+  IconHomeStats,
+  IconHomeUp,
+  IconHomeX,
+  IconHome,
+  IconHorseToy,
+  IconHorse,
+  IconHorseshoe,
+  IconHospitalCircle,
+  IconHospital,
+  IconHotelService,
+  IconHourglassEmpty,
+  IconHourglassHigh,
+  IconHourglassLow,
+  IconHourglassOff,
+  IconHourglass,
+  IconHours12,
+  IconHours24,
+  IconHtml,
+  IconHttpConnectOff,
+  IconHttpConnect,
+  IconHttpDeleteOff,
+  IconHttpDelete,
+  IconHttpGetOff,
+  IconHttpGet,
+  IconHttpHeadOff,
+  IconHttpHead,
+  IconHttpOptionsOff,
+  IconHttpOptions,
+  IconHttpPatchOff,
+  IconHttpPatch,
+  IconHttpPostOff,
+  IconHttpPost,
+  IconHttpPutOff,
+  IconHttpPut,
+  IconHttpQueOff,
+  IconHttpQue,
+  IconHttpTraceOff,
+  IconHttpTrace,
+  IconHulaHoop,
+  IconIceCream2,
+  IconIceCreamOff,
+  IconIceCream,
+  IconIceSkating,
+  IconIceberg,
+  IconIconsOff,
+  IconIcons,
+  IconIcosahedron,
+  IconIdBadge2,
+  IconIdBadgeOff,
+  IconIdBadge,
+  IconIdOff,
+  IconId,
+  IconImageGeneration,
+  IconImageInPicture,
+  IconInboxOff,
+  IconInbox,
+  IconIndentDecrease,
+  IconIndentIncrease,
+  IconInfinity2,
+  IconInfinityOff,
+  IconInfinity,
+  IconInfoCircle,
+  IconInfoHexagon,
+  IconInfoOctagon,
+  IconInfoSmall,
+  IconInfoSquareRounded,
+  IconInfoSquare,
+  IconInfoTriangle,
+  IconInnerShadowBottomLeft,
+  IconInnerShadowBottomRight,
+  IconInnerShadowBottom,
+  IconInnerShadowLeft,
+  IconInnerShadowRight,
+  IconInnerShadowTopLeft,
+  IconInnerShadowTopRight,
+  IconInnerShadowTop,
+  IconInputAi,
+  IconInputCheck,
+  IconInputSearch,
+  IconInputSpark,
+  IconInputX,
+  IconInvoice,
+  IconIroning1,
+  IconIroning2,
+  IconIroning3,
+  IconIroningOff,
+  IconIroningSteamOff,
+  IconIroningSteam,
+  IconIroning,
+  IconIrregularPolyhedronOff,
+  IconIrregularPolyhedronPlus,
+  IconIrregularPolyhedron,
+  IconItalicOff,
+  IconItalic,
+  IconJacket,
+  IconJetpack,
+  IconJetski,
+  IconJewishStar,
+  IconJoinBevel,
+  IconJoinRound,
+  IconJoinStraight,
+  IconJoker,
+  IconJpg,
+  IconJson,
+  IconJumpRope,
+  IconKarate,
+  IconKayak,
+  IconKerning,
+  IconKeyOff,
+  IconKey,
+  IconKeyboardHide,
+  IconKeyboardOff,
+  IconKeyboardShow,
+  IconKeyboard,
+  IconKeyframeAlignCenter,
+  IconKeyframeAlignHorizontal,
+  IconKeyframeAlignVertical,
+  IconKeyframe,
+  IconKeyframes,
+  IconLabelImportant,
+  IconLabelOff,
+  IconLabel,
+  IconLadderOff,
+  IconLadder,
+  IconLadle,
+  IconLambda,
+  IconLamp2,
+  IconLampOff,
+  IconLamp,
+  IconLane,
+  IconLanguageHiragana,
+  IconLanguageKatakana,
+  IconLanguageOff,
+  IconLanguage,
+  IconLassoOff,
+  IconLassoPolygon,
+  IconLasso,
+  IconLaurelWreath1,
+  IconLaurelWreath2,
+  IconLaurelWreath3,
+  IconLaurelWreath,
+  IconLawnMower,
+  IconLayersDifference,
+  IconLayersIntersect2,
+  IconLayersIntersect,
+  IconLayersLinked,
+  IconLayersOff,
+  IconLayersSelectedBottom,
+  IconLayersSelected,
+  IconLayersSubtract,
+  IconLayersUnion,
+  IconLayout2,
+  IconLayoutAlignBottom,
+  IconLayoutAlignCenter,
+  IconLayoutAlignLeft,
+  IconLayoutAlignMiddle,
+  IconLayoutAlignRight,
+  IconLayoutAlignTop,
+  IconLayoutBoardSplit,
+  IconLayoutBoard,
+  IconLayoutBottombarCollapse,
+  IconLayoutBottombarExpand,
+  IconLayoutBottombarInactive,
+  IconLayoutBottombar,
+  IconLayoutCards,
+  IconLayoutCollage,
+  IconLayoutColumns,
+  IconLayoutDashboard,
+  IconLayoutDistributeHorizontal,
+  IconLayoutDistributeVertical,
+  IconLayoutGridAdd,
+  IconLayoutGridRemove,
+  IconLayoutGrid,
+  IconLayoutKanban,
+  IconLayoutList,
+  IconLayoutNavbarCollapse,
+  IconLayoutNavbarExpand,
+  IconLayoutNavbarInactive,
+  IconLayoutNavbar,
+  IconLayoutOff,
+  IconLayoutRows,
+  IconLayoutSidebarInactive,
+  IconLayoutSidebarLeftCollapse,
+  IconLayoutSidebarLeftExpand,
+  IconLayoutSidebarRightCollapse,
+  IconLayoutSidebarRightExpand,
+  IconLayoutSidebarRightInactive,
+  IconLayoutSidebarRight,
+  IconLayoutSidebar,
+  IconLayout,
+  IconLeaf2,
+  IconLeafMaple,
+  IconLeafOff,
+  IconLeaf,
+  IconLegoOff,
+  IconLego,
+  IconLemon2,
+  IconLemon,
+  IconLensConcave,
+  IconLensConvex,
+  IconLetterASmall,
+  IconLetterA,
+  IconLetterBSmall,
+  IconLetterB,
+  IconLetterCSmall,
+  IconLetterC,
+  IconLetterCaseLower,
+  IconLetterCaseToggle,
+  IconLetterCaseUpper,
+  IconLetterCase,
+  IconLetterDSmall,
+  IconLetterD,
+  IconLetterESmall,
+  IconLetterE,
+  IconLetterFSmall,
+  IconLetterF,
+  IconLetterGSmall,
+  IconLetterG,
+  IconLetterHSmall,
+  IconLetterH,
+  IconLetterISmall,
+  IconLetterI,
+  IconLetterJSmall,
+  IconLetterJ,
+  IconLetterKSmall,
+  IconLetterK,
+  IconLetterLSmall,
+  IconLetterL,
+  IconLetterMSmall,
+  IconLetterM,
+  IconLetterNSmall,
+  IconLetterN,
+  IconLetterOSmall,
+  IconLetterO,
+  IconLetterPSmall,
+  IconLetterP,
+  IconLetterQSmall,
+  IconLetterQ,
+  IconLetterRSmall,
+  IconLetterR,
+  IconLetterSSmall,
+  IconLetterS,
+  IconLetterSpacing,
+  IconLetterTSmall,
+  IconLetterT,
+  IconLetterUSmall,
+  IconLetterU,
+  IconLetterVSmall,
+  IconLetterV,
+  IconLetterWSmall,
+  IconLetterW,
+  IconLetterXSmall,
+  IconLetterX,
+  IconLetterYSmall,
+  IconLetterY,
+  IconLetterZSmall,
+  IconLetterZ,
+  IconLibraryMinus,
+  IconLibraryPhoto,
+  IconLibraryPlus,
+  IconLibrary,
+  IconLicenseOff,
+  IconLicense,
+  IconLifebuoyOff,
+  IconLifebuoy,
+  IconLighter,
+  IconLineDashed,
+  IconLineDotted,
+  IconLineHeight,
+  IconLineScan,
+  IconLine,
+  IconLinkMinus,
+  IconLinkOff,
+  IconLinkPlus,
+  IconLink,
+  IconListCheck,
+  IconListDetails,
+  IconListLetters,
+  IconListNumbers,
+  IconListSearch,
+  IconListTree,
+  IconList,
+  IconLivePhotoOff,
+  IconLivePhoto,
+  IconLiveView,
+  IconLoadBalancer,
+  IconLoader2,
+  IconLoader3,
+  IconLoader4,
+  IconLoaderQuarter,
+  IconLoader,
+  IconLocationBolt,
+  IconLocationBroken,
+  IconLocationCancel,
+  IconLocationCheck,
+  IconLocationCode,
+  IconLocationCog,
+  IconLocationDiscount,
+  IconLocationDollar,
+  IconLocationDown,
+  IconLocationExclamation,
+  IconLocationHeart,
+  IconLocationMinus,
+  IconLocationOff,
+  IconLocationPause,
+  IconLocationPin,
+  IconLocationPlus,
+  IconLocationQuestion,
+  IconLocationSearch,
+  IconLocationShare,
+  IconLocationStar,
+  IconLocationUp,
+  IconLocationX,
+  IconLocation,
+  IconLockAccessOff,
+  IconLockAccess,
+  IconLockBitcoin,
+  IconLockBolt,
+  IconLockCancel,
+  IconLockCheck,
+  IconLockCode,
+  IconLockCog,
+  IconLockDollar,
+  IconLockDown,
+  IconLockExclamation,
+  IconLockHeart,
+  IconLockMinus,
+  IconLockOff,
+  IconLockOpen2,
+  IconLockOpenOff,
+  IconLockOpen,
+  IconLockPassword,
+  IconLockPause,
+  IconLockPin,
+  IconLockPlus,
+  IconLockQuestion,
+  IconLockSearch,
+  IconLockShare,
+  IconLockSquareRounded,
+  IconLockSquare,
+  IconLockStar,
+  IconLockUp,
+  IconLockX,
+  IconLock,
+  IconLogicAnd,
+  IconLogicBuffer,
+  IconLogicNand,
+  IconLogicNor,
+  IconLogicNot,
+  IconLogicOr,
+  IconLogicXnor,
+  IconLogicXor,
+  IconLogin2,
+  IconLogin,
+  IconLogout2,
+  IconLogout,
+  IconLogs,
+  IconLollipopOff,
+  IconLollipop,
+  IconLuggageOff,
+  IconLuggage,
+  IconLungsOff,
+  IconLungs,
+  IconMacroOff,
+  IconMacro,
+  IconMagnetOff,
+  IconMagnet,
+  IconMagnetic,
+  IconMailAi,
+  IconMailBitcoin,
+  IconMailBolt,
+  IconMailCancel,
+  IconMailCheck,
+  IconMailCode,
+  IconMailCog,
+  IconMailDollar,
+  IconMailDown,
+  IconMailExclamation,
+  IconMailFast,
+  IconMailForward,
+  IconMailHeart,
+  IconMailMinus,
+  IconMailOff,
+  IconMailOpened,
+  IconMailPause,
+  IconMailPin,
+  IconMailPlus,
+  IconMailQuestion,
+  IconMailSearch,
+  IconMailShare,
+  IconMailSpark,
+  IconMailStar,
+  IconMailUp,
+  IconMailX,
+  IconMail,
+  IconMailboxOff,
+  IconMailbox,
+  IconMan,
+  IconManualGearbox,
+  IconMap2,
+  IconMapBolt,
+  IconMapCancel,
+  IconMapCheck,
+  IconMapCode,
+  IconMapCog,
+  IconMapDiscount,
+  IconMapDollar,
+  IconMapDown,
+  IconMapEast,
+  IconMapExclamation,
+  IconMapHeart,
+  IconMapLock,
+  IconMapMinus,
+  IconMapNorth,
+  IconMapOff,
+  IconMapPause,
+  IconMapPin2,
+  IconMapPinBolt,
+  IconMapPinCancel,
+  IconMapPinCheck,
+  IconMapPinCode,
+  IconMapPinCog,
+  IconMapPinDollar,
+  IconMapPinDown,
+  IconMapPinExclamation,
+  IconMapPinHeart,
+  IconMapPinMinus,
+  IconMapPinOff,
+  IconMapPinPause,
+  IconMapPinPin,
+  IconMapPinPlus,
+  IconMapPinQuestion,
+  IconMapPinSearch,
+  IconMapPinShare,
+  IconMapPinStar,
+  IconMapPinUp,
+  IconMapPinX,
+  IconMapPin,
+  IconMapPinned,
+  IconMapPins,
+  IconMapPlus,
+  IconMapQuestion,
+  IconMapRoute,
+  IconMapSearch,
+  IconMapShare,
+  IconMapShield,
+  IconMapSouth,
+  IconMapStar,
+  IconMapUp,
+  IconMapWest,
+  IconMapX,
+  IconMap,
+  IconMarkdownOff,
+  IconMarkdown,
+  IconMarquee2,
+  IconMarqueeOff,
+  IconMarquee,
+  IconMars,
+  IconMaskOff,
+  IconMask,
+  IconMasksTheaterOff,
+  IconMasksTheater,
+  IconMassage,
+  IconMatchstick,
+  IconMath1Divide2,
+  IconMath1Divide3,
+  IconMathAvg,
+  IconMathCos,
+  IconMathCtg,
+  IconMathEqualGreater,
+  IconMathEqualLower,
+  IconMathFunctionOff,
+  IconMathFunctionY,
+  IconMathFunction,
+  IconMathGreater,
+  IconMathIntegralX,
+  IconMathIntegral,
+  IconMathIntegrals,
+  IconMathLower,
+  IconMathMaxMin,
+  IconMathMax,
+  IconMathMin,
+  IconMathNot,
+  IconMathOff,
+  IconMathPiDivide2,
+  IconMathPi,
+  IconMathSec,
+  IconMathSin,
+  IconMathSymbols,
+  IconMathTg,
+  IconMathXDivide2,
+  IconMathXDivideY2,
+  IconMathXDivideY,
+  IconMathXFloorDivideY,
+  IconMathXMinusX,
+  IconMathXMinusY,
+  IconMathXPlusX,
+  IconMathXPlusY,
+  IconMathXy,
+  IconMathYMinusY,
+  IconMathYPlusY,
+  IconMath,
+  IconMatrix,
+  IconMaximizeOff,
+  IconMaximize,
+  IconMeatOff,
+  IconMeat,
+  IconMedal2,
+  IconMedal,
+  IconMedicalCrossCircle,
+  IconMedicalCrossOff,
+  IconMedicalCross,
+  IconMedicineSyrup,
+  IconMeeple,
+  IconMelon,
+  IconMemory,
+  IconMenorah,
+  IconMenu2,
+  IconMenu3,
+  IconMenu4,
+  IconMenuDeep,
+  IconMenuOrder,
+  IconMenu,
+  IconMesh,
+  IconMessage2Ai,
+  IconMessage2Bolt,
+  IconMessage2Cancel,
+  IconMessage2Check,
+  IconMessage2Code,
+  IconMessage2Cog,
+  IconMessage2Dollar,
+  IconMessage2Down,
+  IconMessage2Exclamation,
+  IconMessage2Heart,
+  IconMessage2Minus,
+  IconMessage2Off,
+  IconMessage2Pause,
+  IconMessage2Pin,
+  IconMessage2Plus,
+  IconMessage2Question,
+  IconMessage2Search,
+  IconMessage2Share,
+  IconMessage2Sparkle,
+  IconMessage2Star,
+  IconMessage2Up,
+  IconMessage2X,
+  IconMessage2,
+  IconMessageAi,
+  IconMessageBolt,
+  IconMessageCancel,
+  IconMessageChatbot,
+  IconMessageCheck,
+  IconMessageCircleBolt,
+  IconMessageCircleCancel,
+  IconMessageCircleCheck,
+  IconMessageCircleCode,
+  IconMessageCircleCog,
+  IconMessageCircleDollar,
+  IconMessageCircleDown,
+  IconMessageCircleExclamation,
+  IconMessageCircleHeart,
+  IconMessageCircleMinus,
+  IconMessageCircleOff,
+  IconMessageCirclePause,
+  IconMessageCirclePin,
+  IconMessageCirclePlus,
+  IconMessageCircleQuestion,
+  IconMessageCircleSearch,
+  IconMessageCircleShare,
+  IconMessageCircleStar,
+  IconMessageCircleUp,
+  IconMessageCircleUser,
+  IconMessageCircleX,
+  IconMessageCircle,
+  IconMessageCode,
+  IconMessageCog,
+  IconMessageDollar,
+  IconMessageDots,
+  IconMessageDown,
+  IconMessageExclamation,
+  IconMessageForward,
+  IconMessageHeart,
+  IconMessageLanguage,
+  IconMessageMinus,
+  IconMessageOff,
+  IconMessagePause,
+  IconMessagePin,
+  IconMessagePlus,
+  IconMessageQuestion,
+  IconMessageReply,
+  IconMessageReport,
+  IconMessageSearch,
+  IconMessageShare,
+  IconMessageSparkle,
+  IconMessageStar,
+  IconMessageUp,
+  IconMessageUser,
+  IconMessageX,
+  IconMessage,
+  IconMessagesOff,
+  IconMessages,
+  IconMeteorOff,
+  IconMeteor,
+  IconMeterCube,
+  IconMeterSquare,
+  IconMetronome,
+  IconMichelinBibGourmand,
+  IconMichelinStarGreen,
+  IconMichelinStar,
+  IconMickey,
+  IconMicrofrontends,
+  IconMicrophone2Off,
+  IconMicrophone2,
+  IconMicrophoneOff,
+  IconMicrophone,
+  IconMicroscopeOff,
+  IconMicroscope,
+  IconMicrowaveOff,
+  IconMicrowave,
+  IconMiddleware,
+  IconMilitaryAward,
+  IconMilitaryRank,
+  IconMilkOff,
+  IconMilk,
+  IconMilkshake,
+  IconMinimize,
+  IconMinusVertical,
+  IconMinus,
+  IconMistOff,
+  IconMist,
+  IconMobiledataOff,
+  IconMobiledata,
+  IconModelAi,
+  IconMoneybagEdit,
+  IconMoneybagHeart,
+  IconMoneybagMinus,
+  IconMoneybagMoveBack,
+  IconMoneybagMove,
+  IconMoneybagPlus,
+  IconMoneybag,
+  IconMonkeybar,
+  IconMoodAngry,
+  IconMoodAnnoyed2,
+  IconMoodAnnoyed,
+  IconMoodBitcoin,
+  IconMoodBoy,
+  IconMoodCheck,
+  IconMoodCog,
+  IconMoodConfused,
+  IconMoodCrazyHappy,
+  IconMoodCry,
+  IconMoodDollar,
+  IconMoodEdit,
+  IconMoodEmpty,
+  IconMoodHappy,
+  IconMoodHeart,
+  IconMoodKid,
+  IconMoodLookDown,
+  IconMoodLookLeft,
+  IconMoodLookRight,
+  IconMoodLookUp,
+  IconMoodMinus,
+  IconMoodNerd,
+  IconMoodNervous,
+  IconMoodNeutral,
+  IconMoodOff,
+  IconMoodPin,
+  IconMoodPlus,
+  IconMoodPuzzled,
+  IconMoodSad2,
+  IconMoodSadDizzy,
+  IconMoodSadSquint,
+  IconMoodSad,
+  IconMoodSearch,
+  IconMoodShare,
+  IconMoodSick,
+  IconMoodSilence,
+  IconMoodSing,
+  IconMoodSmileBeam,
+  IconMoodSmileDizzy,
+  IconMoodSmile,
+  IconMoodSpark,
+  IconMoodSurprised,
+  IconMoodTongueWink2,
+  IconMoodTongueWink,
+  IconMoodTongue,
+  IconMoodUnamused,
+  IconMoodUp,
+  IconMoodWink2,
+  IconMoodWink,
+  IconMoodWrrr,
+  IconMoodX,
+  IconMoodXd,
+  IconMoon2,
+  IconMoonOff,
+  IconMoonStars,
+  IconMoon,
+  IconMoped,
+  IconMosque,
+  IconMotorbike,
+  IconMountainOff,
+  IconMountain,
+  IconMouse2,
+  IconMouseOff,
+  IconMouse,
+  IconMoustache,
+  IconMovieOff,
+  IconMovie,
+  IconMugOff,
+  IconMug,
+  IconMultiplier05x,
+  IconMultiplier15x,
+  IconMultiplier1x,
+  IconMultiplier2x,
+  IconMushroomOff,
+  IconMushroom,
+  IconMusicBolt,
+  IconMusicCancel,
+  IconMusicCheck,
+  IconMusicCode,
+  IconMusicCog,
+  IconMusicDiscount,
+  IconMusicDollar,
+  IconMusicDown,
+  IconMusicExclamation,
+  IconMusicHeart,
+  IconMusicMinus,
+  IconMusicOff,
+  IconMusicPause,
+  IconMusicPin,
+  IconMusicPlus,
+  IconMusicQuestion,
+  IconMusicSearch,
+  IconMusicShare,
+  IconMusicStar,
+  IconMusicUp,
+  IconMusicX,
+  IconMusic,
+  IconNavigationBolt,
+  IconNavigationCancel,
+  IconNavigationCheck,
+  IconNavigationCode,
+  IconNavigationCog,
+  IconNavigationDiscount,
+  IconNavigationDollar,
+  IconNavigationDown,
+  IconNavigationEast,
+  IconNavigationExclamation,
+  IconNavigationHeart,
+  IconNavigationMinus,
+  IconNavigationNorth,
+  IconNavigationOff,
+  IconNavigationPause,
+  IconNavigationPin,
+  IconNavigationPlus,
+  IconNavigationQuestion,
+  IconNavigationSearch,
+  IconNavigationShare,
+  IconNavigationSouth,
+  IconNavigationStar,
+  IconNavigationTop,
+  IconNavigationUp,
+  IconNavigationWest,
+  IconNavigationX,
+  IconNavigation,
+  IconNeedleThread,
+  IconNeedle,
+  IconNetworkOff,
+  IconNetwork,
+  IconNewSection,
+  IconNewsOff,
+  IconNews,
+  IconNfcOff,
+  IconNfc,
+  IconNoCopyright,
+  IconNoCreativeCommons,
+  IconNoDerivatives,
+  IconNoiseReduction,
+  IconNorthStar,
+  IconNotdef,
+  IconNoteOff,
+  IconNote,
+  IconNotebookOff,
+  IconNotebook,
+  IconNotesOff,
+  IconNotes,
+  IconNotificationOff,
+  IconNotification,
+  IconNumber0Small,
+  IconNumber0,
+  IconNumber1Small,
+  IconNumber1,
+  IconNumber10Small,
+  IconNumber10,
+  IconNumber100Small,
+  IconNumber11Small,
+  IconNumber11,
+  IconNumber12Small,
+  IconNumber123,
+  IconNumber13Small,
+  IconNumber14Small,
+  IconNumber15Small,
+  IconNumber16Small,
+  IconNumber17Small,
+  IconNumber18Small,
+  IconNumber19Small,
+  IconNumber2Small,
+  IconNumber2,
+  IconNumber20Small,
+  IconNumber21Small,
+  IconNumber22Small,
+  IconNumber23Small,
+  IconNumber24Small,
+  IconNumber25Small,
+  IconNumber26Small,
+  IconNumber27Small,
+  IconNumber28Small,
+  IconNumber29Small,
+  IconNumber3Small,
+  IconNumber3,
+  IconNumber30Small,
+  IconNumber31Small,
+  IconNumber32Small,
+  IconNumber33Small,
+  IconNumber34Small,
+  IconNumber35Small,
+  IconNumber36Small,
+  IconNumber37Small,
+  IconNumber38Small,
+  IconNumber39Small,
+  IconNumber4Small,
+  IconNumber4,
+  IconNumber40Small,
+  IconNumber41Small,
+  IconNumber42Small,
+  IconNumber43Small,
+  IconNumber44Small,
+  IconNumber45Small,
+  IconNumber46Small,
+  IconNumber47Small,
+  IconNumber48Small,
+  IconNumber49Small,
+  IconNumber5Small,
+  IconNumber5,
+  IconNumber50Small,
+  IconNumber51Small,
+  IconNumber52Small,
+  IconNumber53Small,
+  IconNumber54Small,
+  IconNumber55Small,
+  IconNumber56Small,
+  IconNumber57Small,
+  IconNumber58Small,
+  IconNumber59Small,
+  IconNumber6Small,
+  IconNumber6,
+  IconNumber60Small,
+  IconNumber61Small,
+  IconNumber62Small,
+  IconNumber63Small,
+  IconNumber64Small,
+  IconNumber65Small,
+  IconNumber66Small,
+  IconNumber67Small,
+  IconNumber68Small,
+  IconNumber69Small,
+  IconNumber7Small,
+  IconNumber7,
+  IconNumber70Small,
+  IconNumber71Small,
+  IconNumber72Small,
+  IconNumber73Small,
+  IconNumber74Small,
+  IconNumber75Small,
+  IconNumber76Small,
+  IconNumber77Small,
+  IconNumber78Small,
+  IconNumber79Small,
+  IconNumber8Small,
+  IconNumber8,
+  IconNumber80Small,
+  IconNumber81Small,
+  IconNumber82Small,
+  IconNumber83Small,
+  IconNumber84Small,
+  IconNumber85Small,
+  IconNumber86Small,
+  IconNumber87Small,
+  IconNumber88Small,
+  IconNumber89Small,
+  IconNumber9Small,
+  IconNumber9,
+  IconNumber90Small,
+  IconNumber91Small,
+  IconNumber92Small,
+  IconNumber93Small,
+  IconNumber94Small,
+  IconNumber95Small,
+  IconNumber96Small,
+  IconNumber97Small,
+  IconNumber98Small,
+  IconNumber99Small,
+  IconNumber,
+  IconNumbers,
+  IconNurse,
+  IconNut,
+  IconObjectScan,
+  IconOctagonMinus2,
+  IconOctagonMinus,
+  IconOctagonOff,
+  IconOctagonPlus2,
+  IconOctagonPlus,
+  IconOctagon,
+  IconOctahedronOff,
+  IconOctahedronPlus,
+  IconOctahedron,
+  IconOld,
+  IconOlympicTorch,
+  IconOlympicsOff,
+  IconOlympics,
+  IconOm,
+  IconOmega,
+  IconOption,
+  IconOrbitVertical,
+  IconOrbit,
+  IconOrbits,
+  IconOutbound,
+  IconOutlet,
+  IconOvalVertical,
+  IconOval,
+  IconOverline,
+  IconPackageExport,
+  IconPackageImport,
+  IconPackageOff,
+  IconPackage,
+  IconPackages,
+  IconPacman,
+  IconPageBreak,
+  IconPaintOff,
+  IconPaint,
+  IconPaletteOff,
+  IconPalette,
+  IconPanoramaHorizontalOff,
+  IconPanoramaHorizontal,
+  IconPanoramaVerticalOff,
+  IconPanoramaVertical,
+  IconPaperBagOff,
+  IconPaperBag,
+  IconPaperclip,
+  IconParachuteOff,
+  IconParachute,
+  IconParenthesesOff,
+  IconParentheses,
+  IconParkingCircle,
+  IconParkingMeter,
+  IconParkingOff,
+  IconParking,
+  IconPasswordFingerprint,
+  IconPasswordMobilePhone,
+  IconPasswordUser,
+  IconPassword,
+  IconPawOff,
+  IconPaw,
+  IconPaywall,
+  IconPdf,
+  IconPeace,
+  IconPencilAi,
+  IconPencilBolt,
+  IconPencilCancel,
+  IconPencilCheck,
+  IconPencilCode,
+  IconPencilCog,
+  IconPencilDiscount,
+  IconPencilDollar,
+  IconPencilDown,
+  IconPencilExclamation,
+  IconPencilHeart,
+  IconPencilMinus,
+  IconPencilOff,
+  IconPencilPause,
+  IconPencilPin,
+  IconPencilPlus,
+  IconPencilQuestion,
+  IconPencilSearch,
+  IconPencilShare,
+  IconPencilStar,
+  IconPencilUp,
+  IconPencilX,
+  IconPencil,
+  IconPendulum,
+  IconPennant2,
+  IconPennantOff,
+  IconPennant,
+  IconPentagonMinus,
+  IconPentagonNumber0,
+  IconPentagonNumber1,
+  IconPentagonNumber2,
+  IconPentagonNumber3,
+  IconPentagonNumber4,
+  IconPentagonNumber5,
+  IconPentagonNumber6,
+  IconPentagonNumber7,
+  IconPentagonNumber8,
+  IconPentagonNumber9,
+  IconPentagonOff,
+  IconPentagonPlus,
+  IconPentagonX,
+  IconPentagon,
+  IconPentagram,
+  IconPepperOff,
+  IconPepper,
+  IconPercentage0,
+  IconPercentage10,
+  IconPercentage100,
+  IconPercentage20,
+  IconPercentage25,
+  IconPercentage30,
+  IconPercentage33,
+  IconPercentage40,
+  IconPercentage50,
+  IconPercentage60,
+  IconPercentage66,
+  IconPercentage70,
+  IconPercentage75,
+  IconPercentage80,
+  IconPercentage90,
+  IconPercentage,
+  IconPerfume,
+  IconPerspectiveOff,
+  IconPerspective,
+  IconPhoneCall,
+  IconPhoneCalling,
+  IconPhoneCheck,
+  IconPhoneDone,
+  IconPhoneEnd,
+  IconPhoneIncoming,
+  IconPhoneOff,
+  IconPhoneOutgoing,
+  IconPhonePause,
+  IconPhonePlus,
+  IconPhoneRinging,
+  IconPhoneSpark,
+  IconPhoneX,
+  IconPhone,
+  IconPhotoAi,
+  IconPhotoAlt,
+  IconPhotoBitcoin,
+  IconPhotoBolt,
+  IconPhotoCancel,
+  IconPhotoCheck,
+  IconPhotoCircleMinus,
+  IconPhotoCirclePlus,
+  IconPhotoCircle,
+  IconPhotoCode,
+  IconPhotoCog,
+  IconPhotoDollar,
+  IconPhotoDown,
+  IconPhotoEdit,
+  IconPhotoExclamation,
+  IconPhotoHeart,
+  IconPhotoHexagon,
+  IconPhotoMinus,
+  IconPhotoOff,
+  IconPhotoPause,
+  IconPhotoPentagon,
+  IconPhotoPin,
+  IconPhotoPlus,
+  IconPhotoQuestion,
+  IconPhotoScan,
+  IconPhotoSearch,
+  IconPhotoSensor2,
+  IconPhotoSensor3,
+  IconPhotoSensor,
+  IconPhotoShare,
+  IconPhotoShield,
+  IconPhotoSpark,
+  IconPhotoSquareRounded,
+  IconPhotoStar,
+  IconPhotoUp,
+  IconPhotoVideo,
+  IconPhotoX,
+  IconPhoto,
+  IconPhysiotherapist,
+  IconPiano,
+  IconPick,
+  IconPicnicTable,
+  IconPictureInPictureOff,
+  IconPictureInPictureOn,
+  IconPictureInPictureTop,
+  IconPictureInPicture,
+  IconPigMoney,
+  IconPigOff,
+  IconPig,
+  IconPilcrowLeft,
+  IconPilcrowRight,
+  IconPilcrow,
+  IconPillOff,
+  IconPill,
+  IconPillow,
+  IconPills,
+  IconPinEnd,
+  IconPinInvoke,
+  IconPin,
+  IconPingPong,
+  IconPinnedOff,
+  IconPinned,
+  IconPipeline,
+  IconPizzaOff,
+  IconPizza,
+  IconPlaceholder,
+  IconPlaneArrival,
+  IconPlaneDeparture,
+  IconPlaneInflight,
+  IconPlaneOff,
+  IconPlaneTilt,
+  IconPlane,
+  IconPlanetOff,
+  IconPlanet,
+  IconPlant2Off,
+  IconPlant2,
+  IconPlantOff,
+  IconPlant,
+  IconPlayBasketball,
+  IconPlayBug,
+  IconPlayBugs,
+  IconPlayCard1,
+  IconPlayCard10,
+  IconPlayCard2,
+  IconPlayCard3,
+  IconPlayCard4,
+  IconPlayCard5,
+  IconPlayCard6,
+  IconPlayCard7,
+  IconPlayCard8,
+  IconPlayCard9,
+  IconPlayCardA,
+  IconPlayCardJ,
+  IconPlayCardK,
+  IconPlayCardOff,
+  IconPlayCardQ,
+  IconPlayCardStar,
+  IconPlayCard,
+  IconPlayFootball,
+  IconPlayHandball,
+  IconPlayVolleyball,
+  IconPlayerEject,
+  IconPlayerPause,
+  IconPlayerPlay,
+  IconPlayerRecord,
+  IconPlayerSkipBack,
+  IconPlayerSkipForward,
+  IconPlayerStop,
+  IconPlayerTrackNext,
+  IconPlayerTrackPrev,
+  IconPlaylistAdd,
+  IconPlaylistOff,
+  IconPlaylistX,
+  IconPlaylist,
+  IconPlaystationCircle,
+  IconPlaystationSquare,
+  IconPlaystationTriangle,
+  IconPlaystationX,
+  IconPlugConnectedX,
+  IconPlugConnected,
+  IconPlugOff,
+  IconPlugX,
+  IconPlug,
+  IconPlunger,
+  IconPlusEqual,
+  IconPlusMinus,
+  IconPlus,
+  IconPng,
+  IconPodiumOff,
+  IconPodium,
+  IconPointOff,
+  IconPoint,
+  IconPointer2,
+  IconPointerBolt,
+  IconPointerCancel,
+  IconPointerCheck,
+  IconPointerCode,
+  IconPointerCog,
+  IconPointerCollaboration2,
+  IconPointerCollaboration,
+  IconPointerDollar,
+  IconPointerDown,
+  IconPointerExclamation,
+  IconPointerHeart,
+  IconPointerMinus,
+  IconPointerOff,
+  IconPointerPause,
+  IconPointerPin,
+  IconPointerPlus,
+  IconPointerQuestion,
+  IconPointerSearch,
+  IconPointerShare,
+  IconPointerStar,
+  IconPointerUp,
+  IconPointerX,
+  IconPointer,
+  IconPokeballOff,
+  IconPokeball,
+  IconPokerChip,
+  IconPolaroid,
+  IconPolygonOff,
+  IconPolygon,
+  IconPoo,
+  IconPoolOff,
+  IconPool,
+  IconPower,
+  IconPray,
+  IconPremiumRights,
+  IconPrescription,
+  IconPresentationAnalytics,
+  IconPresentationOff,
+  IconPresentation,
+  IconPrinterOff,
+  IconPrinter,
+  IconPrismLight,
+  IconPrismOff,
+  IconPrismPlus,
+  IconPrism,
+  IconPrison,
+  IconProgressAlert,
+  IconProgressBolt,
+  IconProgressCheck,
+  IconProgressDown,
+  IconProgressHelp,
+  IconProgressX,
+  IconProgress,
+  IconPrompt,
+  IconProng,
+  IconPropellerOff,
+  IconPropeller,
+  IconProtocol,
+  IconPumpkinScary,
+  IconPuzzle2,
+  IconPuzzleOff,
+  IconPuzzle,
+  IconPyramidOff,
+  IconPyramidPlus,
+  IconPyramid,
+  IconQrcodeOff,
+  IconQrcode,
+  IconQuestionMark,
+  IconQueuePopIn,
+  IconQueuePopOut,
+  IconQuoteOff,
+  IconQuoteOpen,
+  IconQuote,
+  IconQuotes,
+  IconRadar2,
+  IconRadarOff,
+  IconRadar,
+  IconRadioOff,
+  IconRadio,
+  IconRadioactiveOff,
+  IconRadioactive,
+  IconRadiusBottomLeft,
+  IconRadiusBottomRight,
+  IconRadiusTopLeft,
+  IconRadiusTopRight,
+  IconRainbowOff,
+  IconRainbow,
+  IconRating12Plus,
+  IconRating14Plus,
+  IconRating16Plus,
+  IconRating18Plus,
+  IconRating21Plus,
+  IconRazorElectric,
+  IconRazor,
+  IconReceipt2,
+  IconReceiptBitcoin,
+  IconReceiptDollar,
+  IconReceiptEuro,
+  IconReceiptOff,
+  IconReceiptPound,
+  IconReceiptRefund,
+  IconReceiptRupee,
+  IconReceiptTax,
+  IconReceiptYen,
+  IconReceiptYuan,
+  IconReceipt,
+  IconRecharging,
+  IconRecordMailOff,
+  IconRecordMail,
+  IconRectangleRoundedBottom,
+  IconRectangleRoundedTop,
+  IconRectangleVertical,
+  IconRectangle,
+  IconRectangularPrismOff,
+  IconRectangularPrismPlus,
+  IconRectangularPrism,
+  IconRecycleOff,
+  IconRecycle,
+  IconReduceMotion,
+  IconReferenceImage,
+  IconRefreshAlert,
+  IconRefreshDot,
+  IconRefreshOff,
+  IconRefresh,
+  IconRegexOff,
+  IconRegex,
+  IconRegistered,
+  IconRelationManyToMany,
+  IconRelationOneToMany,
+  IconRelationOneToOne,
+  IconReload,
+  IconRemoteControl,
+  IconReorder,
+  IconRepeatOff,
+  IconRepeatOnce,
+  IconRepeat,
+  IconReplaceOff,
+  IconReplaceUser,
+  IconReplace,
+  IconReportAnalytics,
+  IconReportMedical,
+  IconReportMoney,
+  IconReportOff,
+  IconReportSearch,
+  IconReport,
+  IconReservedLine,
+  IconResize,
+  IconRestore,
+  IconRewindBackward10,
+  IconRewindBackward15,
+  IconRewindBackward20,
+  IconRewindBackward30,
+  IconRewindBackward40,
+  IconRewindBackward5,
+  IconRewindBackward50,
+  IconRewindBackward60,
+  IconRewindForward10,
+  IconRewindForward15,
+  IconRewindForward20,
+  IconRewindForward30,
+  IconRewindForward40,
+  IconRewindForward5,
+  IconRewindForward50,
+  IconRewindForward60,
+  IconRibbonHealth,
+  IconRings,
+  IconRippleDown,
+  IconRippleOff,
+  IconRippleUp,
+  IconRipple,
+  IconRoadOff,
+  IconRoadSign,
+  IconRoad,
+  IconRobotFace,
+  IconRobotOff,
+  IconRobot,
+  IconRocketOff,
+  IconRocket,
+  IconRockingChair,
+  IconRollerSkating,
+  IconRollercoasterOff,
+  IconRollercoaster,
+  IconRosetteAsterisk,
+  IconRosetteDiscountCheckOff,
+  IconRosetteDiscountCheck,
+  IconRosetteDiscountOff,
+  IconRosetteDiscount,
+  IconRosetteNumber0,
+  IconRosetteNumber1,
+  IconRosetteNumber2,
+  IconRosetteNumber3,
+  IconRosetteNumber4,
+  IconRosetteNumber5,
+  IconRosetteNumber6,
+  IconRosetteNumber7,
+  IconRosetteNumber8,
+  IconRosetteNumber9,
+  IconRosette,
+  IconRotate2,
+  IconRotate360,
+  IconRotate3d,
+  IconRotateClockwise2,
+  IconRotateClockwise,
+  IconRotateDot,
+  IconRotateRectangle,
+  IconRotate,
+  IconRoulette,
+  IconRoute2,
+  IconRouteAltLeft,
+  IconRouteAltRight,
+  IconRouteOff,
+  IconRouteScan,
+  IconRouteSquare2,
+  IconRouteSquare,
+  IconRouteX2,
+  IconRouteX,
+  IconRoute,
+  IconRouterOff,
+  IconRouter,
+  IconRowInsertBottom,
+  IconRowInsertTop,
+  IconRowRemove,
+  IconRss,
+  IconRubberStampOff,
+  IconRubberStamp,
+  IconRugby,
+  IconRuler2Off,
+  IconRuler2,
+  IconRuler3,
+  IconRulerMeasure2,
+  IconRulerMeasure,
+  IconRulerOff,
+  IconRuler,
+  IconRunSprint,
+  IconRun,
+  IconRvTruck,
+  IconSTurnDown,
+  IconSTurnLeft,
+  IconSTurnRight,
+  IconSTurnUp,
+  IconSailboat2,
+  IconSailboatOff,
+  IconSailboat,
+  IconSalad,
+  IconSalt,
+  IconSandbox,
+  IconSatelliteOff,
+  IconSatellite,
+  IconSausage,
+  IconScaleOff,
+  IconScaleOutlineOff,
+  IconScaleOutline,
+  IconScale,
+  IconScanCube,
+  IconScanEye,
+  IconScanLetterA,
+  IconScanLetterT,
+  IconScanPosition,
+  IconScanTraces,
+  IconScan,
+  IconSchemaOff,
+  IconSchema,
+  IconSchoolBell,
+  IconSchoolOff,
+  IconSchool,
+  IconScissorsOff,
+  IconScissors,
+  IconScooterElectric,
+  IconScooter,
+  IconScoreboard,
+  IconScreenShareOff,
+  IconScreenShare,
+  IconScreenshot,
+  IconScribbleOff,
+  IconScribble,
+  IconScriptMinus,
+  IconScriptPlus,
+  IconScriptX,
+  IconScript,
+  IconScubaDivingTank,
+  IconScubaDiving,
+  IconScubaMaskOff,
+  IconScubaMask,
+  IconSdk,
+  IconSearchOff,
+  IconSearch,
+  IconSecretPhrases,
+  IconSectionSign,
+  IconSection,
+  IconSeedlingOff,
+  IconSeedling,
+  IconSegway,
+  IconSelectAll,
+  IconSelect,
+  IconSelector,
+  IconSend2,
+  IconSendOff,
+  IconSend,
+  IconSeo,
+  IconSeparatorHorizontal,
+  IconSeparatorVertical,
+  IconSeparator,
+  IconServer2,
+  IconServerBolt,
+  IconServerCog,
+  IconServerOff,
+  IconServerSpark,
+  IconServer,
+  IconServerless,
+  IconServicemark,
+  IconSettings2,
+  IconSettingsAi,
+  IconSettingsAutomation,
+  IconSettingsBolt,
+  IconSettingsCancel,
+  IconSettingsCheck,
+  IconSettingsCode,
+  IconSettingsCog,
+  IconSettingsDollar,
+  IconSettingsDown,
+  IconSettingsExclamation,
+  IconSettingsHeart,
+  IconSettingsMinus,
+  IconSettingsOff,
+  IconSettingsPause,
+  IconSettingsPin,
+  IconSettingsPlus,
+  IconSettingsQuestion,
+  IconSettingsSearch,
+  IconSettingsShare,
+  IconSettingsSpark,
+  IconSettingsStar,
+  IconSettingsUp,
+  IconSettingsX,
+  IconSettings,
+  IconShadowOff,
+  IconShadow,
+  IconShape2,
+  IconShape3,
+  IconShapeOff,
+  IconShape,
+  IconShare2,
+  IconShare3,
+  IconShareOff,
+  IconShare,
+  IconShareplay,
+  IconShieldBolt,
+  IconShieldCancel,
+  IconShieldCheck,
+  IconShieldCheckered,
+  IconShieldChevron,
+  IconShieldCode,
+  IconShieldCog,
+  IconShieldDollar,
+  IconShieldDown,
+  IconShieldExclamation,
+  IconShieldHalf,
+  IconShieldHeart,
+  IconShieldLock,
+  IconShieldMinus,
+  IconShieldOff,
+  IconShieldPause,
+  IconShieldPin,
+  IconShieldPlus,
+  IconShieldQuestion,
+  IconShieldSearch,
+  IconShieldShare,
+  IconShieldStar,
+  IconShieldUp,
+  IconShieldX,
+  IconShield,
+  IconShipOff,
+  IconShip,
+  IconShirtOff,
+  IconShirtSport,
+  IconShirt,
+  IconShoeOff,
+  IconShoe,
+  IconShoppingBagCheck,
+  IconShoppingBagDiscount,
+  IconShoppingBagEdit,
+  IconShoppingBagExclamation,
+  IconShoppingBagHeart,
+  IconShoppingBagMinus,
+  IconShoppingBagPlus,
+  IconShoppingBagSearch,
+  IconShoppingBagX,
+  IconShoppingBag,
+  IconShoppingCartBolt,
+  IconShoppingCartCancel,
+  IconShoppingCartCheck,
+  IconShoppingCartCode,
+  IconShoppingCartCog,
+  IconShoppingCartCopy,
+  IconShoppingCartDiscount,
+  IconShoppingCartDollar,
+  IconShoppingCartDown,
+  IconShoppingCartExclamation,
+  IconShoppingCartHeart,
+  IconShoppingCartMinus,
+  IconShoppingCartOff,
+  IconShoppingCartPause,
+  IconShoppingCartPin,
+  IconShoppingCartPlus,
+  IconShoppingCartQuestion,
+  IconShoppingCartSearch,
+  IconShoppingCartShare,
+  IconShoppingCartStar,
+  IconShoppingCartUp,
+  IconShoppingCartX,
+  IconShoppingCart,
+  IconShovelPitchforks,
+  IconShovel,
+  IconShredder,
+  IconSignLeft,
+  IconSignRight,
+  IconSignal2g,
+  IconSignal3g,
+  IconSignal4gPlus,
+  IconSignal4g,
+  IconSignal5g,
+  IconSignal6g,
+  IconSignalE,
+  IconSignalG,
+  IconSignalHPlus,
+  IconSignalH,
+  IconSignalLte,
+  IconSignatureOff,
+  IconSignature,
+  IconSitemapOff,
+  IconSitemap,
+  IconSkateboardOff,
+  IconSkateboard,
+  IconSkateboarding,
+  IconSketching,
+  IconSkewX,
+  IconSkewY,
+  IconSkiJumping,
+  IconSkull,
+  IconSlash,
+  IconSlashes,
+  IconSleigh,
+  IconSlice,
+  IconSlideshow,
+  IconSmartHomeOff,
+  IconSmartHome,
+  IconSmokingNo,
+  IconSmoking,
+  IconSnowboarding,
+  IconSnowflakeOff,
+  IconSnowflake,
+  IconSnowman,
+  IconSoccerField,
+  IconSocialOff,
+  IconSocial,
+  IconSock,
+  IconSofaOff,
+  IconSofa,
+  IconSolarElectricity,
+  IconSolarPanel2,
+  IconSolarPanel,
+  IconSort09,
+  IconSort90,
+  IconSortAZ,
+  IconSortAscending2,
+  IconSortAscendingLetters,
+  IconSortAscendingNumbers,
+  IconSortAscendingShapes,
+  IconSortAscendingSmallBig,
+  IconSortAscending,
+  IconSortDescending2,
+  IconSortDescendingLetters,
+  IconSortDescendingNumbers,
+  IconSortDescendingShapes,
+  IconSortDescendingSmallBig,
+  IconSortDescending,
+  IconSortZA,
+  IconSos,
+  IconSoupOff,
+  IconSoup,
+  IconSourceCode,
+  IconSpaceOff,
+  IconSpace,
+  IconSpaces,
+  IconSpacingHorizontal,
+  IconSpacingVertical,
+  IconSpade,
+  IconSparkle2,
+  IconSparkleHighlight,
+  IconSparkle,
+  IconSparkles2Off,
+  IconSparkles2,
+  IconSparkles,
+  IconSpeakerphone,
+  IconSpeedboat,
+  IconSphere2,
+  IconSphereOff,
+  IconSpherePlus,
+  IconSphere,
+  IconSpider,
+  IconSpiralOff,
+  IconSpiral,
+  IconSportBilliard,
+  IconSpray,
+  IconSpyOff,
+  IconSpy,
+  IconSql,
+  IconSquareArrowDown,
+  IconSquareArrowLeft,
+  IconSquareArrowRight,
+  IconSquareArrowUp,
+  IconSquareAsterisk,
+  IconSquareCheck,
+  IconSquareChevronDown,
+  IconSquareChevronLeft,
+  IconSquareChevronRight,
+  IconSquareChevronUp,
+  IconSquareChevronsDown,
+  IconSquareChevronsLeft,
+  IconSquareChevronsRight,
+  IconSquareChevronsUp,
+  IconSquareDashedTopSolid,
+  IconSquareDashedX,
+  IconSquareDashed,
+  IconSquareDot,
+  IconSquareF0,
+  IconSquareF1,
+  IconSquareF2,
+  IconSquareF3,
+  IconSquareF4,
+  IconSquareF5,
+  IconSquareF6,
+  IconSquareF7,
+  IconSquareF8,
+  IconSquareF9,
+  IconSquareForbid2,
+  IconSquareForbid,
+  IconSquareHalf,
+  IconSquareKey,
+  IconSquareLetterA,
+  IconSquareLetterB,
+  IconSquareLetterC,
+  IconSquareLetterD,
+  IconSquareLetterE,
+  IconSquareLetterF,
+  IconSquareLetterG,
+  IconSquareLetterH,
+  IconSquareLetterI,
+  IconSquareLetterJ,
+  IconSquareLetterK,
+  IconSquareLetterL,
+  IconSquareLetterM,
+  IconSquareLetterN,
+  IconSquareLetterO,
+  IconSquareLetterP,
+  IconSquareLetterQ,
+  IconSquareLetterR,
+  IconSquareLetterS,
+  IconSquareLetterT,
+  IconSquareLetterU,
+  IconSquareLetterV,
+  IconSquareLetterW,
+  IconSquareLetterX,
+  IconSquareLetterY,
+  IconSquareLetterZ,
+  IconSquareMinus2,
+  IconSquareMinus,
+  IconSquareNumber0,
+  IconSquareNumber1,
+  IconSquareNumber2,
+  IconSquareNumber3,
+  IconSquareNumber4,
+  IconSquareNumber5,
+  IconSquareNumber6,
+  IconSquareNumber7,
+  IconSquareNumber8,
+  IconSquareNumber9,
+  IconSquareOff,
+  IconSquarePercentage,
+  IconSquarePlus2,
+  IconSquarePlus,
+  IconSquareRoot2,
+  IconSquareRoot,
+  IconSquareRotatedAsterisk,
+  IconSquareRotatedForbid2,
+  IconSquareRotatedForbid,
+  IconSquareRotatedOff,
+  IconSquareRotated,
+  IconSquareRoundedArrowDown,
+  IconSquareRoundedArrowLeft,
+  IconSquareRoundedArrowRight,
+  IconSquareRoundedArrowUp,
+  IconSquareRoundedCheck,
+  IconSquareRoundedChevronDown,
+  IconSquareRoundedChevronLeft,
+  IconSquareRoundedChevronRight,
+  IconSquareRoundedChevronUp,
+  IconSquareRoundedChevronsDown,
+  IconSquareRoundedChevronsLeft,
+  IconSquareRoundedChevronsRight,
+  IconSquareRoundedChevronsUp,
+  IconSquareRoundedLetterA,
+  IconSquareRoundedLetterB,
+  IconSquareRoundedLetterC,
+  IconSquareRoundedLetterD,
+  IconSquareRoundedLetterE,
+  IconSquareRoundedLetterF,
+  IconSquareRoundedLetterG,
+  IconSquareRoundedLetterH,
+  IconSquareRoundedLetterI,
+  IconSquareRoundedLetterJ,
+  IconSquareRoundedLetterK,
+  IconSquareRoundedLetterL,
+  IconSquareRoundedLetterM,
+  IconSquareRoundedLetterN,
+  IconSquareRoundedLetterO,
+  IconSquareRoundedLetterP,
+  IconSquareRoundedLetterQ,
+  IconSquareRoundedLetterR,
+  IconSquareRoundedLetterS,
+  IconSquareRoundedLetterT,
+  IconSquareRoundedLetterU,
+  IconSquareRoundedLetterV,
+  IconSquareRoundedLetterW,
+  IconSquareRoundedLetterX,
+  IconSquareRoundedLetterY,
+  IconSquareRoundedLetterZ,
+  IconSquareRoundedMinus2,
+  IconSquareRoundedMinus,
+  IconSquareRoundedNumber0,
+  IconSquareRoundedNumber1,
+  IconSquareRoundedNumber2,
+  IconSquareRoundedNumber3,
+  IconSquareRoundedNumber4,
+  IconSquareRoundedNumber5,
+  IconSquareRoundedNumber6,
+  IconSquareRoundedNumber7,
+  IconSquareRoundedNumber8,
+  IconSquareRoundedNumber9,
+  IconSquareRoundedPercentage,
+  IconSquareRoundedPlus2,
+  IconSquareRoundedPlus,
+  IconSquareRoundedX,
+  IconSquareRounded,
+  IconSquareToggleHorizontal,
+  IconSquareToggle,
+  IconSquareX,
+  IconSquare,
+  IconSquaresDiagonal,
+  IconSquaresSelected,
+  IconSquares,
+  IconStack2,
+  IconStack3,
+  IconStackBack,
+  IconStackBackward,
+  IconStackCheck,
+  IconStackForward,
+  IconStackFront,
+  IconStackMiddle,
+  IconStackMinus,
+  IconStackPlus,
+  IconStackPop,
+  IconStackPush,
+  IconStackX,
+  IconStack,
+  IconStairsDown,
+  IconStairsUp,
+  IconStairs,
+  IconStarHalf,
+  IconStarOff,
+  IconStar,
+  IconStarsOff,
+  IconStars,
+  IconStatusChange,
+  IconSteam,
+  IconSteeringWheelOff,
+  IconSteeringWheel,
+  IconStepInto,
+  IconStepOut,
+  IconStereoGlasses,
+  IconStethoscopeOff,
+  IconStethoscope,
+  IconSticker2,
+  IconStickerSmile,
+  IconSticker,
+  IconStopwatch,
+  IconStormOff,
+  IconStorm,
+  IconStretching2,
+  IconStretching,
+  IconStrikethrough,
+  IconStrokeCurved,
+  IconStrokeDynamic,
+  IconStrokeStraight,
+  IconSubmarine,
+  IconSubscript,
+  IconSubtask,
+  IconSubtitlesAi,
+  IconSubtitlesEdit,
+  IconSubtitlesOff,
+  IconSubtitles,
+  IconSumOff,
+  IconSum,
+  IconSunElectricity,
+  IconSunHigh,
+  IconSunLow,
+  IconSunMoon,
+  IconSunOff,
+  IconSunWind,
+  IconSun,
+  IconSunglasses,
+  IconSunrise,
+  IconSunset2,
+  IconSunset,
+  IconSuperscript,
+  IconSvg,
+  IconSwimming,
+  IconSwipeDown,
+  IconSwipeLeft,
+  IconSwipeRight,
+  IconSwipeUp,
+  IconSwipe,
+  IconSwitch2,
+  IconSwitch3,
+  IconSwitchHorizontal,
+  IconSwitchVertical,
+  IconSwitch,
+  IconSwordOff,
+  IconSword,
+  IconSwords,
+  IconTabClose,
+  IconTableAlias,
+  IconTableColumn,
+  IconTableDashed,
+  IconTableDown,
+  IconTableExport,
+  IconTableHeart,
+  IconTableImport,
+  IconTableMinus,
+  IconTableOff,
+  IconTableOptions,
+  IconTablePlus,
+  IconTableRow,
+  IconTableShare,
+  IconTableShortcut,
+  IconTableSpark,
+  IconTable,
+  IconTabs,
+  IconTagMinus,
+  IconTagOff,
+  IconTagPlus,
+  IconTagStarred,
+  IconTag,
+  IconTagsChevronDown,
+  IconTagsChevronLeft,
+  IconTagsChevronRight,
+  IconTagsChevronUp,
+  IconTagsOff,
+  IconTags,
+  IconTaiwanDollar,
+  IconTallymark1,
+  IconTallymark2,
+  IconTallymark3,
+  IconTallymark4,
+  IconTallymarks,
+  IconTank,
+  IconTarget2,
+  IconTargetArrow,
+  IconTargetOff,
+  IconTarget,
+  IconTaxEuro,
+  IconTaxPound,
+  IconTax,
+  IconTeapot,
+  IconTelescopeOff,
+  IconTelescope,
+  IconTemperatureCelsius,
+  IconTemperatureFahrenheit,
+  IconTemperatureMinus,
+  IconTemperatureOff,
+  IconTemperaturePlus,
+  IconTemperatureSnow,
+  IconTemperatureSun,
+  IconTemperature,
+  IconTemplateOff,
+  IconTemplate,
+  IconTentOff,
+  IconTent,
+  IconTerminal2,
+  IconTerminal,
+  IconTestPipe2,
+  IconTestPipeOff,
+  IconTestPipe,
+  IconTex,
+  IconTextCaption,
+  IconTextColor,
+  IconTextDecrease,
+  IconTextDirectionLtr,
+  IconTextDirectionRtl,
+  IconTextGrammar,
+  IconTextIncrease,
+  IconTextOrientation,
+  IconTextOutline,
+  IconTextPlus,
+  IconTextRecognition,
+  IconTextRegexAsterisk,
+  IconTextRegexEnd,
+  IconTextRegexPlus,
+  IconTextRegexQuestion,
+  IconTextRegexStart,
+  IconTextResize,
+  IconTextScan2,
+  IconTextScanAi,
+  IconTextSize,
+  IconTextSpellcheck,
+  IconTextWrapColumn,
+  IconTextWrapDisabled,
+  IconTextWrap,
+  IconTexture,
+  IconTheater,
+  IconThermometer,
+  IconThinkingHigh,
+  IconThinkingLow,
+  IconThinkingMedium,
+  IconThumbDownOff,
+  IconThumbDown,
+  IconThumbUpOff,
+  IconThumbUp,
+  IconTicTac,
+  IconTicketOff,
+  IconTicket,
+  IconTie,
+  IconTilde,
+  IconTiltShiftOff,
+  IconTiltShift,
+  IconTimeDuration0,
+  IconTimeDuration10,
+  IconTimeDuration15,
+  IconTimeDuration30,
+  IconTimeDuration45,
+  IconTimeDuration5,
+  IconTimeDuration60,
+  IconTimeDuration90,
+  IconTimeDurationOff,
+  IconTimelineEventExclamation,
+  IconTimelineEventMinus,
+  IconTimelineEventPlus,
+  IconTimelineEventText,
+  IconTimelineEventX,
+  IconTimelineEvent,
+  IconTimeline,
+  IconTimezone,
+  IconTipJarEuro,
+  IconTipJarPound,
+  IconTipJar,
+  IconTir,
+  IconToggleLeft,
+  IconToggleRight,
+  IconToiletPaperOff,
+  IconToiletPaper,
+  IconToml,
+  IconTool,
+  IconToolsKitchen2Off,
+  IconToolsKitchen2,
+  IconToolsKitchen3,
+  IconToolsKitchenOff,
+  IconToolsKitchen,
+  IconToolsOff,
+  IconTools,
+  IconTooltip,
+  IconTopologyBus,
+  IconTopologyComplex,
+  IconTopologyFullHierarchy,
+  IconTopologyFull,
+  IconTopologyRing2,
+  IconTopologyRing3,
+  IconTopologyRing,
+  IconTopologyStar2,
+  IconTopologyStar3,
+  IconTopologyStarRing2,
+  IconTopologyStarRing3,
+  IconTopologyStarRing,
+  IconTopologyStar,
+  IconTorii,
+  IconTornado,
+  IconTournament,
+  IconTowerOff,
+  IconTower,
+  IconTrack,
+  IconTractor,
+  IconTrademark,
+  IconTrafficConeOff,
+  IconTrafficCone,
+  IconTrafficLightsOff,
+  IconTrafficLights,
+  IconTrain,
+  IconTransactionBitcoin,
+  IconTransactionDollar,
+  IconTransactionEuro,
+  IconTransactionPound,
+  IconTransactionRupee,
+  IconTransactionYen,
+  IconTransactionYuan,
+  IconTransferIn,
+  IconTransferOut,
+  IconTransferVertical,
+  IconTransfer,
+  IconTransformPointBottomLeft,
+  IconTransformPointBottomRight,
+  IconTransformPointTopLeft,
+  IconTransformPointTopRight,
+  IconTransformPoint,
+  IconTransform,
+  IconTransitionBottom,
+  IconTransitionLeft,
+  IconTransitionRight,
+  IconTransitionTop,
+  IconTrashOff,
+  IconTrashX,
+  IconTrash,
+  IconTreadmill,
+  IconTreasureChest,
+  IconTree,
+  IconTrees,
+  IconTrekking,
+  IconTrendingDown2,
+  IconTrendingDown3,
+  IconTrendingDown,
+  IconTrendingUp2,
+  IconTrendingUp3,
+  IconTrendingUpDown,
+  IconTrendingUp,
+  IconTriangleDashed,
+  IconTriangleInverted,
+  IconTriangleMinus2,
+  IconTriangleMinus,
+  IconTriangleOff,
+  IconTrianglePlus2,
+  IconTrianglePlus,
+  IconTriangleSquareCircle,
+  IconTriangle,
+  IconTriangles,
+  IconTrident,
+  IconTrolley,
+  IconTrophyOff,
+  IconTrophy,
+  IconTrowel,
+  IconTruckDelivery,
+  IconTruckLoading,
+  IconTruckOff,
+  IconTruckReturn,
+  IconTruck,
+  IconTwig,
+  IconTxt,
+  IconTypeface,
+  IconTypographyOff,
+  IconTypography,
+  IconUTurnLeft,
+  IconUTurnRight,
+  IconUfoOff,
+  IconUfo,
+  IconUhd,
+  IconUmbrella2,
+  IconUmbrellaClosed2,
+  IconUmbrellaClosed,
+  IconUmbrellaOff,
+  IconUmbrella,
+  IconUnderlineOff,
+  IconUnderline,
+  IconUnicycle,
+  IconUniverse,
+  IconUnlink,
+  IconUpload,
+  IconUrgent,
+  IconUsb,
+  IconUserBitcoin,
+  IconUserBolt,
+  IconUserCancel,
+  IconUserCheck,
+  IconUserCircle,
+  IconUserCode,
+  IconUserCog,
+  IconUserDollar,
+  IconUserDown,
+  IconUserEdit,
+  IconUserExclamation,
+  IconUserHeart,
+  IconUserHexagon,
+  IconUserKey,
+  IconUserMinus,
+  IconUserOff,
+  IconUserPause,
+  IconUserPentagon,
+  IconUserPin,
+  IconUserPlus,
+  IconUserQuestion,
+  IconUserScan,
+  IconUserScreen,
+  IconUserSearch,
+  IconUserShare,
+  IconUserShield,
+  IconUserSquareRounded,
+  IconUserSquare,
+  IconUserStar,
+  IconUserUp,
+  IconUserX,
+  IconUser,
+  IconUsersGroup,
+  IconUsersMinus,
+  IconUsersPlus,
+  IconUsers,
+  IconUvIndex,
+  IconUxCircle,
+  IconVaccineBottleOff,
+  IconVaccineBottle,
+  IconVaccineOff,
+  IconVaccine,
+  IconVacuumCleaner,
+  IconVariableMinus,
+  IconVariableOff,
+  IconVariablePlus,
+  IconVariable,
+  IconVault,
+  IconVectorBezier2,
+  IconVectorBezierArc,
+  IconVectorBezierCircle,
+  IconVectorBezier,
+  IconVectorOff,
+  IconVectorSpline,
+  IconVectorTriangleOff,
+  IconVectorTriangle,
+  IconVector,
+  IconVenus,
+  IconVersionsOff,
+  IconVersions,
+  IconVideoMinus,
+  IconVideoOff,
+  IconVideoPlus,
+  IconVideo,
+  IconView360Arrow,
+  IconView360Number,
+  IconView360Off,
+  IconView360,
+  IconViewfinderOff,
+  IconViewfinder,
+  IconViewportNarrow,
+  IconViewportShort,
+  IconViewportTall,
+  IconViewportWide,
+  IconVignette,
+  IconVinyl,
+  IconVip2,
+  IconVipOff,
+  IconVip,
+  IconVirtualSpace,
+  IconVirusOff,
+  IconVirusSearch,
+  IconVirus,
+  IconVocabularyOff,
+  IconVocabulary,
+  IconVoice2,
+  IconVoice,
+  IconVolcano,
+  IconVolume2,
+  IconVolume3,
+  IconVolume4,
+  IconVolumeOff,
+  IconVolume,
+  IconVs,
+  IconWalk,
+  IconWallOff,
+  IconWall,
+  IconWalletOff,
+  IconWallet,
+  IconWallpaperOff,
+  IconWallpaper,
+  IconWandOff,
+  IconWand,
+  IconWashDry1,
+  IconWashDry2,
+  IconWashDry3,
+  IconWashDryA,
+  IconWashDryDip,
+  IconWashDryF,
+  IconWashDryFlat,
+  IconWashDryHang,
+  IconWashDryOff,
+  IconWashDryP,
+  IconWashDryShade,
+  IconWashDryW,
+  IconWashDry,
+  IconWashDrycleanOff,
+  IconWashDryclean,
+  IconWashEco,
+  IconWashGentle,
+  IconWashHand,
+  IconWashMachine,
+  IconWashOff,
+  IconWashPress,
+  IconWashTemperature1,
+  IconWashTemperature2,
+  IconWashTemperature3,
+  IconWashTemperature4,
+  IconWashTemperature5,
+  IconWashTemperature6,
+  IconWashTumbleDry,
+  IconWashTumbleOff,
+  IconWash,
+  IconWaterpolo,
+  IconWaveSawTool,
+  IconWaveSine,
+  IconWaveSquare,
+  IconWavesElectricity,
+  IconWebhookOff,
+  IconWebhook,
+  IconWeight,
+  IconWheatOff,
+  IconWheat,
+  IconWheel,
+  IconWheelchairOff,
+  IconWheelchair,
+  IconWhirl,
+  IconWhisk,
+  IconWifi0,
+  IconWifi1,
+  IconWifi2,
+  IconWifiOff,
+  IconWifi,
+  IconWindElectricity,
+  IconWindOff,
+  IconWind,
+  IconWindmillOff,
+  IconWindmill,
+  IconWindowMaximize,
+  IconWindowMinimize,
+  IconWindowOff,
+  IconWindow,
+  IconWindsock,
+  IconWiperWash,
+  IconWiper,
+  IconWoman,
+  IconWood,
+  IconWorldBolt,
+  IconWorldCancel,
+  IconWorldCheck,
+  IconWorldCode,
+  IconWorldCog,
+  IconWorldDollar,
+  IconWorldDown,
+  IconWorldDownload,
+  IconWorldExclamation,
+  IconWorldHeart,
+  IconWorldLatitude,
+  IconWorldLongitude,
+  IconWorldMap,
+  IconWorldMinus,
+  IconWorldOff,
+  IconWorldPause,
+  IconWorldPin,
+  IconWorldPlus,
+  IconWorldQuestion,
+  IconWorldSearch,
+  IconWorldShare,
+  IconWorldStar,
+  IconWorldUp,
+  IconWorldUpload,
+  IconWorldWww,
+  IconWorldX,
+  IconWorld,
+  IconWreckingBall,
+  IconWritingOff,
+  IconWritingSignOff,
+  IconWritingSign,
+  IconWriting,
+  IconXMark,
+  IconXPowerY,
+  IconX,
+  IconXboxA,
+  IconXboxB,
+  IconXboxX,
+  IconXboxY,
+  IconXd,
+  IconXxx,
+  IconYarn,
+  IconYinYang,
+  IconYoga,
+  IconZeppelinOff,
+  IconZeppelin,
+  IconZeroConfig,
+  IconZip,
+  IconZodiacAquarius,
+  IconZodiacAries,
+  IconZodiacCancer,
+  IconZodiacCapricorn,
+  IconZodiacGemini,
+  IconZodiacLeo,
+  IconZodiacLibra,
+  IconZodiacPisces,
+  IconZodiacSagittarius,
+  IconZodiacScorpio,
+  IconZodiacTaurus,
+  IconZodiacVirgo,
+  IconZoomCancel,
+  IconZoomCheck,
+  IconZoomCode,
+  IconZoomExclamation,
+  IconZoomInArea,
+  IconZoomIn,
+  IconZoomMoney,
+  IconZoomOutArea,
+  IconZoomOut,
+  IconZoomPan,
+  IconZoomQuestion,
+  IconZoomReplace,
+  IconZoomReset,
+  IconZoomScan,
+  IconZoom,
+  IconZzzOff,
+  IconZzz,
+  IconAccessibleFilled,
+  IconAdCircleFilled,
+  IconAdFilled,
+  IconAdjustmentsHorizontalFilled,
+  IconAdjustmentsFilled,
+  IconAerialLiftFilled,
+  IconAffiliateFilled,
+  IconAirBalloonFilled,
+  IconAlarmMinusFilled,
+  IconAlarmPlusFilled,
+  IconAlarmSnoozeFilled,
+  IconAlarmFilled,
+  IconAlertCircleFilled,
+  IconAlertHexagonFilled,
+  IconAlertOctagonFilled,
+  IconAlertSquareRoundedFilled,
+  IconAlertSquareFilled,
+  IconAlertTriangleFilled,
+  IconAlienFilled,
+  IconAlignBoxBottomCenterFilled,
+  IconAlignBoxBottomLeftFilled,
+  IconAlignBoxBottomRightFilled,
+  IconAlignBoxCenterMiddleFilled,
+  IconAlignBoxLeftBottomFilled,
+  IconAlignBoxLeftMiddleFilled,
+  IconAlignBoxLeftTopFilled,
+  IconAlignBoxRightBottomFilled,
+  IconAlignBoxRightMiddleFilled,
+  IconAlignBoxRightTopFilled,
+  IconAlignBoxTopCenterFilled,
+  IconAlignBoxTopLeftFilled,
+  IconAlignBoxTopRightFilled,
+  IconAnalyzeFilled,
+  IconAppWindowFilled,
+  IconAppleFilled,
+  IconAppsFilled,
+  IconArchiveFilled,
+  IconArrowAutofitContentFilled,
+  IconArrowAutofitDownFilled,
+  IconArrowAutofitHeightFilled,
+  IconArrowAutofitLeftFilled,
+  IconArrowAutofitRightFilled,
+  IconArrowAutofitUpFilled,
+  IconArrowAutofitWidthFilled,
+  IconArrowBadgeDownFilled,
+  IconArrowBadgeLeftFilled,
+  IconArrowBadgeRightFilled,
+  IconArrowBadgeUpFilled,
+  IconArrowBigDownLineFilled,
+  IconArrowBigDownLinesFilled,
+  IconArrowBigDownFilled,
+  IconArrowBigLeftLineFilled,
+  IconArrowBigLeftLinesFilled,
+  IconArrowBigLeftFilled,
+  IconArrowBigRightLineFilled,
+  IconArrowBigRightLinesFilled,
+  IconArrowBigRightFilled,
+  IconArrowBigUpLineFilled,
+  IconArrowBigUpLinesFilled,
+  IconArrowBigUpFilled,
+  IconArrowDownCircleFilled,
+  IconArrowDownRhombusFilled,
+  IconArrowDownSquareFilled,
+  IconArrowGuideFilled,
+  IconArrowLeftCircleFilled,
+  IconArrowLeftRhombusFilled,
+  IconArrowLeftSquareFilled,
+  IconArrowMoveDownFilled,
+  IconArrowMoveLeftFilled,
+  IconArrowMoveRightFilled,
+  IconArrowMoveUpFilled,
+  IconArrowRightCircleFilled,
+  IconArrowRightRhombusFilled,
+  IconArrowRightSquareFilled,
+  IconArrowUpCircleFilled,
+  IconArrowUpRhombusFilled,
+  IconArrowUpSquareFilled,
+  IconArtboardFilled,
+  IconArticleFilled,
+  IconAspectRatioFilled,
+  IconAssemblyFilled,
+  IconAssetFilled,
+  IconAtom2Filled,
+  IconAutomaticGearboxFilled,
+  IconAwardFilled,
+  IconBabyCarriageFilled,
+  IconBackspaceFilled,
+  IconBadge3dFilled,
+  IconBadge4kFilled,
+  IconBadge8kFilled,
+  IconBadgeAdFilled,
+  IconBadgeArFilled,
+  IconBadgeCcFilled,
+  IconBadgeHdFilled,
+  IconBadgeSdFilled,
+  IconBadgeTmFilled,
+  IconBadgeVoFilled,
+  IconBadgeVrFilled,
+  IconBadgeWcFilled,
+  IconBadgeFilled,
+  IconBadgesFilled,
+  IconBallBowlingFilled,
+  IconBalloonFilled,
+  IconBallpenFilled,
+  IconBandageFilled,
+  IconBarbellFilled,
+  IconBarrierBlockFilled,
+  IconBasketFilled,
+  IconBathFilled,
+  IconBattery1Filled,
+  IconBattery2Filled,
+  IconBattery3Filled,
+  IconBattery4Filled,
+  IconBatteryAutomotiveFilled,
+  IconBatteryVertical1Filled,
+  IconBatteryVertical2Filled,
+  IconBatteryVertical3Filled,
+  IconBatteryVertical4Filled,
+  IconBatteryVerticalFilled,
+  IconBatteryFilled,
+  IconBedFlatFilled,
+  IconBedFilled,
+  IconBeerFilled,
+  IconBellMinusFilled,
+  IconBellPlusFilled,
+  IconBellRinging2Filled,
+  IconBellRingingFilled,
+  IconBellXFilled,
+  IconBellZFilled,
+  IconBellFilled,
+  IconBikeFilled,
+  IconBinaryTree2Filled,
+  IconBinaryTreeFilled,
+  IconBinocularsFilled,
+  IconBiohazardFilled,
+  IconBladeFilled,
+  IconBlenderFilled,
+  IconBlobFilled,
+  IconBoltFilled,
+  IconBombFilled,
+  IconBoneFilled,
+  IconBongFilled,
+  IconBookFilled,
+  IconBookmarkFilled,
+  IconBookmarksFilled,
+  IconBoomFilled,
+  IconBottleFilled,
+  IconBounceLeftFilled,
+  IconBounceRightFilled,
+  IconBowFilled,
+  IconBowlChopsticksFilled,
+  IconBowlSpoonFilled,
+  IconBowlFilled,
+  IconBoxAlignBottomLeftFilled,
+  IconBoxAlignBottomRightFilled,
+  IconBoxAlignBottomFilled,
+  IconBoxAlignLeftFilled,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeftFilled,
+  IconBoxAlignTopRightFilled,
+  IconBoxAlignTopFilled,
+  IconBoxMultipleFilled,
+  IconBrandAngularFilled,
+  IconBrandAppleFilled,
+  IconBrandBitbucketFilled,
+  IconBrandDiscordFilled,
+  IconBrandDribbbleFilled,
+  IconBrandFacebookFilled,
+  IconBrandGithubFilled,
+  IconBrandGoogleFilled,
+  IconBrandInstagramFilled,
+  IconBrandKickFilled,
+  IconBrandLinkedinFilled,
+  IconBrandMessengerFilled,
+  IconBrandOpenSourceFilled,
+  IconBrandOperaFilled,
+  IconBrandPatreonFilled,
+  IconBrandPaypalFilled,
+  IconBrandPinterestFilled,
+  IconBrandSignalFilled,
+  IconBrandSketchFilled,
+  IconBrandSnapchatFilled,
+  IconBrandSpotifyFilled,
+  IconBrandSteamFilled,
+  IconBrandStripeFilled,
+  IconBrandTablerFilled,
+  IconBrandTiktokFilled,
+  IconBrandTinderFilled,
+  IconBrandTumblrFilled,
+  IconBrandTwitterFilled,
+  IconBrandVercelFilled,
+  IconBrandVimeoFilled,
+  IconBrandWeiboFilled,
+  IconBrandWhatsappFilled,
+  IconBrandWindowsFilled,
+  IconBrandXFilled,
+  IconBrandYoutubeFilled,
+  IconBreadFilled,
+  IconBriefcase2Filled,
+  IconBriefcaseFilled,
+  IconBrightnessAutoFilled,
+  IconBrightnessDownFilled,
+  IconBrightnessUpFilled,
+  IconBrightnessFilled,
+  IconBubbleTextFilled,
+  IconBubbleFilled,
+  IconBugFilled,
+  IconBuildingBridge2Filled,
+  IconBuildingBroadcastTowerFilled,
+  IconBulbFilled,
+  IconBusFilled,
+  IconButterflyFilled,
+  IconCactusFilled,
+  IconCalculatorFilled,
+  IconCalendarEventFilled,
+  IconCalendarMonthFilled,
+  IconCalendarWeekFilled,
+  IconCalendarFilled,
+  IconCameraFilled,
+  IconCampfireFilled,
+  IconCandleFilled,
+  IconCannabisFilled,
+  IconCapsuleHorizontalFilled,
+  IconCapsuleFilled,
+  IconCaptureFilled,
+  IconCar4wdFilled,
+  IconCarCraneFilled,
+  IconCarFanFilled,
+  IconCarSuvFilled,
+  IconCarFilled,
+  IconCarambolaFilled,
+  IconCaravanFilled,
+  IconCardboardsFilled,
+  IconCardsFilled,
+  IconCaretDownFilled,
+  IconCaretLeftRightFilled,
+  IconCaretLeftFilled,
+  IconCaretRightFilled,
+  IconCaretUpDownFilled,
+  IconCaretUpFilled,
+  IconCarouselHorizontalFilled,
+  IconCarouselVerticalFilled,
+  IconCashBanknoteFilled,
+  IconCategoryFilled,
+  IconChargingPileFilled,
+  IconChartAreaLineFilled,
+  IconChartAreaFilled,
+  IconChartBubbleFilled,
+  IconChartCandleFilled,
+  IconChartDonutFilled,
+  IconChartDots2Filled,
+  IconChartDots3Filled,
+  IconChartDotsFilled,
+  IconChartFunnelFilled,
+  IconChartGridDotsFilled,
+  IconChartPie2Filled,
+  IconChartPie3Filled,
+  IconChartPie4Filled,
+  IconChartPieFilled,
+  IconCheckFilled,
+  IconChefHatFilled,
+  IconCherryFilled,
+  IconChessBishopFilled,
+  IconChessKingFilled,
+  IconChessKnightFilled,
+  IconChessQueenFilled,
+  IconChessRookFilled,
+  IconChessFilled,
+  IconChevronDownFilled,
+  IconChevronRightFilled,
+  IconChristmasTreeFilled,
+  IconCircleArrowDownLeftFilled,
+  IconCircleArrowDownRightFilled,
+  IconCircleArrowDownFilled,
+  IconCircleArrowLeftFilled,
+  IconCircleArrowRightFilled,
+  IconCircleArrowUpLeftFilled,
+  IconCircleArrowUpRightFilled,
+  IconCircleArrowUpFilled,
+  IconCircleCaretDownFilled,
+  IconCircleCaretLeftFilled,
+  IconCircleCaretRightFilled,
+  IconCircleCaretUpFilled,
+  IconCircleCheckFilled,
+  IconCircleChevronDownFilled,
+  IconCircleChevronLeftFilled,
+  IconCircleChevronRightFilled,
+  IconCircleChevronUpFilled,
+  IconCircleChevronsDownFilled,
+  IconCircleChevronsLeftFilled,
+  IconCircleChevronsRightFilled,
+  IconCircleChevronsUpFilled,
+  IconCircleDotFilled,
+  IconCircleKeyFilled,
+  IconCircleLetterAFilled,
+  IconCircleLetterBFilled,
+  IconCircleLetterCFilled,
+  IconCircleLetterDFilled,
+  IconCircleLetterEFilled,
+  IconCircleLetterFFilled,
+  IconCircleLetterGFilled,
+  IconCircleLetterHFilled,
+  IconCircleLetterIFilled,
+  IconCircleLetterJFilled,
+  IconCircleLetterKFilled,
+  IconCircleLetterLFilled,
+  IconCircleLetterMFilled,
+  IconCircleLetterNFilled,
+  IconCircleLetterOFilled,
+  IconCircleLetterPFilled,
+  IconCircleLetterQFilled,
+  IconCircleLetterRFilled,
+  IconCircleLetterSFilled,
+  IconCircleLetterTFilled,
+  IconCircleLetterUFilled,
+  IconCircleLetterVFilled,
+  IconCircleLetterWFilled,
+  IconCircleLetterXFilled,
+  IconCircleLetterYFilled,
+  IconCircleLetterZFilled,
+  IconCircleNumber0Filled,
+  IconCircleNumber1Filled,
+  IconCircleNumber2Filled,
+  IconCircleNumber3Filled,
+  IconCircleNumber4Filled,
+  IconCircleNumber5Filled,
+  IconCircleNumber6Filled,
+  IconCircleNumber7Filled,
+  IconCircleNumber8Filled,
+  IconCircleNumber9Filled,
+  IconCirclePercentageFilled,
+  IconCirclePlusFilled,
+  IconCircleRectangleFilled,
+  IconCircleXFilled,
+  IconCircleFilled,
+  IconCirclesFilled,
+  IconClickFilled,
+  IconClipboardCheckFilled,
+  IconClipboardDataFilled,
+  IconClipboardListFilled,
+  IconClipboardPlusFilled,
+  IconClipboardSmileFilled,
+  IconClipboardTextFilled,
+  IconClipboardTypographyFilled,
+  IconClipboardXFilled,
+  IconClipboardFilled,
+  IconClockHour1Filled,
+  IconClockHour10Filled,
+  IconClockHour11Filled,
+  IconClockHour12Filled,
+  IconClockHour2Filled,
+  IconClockHour3Filled,
+  IconClockHour4Filled,
+  IconClockHour5Filled,
+  IconClockHour6Filled,
+  IconClockHour7Filled,
+  IconClockHour8Filled,
+  IconClockHour9Filled,
+  IconClockFilled,
+  IconCloudComputingFilled,
+  IconCloudDataConnectionFilled,
+  IconCloudFilled,
+  IconCloverFilled,
+  IconClubsFilled,
+  IconCodeCircle2Filled,
+  IconCodeCircleFilled,
+  IconCoinBitcoinFilled,
+  IconCoinEuroFilled,
+  IconCoinMoneroFilled,
+  IconCoinPoundFilled,
+  IconCoinRupeeFilled,
+  IconCoinTakaFilled,
+  IconCoinYenFilled,
+  IconCoinYuanFilled,
+  IconCoinFilled,
+  IconColumns1Filled,
+  IconColumns2Filled,
+  IconColumns3Filled,
+  IconCompassFilled,
+  IconCone2Filled,
+  IconConeFilled,
+  IconConfettiFilled,
+  IconContainerFilled,
+  IconContrast2Filled,
+  IconContrastFilled,
+  IconCookieManFilled,
+  IconCookieFilled,
+  IconCopyCheckFilled,
+  IconCopyMinusFilled,
+  IconCopyPlusFilled,
+  IconCopyXFilled,
+  IconCopyFilled,
+  IconCopyleftFilled,
+  IconCopyrightFilled,
+  IconCreditCardFilled,
+  IconCrop11Filled,
+  IconCrop169Filled,
+  IconCrop32Filled,
+  IconCrop54Filled,
+  IconCrop75Filled,
+  IconCropLandscapeFilled,
+  IconCropPortraitFilled,
+  IconCrossFilled,
+  IconCrownFilled,
+  IconCurrentLocationFilled,
+  IconDashboardFilled,
+  IconDatabaseFilled,
+  IconDeviceCctvFilled,
+  IconDeviceDesktopFilled,
+  IconDeviceFloppyFilled,
+  IconDeviceGamepad2Filled,
+  IconDeviceGamepad3Filled,
+  IconDeviceGamepadFilled,
+  IconDeviceHeartMonitorFilled,
+  IconDeviceImacFilled,
+  IconDeviceIpadFilled,
+  IconDeviceMobileFilled,
+  IconDeviceRemoteFilled,
+  IconDeviceSpeakerFilled,
+  IconDeviceTabletFilled,
+  IconDeviceTvOldFilled,
+  IconDeviceTvFilled,
+  IconDeviceUnknownFilled,
+  IconDeviceUsbFilled,
+  IconDeviceVisionProFilled,
+  IconDeviceWatchFilled,
+  IconDialpadFilled,
+  IconDiamondFilled,
+  IconDiamondsFilled,
+  IconDice1Filled,
+  IconDice2Filled,
+  IconDice3Filled,
+  IconDice4Filled,
+  IconDice5Filled,
+  IconDice6Filled,
+  IconDiceFilled,
+  IconDirectionArrowsFilled,
+  IconDirectionSignFilled,
+  IconDirectionsFilled,
+  IconDiscFilled,
+  IconDiscountFilled,
+  IconDotsVerticalFilled,
+  IconDotsFilled,
+  IconDownloadFilled,
+  IconDropCircleFilled,
+  IconDropletHalf2Filled,
+  IconDropletHalfFilled,
+  IconDropletFilled,
+  IconDropletsFilled,
+  IconDualScreenFilled,
+  IconDumplingFilled,
+  IconEaseInControlPointFilled,
+  IconEaseInOutControlPointsFilled,
+  IconEaseOutControlPointFilled,
+  IconEditFilled,
+  IconEggCrackedFilled,
+  IconEggFriedFilled,
+  IconEggFilled,
+  IconElevatorFilled,
+  IconEngineFilled,
+  IconEscalatorDownFilled,
+  IconEscalatorUpFilled,
+  IconEscalatorFilled,
+  IconExchangeFilled,
+  IconExclamationCircleFilled,
+  IconExplicitFilled,
+  IconExposureFilled,
+  IconExternalLinkFilled,
+  IconEyeTableFilled,
+  IconEyeFilled,
+  IconEyeglass2Filled,
+  IconEyeglassFilled,
+  IconFaceMaskFilled,
+  IconFaviconFilled,
+  IconFeatherFilled,
+  IconFenceFilled,
+  IconFerryFilled,
+  IconFidgetSpinnerFilled,
+  IconFileAnalyticsFilled,
+  IconFileCheckFilled,
+  IconFileCode2Filled,
+  IconFileCodeFilled,
+  IconFileCvFilled,
+  IconFileDeltaFilled,
+  IconFileDescriptionFilled,
+  IconFileDiffFilled,
+  IconFileDigitFilled,
+  IconFileDollarFilled,
+  IconFileDotsFilled,
+  IconFileDownloadFilled,
+  IconFileEuroFilled,
+  IconFileFunctionFilled,
+  IconFileHorizontalFilled,
+  IconFileInfoFilled,
+  IconFileInvoiceFilled,
+  IconFileLambdaFilled,
+  IconFileMinusFilled,
+  IconFileMusicFilled,
+  IconFileNeutralFilled,
+  IconFilePencilFilled,
+  IconFilePercentFilled,
+  IconFilePhoneFilled,
+  IconFilePowerFilled,
+  IconFileRssFilled,
+  IconFileSadFilled,
+  IconFileScissorsFilled,
+  IconFileSettingsFilled,
+  IconFileSignalFilled,
+  IconFileSmileFilled,
+  IconFileStarFilled,
+  IconFileTextFilled,
+  IconFileTimeFilled,
+  IconFileTypographyFilled,
+  IconFileUnknownFilled,
+  IconFileUploadFilled,
+  IconFileVectorFilled,
+  IconFileXFilled,
+  IconFileFilled,
+  IconFilesFilled,
+  IconFilterFilled,
+  IconFiltersFilled,
+  IconFishBoneFilled,
+  IconFlag2Filled,
+  IconFlag3Filled,
+  IconFlagFilled,
+  IconFlameFilled,
+  IconFlareFilled,
+  IconFlask2Filled,
+  IconFlaskFilled,
+  IconFlowerFilled,
+  IconFolderOpenFilled,
+  IconFolderFilled,
+  IconFoldersFilled,
+  IconForbid2Filled,
+  IconForbidFilled,
+  IconFountainFilled,
+  IconFunctionFilled,
+  IconGardenCartFilled,
+  IconGasStationFilled,
+  IconGaugeFilled,
+  IconGhost2Filled,
+  IconGhost3Filled,
+  IconGhostFilled,
+  IconGiftCardFilled,
+  IconGiftFilled,
+  IconGlassFullFilled,
+  IconGlassFilled,
+  IconGlobeFilled,
+  IconGolfFilled,
+  IconGpsFilled,
+  IconGraphFilled,
+  IconGridPatternFilled,
+  IconGuitarPickFilled,
+  IconHanger2Filled,
+  IconHeadphonesFilled,
+  IconHeadsetFilled,
+  IconHeartBrokenFilled,
+  IconHeartFilled,
+  IconHelicopterLandingFilled,
+  IconHelicopterFilled,
+  IconHelpCircleFilled,
+  IconHelpHexagonFilled,
+  IconHelpOctagonFilled,
+  IconHelpSquareRoundedFilled,
+  IconHelpSquareFilled,
+  IconHelpTriangleFilled,
+  IconHelpFilled,
+  IconHexagonLetterAFilled,
+  IconHexagonLetterBFilled,
+  IconHexagonLetterCFilled,
+  IconHexagonLetterDFilled,
+  IconHexagonLetterEFilled,
+  IconHexagonLetterFFilled,
+  IconHexagonLetterGFilled,
+  IconHexagonLetterHFilled,
+  IconHexagonLetterIFilled,
+  IconHexagonLetterJFilled,
+  IconHexagonLetterKFilled,
+  IconHexagonLetterLFilled,
+  IconHexagonLetterMFilled,
+  IconHexagonLetterNFilled,
+  IconHexagonLetterOFilled,
+  IconHexagonLetterPFilled,
+  IconHexagonLetterQFilled,
+  IconHexagonLetterRFilled,
+  IconHexagonLetterSFilled,
+  IconHexagonLetterTFilled,
+  IconHexagonLetterUFilled,
+  IconHexagonLetterVFilled,
+  IconHexagonLetterWFilled,
+  IconHexagonLetterXFilled,
+  IconHexagonLetterYFilled,
+  IconHexagonLetterZFilled,
+  IconHexagonMinusFilled,
+  IconHexagonNumber0Filled,
+  IconHexagonNumber1Filled,
+  IconHexagonNumber2Filled,
+  IconHexagonNumber3Filled,
+  IconHexagonNumber4Filled,
+  IconHexagonNumber5Filled,
+  IconHexagonNumber6Filled,
+  IconHexagonNumber7Filled,
+  IconHexagonNumber8Filled,
+  IconHexagonNumber9Filled,
+  IconHexagonPlusFilled,
+  IconHexagonFilled,
+  IconHome2Filled,
+  IconHomeFilled,
+  IconHospitalCircleFilled,
+  IconHourglassFilled,
+  IconIconsFilled,
+  IconIdFilled,
+  IconInfoCircleFilled,
+  IconInfoHexagonFilled,
+  IconInfoOctagonFilled,
+  IconInfoSquareRoundedFilled,
+  IconInfoSquareFilled,
+  IconInfoTriangleFilled,
+  IconInnerShadowBottomLeftFilled,
+  IconInnerShadowBottomRightFilled,
+  IconInnerShadowBottomFilled,
+  IconInnerShadowLeftFilled,
+  IconInnerShadowRightFilled,
+  IconInnerShadowTopLeftFilled,
+  IconInnerShadowTopRightFilled,
+  IconInnerShadowTopFilled,
+  IconIroning1Filled,
+  IconIroning2Filled,
+  IconIroning3Filled,
+  IconIroningSteamFilled,
+  IconIroningFilled,
+  IconJetpackFilled,
+  IconJewishStarFilled,
+  IconKeyFilled,
+  IconKeyboardFilled,
+  IconKeyframeAlignCenterFilled,
+  IconKeyframeAlignHorizontalFilled,
+  IconKeyframeAlignVerticalFilled,
+  IconKeyframeFilled,
+  IconKeyframesFilled,
+  IconLabelImportantFilled,
+  IconLabelFilled,
+  IconLassoPolygonFilled,
+  IconLaurelWreath1Filled,
+  IconLaurelWreath2Filled,
+  IconLaurelWreath3Filled,
+  IconLaurelWreathFilled,
+  IconLayout2Filled,
+  IconLayoutAlignBottomFilled,
+  IconLayoutAlignCenterFilled,
+  IconLayoutAlignLeftFilled,
+  IconLayoutAlignMiddleFilled,
+  IconLayoutAlignRightFilled,
+  IconLayoutAlignTopFilled,
+  IconLayoutBoardSplitFilled,
+  IconLayoutBoardFilled,
+  IconLayoutBottombarCollapseFilled,
+  IconLayoutBottombarExpandFilled,
+  IconLayoutBottombarFilled,
+  IconLayoutCardsFilled,
+  IconLayoutDashboardFilled,
+  IconLayoutDistributeHorizontalFilled,
+  IconLayoutDistributeVerticalFilled,
+  IconLayoutGridFilled,
+  IconLayoutKanbanFilled,
+  IconLayoutListFilled,
+  IconLayoutNavbarCollapseFilled,
+  IconLayoutNavbarExpandFilled,
+  IconLayoutNavbarFilled,
+  IconLayoutSidebarLeftCollapseFilled,
+  IconLayoutSidebarLeftExpandFilled,
+  IconLayoutSidebarRightCollapseFilled,
+  IconLayoutSidebarRightExpandFilled,
+  IconLayoutSidebarRightFilled,
+  IconLayoutSidebarFilled,
+  IconLayoutFilled,
+  IconLeafFilled,
+  IconLegoFilled,
+  IconLemon2Filled,
+  IconLibraryPlusFilled,
+  IconLibraryFilled,
+  IconLifebuoyFilled,
+  IconLinkFilled,
+  IconListCheckFilled,
+  IconListDetailsFilled,
+  IconListFilled,
+  IconLivePhotoFilled,
+  IconLiveViewFilled,
+  IconLocationFilled,
+  IconLockSquareRoundedFilled,
+  IconLockFilled,
+  IconLungsFilled,
+  IconMacroFilled,
+  IconMagnetFilled,
+  IconMailOpenedFilled,
+  IconMailFilled,
+  IconManFilled,
+  IconManualGearboxFilled,
+  IconMapPinFilled,
+  IconMedicalCrossFilled,
+  IconMeepleFilled,
+  IconMelonFilled,
+  IconMenu2Filled,
+  IconMessage2Filled,
+  IconMessageChatbotFilled,
+  IconMessageCircleFilled,
+  IconMessageReportFilled,
+  IconMessageFilled,
+  IconMessagesFilled,
+  IconMeteorFilled,
+  IconMichelinStarFilled,
+  IconMickeyFilled,
+  IconMicrophoneFilled,
+  IconMicroscopeFilled,
+  IconMicrowaveFilled,
+  IconMilitaryRankFilled,
+  IconMilkFilled,
+  IconMoodAngryFilled,
+  IconMoodConfusedFilled,
+  IconMoodCrazyHappyFilled,
+  IconMoodEmptyFilled,
+  IconMoodHappyFilled,
+  IconMoodKidFilled,
+  IconMoodNeutralFilled,
+  IconMoodSadFilled,
+  IconMoodSmileFilled,
+  IconMoodWrrrFilled,
+  IconMoonFilled,
+  IconMotorbikeFilled,
+  IconMountainFilled,
+  IconMouseFilled,
+  IconMugFilled,
+  IconMushroomFilled,
+  IconNavigationFilled,
+  IconNurseFilled,
+  IconOctagonMinusFilled,
+  IconOctagonPlusFilled,
+  IconOctagonFilled,
+  IconOvalVerticalFilled,
+  IconOvalFilled,
+  IconPacmanFilled,
+  IconPaintFilled,
+  IconPaletteFilled,
+  IconPanoramaHorizontalFilled,
+  IconPanoramaVerticalFilled,
+  IconParkingCircleFilled,
+  IconPawFilled,
+  IconPencilFilled,
+  IconPennant2Filled,
+  IconPennantFilled,
+  IconPentagonFilled,
+  IconPhoneCallFilled,
+  IconPhoneCallingFilled,
+  IconPhoneCheckFilled,
+  IconPhoneXFilled,
+  IconPhoneFilled,
+  IconPhotoFilled,
+  IconPictureInPictureTopFilled,
+  IconPictureInPictureFilled,
+  IconPigFilled,
+  IconPillFilled,
+  IconPinFilled,
+  IconPinnedFilled,
+  IconPizzaFilled,
+  IconPlaneArrivalFilled,
+  IconPlaneDepartureFilled,
+  IconPlaneTiltFilled,
+  IconPlaneFilled,
+  IconPlayCard1Filled,
+  IconPlayCard10Filled,
+  IconPlayCard2Filled,
+  IconPlayCard3Filled,
+  IconPlayCard4Filled,
+  IconPlayCard5Filled,
+  IconPlayCard6Filled,
+  IconPlayCard7Filled,
+  IconPlayCard8Filled,
+  IconPlayCard9Filled,
+  IconPlayCardAFilled,
+  IconPlayCardJFilled,
+  IconPlayCardKFilled,
+  IconPlayCardQFilled,
+  IconPlayCardStarFilled,
+  IconPlayCardFilled,
+  IconPlayerEjectFilled,
+  IconPlayerPauseFilled,
+  IconPlayerPlayFilled,
+  IconPlayerRecordFilled,
+  IconPlayerSkipBackFilled,
+  IconPlayerSkipForwardFilled,
+  IconPlayerStopFilled,
+  IconPlayerTrackNextFilled,
+  IconPlayerTrackPrevFilled,
+  IconPlaylistFilled,
+  IconPlusFilled,
+  IconPointFilled,
+  IconPointerFilled,
+  IconPolaroidFilled,
+  IconPooFilled,
+  IconPresentationAnalyticsFilled,
+  IconPresentationFilled,
+  IconPuzzleFilled,
+  IconQuoteFilled,
+  IconRadarFilled,
+  IconRadioactiveFilled,
+  IconReceiptDollarFilled,
+  IconReceiptEuroFilled,
+  IconReceiptPoundFilled,
+  IconReceiptRupeeFilled,
+  IconReceiptYenFilled,
+  IconReceiptYuanFilled,
+  IconReceiptFilled,
+  IconRectangleVerticalFilled,
+  IconRectangleFilled,
+  IconRegisteredFilled,
+  IconRelationManyToManyFilled,
+  IconRelationOneToManyFilled,
+  IconRelationOneToOneFilled,
+  IconReplaceFilled,
+  IconReportAnalyticsFilled,
+  IconReportMoneyFilled,
+  IconRollercoasterFilled,
+  IconRosetteDiscountCheckFilled,
+  IconRosetteDiscountFilled,
+  IconRosetteFilled,
+  IconSaladFilled,
+  IconSatelliteFilled,
+  IconScaleFilled,
+  IconSchoolFilled,
+  IconScubaDivingTankFilled,
+  IconSearchFilled,
+  IconSectionFilled,
+  IconSeedlingFilled,
+  IconSendFilled,
+  IconSettingsFilled,
+  IconShieldCheckFilled,
+  IconShieldCheckeredFilled,
+  IconShieldHalfFilled,
+  IconShieldLockFilled,
+  IconShieldFilled,
+  IconShirtFilled,
+  IconShoppingCartFilled,
+  IconSignLeftFilled,
+  IconSignRightFilled,
+  IconSitemapFilled,
+  IconSortAscending2Filled,
+  IconSortAscendingShapesFilled,
+  IconSortDescending2Filled,
+  IconSortDescendingShapesFilled,
+  IconSoupFilled,
+  IconSpadeFilled,
+  IconSparkles2Filled,
+  IconSparklesFilled,
+  IconSpeedboatFilled,
+  IconSpiderFilled,
+  IconSquareArrowDownFilled,
+  IconSquareArrowLeftFilled,
+  IconSquareArrowRightFilled,
+  IconSquareArrowUpFilled,
+  IconSquareAsteriskFilled,
+  IconSquareCheckFilled,
+  IconSquareChevronDownFilled,
+  IconSquareChevronLeftFilled,
+  IconSquareChevronRightFilled,
+  IconSquareChevronUpFilled,
+  IconSquareChevronsDownFilled,
+  IconSquareChevronsLeftFilled,
+  IconSquareChevronsRightFilled,
+  IconSquareChevronsUpFilled,
+  IconSquareDotFilled,
+  IconSquareF0Filled,
+  IconSquareF1Filled,
+  IconSquareF2Filled,
+  IconSquareF3Filled,
+  IconSquareF4Filled,
+  IconSquareF5Filled,
+  IconSquareF6Filled,
+  IconSquareF7Filled,
+  IconSquareF8Filled,
+  IconSquareF9Filled,
+  IconSquareLetterAFilled,
+  IconSquareLetterBFilled,
+  IconSquareLetterCFilled,
+  IconSquareLetterDFilled,
+  IconSquareLetterEFilled,
+  IconSquareLetterFFilled,
+  IconSquareLetterGFilled,
+  IconSquareLetterHFilled,
+  IconSquareLetterIFilled,
+  IconSquareLetterJFilled,
+  IconSquareLetterKFilled,
+  IconSquareLetterLFilled,
+  IconSquareLetterMFilled,
+  IconSquareLetterNFilled,
+  IconSquareLetterOFilled,
+  IconSquareLetterPFilled,
+  IconSquareLetterQFilled,
+  IconSquareLetterRFilled,
+  IconSquareLetterSFilled,
+  IconSquareLetterTFilled,
+  IconSquareLetterUFilled,
+  IconSquareLetterVFilled,
+  IconSquareLetterWFilled,
+  IconSquareLetterXFilled,
+  IconSquareLetterYFilled,
+  IconSquareLetterZFilled,
+  IconSquareMinusFilled,
+  IconSquareNumber0Filled,
+  IconSquareNumber1Filled,
+  IconSquareNumber2Filled,
+  IconSquareNumber3Filled,
+  IconSquareNumber4Filled,
+  IconSquareNumber5Filled,
+  IconSquareNumber6Filled,
+  IconSquareNumber7Filled,
+  IconSquareNumber8Filled,
+  IconSquareNumber9Filled,
+  IconSquareRotatedFilled,
+  IconSquareRoundedArrowDownFilled,
+  IconSquareRoundedArrowLeftFilled,
+  IconSquareRoundedArrowRightFilled,
+  IconSquareRoundedArrowUpFilled,
+  IconSquareRoundedCheckFilled,
+  IconSquareRoundedChevronDownFilled,
+  IconSquareRoundedChevronLeftFilled,
+  IconSquareRoundedChevronRightFilled,
+  IconSquareRoundedChevronUpFilled,
+  IconSquareRoundedChevronsDownFilled,
+  IconSquareRoundedChevronsLeftFilled,
+  IconSquareRoundedChevronsRightFilled,
+  IconSquareRoundedChevronsUpFilled,
+  IconSquareRoundedLetterAFilled,
+  IconSquareRoundedLetterBFilled,
+  IconSquareRoundedLetterCFilled,
+  IconSquareRoundedLetterDFilled,
+  IconSquareRoundedLetterEFilled,
+  IconSquareRoundedLetterFFilled,
+  IconSquareRoundedLetterGFilled,
+  IconSquareRoundedLetterHFilled,
+  IconSquareRoundedLetterIFilled,
+  IconSquareRoundedLetterJFilled,
+  IconSquareRoundedLetterKFilled,
+  IconSquareRoundedLetterLFilled,
+  IconSquareRoundedLetterMFilled,
+  IconSquareRoundedLetterNFilled,
+  IconSquareRoundedLetterOFilled,
+  IconSquareRoundedLetterPFilled,
+  IconSquareRoundedLetterQFilled,
+  IconSquareRoundedLetterRFilled,
+  IconSquareRoundedLetterSFilled,
+  IconSquareRoundedLetterTFilled,
+  IconSquareRoundedLetterUFilled,
+  IconSquareRoundedLetterVFilled,
+  IconSquareRoundedLetterWFilled,
+  IconSquareRoundedLetterXFilled,
+  IconSquareRoundedLetterYFilled,
+  IconSquareRoundedLetterZFilled,
+  IconSquareRoundedMinusFilled,
+  IconSquareRoundedNumber0Filled,
+  IconSquareRoundedNumber1Filled,
+  IconSquareRoundedNumber2Filled,
+  IconSquareRoundedNumber3Filled,
+  IconSquareRoundedNumber4Filled,
+  IconSquareRoundedNumber5Filled,
+  IconSquareRoundedNumber6Filled,
+  IconSquareRoundedNumber7Filled,
+  IconSquareRoundedNumber8Filled,
+  IconSquareRoundedNumber9Filled,
+  IconSquareRoundedPlusFilled,
+  IconSquareRoundedXFilled,
+  IconSquareRoundedFilled,
+  IconSquareXFilled,
+  IconSquareFilled,
+  IconSquaresFilled,
+  IconStack2Filled,
+  IconStack3Filled,
+  IconStackFilled,
+  IconStarHalfFilled,
+  IconStarFilled,
+  IconStarsFilled,
+  IconSteeringWheelFilled,
+  IconSunHighFilled,
+  IconSunLowFilled,
+  IconSunFilled,
+  IconSunglassesFilled,
+  IconSunriseFilled,
+  IconSunset2Filled,
+  IconSunsetFilled,
+  IconSwipeDownFilled,
+  IconSwipeLeftFilled,
+  IconSwipeRightFilled,
+  IconSwipeUpFilled,
+  IconTableFilled,
+  IconTagFilled,
+  IconTagsFilled,
+  IconTemperatureMinusFilled,
+  IconTemperaturePlusFilled,
+  IconTemplateFilled,
+  IconTestPipe2Filled,
+  IconThumbDownFilled,
+  IconThumbUpFilled,
+  IconTicketFilled,
+  IconTiltShiftFilled,
+  IconTimelineEventFilled,
+  IconToggleLeftFilled,
+  IconToggleRightFilled,
+  IconToolsKitchen2Filled,
+  IconTrainFilled,
+  IconTransformFilled,
+  IconTransitionBottomFilled,
+  IconTransitionLeftFilled,
+  IconTransitionRightFilled,
+  IconTransitionTopFilled,
+  IconTrashXFilled,
+  IconTrashFilled,
+  IconTriangleInvertedFilled,
+  IconTriangleSquareCircleFilled,
+  IconTriangleFilled,
+  IconTrolleyFilled,
+  IconTrophyFilled,
+  IconTruckFilled,
+  IconUfoFilled,
+  IconUmbrellaFilled,
+  IconUserFilled,
+  IconVersionsFilled,
+  IconVideoMinusFilled,
+  IconVideoPlusFilled,
+  IconVideoFilled,
+  IconWindmillFilled,
+  IconWindsockFilled,
+  IconWomanFilled,
+  IconWorldFilled,
+  IconWritingSignFilled,
+  IconWritingFilled,
+  IconXFilled,
+  IconXboxAFilled,
+  IconXboxBFilled,
+  IconXboxXFilled,
+  IconXboxYFilled,
+  IconYinYangFilled,
+  IconZeppelinFilled,
+  IconZoomCancelFilled,
+  IconZoomCheckFilled,
+  IconZoomCodeFilled,
+  IconZoomExclamationFilled,
+  IconZoomInAreaFilled,
+  IconZoomInFilled,
+  IconZoomMoneyFilled,
+  IconZoomOutAreaFilled,
+  IconZoomOutFilled,
+  IconZoomPanFilled,
+  IconZoomQuestionFilled,
+  IconZoomScanFilled,
+  IconZoomFilled,
+} from "@tabler/icons-react";
+import type { IconComponent } from "../common";
 
-export { IconAB2 } from "@tabler/icons-react";
-export { IconABOff } from "@tabler/icons-react";
-export { IconAB } from "@tabler/icons-react";
-export { IconAbacusOff } from "@tabler/icons-react";
-export { IconAbacus } from "@tabler/icons-react";
-export { IconAbc } from "@tabler/icons-react";
-export { IconAccessPointOff } from "@tabler/icons-react";
-export { IconAccessPoint } from "@tabler/icons-react";
-export { IconAccessibleOff } from "@tabler/icons-react";
-export { IconAccessible } from "@tabler/icons-react";
-export { IconAcorn } from "@tabler/icons-react";
-export { IconAcrobatic } from "@tabler/icons-react";
-export { IconActivityHeartbeat } from "@tabler/icons-react";
-export { IconActivity } from "@tabler/icons-react";
-export { IconAd2 } from "@tabler/icons-react";
-export { IconAdCircleOff } from "@tabler/icons-react";
-export { IconAdCircle } from "@tabler/icons-react";
-export { IconAdOff } from "@tabler/icons-react";
-export { IconAd } from "@tabler/icons-react";
-export { IconAddressBookOff } from "@tabler/icons-react";
-export { IconAddressBook } from "@tabler/icons-react";
-export { IconAdjustmentsAlt } from "@tabler/icons-react";
-export { IconAdjustmentsBolt } from "@tabler/icons-react";
-export { IconAdjustmentsCancel } from "@tabler/icons-react";
-export { IconAdjustmentsCheck } from "@tabler/icons-react";
-export { IconAdjustmentsCode } from "@tabler/icons-react";
-export { IconAdjustmentsCog } from "@tabler/icons-react";
-export { IconAdjustmentsDollar } from "@tabler/icons-react";
-export { IconAdjustmentsDown } from "@tabler/icons-react";
-export { IconAdjustmentsExclamation } from "@tabler/icons-react";
-export { IconAdjustmentsHeart } from "@tabler/icons-react";
-export { IconAdjustmentsHorizontal } from "@tabler/icons-react";
-export { IconAdjustmentsMinus } from "@tabler/icons-react";
-export { IconAdjustmentsOff } from "@tabler/icons-react";
-export { IconAdjustmentsPause } from "@tabler/icons-react";
-export { IconAdjustmentsPin } from "@tabler/icons-react";
-export { IconAdjustmentsPlus } from "@tabler/icons-react";
-export { IconAdjustmentsQuestion } from "@tabler/icons-react";
-export { IconAdjustmentsSearch } from "@tabler/icons-react";
-export { IconAdjustmentsShare } from "@tabler/icons-react";
-export { IconAdjustmentsSpark } from "@tabler/icons-react";
-export { IconAdjustmentsStar } from "@tabler/icons-react";
-export { IconAdjustmentsUp } from "@tabler/icons-react";
-export { IconAdjustmentsX } from "@tabler/icons-react";
-export { IconAdjustments } from "@tabler/icons-react";
-export { IconAerialLift } from "@tabler/icons-react";
-export { IconAffiliate } from "@tabler/icons-react";
-export { IconAiAgent } from "@tabler/icons-react";
-export { IconAiAgents } from "@tabler/icons-react";
-export { IconAiGateway } from "@tabler/icons-react";
-export { IconAi } from "@tabler/icons-react";
-export { IconAirBalloon } from "@tabler/icons-react";
-export { IconAirConditioningDisabled } from "@tabler/icons-react";
-export { IconAirConditioning } from "@tabler/icons-react";
-export { IconAirTrafficControl } from "@tabler/icons-react";
-export { IconAirpodsL } from "@tabler/icons-react";
-export { IconAirpodsR } from "@tabler/icons-react";
-export { IconAlarmAverage } from "@tabler/icons-react";
-export { IconAlarmMinus } from "@tabler/icons-react";
-export { IconAlarmOff } from "@tabler/icons-react";
-export { IconAlarmPlus } from "@tabler/icons-react";
-export { IconAlarmSmoke } from "@tabler/icons-react";
-export { IconAlarmSnooze } from "@tabler/icons-react";
-export { IconAlarm } from "@tabler/icons-react";
-export { IconAlbumOff } from "@tabler/icons-react";
-export { IconAlbum } from "@tabler/icons-react";
-export { IconAlertCircleOff } from "@tabler/icons-react";
-export { IconAlertCircle } from "@tabler/icons-react";
-export { IconAlertHexagonOff } from "@tabler/icons-react";
-export { IconAlertHexagon } from "@tabler/icons-react";
-export { IconAlertOctagon } from "@tabler/icons-react";
-export { IconAlertSmallOff } from "@tabler/icons-react";
-export { IconAlertSmall } from "@tabler/icons-react";
-export { IconAlertSquareRoundedOff } from "@tabler/icons-react";
-export { IconAlertSquareRounded } from "@tabler/icons-react";
-export { IconAlertSquare } from "@tabler/icons-react";
-export { IconAlertTriangleOff } from "@tabler/icons-react";
-export { IconAlertTriangle } from "@tabler/icons-react";
-export { IconAlien } from "@tabler/icons-react";
-export { IconAlignBoxBottomCenter } from "@tabler/icons-react";
-export { IconAlignBoxBottomLeft } from "@tabler/icons-react";
-export { IconAlignBoxBottomRight } from "@tabler/icons-react";
-export { IconAlignBoxCenterBottom } from "@tabler/icons-react";
-export { IconAlignBoxCenterMiddle } from "@tabler/icons-react";
-export { IconAlignBoxCenterStretch } from "@tabler/icons-react";
-export { IconAlignBoxCenterTop } from "@tabler/icons-react";
-export { IconAlignBoxLeftBottom } from "@tabler/icons-react";
-export { IconAlignBoxLeftMiddle } from "@tabler/icons-react";
-export { IconAlignBoxLeftStretch } from "@tabler/icons-react";
-export { IconAlignBoxLeftTop } from "@tabler/icons-react";
-export { IconAlignBoxRightBottom } from "@tabler/icons-react";
-export { IconAlignBoxRightMiddle } from "@tabler/icons-react";
-export { IconAlignBoxRightStretch } from "@tabler/icons-react";
-export { IconAlignBoxRightTop } from "@tabler/icons-react";
-export { IconAlignBoxTopCenter } from "@tabler/icons-react";
-export { IconAlignBoxTopLeft } from "@tabler/icons-react";
-export { IconAlignBoxTopRight } from "@tabler/icons-react";
-export { IconAlignCenter } from "@tabler/icons-react";
-export { IconAlignJustified } from "@tabler/icons-react";
-export { IconAlignLeft2 } from "@tabler/icons-react";
-export { IconAlignLeft } from "@tabler/icons-react";
-export { IconAlignRight2 } from "@tabler/icons-react";
-export { IconAlignRight } from "@tabler/icons-react";
-export { IconAlpha } from "@tabler/icons-react";
-export { IconAlphabetArabic } from "@tabler/icons-react";
-export { IconAlphabetBangla } from "@tabler/icons-react";
-export { IconAlphabetChinese } from "@tabler/icons-react";
-export { IconAlphabetCyrillic } from "@tabler/icons-react";
-export { IconAlphabetDevanagari } from "@tabler/icons-react";
-export { IconAlphabetEthiopic } from "@tabler/icons-react";
-export { IconAlphabetGeorgian } from "@tabler/icons-react";
-export { IconAlphabetGreek } from "@tabler/icons-react";
-export { IconAlphabetHebrew } from "@tabler/icons-react";
-export { IconAlphabetJapanese } from "@tabler/icons-react";
-export { IconAlphabetKorean } from "@tabler/icons-react";
-export { IconAlphabetLatin } from "@tabler/icons-react";
-export { IconAlphabetPolish } from "@tabler/icons-react";
-export { IconAlphabetRunes } from "@tabler/icons-react";
-export { IconAlphabetThai } from "@tabler/icons-react";
-export { IconAlt } from "@tabler/icons-react";
-export { IconAmbulance } from "@tabler/icons-react";
-export { IconAmpersand } from "@tabler/icons-react";
-export { IconAnalyzeOff } from "@tabler/icons-react";
-export { IconAnalyze } from "@tabler/icons-react";
-export { IconAnchorOff } from "@tabler/icons-react";
-export { IconAnchor } from "@tabler/icons-react";
-export { IconAngle } from "@tabler/icons-react";
-export { IconAnkh } from "@tabler/icons-react";
-export { IconAntennaBars1 } from "@tabler/icons-react";
-export { IconAntennaBars2 } from "@tabler/icons-react";
-export { IconAntennaBars3 } from "@tabler/icons-react";
-export { IconAntennaBars4 } from "@tabler/icons-react";
-export { IconAntennaBars5 } from "@tabler/icons-react";
-export { IconAntennaBarsOff } from "@tabler/icons-react";
-export { IconAntennaOff } from "@tabler/icons-react";
-export { IconAntenna } from "@tabler/icons-react";
-export { IconApertureOff } from "@tabler/icons-react";
-export { IconAperture } from "@tabler/icons-react";
-export { IconApiAppOff } from "@tabler/icons-react";
-export { IconApiApp } from "@tabler/icons-react";
-export { IconApiBook } from "@tabler/icons-react";
-export { IconApiOff } from "@tabler/icons-react";
-export { IconApi } from "@tabler/icons-react";
-export { IconAppWindowBottomLeft } from "@tabler/icons-react";
-export { IconAppWindowBottomRight } from "@tabler/icons-react";
-export { IconAppWindowBottom } from "@tabler/icons-react";
-export { IconAppWindowCenter } from "@tabler/icons-react";
-export { IconAppWindow } from "@tabler/icons-react";
-export { IconApple } from "@tabler/icons-react";
-export { IconAppsOff } from "@tabler/icons-react";
-export { IconApps } from "@tabler/icons-react";
-export { IconArcheryArrow } from "@tabler/icons-react";
-export { IconArchiveOff } from "@tabler/icons-react";
-export { IconArchive } from "@tabler/icons-react";
-export { IconArmchair2Off } from "@tabler/icons-react";
-export { IconArmchair2 } from "@tabler/icons-react";
-export { IconArmchairOff } from "@tabler/icons-react";
-export { IconArmchair } from "@tabler/icons-react";
-export { IconArrowAutofitContent } from "@tabler/icons-react";
-export { IconArrowAutofitDown } from "@tabler/icons-react";
-export { IconArrowAutofitHeight } from "@tabler/icons-react";
-export { IconArrowAutofitLeft } from "@tabler/icons-react";
-export { IconArrowAutofitRight } from "@tabler/icons-react";
-export { IconArrowAutofitUp } from "@tabler/icons-react";
-export { IconArrowAutofitWidth } from "@tabler/icons-react";
-export { IconArrowBackUpDouble } from "@tabler/icons-react";
-export { IconArrowBackUp } from "@tabler/icons-react";
-export { IconArrowBack } from "@tabler/icons-react";
-export { IconArrowBadgeDown } from "@tabler/icons-react";
-export { IconArrowBadgeLeft } from "@tabler/icons-react";
-export { IconArrowBadgeRight } from "@tabler/icons-react";
-export { IconArrowBadgeUp } from "@tabler/icons-react";
-export { IconArrowBarBoth } from "@tabler/icons-react";
-export { IconArrowBarDown } from "@tabler/icons-react";
-export { IconArrowBarLeft } from "@tabler/icons-react";
-export { IconArrowBarRight } from "@tabler/icons-react";
-export { IconArrowBarToDownDashed } from "@tabler/icons-react";
-export { IconArrowBarToDown } from "@tabler/icons-react";
-export { IconArrowBarToLeftDashed } from "@tabler/icons-react";
-export { IconArrowBarToLeft } from "@tabler/icons-react";
-export { IconArrowBarToRightDashed } from "@tabler/icons-react";
-export { IconArrowBarToRight } from "@tabler/icons-react";
-export { IconArrowBarToUpDashed } from "@tabler/icons-react";
-export { IconArrowBarToUp } from "@tabler/icons-react";
-export { IconArrowBarUp } from "@tabler/icons-react";
-export { IconArrowBearLeft2 } from "@tabler/icons-react";
-export { IconArrowBearLeft } from "@tabler/icons-react";
-export { IconArrowBearRight2 } from "@tabler/icons-react";
-export { IconArrowBearRight } from "@tabler/icons-react";
-export { IconArrowBigDownLine } from "@tabler/icons-react";
-export { IconArrowBigDownLines } from "@tabler/icons-react";
-export { IconArrowBigDown } from "@tabler/icons-react";
-export { IconArrowBigLeftLine } from "@tabler/icons-react";
-export { IconArrowBigLeftLines } from "@tabler/icons-react";
-export { IconArrowBigLeft } from "@tabler/icons-react";
-export { IconArrowBigRightLine } from "@tabler/icons-react";
-export { IconArrowBigRightLines } from "@tabler/icons-react";
-export { IconArrowBigRight } from "@tabler/icons-react";
-export { IconArrowBigUpLine } from "@tabler/icons-react";
-export { IconArrowBigUpLines } from "@tabler/icons-react";
-export { IconArrowBigUp } from "@tabler/icons-react";
-export { IconArrowBounce } from "@tabler/icons-react";
-export { IconArrowCapsule } from "@tabler/icons-react";
-export { IconArrowCurveLeft } from "@tabler/icons-react";
-export { IconArrowCurveRight } from "@tabler/icons-react";
-export { IconArrowDownBar } from "@tabler/icons-react";
-export { IconArrowDownCircle } from "@tabler/icons-react";
-export { IconArrowDownDashed } from "@tabler/icons-react";
-export { IconArrowDownFromArc } from "@tabler/icons-react";
-export { IconArrowDownLeftCircle } from "@tabler/icons-react";
-export { IconArrowDownLeft } from "@tabler/icons-react";
-export { IconArrowDownRhombus } from "@tabler/icons-react";
-export { IconArrowDownRightCircle } from "@tabler/icons-react";
-export { IconArrowDownRight } from "@tabler/icons-react";
-export { IconArrowDownSquare } from "@tabler/icons-react";
-export { IconArrowDownTail } from "@tabler/icons-react";
-export { IconArrowDownToArc } from "@tabler/icons-react";
-export { IconArrowDown } from "@tabler/icons-react";
-export { IconArrowElbowLeft } from "@tabler/icons-react";
-export { IconArrowElbowRight } from "@tabler/icons-react";
-export { IconArrowForkTriple } from "@tabler/icons-react";
-export { IconArrowFork } from "@tabler/icons-react";
-export { IconArrowForwardUpDouble } from "@tabler/icons-react";
-export { IconArrowForwardUp } from "@tabler/icons-react";
-export { IconArrowForward } from "@tabler/icons-react";
-export { IconArrowGuide } from "@tabler/icons-react";
-export { IconArrowIteration } from "@tabler/icons-react";
-export { IconArrowLeftBar } from "@tabler/icons-react";
-export { IconArrowLeftCircle } from "@tabler/icons-react";
-export { IconArrowLeftDashed } from "@tabler/icons-react";
-export { IconArrowLeftFromArc } from "@tabler/icons-react";
-export { IconArrowLeftRhombus } from "@tabler/icons-react";
-export { IconArrowLeftRight } from "@tabler/icons-react";
-export { IconArrowLeftSquare } from "@tabler/icons-react";
-export { IconArrowLeftTail } from "@tabler/icons-react";
-export { IconArrowLeftToArc } from "@tabler/icons-react";
-export { IconArrowLeft } from "@tabler/icons-react";
-export { IconArrowLoopLeft2 } from "@tabler/icons-react";
-export { IconArrowLoopLeft } from "@tabler/icons-react";
-export { IconArrowLoopRight2 } from "@tabler/icons-react";
-export { IconArrowLoopRight } from "@tabler/icons-react";
-export { IconArrowMergeAltLeft } from "@tabler/icons-react";
-export { IconArrowMergeAltRight } from "@tabler/icons-react";
-export { IconArrowMergeBoth } from "@tabler/icons-react";
-export { IconArrowMergeLeft } from "@tabler/icons-react";
-export { IconArrowMergeRight } from "@tabler/icons-react";
-export { IconArrowMerge } from "@tabler/icons-react";
-export { IconArrowMoveDown } from "@tabler/icons-react";
-export { IconArrowMoveLeft } from "@tabler/icons-react";
-export { IconArrowMoveRight } from "@tabler/icons-react";
-export { IconArrowMoveUp } from "@tabler/icons-react";
-export { IconArrowNarrowDownDashed } from "@tabler/icons-react";
-export { IconArrowNarrowDown } from "@tabler/icons-react";
-export { IconArrowNarrowLeftDashed } from "@tabler/icons-react";
-export { IconArrowNarrowLeft } from "@tabler/icons-react";
-export { IconArrowNarrowRightDashed } from "@tabler/icons-react";
-export { IconArrowNarrowRight } from "@tabler/icons-react";
-export { IconArrowNarrowUpDashed } from "@tabler/icons-react";
-export { IconArrowNarrowUp } from "@tabler/icons-react";
-export { IconArrowRampLeft2 } from "@tabler/icons-react";
-export { IconArrowRampLeft3 } from "@tabler/icons-react";
-export { IconArrowRampLeft } from "@tabler/icons-react";
-export { IconArrowRampRight2 } from "@tabler/icons-react";
-export { IconArrowRampRight3 } from "@tabler/icons-react";
-export { IconArrowRampRight } from "@tabler/icons-react";
-export { IconArrowRightBar } from "@tabler/icons-react";
-export { IconArrowRightCircle } from "@tabler/icons-react";
-export { IconArrowRightDashed } from "@tabler/icons-react";
-export { IconArrowRightFromArc } from "@tabler/icons-react";
-export { IconArrowRightRhombus } from "@tabler/icons-react";
-export { IconArrowRightSquare } from "@tabler/icons-react";
-export { IconArrowRightTail } from "@tabler/icons-react";
-export { IconArrowRightToArc } from "@tabler/icons-react";
-export { IconArrowRight } from "@tabler/icons-react";
-export { IconArrowRotaryFirstLeft } from "@tabler/icons-react";
-export { IconArrowRotaryFirstRight } from "@tabler/icons-react";
-export { IconArrowRotaryLastLeft } from "@tabler/icons-react";
-export { IconArrowRotaryLastRight } from "@tabler/icons-react";
-export { IconArrowRotaryLeft } from "@tabler/icons-react";
-export { IconArrowRotaryRight } from "@tabler/icons-react";
-export { IconArrowRotaryStraight } from "@tabler/icons-react";
-export { IconArrowRoundaboutLeft } from "@tabler/icons-react";
-export { IconArrowRoundaboutRight } from "@tabler/icons-react";
-export { IconArrowSharpTurnLeft } from "@tabler/icons-react";
-export { IconArrowSharpTurnRight } from "@tabler/icons-react";
-export { IconArrowUpBar } from "@tabler/icons-react";
-export { IconArrowUpCircle } from "@tabler/icons-react";
-export { IconArrowUpDashed } from "@tabler/icons-react";
-export { IconArrowUpFromArc } from "@tabler/icons-react";
-export { IconArrowUpLeftCircle } from "@tabler/icons-react";
-export { IconArrowUpLeft } from "@tabler/icons-react";
-export { IconArrowUpRhombus } from "@tabler/icons-react";
-export { IconArrowUpRightCircle } from "@tabler/icons-react";
-export { IconArrowUpRight } from "@tabler/icons-react";
-export { IconArrowUpSquare } from "@tabler/icons-react";
-export { IconArrowUpTail } from "@tabler/icons-react";
-export { IconArrowUpToArc } from "@tabler/icons-react";
-export { IconArrowUp } from "@tabler/icons-react";
-export { IconArrowWaveLeftDown } from "@tabler/icons-react";
-export { IconArrowWaveLeftUp } from "@tabler/icons-react";
-export { IconArrowWaveRightDown } from "@tabler/icons-react";
-export { IconArrowWaveRightUp } from "@tabler/icons-react";
-export { IconArrowZigZag } from "@tabler/icons-react";
-export { IconArrowsCross } from "@tabler/icons-react";
-export { IconArrowsDiagonal2 } from "@tabler/icons-react";
-export { IconArrowsDiagonalMinimize2 } from "@tabler/icons-react";
-export { IconArrowsDiagonalMinimize } from "@tabler/icons-react";
-export { IconArrowsDiagonal } from "@tabler/icons-react";
-export { IconArrowsDiff } from "@tabler/icons-react";
-export { IconArrowsDoubleNeSw } from "@tabler/icons-react";
-export { IconArrowsDoubleNwSe } from "@tabler/icons-react";
-export { IconArrowsDoubleSeNw } from "@tabler/icons-react";
-export { IconArrowsDoubleSwNe } from "@tabler/icons-react";
-export { IconArrowsDownUp } from "@tabler/icons-react";
-export { IconArrowsDown } from "@tabler/icons-react";
-export { IconArrowsExchange2 } from "@tabler/icons-react";
-export { IconArrowsExchange } from "@tabler/icons-react";
-export { IconArrowsHorizontal } from "@tabler/icons-react";
-export { IconArrowsJoin2 } from "@tabler/icons-react";
-export { IconArrowsJoin } from "@tabler/icons-react";
-export { IconArrowsLeftDown } from "@tabler/icons-react";
-export { IconArrowsLeftRight } from "@tabler/icons-react";
-export { IconArrowsLeft } from "@tabler/icons-react";
-export { IconArrowsMaximize } from "@tabler/icons-react";
-export { IconArrowsMinimize } from "@tabler/icons-react";
-export { IconArrowsMoveHorizontal } from "@tabler/icons-react";
-export { IconArrowsMoveVertical } from "@tabler/icons-react";
-export { IconArrowsMove } from "@tabler/icons-react";
-export { IconArrowsRandom } from "@tabler/icons-react";
-export { IconArrowsRightDown } from "@tabler/icons-react";
-export { IconArrowsRightLeft } from "@tabler/icons-react";
-export { IconArrowsRight } from "@tabler/icons-react";
-export { IconArrowsShuffle2 } from "@tabler/icons-react";
-export { IconArrowsShuffle } from "@tabler/icons-react";
-export { IconArrowsSort } from "@tabler/icons-react";
-export { IconArrowsSplit2 } from "@tabler/icons-react";
-export { IconArrowsSplit } from "@tabler/icons-react";
-export { IconArrowsTransferDown } from "@tabler/icons-react";
-export { IconArrowsTransferUpDown } from "@tabler/icons-react";
-export { IconArrowsTransferUp } from "@tabler/icons-react";
-export { IconArrowsUpDown } from "@tabler/icons-react";
-export { IconArrowsUpLeft } from "@tabler/icons-react";
-export { IconArrowsUpRight } from "@tabler/icons-react";
-export { IconArrowsUp } from "@tabler/icons-react";
-export { IconArrowsVertical } from "@tabler/icons-react";
-export { IconArtboardOff } from "@tabler/icons-react";
-export { IconArtboard } from "@tabler/icons-react";
-export { IconArticleOff } from "@tabler/icons-react";
-export { IconArticle } from "@tabler/icons-react";
-export { IconAspectRatioOff } from "@tabler/icons-react";
-export { IconAspectRatio } from "@tabler/icons-react";
-export { IconAssemblyOff } from "@tabler/icons-react";
-export { IconAssembly } from "@tabler/icons-react";
-export { IconAsset } from "@tabler/icons-react";
-export { IconAsteriskSimple } from "@tabler/icons-react";
-export { IconAsterisk } from "@tabler/icons-react";
-export { IconAtOff } from "@tabler/icons-react";
-export { IconAt } from "@tabler/icons-react";
-export { IconAtom2 } from "@tabler/icons-react";
-export { IconAtomOff } from "@tabler/icons-react";
-export { IconAtom } from "@tabler/icons-react";
-export { IconAugmentedReality2 } from "@tabler/icons-react";
-export { IconAugmentedRealityOff } from "@tabler/icons-react";
-export { IconAugmentedReality } from "@tabler/icons-react";
-export { IconAuth2fa } from "@tabler/icons-react";
-export { IconAutomaticGearbox } from "@tabler/icons-react";
-export { IconAutomation } from "@tabler/icons-react";
-export { IconAvocado } from "@tabler/icons-react";
-export { IconAwardOff } from "@tabler/icons-react";
-export { IconAward } from "@tabler/icons-react";
-export { IconAxe } from "@tabler/icons-react";
-export { IconAxisX } from "@tabler/icons-react";
-export { IconAxisY } from "@tabler/icons-react";
-export { IconBabyBottle } from "@tabler/icons-react";
-export { IconBabyCarriage } from "@tabler/icons-react";
-export { IconBackground } from "@tabler/icons-react";
-export { IconBackhoe } from "@tabler/icons-react";
-export { IconBackpackOff } from "@tabler/icons-react";
-export { IconBackpack } from "@tabler/icons-react";
-export { IconBackslash } from "@tabler/icons-react";
-export { IconBackspace } from "@tabler/icons-react";
-export { IconBadge2k } from "@tabler/icons-react";
-export { IconBadge3d } from "@tabler/icons-react";
-export { IconBadge3k } from "@tabler/icons-react";
-export { IconBadge4k } from "@tabler/icons-react";
-export { IconBadge5k } from "@tabler/icons-react";
-export { IconBadge8k } from "@tabler/icons-react";
-export { IconBadgeAdOff } from "@tabler/icons-react";
-export { IconBadgeAd } from "@tabler/icons-react";
-export { IconBadgeAr } from "@tabler/icons-react";
-export { IconBadgeCc } from "@tabler/icons-react";
-export { IconBadgeHd } from "@tabler/icons-react";
-export { IconBadgeOff } from "@tabler/icons-react";
-export { IconBadgeSd } from "@tabler/icons-react";
-export { IconBadgeTm } from "@tabler/icons-react";
-export { IconBadgeVo } from "@tabler/icons-react";
-export { IconBadgeVr } from "@tabler/icons-react";
-export { IconBadgeWc } from "@tabler/icons-react";
-export { IconBadge } from "@tabler/icons-react";
-export { IconBadgesOff } from "@tabler/icons-react";
-export { IconBadges } from "@tabler/icons-react";
-export { IconBaguette } from "@tabler/icons-react";
-export { IconBallAmericanFootballOff } from "@tabler/icons-react";
-export { IconBallAmericanFootball } from "@tabler/icons-react";
-export { IconBallBaseball } from "@tabler/icons-react";
-export { IconBallBasketball } from "@tabler/icons-react";
-export { IconBallBowling } from "@tabler/icons-react";
-export { IconBallFootballOff } from "@tabler/icons-react";
-export { IconBallFootball } from "@tabler/icons-react";
-export { IconBallTennis } from "@tabler/icons-react";
-export { IconBallVolleyball } from "@tabler/icons-react";
-export { IconBalloonOff } from "@tabler/icons-react";
-export { IconBalloon } from "@tabler/icons-react";
-export { IconBallpenOff } from "@tabler/icons-react";
-export { IconBallpen } from "@tabler/icons-react";
-export { IconBan } from "@tabler/icons-react";
-export { IconBanana } from "@tabler/icons-react";
-export { IconBandageOff } from "@tabler/icons-react";
-export { IconBandage } from "@tabler/icons-react";
-export { IconBarbellOff } from "@tabler/icons-react";
-export { IconBarbell } from "@tabler/icons-react";
-export { IconBarcodeOff } from "@tabler/icons-react";
-export { IconBarcode } from "@tabler/icons-react";
-export { IconBarrelOff } from "@tabler/icons-react";
-export { IconBarrel } from "@tabler/icons-react";
-export { IconBarrierBlockOff } from "@tabler/icons-react";
-export { IconBarrierBlock } from "@tabler/icons-react";
-export { IconBaselineDensityLarge } from "@tabler/icons-react";
-export { IconBaselineDensityMedium } from "@tabler/icons-react";
-export { IconBaselineDensitySmall } from "@tabler/icons-react";
-export { IconBaseline } from "@tabler/icons-react";
-export { IconBasketBolt } from "@tabler/icons-react";
-export { IconBasketCancel } from "@tabler/icons-react";
-export { IconBasketCheck } from "@tabler/icons-react";
-export { IconBasketCode } from "@tabler/icons-react";
-export { IconBasketCog } from "@tabler/icons-react";
-export { IconBasketDiscount } from "@tabler/icons-react";
-export { IconBasketDollar } from "@tabler/icons-react";
-export { IconBasketDown } from "@tabler/icons-react";
-export { IconBasketExclamation } from "@tabler/icons-react";
-export { IconBasketHeart } from "@tabler/icons-react";
-export { IconBasketMinus } from "@tabler/icons-react";
-export { IconBasketOff } from "@tabler/icons-react";
-export { IconBasketPause } from "@tabler/icons-react";
-export { IconBasketPin } from "@tabler/icons-react";
-export { IconBasketPlus } from "@tabler/icons-react";
-export { IconBasketQuestion } from "@tabler/icons-react";
-export { IconBasketSearch } from "@tabler/icons-react";
-export { IconBasketShare } from "@tabler/icons-react";
-export { IconBasketStar } from "@tabler/icons-react";
-export { IconBasketUp } from "@tabler/icons-react";
-export { IconBasketX } from "@tabler/icons-react";
-export { IconBasket } from "@tabler/icons-react";
-export { IconBat } from "@tabler/icons-react";
-export { IconBathOff } from "@tabler/icons-react";
-export { IconBath } from "@tabler/icons-react";
-export { IconBattery1 } from "@tabler/icons-react";
-export { IconBattery2 } from "@tabler/icons-react";
-export { IconBattery3 } from "@tabler/icons-react";
-export { IconBattery4 } from "@tabler/icons-react";
-export { IconBatteryAutomotive } from "@tabler/icons-react";
-export { IconBatteryCharging2 } from "@tabler/icons-react";
-export { IconBatteryCharging } from "@tabler/icons-react";
-export { IconBatteryEco } from "@tabler/icons-react";
-export { IconBatteryExclamation } from "@tabler/icons-react";
-export { IconBatteryOff } from "@tabler/icons-react";
-export { IconBatterySpark } from "@tabler/icons-react";
-export { IconBatteryVertical1 } from "@tabler/icons-react";
-export { IconBatteryVertical2 } from "@tabler/icons-react";
-export { IconBatteryVertical3 } from "@tabler/icons-react";
-export { IconBatteryVertical4 } from "@tabler/icons-react";
-export { IconBatteryVerticalCharging2 } from "@tabler/icons-react";
-export { IconBatteryVerticalCharging } from "@tabler/icons-react";
-export { IconBatteryVerticalEco } from "@tabler/icons-react";
-export { IconBatteryVerticalExclamation } from "@tabler/icons-react";
-export { IconBatteryVerticalOff } from "@tabler/icons-react";
-export { IconBatteryVertical } from "@tabler/icons-react";
-export { IconBattery } from "@tabler/icons-react";
-export { IconBeachOff } from "@tabler/icons-react";
-export { IconBeach } from "@tabler/icons-react";
-export { IconBedFlat } from "@tabler/icons-react";
-export { IconBedOff } from "@tabler/icons-react";
-export { IconBed } from "@tabler/icons-react";
-export { IconBeerOff } from "@tabler/icons-react";
-export { IconBeer } from "@tabler/icons-react";
-export { IconBellBolt } from "@tabler/icons-react";
-export { IconBellCancel } from "@tabler/icons-react";
-export { IconBellCheck } from "@tabler/icons-react";
-export { IconBellCode } from "@tabler/icons-react";
-export { IconBellCog } from "@tabler/icons-react";
-export { IconBellDollar } from "@tabler/icons-react";
-export { IconBellDown } from "@tabler/icons-react";
-export { IconBellExclamation } from "@tabler/icons-react";
-export { IconBellHeart } from "@tabler/icons-react";
-export { IconBellMinus } from "@tabler/icons-react";
-export { IconBellOff } from "@tabler/icons-react";
-export { IconBellPause } from "@tabler/icons-react";
-export { IconBellPin } from "@tabler/icons-react";
-export { IconBellPlus } from "@tabler/icons-react";
-export { IconBellQuestion } from "@tabler/icons-react";
-export { IconBellRinging2 } from "@tabler/icons-react";
-export { IconBellRinging } from "@tabler/icons-react";
-export { IconBellSchool } from "@tabler/icons-react";
-export { IconBellSearch } from "@tabler/icons-react";
-export { IconBellShare } from "@tabler/icons-react";
-export { IconBellStar } from "@tabler/icons-react";
-export { IconBellUp } from "@tabler/icons-react";
-export { IconBellX } from "@tabler/icons-react";
-export { IconBellZ } from "@tabler/icons-react";
-export { IconBell } from "@tabler/icons-react";
-export { IconBeta } from "@tabler/icons-react";
-export { IconBible } from "@tabler/icons-react";
-export { IconBikeOff } from "@tabler/icons-react";
-export { IconBike } from "@tabler/icons-react";
-export { IconBinaryOff } from "@tabler/icons-react";
-export { IconBinaryTree2 } from "@tabler/icons-react";
-export { IconBinaryTree } from "@tabler/icons-react";
-export { IconBinary } from "@tabler/icons-react";
-export { IconBinoculars } from "@tabler/icons-react";
-export { IconBiohazardOff } from "@tabler/icons-react";
-export { IconBiohazard } from "@tabler/icons-react";
-export { IconBlade } from "@tabler/icons-react";
-export { IconBleachChlorine } from "@tabler/icons-react";
-export { IconBleachNoChlorine } from "@tabler/icons-react";
-export { IconBleachOff } from "@tabler/icons-react";
-export { IconBleach } from "@tabler/icons-react";
-export { IconBlendMode } from "@tabler/icons-react";
-export { IconBlender } from "@tabler/icons-react";
-export { IconBlind } from "@tabler/icons-react";
-export { IconBlobDashed } from "@tabler/icons-react";
-export { IconBlob } from "@tabler/icons-react";
-export { IconBlockquote } from "@tabler/icons-react";
-export { IconBlocks } from "@tabler/icons-react";
-export { IconBluetoothConnected } from "@tabler/icons-react";
-export { IconBluetoothOff } from "@tabler/icons-react";
-export { IconBluetoothX } from "@tabler/icons-react";
-export { IconBluetooth } from "@tabler/icons-react";
-export { IconBlurOff } from "@tabler/icons-react";
-export { IconBlur } from "@tabler/icons-react";
-export { IconBmp } from "@tabler/icons-react";
-export { IconBodyScan } from "@tabler/icons-react";
-export { IconBoldOff } from "@tabler/icons-react";
-export { IconBold } from "@tabler/icons-react";
-export { IconBoltOff } from "@tabler/icons-react";
-export { IconBolt } from "@tabler/icons-react";
-export { IconBomb } from "@tabler/icons-react";
-export { IconBoneOff } from "@tabler/icons-react";
-export { IconBone } from "@tabler/icons-react";
-export { IconBongOff } from "@tabler/icons-react";
-export { IconBong } from "@tabler/icons-react";
-export { IconBook2 } from "@tabler/icons-react";
-export { IconBookDownload } from "@tabler/icons-react";
-export { IconBookOff } from "@tabler/icons-react";
-export { IconBookUpload } from "@tabler/icons-react";
-export { IconBook } from "@tabler/icons-react";
-export { IconBookmarkAi } from "@tabler/icons-react";
-export { IconBookmarkEdit } from "@tabler/icons-react";
-export { IconBookmarkMinus } from "@tabler/icons-react";
-export { IconBookmarkOff } from "@tabler/icons-react";
-export { IconBookmarkPlus } from "@tabler/icons-react";
-export { IconBookmarkQuestion } from "@tabler/icons-react";
-export { IconBookmark } from "@tabler/icons-react";
-export { IconBookmarksOff } from "@tabler/icons-react";
-export { IconBookmarks } from "@tabler/icons-react";
-export { IconBooksOff } from "@tabler/icons-react";
-export { IconBooks } from "@tabler/icons-react";
-export { IconBoom } from "@tabler/icons-react";
-export { IconBorderAll } from "@tabler/icons-react";
-export { IconBorderBottomPlus } from "@tabler/icons-react";
-export { IconBorderBottom } from "@tabler/icons-react";
-export { IconBorderCornerIos } from "@tabler/icons-react";
-export { IconBorderCornerPill } from "@tabler/icons-react";
-export { IconBorderCornerRounded } from "@tabler/icons-react";
-export { IconBorderCornerSquare } from "@tabler/icons-react";
-export { IconBorderCorners } from "@tabler/icons-react";
-export { IconBorderHorizontal } from "@tabler/icons-react";
-export { IconBorderInner } from "@tabler/icons-react";
-export { IconBorderLeftPlus } from "@tabler/icons-react";
-export { IconBorderLeft } from "@tabler/icons-react";
-export { IconBorderNone } from "@tabler/icons-react";
-export { IconBorderOuter } from "@tabler/icons-react";
-export { IconBorderRadius } from "@tabler/icons-react";
-export { IconBorderRightPlus } from "@tabler/icons-react";
-export { IconBorderRight } from "@tabler/icons-react";
-export { IconBorderSides } from "@tabler/icons-react";
-export { IconBorderStyle2 } from "@tabler/icons-react";
-export { IconBorderStyle } from "@tabler/icons-react";
-export { IconBorderTopPlus } from "@tabler/icons-react";
-export { IconBorderTop } from "@tabler/icons-react";
-export { IconBorderVertical } from "@tabler/icons-react";
-export { IconBotId } from "@tabler/icons-react";
-export { IconBottleOff } from "@tabler/icons-react";
-export { IconBottle } from "@tabler/icons-react";
-export { IconBounceLeft } from "@tabler/icons-react";
-export { IconBounceRight } from "@tabler/icons-react";
-export { IconBow } from "@tabler/icons-react";
-export { IconBowlChopsticks } from "@tabler/icons-react";
-export { IconBowlSpoon } from "@tabler/icons-react";
-export { IconBowl } from "@tabler/icons-react";
-export { IconBowling } from "@tabler/icons-react";
-export { IconBoxAlignBottomLeft } from "@tabler/icons-react";
-export { IconBoxAlignBottomRight } from "@tabler/icons-react";
-export { IconBoxAlignBottom } from "@tabler/icons-react";
-export { IconBoxAlignLeft } from "@tabler/icons-react";
-export { IconBoxAlignRight } from "@tabler/icons-react";
-export { IconBoxAlignTopLeft } from "@tabler/icons-react";
-export { IconBoxAlignTopRight } from "@tabler/icons-react";
-export { IconBoxAlignTop } from "@tabler/icons-react";
-export { IconBoxMargin } from "@tabler/icons-react";
-export { IconBoxModel2Off } from "@tabler/icons-react";
-export { IconBoxModel2 } from "@tabler/icons-react";
-export { IconBoxModelOff } from "@tabler/icons-react";
-export { IconBoxModel } from "@tabler/icons-react";
-export { IconBoxMultiple0 } from "@tabler/icons-react";
-export { IconBoxMultiple1 } from "@tabler/icons-react";
-export { IconBoxMultiple2 } from "@tabler/icons-react";
-export { IconBoxMultiple3 } from "@tabler/icons-react";
-export { IconBoxMultiple4 } from "@tabler/icons-react";
-export { IconBoxMultiple5 } from "@tabler/icons-react";
-export { IconBoxMultiple6 } from "@tabler/icons-react";
-export { IconBoxMultiple7 } from "@tabler/icons-react";
-export { IconBoxMultiple8 } from "@tabler/icons-react";
-export { IconBoxMultiple9 } from "@tabler/icons-react";
-export { IconBoxMultiple } from "@tabler/icons-react";
-export { IconBoxOff } from "@tabler/icons-react";
-export { IconBoxPadding } from "@tabler/icons-react";
-export { IconBox } from "@tabler/icons-react";
-export { IconBracesOff } from "@tabler/icons-react";
-export { IconBraces } from "@tabler/icons-react";
-export { IconBracketsAngleOff } from "@tabler/icons-react";
-export { IconBracketsAngle } from "@tabler/icons-react";
-export { IconBracketsContainEnd } from "@tabler/icons-react";
-export { IconBracketsContainStart } from "@tabler/icons-react";
-export { IconBracketsContain } from "@tabler/icons-react";
-export { IconBracketsOff } from "@tabler/icons-react";
-export { IconBrackets } from "@tabler/icons-react";
-export { IconBraille } from "@tabler/icons-react";
-export { IconBrain } from "@tabler/icons-react";
-export { IconBrand4chan } from "@tabler/icons-react";
-export { IconBrandAbstract } from "@tabler/icons-react";
-export { IconBrandAdobeAfterEffects } from "@tabler/icons-react";
-export { IconBrandAdobeIllustrator } from "@tabler/icons-react";
-export { IconBrandAdobeIndesign } from "@tabler/icons-react";
-export { IconBrandAdobePhotoshop } from "@tabler/icons-react";
-export { IconBrandAdobePremiere } from "@tabler/icons-react";
-export { IconBrandAdobeXd } from "@tabler/icons-react";
-export { IconBrandAdobe } from "@tabler/icons-react";
-export { IconBrandAdonisJs } from "@tabler/icons-react";
-export { IconBrandAirbnb } from "@tabler/icons-react";
-export { IconBrandAirtable } from "@tabler/icons-react";
-export { IconBrandAlgolia } from "@tabler/icons-react";
-export { IconBrandAlipay } from "@tabler/icons-react";
-export { IconBrandAlpineJs } from "@tabler/icons-react";
-export { IconBrandAmazon } from "@tabler/icons-react";
-export { IconBrandAmd } from "@tabler/icons-react";
-export { IconBrandAmie } from "@tabler/icons-react";
-export { IconBrandAmigo } from "@tabler/icons-react";
-export { IconBrandAmongUs } from "@tabler/icons-react";
-export { IconBrandAndroid } from "@tabler/icons-react";
-export { IconBrandAngular } from "@tabler/icons-react";
-export { IconBrandAnsible } from "@tabler/icons-react";
-export { IconBrandAo3 } from "@tabler/icons-react";
-export { IconBrandAppgallery } from "@tabler/icons-react";
-export { IconBrandAppleArcade } from "@tabler/icons-react";
-export { IconBrandAppleNews } from "@tabler/icons-react";
-export { IconBrandApplePodcast } from "@tabler/icons-react";
-export { IconBrandApple } from "@tabler/icons-react";
-export { IconBrandAppstore } from "@tabler/icons-react";
-export { IconBrandArc } from "@tabler/icons-react";
-export { IconBrandAsana } from "@tabler/icons-react";
-export { IconBrandAstro } from "@tabler/icons-react";
-export { IconBrandAudible } from "@tabler/icons-react";
-export { IconBrandAuth0 } from "@tabler/icons-react";
-export { IconBrandAws } from "@tabler/icons-react";
-export { IconBrandAzure } from "@tabler/icons-react";
-export { IconBrandBackbone } from "@tabler/icons-react";
-export { IconBrandBadoo } from "@tabler/icons-react";
-export { IconBrandBaidu } from "@tabler/icons-react";
-export { IconBrandBandcamp } from "@tabler/icons-react";
-export { IconBrandBandlab } from "@tabler/icons-react";
-export { IconBrandBeats } from "@tabler/icons-react";
-export { IconBrandBebo } from "@tabler/icons-react";
-export { IconBrandBehance } from "@tabler/icons-react";
-export { IconBrandBilibili } from "@tabler/icons-react";
-export { IconBrandBinance } from "@tabler/icons-react";
-export { IconBrandBing } from "@tabler/icons-react";
-export { IconBrandBitbucket } from "@tabler/icons-react";
-export { IconBrandBlackberry } from "@tabler/icons-react";
-export { IconBrandBlender } from "@tabler/icons-react";
-export { IconBrandBlogger } from "@tabler/icons-react";
-export { IconBrandBluesky } from "@tabler/icons-react";
-export { IconBrandBooking } from "@tabler/icons-react";
-export { IconBrandBootstrap } from "@tabler/icons-react";
-export { IconBrandBulma } from "@tabler/icons-react";
-export { IconBrandBumble } from "@tabler/icons-react";
-export { IconBrandBunpo } from "@tabler/icons-react";
-export { IconBrandCSharp } from "@tabler/icons-react";
-export { IconBrandCake } from "@tabler/icons-react";
-export { IconBrandCakephp } from "@tabler/icons-react";
-export { IconBrandCampaignmonitor } from "@tabler/icons-react";
-export { IconBrandCarbon } from "@tabler/icons-react";
-export { IconBrandCashapp } from "@tabler/icons-react";
-export { IconBrandChrome } from "@tabler/icons-react";
-export { IconBrandCinema4d } from "@tabler/icons-react";
-export { IconBrandCitymapper } from "@tabler/icons-react";
-export { IconBrandCloudflare } from "@tabler/icons-react";
-export { IconBrandCodecov } from "@tabler/icons-react";
-export { IconBrandCodepen } from "@tabler/icons-react";
-export { IconBrandCodesandbox } from "@tabler/icons-react";
-export { IconBrandCohost } from "@tabler/icons-react";
-export { IconBrandCoinbase } from "@tabler/icons-react";
-export { IconBrandComedyCentral } from "@tabler/icons-react";
-export { IconBrandCoreos } from "@tabler/icons-react";
-export { IconBrandCouchdb } from "@tabler/icons-react";
-export { IconBrandCouchsurfing } from "@tabler/icons-react";
-export { IconBrandCpp } from "@tabler/icons-react";
-export { IconBrandCraft } from "@tabler/icons-react";
-export { IconBrandCrunchbase } from "@tabler/icons-react";
-export { IconBrandCss3 } from "@tabler/icons-react";
-export { IconBrandCtemplar } from "@tabler/icons-react";
-export { IconBrandCucumber } from "@tabler/icons-react";
-export { IconBrandCupra } from "@tabler/icons-react";
-export { IconBrandCypress } from "@tabler/icons-react";
-export { IconBrandD3 } from "@tabler/icons-react";
-export { IconBrandDatabricks } from "@tabler/icons-react";
-export { IconBrandDaysCounter } from "@tabler/icons-react";
-export { IconBrandDcos } from "@tabler/icons-react";
-export { IconBrandDebian } from "@tabler/icons-react";
-export { IconBrandDeezer } from "@tabler/icons-react";
-export { IconBrandDeliveroo } from "@tabler/icons-react";
-export { IconBrandDeno } from "@tabler/icons-react";
-export { IconBrandDenodo } from "@tabler/icons-react";
-export { IconBrandDeviantart } from "@tabler/icons-react";
-export { IconBrandDigg } from "@tabler/icons-react";
-export { IconBrandDingtalk } from "@tabler/icons-react";
-export { IconBrandDiscord } from "@tabler/icons-react";
-export { IconBrandDisney } from "@tabler/icons-react";
-export { IconBrandDisqus } from "@tabler/icons-react";
-export { IconBrandDjango } from "@tabler/icons-react";
-export { IconBrandDocker } from "@tabler/icons-react";
-export { IconBrandDoctrine } from "@tabler/icons-react";
-export { IconBrandDolbyDigital } from "@tabler/icons-react";
-export { IconBrandDouban } from "@tabler/icons-react";
-export { IconBrandDribbble } from "@tabler/icons-react";
-export { IconBrandDropbox } from "@tabler/icons-react";
-export { IconBrandDrops } from "@tabler/icons-react";
-export { IconBrandDrupal } from "@tabler/icons-react";
-export { IconBrandEdge } from "@tabler/icons-react";
-export { IconBrandElastic } from "@tabler/icons-react";
-export { IconBrandElectronicArts } from "@tabler/icons-react";
-export { IconBrandEmber } from "@tabler/icons-react";
-export { IconBrandEnvato } from "@tabler/icons-react";
-export { IconBrandEtsy } from "@tabler/icons-react";
-export { IconBrandEvernote } from "@tabler/icons-react";
-export { IconBrandFacebook } from "@tabler/icons-react";
-export { IconBrandFeedly } from "@tabler/icons-react";
-export { IconBrandFigma } from "@tabler/icons-react";
-export { IconBrandFilezilla } from "@tabler/icons-react";
-export { IconBrandFinder } from "@tabler/icons-react";
-export { IconBrandFirebase } from "@tabler/icons-react";
-export { IconBrandFirefox } from "@tabler/icons-react";
-export { IconBrandFiverr } from "@tabler/icons-react";
-export { IconBrandFlickr } from "@tabler/icons-react";
-export { IconBrandFlightradar24 } from "@tabler/icons-react";
-export { IconBrandFlipboard } from "@tabler/icons-react";
-export { IconBrandFlutter } from "@tabler/icons-react";
-export { IconBrandFortnite } from "@tabler/icons-react";
-export { IconBrandFoursquare } from "@tabler/icons-react";
-export { IconBrandFramerMotion } from "@tabler/icons-react";
-export { IconBrandFramer } from "@tabler/icons-react";
-export { IconBrandFunimation } from "@tabler/icons-react";
-export { IconBrandGatsby } from "@tabler/icons-react";
-export { IconBrandGit } from "@tabler/icons-react";
-export { IconBrandGithubCopilot } from "@tabler/icons-react";
-export { IconBrandGithub } from "@tabler/icons-react";
-export { IconBrandGitlab } from "@tabler/icons-react";
-export { IconBrandGmail } from "@tabler/icons-react";
-export { IconBrandGolang } from "@tabler/icons-react";
-export { IconBrandGoogleAnalytics } from "@tabler/icons-react";
-export { IconBrandGoogleBigQuery } from "@tabler/icons-react";
-export { IconBrandGoogleDrive } from "@tabler/icons-react";
-export { IconBrandGoogleFit } from "@tabler/icons-react";
-export { IconBrandGoogleHome } from "@tabler/icons-react";
-export { IconBrandGoogleMaps } from "@tabler/icons-react";
-export { IconBrandGoogleOne } from "@tabler/icons-react";
-export { IconBrandGooglePhotos } from "@tabler/icons-react";
-export { IconBrandGooglePlay } from "@tabler/icons-react";
-export { IconBrandGooglePodcasts } from "@tabler/icons-react";
-export { IconBrandGoogle } from "@tabler/icons-react";
-export { IconBrandGrammarly } from "@tabler/icons-react";
-export { IconBrandGraphql } from "@tabler/icons-react";
-export { IconBrandGravatar } from "@tabler/icons-react";
-export { IconBrandGrindr } from "@tabler/icons-react";
-export { IconBrandGuardian } from "@tabler/icons-react";
-export { IconBrandGumroad } from "@tabler/icons-react";
-export { IconBrandHackerrank } from "@tabler/icons-react";
-export { IconBrandHbo } from "@tabler/icons-react";
-export { IconBrandHeadlessui } from "@tabler/icons-react";
-export { IconBrandHexo } from "@tabler/icons-react";
-export { IconBrandHipchat } from "@tabler/icons-react";
-export { IconBrandHtml5 } from "@tabler/icons-react";
-export { IconBrandInertia } from "@tabler/icons-react";
-export { IconBrandInfakt } from "@tabler/icons-react";
-export { IconBrandInstagram } from "@tabler/icons-react";
-export { IconBrandIntercom } from "@tabler/icons-react";
-export { IconBrandItch } from "@tabler/icons-react";
-export { IconBrandJavascript } from "@tabler/icons-react";
-export { IconBrandJira } from "@tabler/icons-react";
-export { IconBrandJuejin } from "@tabler/icons-react";
-export { IconBrandKakaoTalk } from "@tabler/icons-react";
-export { IconBrandKbin } from "@tabler/icons-react";
-export { IconBrandKick } from "@tabler/icons-react";
-export { IconBrandKickstarter } from "@tabler/icons-react";
-export { IconBrandKotlin } from "@tabler/icons-react";
-export { IconBrandLaravel } from "@tabler/icons-react";
-export { IconBrandLastfm } from "@tabler/icons-react";
-export { IconBrandLeetcode } from "@tabler/icons-react";
-export { IconBrandLetterboxd } from "@tabler/icons-react";
-export { IconBrandLine } from "@tabler/icons-react";
-export { IconBrandLinkedin } from "@tabler/icons-react";
-export { IconBrandLinktree } from "@tabler/icons-react";
-export { IconBrandLinqpad } from "@tabler/icons-react";
-export { IconBrandLivewire } from "@tabler/icons-react";
-export { IconBrandLoom } from "@tabler/icons-react";
-export { IconBrandMailgun } from "@tabler/icons-react";
-export { IconBrandMantine } from "@tabler/icons-react";
-export { IconBrandMastercard } from "@tabler/icons-react";
-export { IconBrandMastodon } from "@tabler/icons-react";
-export { IconBrandMatrix } from "@tabler/icons-react";
-export { IconBrandMcdonalds } from "@tabler/icons-react";
-export { IconBrandMedium } from "@tabler/icons-react";
-export { IconBrandMeetup } from "@tabler/icons-react";
-export { IconBrandMercedes } from "@tabler/icons-react";
-export { IconBrandMessenger } from "@tabler/icons-react";
-export { IconBrandMeta } from "@tabler/icons-react";
-export { IconBrandMetabrainz } from "@tabler/icons-react";
-export { IconBrandMinecraft } from "@tabler/icons-react";
-export { IconBrandMiniprogram } from "@tabler/icons-react";
-export { IconBrandMixpanel } from "@tabler/icons-react";
-export { IconBrandMonday } from "@tabler/icons-react";
-export { IconBrandMongodb } from "@tabler/icons-react";
-export { IconBrandMyOppo } from "@tabler/icons-react";
-export { IconBrandMysql } from "@tabler/icons-react";
-export { IconBrandNationalGeographic } from "@tabler/icons-react";
-export { IconBrandNem } from "@tabler/icons-react";
-export { IconBrandNetbeans } from "@tabler/icons-react";
-export { IconBrandNeteaseMusic } from "@tabler/icons-react";
-export { IconBrandNetflix } from "@tabler/icons-react";
-export { IconBrandNexo } from "@tabler/icons-react";
-export { IconBrandNextcloud } from "@tabler/icons-react";
-export { IconBrandNextjs } from "@tabler/icons-react";
-export { IconBrandNodejs } from "@tabler/icons-react";
-export { IconBrandNordVpn } from "@tabler/icons-react";
-export { IconBrandNotion } from "@tabler/icons-react";
-export { IconBrandNpm } from "@tabler/icons-react";
-export { IconBrandNuxt } from "@tabler/icons-react";
-export { IconBrandNytimes } from "@tabler/icons-react";
-export { IconBrandOauth } from "@tabler/icons-react";
-export { IconBrandOffice } from "@tabler/icons-react";
-export { IconBrandOkRu } from "@tabler/icons-react";
-export { IconBrandOnedrive } from "@tabler/icons-react";
-export { IconBrandOnlyfans } from "@tabler/icons-react";
-export { IconBrandOpenSource } from "@tabler/icons-react";
-export { IconBrandOpenai } from "@tabler/icons-react";
-export { IconBrandOpenvpn } from "@tabler/icons-react";
-export { IconBrandOpera } from "@tabler/icons-react";
-export { IconBrandPagekit } from "@tabler/icons-react";
-export { IconBrandParsinta } from "@tabler/icons-react";
-export { IconBrandPatreon } from "@tabler/icons-react";
-export { IconBrandPaypal } from "@tabler/icons-react";
-export { IconBrandPaypay } from "@tabler/icons-react";
-export { IconBrandPeanut } from "@tabler/icons-react";
-export { IconBrandPepsi } from "@tabler/icons-react";
-export { IconBrandPhp } from "@tabler/icons-react";
-export { IconBrandPicsart } from "@tabler/icons-react";
-export { IconBrandPinterest } from "@tabler/icons-react";
-export { IconBrandPlanetscale } from "@tabler/icons-react";
-export { IconBrandPnpm } from "@tabler/icons-react";
-export { IconBrandPocket } from "@tabler/icons-react";
-export { IconBrandPolymer } from "@tabler/icons-react";
-export { IconBrandPowershell } from "@tabler/icons-react";
-export { IconBrandPrintables } from "@tabler/icons-react";
-export { IconBrandPrisma } from "@tabler/icons-react";
-export { IconBrandProducthunt } from "@tabler/icons-react";
-export { IconBrandPushbullet } from "@tabler/icons-react";
-export { IconBrandPushover } from "@tabler/icons-react";
-export { IconBrandPython } from "@tabler/icons-react";
-export { IconBrandQq } from "@tabler/icons-react";
-export { IconBrandRadixUi } from "@tabler/icons-react";
-export { IconBrandReactNative } from "@tabler/icons-react";
-export { IconBrandReact } from "@tabler/icons-react";
-export { IconBrandReason } from "@tabler/icons-react";
-export { IconBrandReddit } from "@tabler/icons-react";
-export { IconBrandRedhat } from "@tabler/icons-react";
-export { IconBrandRedux } from "@tabler/icons-react";
-export { IconBrandRevolut } from "@tabler/icons-react";
-export { IconBrandRumble } from "@tabler/icons-react";
-export { IconBrandRust } from "@tabler/icons-react";
-export { IconBrandSafari } from "@tabler/icons-react";
-export { IconBrandSamsungpass } from "@tabler/icons-react";
-export { IconBrandSass } from "@tabler/icons-react";
-export { IconBrandSentry } from "@tabler/icons-react";
-export { IconBrandSharik } from "@tabler/icons-react";
-export { IconBrandShazam } from "@tabler/icons-react";
-export { IconBrandShopee } from "@tabler/icons-react";
-export { IconBrandSignal } from "@tabler/icons-react";
-export { IconBrandSketch } from "@tabler/icons-react";
-export { IconBrandSkype } from "@tabler/icons-react";
-export { IconBrandSlack } from "@tabler/icons-react";
-export { IconBrandSnapchat } from "@tabler/icons-react";
-export { IconBrandSnapseed } from "@tabler/icons-react";
-export { IconBrandSnowflake } from "@tabler/icons-react";
-export { IconBrandSocketIo } from "@tabler/icons-react";
-export { IconBrandSolidjs } from "@tabler/icons-react";
-export { IconBrandSoundcloud } from "@tabler/icons-react";
-export { IconBrandSpacehey } from "@tabler/icons-react";
-export { IconBrandSpeedtest } from "@tabler/icons-react";
-export { IconBrandSpotify } from "@tabler/icons-react";
-export { IconBrandStackoverflow } from "@tabler/icons-react";
-export { IconBrandStackshare } from "@tabler/icons-react";
-export { IconBrandSteam } from "@tabler/icons-react";
-export { IconBrandStellar } from "@tabler/icons-react";
-export { IconBrandStocktwits } from "@tabler/icons-react";
-export { IconBrandStorj } from "@tabler/icons-react";
-export { IconBrandStorybook } from "@tabler/icons-react";
-export { IconBrandStorytel } from "@tabler/icons-react";
-export { IconBrandStrava } from "@tabler/icons-react";
-export { IconBrandStripe } from "@tabler/icons-react";
-export { IconBrandSublimeText } from "@tabler/icons-react";
-export { IconBrandSugarizer } from "@tabler/icons-react";
-export { IconBrandSupabase } from "@tabler/icons-react";
-export { IconBrandSuperhuman } from "@tabler/icons-react";
-export { IconBrandSupernova } from "@tabler/icons-react";
-export { IconBrandSurfshark } from "@tabler/icons-react";
-export { IconBrandSvelte } from "@tabler/icons-react";
-export { IconBrandSwift } from "@tabler/icons-react";
-export { IconBrandSymfony } from "@tabler/icons-react";
-export { IconBrandTabler } from "@tabler/icons-react";
-export { IconBrandTabnine } from "@tabler/icons-react";
-export { IconBrandTailwind } from "@tabler/icons-react";
-export { IconBrandTaobao } from "@tabler/icons-react";
-export { IconBrandTeams } from "@tabler/icons-react";
-export { IconBrandTed } from "@tabler/icons-react";
-export { IconBrandTelegram } from "@tabler/icons-react";
-export { IconBrandTerraform } from "@tabler/icons-react";
-export { IconBrandTesla } from "@tabler/icons-react";
-export { IconBrandTether } from "@tabler/icons-react";
-export { IconBrandThingiverse } from "@tabler/icons-react";
-export { IconBrandThreads } from "@tabler/icons-react";
-export { IconBrandThreejs } from "@tabler/icons-react";
-export { IconBrandTidal } from "@tabler/icons-react";
-export { IconBrandTiktok } from "@tabler/icons-react";
-export { IconBrandTinder } from "@tabler/icons-react";
-export { IconBrandTopbuzz } from "@tabler/icons-react";
-export { IconBrandTorchain } from "@tabler/icons-react";
-export { IconBrandToyota } from "@tabler/icons-react";
-export { IconBrandTrello } from "@tabler/icons-react";
-export { IconBrandTripadvisor } from "@tabler/icons-react";
-export { IconBrandTumblr } from "@tabler/icons-react";
-export { IconBrandTwilio } from "@tabler/icons-react";
-export { IconBrandTwitch } from "@tabler/icons-react";
-export { IconBrandTwitter } from "@tabler/icons-react";
-export { IconBrandTypescript } from "@tabler/icons-react";
-export { IconBrandUber } from "@tabler/icons-react";
-export { IconBrandUbuntu } from "@tabler/icons-react";
-export { IconBrandUnity } from "@tabler/icons-react";
-export { IconBrandUnsplash } from "@tabler/icons-react";
-export { IconBrandUpwork } from "@tabler/icons-react";
-export { IconBrandValorant } from "@tabler/icons-react";
-export { IconBrandVechain } from "@tabler/icons-react";
-export { IconBrandVercel } from "@tabler/icons-react";
-export { IconBrandVimeo } from "@tabler/icons-react";
-export { IconBrandVinted } from "@tabler/icons-react";
-export { IconBrandVisa } from "@tabler/icons-react";
-export { IconBrandVisualStudio } from "@tabler/icons-react";
-export { IconBrandVite } from "@tabler/icons-react";
-export { IconBrandVivaldi } from "@tabler/icons-react";
-export { IconBrandVk } from "@tabler/icons-react";
-export { IconBrandVlc } from "@tabler/icons-react";
-export { IconBrandVolkswagen } from "@tabler/icons-react";
-export { IconBrandVsco } from "@tabler/icons-react";
-export { IconBrandVscode } from "@tabler/icons-react";
-export { IconBrandVue } from "@tabler/icons-react";
-export { IconBrandWalmart } from "@tabler/icons-react";
-export { IconBrandWaze } from "@tabler/icons-react";
-export { IconBrandWebflow } from "@tabler/icons-react";
-export { IconBrandWechat } from "@tabler/icons-react";
-export { IconBrandWeibo } from "@tabler/icons-react";
-export { IconBrandWhatsapp } from "@tabler/icons-react";
-export { IconBrandWikipedia } from "@tabler/icons-react";
-export { IconBrandWindows } from "@tabler/icons-react";
-export { IconBrandWindy } from "@tabler/icons-react";
-export { IconBrandWish } from "@tabler/icons-react";
-export { IconBrandWix } from "@tabler/icons-react";
-export { IconBrandWordpress } from "@tabler/icons-react";
-export { IconBrandX } from "@tabler/icons-react";
-export { IconBrandXamarin } from "@tabler/icons-react";
-export { IconBrandXbox } from "@tabler/icons-react";
-export { IconBrandXdeep } from "@tabler/icons-react";
-export { IconBrandXing } from "@tabler/icons-react";
-export { IconBrandYahoo } from "@tabler/icons-react";
-export { IconBrandYandex } from "@tabler/icons-react";
-export { IconBrandYarn } from "@tabler/icons-react";
-export { IconBrandYatse } from "@tabler/icons-react";
-export { IconBrandYcombinator } from "@tabler/icons-react";
-export { IconBrandYoutubeKids } from "@tabler/icons-react";
-export { IconBrandYoutube } from "@tabler/icons-react";
-export { IconBrandZalando } from "@tabler/icons-react";
-export { IconBrandZapier } from "@tabler/icons-react";
-export { IconBrandZeit } from "@tabler/icons-react";
-export { IconBrandZhihu } from "@tabler/icons-react";
-export { IconBrandZoom } from "@tabler/icons-react";
-export { IconBrandZulip } from "@tabler/icons-react";
-export { IconBrandZwift } from "@tabler/icons-react";
-export { IconBreadOff } from "@tabler/icons-react";
-export { IconBread } from "@tabler/icons-react";
-export { IconBriefcase2 } from "@tabler/icons-react";
-export { IconBriefcaseOff } from "@tabler/icons-react";
-export { IconBriefcase } from "@tabler/icons-react";
-export { IconBrightness2 } from "@tabler/icons-react";
-export { IconBrightnessAuto } from "@tabler/icons-react";
-export { IconBrightnessDown } from "@tabler/icons-react";
-export { IconBrightnessHalf } from "@tabler/icons-react";
-export { IconBrightnessOff } from "@tabler/icons-react";
-export { IconBrightnessUp } from "@tabler/icons-react";
-export { IconBrightness } from "@tabler/icons-react";
-export { IconBroadcastOff } from "@tabler/icons-react";
-export { IconBroadcast } from "@tabler/icons-react";
-export { IconBrowserCheck } from "@tabler/icons-react";
-export { IconBrowserMaximize } from "@tabler/icons-react";
-export { IconBrowserMinus } from "@tabler/icons-react";
-export { IconBrowserOff } from "@tabler/icons-react";
-export { IconBrowserPlus } from "@tabler/icons-react";
-export { IconBrowserShare } from "@tabler/icons-react";
-export { IconBrowserX } from "@tabler/icons-react";
-export { IconBrowser } from "@tabler/icons-react";
-export { IconBrushOff } from "@tabler/icons-react";
-export { IconBrush } from "@tabler/icons-react";
-export { IconBubbleMinus } from "@tabler/icons-react";
-export { IconBubblePlus } from "@tabler/icons-react";
-export { IconBubbleTea2 } from "@tabler/icons-react";
-export { IconBubbleTea } from "@tabler/icons-react";
-export { IconBubbleText } from "@tabler/icons-react";
-export { IconBubbleX } from "@tabler/icons-react";
-export { IconBubble } from "@tabler/icons-react";
-export { IconBucketDroplet } from "@tabler/icons-react";
-export { IconBucketOff } from "@tabler/icons-react";
-export { IconBucket } from "@tabler/icons-react";
-export { IconBugOff } from "@tabler/icons-react";
-export { IconBug } from "@tabler/icons-react";
-export { IconBuildingAirport } from "@tabler/icons-react";
-export { IconBuildingArch } from "@tabler/icons-react";
-export { IconBuildingBank } from "@tabler/icons-react";
-export { IconBuildingBridge2 } from "@tabler/icons-react";
-export { IconBuildingBridge } from "@tabler/icons-react";
-export { IconBuildingBroadcastTower } from "@tabler/icons-react";
-export { IconBuildingBurjAlArab } from "@tabler/icons-react";
-export { IconBuildingCarousel } from "@tabler/icons-react";
-export { IconBuildingCastle } from "@tabler/icons-react";
-export { IconBuildingChurch } from "@tabler/icons-react";
-export { IconBuildingCircus } from "@tabler/icons-react";
-export { IconBuildingCog } from "@tabler/icons-react";
-export { IconBuildingCommunity } from "@tabler/icons-react";
-export { IconBuildingCottage } from "@tabler/icons-react";
-export { IconBuildingEiffelTower } from "@tabler/icons-react";
-export { IconBuildingEstate } from "@tabler/icons-react";
-export { IconBuildingFactory2 } from "@tabler/icons-react";
-export { IconBuildingFactory } from "@tabler/icons-react";
-export { IconBuildingFortress } from "@tabler/icons-react";
-export { IconBuildingHospital } from "@tabler/icons-react";
-export { IconBuildingLighthouse } from "@tabler/icons-react";
-export { IconBuildingMinus } from "@tabler/icons-react";
-export { IconBuildingMonument } from "@tabler/icons-react";
-export { IconBuildingMosque } from "@tabler/icons-react";
-export { IconBuildingOff } from "@tabler/icons-react";
-export { IconBuildingPavilion } from "@tabler/icons-react";
-export { IconBuildingPlus } from "@tabler/icons-react";
-export { IconBuildingSkyscraper } from "@tabler/icons-react";
-export { IconBuildingStadium } from "@tabler/icons-react";
-export { IconBuildingStore } from "@tabler/icons-react";
-export { IconBuildingTunnel } from "@tabler/icons-react";
-export { IconBuildingWarehouse } from "@tabler/icons-react";
-export { IconBuildingWindTurbine } from "@tabler/icons-react";
-export { IconBuilding } from "@tabler/icons-react";
-export { IconBuildings } from "@tabler/icons-react";
-export { IconBulbOff } from "@tabler/icons-react";
-export { IconBulb } from "@tabler/icons-react";
-export { IconBulldozer } from "@tabler/icons-react";
-export { IconBurger } from "@tabler/icons-react";
-export { IconBusOff } from "@tabler/icons-react";
-export { IconBusStop } from "@tabler/icons-react";
-export { IconBus } from "@tabler/icons-react";
-export { IconBusinessplan } from "@tabler/icons-react";
-export { IconButterfly } from "@tabler/icons-react";
-export { IconCactusOff } from "@tabler/icons-react";
-export { IconCactus } from "@tabler/icons-react";
-export { IconCakeOff } from "@tabler/icons-react";
-export { IconCakeRoll } from "@tabler/icons-react";
-export { IconCake } from "@tabler/icons-react";
-export { IconCalculatorOff } from "@tabler/icons-react";
-export { IconCalculator } from "@tabler/icons-react";
-export { IconCalendarBolt } from "@tabler/icons-react";
-export { IconCalendarCancel } from "@tabler/icons-react";
-export { IconCalendarCheck } from "@tabler/icons-react";
-export { IconCalendarClock } from "@tabler/icons-react";
-export { IconCalendarCode } from "@tabler/icons-react";
-export { IconCalendarCog } from "@tabler/icons-react";
-export { IconCalendarDollar } from "@tabler/icons-react";
-export { IconCalendarDot } from "@tabler/icons-react";
-export { IconCalendarDown } from "@tabler/icons-react";
-export { IconCalendarDue } from "@tabler/icons-react";
-export { IconCalendarEvent } from "@tabler/icons-react";
-export { IconCalendarExclamation } from "@tabler/icons-react";
-export { IconCalendarHeart } from "@tabler/icons-react";
-export { IconCalendarMinus } from "@tabler/icons-react";
-export { IconCalendarMonth } from "@tabler/icons-react";
-export { IconCalendarOff } from "@tabler/icons-react";
-export { IconCalendarPause } from "@tabler/icons-react";
-export { IconCalendarPin } from "@tabler/icons-react";
-export { IconCalendarPlus } from "@tabler/icons-react";
-export { IconCalendarQuestion } from "@tabler/icons-react";
-export { IconCalendarRepeat } from "@tabler/icons-react";
-export { IconCalendarSad } from "@tabler/icons-react";
-export { IconCalendarSearch } from "@tabler/icons-react";
-export { IconCalendarShare } from "@tabler/icons-react";
-export { IconCalendarSmile } from "@tabler/icons-react";
-export { IconCalendarStar } from "@tabler/icons-react";
-export { IconCalendarStats } from "@tabler/icons-react";
-export { IconCalendarTime } from "@tabler/icons-react";
-export { IconCalendarUp } from "@tabler/icons-react";
-export { IconCalendarUser } from "@tabler/icons-react";
-export { IconCalendarWeek } from "@tabler/icons-react";
-export { IconCalendarX } from "@tabler/icons-react";
-export { IconCalendar } from "@tabler/icons-react";
-export { IconCameraAi } from "@tabler/icons-react";
-export { IconCameraBitcoin } from "@tabler/icons-react";
-export { IconCameraBolt } from "@tabler/icons-react";
-export { IconCameraCancel } from "@tabler/icons-react";
-export { IconCameraCheck } from "@tabler/icons-react";
-export { IconCameraCode } from "@tabler/icons-react";
-export { IconCameraCog } from "@tabler/icons-react";
-export { IconCameraDollar } from "@tabler/icons-react";
-export { IconCameraDown } from "@tabler/icons-react";
-export { IconCameraExclamation } from "@tabler/icons-react";
-export { IconCameraHeart } from "@tabler/icons-react";
-export { IconCameraMinus } from "@tabler/icons-react";
-export { IconCameraMoon } from "@tabler/icons-react";
-export { IconCameraOff } from "@tabler/icons-react";
-export { IconCameraPause } from "@tabler/icons-react";
-export { IconCameraPin } from "@tabler/icons-react";
-export { IconCameraPlus } from "@tabler/icons-react";
-export { IconCameraQuestion } from "@tabler/icons-react";
-export { IconCameraRotate } from "@tabler/icons-react";
-export { IconCameraSearch } from "@tabler/icons-react";
-export { IconCameraSelfie } from "@tabler/icons-react";
-export { IconCameraShare } from "@tabler/icons-react";
-export { IconCameraSpark } from "@tabler/icons-react";
-export { IconCameraStar } from "@tabler/icons-react";
-export { IconCameraUp } from "@tabler/icons-react";
-export { IconCameraX } from "@tabler/icons-react";
-export { IconCamera } from "@tabler/icons-react";
-export { IconCamper } from "@tabler/icons-react";
-export { IconCampfire } from "@tabler/icons-react";
-export { IconCanary } from "@tabler/icons-react";
-export { IconCancel } from "@tabler/icons-react";
-export { IconCandle } from "@tabler/icons-react";
-export { IconCandyOff } from "@tabler/icons-react";
-export { IconCandy } from "@tabler/icons-react";
-export { IconCane } from "@tabler/icons-react";
-export { IconCannabis } from "@tabler/icons-react";
-export { IconCapProjecting } from "@tabler/icons-react";
-export { IconCapRounded } from "@tabler/icons-react";
-export { IconCapStraight } from "@tabler/icons-react";
-export { IconCapsuleHorizontal } from "@tabler/icons-react";
-export { IconCapsule } from "@tabler/icons-react";
-export { IconCaptureOff } from "@tabler/icons-react";
-export { IconCapture } from "@tabler/icons-react";
-export { IconCar4wd } from "@tabler/icons-react";
-export { IconCarCrane } from "@tabler/icons-react";
-export { IconCarCrash } from "@tabler/icons-react";
-export { IconCarDoor } from "@tabler/icons-react";
-export { IconCarFan1 } from "@tabler/icons-react";
-export { IconCarFan2 } from "@tabler/icons-react";
-export { IconCarFan3 } from "@tabler/icons-react";
-export { IconCarFanAuto } from "@tabler/icons-react";
-export { IconCarFan } from "@tabler/icons-react";
-export { IconCarGarage } from "@tabler/icons-react";
-export { IconCarLifter } from "@tabler/icons-react";
-export { IconCarOffRoad } from "@tabler/icons-react";
-export { IconCarOff } from "@tabler/icons-react";
-export { IconCarSuspension } from "@tabler/icons-react";
-export { IconCarSuv } from "@tabler/icons-react";
-export { IconCarTurbine } from "@tabler/icons-react";
-export { IconCar } from "@tabler/icons-react";
-export { IconCarambola } from "@tabler/icons-react";
-export { IconCaravan } from "@tabler/icons-react";
-export { IconCardboardsOff } from "@tabler/icons-react";
-export { IconCardboards } from "@tabler/icons-react";
-export { IconCards } from "@tabler/icons-react";
-export { IconCaretDown } from "@tabler/icons-react";
-export { IconCaretLeftRight } from "@tabler/icons-react";
-export { IconCaretLeft } from "@tabler/icons-react";
-export { IconCaretRight } from "@tabler/icons-react";
-export { IconCaretUpDown } from "@tabler/icons-react";
-export { IconCaretUp } from "@tabler/icons-react";
-export { IconCarouselHorizontal } from "@tabler/icons-react";
-export { IconCarouselVertical } from "@tabler/icons-react";
-export { IconCarrotOff } from "@tabler/icons-react";
-export { IconCarrot } from "@tabler/icons-react";
-export { IconCashBanknoteEdit } from "@tabler/icons-react";
-export { IconCashBanknoteHeart } from "@tabler/icons-react";
-export { IconCashBanknoteMinus } from "@tabler/icons-react";
-export { IconCashBanknoteMoveBack } from "@tabler/icons-react";
-export { IconCashBanknoteMove } from "@tabler/icons-react";
-export { IconCashBanknoteOff } from "@tabler/icons-react";
-export { IconCashBanknotePlus } from "@tabler/icons-react";
-export { IconCashBanknote } from "@tabler/icons-react";
-export { IconCashCoin } from "@tabler/icons-react";
-export { IconCashEdit } from "@tabler/icons-react";
-export { IconCashHeart } from "@tabler/icons-react";
-export { IconCashMinus } from "@tabler/icons-react";
-export { IconCashMoveBack } from "@tabler/icons-react";
-export { IconCashMove } from "@tabler/icons-react";
-export { IconCashOff } from "@tabler/icons-react";
-export { IconCashPlus } from "@tabler/icons-react";
-export { IconCashRegister } from "@tabler/icons-react";
-export { IconCash } from "@tabler/icons-react";
-export { IconCastOff } from "@tabler/icons-react";
-export { IconCast } from "@tabler/icons-react";
-export { IconCat } from "@tabler/icons-react";
-export { IconCategory2 } from "@tabler/icons-react";
-export { IconCategoryMinus } from "@tabler/icons-react";
-export { IconCategoryPlus } from "@tabler/icons-react";
-export { IconCategory } from "@tabler/icons-react";
-export { IconCeOff } from "@tabler/icons-react";
-export { IconCe } from "@tabler/icons-react";
-export { IconCellSignal1 } from "@tabler/icons-react";
-export { IconCellSignal2 } from "@tabler/icons-react";
-export { IconCellSignal3 } from "@tabler/icons-react";
-export { IconCellSignal4 } from "@tabler/icons-react";
-export { IconCellSignal5 } from "@tabler/icons-react";
-export { IconCellSignalOff } from "@tabler/icons-react";
-export { IconCell } from "@tabler/icons-react";
-export { IconCertificate2Off } from "@tabler/icons-react";
-export { IconCertificate2 } from "@tabler/icons-react";
-export { IconCertificateOff } from "@tabler/icons-react";
-export { IconCertificate } from "@tabler/icons-react";
-export { IconChairDirector } from "@tabler/icons-react";
-export { IconChalkboardOff } from "@tabler/icons-react";
-export { IconChalkboardTeacher } from "@tabler/icons-react";
-export { IconChalkboard } from "@tabler/icons-react";
-export { IconChargingPile } from "@tabler/icons-react";
-export { IconChartArcs3 } from "@tabler/icons-react";
-export { IconChartArcs } from "@tabler/icons-react";
-export { IconChartAreaLine } from "@tabler/icons-react";
-export { IconChartArea } from "@tabler/icons-react";
-export { IconChartArrowsVertical } from "@tabler/icons-react";
-export { IconChartArrows } from "@tabler/icons-react";
-export { IconChartBarOff } from "@tabler/icons-react";
-export { IconChartBarPopular } from "@tabler/icons-react";
-export { IconChartBar } from "@tabler/icons-react";
-export { IconChartBubble } from "@tabler/icons-react";
-export { IconChartCandle } from "@tabler/icons-react";
-export { IconChartCircles } from "@tabler/icons-react";
-export { IconChartCohort } from "@tabler/icons-react";
-export { IconChartColumn } from "@tabler/icons-react";
-export { IconChartCovariate } from "@tabler/icons-react";
-export { IconChartDonut2 } from "@tabler/icons-react";
-export { IconChartDonut3 } from "@tabler/icons-react";
-export { IconChartDonut4 } from "@tabler/icons-react";
-export { IconChartDonut } from "@tabler/icons-react";
-export { IconChartDots2 } from "@tabler/icons-react";
-export { IconChartDots3 } from "@tabler/icons-react";
-export { IconChartDots } from "@tabler/icons-react";
-export { IconChartFunnel } from "@tabler/icons-react";
-export { IconChartGridDots } from "@tabler/icons-react";
-export { IconChartHistogram } from "@tabler/icons-react";
-export { IconChartInfographic } from "@tabler/icons-react";
-export { IconChartLine } from "@tabler/icons-react";
-export { IconChartPie2 } from "@tabler/icons-react";
-export { IconChartPie3 } from "@tabler/icons-react";
-export { IconChartPie4 } from "@tabler/icons-react";
-export { IconChartPieOff } from "@tabler/icons-react";
-export { IconChartPie } from "@tabler/icons-react";
-export { IconChartPpf } from "@tabler/icons-react";
-export { IconChartRadar } from "@tabler/icons-react";
-export { IconChartSankey } from "@tabler/icons-react";
-export { IconChartScatter3d } from "@tabler/icons-react";
-export { IconChartScatter } from "@tabler/icons-react";
-export { IconChartTreemap } from "@tabler/icons-react";
-export { IconCheck } from "@tabler/icons-react";
-export { IconCheckbox } from "@tabler/icons-react";
-export { IconChecklist } from "@tabler/icons-react";
-export { IconChecks } from "@tabler/icons-react";
-export { IconCheckupList } from "@tabler/icons-react";
-export { IconCheese } from "@tabler/icons-react";
-export { IconChefHatOff } from "@tabler/icons-react";
-export { IconChefHat } from "@tabler/icons-react";
-export { IconCherry } from "@tabler/icons-react";
-export { IconChessBishop } from "@tabler/icons-react";
-export { IconChessKing } from "@tabler/icons-react";
-export { IconChessKnight } from "@tabler/icons-react";
-export { IconChessQueen } from "@tabler/icons-react";
-export { IconChessRook } from "@tabler/icons-react";
-export { IconChess } from "@tabler/icons-react";
-export { IconChevronCompactDown } from "@tabler/icons-react";
-export { IconChevronCompactLeft } from "@tabler/icons-react";
-export { IconChevronCompactRight } from "@tabler/icons-react";
-export { IconChevronCompactUp } from "@tabler/icons-react";
-export { IconChevronDownLeft } from "@tabler/icons-react";
-export { IconChevronDownRight } from "@tabler/icons-react";
-export { IconChevronDown } from "@tabler/icons-react";
-export { IconChevronLeftPipe } from "@tabler/icons-react";
-export { IconChevronLeft } from "@tabler/icons-react";
-export { IconChevronRightPipe } from "@tabler/icons-react";
-export { IconChevronRight } from "@tabler/icons-react";
-export { IconChevronUpLeft } from "@tabler/icons-react";
-export { IconChevronUpRight } from "@tabler/icons-react";
-export { IconChevronUp } from "@tabler/icons-react";
-export { IconChevronsDownLeft } from "@tabler/icons-react";
-export { IconChevronsDownRight } from "@tabler/icons-react";
-export { IconChevronsDown } from "@tabler/icons-react";
-export { IconChevronsLeft } from "@tabler/icons-react";
-export { IconChevronsRight } from "@tabler/icons-react";
-export { IconChevronsUpLeft } from "@tabler/icons-react";
-export { IconChevronsUpRight } from "@tabler/icons-react";
-export { IconChevronsUp } from "@tabler/icons-react";
-export { IconChisel } from "@tabler/icons-react";
-export { IconChocolate } from "@tabler/icons-react";
-export { IconChristmasBall } from "@tabler/icons-react";
-export { IconChristmasTreeOff } from "@tabler/icons-react";
-export { IconChristmasTree } from "@tabler/icons-react";
-export { IconCircleArrowDownLeft } from "@tabler/icons-react";
-export { IconCircleArrowDownRight } from "@tabler/icons-react";
-export { IconCircleArrowDown } from "@tabler/icons-react";
-export { IconCircleArrowLeft } from "@tabler/icons-react";
-export { IconCircleArrowRight } from "@tabler/icons-react";
-export { IconCircleArrowUpLeft } from "@tabler/icons-react";
-export { IconCircleArrowUpRight } from "@tabler/icons-react";
-export { IconCircleArrowUp } from "@tabler/icons-react";
-export { IconCircleAsterisk } from "@tabler/icons-react";
-export { IconCircleCaretDown } from "@tabler/icons-react";
-export { IconCircleCaretLeft } from "@tabler/icons-react";
-export { IconCircleCaretRight } from "@tabler/icons-react";
-export { IconCircleCaretUp } from "@tabler/icons-react";
-export { IconCircleCheck } from "@tabler/icons-react";
-export { IconCircleChevronDown } from "@tabler/icons-react";
-export { IconCircleChevronLeft } from "@tabler/icons-react";
-export { IconCircleChevronRight } from "@tabler/icons-react";
-export { IconCircleChevronUp } from "@tabler/icons-react";
-export { IconCircleChevronsDown } from "@tabler/icons-react";
-export { IconCircleChevronsLeft } from "@tabler/icons-react";
-export { IconCircleChevronsRight } from "@tabler/icons-react";
-export { IconCircleChevronsUp } from "@tabler/icons-react";
-export { IconCircleDashedCheck } from "@tabler/icons-react";
-export { IconCircleDashedLetterA } from "@tabler/icons-react";
-export { IconCircleDashedLetterB } from "@tabler/icons-react";
-export { IconCircleDashedLetterC } from "@tabler/icons-react";
-export { IconCircleDashedLetterD } from "@tabler/icons-react";
-export { IconCircleDashedLetterE } from "@tabler/icons-react";
-export { IconCircleDashedLetterF } from "@tabler/icons-react";
-export { IconCircleDashedLetterG } from "@tabler/icons-react";
-export { IconCircleDashedLetterH } from "@tabler/icons-react";
-export { IconCircleDashedLetterI } from "@tabler/icons-react";
-export { IconCircleDashedLetterJ } from "@tabler/icons-react";
-export { IconCircleDashedLetterK } from "@tabler/icons-react";
-export { IconCircleDashedLetterL } from "@tabler/icons-react";
-export { IconCircleDashedLetterM } from "@tabler/icons-react";
-export { IconCircleDashedLetterN } from "@tabler/icons-react";
-export { IconCircleDashedLetterO } from "@tabler/icons-react";
-export { IconCircleDashedLetterP } from "@tabler/icons-react";
-export { IconCircleDashedLetterQ } from "@tabler/icons-react";
-export { IconCircleDashedLetterR } from "@tabler/icons-react";
-export { IconCircleDashedLetterS } from "@tabler/icons-react";
-export { IconCircleDashedLetterT } from "@tabler/icons-react";
-export { IconCircleDashedLetterU } from "@tabler/icons-react";
-export { IconCircleDashedLetterV } from "@tabler/icons-react";
-export { IconCircleDashedLetterW } from "@tabler/icons-react";
-export { IconCircleDashedLetterX } from "@tabler/icons-react";
-export { IconCircleDashedLetterY } from "@tabler/icons-react";
-export { IconCircleDashedLetterZ } from "@tabler/icons-react";
-export { IconCircleDashedMinus } from "@tabler/icons-react";
-export { IconCircleDashedNumber0 } from "@tabler/icons-react";
-export { IconCircleDashedNumber1 } from "@tabler/icons-react";
-export { IconCircleDashedNumber2 } from "@tabler/icons-react";
-export { IconCircleDashedNumber3 } from "@tabler/icons-react";
-export { IconCircleDashedNumber4 } from "@tabler/icons-react";
-export { IconCircleDashedNumber5 } from "@tabler/icons-react";
-export { IconCircleDashedNumber6 } from "@tabler/icons-react";
-export { IconCircleDashedNumber7 } from "@tabler/icons-react";
-export { IconCircleDashedNumber8 } from "@tabler/icons-react";
-export { IconCircleDashedNumber9 } from "@tabler/icons-react";
-export { IconCircleDashedPercentage } from "@tabler/icons-react";
-export { IconCircleDashedPlus } from "@tabler/icons-react";
-export { IconCircleDashedX } from "@tabler/icons-react";
-export { IconCircleDashed } from "@tabler/icons-react";
-export { IconCircleDot } from "@tabler/icons-react";
-export { IconCircleDottedLetterA } from "@tabler/icons-react";
-export { IconCircleDottedLetterB } from "@tabler/icons-react";
-export { IconCircleDottedLetterC } from "@tabler/icons-react";
-export { IconCircleDottedLetterD } from "@tabler/icons-react";
-export { IconCircleDottedLetterE } from "@tabler/icons-react";
-export { IconCircleDottedLetterF } from "@tabler/icons-react";
-export { IconCircleDottedLetterG } from "@tabler/icons-react";
-export { IconCircleDottedLetterH } from "@tabler/icons-react";
-export { IconCircleDottedLetterI } from "@tabler/icons-react";
-export { IconCircleDottedLetterJ } from "@tabler/icons-react";
-export { IconCircleDottedLetterK } from "@tabler/icons-react";
-export { IconCircleDottedLetterL } from "@tabler/icons-react";
-export { IconCircleDottedLetterM } from "@tabler/icons-react";
-export { IconCircleDottedLetterN } from "@tabler/icons-react";
-export { IconCircleDottedLetterO } from "@tabler/icons-react";
-export { IconCircleDottedLetterP } from "@tabler/icons-react";
-export { IconCircleDottedLetterQ } from "@tabler/icons-react";
-export { IconCircleDottedLetterR } from "@tabler/icons-react";
-export { IconCircleDottedLetterS } from "@tabler/icons-react";
-export { IconCircleDottedLetterT } from "@tabler/icons-react";
-export { IconCircleDottedLetterU } from "@tabler/icons-react";
-export { IconCircleDottedLetterV } from "@tabler/icons-react";
-export { IconCircleDottedLetterW } from "@tabler/icons-react";
-export { IconCircleDottedLetterX } from "@tabler/icons-react";
-export { IconCircleDottedLetterY } from "@tabler/icons-react";
-export { IconCircleDottedLetterZ } from "@tabler/icons-react";
-export { IconCircleDotted } from "@tabler/icons-react";
-export { IconCircleHalf2 } from "@tabler/icons-react";
-export { IconCircleHalfVertical } from "@tabler/icons-react";
-export { IconCircleHalf } from "@tabler/icons-react";
-export { IconCircleHeart } from "@tabler/icons-react";
-export { IconCircleKey } from "@tabler/icons-react";
-export { IconCircleLetterA } from "@tabler/icons-react";
-export { IconCircleLetterB } from "@tabler/icons-react";
-export { IconCircleLetterC } from "@tabler/icons-react";
-export { IconCircleLetterD } from "@tabler/icons-react";
-export { IconCircleLetterE } from "@tabler/icons-react";
-export { IconCircleLetterF } from "@tabler/icons-react";
-export { IconCircleLetterG } from "@tabler/icons-react";
-export { IconCircleLetterH } from "@tabler/icons-react";
-export { IconCircleLetterI } from "@tabler/icons-react";
-export { IconCircleLetterJ } from "@tabler/icons-react";
-export { IconCircleLetterK } from "@tabler/icons-react";
-export { IconCircleLetterL } from "@tabler/icons-react";
-export { IconCircleLetterM } from "@tabler/icons-react";
-export { IconCircleLetterN } from "@tabler/icons-react";
-export { IconCircleLetterO } from "@tabler/icons-react";
-export { IconCircleLetterP } from "@tabler/icons-react";
-export { IconCircleLetterQ } from "@tabler/icons-react";
-export { IconCircleLetterR } from "@tabler/icons-react";
-export { IconCircleLetterS } from "@tabler/icons-react";
-export { IconCircleLetterT } from "@tabler/icons-react";
-export { IconCircleLetterU } from "@tabler/icons-react";
-export { IconCircleLetterV } from "@tabler/icons-react";
-export { IconCircleLetterW } from "@tabler/icons-react";
-export { IconCircleLetterX } from "@tabler/icons-react";
-export { IconCircleLetterY } from "@tabler/icons-react";
-export { IconCircleLetterZ } from "@tabler/icons-react";
-export { IconCircleMinus2 } from "@tabler/icons-react";
-export { IconCircleMinus } from "@tabler/icons-react";
-export { IconCircleNumber0 } from "@tabler/icons-react";
-export { IconCircleNumber1 } from "@tabler/icons-react";
-export { IconCircleNumber2 } from "@tabler/icons-react";
-export { IconCircleNumber3 } from "@tabler/icons-react";
-export { IconCircleNumber4 } from "@tabler/icons-react";
-export { IconCircleNumber5 } from "@tabler/icons-react";
-export { IconCircleNumber6 } from "@tabler/icons-react";
-export { IconCircleNumber7 } from "@tabler/icons-react";
-export { IconCircleNumber8 } from "@tabler/icons-react";
-export { IconCircleNumber9 } from "@tabler/icons-react";
-export { IconCircleOff } from "@tabler/icons-react";
-export { IconCircleOpenArrowDown } from "@tabler/icons-react";
-export { IconCircleOpenArrowLeft } from "@tabler/icons-react";
-export { IconCircleOpenArrowRight } from "@tabler/icons-react";
-export { IconCircleOpenArrowUp } from "@tabler/icons-react";
-export { IconCirclePause } from "@tabler/icons-react";
-export { IconCirclePercentage } from "@tabler/icons-react";
-export { IconCirclePlay } from "@tabler/icons-react";
-export { IconCirclePlus2 } from "@tabler/icons-react";
-export { IconCirclePlusMinus } from "@tabler/icons-react";
-export { IconCirclePlus } from "@tabler/icons-react";
-export { IconCircleRectangleOff } from "@tabler/icons-react";
-export { IconCircleRectangle } from "@tabler/icons-react";
-export { IconCircleSquare } from "@tabler/icons-react";
-export { IconCircleStop } from "@tabler/icons-react";
-export { IconCircleTriangle } from "@tabler/icons-react";
-export { IconCircleX } from "@tabler/icons-react";
-export { IconCircle } from "@tabler/icons-react";
-export { IconCirclesRelation } from "@tabler/icons-react";
-export { IconCircles } from "@tabler/icons-react";
-export { IconCircuitAmmeter } from "@tabler/icons-react";
-export { IconCircuitBattery } from "@tabler/icons-react";
-export { IconCircuitBulb } from "@tabler/icons-react";
-export { IconCircuitCapacitorPolarized } from "@tabler/icons-react";
-export { IconCircuitCapacitor } from "@tabler/icons-react";
-export { IconCircuitCellPlus } from "@tabler/icons-react";
-export { IconCircuitCell } from "@tabler/icons-react";
-export { IconCircuitChangeover } from "@tabler/icons-react";
-export { IconCircuitDiodeZener } from "@tabler/icons-react";
-export { IconCircuitDiode } from "@tabler/icons-react";
-export { IconCircuitGroundDigital } from "@tabler/icons-react";
-export { IconCircuitGround } from "@tabler/icons-react";
-export { IconCircuitInductor } from "@tabler/icons-react";
-export { IconCircuitMotor } from "@tabler/icons-react";
-export { IconCircuitPushbutton } from "@tabler/icons-react";
-export { IconCircuitResistor } from "@tabler/icons-react";
-export { IconCircuitSwitchClosed } from "@tabler/icons-react";
-export { IconCircuitSwitchOpen } from "@tabler/icons-react";
-export { IconCircuitVoltmeter } from "@tabler/icons-react";
-export { IconClearAll } from "@tabler/icons-react";
-export { IconClearFormatting } from "@tabler/icons-react";
-export { IconClefStaff } from "@tabler/icons-react";
-export { IconClef } from "@tabler/icons-react";
-export { IconClick } from "@tabler/icons-react";
-export { IconCliffJumping } from "@tabler/icons-react";
-export { IconClipboardCheck } from "@tabler/icons-react";
-export { IconClipboardCopy } from "@tabler/icons-react";
-export { IconClipboardData } from "@tabler/icons-react";
-export { IconClipboardHeart } from "@tabler/icons-react";
-export { IconClipboardList } from "@tabler/icons-react";
-export { IconClipboardOff } from "@tabler/icons-react";
-export { IconClipboardPlus } from "@tabler/icons-react";
-export { IconClipboardSearch } from "@tabler/icons-react";
-export { IconClipboardSmile } from "@tabler/icons-react";
-export { IconClipboardText } from "@tabler/icons-react";
-export { IconClipboardTypography } from "@tabler/icons-react";
-export { IconClipboardX } from "@tabler/icons-react";
-export { IconClipboard } from "@tabler/icons-react";
-export { IconClock12 } from "@tabler/icons-react";
-export { IconClock2 } from "@tabler/icons-react";
-export { IconClock24 } from "@tabler/icons-react";
-export { IconClockBitcoin } from "@tabler/icons-react";
-export { IconClockBolt } from "@tabler/icons-react";
-export { IconClockCancel } from "@tabler/icons-react";
-export { IconClockCheck } from "@tabler/icons-react";
-export { IconClockCode } from "@tabler/icons-react";
-export { IconClockCog } from "@tabler/icons-react";
-export { IconClockDollar } from "@tabler/icons-react";
-export { IconClockDown } from "@tabler/icons-react";
-export { IconClockEdit } from "@tabler/icons-react";
-export { IconClockExclamation } from "@tabler/icons-react";
-export { IconClockHeart } from "@tabler/icons-react";
-export { IconClockHour1 } from "@tabler/icons-react";
-export { IconClockHour10 } from "@tabler/icons-react";
-export { IconClockHour11 } from "@tabler/icons-react";
-export { IconClockHour12 } from "@tabler/icons-react";
-export { IconClockHour2 } from "@tabler/icons-react";
-export { IconClockHour3 } from "@tabler/icons-react";
-export { IconClockHour4 } from "@tabler/icons-react";
-export { IconClockHour5 } from "@tabler/icons-react";
-export { IconClockHour6 } from "@tabler/icons-react";
-export { IconClockHour7 } from "@tabler/icons-react";
-export { IconClockHour8 } from "@tabler/icons-react";
-export { IconClockHour9 } from "@tabler/icons-react";
-export { IconClockMinus } from "@tabler/icons-react";
-export { IconClockOff } from "@tabler/icons-react";
-export { IconClockPause } from "@tabler/icons-react";
-export { IconClockPin } from "@tabler/icons-react";
-export { IconClockPlay } from "@tabler/icons-react";
-export { IconClockPlus } from "@tabler/icons-react";
-export { IconClockQuestion } from "@tabler/icons-react";
-export { IconClockRecord } from "@tabler/icons-react";
-export { IconClockSearch } from "@tabler/icons-react";
-export { IconClockShare } from "@tabler/icons-react";
-export { IconClockShield } from "@tabler/icons-react";
-export { IconClockStar } from "@tabler/icons-react";
-export { IconClockStop } from "@tabler/icons-react";
-export { IconClockUp } from "@tabler/icons-react";
-export { IconClockX } from "@tabler/icons-react";
-export { IconClock } from "@tabler/icons-react";
-export { IconClothesRackOff } from "@tabler/icons-react";
-export { IconClothesRack } from "@tabler/icons-react";
-export { IconCloudBitcoin } from "@tabler/icons-react";
-export { IconCloudBolt } from "@tabler/icons-react";
-export { IconCloudCancel } from "@tabler/icons-react";
-export { IconCloudCheck } from "@tabler/icons-react";
-export { IconCloudCode } from "@tabler/icons-react";
-export { IconCloudCog } from "@tabler/icons-react";
-export { IconCloudComputing } from "@tabler/icons-react";
-export { IconCloudDataConnection } from "@tabler/icons-react";
-export { IconCloudDollar } from "@tabler/icons-react";
-export { IconCloudDown } from "@tabler/icons-react";
-export { IconCloudDownload } from "@tabler/icons-react";
-export { IconCloudExclamation } from "@tabler/icons-react";
-export { IconCloudFog } from "@tabler/icons-react";
-export { IconCloudHeart } from "@tabler/icons-react";
-export { IconCloudLockOpen } from "@tabler/icons-react";
-export { IconCloudLock } from "@tabler/icons-react";
-export { IconCloudMinus } from "@tabler/icons-react";
-export { IconCloudNetwork } from "@tabler/icons-react";
-export { IconCloudOff } from "@tabler/icons-react";
-export { IconCloudPause } from "@tabler/icons-react";
-export { IconCloudPin } from "@tabler/icons-react";
-export { IconCloudPlus } from "@tabler/icons-react";
-export { IconCloudQuestion } from "@tabler/icons-react";
-export { IconCloudRain } from "@tabler/icons-react";
-export { IconCloudSearch } from "@tabler/icons-react";
-export { IconCloudShare } from "@tabler/icons-react";
-export { IconCloudSnow } from "@tabler/icons-react";
-export { IconCloudStar } from "@tabler/icons-react";
-export { IconCloudStorm } from "@tabler/icons-react";
-export { IconCloudUp } from "@tabler/icons-react";
-export { IconCloudUpload } from "@tabler/icons-react";
-export { IconCloudX } from "@tabler/icons-react";
-export { IconCloud } from "@tabler/icons-react";
-export { IconClover2 } from "@tabler/icons-react";
-export { IconClover } from "@tabler/icons-react";
-export { IconClubs } from "@tabler/icons-react";
-export { IconCodeAi } from "@tabler/icons-react";
-export { IconCodeAsterisk } from "@tabler/icons-react";
-export { IconCodeCircle2 } from "@tabler/icons-react";
-export { IconCodeCircle } from "@tabler/icons-react";
-export { IconCodeDots } from "@tabler/icons-react";
-export { IconCodeMinus } from "@tabler/icons-react";
-export { IconCodeOff } from "@tabler/icons-react";
-export { IconCodePlus } from "@tabler/icons-react";
-export { IconCodeVariableMinus } from "@tabler/icons-react";
-export { IconCodeVariablePlus } from "@tabler/icons-react";
-export { IconCodeVariable } from "@tabler/icons-react";
-export { IconCode } from "@tabler/icons-react";
-export { IconCodeblock } from "@tabler/icons-react";
-export { IconCoffeeOff } from "@tabler/icons-react";
-export { IconCoffee } from "@tabler/icons-react";
-export { IconCoffin } from "@tabler/icons-react";
-export { IconCoinBitcoin } from "@tabler/icons-react";
-export { IconCoinEuro } from "@tabler/icons-react";
-export { IconCoinMonero } from "@tabler/icons-react";
-export { IconCoinOff } from "@tabler/icons-react";
-export { IconCoinPound } from "@tabler/icons-react";
-export { IconCoinRupee } from "@tabler/icons-react";
-export { IconCoinTaka } from "@tabler/icons-react";
-export { IconCoinYen } from "@tabler/icons-react";
-export { IconCoinYuan } from "@tabler/icons-react";
-export { IconCoin } from "@tabler/icons-react";
-export { IconCoins } from "@tabler/icons-react";
-export { IconColorFilter } from "@tabler/icons-react";
-export { IconColorPickerOff } from "@tabler/icons-react";
-export { IconColorPicker } from "@tabler/icons-react";
-export { IconColorSwatchOff } from "@tabler/icons-react";
-export { IconColorSwatch } from "@tabler/icons-react";
-export { IconColumnInsertLeft } from "@tabler/icons-react";
-export { IconColumnInsertRight } from "@tabler/icons-react";
-export { IconColumnRemove } from "@tabler/icons-react";
-export { IconColumns1 } from "@tabler/icons-react";
-export { IconColumns2 } from "@tabler/icons-react";
-export { IconColumns3 } from "@tabler/icons-react";
-export { IconColumnsOff } from "@tabler/icons-react";
-export { IconColumns } from "@tabler/icons-react";
-export { IconComet } from "@tabler/icons-react";
-export { IconCommandOff } from "@tabler/icons-react";
-export { IconCommand } from "@tabler/icons-react";
-export { IconCompassOff } from "@tabler/icons-react";
-export { IconCompass } from "@tabler/icons-react";
-export { IconComponentsOff } from "@tabler/icons-react";
-export { IconComponents } from "@tabler/icons-react";
-export { IconCone2 } from "@tabler/icons-react";
-export { IconConeOff } from "@tabler/icons-react";
-export { IconConePlus } from "@tabler/icons-react";
-export { IconCone } from "@tabler/icons-react";
-export { IconConfettiOff } from "@tabler/icons-react";
-export { IconConfetti } from "@tabler/icons-react";
-export { IconConfucius } from "@tabler/icons-react";
-export { IconCongruentTo } from "@tabler/icons-react";
-export { IconConnection } from "@tabler/icons-react";
-export { IconContainerOff } from "@tabler/icons-react";
-export { IconContainer } from "@tabler/icons-react";
-export { IconContract } from "@tabler/icons-react";
-export { IconContrast2Off } from "@tabler/icons-react";
-export { IconContrast2 } from "@tabler/icons-react";
-export { IconContrastOff } from "@tabler/icons-react";
-export { IconContrast } from "@tabler/icons-react";
-export { IconCooker } from "@tabler/icons-react";
-export { IconCookieMan } from "@tabler/icons-react";
-export { IconCookieOff } from "@tabler/icons-react";
-export { IconCookie } from "@tabler/icons-react";
-export { IconCopyCheck } from "@tabler/icons-react";
-export { IconCopyMinus } from "@tabler/icons-react";
-export { IconCopyOff } from "@tabler/icons-react";
-export { IconCopyPlus } from "@tabler/icons-react";
-export { IconCopyX } from "@tabler/icons-react";
-export { IconCopy } from "@tabler/icons-react";
-export { IconCopyleftOff } from "@tabler/icons-react";
-export { IconCopyleft } from "@tabler/icons-react";
-export { IconCopyrightOff } from "@tabler/icons-react";
-export { IconCopyright } from "@tabler/icons-react";
-export { IconCornerDownLeftDouble } from "@tabler/icons-react";
-export { IconCornerDownLeft } from "@tabler/icons-react";
-export { IconCornerDownRightDouble } from "@tabler/icons-react";
-export { IconCornerDownRight } from "@tabler/icons-react";
-export { IconCornerLeftDownDouble } from "@tabler/icons-react";
-export { IconCornerLeftDown } from "@tabler/icons-react";
-export { IconCornerLeftUpDouble } from "@tabler/icons-react";
-export { IconCornerLeftUp } from "@tabler/icons-react";
-export { IconCornerRightDownDouble } from "@tabler/icons-react";
-export { IconCornerRightDown } from "@tabler/icons-react";
-export { IconCornerRightUpDouble } from "@tabler/icons-react";
-export { IconCornerRightUp } from "@tabler/icons-react";
-export { IconCornerUpLeftDouble } from "@tabler/icons-react";
-export { IconCornerUpLeft } from "@tabler/icons-react";
-export { IconCornerUpRightDouble } from "@tabler/icons-react";
-export { IconCornerUpRight } from "@tabler/icons-react";
-export { IconCpu2 } from "@tabler/icons-react";
-export { IconCpuOff } from "@tabler/icons-react";
-export { IconCpu } from "@tabler/icons-react";
-export { IconCraneOff } from "@tabler/icons-react";
-export { IconCrane } from "@tabler/icons-react";
-export { IconCreativeCommonsBy } from "@tabler/icons-react";
-export { IconCreativeCommonsNc } from "@tabler/icons-react";
-export { IconCreativeCommonsNd } from "@tabler/icons-react";
-export { IconCreativeCommonsOff } from "@tabler/icons-react";
-export { IconCreativeCommonsSa } from "@tabler/icons-react";
-export { IconCreativeCommonsZero } from "@tabler/icons-react";
-export { IconCreativeCommons } from "@tabler/icons-react";
-export { IconCreditCardHand } from "@tabler/icons-react";
-export { IconCreditCardOff } from "@tabler/icons-react";
-export { IconCreditCardPay } from "@tabler/icons-react";
-export { IconCreditCardRefund } from "@tabler/icons-react";
-export { IconCreditCard } from "@tabler/icons-react";
-export { IconCredits } from "@tabler/icons-react";
-export { IconCricket } from "@tabler/icons-react";
-export { IconCrop11 } from "@tabler/icons-react";
-export { IconCrop169 } from "@tabler/icons-react";
-export { IconCrop32 } from "@tabler/icons-react";
-export { IconCrop54 } from "@tabler/icons-react";
-export { IconCrop75 } from "@tabler/icons-react";
-export { IconCropLandscape } from "@tabler/icons-react";
-export { IconCropPortrait } from "@tabler/icons-react";
-export { IconCrop } from "@tabler/icons-react";
-export { IconCrossOff } from "@tabler/icons-react";
-export { IconCross } from "@tabler/icons-react";
-export { IconCrosshair } from "@tabler/icons-react";
-export { IconCrownOff } from "@tabler/icons-react";
-export { IconCrown } from "@tabler/icons-react";
-export { IconCrutchesOff } from "@tabler/icons-react";
-export { IconCrutches } from "@tabler/icons-react";
-export { IconCrystalBall } from "@tabler/icons-react";
-export { IconCsv } from "@tabler/icons-react";
-export { IconCube3dSphereOff } from "@tabler/icons-react";
-export { IconCube3dSphere } from "@tabler/icons-react";
-export { IconCubeOff } from "@tabler/icons-react";
-export { IconCubePlus } from "@tabler/icons-react";
-export { IconCubeSend } from "@tabler/icons-react";
-export { IconCubeSpark } from "@tabler/icons-react";
-export { IconCubeUnfolded } from "@tabler/icons-react";
-export { IconCube } from "@tabler/icons-react";
-export { IconCupOff } from "@tabler/icons-react";
-export { IconCup } from "@tabler/icons-react";
-export { IconCurling } from "@tabler/icons-react";
-export { IconCurlyLoop } from "@tabler/icons-react";
-export { IconCurrencyAfghani } from "@tabler/icons-react";
-export { IconCurrencyBahraini } from "@tabler/icons-react";
-export { IconCurrencyBaht } from "@tabler/icons-react";
-export { IconCurrencyBitcoin } from "@tabler/icons-react";
-export { IconCurrencyCent } from "@tabler/icons-react";
-export { IconCurrencyDinar } from "@tabler/icons-react";
-export { IconCurrencyDirham } from "@tabler/icons-react";
-export { IconCurrencyDogecoin } from "@tabler/icons-react";
-export { IconCurrencyDollarAustralian } from "@tabler/icons-react";
-export { IconCurrencyDollarBrunei } from "@tabler/icons-react";
-export { IconCurrencyDollarCanadian } from "@tabler/icons-react";
-export { IconCurrencyDollarGuyanese } from "@tabler/icons-react";
-export { IconCurrencyDollarOff } from "@tabler/icons-react";
-export { IconCurrencyDollarSingapore } from "@tabler/icons-react";
-export { IconCurrencyDollarZimbabwean } from "@tabler/icons-react";
-export { IconCurrencyDollar } from "@tabler/icons-react";
-export { IconCurrencyDong } from "@tabler/icons-react";
-export { IconCurrencyDram } from "@tabler/icons-react";
-export { IconCurrencyEthereum } from "@tabler/icons-react";
-export { IconCurrencyEuroOff } from "@tabler/icons-react";
-export { IconCurrencyEuro } from "@tabler/icons-react";
-export { IconCurrencyFlorin } from "@tabler/icons-react";
-export { IconCurrencyForint } from "@tabler/icons-react";
-export { IconCurrencyFrank } from "@tabler/icons-react";
-export { IconCurrencyGuarani } from "@tabler/icons-react";
-export { IconCurrencyHryvnia } from "@tabler/icons-react";
-export { IconCurrencyHusd } from "@tabler/icons-react";
-export { IconCurrencyIranianRial } from "@tabler/icons-react";
-export { IconCurrencyKip } from "@tabler/icons-react";
-export { IconCurrencyKroneCzech } from "@tabler/icons-react";
-export { IconCurrencyKroneDanish } from "@tabler/icons-react";
-export { IconCurrencyKroneSwedish } from "@tabler/icons-react";
-export { IconCurrencyLari } from "@tabler/icons-react";
-export { IconCurrencyLeu } from "@tabler/icons-react";
-export { IconCurrencyLira } from "@tabler/icons-react";
-export { IconCurrencyLitecoin } from "@tabler/icons-react";
-export { IconCurrencyLyd } from "@tabler/icons-react";
-export { IconCurrencyManat } from "@tabler/icons-react";
-export { IconCurrencyMonero } from "@tabler/icons-react";
-export { IconCurrencyNaira } from "@tabler/icons-react";
-export { IconCurrencyNano } from "@tabler/icons-react";
-export { IconCurrencyOff } from "@tabler/icons-react";
-export { IconCurrencyPaanga } from "@tabler/icons-react";
-export { IconCurrencyPeso } from "@tabler/icons-react";
-export { IconCurrencyPoundOff } from "@tabler/icons-react";
-export { IconCurrencyPound } from "@tabler/icons-react";
-export { IconCurrencyQuetzal } from "@tabler/icons-react";
-export { IconCurrencyReal } from "@tabler/icons-react";
-export { IconCurrencyRenminbi } from "@tabler/icons-react";
-export { IconCurrencyRipple } from "@tabler/icons-react";
-export { IconCurrencyRiyal } from "@tabler/icons-react";
-export { IconCurrencyRuble } from "@tabler/icons-react";
-export { IconCurrencyRufiyaa } from "@tabler/icons-react";
-export { IconCurrencyRupeeNepalese } from "@tabler/icons-react";
-export { IconCurrencyRupee } from "@tabler/icons-react";
-export { IconCurrencyShekel } from "@tabler/icons-react";
-export { IconCurrencySolana } from "@tabler/icons-react";
-export { IconCurrencySom } from "@tabler/icons-react";
-export { IconCurrencyTaka } from "@tabler/icons-react";
-export { IconCurrencyTenge } from "@tabler/icons-react";
-export { IconCurrencyTether } from "@tabler/icons-react";
-export { IconCurrencyTugrik } from "@tabler/icons-react";
-export { IconCurrencyWon } from "@tabler/icons-react";
-export { IconCurrencyXrp } from "@tabler/icons-react";
-export { IconCurrencyYenOff } from "@tabler/icons-react";
-export { IconCurrencyYen } from "@tabler/icons-react";
-export { IconCurrencyYuan } from "@tabler/icons-react";
-export { IconCurrencyZcash } from "@tabler/icons-react";
-export { IconCurrencyZloty } from "@tabler/icons-react";
-export { IconCurrency } from "@tabler/icons-react";
-export { IconCurrentLocationOff } from "@tabler/icons-react";
-export { IconCurrentLocation } from "@tabler/icons-react";
-export { IconCursorOff } from "@tabler/icons-react";
-export { IconCursorText } from "@tabler/icons-react";
-export { IconCut } from "@tabler/icons-react";
-export { IconCylinderOff } from "@tabler/icons-react";
-export { IconCylinderPlus } from "@tabler/icons-react";
-export { IconCylinder } from "@tabler/icons-react";
-export { IconDashboardOff } from "@tabler/icons-react";
-export { IconDashboard } from "@tabler/icons-react";
-export { IconDatabaseCog } from "@tabler/icons-react";
-export { IconDatabaseDollar } from "@tabler/icons-react";
-export { IconDatabaseEdit } from "@tabler/icons-react";
-export { IconDatabaseExclamation } from "@tabler/icons-react";
-export { IconDatabaseExport } from "@tabler/icons-react";
-export { IconDatabaseHeart } from "@tabler/icons-react";
-export { IconDatabaseImport } from "@tabler/icons-react";
-export { IconDatabaseLeak } from "@tabler/icons-react";
-export { IconDatabaseMinus } from "@tabler/icons-react";
-export { IconDatabaseOff } from "@tabler/icons-react";
-export { IconDatabasePlus } from "@tabler/icons-react";
-export { IconDatabaseSearch } from "@tabler/icons-react";
-export { IconDatabaseShare } from "@tabler/icons-react";
-export { IconDatabaseSmile } from "@tabler/icons-react";
-export { IconDatabaseStar } from "@tabler/icons-react";
-export { IconDatabaseX } from "@tabler/icons-react";
-export { IconDatabase } from "@tabler/icons-react";
-export { IconDeaf } from "@tabler/icons-react";
-export { IconDecimal } from "@tabler/icons-react";
-export { IconDeer } from "@tabler/icons-react";
-export { IconDelta } from "@tabler/icons-react";
-export { IconDentalBroken } from "@tabler/icons-react";
-export { IconDentalOff } from "@tabler/icons-react";
-export { IconDental } from "@tabler/icons-react";
-export { IconDeselect } from "@tabler/icons-react";
-export { IconDesk } from "@tabler/icons-react";
-export { IconDetailsOff } from "@tabler/icons-react";
-export { IconDetails } from "@tabler/icons-react";
-export { IconDevice3dCamera } from "@tabler/icons-react";
-export { IconDevice3dLens } from "@tabler/icons-react";
-export { IconDeviceAirpodsCase } from "@tabler/icons-react";
-export { IconDeviceAirpods } from "@tabler/icons-react";
-export { IconDeviceAirtag } from "@tabler/icons-react";
-export { IconDeviceAnalytics } from "@tabler/icons-react";
-export { IconDeviceAudioTape } from "@tabler/icons-react";
-export { IconDeviceCameraPhone } from "@tabler/icons-react";
-export { IconDeviceCctvOff } from "@tabler/icons-react";
-export { IconDeviceCctv } from "@tabler/icons-react";
-export { IconDeviceComputerCamera2 } from "@tabler/icons-react";
-export { IconDeviceComputerCameraOff } from "@tabler/icons-react";
-export { IconDeviceComputerCamera } from "@tabler/icons-react";
-export { IconDeviceDesktopAnalytics } from "@tabler/icons-react";
-export { IconDeviceDesktopBolt } from "@tabler/icons-react";
-export { IconDeviceDesktopCancel } from "@tabler/icons-react";
-export { IconDeviceDesktopCheck } from "@tabler/icons-react";
-export { IconDeviceDesktopCode } from "@tabler/icons-react";
-export { IconDeviceDesktopCog } from "@tabler/icons-react";
-export { IconDeviceDesktopDollar } from "@tabler/icons-react";
-export { IconDeviceDesktopDown } from "@tabler/icons-react";
-export { IconDeviceDesktopExclamation } from "@tabler/icons-react";
-export { IconDeviceDesktopHeart } from "@tabler/icons-react";
-export { IconDeviceDesktopMinus } from "@tabler/icons-react";
-export { IconDeviceDesktopOff } from "@tabler/icons-react";
-export { IconDeviceDesktopPause } from "@tabler/icons-react";
-export { IconDeviceDesktopPin } from "@tabler/icons-react";
-export { IconDeviceDesktopPlus } from "@tabler/icons-react";
-export { IconDeviceDesktopQuestion } from "@tabler/icons-react";
-export { IconDeviceDesktopSearch } from "@tabler/icons-react";
-export { IconDeviceDesktopShare } from "@tabler/icons-react";
-export { IconDeviceDesktopStar } from "@tabler/icons-react";
-export { IconDeviceDesktopUp } from "@tabler/icons-react";
-export { IconDeviceDesktopX } from "@tabler/icons-react";
-export { IconDeviceDesktop } from "@tabler/icons-react";
-export { IconDeviceFloppy } from "@tabler/icons-react";
-export { IconDeviceGamepad2 } from "@tabler/icons-react";
-export { IconDeviceGamepad3 } from "@tabler/icons-react";
-export { IconDeviceGamepad } from "@tabler/icons-react";
-export { IconDeviceHeartMonitor } from "@tabler/icons-react";
-export { IconDeviceImacBolt } from "@tabler/icons-react";
-export { IconDeviceImacCancel } from "@tabler/icons-react";
-export { IconDeviceImacCheck } from "@tabler/icons-react";
-export { IconDeviceImacCode } from "@tabler/icons-react";
-export { IconDeviceImacCog } from "@tabler/icons-react";
-export { IconDeviceImacDollar } from "@tabler/icons-react";
-export { IconDeviceImacDown } from "@tabler/icons-react";
-export { IconDeviceImacExclamation } from "@tabler/icons-react";
-export { IconDeviceImacHeart } from "@tabler/icons-react";
-export { IconDeviceImacMinus } from "@tabler/icons-react";
-export { IconDeviceImacOff } from "@tabler/icons-react";
-export { IconDeviceImacPause } from "@tabler/icons-react";
-export { IconDeviceImacPin } from "@tabler/icons-react";
-export { IconDeviceImacPlus } from "@tabler/icons-react";
-export { IconDeviceImacQuestion } from "@tabler/icons-react";
-export { IconDeviceImacSearch } from "@tabler/icons-react";
-export { IconDeviceImacShare } from "@tabler/icons-react";
-export { IconDeviceImacStar } from "@tabler/icons-react";
-export { IconDeviceImacUp } from "@tabler/icons-react";
-export { IconDeviceImacX } from "@tabler/icons-react";
-export { IconDeviceImac } from "@tabler/icons-react";
-export { IconDeviceIpadBolt } from "@tabler/icons-react";
-export { IconDeviceIpadCancel } from "@tabler/icons-react";
-export { IconDeviceIpadCheck } from "@tabler/icons-react";
-export { IconDeviceIpadCode } from "@tabler/icons-react";
-export { IconDeviceIpadCog } from "@tabler/icons-react";
-export { IconDeviceIpadDollar } from "@tabler/icons-react";
-export { IconDeviceIpadDown } from "@tabler/icons-react";
-export { IconDeviceIpadExclamation } from "@tabler/icons-react";
-export { IconDeviceIpadHeart } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalBolt } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalCancel } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalCheck } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalCode } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalCog } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalDollar } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalDown } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalExclamation } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalHeart } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalMinus } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalOff } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalPause } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalPin } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalPlus } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalQuestion } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalSearch } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalShare } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalStar } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalUp } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontalX } from "@tabler/icons-react";
-export { IconDeviceIpadHorizontal } from "@tabler/icons-react";
-export { IconDeviceIpadMinus } from "@tabler/icons-react";
-export { IconDeviceIpadOff } from "@tabler/icons-react";
-export { IconDeviceIpadPause } from "@tabler/icons-react";
-export { IconDeviceIpadPin } from "@tabler/icons-react";
-export { IconDeviceIpadPlus } from "@tabler/icons-react";
-export { IconDeviceIpadQuestion } from "@tabler/icons-react";
-export { IconDeviceIpadSearch } from "@tabler/icons-react";
-export { IconDeviceIpadShare } from "@tabler/icons-react";
-export { IconDeviceIpadStar } from "@tabler/icons-react";
-export { IconDeviceIpadUp } from "@tabler/icons-react";
-export { IconDeviceIpadX } from "@tabler/icons-react";
-export { IconDeviceIpad } from "@tabler/icons-react";
-export { IconDeviceLandlinePhone } from "@tabler/icons-react";
-export { IconDeviceLaptopOff } from "@tabler/icons-react";
-export { IconDeviceLaptop } from "@tabler/icons-react";
-export { IconDeviceMobileBolt } from "@tabler/icons-react";
-export { IconDeviceMobileCancel } from "@tabler/icons-react";
-export { IconDeviceMobileCharging } from "@tabler/icons-react";
-export { IconDeviceMobileCheck } from "@tabler/icons-react";
-export { IconDeviceMobileCode } from "@tabler/icons-react";
-export { IconDeviceMobileCog } from "@tabler/icons-react";
-export { IconDeviceMobileDollar } from "@tabler/icons-react";
-export { IconDeviceMobileDown } from "@tabler/icons-react";
-export { IconDeviceMobileExclamation } from "@tabler/icons-react";
-export { IconDeviceMobileHeart } from "@tabler/icons-react";
-export { IconDeviceMobileMessage } from "@tabler/icons-react";
-export { IconDeviceMobileMinus } from "@tabler/icons-react";
-export { IconDeviceMobileOff } from "@tabler/icons-react";
-export { IconDeviceMobilePause } from "@tabler/icons-react";
-export { IconDeviceMobilePin } from "@tabler/icons-react";
-export { IconDeviceMobilePlus } from "@tabler/icons-react";
-export { IconDeviceMobileQuestion } from "@tabler/icons-react";
-export { IconDeviceMobileRotated } from "@tabler/icons-react";
-export { IconDeviceMobileSearch } from "@tabler/icons-react";
-export { IconDeviceMobileShare } from "@tabler/icons-react";
-export { IconDeviceMobileStar } from "@tabler/icons-react";
-export { IconDeviceMobileUp } from "@tabler/icons-react";
-export { IconDeviceMobileVibration } from "@tabler/icons-react";
-export { IconDeviceMobileX } from "@tabler/icons-react";
-export { IconDeviceMobile } from "@tabler/icons-react";
-export { IconDeviceNintendoOff } from "@tabler/icons-react";
-export { IconDeviceNintendo } from "@tabler/icons-react";
-export { IconDeviceProjector } from "@tabler/icons-react";
-export { IconDeviceRemote } from "@tabler/icons-react";
-export { IconDeviceScreen } from "@tabler/icons-react";
-export { IconDeviceSdCard } from "@tabler/icons-react";
-export { IconDeviceSim1 } from "@tabler/icons-react";
-export { IconDeviceSim2 } from "@tabler/icons-react";
-export { IconDeviceSim3 } from "@tabler/icons-react";
-export { IconDeviceSim } from "@tabler/icons-react";
-export { IconDeviceSpeakerOff } from "@tabler/icons-react";
-export { IconDeviceSpeaker } from "@tabler/icons-react";
-export { IconDeviceTabletBolt } from "@tabler/icons-react";
-export { IconDeviceTabletCancel } from "@tabler/icons-react";
-export { IconDeviceTabletCheck } from "@tabler/icons-react";
-export { IconDeviceTabletCode } from "@tabler/icons-react";
-export { IconDeviceTabletCog } from "@tabler/icons-react";
-export { IconDeviceTabletDollar } from "@tabler/icons-react";
-export { IconDeviceTabletDown } from "@tabler/icons-react";
-export { IconDeviceTabletExclamation } from "@tabler/icons-react";
-export { IconDeviceTabletHeart } from "@tabler/icons-react";
-export { IconDeviceTabletMinus } from "@tabler/icons-react";
-export { IconDeviceTabletOff } from "@tabler/icons-react";
-export { IconDeviceTabletPause } from "@tabler/icons-react";
-export { IconDeviceTabletPin } from "@tabler/icons-react";
-export { IconDeviceTabletPlus } from "@tabler/icons-react";
-export { IconDeviceTabletQuestion } from "@tabler/icons-react";
-export { IconDeviceTabletSearch } from "@tabler/icons-react";
-export { IconDeviceTabletShare } from "@tabler/icons-react";
-export { IconDeviceTabletStar } from "@tabler/icons-react";
-export { IconDeviceTabletUp } from "@tabler/icons-react";
-export { IconDeviceTabletX } from "@tabler/icons-react";
-export { IconDeviceTablet } from "@tabler/icons-react";
-export { IconDeviceTvOff } from "@tabler/icons-react";
-export { IconDeviceTvOld } from "@tabler/icons-react";
-export { IconDeviceTv } from "@tabler/icons-react";
-export { IconDeviceUnknown } from "@tabler/icons-react";
-export { IconDeviceUsb } from "@tabler/icons-react";
-export { IconDeviceVisionProWifi } from "@tabler/icons-react";
-export { IconDeviceVisionPro } from "@tabler/icons-react";
-export { IconDeviceWatchBolt } from "@tabler/icons-react";
-export { IconDeviceWatchCancel } from "@tabler/icons-react";
-export { IconDeviceWatchCheck } from "@tabler/icons-react";
-export { IconDeviceWatchCode } from "@tabler/icons-react";
-export { IconDeviceWatchCog } from "@tabler/icons-react";
-export { IconDeviceWatchDollar } from "@tabler/icons-react";
-export { IconDeviceWatchDown } from "@tabler/icons-react";
-export { IconDeviceWatchExclamation } from "@tabler/icons-react";
-export { IconDeviceWatchHeart } from "@tabler/icons-react";
-export { IconDeviceWatchMinus } from "@tabler/icons-react";
-export { IconDeviceWatchOff } from "@tabler/icons-react";
-export { IconDeviceWatchPause } from "@tabler/icons-react";
-export { IconDeviceWatchPin } from "@tabler/icons-react";
-export { IconDeviceWatchPlus } from "@tabler/icons-react";
-export { IconDeviceWatchQuestion } from "@tabler/icons-react";
-export { IconDeviceWatchSearch } from "@tabler/icons-react";
-export { IconDeviceWatchShare } from "@tabler/icons-react";
-export { IconDeviceWatchStar } from "@tabler/icons-react";
-export { IconDeviceWatchStats2 } from "@tabler/icons-react";
-export { IconDeviceWatchStats } from "@tabler/icons-react";
-export { IconDeviceWatchUp } from "@tabler/icons-react";
-export { IconDeviceWatchX } from "@tabler/icons-react";
-export { IconDeviceWatch } from "@tabler/icons-react";
-export { IconDeviceWorkstation } from "@tabler/icons-react";
-export { IconDevices2 } from "@tabler/icons-react";
-export { IconDevicesBolt } from "@tabler/icons-react";
-export { IconDevicesCancel } from "@tabler/icons-react";
-export { IconDevicesCheck } from "@tabler/icons-react";
-export { IconDevicesCode } from "@tabler/icons-react";
-export { IconDevicesCog } from "@tabler/icons-react";
-export { IconDevicesDollar } from "@tabler/icons-react";
-export { IconDevicesDown } from "@tabler/icons-react";
-export { IconDevicesExclamation } from "@tabler/icons-react";
-export { IconDevicesHeart } from "@tabler/icons-react";
-export { IconDevicesMinus } from "@tabler/icons-react";
-export { IconDevicesOff } from "@tabler/icons-react";
-export { IconDevicesPause } from "@tabler/icons-react";
-export { IconDevicesPcOff } from "@tabler/icons-react";
-export { IconDevicesPc } from "@tabler/icons-react";
-export { IconDevicesPin } from "@tabler/icons-react";
-export { IconDevicesPlus } from "@tabler/icons-react";
-export { IconDevicesQuestion } from "@tabler/icons-react";
-export { IconDevicesSearch } from "@tabler/icons-react";
-export { IconDevicesShare } from "@tabler/icons-react";
-export { IconDevicesStar } from "@tabler/icons-react";
-export { IconDevicesUp } from "@tabler/icons-react";
-export { IconDevicesX } from "@tabler/icons-react";
-export { IconDevices } from "@tabler/icons-react";
-export { IconDiaboloOff } from "@tabler/icons-react";
-export { IconDiaboloPlus } from "@tabler/icons-react";
-export { IconDiabolo } from "@tabler/icons-react";
-export { IconDialpadOff } from "@tabler/icons-react";
-export { IconDialpad } from "@tabler/icons-react";
-export { IconDiamondOff } from "@tabler/icons-react";
-export { IconDiamond } from "@tabler/icons-react";
-export { IconDiamonds } from "@tabler/icons-react";
-export { IconDiaper } from "@tabler/icons-react";
-export { IconDice1 } from "@tabler/icons-react";
-export { IconDice2 } from "@tabler/icons-react";
-export { IconDice3 } from "@tabler/icons-react";
-export { IconDice4 } from "@tabler/icons-react";
-export { IconDice5 } from "@tabler/icons-react";
-export { IconDice6 } from "@tabler/icons-react";
-export { IconDice } from "@tabler/icons-react";
-export { IconDimensions } from "@tabler/icons-react";
-export { IconDirectionArrows } from "@tabler/icons-react";
-export { IconDirectionHorizontal } from "@tabler/icons-react";
-export { IconDirectionSignOff } from "@tabler/icons-react";
-export { IconDirectionSign } from "@tabler/icons-react";
-export { IconDirection } from "@tabler/icons-react";
-export { IconDirectionsOff } from "@tabler/icons-react";
-export { IconDirections } from "@tabler/icons-react";
-export { IconDisabled2 } from "@tabler/icons-react";
-export { IconDisabledOff } from "@tabler/icons-react";
-export { IconDisabled } from "@tabler/icons-react";
-export { IconDiscGolf } from "@tabler/icons-react";
-export { IconDiscOff } from "@tabler/icons-react";
-export { IconDisc } from "@tabler/icons-react";
-export { IconDiscountOff } from "@tabler/icons-react";
-export { IconDiscount } from "@tabler/icons-react";
-export { IconDivide } from "@tabler/icons-react";
-export { IconDna2Off } from "@tabler/icons-react";
-export { IconDna2 } from "@tabler/icons-react";
-export { IconDnaOff } from "@tabler/icons-react";
-export { IconDna } from "@tabler/icons-react";
-export { IconDogBowl } from "@tabler/icons-react";
-export { IconDog } from "@tabler/icons-react";
-export { IconDoorEnter } from "@tabler/icons-react";
-export { IconDoorExit } from "@tabler/icons-react";
-export { IconDoorHanger } from "@tabler/icons-react";
-export { IconDoorOff } from "@tabler/icons-react";
-export { IconDoor } from "@tabler/icons-react";
-export { IconDotsCircleHorizontal } from "@tabler/icons-react";
-export { IconDotsDiagonal2 } from "@tabler/icons-react";
-export { IconDotsDiagonal } from "@tabler/icons-react";
-export { IconDotsVertical } from "@tabler/icons-react";
-export { IconDots } from "@tabler/icons-react";
-export { IconDownloadOff } from "@tabler/icons-react";
-export { IconDownload } from "@tabler/icons-react";
-export { IconDragDrop2 } from "@tabler/icons-react";
-export { IconDragDrop } from "@tabler/icons-react";
-export { IconDragon } from "@tabler/icons-react";
-export { IconDroneOff } from "@tabler/icons-react";
-export { IconDrone } from "@tabler/icons-react";
-export { IconDropCircle } from "@tabler/icons-react";
-export { IconDropletBolt } from "@tabler/icons-react";
-export { IconDropletCancel } from "@tabler/icons-react";
-export { IconDropletCheck } from "@tabler/icons-react";
-export { IconDropletCode } from "@tabler/icons-react";
-export { IconDropletCog } from "@tabler/icons-react";
-export { IconDropletDollar } from "@tabler/icons-react";
-export { IconDropletDown } from "@tabler/icons-react";
-export { IconDropletExclamation } from "@tabler/icons-react";
-export { IconDropletHalf2 } from "@tabler/icons-react";
-export { IconDropletHalf } from "@tabler/icons-react";
-export { IconDropletHeart } from "@tabler/icons-react";
-export { IconDropletMinus } from "@tabler/icons-react";
-export { IconDropletOff } from "@tabler/icons-react";
-export { IconDropletPause } from "@tabler/icons-react";
-export { IconDropletPin } from "@tabler/icons-react";
-export { IconDropletPlus } from "@tabler/icons-react";
-export { IconDropletQuestion } from "@tabler/icons-react";
-export { IconDropletSearch } from "@tabler/icons-react";
-export { IconDropletShare } from "@tabler/icons-react";
-export { IconDropletStar } from "@tabler/icons-react";
-export { IconDropletUp } from "@tabler/icons-react";
-export { IconDropletX } from "@tabler/icons-react";
-export { IconDroplet } from "@tabler/icons-react";
-export { IconDroplets } from "@tabler/icons-react";
-export { IconDualScreen } from "@tabler/icons-react";
-export { IconDumbbell } from "@tabler/icons-react";
-export { IconDumpling } from "@tabler/icons-react";
-export { IconDuplicate } from "@tabler/icons-react";
-export { IconEPassport } from "@tabler/icons-react";
-export { IconEarOff } from "@tabler/icons-react";
-export { IconEarScan } from "@tabler/icons-react";
-export { IconEar } from "@tabler/icons-react";
-export { IconEarphoneBluetooth } from "@tabler/icons-react";
-export { IconEaseInControlPoint } from "@tabler/icons-react";
-export { IconEaseInOutControlPoints } from "@tabler/icons-react";
-export { IconEaseInOut } from "@tabler/icons-react";
-export { IconEaseIn } from "@tabler/icons-react";
-export { IconEaseOutControlPoint } from "@tabler/icons-react";
-export { IconEaseOut } from "@tabler/icons-react";
-export { IconEditBulk } from "@tabler/icons-react";
-export { IconEditCircleOff } from "@tabler/icons-react";
-export { IconEditCircle } from "@tabler/icons-react";
-export { IconEditOff } from "@tabler/icons-react";
-export { IconEdit } from "@tabler/icons-react";
-export { IconEggCracked } from "@tabler/icons-react";
-export { IconEggFried } from "@tabler/icons-react";
-export { IconEggOff } from "@tabler/icons-react";
-export { IconEgg } from "@tabler/icons-react";
-export { IconEggs } from "@tabler/icons-react";
-export { IconElevatorOff } from "@tabler/icons-react";
-export { IconElevator } from "@tabler/icons-react";
-export { IconEmailStamp } from "@tabler/icons-react";
-export { IconEmergencyBed } from "@tabler/icons-react";
-export { IconEmpathizeOff } from "@tabler/icons-react";
-export { IconEmpathize } from "@tabler/icons-react";
-export { IconEmphasis } from "@tabler/icons-react";
-export { IconEngineOff } from "@tabler/icons-react";
-export { IconEngine } from "@tabler/icons-react";
-export { IconEqualDouble } from "@tabler/icons-react";
-export { IconEqualNot } from "@tabler/icons-react";
-export { IconEqual } from "@tabler/icons-react";
-export { IconEraserOff } from "@tabler/icons-react";
-export { IconEraser } from "@tabler/icons-react";
-export { IconError404Off } from "@tabler/icons-react";
-export { IconError404 } from "@tabler/icons-react";
-export { IconEscalatorDown } from "@tabler/icons-react";
-export { IconEscalatorUp } from "@tabler/icons-react";
-export { IconEscalator } from "@tabler/icons-react";
-export { IconExchangeOff } from "@tabler/icons-react";
-export { IconExchange } from "@tabler/icons-react";
-export { IconExclamationCircle } from "@tabler/icons-react";
-export { IconExclamationMarkOff } from "@tabler/icons-react";
-export { IconExclamationMark } from "@tabler/icons-react";
-export { IconExerciseBall } from "@tabler/icons-react";
-export { IconExplicitOff } from "@tabler/icons-react";
-export { IconExplicit } from "@tabler/icons-react";
-export { IconExposure0 } from "@tabler/icons-react";
-export { IconExposureMinus1 } from "@tabler/icons-react";
-export { IconExposureMinus2 } from "@tabler/icons-react";
-export { IconExposureOff } from "@tabler/icons-react";
-export { IconExposurePlus1 } from "@tabler/icons-react";
-export { IconExposurePlus2 } from "@tabler/icons-react";
-export { IconExposure } from "@tabler/icons-react";
-export { IconExternalLinkOff } from "@tabler/icons-react";
-export { IconExternalLink } from "@tabler/icons-react";
-export { IconEyeBitcoin } from "@tabler/icons-react";
-export { IconEyeBolt } from "@tabler/icons-react";
-export { IconEyeCancel } from "@tabler/icons-react";
-export { IconEyeCheck } from "@tabler/icons-react";
-export { IconEyeClosed } from "@tabler/icons-react";
-export { IconEyeCode } from "@tabler/icons-react";
-export { IconEyeCog } from "@tabler/icons-react";
-export { IconEyeDiscount } from "@tabler/icons-react";
-export { IconEyeDollar } from "@tabler/icons-react";
-export { IconEyeDotted } from "@tabler/icons-react";
-export { IconEyeDown } from "@tabler/icons-react";
-export { IconEyeEdit } from "@tabler/icons-react";
-export { IconEyeExclamation } from "@tabler/icons-react";
-export { IconEyeHeart } from "@tabler/icons-react";
-export { IconEyeMinus } from "@tabler/icons-react";
-export { IconEyeOff } from "@tabler/icons-react";
-export { IconEyePause } from "@tabler/icons-react";
-export { IconEyePin } from "@tabler/icons-react";
-export { IconEyePlus } from "@tabler/icons-react";
-export { IconEyeQuestion } from "@tabler/icons-react";
-export { IconEyeSearch } from "@tabler/icons-react";
-export { IconEyeShare } from "@tabler/icons-react";
-export { IconEyeSpark } from "@tabler/icons-react";
-export { IconEyeStar } from "@tabler/icons-react";
-export { IconEyeTable } from "@tabler/icons-react";
-export { IconEyeUp } from "@tabler/icons-react";
-export { IconEyeX } from "@tabler/icons-react";
-export { IconEye } from "@tabler/icons-react";
-export { IconEyeglass2 } from "@tabler/icons-react";
-export { IconEyeglassOff } from "@tabler/icons-react";
-export { IconEyeglass } from "@tabler/icons-react";
-export { IconFaceIdError } from "@tabler/icons-react";
-export { IconFaceId } from "@tabler/icons-react";
-export { IconFaceMaskOff } from "@tabler/icons-react";
-export { IconFaceMask } from "@tabler/icons-react";
-export { IconFall } from "@tabler/icons-react";
-export { IconFavicon } from "@tabler/icons-react";
-export { IconFeatherOff } from "@tabler/icons-react";
-export { IconFeather } from "@tabler/icons-react";
-export { IconFenceOff } from "@tabler/icons-react";
-export { IconFence } from "@tabler/icons-react";
-export { IconFerry } from "@tabler/icons-react";
-export { IconFidgetSpinner } from "@tabler/icons-react";
-export { IconFile3d } from "@tabler/icons-react";
-export { IconFileAi } from "@tabler/icons-react";
-export { IconFileAlert } from "@tabler/icons-react";
-export { IconFileAnalytics } from "@tabler/icons-react";
-export { IconFileArrowLeft } from "@tabler/icons-react";
-export { IconFileArrowRight } from "@tabler/icons-react";
-export { IconFileBarcode } from "@tabler/icons-react";
-export { IconFileBitcoin } from "@tabler/icons-react";
-export { IconFileBroken } from "@tabler/icons-react";
-export { IconFileCertificate } from "@tabler/icons-react";
-export { IconFileChart } from "@tabler/icons-react";
-export { IconFileCheck } from "@tabler/icons-react";
-export { IconFileCode2 } from "@tabler/icons-react";
-export { IconFileCode } from "@tabler/icons-react";
-export { IconFileCv } from "@tabler/icons-react";
-export { IconFileDatabase } from "@tabler/icons-react";
-export { IconFileDelta } from "@tabler/icons-react";
-export { IconFileDescription } from "@tabler/icons-react";
-export { IconFileDiff } from "@tabler/icons-react";
-export { IconFileDigit } from "@tabler/icons-react";
-export { IconFileDislike } from "@tabler/icons-react";
-export { IconFileDollar } from "@tabler/icons-react";
-export { IconFileDots } from "@tabler/icons-react";
-export { IconFileDownload } from "@tabler/icons-react";
-export { IconFileEuro } from "@tabler/icons-react";
-export { IconFileExcel } from "@tabler/icons-react";
-export { IconFileExport } from "@tabler/icons-react";
-export { IconFileFunction } from "@tabler/icons-react";
-export { IconFileHorizontal } from "@tabler/icons-react";
-export { IconFileImport } from "@tabler/icons-react";
-export { IconFileInfinity } from "@tabler/icons-react";
-export { IconFileInfo } from "@tabler/icons-react";
-export { IconFileInvoice } from "@tabler/icons-react";
-export { IconFileIsr } from "@tabler/icons-react";
-export { IconFileLambda } from "@tabler/icons-react";
-export { IconFileLike } from "@tabler/icons-react";
-export { IconFileLock } from "@tabler/icons-react";
-export { IconFileMinus } from "@tabler/icons-react";
-export { IconFileMusic } from "@tabler/icons-react";
-export { IconFileNeutral } from "@tabler/icons-react";
-export { IconFileOff } from "@tabler/icons-react";
-export { IconFileOrientation } from "@tabler/icons-react";
-export { IconFilePencil } from "@tabler/icons-react";
-export { IconFilePercent } from "@tabler/icons-react";
-export { IconFilePhone } from "@tabler/icons-react";
-export { IconFilePlus } from "@tabler/icons-react";
-export { IconFilePower } from "@tabler/icons-react";
-export { IconFileReport } from "@tabler/icons-react";
-export { IconFileRss } from "@tabler/icons-react";
-export { IconFileSad } from "@tabler/icons-react";
-export { IconFileScissors } from "@tabler/icons-react";
-export { IconFileSearch } from "@tabler/icons-react";
-export { IconFileSettings } from "@tabler/icons-react";
-export { IconFileShredder } from "@tabler/icons-react";
-export { IconFileSignal } from "@tabler/icons-react";
-export { IconFileSmile } from "@tabler/icons-react";
-export { IconFileSpark } from "@tabler/icons-react";
-export { IconFileSpreadsheet } from "@tabler/icons-react";
-export { IconFileStack } from "@tabler/icons-react";
-export { IconFileStar } from "@tabler/icons-react";
-export { IconFileSymlink } from "@tabler/icons-react";
-export { IconFileTextAi } from "@tabler/icons-react";
-export { IconFileTextShield } from "@tabler/icons-react";
-export { IconFileTextSpark } from "@tabler/icons-react";
-export { IconFileText } from "@tabler/icons-react";
-export { IconFileTime } from "@tabler/icons-react";
-export { IconFileTypeBmp } from "@tabler/icons-react";
-export { IconFileTypeCss } from "@tabler/icons-react";
-export { IconFileTypeCsv } from "@tabler/icons-react";
-export { IconFileTypeDoc } from "@tabler/icons-react";
-export { IconFileTypeDocx } from "@tabler/icons-react";
-export { IconFileTypeHtml } from "@tabler/icons-react";
-export { IconFileTypeJpg } from "@tabler/icons-react";
-export { IconFileTypeJs } from "@tabler/icons-react";
-export { IconFileTypeJsx } from "@tabler/icons-react";
-export { IconFileTypePdf } from "@tabler/icons-react";
-export { IconFileTypePhp } from "@tabler/icons-react";
-export { IconFileTypePng } from "@tabler/icons-react";
-export { IconFileTypePpt } from "@tabler/icons-react";
-export { IconFileTypeRs } from "@tabler/icons-react";
-export { IconFileTypeSql } from "@tabler/icons-react";
-export { IconFileTypeSvg } from "@tabler/icons-react";
-export { IconFileTypeTs } from "@tabler/icons-react";
-export { IconFileTypeTsx } from "@tabler/icons-react";
-export { IconFileTypeTxt } from "@tabler/icons-react";
-export { IconFileTypeVue } from "@tabler/icons-react";
-export { IconFileTypeXls } from "@tabler/icons-react";
-export { IconFileTypeXml } from "@tabler/icons-react";
-export { IconFileTypeZip } from "@tabler/icons-react";
-export { IconFileTypography } from "@tabler/icons-react";
-export { IconFileUnknown } from "@tabler/icons-react";
-export { IconFileUpload } from "@tabler/icons-react";
-export { IconFileVector } from "@tabler/icons-react";
-export { IconFileWord } from "@tabler/icons-react";
-export { IconFileX } from "@tabler/icons-react";
-export { IconFileZip } from "@tabler/icons-react";
-export { IconFile } from "@tabler/icons-react";
-export { IconFilesOff } from "@tabler/icons-react";
-export { IconFiles } from "@tabler/icons-react";
-export { IconFilter2Bolt } from "@tabler/icons-react";
-export { IconFilter2Cancel } from "@tabler/icons-react";
-export { IconFilter2Check } from "@tabler/icons-react";
-export { IconFilter2Code } from "@tabler/icons-react";
-export { IconFilter2Cog } from "@tabler/icons-react";
-export { IconFilter2Discount } from "@tabler/icons-react";
-export { IconFilter2Dollar } from "@tabler/icons-react";
-export { IconFilter2Down } from "@tabler/icons-react";
-export { IconFilter2Edit } from "@tabler/icons-react";
-export { IconFilter2Exclamation } from "@tabler/icons-react";
-export { IconFilter2Minus } from "@tabler/icons-react";
-export { IconFilter2Pause } from "@tabler/icons-react";
-export { IconFilter2Pin } from "@tabler/icons-react";
-export { IconFilter2Plus } from "@tabler/icons-react";
-export { IconFilter2Question } from "@tabler/icons-react";
-export { IconFilter2Search } from "@tabler/icons-react";
-export { IconFilter2Share } from "@tabler/icons-react";
-export { IconFilter2Spark } from "@tabler/icons-react";
-export { IconFilter2Up } from "@tabler/icons-react";
-export { IconFilter2X } from "@tabler/icons-react";
-export { IconFilter2 } from "@tabler/icons-react";
-export { IconFilterBolt } from "@tabler/icons-react";
-export { IconFilterCancel } from "@tabler/icons-react";
-export { IconFilterCheck } from "@tabler/icons-react";
-export { IconFilterCode } from "@tabler/icons-react";
-export { IconFilterCog } from "@tabler/icons-react";
-export { IconFilterDiscount } from "@tabler/icons-react";
-export { IconFilterDollar } from "@tabler/icons-react";
-export { IconFilterDown } from "@tabler/icons-react";
-export { IconFilterEdit } from "@tabler/icons-react";
-export { IconFilterExclamation } from "@tabler/icons-react";
-export { IconFilterHeart } from "@tabler/icons-react";
-export { IconFilterMinus } from "@tabler/icons-react";
-export { IconFilterOff } from "@tabler/icons-react";
-export { IconFilterPause } from "@tabler/icons-react";
-export { IconFilterPin } from "@tabler/icons-react";
-export { IconFilterPlus } from "@tabler/icons-react";
-export { IconFilterQuestion } from "@tabler/icons-react";
-export { IconFilterSearch } from "@tabler/icons-react";
-export { IconFilterShare } from "@tabler/icons-react";
-export { IconFilterSpark } from "@tabler/icons-react";
-export { IconFilterStar } from "@tabler/icons-react";
-export { IconFilterUp } from "@tabler/icons-react";
-export { IconFilterX } from "@tabler/icons-react";
-export { IconFilter } from "@tabler/icons-react";
-export { IconFilters } from "@tabler/icons-react";
-export { IconFingerprintOff } from "@tabler/icons-react";
-export { IconFingerprintScan } from "@tabler/icons-react";
-export { IconFingerprint } from "@tabler/icons-react";
-export { IconFireExtinguisher } from "@tabler/icons-react";
-export { IconFireHydrantOff } from "@tabler/icons-react";
-export { IconFireHydrant } from "@tabler/icons-react";
-export { IconFiretruck } from "@tabler/icons-react";
-export { IconFirewallCheck } from "@tabler/icons-react";
-export { IconFirewallFlame } from "@tabler/icons-react";
-export { IconFirstAidKitOff } from "@tabler/icons-react";
-export { IconFirstAidKit } from "@tabler/icons-react";
-export { IconFishBone } from "@tabler/icons-react";
-export { IconFishChristianity } from "@tabler/icons-react";
-export { IconFishHookOff } from "@tabler/icons-react";
-export { IconFishHook } from "@tabler/icons-react";
-export { IconFishOff } from "@tabler/icons-react";
-export { IconFish } from "@tabler/icons-react";
-export { IconFlag2Off } from "@tabler/icons-react";
-export { IconFlag2 } from "@tabler/icons-react";
-export { IconFlag3 } from "@tabler/icons-react";
-export { IconFlagBitcoin } from "@tabler/icons-react";
-export { IconFlagBolt } from "@tabler/icons-react";
-export { IconFlagCancel } from "@tabler/icons-react";
-export { IconFlagCheck } from "@tabler/icons-react";
-export { IconFlagCode } from "@tabler/icons-react";
-export { IconFlagCog } from "@tabler/icons-react";
-export { IconFlagDiscount } from "@tabler/icons-react";
-export { IconFlagDollar } from "@tabler/icons-react";
-export { IconFlagDown } from "@tabler/icons-react";
-export { IconFlagExclamation } from "@tabler/icons-react";
-export { IconFlagHeart } from "@tabler/icons-react";
-export { IconFlagMinus } from "@tabler/icons-react";
-export { IconFlagOff } from "@tabler/icons-react";
-export { IconFlagPause } from "@tabler/icons-react";
-export { IconFlagPin } from "@tabler/icons-react";
-export { IconFlagPlus } from "@tabler/icons-react";
-export { IconFlagQuestion } from "@tabler/icons-react";
-export { IconFlagSearch } from "@tabler/icons-react";
-export { IconFlagShare } from "@tabler/icons-react";
-export { IconFlagSpark } from "@tabler/icons-react";
-export { IconFlagStar } from "@tabler/icons-react";
-export { IconFlagUp } from "@tabler/icons-react";
-export { IconFlagX } from "@tabler/icons-react";
-export { IconFlag } from "@tabler/icons-react";
-export { IconFlameOff } from "@tabler/icons-react";
-export { IconFlame } from "@tabler/icons-react";
-export { IconFlare } from "@tabler/icons-react";
-export { IconFlask2Off } from "@tabler/icons-react";
-export { IconFlask2 } from "@tabler/icons-react";
-export { IconFlaskOff } from "@tabler/icons-react";
-export { IconFlask } from "@tabler/icons-react";
-export { IconFlipFlops } from "@tabler/icons-react";
-export { IconFlipHorizontal } from "@tabler/icons-react";
-export { IconFlipVertical } from "@tabler/icons-react";
-export { IconFloatCenter } from "@tabler/icons-react";
-export { IconFloatLeft } from "@tabler/icons-react";
-export { IconFloatNone } from "@tabler/icons-react";
-export { IconFloatRight } from "@tabler/icons-react";
-export { IconFlood } from "@tabler/icons-react";
-export { IconFlowerOff } from "@tabler/icons-react";
-export { IconFlower } from "@tabler/icons-react";
-export { IconFocus2 } from "@tabler/icons-react";
-export { IconFocusAuto } from "@tabler/icons-react";
-export { IconFocusCentered } from "@tabler/icons-react";
-export { IconFocus } from "@tabler/icons-react";
-export { IconFoldDown } from "@tabler/icons-react";
-export { IconFoldUp } from "@tabler/icons-react";
-export { IconFold } from "@tabler/icons-react";
-export { IconFolderAi } from "@tabler/icons-react";
-export { IconFolderBolt } from "@tabler/icons-react";
-export { IconFolderCancel } from "@tabler/icons-react";
-export { IconFolderCheck } from "@tabler/icons-react";
-export { IconFolderCode } from "@tabler/icons-react";
-export { IconFolderCog } from "@tabler/icons-react";
-export { IconFolderDollar } from "@tabler/icons-react";
-export { IconFolderDown } from "@tabler/icons-react";
-export { IconFolderExclamation } from "@tabler/icons-react";
-export { IconFolderHeart } from "@tabler/icons-react";
-export { IconFolderLock } from "@tabler/icons-react";
-export { IconFolderMinus } from "@tabler/icons-react";
-export { IconFolderOff } from "@tabler/icons-react";
-export { IconFolderOpen } from "@tabler/icons-react";
-export { IconFolderPause } from "@tabler/icons-react";
-export { IconFolderPin } from "@tabler/icons-react";
-export { IconFolderPlus } from "@tabler/icons-react";
-export { IconFolderQuestion } from "@tabler/icons-react";
-export { IconFolderRoot } from "@tabler/icons-react";
-export { IconFolderSearch } from "@tabler/icons-react";
-export { IconFolderShare } from "@tabler/icons-react";
-export { IconFolderSparkle } from "@tabler/icons-react";
-export { IconFolderStar } from "@tabler/icons-react";
-export { IconFolderStats } from "@tabler/icons-react";
-export { IconFolderSymlink } from "@tabler/icons-react";
-export { IconFolderUp } from "@tabler/icons-react";
-export { IconFolderUser } from "@tabler/icons-react";
-export { IconFolderX } from "@tabler/icons-react";
-export { IconFolder } from "@tabler/icons-react";
-export { IconFoldersOff } from "@tabler/icons-react";
-export { IconFolders } from "@tabler/icons-react";
-export { IconFootsteps } from "@tabler/icons-react";
-export { IconForbid2 } from "@tabler/icons-react";
-export { IconForbid } from "@tabler/icons-react";
-export { IconForklift } from "@tabler/icons-react";
-export { IconForms } from "@tabler/icons-react";
-export { IconFountainOff } from "@tabler/icons-react";
-export { IconFountain } from "@tabler/icons-react";
-export { IconFrameOff } from "@tabler/icons-react";
-export { IconFrame } from "@tabler/icons-react";
-export { IconFreeRights } from "@tabler/icons-react";
-export { IconFreezeColumn } from "@tabler/icons-react";
-export { IconFreezeRowColumn } from "@tabler/icons-react";
-export { IconFreezeRow } from "@tabler/icons-react";
-export { IconFridgeOff } from "@tabler/icons-react";
-export { IconFridge } from "@tabler/icons-react";
-export { IconFriendsOff } from "@tabler/icons-react";
-export { IconFriends } from "@tabler/icons-react";
-export { IconFrustumOff } from "@tabler/icons-react";
-export { IconFrustumPlus } from "@tabler/icons-react";
-export { IconFrustum } from "@tabler/icons-react";
-export { IconFunctionOff } from "@tabler/icons-react";
-export { IconFunction } from "@tabler/icons-react";
-export { IconGalaxy } from "@tabler/icons-react";
-export { IconGardenCartOff } from "@tabler/icons-react";
-export { IconGardenCart } from "@tabler/icons-react";
-export { IconGasStationOff } from "@tabler/icons-react";
-export { IconGasStation } from "@tabler/icons-react";
-export { IconGaugeOff } from "@tabler/icons-react";
-export { IconGauge } from "@tabler/icons-react";
-export { IconGavel } from "@tabler/icons-react";
-export { IconGenderAgender } from "@tabler/icons-react";
-export { IconGenderAndrogyne } from "@tabler/icons-react";
-export { IconGenderBigender } from "@tabler/icons-react";
-export { IconGenderDemiboy } from "@tabler/icons-react";
-export { IconGenderDemigirl } from "@tabler/icons-react";
-export { IconGenderEpicene } from "@tabler/icons-react";
-export { IconGenderFemale } from "@tabler/icons-react";
-export { IconGenderFemme } from "@tabler/icons-react";
-export { IconGenderGenderfluid } from "@tabler/icons-react";
-export { IconGenderGenderless } from "@tabler/icons-react";
-export { IconGenderGenderqueer } from "@tabler/icons-react";
-export { IconGenderHermaphrodite } from "@tabler/icons-react";
-export { IconGenderIntergender } from "@tabler/icons-react";
-export { IconGenderMale } from "@tabler/icons-react";
-export { IconGenderNeutrois } from "@tabler/icons-react";
-export { IconGenderThird } from "@tabler/icons-react";
-export { IconGenderTransgender } from "@tabler/icons-react";
-export { IconGenderTravesti } from "@tabler/icons-react";
-export { IconGeometry } from "@tabler/icons-react";
-export { IconGhost2 } from "@tabler/icons-react";
-export { IconGhost3 } from "@tabler/icons-react";
-export { IconGhostOff } from "@tabler/icons-react";
-export { IconGhost } from "@tabler/icons-react";
-export { IconGif } from "@tabler/icons-react";
-export { IconGiftCard } from "@tabler/icons-react";
-export { IconGiftOff } from "@tabler/icons-react";
-export { IconGift } from "@tabler/icons-react";
-export { IconGitBranchCheck } from "@tabler/icons-react";
-export { IconGitBranchDeleted } from "@tabler/icons-react";
-export { IconGitBranchX } from "@tabler/icons-react";
-export { IconGitBranch } from "@tabler/icons-react";
-export { IconGitCherryPick } from "@tabler/icons-react";
-export { IconGitCommit } from "@tabler/icons-react";
-export { IconGitCompare } from "@tabler/icons-react";
-export { IconGitFork } from "@tabler/icons-react";
-export { IconGitMergeQueue } from "@tabler/icons-react";
-export { IconGitMerge } from "@tabler/icons-react";
-export { IconGitPullRequestClosed } from "@tabler/icons-react";
-export { IconGitPullRequestConflict } from "@tabler/icons-react";
-export { IconGitPullRequestDraft } from "@tabler/icons-react";
-export { IconGitPullRequestLocked } from "@tabler/icons-react";
-export { IconGitPullRequestUnlisted } from "@tabler/icons-react";
-export { IconGitPullRequest } from "@tabler/icons-react";
-export { IconGizmo } from "@tabler/icons-react";
-export { IconGlassChampagne } from "@tabler/icons-react";
-export { IconGlassCocktail } from "@tabler/icons-react";
-export { IconGlassFull } from "@tabler/icons-react";
-export { IconGlassGin } from "@tabler/icons-react";
-export { IconGlassOff } from "@tabler/icons-react";
-export { IconGlass } from "@tabler/icons-react";
-export { IconGlobeOff } from "@tabler/icons-react";
-export { IconGlobe } from "@tabler/icons-react";
-export { IconGoGame } from "@tabler/icons-react";
-export { IconGolfOff } from "@tabler/icons-react";
-export { IconGolf } from "@tabler/icons-react";
-export { IconGps } from "@tabler/icons-react";
-export { IconGpu2 } from "@tabler/icons-react";
-export { IconGpu } from "@tabler/icons-react";
-export { IconGradienter } from "@tabler/icons-react";
-export { IconGrain } from "@tabler/icons-react";
-export { IconGrape } from "@tabler/icons-react";
-export { IconGraphOff } from "@tabler/icons-react";
-export { IconGraph } from "@tabler/icons-react";
-export { IconGrave2 } from "@tabler/icons-react";
-export { IconGrave } from "@tabler/icons-react";
-export { IconGrid3x3 } from "@tabler/icons-react";
-export { IconGrid4x4 } from "@tabler/icons-react";
-export { IconGridDots } from "@tabler/icons-react";
-export { IconGridGoldenratio } from "@tabler/icons-react";
-export { IconGridPattern } from "@tabler/icons-react";
-export { IconGridScan } from "@tabler/icons-react";
-export { IconGrillFork } from "@tabler/icons-react";
-export { IconGrillOff } from "@tabler/icons-react";
-export { IconGrillSpatula } from "@tabler/icons-react";
-export { IconGrill } from "@tabler/icons-react";
-export { IconGripHorizontal } from "@tabler/icons-react";
-export { IconGripVertical } from "@tabler/icons-react";
-export { IconGrowth } from "@tabler/icons-react";
-export { IconGuitarPick } from "@tabler/icons-react";
-export { IconGymnastics } from "@tabler/icons-react";
-export { IconH1 } from "@tabler/icons-react";
-export { IconH2 } from "@tabler/icons-react";
-export { IconH3 } from "@tabler/icons-react";
-export { IconH4 } from "@tabler/icons-react";
-export { IconH5 } from "@tabler/icons-react";
-export { IconH6 } from "@tabler/icons-react";
-export { IconHammerDrill } from "@tabler/icons-react";
-export { IconHammerOff } from "@tabler/icons-react";
-export { IconHammer } from "@tabler/icons-react";
-export { IconHandClickOff } from "@tabler/icons-react";
-export { IconHandClick } from "@tabler/icons-react";
-export { IconHandFingerDown } from "@tabler/icons-react";
-export { IconHandFingerLeft } from "@tabler/icons-react";
-export { IconHandFingerOff } from "@tabler/icons-react";
-export { IconHandFingerRight } from "@tabler/icons-react";
-export { IconHandFinger } from "@tabler/icons-react";
-export { IconHandGrab } from "@tabler/icons-react";
-export { IconHandLittleFinger } from "@tabler/icons-react";
-export { IconHandLoveYou } from "@tabler/icons-react";
-export { IconHandMiddleFinger } from "@tabler/icons-react";
-export { IconHandMove } from "@tabler/icons-react";
-export { IconHandOff } from "@tabler/icons-react";
-export { IconHandRingFinger } from "@tabler/icons-react";
-export { IconHandSanitizer } from "@tabler/icons-react";
-export { IconHandStop } from "@tabler/icons-react";
-export { IconHandThreeFingers } from "@tabler/icons-react";
-export { IconHandTwoFingers } from "@tabler/icons-react";
-export { IconHanger2 } from "@tabler/icons-react";
-export { IconHangerOff } from "@tabler/icons-react";
-export { IconHanger } from "@tabler/icons-react";
-export { IconHash } from "@tabler/icons-react";
-export { IconHazeMoon } from "@tabler/icons-react";
-export { IconHaze } from "@tabler/icons-react";
-export { IconHdr } from "@tabler/icons-react";
-export { IconHeadingOff } from "@tabler/icons-react";
-export { IconHeading } from "@tabler/icons-react";
-export { IconHeadphonesOff } from "@tabler/icons-react";
-export { IconHeadphones } from "@tabler/icons-react";
-export { IconHeadsetOff } from "@tabler/icons-react";
-export { IconHeadset } from "@tabler/icons-react";
-export { IconHealthRecognition } from "@tabler/icons-react";
-export { IconHeartBitcoin } from "@tabler/icons-react";
-export { IconHeartBolt } from "@tabler/icons-react";
-export { IconHeartBroken } from "@tabler/icons-react";
-export { IconHeartCancel } from "@tabler/icons-react";
-export { IconHeartCheck } from "@tabler/icons-react";
-export { IconHeartCode } from "@tabler/icons-react";
-export { IconHeartCog } from "@tabler/icons-react";
-export { IconHeartDiscount } from "@tabler/icons-react";
-export { IconHeartDollar } from "@tabler/icons-react";
-export { IconHeartDown } from "@tabler/icons-react";
-export { IconHeartExclamation } from "@tabler/icons-react";
-export { IconHeartHandshake } from "@tabler/icons-react";
-export { IconHeartMinus } from "@tabler/icons-react";
-export { IconHeartOff } from "@tabler/icons-react";
-export { IconHeartPause } from "@tabler/icons-react";
-export { IconHeartPin } from "@tabler/icons-react";
-export { IconHeartPlus } from "@tabler/icons-react";
-export { IconHeartQuestion } from "@tabler/icons-react";
-export { IconHeartRateMonitor } from "@tabler/icons-react";
-export { IconHeartSearch } from "@tabler/icons-react";
-export { IconHeartShare } from "@tabler/icons-react";
-export { IconHeartSpark } from "@tabler/icons-react";
-export { IconHeartStar } from "@tabler/icons-react";
-export { IconHeartUp } from "@tabler/icons-react";
-export { IconHeartX } from "@tabler/icons-react";
-export { IconHeart } from "@tabler/icons-react";
-export { IconHeartbeat } from "@tabler/icons-react";
-export { IconHeartsOff } from "@tabler/icons-react";
-export { IconHearts } from "@tabler/icons-react";
-export { IconHelicopterLanding } from "@tabler/icons-react";
-export { IconHelicopter } from "@tabler/icons-react";
-export { IconHelmetOff } from "@tabler/icons-react";
-export { IconHelmet } from "@tabler/icons-react";
-export { IconHelpCircle } from "@tabler/icons-react";
-export { IconHelpHexagon } from "@tabler/icons-react";
-export { IconHelpOctagon } from "@tabler/icons-react";
-export { IconHelpOff } from "@tabler/icons-react";
-export { IconHelpSmall } from "@tabler/icons-react";
-export { IconHelpSquareRounded } from "@tabler/icons-react";
-export { IconHelpSquare } from "@tabler/icons-react";
-export { IconHelpTriangle } from "@tabler/icons-react";
-export { IconHelp } from "@tabler/icons-react";
-export { IconHemisphereOff } from "@tabler/icons-react";
-export { IconHemispherePlus } from "@tabler/icons-react";
-export { IconHemisphere } from "@tabler/icons-react";
-export { IconHexagon3d } from "@tabler/icons-react";
-export { IconHexagonAsterisk } from "@tabler/icons-react";
-export { IconHexagonLetterA } from "@tabler/icons-react";
-export { IconHexagonLetterB } from "@tabler/icons-react";
-export { IconHexagonLetterC } from "@tabler/icons-react";
-export { IconHexagonLetterD } from "@tabler/icons-react";
-export { IconHexagonLetterE } from "@tabler/icons-react";
-export { IconHexagonLetterF } from "@tabler/icons-react";
-export { IconHexagonLetterG } from "@tabler/icons-react";
-export { IconHexagonLetterH } from "@tabler/icons-react";
-export { IconHexagonLetterI } from "@tabler/icons-react";
-export { IconHexagonLetterJ } from "@tabler/icons-react";
-export { IconHexagonLetterK } from "@tabler/icons-react";
-export { IconHexagonLetterL } from "@tabler/icons-react";
-export { IconHexagonLetterM } from "@tabler/icons-react";
-export { IconHexagonLetterN } from "@tabler/icons-react";
-export { IconHexagonLetterO } from "@tabler/icons-react";
-export { IconHexagonLetterP } from "@tabler/icons-react";
-export { IconHexagonLetterQ } from "@tabler/icons-react";
-export { IconHexagonLetterR } from "@tabler/icons-react";
-export { IconHexagonLetterS } from "@tabler/icons-react";
-export { IconHexagonLetterT } from "@tabler/icons-react";
-export { IconHexagonLetterU } from "@tabler/icons-react";
-export { IconHexagonLetterV } from "@tabler/icons-react";
-export { IconHexagonLetterW } from "@tabler/icons-react";
-export { IconHexagonLetterX } from "@tabler/icons-react";
-export { IconHexagonLetterY } from "@tabler/icons-react";
-export { IconHexagonLetterZ } from "@tabler/icons-react";
-export { IconHexagonMinus2 } from "@tabler/icons-react";
-export { IconHexagonMinus } from "@tabler/icons-react";
-export { IconHexagonNumber0 } from "@tabler/icons-react";
-export { IconHexagonNumber1 } from "@tabler/icons-react";
-export { IconHexagonNumber2 } from "@tabler/icons-react";
-export { IconHexagonNumber3 } from "@tabler/icons-react";
-export { IconHexagonNumber4 } from "@tabler/icons-react";
-export { IconHexagonNumber5 } from "@tabler/icons-react";
-export { IconHexagonNumber6 } from "@tabler/icons-react";
-export { IconHexagonNumber7 } from "@tabler/icons-react";
-export { IconHexagonNumber8 } from "@tabler/icons-react";
-export { IconHexagonNumber9 } from "@tabler/icons-react";
-export { IconHexagonOff } from "@tabler/icons-react";
-export { IconHexagonPlus2 } from "@tabler/icons-react";
-export { IconHexagonPlus } from "@tabler/icons-react";
-export { IconHexagon } from "@tabler/icons-react";
-export { IconHexagonalPrismOff } from "@tabler/icons-react";
-export { IconHexagonalPrismPlus } from "@tabler/icons-react";
-export { IconHexagonalPrism } from "@tabler/icons-react";
-export { IconHexagonalPyramidOff } from "@tabler/icons-react";
-export { IconHexagonalPyramidPlus } from "@tabler/icons-react";
-export { IconHexagonalPyramid } from "@tabler/icons-react";
-export { IconHexagonsOff } from "@tabler/icons-react";
-export { IconHexagons } from "@tabler/icons-react";
-export { IconHierarchy2 } from "@tabler/icons-react";
-export { IconHierarchy3 } from "@tabler/icons-react";
-export { IconHierarchyOff } from "@tabler/icons-react";
-export { IconHierarchy } from "@tabler/icons-react";
-export { IconHighlightOff } from "@tabler/icons-react";
-export { IconHighlight } from "@tabler/icons-react";
-export { IconHistoryOff } from "@tabler/icons-react";
-export { IconHistoryToggle } from "@tabler/icons-react";
-export { IconHistory } from "@tabler/icons-react";
-export { IconHome2 } from "@tabler/icons-react";
-export { IconHomeBitcoin } from "@tabler/icons-react";
-export { IconHomeBolt } from "@tabler/icons-react";
-export { IconHomeCancel } from "@tabler/icons-react";
-export { IconHomeCheck } from "@tabler/icons-react";
-export { IconHomeCog } from "@tabler/icons-react";
-export { IconHomeDollar } from "@tabler/icons-react";
-export { IconHomeDot } from "@tabler/icons-react";
-export { IconHomeDown } from "@tabler/icons-react";
-export { IconHomeEco } from "@tabler/icons-react";
-export { IconHomeEdit } from "@tabler/icons-react";
-export { IconHomeExclamation } from "@tabler/icons-react";
-export { IconHomeHand } from "@tabler/icons-react";
-export { IconHomeHeart } from "@tabler/icons-react";
-export { IconHomeInfinity } from "@tabler/icons-react";
-export { IconHomeLink } from "@tabler/icons-react";
-export { IconHomeLock } from "@tabler/icons-react";
-export { IconHomeMinus } from "@tabler/icons-react";
-export { IconHomeMove } from "@tabler/icons-react";
-export { IconHomeOff } from "@tabler/icons-react";
-export { IconHomePlus } from "@tabler/icons-react";
-export { IconHomeQuestion } from "@tabler/icons-react";
-export { IconHomeRibbon } from "@tabler/icons-react";
-export { IconHomeSearch } from "@tabler/icons-react";
-export { IconHomeShare } from "@tabler/icons-react";
-export { IconHomeShield } from "@tabler/icons-react";
-export { IconHomeSignal } from "@tabler/icons-react";
-export { IconHomeSpark } from "@tabler/icons-react";
-export { IconHomeStar } from "@tabler/icons-react";
-export { IconHomeStats } from "@tabler/icons-react";
-export { IconHomeUp } from "@tabler/icons-react";
-export { IconHomeX } from "@tabler/icons-react";
-export { IconHome } from "@tabler/icons-react";
-export { IconHorseToy } from "@tabler/icons-react";
-export { IconHorse } from "@tabler/icons-react";
-export { IconHorseshoe } from "@tabler/icons-react";
-export { IconHospitalCircle } from "@tabler/icons-react";
-export { IconHospital } from "@tabler/icons-react";
-export { IconHotelService } from "@tabler/icons-react";
-export { IconHourglassEmpty } from "@tabler/icons-react";
-export { IconHourglassHigh } from "@tabler/icons-react";
-export { IconHourglassLow } from "@tabler/icons-react";
-export { IconHourglassOff } from "@tabler/icons-react";
-export { IconHourglass } from "@tabler/icons-react";
-export { IconHours12 } from "@tabler/icons-react";
-export { IconHours24 } from "@tabler/icons-react";
-export { IconHtml } from "@tabler/icons-react";
-export { IconHttpConnectOff } from "@tabler/icons-react";
-export { IconHttpConnect } from "@tabler/icons-react";
-export { IconHttpDeleteOff } from "@tabler/icons-react";
-export { IconHttpDelete } from "@tabler/icons-react";
-export { IconHttpGetOff } from "@tabler/icons-react";
-export { IconHttpGet } from "@tabler/icons-react";
-export { IconHttpHeadOff } from "@tabler/icons-react";
-export { IconHttpHead } from "@tabler/icons-react";
-export { IconHttpOptionsOff } from "@tabler/icons-react";
-export { IconHttpOptions } from "@tabler/icons-react";
-export { IconHttpPatchOff } from "@tabler/icons-react";
-export { IconHttpPatch } from "@tabler/icons-react";
-export { IconHttpPostOff } from "@tabler/icons-react";
-export { IconHttpPost } from "@tabler/icons-react";
-export { IconHttpPutOff } from "@tabler/icons-react";
-export { IconHttpPut } from "@tabler/icons-react";
-export { IconHttpQueOff } from "@tabler/icons-react";
-export { IconHttpQue } from "@tabler/icons-react";
-export { IconHttpTraceOff } from "@tabler/icons-react";
-export { IconHttpTrace } from "@tabler/icons-react";
-export { IconHulaHoop } from "@tabler/icons-react";
-export { IconIceCream2 } from "@tabler/icons-react";
-export { IconIceCreamOff } from "@tabler/icons-react";
-export { IconIceCream } from "@tabler/icons-react";
-export { IconIceSkating } from "@tabler/icons-react";
-export { IconIceberg } from "@tabler/icons-react";
-export { IconIconsOff } from "@tabler/icons-react";
-export { IconIcons } from "@tabler/icons-react";
-export { IconIcosahedron } from "@tabler/icons-react";
-export { IconIdBadge2 } from "@tabler/icons-react";
-export { IconIdBadgeOff } from "@tabler/icons-react";
-export { IconIdBadge } from "@tabler/icons-react";
-export { IconIdOff } from "@tabler/icons-react";
-export { IconId } from "@tabler/icons-react";
-export { IconImageGeneration } from "@tabler/icons-react";
-export { IconImageInPicture } from "@tabler/icons-react";
-export { IconInboxOff } from "@tabler/icons-react";
-export { IconInbox } from "@tabler/icons-react";
-export { IconIndentDecrease } from "@tabler/icons-react";
-export { IconIndentIncrease } from "@tabler/icons-react";
-export { IconInfinity2 } from "@tabler/icons-react";
-export { IconInfinityOff } from "@tabler/icons-react";
-export { IconInfinity } from "@tabler/icons-react";
-export { IconInfoCircle } from "@tabler/icons-react";
-export { IconInfoHexagon } from "@tabler/icons-react";
-export { IconInfoOctagon } from "@tabler/icons-react";
-export { IconInfoSmall } from "@tabler/icons-react";
-export { IconInfoSquareRounded } from "@tabler/icons-react";
-export { IconInfoSquare } from "@tabler/icons-react";
-export { IconInfoTriangle } from "@tabler/icons-react";
-export { IconInnerShadowBottomLeft } from "@tabler/icons-react";
-export { IconInnerShadowBottomRight } from "@tabler/icons-react";
-export { IconInnerShadowBottom } from "@tabler/icons-react";
-export { IconInnerShadowLeft } from "@tabler/icons-react";
-export { IconInnerShadowRight } from "@tabler/icons-react";
-export { IconInnerShadowTopLeft } from "@tabler/icons-react";
-export { IconInnerShadowTopRight } from "@tabler/icons-react";
-export { IconInnerShadowTop } from "@tabler/icons-react";
-export { IconInputAi } from "@tabler/icons-react";
-export { IconInputCheck } from "@tabler/icons-react";
-export { IconInputSearch } from "@tabler/icons-react";
-export { IconInputSpark } from "@tabler/icons-react";
-export { IconInputX } from "@tabler/icons-react";
-export { IconInvoice } from "@tabler/icons-react";
-export { IconIroning1 } from "@tabler/icons-react";
-export { IconIroning2 } from "@tabler/icons-react";
-export { IconIroning3 } from "@tabler/icons-react";
-export { IconIroningOff } from "@tabler/icons-react";
-export { IconIroningSteamOff } from "@tabler/icons-react";
-export { IconIroningSteam } from "@tabler/icons-react";
-export { IconIroning } from "@tabler/icons-react";
-export { IconIrregularPolyhedronOff } from "@tabler/icons-react";
-export { IconIrregularPolyhedronPlus } from "@tabler/icons-react";
-export { IconIrregularPolyhedron } from "@tabler/icons-react";
-export { IconItalicOff } from "@tabler/icons-react";
-export { IconItalic } from "@tabler/icons-react";
-export { IconJacket } from "@tabler/icons-react";
-export { IconJetpack } from "@tabler/icons-react";
-export { IconJetski } from "@tabler/icons-react";
-export { IconJewishStar } from "@tabler/icons-react";
-export { IconJoinBevel } from "@tabler/icons-react";
-export { IconJoinRound } from "@tabler/icons-react";
-export { IconJoinStraight } from "@tabler/icons-react";
-export { IconJoker } from "@tabler/icons-react";
-export { IconJpg } from "@tabler/icons-react";
-export { IconJson } from "@tabler/icons-react";
-export { IconJumpRope } from "@tabler/icons-react";
-export { IconKarate } from "@tabler/icons-react";
-export { IconKayak } from "@tabler/icons-react";
-export { IconKerning } from "@tabler/icons-react";
-export { IconKeyOff } from "@tabler/icons-react";
-export { IconKey } from "@tabler/icons-react";
-export { IconKeyboardHide } from "@tabler/icons-react";
-export { IconKeyboardOff } from "@tabler/icons-react";
-export { IconKeyboardShow } from "@tabler/icons-react";
-export { IconKeyboard } from "@tabler/icons-react";
-export { IconKeyframeAlignCenter } from "@tabler/icons-react";
-export { IconKeyframeAlignHorizontal } from "@tabler/icons-react";
-export { IconKeyframeAlignVertical } from "@tabler/icons-react";
-export { IconKeyframe } from "@tabler/icons-react";
-export { IconKeyframes } from "@tabler/icons-react";
-export { IconLabelImportant } from "@tabler/icons-react";
-export { IconLabelOff } from "@tabler/icons-react";
-export { IconLabel } from "@tabler/icons-react";
-export { IconLadderOff } from "@tabler/icons-react";
-export { IconLadder } from "@tabler/icons-react";
-export { IconLadle } from "@tabler/icons-react";
-export { IconLambda } from "@tabler/icons-react";
-export { IconLamp2 } from "@tabler/icons-react";
-export { IconLampOff } from "@tabler/icons-react";
-export { IconLamp } from "@tabler/icons-react";
-export { IconLane } from "@tabler/icons-react";
-export { IconLanguageHiragana } from "@tabler/icons-react";
-export { IconLanguageKatakana } from "@tabler/icons-react";
-export { IconLanguageOff } from "@tabler/icons-react";
-export { IconLanguage } from "@tabler/icons-react";
-export { IconLassoOff } from "@tabler/icons-react";
-export { IconLassoPolygon } from "@tabler/icons-react";
-export { IconLasso } from "@tabler/icons-react";
-export { IconLaurelWreath1 } from "@tabler/icons-react";
-export { IconLaurelWreath2 } from "@tabler/icons-react";
-export { IconLaurelWreath3 } from "@tabler/icons-react";
-export { IconLaurelWreath } from "@tabler/icons-react";
-export { IconLawnMower } from "@tabler/icons-react";
-export { IconLayersDifference } from "@tabler/icons-react";
-export { IconLayersIntersect2 } from "@tabler/icons-react";
-export { IconLayersIntersect } from "@tabler/icons-react";
-export { IconLayersLinked } from "@tabler/icons-react";
-export { IconLayersOff } from "@tabler/icons-react";
-export { IconLayersSelectedBottom } from "@tabler/icons-react";
-export { IconLayersSelected } from "@tabler/icons-react";
-export { IconLayersSubtract } from "@tabler/icons-react";
-export { IconLayersUnion } from "@tabler/icons-react";
-export { IconLayout2 } from "@tabler/icons-react";
-export { IconLayoutAlignBottom } from "@tabler/icons-react";
-export { IconLayoutAlignCenter } from "@tabler/icons-react";
-export { IconLayoutAlignLeft } from "@tabler/icons-react";
-export { IconLayoutAlignMiddle } from "@tabler/icons-react";
-export { IconLayoutAlignRight } from "@tabler/icons-react";
-export { IconLayoutAlignTop } from "@tabler/icons-react";
-export { IconLayoutBoardSplit } from "@tabler/icons-react";
-export { IconLayoutBoard } from "@tabler/icons-react";
-export { IconLayoutBottombarCollapse } from "@tabler/icons-react";
-export { IconLayoutBottombarExpand } from "@tabler/icons-react";
-export { IconLayoutBottombarInactive } from "@tabler/icons-react";
-export { IconLayoutBottombar } from "@tabler/icons-react";
-export { IconLayoutCards } from "@tabler/icons-react";
-export { IconLayoutCollage } from "@tabler/icons-react";
-export { IconLayoutColumns } from "@tabler/icons-react";
-export { IconLayoutDashboard } from "@tabler/icons-react";
-export { IconLayoutDistributeHorizontal } from "@tabler/icons-react";
-export { IconLayoutDistributeVertical } from "@tabler/icons-react";
-export { IconLayoutGridAdd } from "@tabler/icons-react";
-export { IconLayoutGridRemove } from "@tabler/icons-react";
-export { IconLayoutGrid } from "@tabler/icons-react";
-export { IconLayoutKanban } from "@tabler/icons-react";
-export { IconLayoutList } from "@tabler/icons-react";
-export { IconLayoutNavbarCollapse } from "@tabler/icons-react";
-export { IconLayoutNavbarExpand } from "@tabler/icons-react";
-export { IconLayoutNavbarInactive } from "@tabler/icons-react";
-export { IconLayoutNavbar } from "@tabler/icons-react";
-export { IconLayoutOff } from "@tabler/icons-react";
-export { IconLayoutRows } from "@tabler/icons-react";
-export { IconLayoutSidebarInactive } from "@tabler/icons-react";
-export { IconLayoutSidebarLeftCollapse } from "@tabler/icons-react";
-export { IconLayoutSidebarLeftExpand } from "@tabler/icons-react";
-export { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
-export { IconLayoutSidebarRightExpand } from "@tabler/icons-react";
-export { IconLayoutSidebarRightInactive } from "@tabler/icons-react";
-export { IconLayoutSidebarRight } from "@tabler/icons-react";
-export { IconLayoutSidebar } from "@tabler/icons-react";
-export { IconLayout } from "@tabler/icons-react";
-export { IconLeaf2 } from "@tabler/icons-react";
-export { IconLeafMaple } from "@tabler/icons-react";
-export { IconLeafOff } from "@tabler/icons-react";
-export { IconLeaf } from "@tabler/icons-react";
-export { IconLegoOff } from "@tabler/icons-react";
-export { IconLego } from "@tabler/icons-react";
-export { IconLemon2 } from "@tabler/icons-react";
-export { IconLemon } from "@tabler/icons-react";
-export { IconLensConcave } from "@tabler/icons-react";
-export { IconLensConvex } from "@tabler/icons-react";
-export { IconLetterASmall } from "@tabler/icons-react";
-export { IconLetterA } from "@tabler/icons-react";
-export { IconLetterBSmall } from "@tabler/icons-react";
-export { IconLetterB } from "@tabler/icons-react";
-export { IconLetterCSmall } from "@tabler/icons-react";
-export { IconLetterC } from "@tabler/icons-react";
-export { IconLetterCaseLower } from "@tabler/icons-react";
-export { IconLetterCaseToggle } from "@tabler/icons-react";
-export { IconLetterCaseUpper } from "@tabler/icons-react";
-export { IconLetterCase } from "@tabler/icons-react";
-export { IconLetterDSmall } from "@tabler/icons-react";
-export { IconLetterD } from "@tabler/icons-react";
-export { IconLetterESmall } from "@tabler/icons-react";
-export { IconLetterE } from "@tabler/icons-react";
-export { IconLetterFSmall } from "@tabler/icons-react";
-export { IconLetterF } from "@tabler/icons-react";
-export { IconLetterGSmall } from "@tabler/icons-react";
-export { IconLetterG } from "@tabler/icons-react";
-export { IconLetterHSmall } from "@tabler/icons-react";
-export { IconLetterH } from "@tabler/icons-react";
-export { IconLetterISmall } from "@tabler/icons-react";
-export { IconLetterI } from "@tabler/icons-react";
-export { IconLetterJSmall } from "@tabler/icons-react";
-export { IconLetterJ } from "@tabler/icons-react";
-export { IconLetterKSmall } from "@tabler/icons-react";
-export { IconLetterK } from "@tabler/icons-react";
-export { IconLetterLSmall } from "@tabler/icons-react";
-export { IconLetterL } from "@tabler/icons-react";
-export { IconLetterMSmall } from "@tabler/icons-react";
-export { IconLetterM } from "@tabler/icons-react";
-export { IconLetterNSmall } from "@tabler/icons-react";
-export { IconLetterN } from "@tabler/icons-react";
-export { IconLetterOSmall } from "@tabler/icons-react";
-export { IconLetterO } from "@tabler/icons-react";
-export { IconLetterPSmall } from "@tabler/icons-react";
-export { IconLetterP } from "@tabler/icons-react";
-export { IconLetterQSmall } from "@tabler/icons-react";
-export { IconLetterQ } from "@tabler/icons-react";
-export { IconLetterRSmall } from "@tabler/icons-react";
-export { IconLetterR } from "@tabler/icons-react";
-export { IconLetterSSmall } from "@tabler/icons-react";
-export { IconLetterS } from "@tabler/icons-react";
-export { IconLetterSpacing } from "@tabler/icons-react";
-export { IconLetterTSmall } from "@tabler/icons-react";
-export { IconLetterT } from "@tabler/icons-react";
-export { IconLetterUSmall } from "@tabler/icons-react";
-export { IconLetterU } from "@tabler/icons-react";
-export { IconLetterVSmall } from "@tabler/icons-react";
-export { IconLetterV } from "@tabler/icons-react";
-export { IconLetterWSmall } from "@tabler/icons-react";
-export { IconLetterW } from "@tabler/icons-react";
-export { IconLetterXSmall } from "@tabler/icons-react";
-export { IconLetterX } from "@tabler/icons-react";
-export { IconLetterYSmall } from "@tabler/icons-react";
-export { IconLetterY } from "@tabler/icons-react";
-export { IconLetterZSmall } from "@tabler/icons-react";
-export { IconLetterZ } from "@tabler/icons-react";
-export { IconLibraryMinus } from "@tabler/icons-react";
-export { IconLibraryPhoto } from "@tabler/icons-react";
-export { IconLibraryPlus } from "@tabler/icons-react";
-export { IconLibrary } from "@tabler/icons-react";
-export { IconLicenseOff } from "@tabler/icons-react";
-export { IconLicense } from "@tabler/icons-react";
-export { IconLifebuoyOff } from "@tabler/icons-react";
-export { IconLifebuoy } from "@tabler/icons-react";
-export { IconLighter } from "@tabler/icons-react";
-export { IconLineDashed } from "@tabler/icons-react";
-export { IconLineDotted } from "@tabler/icons-react";
-export { IconLineHeight } from "@tabler/icons-react";
-export { IconLineScan } from "@tabler/icons-react";
-export { IconLine } from "@tabler/icons-react";
-export { IconLinkMinus } from "@tabler/icons-react";
-export { IconLinkOff } from "@tabler/icons-react";
-export { IconLinkPlus } from "@tabler/icons-react";
-export { IconLink } from "@tabler/icons-react";
-export { IconListCheck } from "@tabler/icons-react";
-export { IconListDetails } from "@tabler/icons-react";
-export { IconListLetters } from "@tabler/icons-react";
-export { IconListNumbers } from "@tabler/icons-react";
-export { IconListSearch } from "@tabler/icons-react";
-export { IconListTree } from "@tabler/icons-react";
-export { IconList } from "@tabler/icons-react";
-export { IconLivePhotoOff } from "@tabler/icons-react";
-export { IconLivePhoto } from "@tabler/icons-react";
-export { IconLiveView } from "@tabler/icons-react";
-export { IconLoadBalancer } from "@tabler/icons-react";
-export { IconLoader2 } from "@tabler/icons-react";
-export { IconLoader3 } from "@tabler/icons-react";
-export { IconLoader4 } from "@tabler/icons-react";
-export { IconLoaderQuarter } from "@tabler/icons-react";
-export { IconLoader } from "@tabler/icons-react";
-export { IconLocationBolt } from "@tabler/icons-react";
-export { IconLocationBroken } from "@tabler/icons-react";
-export { IconLocationCancel } from "@tabler/icons-react";
-export { IconLocationCheck } from "@tabler/icons-react";
-export { IconLocationCode } from "@tabler/icons-react";
-export { IconLocationCog } from "@tabler/icons-react";
-export { IconLocationDiscount } from "@tabler/icons-react";
-export { IconLocationDollar } from "@tabler/icons-react";
-export { IconLocationDown } from "@tabler/icons-react";
-export { IconLocationExclamation } from "@tabler/icons-react";
-export { IconLocationHeart } from "@tabler/icons-react";
-export { IconLocationMinus } from "@tabler/icons-react";
-export { IconLocationOff } from "@tabler/icons-react";
-export { IconLocationPause } from "@tabler/icons-react";
-export { IconLocationPin } from "@tabler/icons-react";
-export { IconLocationPlus } from "@tabler/icons-react";
-export { IconLocationQuestion } from "@tabler/icons-react";
-export { IconLocationSearch } from "@tabler/icons-react";
-export { IconLocationShare } from "@tabler/icons-react";
-export { IconLocationStar } from "@tabler/icons-react";
-export { IconLocationUp } from "@tabler/icons-react";
-export { IconLocationX } from "@tabler/icons-react";
-export { IconLocation } from "@tabler/icons-react";
-export { IconLockAccessOff } from "@tabler/icons-react";
-export { IconLockAccess } from "@tabler/icons-react";
-export { IconLockBitcoin } from "@tabler/icons-react";
-export { IconLockBolt } from "@tabler/icons-react";
-export { IconLockCancel } from "@tabler/icons-react";
-export { IconLockCheck } from "@tabler/icons-react";
-export { IconLockCode } from "@tabler/icons-react";
-export { IconLockCog } from "@tabler/icons-react";
-export { IconLockDollar } from "@tabler/icons-react";
-export { IconLockDown } from "@tabler/icons-react";
-export { IconLockExclamation } from "@tabler/icons-react";
-export { IconLockHeart } from "@tabler/icons-react";
-export { IconLockMinus } from "@tabler/icons-react";
-export { IconLockOff } from "@tabler/icons-react";
-export { IconLockOpen2 } from "@tabler/icons-react";
-export { IconLockOpenOff } from "@tabler/icons-react";
-export { IconLockOpen } from "@tabler/icons-react";
-export { IconLockPassword } from "@tabler/icons-react";
-export { IconLockPause } from "@tabler/icons-react";
-export { IconLockPin } from "@tabler/icons-react";
-export { IconLockPlus } from "@tabler/icons-react";
-export { IconLockQuestion } from "@tabler/icons-react";
-export { IconLockSearch } from "@tabler/icons-react";
-export { IconLockShare } from "@tabler/icons-react";
-export { IconLockSquareRounded } from "@tabler/icons-react";
-export { IconLockSquare } from "@tabler/icons-react";
-export { IconLockStar } from "@tabler/icons-react";
-export { IconLockUp } from "@tabler/icons-react";
-export { IconLockX } from "@tabler/icons-react";
-export { IconLock } from "@tabler/icons-react";
-export { IconLogicAnd } from "@tabler/icons-react";
-export { IconLogicBuffer } from "@tabler/icons-react";
-export { IconLogicNand } from "@tabler/icons-react";
-export { IconLogicNor } from "@tabler/icons-react";
-export { IconLogicNot } from "@tabler/icons-react";
-export { IconLogicOr } from "@tabler/icons-react";
-export { IconLogicXnor } from "@tabler/icons-react";
-export { IconLogicXor } from "@tabler/icons-react";
-export { IconLogin2 } from "@tabler/icons-react";
-export { IconLogin } from "@tabler/icons-react";
-export { IconLogout2 } from "@tabler/icons-react";
-export { IconLogout } from "@tabler/icons-react";
-export { IconLogs } from "@tabler/icons-react";
-export { IconLollipopOff } from "@tabler/icons-react";
-export { IconLollipop } from "@tabler/icons-react";
-export { IconLuggageOff } from "@tabler/icons-react";
-export { IconLuggage } from "@tabler/icons-react";
-export { IconLungsOff } from "@tabler/icons-react";
-export { IconLungs } from "@tabler/icons-react";
-export { IconMacroOff } from "@tabler/icons-react";
-export { IconMacro } from "@tabler/icons-react";
-export { IconMagnetOff } from "@tabler/icons-react";
-export { IconMagnet } from "@tabler/icons-react";
-export { IconMagnetic } from "@tabler/icons-react";
-export { IconMailAi } from "@tabler/icons-react";
-export { IconMailBitcoin } from "@tabler/icons-react";
-export { IconMailBolt } from "@tabler/icons-react";
-export { IconMailCancel } from "@tabler/icons-react";
-export { IconMailCheck } from "@tabler/icons-react";
-export { IconMailCode } from "@tabler/icons-react";
-export { IconMailCog } from "@tabler/icons-react";
-export { IconMailDollar } from "@tabler/icons-react";
-export { IconMailDown } from "@tabler/icons-react";
-export { IconMailExclamation } from "@tabler/icons-react";
-export { IconMailFast } from "@tabler/icons-react";
-export { IconMailForward } from "@tabler/icons-react";
-export { IconMailHeart } from "@tabler/icons-react";
-export { IconMailMinus } from "@tabler/icons-react";
-export { IconMailOff } from "@tabler/icons-react";
-export { IconMailOpened } from "@tabler/icons-react";
-export { IconMailPause } from "@tabler/icons-react";
-export { IconMailPin } from "@tabler/icons-react";
-export { IconMailPlus } from "@tabler/icons-react";
-export { IconMailQuestion } from "@tabler/icons-react";
-export { IconMailSearch } from "@tabler/icons-react";
-export { IconMailShare } from "@tabler/icons-react";
-export { IconMailSpark } from "@tabler/icons-react";
-export { IconMailStar } from "@tabler/icons-react";
-export { IconMailUp } from "@tabler/icons-react";
-export { IconMailX } from "@tabler/icons-react";
-export { IconMail } from "@tabler/icons-react";
-export { IconMailboxOff } from "@tabler/icons-react";
-export { IconMailbox } from "@tabler/icons-react";
-export { IconMan } from "@tabler/icons-react";
-export { IconManualGearbox } from "@tabler/icons-react";
-export { IconMap2 } from "@tabler/icons-react";
-export { IconMapBolt } from "@tabler/icons-react";
-export { IconMapCancel } from "@tabler/icons-react";
-export { IconMapCheck } from "@tabler/icons-react";
-export { IconMapCode } from "@tabler/icons-react";
-export { IconMapCog } from "@tabler/icons-react";
-export { IconMapDiscount } from "@tabler/icons-react";
-export { IconMapDollar } from "@tabler/icons-react";
-export { IconMapDown } from "@tabler/icons-react";
-export { IconMapEast } from "@tabler/icons-react";
-export { IconMapExclamation } from "@tabler/icons-react";
-export { IconMapHeart } from "@tabler/icons-react";
-export { IconMapLock } from "@tabler/icons-react";
-export { IconMapMinus } from "@tabler/icons-react";
-export { IconMapNorth } from "@tabler/icons-react";
-export { IconMapOff } from "@tabler/icons-react";
-export { IconMapPause } from "@tabler/icons-react";
-export { IconMapPin2 } from "@tabler/icons-react";
-export { IconMapPinBolt } from "@tabler/icons-react";
-export { IconMapPinCancel } from "@tabler/icons-react";
-export { IconMapPinCheck } from "@tabler/icons-react";
-export { IconMapPinCode } from "@tabler/icons-react";
-export { IconMapPinCog } from "@tabler/icons-react";
-export { IconMapPinDollar } from "@tabler/icons-react";
-export { IconMapPinDown } from "@tabler/icons-react";
-export { IconMapPinExclamation } from "@tabler/icons-react";
-export { IconMapPinHeart } from "@tabler/icons-react";
-export { IconMapPinMinus } from "@tabler/icons-react";
-export { IconMapPinOff } from "@tabler/icons-react";
-export { IconMapPinPause } from "@tabler/icons-react";
-export { IconMapPinPin } from "@tabler/icons-react";
-export { IconMapPinPlus } from "@tabler/icons-react";
-export { IconMapPinQuestion } from "@tabler/icons-react";
-export { IconMapPinSearch } from "@tabler/icons-react";
-export { IconMapPinShare } from "@tabler/icons-react";
-export { IconMapPinStar } from "@tabler/icons-react";
-export { IconMapPinUp } from "@tabler/icons-react";
-export { IconMapPinX } from "@tabler/icons-react";
-export { IconMapPin } from "@tabler/icons-react";
-export { IconMapPinned } from "@tabler/icons-react";
-export { IconMapPins } from "@tabler/icons-react";
-export { IconMapPlus } from "@tabler/icons-react";
-export { IconMapQuestion } from "@tabler/icons-react";
-export { IconMapRoute } from "@tabler/icons-react";
-export { IconMapSearch } from "@tabler/icons-react";
-export { IconMapShare } from "@tabler/icons-react";
-export { IconMapShield } from "@tabler/icons-react";
-export { IconMapSouth } from "@tabler/icons-react";
-export { IconMapStar } from "@tabler/icons-react";
-export { IconMapUp } from "@tabler/icons-react";
-export { IconMapWest } from "@tabler/icons-react";
-export { IconMapX } from "@tabler/icons-react";
-export { IconMap } from "@tabler/icons-react";
-export { IconMarkdownOff } from "@tabler/icons-react";
-export { IconMarkdown } from "@tabler/icons-react";
-export { IconMarquee2 } from "@tabler/icons-react";
-export { IconMarqueeOff } from "@tabler/icons-react";
-export { IconMarquee } from "@tabler/icons-react";
-export { IconMars } from "@tabler/icons-react";
-export { IconMaskOff } from "@tabler/icons-react";
-export { IconMask } from "@tabler/icons-react";
-export { IconMasksTheaterOff } from "@tabler/icons-react";
-export { IconMasksTheater } from "@tabler/icons-react";
-export { IconMassage } from "@tabler/icons-react";
-export { IconMatchstick } from "@tabler/icons-react";
-export { IconMath1Divide2 } from "@tabler/icons-react";
-export { IconMath1Divide3 } from "@tabler/icons-react";
-export { IconMathAvg } from "@tabler/icons-react";
-export { IconMathCos } from "@tabler/icons-react";
-export { IconMathCtg } from "@tabler/icons-react";
-export { IconMathEqualGreater } from "@tabler/icons-react";
-export { IconMathEqualLower } from "@tabler/icons-react";
-export { IconMathFunctionOff } from "@tabler/icons-react";
-export { IconMathFunctionY } from "@tabler/icons-react";
-export { IconMathFunction } from "@tabler/icons-react";
-export { IconMathGreater } from "@tabler/icons-react";
-export { IconMathIntegralX } from "@tabler/icons-react";
-export { IconMathIntegral } from "@tabler/icons-react";
-export { IconMathIntegrals } from "@tabler/icons-react";
-export { IconMathLower } from "@tabler/icons-react";
-export { IconMathMaxMin } from "@tabler/icons-react";
-export { IconMathMax } from "@tabler/icons-react";
-export { IconMathMin } from "@tabler/icons-react";
-export { IconMathNot } from "@tabler/icons-react";
-export { IconMathOff } from "@tabler/icons-react";
-export { IconMathPiDivide2 } from "@tabler/icons-react";
-export { IconMathPi } from "@tabler/icons-react";
-export { IconMathSec } from "@tabler/icons-react";
-export { IconMathSin } from "@tabler/icons-react";
-export { IconMathSymbols } from "@tabler/icons-react";
-export { IconMathTg } from "@tabler/icons-react";
-export { IconMathXDivide2 } from "@tabler/icons-react";
-export { IconMathXDivideY2 } from "@tabler/icons-react";
-export { IconMathXDivideY } from "@tabler/icons-react";
-export { IconMathXFloorDivideY } from "@tabler/icons-react";
-export { IconMathXMinusX } from "@tabler/icons-react";
-export { IconMathXMinusY } from "@tabler/icons-react";
-export { IconMathXPlusX } from "@tabler/icons-react";
-export { IconMathXPlusY } from "@tabler/icons-react";
-export { IconMathXy } from "@tabler/icons-react";
-export { IconMathYMinusY } from "@tabler/icons-react";
-export { IconMathYPlusY } from "@tabler/icons-react";
-export { IconMath } from "@tabler/icons-react";
-export { IconMatrix } from "@tabler/icons-react";
-export { IconMaximizeOff } from "@tabler/icons-react";
-export { IconMaximize } from "@tabler/icons-react";
-export { IconMeatOff } from "@tabler/icons-react";
-export { IconMeat } from "@tabler/icons-react";
-export { IconMedal2 } from "@tabler/icons-react";
-export { IconMedal } from "@tabler/icons-react";
-export { IconMedicalCrossCircle } from "@tabler/icons-react";
-export { IconMedicalCrossOff } from "@tabler/icons-react";
-export { IconMedicalCross } from "@tabler/icons-react";
-export { IconMedicineSyrup } from "@tabler/icons-react";
-export { IconMeeple } from "@tabler/icons-react";
-export { IconMelon } from "@tabler/icons-react";
-export { IconMemory } from "@tabler/icons-react";
-export { IconMenorah } from "@tabler/icons-react";
-export { IconMenu2 } from "@tabler/icons-react";
-export { IconMenu3 } from "@tabler/icons-react";
-export { IconMenu4 } from "@tabler/icons-react";
-export { IconMenuDeep } from "@tabler/icons-react";
-export { IconMenuOrder } from "@tabler/icons-react";
-export { IconMenu } from "@tabler/icons-react";
-export { IconMesh } from "@tabler/icons-react";
-export { IconMessage2Ai } from "@tabler/icons-react";
-export { IconMessage2Bolt } from "@tabler/icons-react";
-export { IconMessage2Cancel } from "@tabler/icons-react";
-export { IconMessage2Check } from "@tabler/icons-react";
-export { IconMessage2Code } from "@tabler/icons-react";
-export { IconMessage2Cog } from "@tabler/icons-react";
-export { IconMessage2Dollar } from "@tabler/icons-react";
-export { IconMessage2Down } from "@tabler/icons-react";
-export { IconMessage2Exclamation } from "@tabler/icons-react";
-export { IconMessage2Heart } from "@tabler/icons-react";
-export { IconMessage2Minus } from "@tabler/icons-react";
-export { IconMessage2Off } from "@tabler/icons-react";
-export { IconMessage2Pause } from "@tabler/icons-react";
-export { IconMessage2Pin } from "@tabler/icons-react";
-export { IconMessage2Plus } from "@tabler/icons-react";
-export { IconMessage2Question } from "@tabler/icons-react";
-export { IconMessage2Search } from "@tabler/icons-react";
-export { IconMessage2Share } from "@tabler/icons-react";
-export { IconMessage2Sparkle } from "@tabler/icons-react";
-export { IconMessage2Star } from "@tabler/icons-react";
-export { IconMessage2Up } from "@tabler/icons-react";
-export { IconMessage2X } from "@tabler/icons-react";
-export { IconMessage2 } from "@tabler/icons-react";
-export { IconMessageAi } from "@tabler/icons-react";
-export { IconMessageBolt } from "@tabler/icons-react";
-export { IconMessageCancel } from "@tabler/icons-react";
-export { IconMessageChatbot } from "@tabler/icons-react";
-export { IconMessageCheck } from "@tabler/icons-react";
-export { IconMessageCircleBolt } from "@tabler/icons-react";
-export { IconMessageCircleCancel } from "@tabler/icons-react";
-export { IconMessageCircleCheck } from "@tabler/icons-react";
-export { IconMessageCircleCode } from "@tabler/icons-react";
-export { IconMessageCircleCog } from "@tabler/icons-react";
-export { IconMessageCircleDollar } from "@tabler/icons-react";
-export { IconMessageCircleDown } from "@tabler/icons-react";
-export { IconMessageCircleExclamation } from "@tabler/icons-react";
-export { IconMessageCircleHeart } from "@tabler/icons-react";
-export { IconMessageCircleMinus } from "@tabler/icons-react";
-export { IconMessageCircleOff } from "@tabler/icons-react";
-export { IconMessageCirclePause } from "@tabler/icons-react";
-export { IconMessageCirclePin } from "@tabler/icons-react";
-export { IconMessageCirclePlus } from "@tabler/icons-react";
-export { IconMessageCircleQuestion } from "@tabler/icons-react";
-export { IconMessageCircleSearch } from "@tabler/icons-react";
-export { IconMessageCircleShare } from "@tabler/icons-react";
-export { IconMessageCircleStar } from "@tabler/icons-react";
-export { IconMessageCircleUp } from "@tabler/icons-react";
-export { IconMessageCircleUser } from "@tabler/icons-react";
-export { IconMessageCircleX } from "@tabler/icons-react";
-export { IconMessageCircle } from "@tabler/icons-react";
-export { IconMessageCode } from "@tabler/icons-react";
-export { IconMessageCog } from "@tabler/icons-react";
-export { IconMessageDollar } from "@tabler/icons-react";
-export { IconMessageDots } from "@tabler/icons-react";
-export { IconMessageDown } from "@tabler/icons-react";
-export { IconMessageExclamation } from "@tabler/icons-react";
-export { IconMessageForward } from "@tabler/icons-react";
-export { IconMessageHeart } from "@tabler/icons-react";
-export { IconMessageLanguage } from "@tabler/icons-react";
-export { IconMessageMinus } from "@tabler/icons-react";
-export { IconMessageOff } from "@tabler/icons-react";
-export { IconMessagePause } from "@tabler/icons-react";
-export { IconMessagePin } from "@tabler/icons-react";
-export { IconMessagePlus } from "@tabler/icons-react";
-export { IconMessageQuestion } from "@tabler/icons-react";
-export { IconMessageReply } from "@tabler/icons-react";
-export { IconMessageReport } from "@tabler/icons-react";
-export { IconMessageSearch } from "@tabler/icons-react";
-export { IconMessageShare } from "@tabler/icons-react";
-export { IconMessageSparkle } from "@tabler/icons-react";
-export { IconMessageStar } from "@tabler/icons-react";
-export { IconMessageUp } from "@tabler/icons-react";
-export { IconMessageUser } from "@tabler/icons-react";
-export { IconMessageX } from "@tabler/icons-react";
-export { IconMessage } from "@tabler/icons-react";
-export { IconMessagesOff } from "@tabler/icons-react";
-export { IconMessages } from "@tabler/icons-react";
-export { IconMeteorOff } from "@tabler/icons-react";
-export { IconMeteor } from "@tabler/icons-react";
-export { IconMeterCube } from "@tabler/icons-react";
-export { IconMeterSquare } from "@tabler/icons-react";
-export { IconMetronome } from "@tabler/icons-react";
-export { IconMichelinBibGourmand } from "@tabler/icons-react";
-export { IconMichelinStarGreen } from "@tabler/icons-react";
-export { IconMichelinStar } from "@tabler/icons-react";
-export { IconMickey } from "@tabler/icons-react";
-export { IconMicrofrontends } from "@tabler/icons-react";
-export { IconMicrophone2Off } from "@tabler/icons-react";
-export { IconMicrophone2 } from "@tabler/icons-react";
-export { IconMicrophoneOff } from "@tabler/icons-react";
-export { IconMicrophone } from "@tabler/icons-react";
-export { IconMicroscopeOff } from "@tabler/icons-react";
-export { IconMicroscope } from "@tabler/icons-react";
-export { IconMicrowaveOff } from "@tabler/icons-react";
-export { IconMicrowave } from "@tabler/icons-react";
-export { IconMiddleware } from "@tabler/icons-react";
-export { IconMilitaryAward } from "@tabler/icons-react";
-export { IconMilitaryRank } from "@tabler/icons-react";
-export { IconMilkOff } from "@tabler/icons-react";
-export { IconMilk } from "@tabler/icons-react";
-export { IconMilkshake } from "@tabler/icons-react";
-export { IconMinimize } from "@tabler/icons-react";
-export { IconMinusVertical } from "@tabler/icons-react";
-export { IconMinus } from "@tabler/icons-react";
-export { IconMistOff } from "@tabler/icons-react";
-export { IconMist } from "@tabler/icons-react";
-export { IconMobiledataOff } from "@tabler/icons-react";
-export { IconMobiledata } from "@tabler/icons-react";
-export { IconModelAi } from "@tabler/icons-react";
-export { IconMoneybagEdit } from "@tabler/icons-react";
-export { IconMoneybagHeart } from "@tabler/icons-react";
-export { IconMoneybagMinus } from "@tabler/icons-react";
-export { IconMoneybagMoveBack } from "@tabler/icons-react";
-export { IconMoneybagMove } from "@tabler/icons-react";
-export { IconMoneybagPlus } from "@tabler/icons-react";
-export { IconMoneybag } from "@tabler/icons-react";
-export { IconMonkeybar } from "@tabler/icons-react";
-export { IconMoodAngry } from "@tabler/icons-react";
-export { IconMoodAnnoyed2 } from "@tabler/icons-react";
-export { IconMoodAnnoyed } from "@tabler/icons-react";
-export { IconMoodBitcoin } from "@tabler/icons-react";
-export { IconMoodBoy } from "@tabler/icons-react";
-export { IconMoodCheck } from "@tabler/icons-react";
-export { IconMoodCog } from "@tabler/icons-react";
-export { IconMoodConfused } from "@tabler/icons-react";
-export { IconMoodCrazyHappy } from "@tabler/icons-react";
-export { IconMoodCry } from "@tabler/icons-react";
-export { IconMoodDollar } from "@tabler/icons-react";
-export { IconMoodEdit } from "@tabler/icons-react";
-export { IconMoodEmpty } from "@tabler/icons-react";
-export { IconMoodHappy } from "@tabler/icons-react";
-export { IconMoodHeart } from "@tabler/icons-react";
-export { IconMoodKid } from "@tabler/icons-react";
-export { IconMoodLookDown } from "@tabler/icons-react";
-export { IconMoodLookLeft } from "@tabler/icons-react";
-export { IconMoodLookRight } from "@tabler/icons-react";
-export { IconMoodLookUp } from "@tabler/icons-react";
-export { IconMoodMinus } from "@tabler/icons-react";
-export { IconMoodNerd } from "@tabler/icons-react";
-export { IconMoodNervous } from "@tabler/icons-react";
-export { IconMoodNeutral } from "@tabler/icons-react";
-export { IconMoodOff } from "@tabler/icons-react";
-export { IconMoodPin } from "@tabler/icons-react";
-export { IconMoodPlus } from "@tabler/icons-react";
-export { IconMoodPuzzled } from "@tabler/icons-react";
-export { IconMoodSad2 } from "@tabler/icons-react";
-export { IconMoodSadDizzy } from "@tabler/icons-react";
-export { IconMoodSadSquint } from "@tabler/icons-react";
-export { IconMoodSad } from "@tabler/icons-react";
-export { IconMoodSearch } from "@tabler/icons-react";
-export { IconMoodShare } from "@tabler/icons-react";
-export { IconMoodSick } from "@tabler/icons-react";
-export { IconMoodSilence } from "@tabler/icons-react";
-export { IconMoodSing } from "@tabler/icons-react";
-export { IconMoodSmileBeam } from "@tabler/icons-react";
-export { IconMoodSmileDizzy } from "@tabler/icons-react";
-export { IconMoodSmile } from "@tabler/icons-react";
-export { IconMoodSpark } from "@tabler/icons-react";
-export { IconMoodSurprised } from "@tabler/icons-react";
-export { IconMoodTongueWink2 } from "@tabler/icons-react";
-export { IconMoodTongueWink } from "@tabler/icons-react";
-export { IconMoodTongue } from "@tabler/icons-react";
-export { IconMoodUnamused } from "@tabler/icons-react";
-export { IconMoodUp } from "@tabler/icons-react";
-export { IconMoodWink2 } from "@tabler/icons-react";
-export { IconMoodWink } from "@tabler/icons-react";
-export { IconMoodWrrr } from "@tabler/icons-react";
-export { IconMoodX } from "@tabler/icons-react";
-export { IconMoodXd } from "@tabler/icons-react";
-export { IconMoon2 } from "@tabler/icons-react";
-export { IconMoonOff } from "@tabler/icons-react";
-export { IconMoonStars } from "@tabler/icons-react";
-export { IconMoon } from "@tabler/icons-react";
-export { IconMoped } from "@tabler/icons-react";
-export { IconMosque } from "@tabler/icons-react";
-export { IconMotorbike } from "@tabler/icons-react";
-export { IconMountainOff } from "@tabler/icons-react";
-export { IconMountain } from "@tabler/icons-react";
-export { IconMouse2 } from "@tabler/icons-react";
-export { IconMouseOff } from "@tabler/icons-react";
-export { IconMouse } from "@tabler/icons-react";
-export { IconMoustache } from "@tabler/icons-react";
-export { IconMovieOff } from "@tabler/icons-react";
-export { IconMovie } from "@tabler/icons-react";
-export { IconMugOff } from "@tabler/icons-react";
-export { IconMug } from "@tabler/icons-react";
-export { IconMultiplier05x } from "@tabler/icons-react";
-export { IconMultiplier15x } from "@tabler/icons-react";
-export { IconMultiplier1x } from "@tabler/icons-react";
-export { IconMultiplier2x } from "@tabler/icons-react";
-export { IconMushroomOff } from "@tabler/icons-react";
-export { IconMushroom } from "@tabler/icons-react";
-export { IconMusicBolt } from "@tabler/icons-react";
-export { IconMusicCancel } from "@tabler/icons-react";
-export { IconMusicCheck } from "@tabler/icons-react";
-export { IconMusicCode } from "@tabler/icons-react";
-export { IconMusicCog } from "@tabler/icons-react";
-export { IconMusicDiscount } from "@tabler/icons-react";
-export { IconMusicDollar } from "@tabler/icons-react";
-export { IconMusicDown } from "@tabler/icons-react";
-export { IconMusicExclamation } from "@tabler/icons-react";
-export { IconMusicHeart } from "@tabler/icons-react";
-export { IconMusicMinus } from "@tabler/icons-react";
-export { IconMusicOff } from "@tabler/icons-react";
-export { IconMusicPause } from "@tabler/icons-react";
-export { IconMusicPin } from "@tabler/icons-react";
-export { IconMusicPlus } from "@tabler/icons-react";
-export { IconMusicQuestion } from "@tabler/icons-react";
-export { IconMusicSearch } from "@tabler/icons-react";
-export { IconMusicShare } from "@tabler/icons-react";
-export { IconMusicStar } from "@tabler/icons-react";
-export { IconMusicUp } from "@tabler/icons-react";
-export { IconMusicX } from "@tabler/icons-react";
-export { IconMusic } from "@tabler/icons-react";
-export { IconNavigationBolt } from "@tabler/icons-react";
-export { IconNavigationCancel } from "@tabler/icons-react";
-export { IconNavigationCheck } from "@tabler/icons-react";
-export { IconNavigationCode } from "@tabler/icons-react";
-export { IconNavigationCog } from "@tabler/icons-react";
-export { IconNavigationDiscount } from "@tabler/icons-react";
-export { IconNavigationDollar } from "@tabler/icons-react";
-export { IconNavigationDown } from "@tabler/icons-react";
-export { IconNavigationEast } from "@tabler/icons-react";
-export { IconNavigationExclamation } from "@tabler/icons-react";
-export { IconNavigationHeart } from "@tabler/icons-react";
-export { IconNavigationMinus } from "@tabler/icons-react";
-export { IconNavigationNorth } from "@tabler/icons-react";
-export { IconNavigationOff } from "@tabler/icons-react";
-export { IconNavigationPause } from "@tabler/icons-react";
-export { IconNavigationPin } from "@tabler/icons-react";
-export { IconNavigationPlus } from "@tabler/icons-react";
-export { IconNavigationQuestion } from "@tabler/icons-react";
-export { IconNavigationSearch } from "@tabler/icons-react";
-export { IconNavigationShare } from "@tabler/icons-react";
-export { IconNavigationSouth } from "@tabler/icons-react";
-export { IconNavigationStar } from "@tabler/icons-react";
-export { IconNavigationTop } from "@tabler/icons-react";
-export { IconNavigationUp } from "@tabler/icons-react";
-export { IconNavigationWest } from "@tabler/icons-react";
-export { IconNavigationX } from "@tabler/icons-react";
-export { IconNavigation } from "@tabler/icons-react";
-export { IconNeedleThread } from "@tabler/icons-react";
-export { IconNeedle } from "@tabler/icons-react";
-export { IconNetworkOff } from "@tabler/icons-react";
-export { IconNetwork } from "@tabler/icons-react";
-export { IconNewSection } from "@tabler/icons-react";
-export { IconNewsOff } from "@tabler/icons-react";
-export { IconNews } from "@tabler/icons-react";
-export { IconNfcOff } from "@tabler/icons-react";
-export { IconNfc } from "@tabler/icons-react";
-export { IconNoCopyright } from "@tabler/icons-react";
-export { IconNoCreativeCommons } from "@tabler/icons-react";
-export { IconNoDerivatives } from "@tabler/icons-react";
-export { IconNoiseReduction } from "@tabler/icons-react";
-export { IconNorthStar } from "@tabler/icons-react";
-export { IconNotdef } from "@tabler/icons-react";
-export { IconNoteOff } from "@tabler/icons-react";
-export { IconNote } from "@tabler/icons-react";
-export { IconNotebookOff } from "@tabler/icons-react";
-export { IconNotebook } from "@tabler/icons-react";
-export { IconNotesOff } from "@tabler/icons-react";
-export { IconNotes } from "@tabler/icons-react";
-export { IconNotificationOff } from "@tabler/icons-react";
-export { IconNotification } from "@tabler/icons-react";
-export { IconNumber0Small } from "@tabler/icons-react";
-export { IconNumber0 } from "@tabler/icons-react";
-export { IconNumber1Small } from "@tabler/icons-react";
-export { IconNumber1 } from "@tabler/icons-react";
-export { IconNumber10Small } from "@tabler/icons-react";
-export { IconNumber10 } from "@tabler/icons-react";
-export { IconNumber100Small } from "@tabler/icons-react";
-export { IconNumber11Small } from "@tabler/icons-react";
-export { IconNumber11 } from "@tabler/icons-react";
-export { IconNumber12Small } from "@tabler/icons-react";
-export { IconNumber123 } from "@tabler/icons-react";
-export { IconNumber13Small } from "@tabler/icons-react";
-export { IconNumber14Small } from "@tabler/icons-react";
-export { IconNumber15Small } from "@tabler/icons-react";
-export { IconNumber16Small } from "@tabler/icons-react";
-export { IconNumber17Small } from "@tabler/icons-react";
-export { IconNumber18Small } from "@tabler/icons-react";
-export { IconNumber19Small } from "@tabler/icons-react";
-export { IconNumber2Small } from "@tabler/icons-react";
-export { IconNumber2 } from "@tabler/icons-react";
-export { IconNumber20Small } from "@tabler/icons-react";
-export { IconNumber21Small } from "@tabler/icons-react";
-export { IconNumber22Small } from "@tabler/icons-react";
-export { IconNumber23Small } from "@tabler/icons-react";
-export { IconNumber24Small } from "@tabler/icons-react";
-export { IconNumber25Small } from "@tabler/icons-react";
-export { IconNumber26Small } from "@tabler/icons-react";
-export { IconNumber27Small } from "@tabler/icons-react";
-export { IconNumber28Small } from "@tabler/icons-react";
-export { IconNumber29Small } from "@tabler/icons-react";
-export { IconNumber3Small } from "@tabler/icons-react";
-export { IconNumber3 } from "@tabler/icons-react";
-export { IconNumber30Small } from "@tabler/icons-react";
-export { IconNumber31Small } from "@tabler/icons-react";
-export { IconNumber32Small } from "@tabler/icons-react";
-export { IconNumber33Small } from "@tabler/icons-react";
-export { IconNumber34Small } from "@tabler/icons-react";
-export { IconNumber35Small } from "@tabler/icons-react";
-export { IconNumber36Small } from "@tabler/icons-react";
-export { IconNumber37Small } from "@tabler/icons-react";
-export { IconNumber38Small } from "@tabler/icons-react";
-export { IconNumber39Small } from "@tabler/icons-react";
-export { IconNumber4Small } from "@tabler/icons-react";
-export { IconNumber4 } from "@tabler/icons-react";
-export { IconNumber40Small } from "@tabler/icons-react";
-export { IconNumber41Small } from "@tabler/icons-react";
-export { IconNumber42Small } from "@tabler/icons-react";
-export { IconNumber43Small } from "@tabler/icons-react";
-export { IconNumber44Small } from "@tabler/icons-react";
-export { IconNumber45Small } from "@tabler/icons-react";
-export { IconNumber46Small } from "@tabler/icons-react";
-export { IconNumber47Small } from "@tabler/icons-react";
-export { IconNumber48Small } from "@tabler/icons-react";
-export { IconNumber49Small } from "@tabler/icons-react";
-export { IconNumber5Small } from "@tabler/icons-react";
-export { IconNumber5 } from "@tabler/icons-react";
-export { IconNumber50Small } from "@tabler/icons-react";
-export { IconNumber51Small } from "@tabler/icons-react";
-export { IconNumber52Small } from "@tabler/icons-react";
-export { IconNumber53Small } from "@tabler/icons-react";
-export { IconNumber54Small } from "@tabler/icons-react";
-export { IconNumber55Small } from "@tabler/icons-react";
-export { IconNumber56Small } from "@tabler/icons-react";
-export { IconNumber57Small } from "@tabler/icons-react";
-export { IconNumber58Small } from "@tabler/icons-react";
-export { IconNumber59Small } from "@tabler/icons-react";
-export { IconNumber6Small } from "@tabler/icons-react";
-export { IconNumber6 } from "@tabler/icons-react";
-export { IconNumber60Small } from "@tabler/icons-react";
-export { IconNumber61Small } from "@tabler/icons-react";
-export { IconNumber62Small } from "@tabler/icons-react";
-export { IconNumber63Small } from "@tabler/icons-react";
-export { IconNumber64Small } from "@tabler/icons-react";
-export { IconNumber65Small } from "@tabler/icons-react";
-export { IconNumber66Small } from "@tabler/icons-react";
-export { IconNumber67Small } from "@tabler/icons-react";
-export { IconNumber68Small } from "@tabler/icons-react";
-export { IconNumber69Small } from "@tabler/icons-react";
-export { IconNumber7Small } from "@tabler/icons-react";
-export { IconNumber7 } from "@tabler/icons-react";
-export { IconNumber70Small } from "@tabler/icons-react";
-export { IconNumber71Small } from "@tabler/icons-react";
-export { IconNumber72Small } from "@tabler/icons-react";
-export { IconNumber73Small } from "@tabler/icons-react";
-export { IconNumber74Small } from "@tabler/icons-react";
-export { IconNumber75Small } from "@tabler/icons-react";
-export { IconNumber76Small } from "@tabler/icons-react";
-export { IconNumber77Small } from "@tabler/icons-react";
-export { IconNumber78Small } from "@tabler/icons-react";
-export { IconNumber79Small } from "@tabler/icons-react";
-export { IconNumber8Small } from "@tabler/icons-react";
-export { IconNumber8 } from "@tabler/icons-react";
-export { IconNumber80Small } from "@tabler/icons-react";
-export { IconNumber81Small } from "@tabler/icons-react";
-export { IconNumber82Small } from "@tabler/icons-react";
-export { IconNumber83Small } from "@tabler/icons-react";
-export { IconNumber84Small } from "@tabler/icons-react";
-export { IconNumber85Small } from "@tabler/icons-react";
-export { IconNumber86Small } from "@tabler/icons-react";
-export { IconNumber87Small } from "@tabler/icons-react";
-export { IconNumber88Small } from "@tabler/icons-react";
-export { IconNumber89Small } from "@tabler/icons-react";
-export { IconNumber9Small } from "@tabler/icons-react";
-export { IconNumber9 } from "@tabler/icons-react";
-export { IconNumber90Small } from "@tabler/icons-react";
-export { IconNumber91Small } from "@tabler/icons-react";
-export { IconNumber92Small } from "@tabler/icons-react";
-export { IconNumber93Small } from "@tabler/icons-react";
-export { IconNumber94Small } from "@tabler/icons-react";
-export { IconNumber95Small } from "@tabler/icons-react";
-export { IconNumber96Small } from "@tabler/icons-react";
-export { IconNumber97Small } from "@tabler/icons-react";
-export { IconNumber98Small } from "@tabler/icons-react";
-export { IconNumber99Small } from "@tabler/icons-react";
-export { IconNumber } from "@tabler/icons-react";
-export { IconNumbers } from "@tabler/icons-react";
-export { IconNurse } from "@tabler/icons-react";
-export { IconNut } from "@tabler/icons-react";
-export { IconObjectScan } from "@tabler/icons-react";
-export { IconOctagonMinus2 } from "@tabler/icons-react";
-export { IconOctagonMinus } from "@tabler/icons-react";
-export { IconOctagonOff } from "@tabler/icons-react";
-export { IconOctagonPlus2 } from "@tabler/icons-react";
-export { IconOctagonPlus } from "@tabler/icons-react";
-export { IconOctagon } from "@tabler/icons-react";
-export { IconOctahedronOff } from "@tabler/icons-react";
-export { IconOctahedronPlus } from "@tabler/icons-react";
-export { IconOctahedron } from "@tabler/icons-react";
-export { IconOld } from "@tabler/icons-react";
-export { IconOlympicTorch } from "@tabler/icons-react";
-export { IconOlympicsOff } from "@tabler/icons-react";
-export { IconOlympics } from "@tabler/icons-react";
-export { IconOm } from "@tabler/icons-react";
-export { IconOmega } from "@tabler/icons-react";
-export { IconOption } from "@tabler/icons-react";
-export { IconOrbitVertical } from "@tabler/icons-react";
-export { IconOrbit } from "@tabler/icons-react";
-export { IconOrbits } from "@tabler/icons-react";
-export { IconOutbound } from "@tabler/icons-react";
-export { IconOutlet } from "@tabler/icons-react";
-export { IconOvalVertical } from "@tabler/icons-react";
-export { IconOval } from "@tabler/icons-react";
-export { IconOverline } from "@tabler/icons-react";
-export { IconPackageExport } from "@tabler/icons-react";
-export { IconPackageImport } from "@tabler/icons-react";
-export { IconPackageOff } from "@tabler/icons-react";
-export { IconPackage } from "@tabler/icons-react";
-export { IconPackages } from "@tabler/icons-react";
-export { IconPacman } from "@tabler/icons-react";
-export { IconPageBreak } from "@tabler/icons-react";
-export { IconPaintOff } from "@tabler/icons-react";
-export { IconPaint } from "@tabler/icons-react";
-export { IconPaletteOff } from "@tabler/icons-react";
-export { IconPalette } from "@tabler/icons-react";
-export { IconPanoramaHorizontalOff } from "@tabler/icons-react";
-export { IconPanoramaHorizontal } from "@tabler/icons-react";
-export { IconPanoramaVerticalOff } from "@tabler/icons-react";
-export { IconPanoramaVertical } from "@tabler/icons-react";
-export { IconPaperBagOff } from "@tabler/icons-react";
-export { IconPaperBag } from "@tabler/icons-react";
-export { IconPaperclip } from "@tabler/icons-react";
-export { IconParachuteOff } from "@tabler/icons-react";
-export { IconParachute } from "@tabler/icons-react";
-export { IconParenthesesOff } from "@tabler/icons-react";
-export { IconParentheses } from "@tabler/icons-react";
-export { IconParkingCircle } from "@tabler/icons-react";
-export { IconParkingMeter } from "@tabler/icons-react";
-export { IconParkingOff } from "@tabler/icons-react";
-export { IconParking } from "@tabler/icons-react";
-export { IconPasswordFingerprint } from "@tabler/icons-react";
-export { IconPasswordMobilePhone } from "@tabler/icons-react";
-export { IconPasswordUser } from "@tabler/icons-react";
-export { IconPassword } from "@tabler/icons-react";
-export { IconPawOff } from "@tabler/icons-react";
-export { IconPaw } from "@tabler/icons-react";
-export { IconPaywall } from "@tabler/icons-react";
-export { IconPdf } from "@tabler/icons-react";
-export { IconPeace } from "@tabler/icons-react";
-export { IconPencilAi } from "@tabler/icons-react";
-export { IconPencilBolt } from "@tabler/icons-react";
-export { IconPencilCancel } from "@tabler/icons-react";
-export { IconPencilCheck } from "@tabler/icons-react";
-export { IconPencilCode } from "@tabler/icons-react";
-export { IconPencilCog } from "@tabler/icons-react";
-export { IconPencilDiscount } from "@tabler/icons-react";
-export { IconPencilDollar } from "@tabler/icons-react";
-export { IconPencilDown } from "@tabler/icons-react";
-export { IconPencilExclamation } from "@tabler/icons-react";
-export { IconPencilHeart } from "@tabler/icons-react";
-export { IconPencilMinus } from "@tabler/icons-react";
-export { IconPencilOff } from "@tabler/icons-react";
-export { IconPencilPause } from "@tabler/icons-react";
-export { IconPencilPin } from "@tabler/icons-react";
-export { IconPencilPlus } from "@tabler/icons-react";
-export { IconPencilQuestion } from "@tabler/icons-react";
-export { IconPencilSearch } from "@tabler/icons-react";
-export { IconPencilShare } from "@tabler/icons-react";
-export { IconPencilStar } from "@tabler/icons-react";
-export { IconPencilUp } from "@tabler/icons-react";
-export { IconPencilX } from "@tabler/icons-react";
-export { IconPencil } from "@tabler/icons-react";
-export { IconPendulum } from "@tabler/icons-react";
-export { IconPennant2 } from "@tabler/icons-react";
-export { IconPennantOff } from "@tabler/icons-react";
-export { IconPennant } from "@tabler/icons-react";
-export { IconPentagonMinus } from "@tabler/icons-react";
-export { IconPentagonNumber0 } from "@tabler/icons-react";
-export { IconPentagonNumber1 } from "@tabler/icons-react";
-export { IconPentagonNumber2 } from "@tabler/icons-react";
-export { IconPentagonNumber3 } from "@tabler/icons-react";
-export { IconPentagonNumber4 } from "@tabler/icons-react";
-export { IconPentagonNumber5 } from "@tabler/icons-react";
-export { IconPentagonNumber6 } from "@tabler/icons-react";
-export { IconPentagonNumber7 } from "@tabler/icons-react";
-export { IconPentagonNumber8 } from "@tabler/icons-react";
-export { IconPentagonNumber9 } from "@tabler/icons-react";
-export { IconPentagonOff } from "@tabler/icons-react";
-export { IconPentagonPlus } from "@tabler/icons-react";
-export { IconPentagonX } from "@tabler/icons-react";
-export { IconPentagon } from "@tabler/icons-react";
-export { IconPentagram } from "@tabler/icons-react";
-export { IconPepperOff } from "@tabler/icons-react";
-export { IconPepper } from "@tabler/icons-react";
-export { IconPercentage0 } from "@tabler/icons-react";
-export { IconPercentage10 } from "@tabler/icons-react";
-export { IconPercentage100 } from "@tabler/icons-react";
-export { IconPercentage20 } from "@tabler/icons-react";
-export { IconPercentage25 } from "@tabler/icons-react";
-export { IconPercentage30 } from "@tabler/icons-react";
-export { IconPercentage33 } from "@tabler/icons-react";
-export { IconPercentage40 } from "@tabler/icons-react";
-export { IconPercentage50 } from "@tabler/icons-react";
-export { IconPercentage60 } from "@tabler/icons-react";
-export { IconPercentage66 } from "@tabler/icons-react";
-export { IconPercentage70 } from "@tabler/icons-react";
-export { IconPercentage75 } from "@tabler/icons-react";
-export { IconPercentage80 } from "@tabler/icons-react";
-export { IconPercentage90 } from "@tabler/icons-react";
-export { IconPercentage } from "@tabler/icons-react";
-export { IconPerfume } from "@tabler/icons-react";
-export { IconPerspectiveOff } from "@tabler/icons-react";
-export { IconPerspective } from "@tabler/icons-react";
-export { IconPhoneCall } from "@tabler/icons-react";
-export { IconPhoneCalling } from "@tabler/icons-react";
-export { IconPhoneCheck } from "@tabler/icons-react";
-export { IconPhoneDone } from "@tabler/icons-react";
-export { IconPhoneEnd } from "@tabler/icons-react";
-export { IconPhoneIncoming } from "@tabler/icons-react";
-export { IconPhoneOff } from "@tabler/icons-react";
-export { IconPhoneOutgoing } from "@tabler/icons-react";
-export { IconPhonePause } from "@tabler/icons-react";
-export { IconPhonePlus } from "@tabler/icons-react";
-export { IconPhoneRinging } from "@tabler/icons-react";
-export { IconPhoneSpark } from "@tabler/icons-react";
-export { IconPhoneX } from "@tabler/icons-react";
-export { IconPhone } from "@tabler/icons-react";
-export { IconPhotoAi } from "@tabler/icons-react";
-export { IconPhotoAlt } from "@tabler/icons-react";
-export { IconPhotoBitcoin } from "@tabler/icons-react";
-export { IconPhotoBolt } from "@tabler/icons-react";
-export { IconPhotoCancel } from "@tabler/icons-react";
-export { IconPhotoCheck } from "@tabler/icons-react";
-export { IconPhotoCircleMinus } from "@tabler/icons-react";
-export { IconPhotoCirclePlus } from "@tabler/icons-react";
-export { IconPhotoCircle } from "@tabler/icons-react";
-export { IconPhotoCode } from "@tabler/icons-react";
-export { IconPhotoCog } from "@tabler/icons-react";
-export { IconPhotoDollar } from "@tabler/icons-react";
-export { IconPhotoDown } from "@tabler/icons-react";
-export { IconPhotoEdit } from "@tabler/icons-react";
-export { IconPhotoExclamation } from "@tabler/icons-react";
-export { IconPhotoHeart } from "@tabler/icons-react";
-export { IconPhotoHexagon } from "@tabler/icons-react";
-export { IconPhotoMinus } from "@tabler/icons-react";
-export { IconPhotoOff } from "@tabler/icons-react";
-export { IconPhotoPause } from "@tabler/icons-react";
-export { IconPhotoPentagon } from "@tabler/icons-react";
-export { IconPhotoPin } from "@tabler/icons-react";
-export { IconPhotoPlus } from "@tabler/icons-react";
-export { IconPhotoQuestion } from "@tabler/icons-react";
-export { IconPhotoScan } from "@tabler/icons-react";
-export { IconPhotoSearch } from "@tabler/icons-react";
-export { IconPhotoSensor2 } from "@tabler/icons-react";
-export { IconPhotoSensor3 } from "@tabler/icons-react";
-export { IconPhotoSensor } from "@tabler/icons-react";
-export { IconPhotoShare } from "@tabler/icons-react";
-export { IconPhotoShield } from "@tabler/icons-react";
-export { IconPhotoSpark } from "@tabler/icons-react";
-export { IconPhotoSquareRounded } from "@tabler/icons-react";
-export { IconPhotoStar } from "@tabler/icons-react";
-export { IconPhotoUp } from "@tabler/icons-react";
-export { IconPhotoVideo } from "@tabler/icons-react";
-export { IconPhotoX } from "@tabler/icons-react";
-export { IconPhoto } from "@tabler/icons-react";
-export { IconPhysiotherapist } from "@tabler/icons-react";
-export { IconPiano } from "@tabler/icons-react";
-export { IconPick } from "@tabler/icons-react";
-export { IconPicnicTable } from "@tabler/icons-react";
-export { IconPictureInPictureOff } from "@tabler/icons-react";
-export { IconPictureInPictureOn } from "@tabler/icons-react";
-export { IconPictureInPictureTop } from "@tabler/icons-react";
-export { IconPictureInPicture } from "@tabler/icons-react";
-export { IconPigMoney } from "@tabler/icons-react";
-export { IconPigOff } from "@tabler/icons-react";
-export { IconPig } from "@tabler/icons-react";
-export { IconPilcrowLeft } from "@tabler/icons-react";
-export { IconPilcrowRight } from "@tabler/icons-react";
-export { IconPilcrow } from "@tabler/icons-react";
-export { IconPillOff } from "@tabler/icons-react";
-export { IconPill } from "@tabler/icons-react";
-export { IconPillow } from "@tabler/icons-react";
-export { IconPills } from "@tabler/icons-react";
-export { IconPinEnd } from "@tabler/icons-react";
-export { IconPinInvoke } from "@tabler/icons-react";
-export { IconPin } from "@tabler/icons-react";
-export { IconPingPong } from "@tabler/icons-react";
-export { IconPinnedOff } from "@tabler/icons-react";
-export { IconPinned } from "@tabler/icons-react";
-export { IconPipeline } from "@tabler/icons-react";
-export { IconPizzaOff } from "@tabler/icons-react";
-export { IconPizza } from "@tabler/icons-react";
-export { IconPlaceholder } from "@tabler/icons-react";
-export { IconPlaneArrival } from "@tabler/icons-react";
-export { IconPlaneDeparture } from "@tabler/icons-react";
-export { IconPlaneInflight } from "@tabler/icons-react";
-export { IconPlaneOff } from "@tabler/icons-react";
-export { IconPlaneTilt } from "@tabler/icons-react";
-export { IconPlane } from "@tabler/icons-react";
-export { IconPlanetOff } from "@tabler/icons-react";
-export { IconPlanet } from "@tabler/icons-react";
-export { IconPlant2Off } from "@tabler/icons-react";
-export { IconPlant2 } from "@tabler/icons-react";
-export { IconPlantOff } from "@tabler/icons-react";
-export { IconPlant } from "@tabler/icons-react";
-export { IconPlayBasketball } from "@tabler/icons-react";
-export { IconPlayBug } from "@tabler/icons-react";
-export { IconPlayBugs } from "@tabler/icons-react";
-export { IconPlayCard1 } from "@tabler/icons-react";
-export { IconPlayCard10 } from "@tabler/icons-react";
-export { IconPlayCard2 } from "@tabler/icons-react";
-export { IconPlayCard3 } from "@tabler/icons-react";
-export { IconPlayCard4 } from "@tabler/icons-react";
-export { IconPlayCard5 } from "@tabler/icons-react";
-export { IconPlayCard6 } from "@tabler/icons-react";
-export { IconPlayCard7 } from "@tabler/icons-react";
-export { IconPlayCard8 } from "@tabler/icons-react";
-export { IconPlayCard9 } from "@tabler/icons-react";
-export { IconPlayCardA } from "@tabler/icons-react";
-export { IconPlayCardJ } from "@tabler/icons-react";
-export { IconPlayCardK } from "@tabler/icons-react";
-export { IconPlayCardOff } from "@tabler/icons-react";
-export { IconPlayCardQ } from "@tabler/icons-react";
-export { IconPlayCardStar } from "@tabler/icons-react";
-export { IconPlayCard } from "@tabler/icons-react";
-export { IconPlayFootball } from "@tabler/icons-react";
-export { IconPlayHandball } from "@tabler/icons-react";
-export { IconPlayVolleyball } from "@tabler/icons-react";
-export { IconPlayerEject } from "@tabler/icons-react";
-export { IconPlayerPause } from "@tabler/icons-react";
-export { IconPlayerPlay } from "@tabler/icons-react";
-export { IconPlayerRecord } from "@tabler/icons-react";
-export { IconPlayerSkipBack } from "@tabler/icons-react";
-export { IconPlayerSkipForward } from "@tabler/icons-react";
-export { IconPlayerStop } from "@tabler/icons-react";
-export { IconPlayerTrackNext } from "@tabler/icons-react";
-export { IconPlayerTrackPrev } from "@tabler/icons-react";
-export { IconPlaylistAdd } from "@tabler/icons-react";
-export { IconPlaylistOff } from "@tabler/icons-react";
-export { IconPlaylistX } from "@tabler/icons-react";
-export { IconPlaylist } from "@tabler/icons-react";
-export { IconPlaystationCircle } from "@tabler/icons-react";
-export { IconPlaystationSquare } from "@tabler/icons-react";
-export { IconPlaystationTriangle } from "@tabler/icons-react";
-export { IconPlaystationX } from "@tabler/icons-react";
-export { IconPlugConnectedX } from "@tabler/icons-react";
-export { IconPlugConnected } from "@tabler/icons-react";
-export { IconPlugOff } from "@tabler/icons-react";
-export { IconPlugX } from "@tabler/icons-react";
-export { IconPlug } from "@tabler/icons-react";
-export { IconPlunger } from "@tabler/icons-react";
-export { IconPlusEqual } from "@tabler/icons-react";
-export { IconPlusMinus } from "@tabler/icons-react";
-export { IconPlus } from "@tabler/icons-react";
-export { IconPng } from "@tabler/icons-react";
-export { IconPodiumOff } from "@tabler/icons-react";
-export { IconPodium } from "@tabler/icons-react";
-export { IconPointOff } from "@tabler/icons-react";
-export { IconPoint } from "@tabler/icons-react";
-export { IconPointer2 } from "@tabler/icons-react";
-export { IconPointerBolt } from "@tabler/icons-react";
-export { IconPointerCancel } from "@tabler/icons-react";
-export { IconPointerCheck } from "@tabler/icons-react";
-export { IconPointerCode } from "@tabler/icons-react";
-export { IconPointerCog } from "@tabler/icons-react";
-export { IconPointerCollaboration2 } from "@tabler/icons-react";
-export { IconPointerCollaboration } from "@tabler/icons-react";
-export { IconPointerDollar } from "@tabler/icons-react";
-export { IconPointerDown } from "@tabler/icons-react";
-export { IconPointerExclamation } from "@tabler/icons-react";
-export { IconPointerHeart } from "@tabler/icons-react";
-export { IconPointerMinus } from "@tabler/icons-react";
-export { IconPointerOff } from "@tabler/icons-react";
-export { IconPointerPause } from "@tabler/icons-react";
-export { IconPointerPin } from "@tabler/icons-react";
-export { IconPointerPlus } from "@tabler/icons-react";
-export { IconPointerQuestion } from "@tabler/icons-react";
-export { IconPointerSearch } from "@tabler/icons-react";
-export { IconPointerShare } from "@tabler/icons-react";
-export { IconPointerStar } from "@tabler/icons-react";
-export { IconPointerUp } from "@tabler/icons-react";
-export { IconPointerX } from "@tabler/icons-react";
-export { IconPointer } from "@tabler/icons-react";
-export { IconPokeballOff } from "@tabler/icons-react";
-export { IconPokeball } from "@tabler/icons-react";
-export { IconPokerChip } from "@tabler/icons-react";
-export { IconPolaroid } from "@tabler/icons-react";
-export { IconPolygonOff } from "@tabler/icons-react";
-export { IconPolygon } from "@tabler/icons-react";
-export { IconPoo } from "@tabler/icons-react";
-export { IconPoolOff } from "@tabler/icons-react";
-export { IconPool } from "@tabler/icons-react";
-export { IconPower } from "@tabler/icons-react";
-export { IconPray } from "@tabler/icons-react";
-export { IconPremiumRights } from "@tabler/icons-react";
-export { IconPrescription } from "@tabler/icons-react";
-export { IconPresentationAnalytics } from "@tabler/icons-react";
-export { IconPresentationOff } from "@tabler/icons-react";
-export { IconPresentation } from "@tabler/icons-react";
-export { IconPrinterOff } from "@tabler/icons-react";
-export { IconPrinter } from "@tabler/icons-react";
-export { IconPrismLight } from "@tabler/icons-react";
-export { IconPrismOff } from "@tabler/icons-react";
-export { IconPrismPlus } from "@tabler/icons-react";
-export { IconPrism } from "@tabler/icons-react";
-export { IconPrison } from "@tabler/icons-react";
-export { IconProgressAlert } from "@tabler/icons-react";
-export { IconProgressBolt } from "@tabler/icons-react";
-export { IconProgressCheck } from "@tabler/icons-react";
-export { IconProgressDown } from "@tabler/icons-react";
-export { IconProgressHelp } from "@tabler/icons-react";
-export { IconProgressX } from "@tabler/icons-react";
-export { IconProgress } from "@tabler/icons-react";
-export { IconPrompt } from "@tabler/icons-react";
-export { IconProng } from "@tabler/icons-react";
-export { IconPropellerOff } from "@tabler/icons-react";
-export { IconPropeller } from "@tabler/icons-react";
-export { IconProtocol } from "@tabler/icons-react";
-export { IconPumpkinScary } from "@tabler/icons-react";
-export { IconPuzzle2 } from "@tabler/icons-react";
-export { IconPuzzleOff } from "@tabler/icons-react";
-export { IconPuzzle } from "@tabler/icons-react";
-export { IconPyramidOff } from "@tabler/icons-react";
-export { IconPyramidPlus } from "@tabler/icons-react";
-export { IconPyramid } from "@tabler/icons-react";
-export { IconQrcodeOff } from "@tabler/icons-react";
-export { IconQrcode } from "@tabler/icons-react";
-export { IconQuestionMark } from "@tabler/icons-react";
-export { IconQueuePopIn } from "@tabler/icons-react";
-export { IconQueuePopOut } from "@tabler/icons-react";
-export { IconQuoteOff } from "@tabler/icons-react";
-export { IconQuoteOpen } from "@tabler/icons-react";
-export { IconQuote } from "@tabler/icons-react";
-export { IconQuotes } from "@tabler/icons-react";
-export { IconRadar2 } from "@tabler/icons-react";
-export { IconRadarOff } from "@tabler/icons-react";
-export { IconRadar } from "@tabler/icons-react";
-export { IconRadioOff } from "@tabler/icons-react";
-export { IconRadio } from "@tabler/icons-react";
-export { IconRadioactiveOff } from "@tabler/icons-react";
-export { IconRadioactive } from "@tabler/icons-react";
-export { IconRadiusBottomLeft } from "@tabler/icons-react";
-export { IconRadiusBottomRight } from "@tabler/icons-react";
-export { IconRadiusTopLeft } from "@tabler/icons-react";
-export { IconRadiusTopRight } from "@tabler/icons-react";
-export { IconRainbowOff } from "@tabler/icons-react";
-export { IconRainbow } from "@tabler/icons-react";
-export { IconRating12Plus } from "@tabler/icons-react";
-export { IconRating14Plus } from "@tabler/icons-react";
-export { IconRating16Plus } from "@tabler/icons-react";
-export { IconRating18Plus } from "@tabler/icons-react";
-export { IconRating21Plus } from "@tabler/icons-react";
-export { IconRazorElectric } from "@tabler/icons-react";
-export { IconRazor } from "@tabler/icons-react";
-export { IconReceipt2 } from "@tabler/icons-react";
-export { IconReceiptBitcoin } from "@tabler/icons-react";
-export { IconReceiptDollar } from "@tabler/icons-react";
-export { IconReceiptEuro } from "@tabler/icons-react";
-export { IconReceiptOff } from "@tabler/icons-react";
-export { IconReceiptPound } from "@tabler/icons-react";
-export { IconReceiptRefund } from "@tabler/icons-react";
-export { IconReceiptRupee } from "@tabler/icons-react";
-export { IconReceiptTax } from "@tabler/icons-react";
-export { IconReceiptYen } from "@tabler/icons-react";
-export { IconReceiptYuan } from "@tabler/icons-react";
-export { IconReceipt } from "@tabler/icons-react";
-export { IconRecharging } from "@tabler/icons-react";
-export { IconRecordMailOff } from "@tabler/icons-react";
-export { IconRecordMail } from "@tabler/icons-react";
-export { IconRectangleRoundedBottom } from "@tabler/icons-react";
-export { IconRectangleRoundedTop } from "@tabler/icons-react";
-export { IconRectangleVertical } from "@tabler/icons-react";
-export { IconRectangle } from "@tabler/icons-react";
-export { IconRectangularPrismOff } from "@tabler/icons-react";
-export { IconRectangularPrismPlus } from "@tabler/icons-react";
-export { IconRectangularPrism } from "@tabler/icons-react";
-export { IconRecycleOff } from "@tabler/icons-react";
-export { IconRecycle } from "@tabler/icons-react";
-export { IconReduceMotion } from "@tabler/icons-react";
-export { IconReferenceImage } from "@tabler/icons-react";
-export { IconRefreshAlert } from "@tabler/icons-react";
-export { IconRefreshDot } from "@tabler/icons-react";
-export { IconRefreshOff } from "@tabler/icons-react";
-export { IconRefresh } from "@tabler/icons-react";
-export { IconRegexOff } from "@tabler/icons-react";
-export { IconRegex } from "@tabler/icons-react";
-export { IconRegistered } from "@tabler/icons-react";
-export { IconRelationManyToMany } from "@tabler/icons-react";
-export { IconRelationOneToMany } from "@tabler/icons-react";
-export { IconRelationOneToOne } from "@tabler/icons-react";
-export { IconReload } from "@tabler/icons-react";
-export { IconRemoteControl } from "@tabler/icons-react";
-export { IconReorder } from "@tabler/icons-react";
-export { IconRepeatOff } from "@tabler/icons-react";
-export { IconRepeatOnce } from "@tabler/icons-react";
-export { IconRepeat } from "@tabler/icons-react";
-export { IconReplaceOff } from "@tabler/icons-react";
-export { IconReplaceUser } from "@tabler/icons-react";
-export { IconReplace } from "@tabler/icons-react";
-export { IconReportAnalytics } from "@tabler/icons-react";
-export { IconReportMedical } from "@tabler/icons-react";
-export { IconReportMoney } from "@tabler/icons-react";
-export { IconReportOff } from "@tabler/icons-react";
-export { IconReportSearch } from "@tabler/icons-react";
-export { IconReport } from "@tabler/icons-react";
-export { IconReservedLine } from "@tabler/icons-react";
-export { IconResize } from "@tabler/icons-react";
-export { IconRestore } from "@tabler/icons-react";
-export { IconRewindBackward10 } from "@tabler/icons-react";
-export { IconRewindBackward15 } from "@tabler/icons-react";
-export { IconRewindBackward20 } from "@tabler/icons-react";
-export { IconRewindBackward30 } from "@tabler/icons-react";
-export { IconRewindBackward40 } from "@tabler/icons-react";
-export { IconRewindBackward5 } from "@tabler/icons-react";
-export { IconRewindBackward50 } from "@tabler/icons-react";
-export { IconRewindBackward60 } from "@tabler/icons-react";
-export { IconRewindForward10 } from "@tabler/icons-react";
-export { IconRewindForward15 } from "@tabler/icons-react";
-export { IconRewindForward20 } from "@tabler/icons-react";
-export { IconRewindForward30 } from "@tabler/icons-react";
-export { IconRewindForward40 } from "@tabler/icons-react";
-export { IconRewindForward5 } from "@tabler/icons-react";
-export { IconRewindForward50 } from "@tabler/icons-react";
-export { IconRewindForward60 } from "@tabler/icons-react";
-export { IconRibbonHealth } from "@tabler/icons-react";
-export { IconRings } from "@tabler/icons-react";
-export { IconRippleDown } from "@tabler/icons-react";
-export { IconRippleOff } from "@tabler/icons-react";
-export { IconRippleUp } from "@tabler/icons-react";
-export { IconRipple } from "@tabler/icons-react";
-export { IconRoadOff } from "@tabler/icons-react";
-export { IconRoadSign } from "@tabler/icons-react";
-export { IconRoad } from "@tabler/icons-react";
-export { IconRobotFace } from "@tabler/icons-react";
-export { IconRobotOff } from "@tabler/icons-react";
-export { IconRobot } from "@tabler/icons-react";
-export { IconRocketOff } from "@tabler/icons-react";
-export { IconRocket } from "@tabler/icons-react";
-export { IconRockingChair } from "@tabler/icons-react";
-export { IconRollerSkating } from "@tabler/icons-react";
-export { IconRollercoasterOff } from "@tabler/icons-react";
-export { IconRollercoaster } from "@tabler/icons-react";
-export { IconRosetteAsterisk } from "@tabler/icons-react";
-export { IconRosetteDiscountCheckOff } from "@tabler/icons-react";
-export { IconRosetteDiscountCheck } from "@tabler/icons-react";
-export { IconRosetteDiscountOff } from "@tabler/icons-react";
-export { IconRosetteDiscount } from "@tabler/icons-react";
-export { IconRosetteNumber0 } from "@tabler/icons-react";
-export { IconRosetteNumber1 } from "@tabler/icons-react";
-export { IconRosetteNumber2 } from "@tabler/icons-react";
-export { IconRosetteNumber3 } from "@tabler/icons-react";
-export { IconRosetteNumber4 } from "@tabler/icons-react";
-export { IconRosetteNumber5 } from "@tabler/icons-react";
-export { IconRosetteNumber6 } from "@tabler/icons-react";
-export { IconRosetteNumber7 } from "@tabler/icons-react";
-export { IconRosetteNumber8 } from "@tabler/icons-react";
-export { IconRosetteNumber9 } from "@tabler/icons-react";
-export { IconRosette } from "@tabler/icons-react";
-export { IconRotate2 } from "@tabler/icons-react";
-export { IconRotate360 } from "@tabler/icons-react";
-export { IconRotate3d } from "@tabler/icons-react";
-export { IconRotateClockwise2 } from "@tabler/icons-react";
-export { IconRotateClockwise } from "@tabler/icons-react";
-export { IconRotateDot } from "@tabler/icons-react";
-export { IconRotateRectangle } from "@tabler/icons-react";
-export { IconRotate } from "@tabler/icons-react";
-export { IconRoulette } from "@tabler/icons-react";
-export { IconRoute2 } from "@tabler/icons-react";
-export { IconRouteAltLeft } from "@tabler/icons-react";
-export { IconRouteAltRight } from "@tabler/icons-react";
-export { IconRouteOff } from "@tabler/icons-react";
-export { IconRouteScan } from "@tabler/icons-react";
-export { IconRouteSquare2 } from "@tabler/icons-react";
-export { IconRouteSquare } from "@tabler/icons-react";
-export { IconRouteX2 } from "@tabler/icons-react";
-export { IconRouteX } from "@tabler/icons-react";
-export { IconRoute } from "@tabler/icons-react";
-export { IconRouterOff } from "@tabler/icons-react";
-export { IconRouter } from "@tabler/icons-react";
-export { IconRowInsertBottom } from "@tabler/icons-react";
-export { IconRowInsertTop } from "@tabler/icons-react";
-export { IconRowRemove } from "@tabler/icons-react";
-export { IconRss } from "@tabler/icons-react";
-export { IconRubberStampOff } from "@tabler/icons-react";
-export { IconRubberStamp } from "@tabler/icons-react";
-export { IconRugby } from "@tabler/icons-react";
-export { IconRuler2Off } from "@tabler/icons-react";
-export { IconRuler2 } from "@tabler/icons-react";
-export { IconRuler3 } from "@tabler/icons-react";
-export { IconRulerMeasure2 } from "@tabler/icons-react";
-export { IconRulerMeasure } from "@tabler/icons-react";
-export { IconRulerOff } from "@tabler/icons-react";
-export { IconRuler } from "@tabler/icons-react";
-export { IconRunSprint } from "@tabler/icons-react";
-export { IconRun } from "@tabler/icons-react";
-export { IconRvTruck } from "@tabler/icons-react";
-export { IconSTurnDown } from "@tabler/icons-react";
-export { IconSTurnLeft } from "@tabler/icons-react";
-export { IconSTurnRight } from "@tabler/icons-react";
-export { IconSTurnUp } from "@tabler/icons-react";
-export { IconSailboat2 } from "@tabler/icons-react";
-export { IconSailboatOff } from "@tabler/icons-react";
-export { IconSailboat } from "@tabler/icons-react";
-export { IconSalad } from "@tabler/icons-react";
-export { IconSalt } from "@tabler/icons-react";
-export { IconSandbox } from "@tabler/icons-react";
-export { IconSatelliteOff } from "@tabler/icons-react";
-export { IconSatellite } from "@tabler/icons-react";
-export { IconSausage } from "@tabler/icons-react";
-export { IconScaleOff } from "@tabler/icons-react";
-export { IconScaleOutlineOff } from "@tabler/icons-react";
-export { IconScaleOutline } from "@tabler/icons-react";
-export { IconScale } from "@tabler/icons-react";
-export { IconScanCube } from "@tabler/icons-react";
-export { IconScanEye } from "@tabler/icons-react";
-export { IconScanLetterA } from "@tabler/icons-react";
-export { IconScanLetterT } from "@tabler/icons-react";
-export { IconScanPosition } from "@tabler/icons-react";
-export { IconScanTraces } from "@tabler/icons-react";
-export { IconScan } from "@tabler/icons-react";
-export { IconSchemaOff } from "@tabler/icons-react";
-export { IconSchema } from "@tabler/icons-react";
-export { IconSchoolBell } from "@tabler/icons-react";
-export { IconSchoolOff } from "@tabler/icons-react";
-export { IconSchool } from "@tabler/icons-react";
-export { IconScissorsOff } from "@tabler/icons-react";
-export { IconScissors } from "@tabler/icons-react";
-export { IconScooterElectric } from "@tabler/icons-react";
-export { IconScooter } from "@tabler/icons-react";
-export { IconScoreboard } from "@tabler/icons-react";
-export { IconScreenShareOff } from "@tabler/icons-react";
-export { IconScreenShare } from "@tabler/icons-react";
-export { IconScreenshot } from "@tabler/icons-react";
-export { IconScribbleOff } from "@tabler/icons-react";
-export { IconScribble } from "@tabler/icons-react";
-export { IconScriptMinus } from "@tabler/icons-react";
-export { IconScriptPlus } from "@tabler/icons-react";
-export { IconScriptX } from "@tabler/icons-react";
-export { IconScript } from "@tabler/icons-react";
-export { IconScubaDivingTank } from "@tabler/icons-react";
-export { IconScubaDiving } from "@tabler/icons-react";
-export { IconScubaMaskOff } from "@tabler/icons-react";
-export { IconScubaMask } from "@tabler/icons-react";
-export { IconSdk } from "@tabler/icons-react";
-export { IconSearchOff } from "@tabler/icons-react";
-export { IconSearch } from "@tabler/icons-react";
-export { IconSecretPhrases } from "@tabler/icons-react";
-export { IconSectionSign } from "@tabler/icons-react";
-export { IconSection } from "@tabler/icons-react";
-export { IconSeedlingOff } from "@tabler/icons-react";
-export { IconSeedling } from "@tabler/icons-react";
-export { IconSegway } from "@tabler/icons-react";
-export { IconSelectAll } from "@tabler/icons-react";
-export { IconSelect } from "@tabler/icons-react";
-export { IconSelector } from "@tabler/icons-react";
-export { IconSend2 } from "@tabler/icons-react";
-export { IconSendOff } from "@tabler/icons-react";
-export { IconSend } from "@tabler/icons-react";
-export { IconSeo } from "@tabler/icons-react";
-export { IconSeparatorHorizontal } from "@tabler/icons-react";
-export { IconSeparatorVertical } from "@tabler/icons-react";
-export { IconSeparator } from "@tabler/icons-react";
-export { IconServer2 } from "@tabler/icons-react";
-export { IconServerBolt } from "@tabler/icons-react";
-export { IconServerCog } from "@tabler/icons-react";
-export { IconServerOff } from "@tabler/icons-react";
-export { IconServerSpark } from "@tabler/icons-react";
-export { IconServer } from "@tabler/icons-react";
-export { IconServerless } from "@tabler/icons-react";
-export { IconServicemark } from "@tabler/icons-react";
-export { IconSettings2 } from "@tabler/icons-react";
-export { IconSettingsAi } from "@tabler/icons-react";
-export { IconSettingsAutomation } from "@tabler/icons-react";
-export { IconSettingsBolt } from "@tabler/icons-react";
-export { IconSettingsCancel } from "@tabler/icons-react";
-export { IconSettingsCheck } from "@tabler/icons-react";
-export { IconSettingsCode } from "@tabler/icons-react";
-export { IconSettingsCog } from "@tabler/icons-react";
-export { IconSettingsDollar } from "@tabler/icons-react";
-export { IconSettingsDown } from "@tabler/icons-react";
-export { IconSettingsExclamation } from "@tabler/icons-react";
-export { IconSettingsHeart } from "@tabler/icons-react";
-export { IconSettingsMinus } from "@tabler/icons-react";
-export { IconSettingsOff } from "@tabler/icons-react";
-export { IconSettingsPause } from "@tabler/icons-react";
-export { IconSettingsPin } from "@tabler/icons-react";
-export { IconSettingsPlus } from "@tabler/icons-react";
-export { IconSettingsQuestion } from "@tabler/icons-react";
-export { IconSettingsSearch } from "@tabler/icons-react";
-export { IconSettingsShare } from "@tabler/icons-react";
-export { IconSettingsSpark } from "@tabler/icons-react";
-export { IconSettingsStar } from "@tabler/icons-react";
-export { IconSettingsUp } from "@tabler/icons-react";
-export { IconSettingsX } from "@tabler/icons-react";
-export { IconSettings } from "@tabler/icons-react";
-export { IconShadowOff } from "@tabler/icons-react";
-export { IconShadow } from "@tabler/icons-react";
-export { IconShape2 } from "@tabler/icons-react";
-export { IconShape3 } from "@tabler/icons-react";
-export { IconShapeOff } from "@tabler/icons-react";
-export { IconShape } from "@tabler/icons-react";
-export { IconShare2 } from "@tabler/icons-react";
-export { IconShare3 } from "@tabler/icons-react";
-export { IconShareOff } from "@tabler/icons-react";
-export { IconShare } from "@tabler/icons-react";
-export { IconShareplay } from "@tabler/icons-react";
-export { IconShieldBolt } from "@tabler/icons-react";
-export { IconShieldCancel } from "@tabler/icons-react";
-export { IconShieldCheck } from "@tabler/icons-react";
-export { IconShieldCheckered } from "@tabler/icons-react";
-export { IconShieldChevron } from "@tabler/icons-react";
-export { IconShieldCode } from "@tabler/icons-react";
-export { IconShieldCog } from "@tabler/icons-react";
-export { IconShieldDollar } from "@tabler/icons-react";
-export { IconShieldDown } from "@tabler/icons-react";
-export { IconShieldExclamation } from "@tabler/icons-react";
-export { IconShieldHalf } from "@tabler/icons-react";
-export { IconShieldHeart } from "@tabler/icons-react";
-export { IconShieldLock } from "@tabler/icons-react";
-export { IconShieldMinus } from "@tabler/icons-react";
-export { IconShieldOff } from "@tabler/icons-react";
-export { IconShieldPause } from "@tabler/icons-react";
-export { IconShieldPin } from "@tabler/icons-react";
-export { IconShieldPlus } from "@tabler/icons-react";
-export { IconShieldQuestion } from "@tabler/icons-react";
-export { IconShieldSearch } from "@tabler/icons-react";
-export { IconShieldShare } from "@tabler/icons-react";
-export { IconShieldStar } from "@tabler/icons-react";
-export { IconShieldUp } from "@tabler/icons-react";
-export { IconShieldX } from "@tabler/icons-react";
-export { IconShield } from "@tabler/icons-react";
-export { IconShipOff } from "@tabler/icons-react";
-export { IconShip } from "@tabler/icons-react";
-export { IconShirtOff } from "@tabler/icons-react";
-export { IconShirtSport } from "@tabler/icons-react";
-export { IconShirt } from "@tabler/icons-react";
-export { IconShoeOff } from "@tabler/icons-react";
-export { IconShoe } from "@tabler/icons-react";
-export { IconShoppingBagCheck } from "@tabler/icons-react";
-export { IconShoppingBagDiscount } from "@tabler/icons-react";
-export { IconShoppingBagEdit } from "@tabler/icons-react";
-export { IconShoppingBagExclamation } from "@tabler/icons-react";
-export { IconShoppingBagHeart } from "@tabler/icons-react";
-export { IconShoppingBagMinus } from "@tabler/icons-react";
-export { IconShoppingBagPlus } from "@tabler/icons-react";
-export { IconShoppingBagSearch } from "@tabler/icons-react";
-export { IconShoppingBagX } from "@tabler/icons-react";
-export { IconShoppingBag } from "@tabler/icons-react";
-export { IconShoppingCartBolt } from "@tabler/icons-react";
-export { IconShoppingCartCancel } from "@tabler/icons-react";
-export { IconShoppingCartCheck } from "@tabler/icons-react";
-export { IconShoppingCartCode } from "@tabler/icons-react";
-export { IconShoppingCartCog } from "@tabler/icons-react";
-export { IconShoppingCartCopy } from "@tabler/icons-react";
-export { IconShoppingCartDiscount } from "@tabler/icons-react";
-export { IconShoppingCartDollar } from "@tabler/icons-react";
-export { IconShoppingCartDown } from "@tabler/icons-react";
-export { IconShoppingCartExclamation } from "@tabler/icons-react";
-export { IconShoppingCartHeart } from "@tabler/icons-react";
-export { IconShoppingCartMinus } from "@tabler/icons-react";
-export { IconShoppingCartOff } from "@tabler/icons-react";
-export { IconShoppingCartPause } from "@tabler/icons-react";
-export { IconShoppingCartPin } from "@tabler/icons-react";
-export { IconShoppingCartPlus } from "@tabler/icons-react";
-export { IconShoppingCartQuestion } from "@tabler/icons-react";
-export { IconShoppingCartSearch } from "@tabler/icons-react";
-export { IconShoppingCartShare } from "@tabler/icons-react";
-export { IconShoppingCartStar } from "@tabler/icons-react";
-export { IconShoppingCartUp } from "@tabler/icons-react";
-export { IconShoppingCartX } from "@tabler/icons-react";
-export { IconShoppingCart } from "@tabler/icons-react";
-export { IconShovelPitchforks } from "@tabler/icons-react";
-export { IconShovel } from "@tabler/icons-react";
-export { IconShredder } from "@tabler/icons-react";
-export { IconSignLeft } from "@tabler/icons-react";
-export { IconSignRight } from "@tabler/icons-react";
-export { IconSignal2g } from "@tabler/icons-react";
-export { IconSignal3g } from "@tabler/icons-react";
-export { IconSignal4gPlus } from "@tabler/icons-react";
-export { IconSignal4g } from "@tabler/icons-react";
-export { IconSignal5g } from "@tabler/icons-react";
-export { IconSignal6g } from "@tabler/icons-react";
-export { IconSignalE } from "@tabler/icons-react";
-export { IconSignalG } from "@tabler/icons-react";
-export { IconSignalHPlus } from "@tabler/icons-react";
-export { IconSignalH } from "@tabler/icons-react";
-export { IconSignalLte } from "@tabler/icons-react";
-export { IconSignatureOff } from "@tabler/icons-react";
-export { IconSignature } from "@tabler/icons-react";
-export { IconSitemapOff } from "@tabler/icons-react";
-export { IconSitemap } from "@tabler/icons-react";
-export { IconSkateboardOff } from "@tabler/icons-react";
-export { IconSkateboard } from "@tabler/icons-react";
-export { IconSkateboarding } from "@tabler/icons-react";
-export { IconSketching } from "@tabler/icons-react";
-export { IconSkewX } from "@tabler/icons-react";
-export { IconSkewY } from "@tabler/icons-react";
-export { IconSkiJumping } from "@tabler/icons-react";
-export { IconSkull } from "@tabler/icons-react";
-export { IconSlash } from "@tabler/icons-react";
-export { IconSlashes } from "@tabler/icons-react";
-export { IconSleigh } from "@tabler/icons-react";
-export { IconSlice } from "@tabler/icons-react";
-export { IconSlideshow } from "@tabler/icons-react";
-export { IconSmartHomeOff } from "@tabler/icons-react";
-export { IconSmartHome } from "@tabler/icons-react";
-export { IconSmokingNo } from "@tabler/icons-react";
-export { IconSmoking } from "@tabler/icons-react";
-export { IconSnowboarding } from "@tabler/icons-react";
-export { IconSnowflakeOff } from "@tabler/icons-react";
-export { IconSnowflake } from "@tabler/icons-react";
-export { IconSnowman } from "@tabler/icons-react";
-export { IconSoccerField } from "@tabler/icons-react";
-export { IconSocialOff } from "@tabler/icons-react";
-export { IconSocial } from "@tabler/icons-react";
-export { IconSock } from "@tabler/icons-react";
-export { IconSofaOff } from "@tabler/icons-react";
-export { IconSofa } from "@tabler/icons-react";
-export { IconSolarElectricity } from "@tabler/icons-react";
-export { IconSolarPanel2 } from "@tabler/icons-react";
-export { IconSolarPanel } from "@tabler/icons-react";
-export { IconSort09 } from "@tabler/icons-react";
-export { IconSort90 } from "@tabler/icons-react";
-export { IconSortAZ } from "@tabler/icons-react";
-export { IconSortAscending2 } from "@tabler/icons-react";
-export { IconSortAscendingLetters } from "@tabler/icons-react";
-export { IconSortAscendingNumbers } from "@tabler/icons-react";
-export { IconSortAscendingShapes } from "@tabler/icons-react";
-export { IconSortAscendingSmallBig } from "@tabler/icons-react";
-export { IconSortAscending } from "@tabler/icons-react";
-export { IconSortDescending2 } from "@tabler/icons-react";
-export { IconSortDescendingLetters } from "@tabler/icons-react";
-export { IconSortDescendingNumbers } from "@tabler/icons-react";
-export { IconSortDescendingShapes } from "@tabler/icons-react";
-export { IconSortDescendingSmallBig } from "@tabler/icons-react";
-export { IconSortDescending } from "@tabler/icons-react";
-export { IconSortZA } from "@tabler/icons-react";
-export { IconSos } from "@tabler/icons-react";
-export { IconSoupOff } from "@tabler/icons-react";
-export { IconSoup } from "@tabler/icons-react";
-export { IconSourceCode } from "@tabler/icons-react";
-export { IconSpaceOff } from "@tabler/icons-react";
-export { IconSpace } from "@tabler/icons-react";
-export { IconSpaces } from "@tabler/icons-react";
-export { IconSpacingHorizontal } from "@tabler/icons-react";
-export { IconSpacingVertical } from "@tabler/icons-react";
-export { IconSpade } from "@tabler/icons-react";
-export { IconSparkle2 } from "@tabler/icons-react";
-export { IconSparkleHighlight } from "@tabler/icons-react";
-export { IconSparkle } from "@tabler/icons-react";
-export { IconSparkles2Off } from "@tabler/icons-react";
-export { IconSparkles2 } from "@tabler/icons-react";
-export { IconSparkles } from "@tabler/icons-react";
-export { IconSpeakerphone } from "@tabler/icons-react";
-export { IconSpeedboat } from "@tabler/icons-react";
-export { IconSphere2 } from "@tabler/icons-react";
-export { IconSphereOff } from "@tabler/icons-react";
-export { IconSpherePlus } from "@tabler/icons-react";
-export { IconSphere } from "@tabler/icons-react";
-export { IconSpider } from "@tabler/icons-react";
-export { IconSpiralOff } from "@tabler/icons-react";
-export { IconSpiral } from "@tabler/icons-react";
-export { IconSportBilliard } from "@tabler/icons-react";
-export { IconSpray } from "@tabler/icons-react";
-export { IconSpyOff } from "@tabler/icons-react";
-export { IconSpy } from "@tabler/icons-react";
-export { IconSql } from "@tabler/icons-react";
-export { IconSquareArrowDown } from "@tabler/icons-react";
-export { IconSquareArrowLeft } from "@tabler/icons-react";
-export { IconSquareArrowRight } from "@tabler/icons-react";
-export { IconSquareArrowUp } from "@tabler/icons-react";
-export { IconSquareAsterisk } from "@tabler/icons-react";
-export { IconSquareCheck } from "@tabler/icons-react";
-export { IconSquareChevronDown } from "@tabler/icons-react";
-export { IconSquareChevronLeft } from "@tabler/icons-react";
-export { IconSquareChevronRight } from "@tabler/icons-react";
-export { IconSquareChevronUp } from "@tabler/icons-react";
-export { IconSquareChevronsDown } from "@tabler/icons-react";
-export { IconSquareChevronsLeft } from "@tabler/icons-react";
-export { IconSquareChevronsRight } from "@tabler/icons-react";
-export { IconSquareChevronsUp } from "@tabler/icons-react";
-export { IconSquareDashedTopSolid } from "@tabler/icons-react";
-export { IconSquareDashedX } from "@tabler/icons-react";
-export { IconSquareDashed } from "@tabler/icons-react";
-export { IconSquareDot } from "@tabler/icons-react";
-export { IconSquareF0 } from "@tabler/icons-react";
-export { IconSquareF1 } from "@tabler/icons-react";
-export { IconSquareF2 } from "@tabler/icons-react";
-export { IconSquareF3 } from "@tabler/icons-react";
-export { IconSquareF4 } from "@tabler/icons-react";
-export { IconSquareF5 } from "@tabler/icons-react";
-export { IconSquareF6 } from "@tabler/icons-react";
-export { IconSquareF7 } from "@tabler/icons-react";
-export { IconSquareF8 } from "@tabler/icons-react";
-export { IconSquareF9 } from "@tabler/icons-react";
-export { IconSquareForbid2 } from "@tabler/icons-react";
-export { IconSquareForbid } from "@tabler/icons-react";
-export { IconSquareHalf } from "@tabler/icons-react";
-export { IconSquareKey } from "@tabler/icons-react";
-export { IconSquareLetterA } from "@tabler/icons-react";
-export { IconSquareLetterB } from "@tabler/icons-react";
-export { IconSquareLetterC } from "@tabler/icons-react";
-export { IconSquareLetterD } from "@tabler/icons-react";
-export { IconSquareLetterE } from "@tabler/icons-react";
-export { IconSquareLetterF } from "@tabler/icons-react";
-export { IconSquareLetterG } from "@tabler/icons-react";
-export { IconSquareLetterH } from "@tabler/icons-react";
-export { IconSquareLetterI } from "@tabler/icons-react";
-export { IconSquareLetterJ } from "@tabler/icons-react";
-export { IconSquareLetterK } from "@tabler/icons-react";
-export { IconSquareLetterL } from "@tabler/icons-react";
-export { IconSquareLetterM } from "@tabler/icons-react";
-export { IconSquareLetterN } from "@tabler/icons-react";
-export { IconSquareLetterO } from "@tabler/icons-react";
-export { IconSquareLetterP } from "@tabler/icons-react";
-export { IconSquareLetterQ } from "@tabler/icons-react";
-export { IconSquareLetterR } from "@tabler/icons-react";
-export { IconSquareLetterS } from "@tabler/icons-react";
-export { IconSquareLetterT } from "@tabler/icons-react";
-export { IconSquareLetterU } from "@tabler/icons-react";
-export { IconSquareLetterV } from "@tabler/icons-react";
-export { IconSquareLetterW } from "@tabler/icons-react";
-export { IconSquareLetterX } from "@tabler/icons-react";
-export { IconSquareLetterY } from "@tabler/icons-react";
-export { IconSquareLetterZ } from "@tabler/icons-react";
-export { IconSquareMinus2 } from "@tabler/icons-react";
-export { IconSquareMinus } from "@tabler/icons-react";
-export { IconSquareNumber0 } from "@tabler/icons-react";
-export { IconSquareNumber1 } from "@tabler/icons-react";
-export { IconSquareNumber2 } from "@tabler/icons-react";
-export { IconSquareNumber3 } from "@tabler/icons-react";
-export { IconSquareNumber4 } from "@tabler/icons-react";
-export { IconSquareNumber5 } from "@tabler/icons-react";
-export { IconSquareNumber6 } from "@tabler/icons-react";
-export { IconSquareNumber7 } from "@tabler/icons-react";
-export { IconSquareNumber8 } from "@tabler/icons-react";
-export { IconSquareNumber9 } from "@tabler/icons-react";
-export { IconSquareOff } from "@tabler/icons-react";
-export { IconSquarePercentage } from "@tabler/icons-react";
-export { IconSquarePlus2 } from "@tabler/icons-react";
-export { IconSquarePlus } from "@tabler/icons-react";
-export { IconSquareRoot2 } from "@tabler/icons-react";
-export { IconSquareRoot } from "@tabler/icons-react";
-export { IconSquareRotatedAsterisk } from "@tabler/icons-react";
-export { IconSquareRotatedForbid2 } from "@tabler/icons-react";
-export { IconSquareRotatedForbid } from "@tabler/icons-react";
-export { IconSquareRotatedOff } from "@tabler/icons-react";
-export { IconSquareRotated } from "@tabler/icons-react";
-export { IconSquareRoundedArrowDown } from "@tabler/icons-react";
-export { IconSquareRoundedArrowLeft } from "@tabler/icons-react";
-export { IconSquareRoundedArrowRight } from "@tabler/icons-react";
-export { IconSquareRoundedArrowUp } from "@tabler/icons-react";
-export { IconSquareRoundedCheck } from "@tabler/icons-react";
-export { IconSquareRoundedChevronDown } from "@tabler/icons-react";
-export { IconSquareRoundedChevronLeft } from "@tabler/icons-react";
-export { IconSquareRoundedChevronRight } from "@tabler/icons-react";
-export { IconSquareRoundedChevronUp } from "@tabler/icons-react";
-export { IconSquareRoundedChevronsDown } from "@tabler/icons-react";
-export { IconSquareRoundedChevronsLeft } from "@tabler/icons-react";
-export { IconSquareRoundedChevronsRight } from "@tabler/icons-react";
-export { IconSquareRoundedChevronsUp } from "@tabler/icons-react";
-export { IconSquareRoundedLetterA } from "@tabler/icons-react";
-export { IconSquareRoundedLetterB } from "@tabler/icons-react";
-export { IconSquareRoundedLetterC } from "@tabler/icons-react";
-export { IconSquareRoundedLetterD } from "@tabler/icons-react";
-export { IconSquareRoundedLetterE } from "@tabler/icons-react";
-export { IconSquareRoundedLetterF } from "@tabler/icons-react";
-export { IconSquareRoundedLetterG } from "@tabler/icons-react";
-export { IconSquareRoundedLetterH } from "@tabler/icons-react";
-export { IconSquareRoundedLetterI } from "@tabler/icons-react";
-export { IconSquareRoundedLetterJ } from "@tabler/icons-react";
-export { IconSquareRoundedLetterK } from "@tabler/icons-react";
-export { IconSquareRoundedLetterL } from "@tabler/icons-react";
-export { IconSquareRoundedLetterM } from "@tabler/icons-react";
-export { IconSquareRoundedLetterN } from "@tabler/icons-react";
-export { IconSquareRoundedLetterO } from "@tabler/icons-react";
-export { IconSquareRoundedLetterP } from "@tabler/icons-react";
-export { IconSquareRoundedLetterQ } from "@tabler/icons-react";
-export { IconSquareRoundedLetterR } from "@tabler/icons-react";
-export { IconSquareRoundedLetterS } from "@tabler/icons-react";
-export { IconSquareRoundedLetterT } from "@tabler/icons-react";
-export { IconSquareRoundedLetterU } from "@tabler/icons-react";
-export { IconSquareRoundedLetterV } from "@tabler/icons-react";
-export { IconSquareRoundedLetterW } from "@tabler/icons-react";
-export { IconSquareRoundedLetterX } from "@tabler/icons-react";
-export { IconSquareRoundedLetterY } from "@tabler/icons-react";
-export { IconSquareRoundedLetterZ } from "@tabler/icons-react";
-export { IconSquareRoundedMinus2 } from "@tabler/icons-react";
-export { IconSquareRoundedMinus } from "@tabler/icons-react";
-export { IconSquareRoundedNumber0 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber1 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber2 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber3 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber4 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber5 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber6 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber7 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber8 } from "@tabler/icons-react";
-export { IconSquareRoundedNumber9 } from "@tabler/icons-react";
-export { IconSquareRoundedPercentage } from "@tabler/icons-react";
-export { IconSquareRoundedPlus2 } from "@tabler/icons-react";
-export { IconSquareRoundedPlus } from "@tabler/icons-react";
-export { IconSquareRoundedX } from "@tabler/icons-react";
-export { IconSquareRounded } from "@tabler/icons-react";
-export { IconSquareToggleHorizontal } from "@tabler/icons-react";
-export { IconSquareToggle } from "@tabler/icons-react";
-export { IconSquareX } from "@tabler/icons-react";
-export { IconSquare } from "@tabler/icons-react";
-export { IconSquaresDiagonal } from "@tabler/icons-react";
-export { IconSquaresSelected } from "@tabler/icons-react";
-export { IconSquares } from "@tabler/icons-react";
-export { IconStack2 } from "@tabler/icons-react";
-export { IconStack3 } from "@tabler/icons-react";
-export { IconStackBack } from "@tabler/icons-react";
-export { IconStackBackward } from "@tabler/icons-react";
-export { IconStackCheck } from "@tabler/icons-react";
-export { IconStackForward } from "@tabler/icons-react";
-export { IconStackFront } from "@tabler/icons-react";
-export { IconStackMiddle } from "@tabler/icons-react";
-export { IconStackMinus } from "@tabler/icons-react";
-export { IconStackPlus } from "@tabler/icons-react";
-export { IconStackPop } from "@tabler/icons-react";
-export { IconStackPush } from "@tabler/icons-react";
-export { IconStackX } from "@tabler/icons-react";
-export { IconStack } from "@tabler/icons-react";
-export { IconStairsDown } from "@tabler/icons-react";
-export { IconStairsUp } from "@tabler/icons-react";
-export { IconStairs } from "@tabler/icons-react";
-export { IconStarHalf } from "@tabler/icons-react";
-export { IconStarOff } from "@tabler/icons-react";
-export { IconStar } from "@tabler/icons-react";
-export { IconStarsOff } from "@tabler/icons-react";
-export { IconStars } from "@tabler/icons-react";
-export { IconStatusChange } from "@tabler/icons-react";
-export { IconSteam } from "@tabler/icons-react";
-export { IconSteeringWheelOff } from "@tabler/icons-react";
-export { IconSteeringWheel } from "@tabler/icons-react";
-export { IconStepInto } from "@tabler/icons-react";
-export { IconStepOut } from "@tabler/icons-react";
-export { IconStereoGlasses } from "@tabler/icons-react";
-export { IconStethoscopeOff } from "@tabler/icons-react";
-export { IconStethoscope } from "@tabler/icons-react";
-export { IconSticker2 } from "@tabler/icons-react";
-export { IconStickerSmile } from "@tabler/icons-react";
-export { IconSticker } from "@tabler/icons-react";
-export { IconStopwatch } from "@tabler/icons-react";
-export { IconStormOff } from "@tabler/icons-react";
-export { IconStorm } from "@tabler/icons-react";
-export { IconStretching2 } from "@tabler/icons-react";
-export { IconStretching } from "@tabler/icons-react";
-export { IconStrikethrough } from "@tabler/icons-react";
-export { IconStrokeCurved } from "@tabler/icons-react";
-export { IconStrokeDynamic } from "@tabler/icons-react";
-export { IconStrokeStraight } from "@tabler/icons-react";
-export { IconSubmarine } from "@tabler/icons-react";
-export { IconSubscript } from "@tabler/icons-react";
-export { IconSubtask } from "@tabler/icons-react";
-export { IconSubtitlesAi } from "@tabler/icons-react";
-export { IconSubtitlesEdit } from "@tabler/icons-react";
-export { IconSubtitlesOff } from "@tabler/icons-react";
-export { IconSubtitles } from "@tabler/icons-react";
-export { IconSumOff } from "@tabler/icons-react";
-export { IconSum } from "@tabler/icons-react";
-export { IconSunElectricity } from "@tabler/icons-react";
-export { IconSunHigh } from "@tabler/icons-react";
-export { IconSunLow } from "@tabler/icons-react";
-export { IconSunMoon } from "@tabler/icons-react";
-export { IconSunOff } from "@tabler/icons-react";
-export { IconSunWind } from "@tabler/icons-react";
-export { IconSun } from "@tabler/icons-react";
-export { IconSunglasses } from "@tabler/icons-react";
-export { IconSunrise } from "@tabler/icons-react";
-export { IconSunset2 } from "@tabler/icons-react";
-export { IconSunset } from "@tabler/icons-react";
-export { IconSuperscript } from "@tabler/icons-react";
-export { IconSvg } from "@tabler/icons-react";
-export { IconSwimming } from "@tabler/icons-react";
-export { IconSwipeDown } from "@tabler/icons-react";
-export { IconSwipeLeft } from "@tabler/icons-react";
-export { IconSwipeRight } from "@tabler/icons-react";
-export { IconSwipeUp } from "@tabler/icons-react";
-export { IconSwipe } from "@tabler/icons-react";
-export { IconSwitch2 } from "@tabler/icons-react";
-export { IconSwitch3 } from "@tabler/icons-react";
-export { IconSwitchHorizontal } from "@tabler/icons-react";
-export { IconSwitchVertical } from "@tabler/icons-react";
-export { IconSwitch } from "@tabler/icons-react";
-export { IconSwordOff } from "@tabler/icons-react";
-export { IconSword } from "@tabler/icons-react";
-export { IconSwords } from "@tabler/icons-react";
-export { IconTabClose } from "@tabler/icons-react";
-export { IconTableAlias } from "@tabler/icons-react";
-export { IconTableColumn } from "@tabler/icons-react";
-export { IconTableDashed } from "@tabler/icons-react";
-export { IconTableDown } from "@tabler/icons-react";
-export { IconTableExport } from "@tabler/icons-react";
-export { IconTableHeart } from "@tabler/icons-react";
-export { IconTableImport } from "@tabler/icons-react";
-export { IconTableMinus } from "@tabler/icons-react";
-export { IconTableOff } from "@tabler/icons-react";
-export { IconTableOptions } from "@tabler/icons-react";
-export { IconTablePlus } from "@tabler/icons-react";
-export { IconTableRow } from "@tabler/icons-react";
-export { IconTableShare } from "@tabler/icons-react";
-export { IconTableShortcut } from "@tabler/icons-react";
-export { IconTableSpark } from "@tabler/icons-react";
-export { IconTable } from "@tabler/icons-react";
-export { IconTabs } from "@tabler/icons-react";
-export { IconTagMinus } from "@tabler/icons-react";
-export { IconTagOff } from "@tabler/icons-react";
-export { IconTagPlus } from "@tabler/icons-react";
-export { IconTagStarred } from "@tabler/icons-react";
-export { IconTag } from "@tabler/icons-react";
-export { IconTagsChevronDown } from "@tabler/icons-react";
-export { IconTagsChevronLeft } from "@tabler/icons-react";
-export { IconTagsChevronRight } from "@tabler/icons-react";
-export { IconTagsChevronUp } from "@tabler/icons-react";
-export { IconTagsOff } from "@tabler/icons-react";
-export { IconTags } from "@tabler/icons-react";
-export { IconTaiwanDollar } from "@tabler/icons-react";
-export { IconTallymark1 } from "@tabler/icons-react";
-export { IconTallymark2 } from "@tabler/icons-react";
-export { IconTallymark3 } from "@tabler/icons-react";
-export { IconTallymark4 } from "@tabler/icons-react";
-export { IconTallymarks } from "@tabler/icons-react";
-export { IconTank } from "@tabler/icons-react";
-export { IconTarget2 } from "@tabler/icons-react";
-export { IconTargetArrow } from "@tabler/icons-react";
-export { IconTargetOff } from "@tabler/icons-react";
-export { IconTarget } from "@tabler/icons-react";
-export { IconTaxEuro } from "@tabler/icons-react";
-export { IconTaxPound } from "@tabler/icons-react";
-export { IconTax } from "@tabler/icons-react";
-export { IconTeapot } from "@tabler/icons-react";
-export { IconTelescopeOff } from "@tabler/icons-react";
-export { IconTelescope } from "@tabler/icons-react";
-export { IconTemperatureCelsius } from "@tabler/icons-react";
-export { IconTemperatureFahrenheit } from "@tabler/icons-react";
-export { IconTemperatureMinus } from "@tabler/icons-react";
-export { IconTemperatureOff } from "@tabler/icons-react";
-export { IconTemperaturePlus } from "@tabler/icons-react";
-export { IconTemperatureSnow } from "@tabler/icons-react";
-export { IconTemperatureSun } from "@tabler/icons-react";
-export { IconTemperature } from "@tabler/icons-react";
-export { IconTemplateOff } from "@tabler/icons-react";
-export { IconTemplate } from "@tabler/icons-react";
-export { IconTentOff } from "@tabler/icons-react";
-export { IconTent } from "@tabler/icons-react";
-export { IconTerminal2 } from "@tabler/icons-react";
-export { IconTerminal } from "@tabler/icons-react";
-export { IconTestPipe2 } from "@tabler/icons-react";
-export { IconTestPipeOff } from "@tabler/icons-react";
-export { IconTestPipe } from "@tabler/icons-react";
-export { IconTex } from "@tabler/icons-react";
-export { IconTextCaption } from "@tabler/icons-react";
-export { IconTextColor } from "@tabler/icons-react";
-export { IconTextDecrease } from "@tabler/icons-react";
-export { IconTextDirectionLtr } from "@tabler/icons-react";
-export { IconTextDirectionRtl } from "@tabler/icons-react";
-export { IconTextGrammar } from "@tabler/icons-react";
-export { IconTextIncrease } from "@tabler/icons-react";
-export { IconTextOrientation } from "@tabler/icons-react";
-export { IconTextOutline } from "@tabler/icons-react";
-export { IconTextPlus } from "@tabler/icons-react";
-export { IconTextRecognition } from "@tabler/icons-react";
-export { IconTextRegexAsterisk } from "@tabler/icons-react";
-export { IconTextRegexEnd } from "@tabler/icons-react";
-export { IconTextRegexPlus } from "@tabler/icons-react";
-export { IconTextRegexQuestion } from "@tabler/icons-react";
-export { IconTextRegexStart } from "@tabler/icons-react";
-export { IconTextResize } from "@tabler/icons-react";
-export { IconTextScan2 } from "@tabler/icons-react";
-export { IconTextScanAi } from "@tabler/icons-react";
-export { IconTextSize } from "@tabler/icons-react";
-export { IconTextSpellcheck } from "@tabler/icons-react";
-export { IconTextWrapColumn } from "@tabler/icons-react";
-export { IconTextWrapDisabled } from "@tabler/icons-react";
-export { IconTextWrap } from "@tabler/icons-react";
-export { IconTexture } from "@tabler/icons-react";
-export { IconTheater } from "@tabler/icons-react";
-export { IconThermometer } from "@tabler/icons-react";
-export { IconThinkingHigh } from "@tabler/icons-react";
-export { IconThinkingLow } from "@tabler/icons-react";
-export { IconThinkingMedium } from "@tabler/icons-react";
-export { IconThumbDownOff } from "@tabler/icons-react";
-export { IconThumbDown } from "@tabler/icons-react";
-export { IconThumbUpOff } from "@tabler/icons-react";
-export { IconThumbUp } from "@tabler/icons-react";
-export { IconTicTac } from "@tabler/icons-react";
-export { IconTicketOff } from "@tabler/icons-react";
-export { IconTicket } from "@tabler/icons-react";
-export { IconTie } from "@tabler/icons-react";
-export { IconTilde } from "@tabler/icons-react";
-export { IconTiltShiftOff } from "@tabler/icons-react";
-export { IconTiltShift } from "@tabler/icons-react";
-export { IconTimeDuration0 } from "@tabler/icons-react";
-export { IconTimeDuration10 } from "@tabler/icons-react";
-export { IconTimeDuration15 } from "@tabler/icons-react";
-export { IconTimeDuration30 } from "@tabler/icons-react";
-export { IconTimeDuration45 } from "@tabler/icons-react";
-export { IconTimeDuration5 } from "@tabler/icons-react";
-export { IconTimeDuration60 } from "@tabler/icons-react";
-export { IconTimeDuration90 } from "@tabler/icons-react";
-export { IconTimeDurationOff } from "@tabler/icons-react";
-export { IconTimelineEventExclamation } from "@tabler/icons-react";
-export { IconTimelineEventMinus } from "@tabler/icons-react";
-export { IconTimelineEventPlus } from "@tabler/icons-react";
-export { IconTimelineEventText } from "@tabler/icons-react";
-export { IconTimelineEventX } from "@tabler/icons-react";
-export { IconTimelineEvent } from "@tabler/icons-react";
-export { IconTimeline } from "@tabler/icons-react";
-export { IconTimezone } from "@tabler/icons-react";
-export { IconTipJarEuro } from "@tabler/icons-react";
-export { IconTipJarPound } from "@tabler/icons-react";
-export { IconTipJar } from "@tabler/icons-react";
-export { IconTir } from "@tabler/icons-react";
-export { IconToggleLeft } from "@tabler/icons-react";
-export { IconToggleRight } from "@tabler/icons-react";
-export { IconToiletPaperOff } from "@tabler/icons-react";
-export { IconToiletPaper } from "@tabler/icons-react";
-export { IconToml } from "@tabler/icons-react";
-export { IconTool } from "@tabler/icons-react";
-export { IconToolsKitchen2Off } from "@tabler/icons-react";
-export { IconToolsKitchen2 } from "@tabler/icons-react";
-export { IconToolsKitchen3 } from "@tabler/icons-react";
-export { IconToolsKitchenOff } from "@tabler/icons-react";
-export { IconToolsKitchen } from "@tabler/icons-react";
-export { IconToolsOff } from "@tabler/icons-react";
-export { IconTools } from "@tabler/icons-react";
-export { IconTooltip } from "@tabler/icons-react";
-export { IconTopologyBus } from "@tabler/icons-react";
-export { IconTopologyComplex } from "@tabler/icons-react";
-export { IconTopologyFullHierarchy } from "@tabler/icons-react";
-export { IconTopologyFull } from "@tabler/icons-react";
-export { IconTopologyRing2 } from "@tabler/icons-react";
-export { IconTopologyRing3 } from "@tabler/icons-react";
-export { IconTopologyRing } from "@tabler/icons-react";
-export { IconTopologyStar2 } from "@tabler/icons-react";
-export { IconTopologyStar3 } from "@tabler/icons-react";
-export { IconTopologyStarRing2 } from "@tabler/icons-react";
-export { IconTopologyStarRing3 } from "@tabler/icons-react";
-export { IconTopologyStarRing } from "@tabler/icons-react";
-export { IconTopologyStar } from "@tabler/icons-react";
-export { IconTorii } from "@tabler/icons-react";
-export { IconTornado } from "@tabler/icons-react";
-export { IconTournament } from "@tabler/icons-react";
-export { IconTowerOff } from "@tabler/icons-react";
-export { IconTower } from "@tabler/icons-react";
-export { IconTrack } from "@tabler/icons-react";
-export { IconTractor } from "@tabler/icons-react";
-export { IconTrademark } from "@tabler/icons-react";
-export { IconTrafficConeOff } from "@tabler/icons-react";
-export { IconTrafficCone } from "@tabler/icons-react";
-export { IconTrafficLightsOff } from "@tabler/icons-react";
-export { IconTrafficLights } from "@tabler/icons-react";
-export { IconTrain } from "@tabler/icons-react";
-export { IconTransactionBitcoin } from "@tabler/icons-react";
-export { IconTransactionDollar } from "@tabler/icons-react";
-export { IconTransactionEuro } from "@tabler/icons-react";
-export { IconTransactionPound } from "@tabler/icons-react";
-export { IconTransactionRupee } from "@tabler/icons-react";
-export { IconTransactionYen } from "@tabler/icons-react";
-export { IconTransactionYuan } from "@tabler/icons-react";
-export { IconTransferIn } from "@tabler/icons-react";
-export { IconTransferOut } from "@tabler/icons-react";
-export { IconTransferVertical } from "@tabler/icons-react";
-export { IconTransfer } from "@tabler/icons-react";
-export { IconTransformPointBottomLeft } from "@tabler/icons-react";
-export { IconTransformPointBottomRight } from "@tabler/icons-react";
-export { IconTransformPointTopLeft } from "@tabler/icons-react";
-export { IconTransformPointTopRight } from "@tabler/icons-react";
-export { IconTransformPoint } from "@tabler/icons-react";
-export { IconTransform } from "@tabler/icons-react";
-export { IconTransitionBottom } from "@tabler/icons-react";
-export { IconTransitionLeft } from "@tabler/icons-react";
-export { IconTransitionRight } from "@tabler/icons-react";
-export { IconTransitionTop } from "@tabler/icons-react";
-export { IconTrashOff } from "@tabler/icons-react";
-export { IconTrashX } from "@tabler/icons-react";
-export { IconTrash } from "@tabler/icons-react";
-export { IconTreadmill } from "@tabler/icons-react";
-export { IconTreasureChest } from "@tabler/icons-react";
-export { IconTree } from "@tabler/icons-react";
-export { IconTrees } from "@tabler/icons-react";
-export { IconTrekking } from "@tabler/icons-react";
-export { IconTrendingDown2 } from "@tabler/icons-react";
-export { IconTrendingDown3 } from "@tabler/icons-react";
-export { IconTrendingDown } from "@tabler/icons-react";
-export { IconTrendingUp2 } from "@tabler/icons-react";
-export { IconTrendingUp3 } from "@tabler/icons-react";
-export { IconTrendingUpDown } from "@tabler/icons-react";
-export { IconTrendingUp } from "@tabler/icons-react";
-export { IconTriangleDashed } from "@tabler/icons-react";
-export { IconTriangleInverted } from "@tabler/icons-react";
-export { IconTriangleMinus2 } from "@tabler/icons-react";
-export { IconTriangleMinus } from "@tabler/icons-react";
-export { IconTriangleOff } from "@tabler/icons-react";
-export { IconTrianglePlus2 } from "@tabler/icons-react";
-export { IconTrianglePlus } from "@tabler/icons-react";
-export { IconTriangleSquareCircle } from "@tabler/icons-react";
-export { IconTriangle } from "@tabler/icons-react";
-export { IconTriangles } from "@tabler/icons-react";
-export { IconTrident } from "@tabler/icons-react";
-export { IconTrolley } from "@tabler/icons-react";
-export { IconTrophyOff } from "@tabler/icons-react";
-export { IconTrophy } from "@tabler/icons-react";
-export { IconTrowel } from "@tabler/icons-react";
-export { IconTruckDelivery } from "@tabler/icons-react";
-export { IconTruckLoading } from "@tabler/icons-react";
-export { IconTruckOff } from "@tabler/icons-react";
-export { IconTruckReturn } from "@tabler/icons-react";
-export { IconTruck } from "@tabler/icons-react";
-export { IconTwig } from "@tabler/icons-react";
-export { IconTxt } from "@tabler/icons-react";
-export { IconTypeface } from "@tabler/icons-react";
-export { IconTypographyOff } from "@tabler/icons-react";
-export { IconTypography } from "@tabler/icons-react";
-export { IconUTurnLeft } from "@tabler/icons-react";
-export { IconUTurnRight } from "@tabler/icons-react";
-export { IconUfoOff } from "@tabler/icons-react";
-export { IconUfo } from "@tabler/icons-react";
-export { IconUhd } from "@tabler/icons-react";
-export { IconUmbrella2 } from "@tabler/icons-react";
-export { IconUmbrellaClosed2 } from "@tabler/icons-react";
-export { IconUmbrellaClosed } from "@tabler/icons-react";
-export { IconUmbrellaOff } from "@tabler/icons-react";
-export { IconUmbrella } from "@tabler/icons-react";
-export { IconUnderlineOff } from "@tabler/icons-react";
-export { IconUnderline } from "@tabler/icons-react";
-export { IconUnicycle } from "@tabler/icons-react";
-export { IconUniverse } from "@tabler/icons-react";
-export { IconUnlink } from "@tabler/icons-react";
-export { IconUpload } from "@tabler/icons-react";
-export { IconUrgent } from "@tabler/icons-react";
-export { IconUsb } from "@tabler/icons-react";
-export { IconUserBitcoin } from "@tabler/icons-react";
-export { IconUserBolt } from "@tabler/icons-react";
-export { IconUserCancel } from "@tabler/icons-react";
-export { IconUserCheck } from "@tabler/icons-react";
-export { IconUserCircle } from "@tabler/icons-react";
-export { IconUserCode } from "@tabler/icons-react";
-export { IconUserCog } from "@tabler/icons-react";
-export { IconUserDollar } from "@tabler/icons-react";
-export { IconUserDown } from "@tabler/icons-react";
-export { IconUserEdit } from "@tabler/icons-react";
-export { IconUserExclamation } from "@tabler/icons-react";
-export { IconUserHeart } from "@tabler/icons-react";
-export { IconUserHexagon } from "@tabler/icons-react";
-export { IconUserKey } from "@tabler/icons-react";
-export { IconUserMinus } from "@tabler/icons-react";
-export { IconUserOff } from "@tabler/icons-react";
-export { IconUserPause } from "@tabler/icons-react";
-export { IconUserPentagon } from "@tabler/icons-react";
-export { IconUserPin } from "@tabler/icons-react";
-export { IconUserPlus } from "@tabler/icons-react";
-export { IconUserQuestion } from "@tabler/icons-react";
-export { IconUserScan } from "@tabler/icons-react";
-export { IconUserScreen } from "@tabler/icons-react";
-export { IconUserSearch } from "@tabler/icons-react";
-export { IconUserShare } from "@tabler/icons-react";
-export { IconUserShield } from "@tabler/icons-react";
-export { IconUserSquareRounded } from "@tabler/icons-react";
-export { IconUserSquare } from "@tabler/icons-react";
-export { IconUserStar } from "@tabler/icons-react";
-export { IconUserUp } from "@tabler/icons-react";
-export { IconUserX } from "@tabler/icons-react";
-export { IconUser } from "@tabler/icons-react";
-export { IconUsersGroup } from "@tabler/icons-react";
-export { IconUsersMinus } from "@tabler/icons-react";
-export { IconUsersPlus } from "@tabler/icons-react";
-export { IconUsers } from "@tabler/icons-react";
-export { IconUvIndex } from "@tabler/icons-react";
-export { IconUxCircle } from "@tabler/icons-react";
-export { IconVaccineBottleOff } from "@tabler/icons-react";
-export { IconVaccineBottle } from "@tabler/icons-react";
-export { IconVaccineOff } from "@tabler/icons-react";
-export { IconVaccine } from "@tabler/icons-react";
-export { IconVacuumCleaner } from "@tabler/icons-react";
-export { IconVariableMinus } from "@tabler/icons-react";
-export { IconVariableOff } from "@tabler/icons-react";
-export { IconVariablePlus } from "@tabler/icons-react";
-export { IconVariable } from "@tabler/icons-react";
-export { IconVault } from "@tabler/icons-react";
-export { IconVectorBezier2 } from "@tabler/icons-react";
-export { IconVectorBezierArc } from "@tabler/icons-react";
-export { IconVectorBezierCircle } from "@tabler/icons-react";
-export { IconVectorBezier } from "@tabler/icons-react";
-export { IconVectorOff } from "@tabler/icons-react";
-export { IconVectorSpline } from "@tabler/icons-react";
-export { IconVectorTriangleOff } from "@tabler/icons-react";
-export { IconVectorTriangle } from "@tabler/icons-react";
-export { IconVector } from "@tabler/icons-react";
-export { IconVenus } from "@tabler/icons-react";
-export { IconVersionsOff } from "@tabler/icons-react";
-export { IconVersions } from "@tabler/icons-react";
-export { IconVideoMinus } from "@tabler/icons-react";
-export { IconVideoOff } from "@tabler/icons-react";
-export { IconVideoPlus } from "@tabler/icons-react";
-export { IconVideo } from "@tabler/icons-react";
-export { IconView360Arrow } from "@tabler/icons-react";
-export { IconView360Number } from "@tabler/icons-react";
-export { IconView360Off } from "@tabler/icons-react";
-export { IconView360 } from "@tabler/icons-react";
-export { IconViewfinderOff } from "@tabler/icons-react";
-export { IconViewfinder } from "@tabler/icons-react";
-export { IconViewportNarrow } from "@tabler/icons-react";
-export { IconViewportShort } from "@tabler/icons-react";
-export { IconViewportTall } from "@tabler/icons-react";
-export { IconViewportWide } from "@tabler/icons-react";
-export { IconVignette } from "@tabler/icons-react";
-export { IconVinyl } from "@tabler/icons-react";
-export { IconVip2 } from "@tabler/icons-react";
-export { IconVipOff } from "@tabler/icons-react";
-export { IconVip } from "@tabler/icons-react";
-export { IconVirtualSpace } from "@tabler/icons-react";
-export { IconVirusOff } from "@tabler/icons-react";
-export { IconVirusSearch } from "@tabler/icons-react";
-export { IconVirus } from "@tabler/icons-react";
-export { IconVocabularyOff } from "@tabler/icons-react";
-export { IconVocabulary } from "@tabler/icons-react";
-export { IconVoice2 } from "@tabler/icons-react";
-export { IconVoice } from "@tabler/icons-react";
-export { IconVolcano } from "@tabler/icons-react";
-export { IconVolume2 } from "@tabler/icons-react";
-export { IconVolume3 } from "@tabler/icons-react";
-export { IconVolume4 } from "@tabler/icons-react";
-export { IconVolumeOff } from "@tabler/icons-react";
-export { IconVolume } from "@tabler/icons-react";
-export { IconVs } from "@tabler/icons-react";
-export { IconWalk } from "@tabler/icons-react";
-export { IconWallOff } from "@tabler/icons-react";
-export { IconWall } from "@tabler/icons-react";
-export { IconWalletOff } from "@tabler/icons-react";
-export { IconWallet } from "@tabler/icons-react";
-export { IconWallpaperOff } from "@tabler/icons-react";
-export { IconWallpaper } from "@tabler/icons-react";
-export { IconWandOff } from "@tabler/icons-react";
-export { IconWand } from "@tabler/icons-react";
-export { IconWashDry1 } from "@tabler/icons-react";
-export { IconWashDry2 } from "@tabler/icons-react";
-export { IconWashDry3 } from "@tabler/icons-react";
-export { IconWashDryA } from "@tabler/icons-react";
-export { IconWashDryDip } from "@tabler/icons-react";
-export { IconWashDryF } from "@tabler/icons-react";
-export { IconWashDryFlat } from "@tabler/icons-react";
-export { IconWashDryHang } from "@tabler/icons-react";
-export { IconWashDryOff } from "@tabler/icons-react";
-export { IconWashDryP } from "@tabler/icons-react";
-export { IconWashDryShade } from "@tabler/icons-react";
-export { IconWashDryW } from "@tabler/icons-react";
-export { IconWashDry } from "@tabler/icons-react";
-export { IconWashDrycleanOff } from "@tabler/icons-react";
-export { IconWashDryclean } from "@tabler/icons-react";
-export { IconWashEco } from "@tabler/icons-react";
-export { IconWashGentle } from "@tabler/icons-react";
-export { IconWashHand } from "@tabler/icons-react";
-export { IconWashMachine } from "@tabler/icons-react";
-export { IconWashOff } from "@tabler/icons-react";
-export { IconWashPress } from "@tabler/icons-react";
-export { IconWashTemperature1 } from "@tabler/icons-react";
-export { IconWashTemperature2 } from "@tabler/icons-react";
-export { IconWashTemperature3 } from "@tabler/icons-react";
-export { IconWashTemperature4 } from "@tabler/icons-react";
-export { IconWashTemperature5 } from "@tabler/icons-react";
-export { IconWashTemperature6 } from "@tabler/icons-react";
-export { IconWashTumbleDry } from "@tabler/icons-react";
-export { IconWashTumbleOff } from "@tabler/icons-react";
-export { IconWash } from "@tabler/icons-react";
-export { IconWaterpolo } from "@tabler/icons-react";
-export { IconWaveSawTool } from "@tabler/icons-react";
-export { IconWaveSine } from "@tabler/icons-react";
-export { IconWaveSquare } from "@tabler/icons-react";
-export { IconWavesElectricity } from "@tabler/icons-react";
-export { IconWebhookOff } from "@tabler/icons-react";
-export { IconWebhook } from "@tabler/icons-react";
-export { IconWeight } from "@tabler/icons-react";
-export { IconWheatOff } from "@tabler/icons-react";
-export { IconWheat } from "@tabler/icons-react";
-export { IconWheel } from "@tabler/icons-react";
-export { IconWheelchairOff } from "@tabler/icons-react";
-export { IconWheelchair } from "@tabler/icons-react";
-export { IconWhirl } from "@tabler/icons-react";
-export { IconWhisk } from "@tabler/icons-react";
-export { IconWifi0 } from "@tabler/icons-react";
-export { IconWifi1 } from "@tabler/icons-react";
-export { IconWifi2 } from "@tabler/icons-react";
-export { IconWifiOff } from "@tabler/icons-react";
-export { IconWifi } from "@tabler/icons-react";
-export { IconWindElectricity } from "@tabler/icons-react";
-export { IconWindOff } from "@tabler/icons-react";
-export { IconWind } from "@tabler/icons-react";
-export { IconWindmillOff } from "@tabler/icons-react";
-export { IconWindmill } from "@tabler/icons-react";
-export { IconWindowMaximize } from "@tabler/icons-react";
-export { IconWindowMinimize } from "@tabler/icons-react";
-export { IconWindowOff } from "@tabler/icons-react";
-export { IconWindow } from "@tabler/icons-react";
-export { IconWindsock } from "@tabler/icons-react";
-export { IconWiperWash } from "@tabler/icons-react";
-export { IconWiper } from "@tabler/icons-react";
-export { IconWoman } from "@tabler/icons-react";
-export { IconWood } from "@tabler/icons-react";
-export { IconWorldBolt } from "@tabler/icons-react";
-export { IconWorldCancel } from "@tabler/icons-react";
-export { IconWorldCheck } from "@tabler/icons-react";
-export { IconWorldCode } from "@tabler/icons-react";
-export { IconWorldCog } from "@tabler/icons-react";
-export { IconWorldDollar } from "@tabler/icons-react";
-export { IconWorldDown } from "@tabler/icons-react";
-export { IconWorldDownload } from "@tabler/icons-react";
-export { IconWorldExclamation } from "@tabler/icons-react";
-export { IconWorldHeart } from "@tabler/icons-react";
-export { IconWorldLatitude } from "@tabler/icons-react";
-export { IconWorldLongitude } from "@tabler/icons-react";
-export { IconWorldMap } from "@tabler/icons-react";
-export { IconWorldMinus } from "@tabler/icons-react";
-export { IconWorldOff } from "@tabler/icons-react";
-export { IconWorldPause } from "@tabler/icons-react";
-export { IconWorldPin } from "@tabler/icons-react";
-export { IconWorldPlus } from "@tabler/icons-react";
-export { IconWorldQuestion } from "@tabler/icons-react";
-export { IconWorldSearch } from "@tabler/icons-react";
-export { IconWorldShare } from "@tabler/icons-react";
-export { IconWorldStar } from "@tabler/icons-react";
-export { IconWorldUp } from "@tabler/icons-react";
-export { IconWorldUpload } from "@tabler/icons-react";
-export { IconWorldWww } from "@tabler/icons-react";
-export { IconWorldX } from "@tabler/icons-react";
-export { IconWorld } from "@tabler/icons-react";
-export { IconWreckingBall } from "@tabler/icons-react";
-export { IconWritingOff } from "@tabler/icons-react";
-export { IconWritingSignOff } from "@tabler/icons-react";
-export { IconWritingSign } from "@tabler/icons-react";
-export { IconWriting } from "@tabler/icons-react";
-export { IconXMark } from "@tabler/icons-react";
-export { IconXPowerY } from "@tabler/icons-react";
-export { IconX } from "@tabler/icons-react";
-export { IconXboxA } from "@tabler/icons-react";
-export { IconXboxB } from "@tabler/icons-react";
-export { IconXboxX } from "@tabler/icons-react";
-export { IconXboxY } from "@tabler/icons-react";
-export { IconXd } from "@tabler/icons-react";
-export { IconXxx } from "@tabler/icons-react";
-export { IconYarn } from "@tabler/icons-react";
-export { IconYinYang } from "@tabler/icons-react";
-export { IconYoga } from "@tabler/icons-react";
-export { IconZeppelinOff } from "@tabler/icons-react";
-export { IconZeppelin } from "@tabler/icons-react";
-export { IconZeroConfig } from "@tabler/icons-react";
-export { IconZip } from "@tabler/icons-react";
-export { IconZodiacAquarius } from "@tabler/icons-react";
-export { IconZodiacAries } from "@tabler/icons-react";
-export { IconZodiacCancer } from "@tabler/icons-react";
-export { IconZodiacCapricorn } from "@tabler/icons-react";
-export { IconZodiacGemini } from "@tabler/icons-react";
-export { IconZodiacLeo } from "@tabler/icons-react";
-export { IconZodiacLibra } from "@tabler/icons-react";
-export { IconZodiacPisces } from "@tabler/icons-react";
-export { IconZodiacSagittarius } from "@tabler/icons-react";
-export { IconZodiacScorpio } from "@tabler/icons-react";
-export { IconZodiacTaurus } from "@tabler/icons-react";
-export { IconZodiacVirgo } from "@tabler/icons-react";
-export { IconZoomCancel } from "@tabler/icons-react";
-export { IconZoomCheck } from "@tabler/icons-react";
-export { IconZoomCode } from "@tabler/icons-react";
-export { IconZoomExclamation } from "@tabler/icons-react";
-export { IconZoomInArea } from "@tabler/icons-react";
-export { IconZoomIn } from "@tabler/icons-react";
-export { IconZoomMoney } from "@tabler/icons-react";
-export { IconZoomOutArea } from "@tabler/icons-react";
-export { IconZoomOut } from "@tabler/icons-react";
-export { IconZoomPan } from "@tabler/icons-react";
-export { IconZoomQuestion } from "@tabler/icons-react";
-export { IconZoomReplace } from "@tabler/icons-react";
-export { IconZoomReset } from "@tabler/icons-react";
-export { IconZoomScan } from "@tabler/icons-react";
-export { IconZoom } from "@tabler/icons-react";
-export { IconZzzOff } from "@tabler/icons-react";
-export { IconZzz } from "@tabler/icons-react";
-export { IconAccessibleFilled } from "@tabler/icons-react";
-export { IconAdCircleFilled } from "@tabler/icons-react";
-export { IconAdFilled } from "@tabler/icons-react";
-export { IconAdjustmentsHorizontalFilled } from "@tabler/icons-react";
-export { IconAdjustmentsFilled } from "@tabler/icons-react";
-export { IconAerialLiftFilled } from "@tabler/icons-react";
-export { IconAffiliateFilled } from "@tabler/icons-react";
-export { IconAirBalloonFilled } from "@tabler/icons-react";
-export { IconAlarmMinusFilled } from "@tabler/icons-react";
-export { IconAlarmPlusFilled } from "@tabler/icons-react";
-export { IconAlarmSnoozeFilled } from "@tabler/icons-react";
-export { IconAlarmFilled } from "@tabler/icons-react";
-export { IconAlertCircleFilled } from "@tabler/icons-react";
-export { IconAlertHexagonFilled } from "@tabler/icons-react";
-export { IconAlertOctagonFilled } from "@tabler/icons-react";
-export { IconAlertSquareRoundedFilled } from "@tabler/icons-react";
-export { IconAlertSquareFilled } from "@tabler/icons-react";
-export { IconAlertTriangleFilled } from "@tabler/icons-react";
-export { IconAlienFilled } from "@tabler/icons-react";
-export { IconAlignBoxBottomCenterFilled } from "@tabler/icons-react";
-export { IconAlignBoxBottomLeftFilled } from "@tabler/icons-react";
-export { IconAlignBoxBottomRightFilled } from "@tabler/icons-react";
-export { IconAlignBoxCenterMiddleFilled } from "@tabler/icons-react";
-export { IconAlignBoxLeftBottomFilled } from "@tabler/icons-react";
-export { IconAlignBoxLeftMiddleFilled } from "@tabler/icons-react";
-export { IconAlignBoxLeftTopFilled } from "@tabler/icons-react";
-export { IconAlignBoxRightBottomFilled } from "@tabler/icons-react";
-export { IconAlignBoxRightMiddleFilled } from "@tabler/icons-react";
-export { IconAlignBoxRightTopFilled } from "@tabler/icons-react";
-export { IconAlignBoxTopCenterFilled } from "@tabler/icons-react";
-export { IconAlignBoxTopLeftFilled } from "@tabler/icons-react";
-export { IconAlignBoxTopRightFilled } from "@tabler/icons-react";
-export { IconAnalyzeFilled } from "@tabler/icons-react";
-export { IconAppWindowFilled } from "@tabler/icons-react";
-export { IconAppleFilled } from "@tabler/icons-react";
-export { IconAppsFilled } from "@tabler/icons-react";
-export { IconArchiveFilled } from "@tabler/icons-react";
-export { IconArrowAutofitContentFilled } from "@tabler/icons-react";
-export { IconArrowAutofitDownFilled } from "@tabler/icons-react";
-export { IconArrowAutofitHeightFilled } from "@tabler/icons-react";
-export { IconArrowAutofitLeftFilled } from "@tabler/icons-react";
-export { IconArrowAutofitRightFilled } from "@tabler/icons-react";
-export { IconArrowAutofitUpFilled } from "@tabler/icons-react";
-export { IconArrowAutofitWidthFilled } from "@tabler/icons-react";
-export { IconArrowBadgeDownFilled } from "@tabler/icons-react";
-export { IconArrowBadgeLeftFilled } from "@tabler/icons-react";
-export { IconArrowBadgeRightFilled } from "@tabler/icons-react";
-export { IconArrowBadgeUpFilled } from "@tabler/icons-react";
-export { IconArrowBigDownLineFilled } from "@tabler/icons-react";
-export { IconArrowBigDownLinesFilled } from "@tabler/icons-react";
-export { IconArrowBigDownFilled } from "@tabler/icons-react";
-export { IconArrowBigLeftLineFilled } from "@tabler/icons-react";
-export { IconArrowBigLeftLinesFilled } from "@tabler/icons-react";
-export { IconArrowBigLeftFilled } from "@tabler/icons-react";
-export { IconArrowBigRightLineFilled } from "@tabler/icons-react";
-export { IconArrowBigRightLinesFilled } from "@tabler/icons-react";
-export { IconArrowBigRightFilled } from "@tabler/icons-react";
-export { IconArrowBigUpLineFilled } from "@tabler/icons-react";
-export { IconArrowBigUpLinesFilled } from "@tabler/icons-react";
-export { IconArrowBigUpFilled } from "@tabler/icons-react";
-export { IconArrowDownCircleFilled } from "@tabler/icons-react";
-export { IconArrowDownRhombusFilled } from "@tabler/icons-react";
-export { IconArrowDownSquareFilled } from "@tabler/icons-react";
-export { IconArrowGuideFilled } from "@tabler/icons-react";
-export { IconArrowLeftCircleFilled } from "@tabler/icons-react";
-export { IconArrowLeftRhombusFilled } from "@tabler/icons-react";
-export { IconArrowLeftSquareFilled } from "@tabler/icons-react";
-export { IconArrowMoveDownFilled } from "@tabler/icons-react";
-export { IconArrowMoveLeftFilled } from "@tabler/icons-react";
-export { IconArrowMoveRightFilled } from "@tabler/icons-react";
-export { IconArrowMoveUpFilled } from "@tabler/icons-react";
-export { IconArrowRightCircleFilled } from "@tabler/icons-react";
-export { IconArrowRightRhombusFilled } from "@tabler/icons-react";
-export { IconArrowRightSquareFilled } from "@tabler/icons-react";
-export { IconArrowUpCircleFilled } from "@tabler/icons-react";
-export { IconArrowUpRhombusFilled } from "@tabler/icons-react";
-export { IconArrowUpSquareFilled } from "@tabler/icons-react";
-export { IconArtboardFilled } from "@tabler/icons-react";
-export { IconArticleFilled } from "@tabler/icons-react";
-export { IconAspectRatioFilled } from "@tabler/icons-react";
-export { IconAssemblyFilled } from "@tabler/icons-react";
-export { IconAssetFilled } from "@tabler/icons-react";
-export { IconAtom2Filled } from "@tabler/icons-react";
-export { IconAutomaticGearboxFilled } from "@tabler/icons-react";
-export { IconAwardFilled } from "@tabler/icons-react";
-export { IconBabyCarriageFilled } from "@tabler/icons-react";
-export { IconBackspaceFilled } from "@tabler/icons-react";
-export { IconBadge3dFilled } from "@tabler/icons-react";
-export { IconBadge4kFilled } from "@tabler/icons-react";
-export { IconBadge8kFilled } from "@tabler/icons-react";
-export { IconBadgeAdFilled } from "@tabler/icons-react";
-export { IconBadgeArFilled } from "@tabler/icons-react";
-export { IconBadgeCcFilled } from "@tabler/icons-react";
-export { IconBadgeHdFilled } from "@tabler/icons-react";
-export { IconBadgeSdFilled } from "@tabler/icons-react";
-export { IconBadgeTmFilled } from "@tabler/icons-react";
-export { IconBadgeVoFilled } from "@tabler/icons-react";
-export { IconBadgeVrFilled } from "@tabler/icons-react";
-export { IconBadgeWcFilled } from "@tabler/icons-react";
-export { IconBadgeFilled } from "@tabler/icons-react";
-export { IconBadgesFilled } from "@tabler/icons-react";
-export { IconBallBowlingFilled } from "@tabler/icons-react";
-export { IconBalloonFilled } from "@tabler/icons-react";
-export { IconBallpenFilled } from "@tabler/icons-react";
-export { IconBandageFilled } from "@tabler/icons-react";
-export { IconBarbellFilled } from "@tabler/icons-react";
-export { IconBarrierBlockFilled } from "@tabler/icons-react";
-export { IconBasketFilled } from "@tabler/icons-react";
-export { IconBathFilled } from "@tabler/icons-react";
-export { IconBattery1Filled } from "@tabler/icons-react";
-export { IconBattery2Filled } from "@tabler/icons-react";
-export { IconBattery3Filled } from "@tabler/icons-react";
-export { IconBattery4Filled } from "@tabler/icons-react";
-export { IconBatteryAutomotiveFilled } from "@tabler/icons-react";
-export { IconBatteryVertical1Filled } from "@tabler/icons-react";
-export { IconBatteryVertical2Filled } from "@tabler/icons-react";
-export { IconBatteryVertical3Filled } from "@tabler/icons-react";
-export { IconBatteryVertical4Filled } from "@tabler/icons-react";
-export { IconBatteryVerticalFilled } from "@tabler/icons-react";
-export { IconBatteryFilled } from "@tabler/icons-react";
-export { IconBedFlatFilled } from "@tabler/icons-react";
-export { IconBedFilled } from "@tabler/icons-react";
-export { IconBeerFilled } from "@tabler/icons-react";
-export { IconBellMinusFilled } from "@tabler/icons-react";
-export { IconBellPlusFilled } from "@tabler/icons-react";
-export { IconBellRinging2Filled } from "@tabler/icons-react";
-export { IconBellRingingFilled } from "@tabler/icons-react";
-export { IconBellXFilled } from "@tabler/icons-react";
-export { IconBellZFilled } from "@tabler/icons-react";
-export { IconBellFilled } from "@tabler/icons-react";
-export { IconBikeFilled } from "@tabler/icons-react";
-export { IconBinaryTree2Filled } from "@tabler/icons-react";
-export { IconBinaryTreeFilled } from "@tabler/icons-react";
-export { IconBinocularsFilled } from "@tabler/icons-react";
-export { IconBiohazardFilled } from "@tabler/icons-react";
-export { IconBladeFilled } from "@tabler/icons-react";
-export { IconBlenderFilled } from "@tabler/icons-react";
-export { IconBlobFilled } from "@tabler/icons-react";
-export { IconBoltFilled } from "@tabler/icons-react";
-export { IconBombFilled } from "@tabler/icons-react";
-export { IconBoneFilled } from "@tabler/icons-react";
-export { IconBongFilled } from "@tabler/icons-react";
-export { IconBookFilled } from "@tabler/icons-react";
-export { IconBookmarkFilled } from "@tabler/icons-react";
-export { IconBookmarksFilled } from "@tabler/icons-react";
-export { IconBoomFilled } from "@tabler/icons-react";
-export { IconBottleFilled } from "@tabler/icons-react";
-export { IconBounceLeftFilled } from "@tabler/icons-react";
-export { IconBounceRightFilled } from "@tabler/icons-react";
-export { IconBowFilled } from "@tabler/icons-react";
-export { IconBowlChopsticksFilled } from "@tabler/icons-react";
-export { IconBowlSpoonFilled } from "@tabler/icons-react";
-export { IconBowlFilled } from "@tabler/icons-react";
-export { IconBoxAlignBottomLeftFilled } from "@tabler/icons-react";
-export { IconBoxAlignBottomRightFilled } from "@tabler/icons-react";
-export { IconBoxAlignBottomFilled } from "@tabler/icons-react";
-export { IconBoxAlignLeftFilled } from "@tabler/icons-react";
-export { IconBoxAlignRightFilled } from "@tabler/icons-react";
-export { IconBoxAlignTopLeftFilled } from "@tabler/icons-react";
-export { IconBoxAlignTopRightFilled } from "@tabler/icons-react";
-export { IconBoxAlignTopFilled } from "@tabler/icons-react";
-export { IconBoxMultipleFilled } from "@tabler/icons-react";
-export { IconBrandAngularFilled } from "@tabler/icons-react";
-export { IconBrandAppleFilled } from "@tabler/icons-react";
-export { IconBrandBitbucketFilled } from "@tabler/icons-react";
-export { IconBrandDiscordFilled } from "@tabler/icons-react";
-export { IconBrandDribbbleFilled } from "@tabler/icons-react";
-export { IconBrandFacebookFilled } from "@tabler/icons-react";
-export { IconBrandGithubFilled } from "@tabler/icons-react";
-export { IconBrandGoogleFilled } from "@tabler/icons-react";
-export { IconBrandInstagramFilled } from "@tabler/icons-react";
-export { IconBrandKickFilled } from "@tabler/icons-react";
-export { IconBrandLinkedinFilled } from "@tabler/icons-react";
-export { IconBrandMessengerFilled } from "@tabler/icons-react";
-export { IconBrandOpenSourceFilled } from "@tabler/icons-react";
-export { IconBrandOperaFilled } from "@tabler/icons-react";
-export { IconBrandPatreonFilled } from "@tabler/icons-react";
-export { IconBrandPaypalFilled } from "@tabler/icons-react";
-export { IconBrandPinterestFilled } from "@tabler/icons-react";
-export { IconBrandSignalFilled } from "@tabler/icons-react";
-export { IconBrandSketchFilled } from "@tabler/icons-react";
-export { IconBrandSnapchatFilled } from "@tabler/icons-react";
-export { IconBrandSpotifyFilled } from "@tabler/icons-react";
-export { IconBrandSteamFilled } from "@tabler/icons-react";
-export { IconBrandStripeFilled } from "@tabler/icons-react";
-export { IconBrandTablerFilled } from "@tabler/icons-react";
-export { IconBrandTiktokFilled } from "@tabler/icons-react";
-export { IconBrandTinderFilled } from "@tabler/icons-react";
-export { IconBrandTumblrFilled } from "@tabler/icons-react";
-export { IconBrandTwitterFilled } from "@tabler/icons-react";
-export { IconBrandVercelFilled } from "@tabler/icons-react";
-export { IconBrandVimeoFilled } from "@tabler/icons-react";
-export { IconBrandWeiboFilled } from "@tabler/icons-react";
-export { IconBrandWhatsappFilled } from "@tabler/icons-react";
-export { IconBrandWindowsFilled } from "@tabler/icons-react";
-export { IconBrandXFilled } from "@tabler/icons-react";
-export { IconBrandYoutubeFilled } from "@tabler/icons-react";
-export { IconBreadFilled } from "@tabler/icons-react";
-export { IconBriefcase2Filled } from "@tabler/icons-react";
-export { IconBriefcaseFilled } from "@tabler/icons-react";
-export { IconBrightnessAutoFilled } from "@tabler/icons-react";
-export { IconBrightnessDownFilled } from "@tabler/icons-react";
-export { IconBrightnessUpFilled } from "@tabler/icons-react";
-export { IconBrightnessFilled } from "@tabler/icons-react";
-export { IconBubbleTextFilled } from "@tabler/icons-react";
-export { IconBubbleFilled } from "@tabler/icons-react";
-export { IconBugFilled } from "@tabler/icons-react";
-export { IconBuildingBridge2Filled } from "@tabler/icons-react";
-export { IconBuildingBroadcastTowerFilled } from "@tabler/icons-react";
-export { IconBulbFilled } from "@tabler/icons-react";
-export { IconBusFilled } from "@tabler/icons-react";
-export { IconButterflyFilled } from "@tabler/icons-react";
-export { IconCactusFilled } from "@tabler/icons-react";
-export { IconCalculatorFilled } from "@tabler/icons-react";
-export { IconCalendarEventFilled } from "@tabler/icons-react";
-export { IconCalendarMonthFilled } from "@tabler/icons-react";
-export { IconCalendarWeekFilled } from "@tabler/icons-react";
-export { IconCalendarFilled } from "@tabler/icons-react";
-export { IconCameraFilled } from "@tabler/icons-react";
-export { IconCampfireFilled } from "@tabler/icons-react";
-export { IconCandleFilled } from "@tabler/icons-react";
-export { IconCannabisFilled } from "@tabler/icons-react";
-export { IconCapsuleHorizontalFilled } from "@tabler/icons-react";
-export { IconCapsuleFilled } from "@tabler/icons-react";
-export { IconCaptureFilled } from "@tabler/icons-react";
-export { IconCar4wdFilled } from "@tabler/icons-react";
-export { IconCarCraneFilled } from "@tabler/icons-react";
-export { IconCarFanFilled } from "@tabler/icons-react";
-export { IconCarSuvFilled } from "@tabler/icons-react";
-export { IconCarFilled } from "@tabler/icons-react";
-export { IconCarambolaFilled } from "@tabler/icons-react";
-export { IconCaravanFilled } from "@tabler/icons-react";
-export { IconCardboardsFilled } from "@tabler/icons-react";
-export { IconCardsFilled } from "@tabler/icons-react";
-export { IconCaretDownFilled } from "@tabler/icons-react";
-export { IconCaretLeftRightFilled } from "@tabler/icons-react";
-export { IconCaretLeftFilled } from "@tabler/icons-react";
-export { IconCaretRightFilled } from "@tabler/icons-react";
-export { IconCaretUpDownFilled } from "@tabler/icons-react";
-export { IconCaretUpFilled } from "@tabler/icons-react";
-export { IconCarouselHorizontalFilled } from "@tabler/icons-react";
-export { IconCarouselVerticalFilled } from "@tabler/icons-react";
-export { IconCashBanknoteFilled } from "@tabler/icons-react";
-export { IconCategoryFilled } from "@tabler/icons-react";
-export { IconChargingPileFilled } from "@tabler/icons-react";
-export { IconChartAreaLineFilled } from "@tabler/icons-react";
-export { IconChartAreaFilled } from "@tabler/icons-react";
-export { IconChartBubbleFilled } from "@tabler/icons-react";
-export { IconChartCandleFilled } from "@tabler/icons-react";
-export { IconChartDonutFilled } from "@tabler/icons-react";
-export { IconChartDots2Filled } from "@tabler/icons-react";
-export { IconChartDots3Filled } from "@tabler/icons-react";
-export { IconChartDotsFilled } from "@tabler/icons-react";
-export { IconChartFunnelFilled } from "@tabler/icons-react";
-export { IconChartGridDotsFilled } from "@tabler/icons-react";
-export { IconChartPie2Filled } from "@tabler/icons-react";
-export { IconChartPie3Filled } from "@tabler/icons-react";
-export { IconChartPie4Filled } from "@tabler/icons-react";
-export { IconChartPieFilled } from "@tabler/icons-react";
-export { IconCheckFilled } from "@tabler/icons-react";
-export { IconChefHatFilled } from "@tabler/icons-react";
-export { IconCherryFilled } from "@tabler/icons-react";
-export { IconChessBishopFilled } from "@tabler/icons-react";
-export { IconChessKingFilled } from "@tabler/icons-react";
-export { IconChessKnightFilled } from "@tabler/icons-react";
-export { IconChessQueenFilled } from "@tabler/icons-react";
-export { IconChessRookFilled } from "@tabler/icons-react";
-export { IconChessFilled } from "@tabler/icons-react";
-export { IconChevronDownFilled } from "@tabler/icons-react";
-export { IconChevronRightFilled } from "@tabler/icons-react";
-export { IconChristmasTreeFilled } from "@tabler/icons-react";
-export { IconCircleArrowDownLeftFilled } from "@tabler/icons-react";
-export { IconCircleArrowDownRightFilled } from "@tabler/icons-react";
-export { IconCircleArrowDownFilled } from "@tabler/icons-react";
-export { IconCircleArrowLeftFilled } from "@tabler/icons-react";
-export { IconCircleArrowRightFilled } from "@tabler/icons-react";
-export { IconCircleArrowUpLeftFilled } from "@tabler/icons-react";
-export { IconCircleArrowUpRightFilled } from "@tabler/icons-react";
-export { IconCircleArrowUpFilled } from "@tabler/icons-react";
-export { IconCircleCaretDownFilled } from "@tabler/icons-react";
-export { IconCircleCaretLeftFilled } from "@tabler/icons-react";
-export { IconCircleCaretRightFilled } from "@tabler/icons-react";
-export { IconCircleCaretUpFilled } from "@tabler/icons-react";
-export { IconCircleCheckFilled } from "@tabler/icons-react";
-export { IconCircleChevronDownFilled } from "@tabler/icons-react";
-export { IconCircleChevronLeftFilled } from "@tabler/icons-react";
-export { IconCircleChevronRightFilled } from "@tabler/icons-react";
-export { IconCircleChevronUpFilled } from "@tabler/icons-react";
-export { IconCircleChevronsDownFilled } from "@tabler/icons-react";
-export { IconCircleChevronsLeftFilled } from "@tabler/icons-react";
-export { IconCircleChevronsRightFilled } from "@tabler/icons-react";
-export { IconCircleChevronsUpFilled } from "@tabler/icons-react";
-export { IconCircleDotFilled } from "@tabler/icons-react";
-export { IconCircleKeyFilled } from "@tabler/icons-react";
-export { IconCircleLetterAFilled } from "@tabler/icons-react";
-export { IconCircleLetterBFilled } from "@tabler/icons-react";
-export { IconCircleLetterCFilled } from "@tabler/icons-react";
-export { IconCircleLetterDFilled } from "@tabler/icons-react";
-export { IconCircleLetterEFilled } from "@tabler/icons-react";
-export { IconCircleLetterFFilled } from "@tabler/icons-react";
-export { IconCircleLetterGFilled } from "@tabler/icons-react";
-export { IconCircleLetterHFilled } from "@tabler/icons-react";
-export { IconCircleLetterIFilled } from "@tabler/icons-react";
-export { IconCircleLetterJFilled } from "@tabler/icons-react";
-export { IconCircleLetterKFilled } from "@tabler/icons-react";
-export { IconCircleLetterLFilled } from "@tabler/icons-react";
-export { IconCircleLetterMFilled } from "@tabler/icons-react";
-export { IconCircleLetterNFilled } from "@tabler/icons-react";
-export { IconCircleLetterOFilled } from "@tabler/icons-react";
-export { IconCircleLetterPFilled } from "@tabler/icons-react";
-export { IconCircleLetterQFilled } from "@tabler/icons-react";
-export { IconCircleLetterRFilled } from "@tabler/icons-react";
-export { IconCircleLetterSFilled } from "@tabler/icons-react";
-export { IconCircleLetterTFilled } from "@tabler/icons-react";
-export { IconCircleLetterUFilled } from "@tabler/icons-react";
-export { IconCircleLetterVFilled } from "@tabler/icons-react";
-export { IconCircleLetterWFilled } from "@tabler/icons-react";
-export { IconCircleLetterXFilled } from "@tabler/icons-react";
-export { IconCircleLetterYFilled } from "@tabler/icons-react";
-export { IconCircleLetterZFilled } from "@tabler/icons-react";
-export { IconCircleNumber0Filled } from "@tabler/icons-react";
-export { IconCircleNumber1Filled } from "@tabler/icons-react";
-export { IconCircleNumber2Filled } from "@tabler/icons-react";
-export { IconCircleNumber3Filled } from "@tabler/icons-react";
-export { IconCircleNumber4Filled } from "@tabler/icons-react";
-export { IconCircleNumber5Filled } from "@tabler/icons-react";
-export { IconCircleNumber6Filled } from "@tabler/icons-react";
-export { IconCircleNumber7Filled } from "@tabler/icons-react";
-export { IconCircleNumber8Filled } from "@tabler/icons-react";
-export { IconCircleNumber9Filled } from "@tabler/icons-react";
-export { IconCirclePercentageFilled } from "@tabler/icons-react";
-export { IconCirclePlusFilled } from "@tabler/icons-react";
-export { IconCircleRectangleFilled } from "@tabler/icons-react";
-export { IconCircleXFilled } from "@tabler/icons-react";
-export { IconCircleFilled } from "@tabler/icons-react";
-export { IconCirclesFilled } from "@tabler/icons-react";
-export { IconClickFilled } from "@tabler/icons-react";
-export { IconClipboardCheckFilled } from "@tabler/icons-react";
-export { IconClipboardDataFilled } from "@tabler/icons-react";
-export { IconClipboardListFilled } from "@tabler/icons-react";
-export { IconClipboardPlusFilled } from "@tabler/icons-react";
-export { IconClipboardSmileFilled } from "@tabler/icons-react";
-export { IconClipboardTextFilled } from "@tabler/icons-react";
-export { IconClipboardTypographyFilled } from "@tabler/icons-react";
-export { IconClipboardXFilled } from "@tabler/icons-react";
-export { IconClipboardFilled } from "@tabler/icons-react";
-export { IconClockHour1Filled } from "@tabler/icons-react";
-export { IconClockHour10Filled } from "@tabler/icons-react";
-export { IconClockHour11Filled } from "@tabler/icons-react";
-export { IconClockHour12Filled } from "@tabler/icons-react";
-export { IconClockHour2Filled } from "@tabler/icons-react";
-export { IconClockHour3Filled } from "@tabler/icons-react";
-export { IconClockHour4Filled } from "@tabler/icons-react";
-export { IconClockHour5Filled } from "@tabler/icons-react";
-export { IconClockHour6Filled } from "@tabler/icons-react";
-export { IconClockHour7Filled } from "@tabler/icons-react";
-export { IconClockHour8Filled } from "@tabler/icons-react";
-export { IconClockHour9Filled } from "@tabler/icons-react";
-export { IconClockFilled } from "@tabler/icons-react";
-export { IconCloudComputingFilled } from "@tabler/icons-react";
-export { IconCloudDataConnectionFilled } from "@tabler/icons-react";
-export { IconCloudFilled } from "@tabler/icons-react";
-export { IconCloverFilled } from "@tabler/icons-react";
-export { IconClubsFilled } from "@tabler/icons-react";
-export { IconCodeCircle2Filled } from "@tabler/icons-react";
-export { IconCodeCircleFilled } from "@tabler/icons-react";
-export { IconCoinBitcoinFilled } from "@tabler/icons-react";
-export { IconCoinEuroFilled } from "@tabler/icons-react";
-export { IconCoinMoneroFilled } from "@tabler/icons-react";
-export { IconCoinPoundFilled } from "@tabler/icons-react";
-export { IconCoinRupeeFilled } from "@tabler/icons-react";
-export { IconCoinTakaFilled } from "@tabler/icons-react";
-export { IconCoinYenFilled } from "@tabler/icons-react";
-export { IconCoinYuanFilled } from "@tabler/icons-react";
-export { IconCoinFilled } from "@tabler/icons-react";
-export { IconColumns1Filled } from "@tabler/icons-react";
-export { IconColumns2Filled } from "@tabler/icons-react";
-export { IconColumns3Filled } from "@tabler/icons-react";
-export { IconCompassFilled } from "@tabler/icons-react";
-export { IconCone2Filled } from "@tabler/icons-react";
-export { IconConeFilled } from "@tabler/icons-react";
-export { IconConfettiFilled } from "@tabler/icons-react";
-export { IconContainerFilled } from "@tabler/icons-react";
-export { IconContrast2Filled } from "@tabler/icons-react";
-export { IconContrastFilled } from "@tabler/icons-react";
-export { IconCookieManFilled } from "@tabler/icons-react";
-export { IconCookieFilled } from "@tabler/icons-react";
-export { IconCopyCheckFilled } from "@tabler/icons-react";
-export { IconCopyMinusFilled } from "@tabler/icons-react";
-export { IconCopyPlusFilled } from "@tabler/icons-react";
-export { IconCopyXFilled } from "@tabler/icons-react";
-export { IconCopyFilled } from "@tabler/icons-react";
-export { IconCopyleftFilled } from "@tabler/icons-react";
-export { IconCopyrightFilled } from "@tabler/icons-react";
-export { IconCreditCardFilled } from "@tabler/icons-react";
-export { IconCrop11Filled } from "@tabler/icons-react";
-export { IconCrop169Filled } from "@tabler/icons-react";
-export { IconCrop32Filled } from "@tabler/icons-react";
-export { IconCrop54Filled } from "@tabler/icons-react";
-export { IconCrop75Filled } from "@tabler/icons-react";
-export { IconCropLandscapeFilled } from "@tabler/icons-react";
-export { IconCropPortraitFilled } from "@tabler/icons-react";
-export { IconCrossFilled } from "@tabler/icons-react";
-export { IconCrownFilled } from "@tabler/icons-react";
-export { IconCurrentLocationFilled } from "@tabler/icons-react";
-export { IconDashboardFilled } from "@tabler/icons-react";
-export { IconDatabaseFilled } from "@tabler/icons-react";
-export { IconDeviceCctvFilled } from "@tabler/icons-react";
-export { IconDeviceDesktopFilled } from "@tabler/icons-react";
-export { IconDeviceFloppyFilled } from "@tabler/icons-react";
-export { IconDeviceGamepad2Filled } from "@tabler/icons-react";
-export { IconDeviceGamepad3Filled } from "@tabler/icons-react";
-export { IconDeviceGamepadFilled } from "@tabler/icons-react";
-export { IconDeviceHeartMonitorFilled } from "@tabler/icons-react";
-export { IconDeviceImacFilled } from "@tabler/icons-react";
-export { IconDeviceIpadFilled } from "@tabler/icons-react";
-export { IconDeviceMobileFilled } from "@tabler/icons-react";
-export { IconDeviceRemoteFilled } from "@tabler/icons-react";
-export { IconDeviceSpeakerFilled } from "@tabler/icons-react";
-export { IconDeviceTabletFilled } from "@tabler/icons-react";
-export { IconDeviceTvOldFilled } from "@tabler/icons-react";
-export { IconDeviceTvFilled } from "@tabler/icons-react";
-export { IconDeviceUnknownFilled } from "@tabler/icons-react";
-export { IconDeviceUsbFilled } from "@tabler/icons-react";
-export { IconDeviceVisionProFilled } from "@tabler/icons-react";
-export { IconDeviceWatchFilled } from "@tabler/icons-react";
-export { IconDialpadFilled } from "@tabler/icons-react";
-export { IconDiamondFilled } from "@tabler/icons-react";
-export { IconDiamondsFilled } from "@tabler/icons-react";
-export { IconDice1Filled } from "@tabler/icons-react";
-export { IconDice2Filled } from "@tabler/icons-react";
-export { IconDice3Filled } from "@tabler/icons-react";
-export { IconDice4Filled } from "@tabler/icons-react";
-export { IconDice5Filled } from "@tabler/icons-react";
-export { IconDice6Filled } from "@tabler/icons-react";
-export { IconDiceFilled } from "@tabler/icons-react";
-export { IconDirectionArrowsFilled } from "@tabler/icons-react";
-export { IconDirectionSignFilled } from "@tabler/icons-react";
-export { IconDirectionsFilled } from "@tabler/icons-react";
-export { IconDiscFilled } from "@tabler/icons-react";
-export { IconDiscountFilled } from "@tabler/icons-react";
-export { IconDotsVerticalFilled } from "@tabler/icons-react";
-export { IconDotsFilled } from "@tabler/icons-react";
-export { IconDownloadFilled } from "@tabler/icons-react";
-export { IconDropCircleFilled } from "@tabler/icons-react";
-export { IconDropletHalf2Filled } from "@tabler/icons-react";
-export { IconDropletHalfFilled } from "@tabler/icons-react";
-export { IconDropletFilled } from "@tabler/icons-react";
-export { IconDropletsFilled } from "@tabler/icons-react";
-export { IconDualScreenFilled } from "@tabler/icons-react";
-export { IconDumplingFilled } from "@tabler/icons-react";
-export { IconEaseInControlPointFilled } from "@tabler/icons-react";
-export { IconEaseInOutControlPointsFilled } from "@tabler/icons-react";
-export { IconEaseOutControlPointFilled } from "@tabler/icons-react";
-export { IconEditFilled } from "@tabler/icons-react";
-export { IconEggCrackedFilled } from "@tabler/icons-react";
-export { IconEggFriedFilled } from "@tabler/icons-react";
-export { IconEggFilled } from "@tabler/icons-react";
-export { IconElevatorFilled } from "@tabler/icons-react";
-export { IconEngineFilled } from "@tabler/icons-react";
-export { IconEscalatorDownFilled } from "@tabler/icons-react";
-export { IconEscalatorUpFilled } from "@tabler/icons-react";
-export { IconEscalatorFilled } from "@tabler/icons-react";
-export { IconExchangeFilled } from "@tabler/icons-react";
-export { IconExclamationCircleFilled } from "@tabler/icons-react";
-export { IconExplicitFilled } from "@tabler/icons-react";
-export { IconExposureFilled } from "@tabler/icons-react";
-export { IconExternalLinkFilled } from "@tabler/icons-react";
-export { IconEyeTableFilled } from "@tabler/icons-react";
-export { IconEyeFilled } from "@tabler/icons-react";
-export { IconEyeglass2Filled } from "@tabler/icons-react";
-export { IconEyeglassFilled } from "@tabler/icons-react";
-export { IconFaceMaskFilled } from "@tabler/icons-react";
-export { IconFaviconFilled } from "@tabler/icons-react";
-export { IconFeatherFilled } from "@tabler/icons-react";
-export { IconFenceFilled } from "@tabler/icons-react";
-export { IconFerryFilled } from "@tabler/icons-react";
-export { IconFidgetSpinnerFilled } from "@tabler/icons-react";
-export { IconFileAnalyticsFilled } from "@tabler/icons-react";
-export { IconFileCheckFilled } from "@tabler/icons-react";
-export { IconFileCode2Filled } from "@tabler/icons-react";
-export { IconFileCodeFilled } from "@tabler/icons-react";
-export { IconFileCvFilled } from "@tabler/icons-react";
-export { IconFileDeltaFilled } from "@tabler/icons-react";
-export { IconFileDescriptionFilled } from "@tabler/icons-react";
-export { IconFileDiffFilled } from "@tabler/icons-react";
-export { IconFileDigitFilled } from "@tabler/icons-react";
-export { IconFileDollarFilled } from "@tabler/icons-react";
-export { IconFileDotsFilled } from "@tabler/icons-react";
-export { IconFileDownloadFilled } from "@tabler/icons-react";
-export { IconFileEuroFilled } from "@tabler/icons-react";
-export { IconFileFunctionFilled } from "@tabler/icons-react";
-export { IconFileHorizontalFilled } from "@tabler/icons-react";
-export { IconFileInfoFilled } from "@tabler/icons-react";
-export { IconFileInvoiceFilled } from "@tabler/icons-react";
-export { IconFileLambdaFilled } from "@tabler/icons-react";
-export { IconFileMinusFilled } from "@tabler/icons-react";
-export { IconFileMusicFilled } from "@tabler/icons-react";
-export { IconFileNeutralFilled } from "@tabler/icons-react";
-export { IconFilePencilFilled } from "@tabler/icons-react";
-export { IconFilePercentFilled } from "@tabler/icons-react";
-export { IconFilePhoneFilled } from "@tabler/icons-react";
-export { IconFilePowerFilled } from "@tabler/icons-react";
-export { IconFileRssFilled } from "@tabler/icons-react";
-export { IconFileSadFilled } from "@tabler/icons-react";
-export { IconFileScissorsFilled } from "@tabler/icons-react";
-export { IconFileSettingsFilled } from "@tabler/icons-react";
-export { IconFileSignalFilled } from "@tabler/icons-react";
-export { IconFileSmileFilled } from "@tabler/icons-react";
-export { IconFileStarFilled } from "@tabler/icons-react";
-export { IconFileTextFilled } from "@tabler/icons-react";
-export { IconFileTimeFilled } from "@tabler/icons-react";
-export { IconFileTypographyFilled } from "@tabler/icons-react";
-export { IconFileUnknownFilled } from "@tabler/icons-react";
-export { IconFileUploadFilled } from "@tabler/icons-react";
-export { IconFileVectorFilled } from "@tabler/icons-react";
-export { IconFileXFilled } from "@tabler/icons-react";
-export { IconFileFilled } from "@tabler/icons-react";
-export { IconFilesFilled } from "@tabler/icons-react";
-export { IconFilterFilled } from "@tabler/icons-react";
-export { IconFiltersFilled } from "@tabler/icons-react";
-export { IconFishBoneFilled } from "@tabler/icons-react";
-export { IconFlag2Filled } from "@tabler/icons-react";
-export { IconFlag3Filled } from "@tabler/icons-react";
-export { IconFlagFilled } from "@tabler/icons-react";
-export { IconFlameFilled } from "@tabler/icons-react";
-export { IconFlareFilled } from "@tabler/icons-react";
-export { IconFlask2Filled } from "@tabler/icons-react";
-export { IconFlaskFilled } from "@tabler/icons-react";
-export { IconFlowerFilled } from "@tabler/icons-react";
-export { IconFolderOpenFilled } from "@tabler/icons-react";
-export { IconFolderFilled } from "@tabler/icons-react";
-export { IconFoldersFilled } from "@tabler/icons-react";
-export { IconForbid2Filled } from "@tabler/icons-react";
-export { IconForbidFilled } from "@tabler/icons-react";
-export { IconFountainFilled } from "@tabler/icons-react";
-export { IconFunctionFilled } from "@tabler/icons-react";
-export { IconGardenCartFilled } from "@tabler/icons-react";
-export { IconGasStationFilled } from "@tabler/icons-react";
-export { IconGaugeFilled } from "@tabler/icons-react";
-export { IconGhost2Filled } from "@tabler/icons-react";
-export { IconGhost3Filled } from "@tabler/icons-react";
-export { IconGhostFilled } from "@tabler/icons-react";
-export { IconGiftCardFilled } from "@tabler/icons-react";
-export { IconGiftFilled } from "@tabler/icons-react";
-export { IconGlassFullFilled } from "@tabler/icons-react";
-export { IconGlassFilled } from "@tabler/icons-react";
-export { IconGlobeFilled } from "@tabler/icons-react";
-export { IconGolfFilled } from "@tabler/icons-react";
-export { IconGpsFilled } from "@tabler/icons-react";
-export { IconGraphFilled } from "@tabler/icons-react";
-export { IconGridPatternFilled } from "@tabler/icons-react";
-export { IconGuitarPickFilled } from "@tabler/icons-react";
-export { IconHanger2Filled } from "@tabler/icons-react";
-export { IconHeadphonesFilled } from "@tabler/icons-react";
-export { IconHeadsetFilled } from "@tabler/icons-react";
-export { IconHeartBrokenFilled } from "@tabler/icons-react";
-export { IconHeartFilled } from "@tabler/icons-react";
-export { IconHelicopterLandingFilled } from "@tabler/icons-react";
-export { IconHelicopterFilled } from "@tabler/icons-react";
-export { IconHelpCircleFilled } from "@tabler/icons-react";
-export { IconHelpHexagonFilled } from "@tabler/icons-react";
-export { IconHelpOctagonFilled } from "@tabler/icons-react";
-export { IconHelpSquareRoundedFilled } from "@tabler/icons-react";
-export { IconHelpSquareFilled } from "@tabler/icons-react";
-export { IconHelpTriangleFilled } from "@tabler/icons-react";
-export { IconHelpFilled } from "@tabler/icons-react";
-export { IconHexagonLetterAFilled } from "@tabler/icons-react";
-export { IconHexagonLetterBFilled } from "@tabler/icons-react";
-export { IconHexagonLetterCFilled } from "@tabler/icons-react";
-export { IconHexagonLetterDFilled } from "@tabler/icons-react";
-export { IconHexagonLetterEFilled } from "@tabler/icons-react";
-export { IconHexagonLetterFFilled } from "@tabler/icons-react";
-export { IconHexagonLetterGFilled } from "@tabler/icons-react";
-export { IconHexagonLetterHFilled } from "@tabler/icons-react";
-export { IconHexagonLetterIFilled } from "@tabler/icons-react";
-export { IconHexagonLetterJFilled } from "@tabler/icons-react";
-export { IconHexagonLetterKFilled } from "@tabler/icons-react";
-export { IconHexagonLetterLFilled } from "@tabler/icons-react";
-export { IconHexagonLetterMFilled } from "@tabler/icons-react";
-export { IconHexagonLetterNFilled } from "@tabler/icons-react";
-export { IconHexagonLetterOFilled } from "@tabler/icons-react";
-export { IconHexagonLetterPFilled } from "@tabler/icons-react";
-export { IconHexagonLetterQFilled } from "@tabler/icons-react";
-export { IconHexagonLetterRFilled } from "@tabler/icons-react";
-export { IconHexagonLetterSFilled } from "@tabler/icons-react";
-export { IconHexagonLetterTFilled } from "@tabler/icons-react";
-export { IconHexagonLetterUFilled } from "@tabler/icons-react";
-export { IconHexagonLetterVFilled } from "@tabler/icons-react";
-export { IconHexagonLetterWFilled } from "@tabler/icons-react";
-export { IconHexagonLetterXFilled } from "@tabler/icons-react";
-export { IconHexagonLetterYFilled } from "@tabler/icons-react";
-export { IconHexagonLetterZFilled } from "@tabler/icons-react";
-export { IconHexagonMinusFilled } from "@tabler/icons-react";
-export { IconHexagonNumber0Filled } from "@tabler/icons-react";
-export { IconHexagonNumber1Filled } from "@tabler/icons-react";
-export { IconHexagonNumber2Filled } from "@tabler/icons-react";
-export { IconHexagonNumber3Filled } from "@tabler/icons-react";
-export { IconHexagonNumber4Filled } from "@tabler/icons-react";
-export { IconHexagonNumber5Filled } from "@tabler/icons-react";
-export { IconHexagonNumber6Filled } from "@tabler/icons-react";
-export { IconHexagonNumber7Filled } from "@tabler/icons-react";
-export { IconHexagonNumber8Filled } from "@tabler/icons-react";
-export { IconHexagonNumber9Filled } from "@tabler/icons-react";
-export { IconHexagonPlusFilled } from "@tabler/icons-react";
-export { IconHexagonFilled } from "@tabler/icons-react";
-export { IconHome2Filled } from "@tabler/icons-react";
-export { IconHomeFilled } from "@tabler/icons-react";
-export { IconHospitalCircleFilled } from "@tabler/icons-react";
-export { IconHourglassFilled } from "@tabler/icons-react";
-export { IconIconsFilled } from "@tabler/icons-react";
-export { IconIdFilled } from "@tabler/icons-react";
-export { IconInfoCircleFilled } from "@tabler/icons-react";
-export { IconInfoHexagonFilled } from "@tabler/icons-react";
-export { IconInfoOctagonFilled } from "@tabler/icons-react";
-export { IconInfoSquareRoundedFilled } from "@tabler/icons-react";
-export { IconInfoSquareFilled } from "@tabler/icons-react";
-export { IconInfoTriangleFilled } from "@tabler/icons-react";
-export { IconInnerShadowBottomLeftFilled } from "@tabler/icons-react";
-export { IconInnerShadowBottomRightFilled } from "@tabler/icons-react";
-export { IconInnerShadowBottomFilled } from "@tabler/icons-react";
-export { IconInnerShadowLeftFilled } from "@tabler/icons-react";
-export { IconInnerShadowRightFilled } from "@tabler/icons-react";
-export { IconInnerShadowTopLeftFilled } from "@tabler/icons-react";
-export { IconInnerShadowTopRightFilled } from "@tabler/icons-react";
-export { IconInnerShadowTopFilled } from "@tabler/icons-react";
-export { IconIroning1Filled } from "@tabler/icons-react";
-export { IconIroning2Filled } from "@tabler/icons-react";
-export { IconIroning3Filled } from "@tabler/icons-react";
-export { IconIroningSteamFilled } from "@tabler/icons-react";
-export { IconIroningFilled } from "@tabler/icons-react";
-export { IconJetpackFilled } from "@tabler/icons-react";
-export { IconJewishStarFilled } from "@tabler/icons-react";
-export { IconKeyFilled } from "@tabler/icons-react";
-export { IconKeyboardFilled } from "@tabler/icons-react";
-export { IconKeyframeAlignCenterFilled } from "@tabler/icons-react";
-export { IconKeyframeAlignHorizontalFilled } from "@tabler/icons-react";
-export { IconKeyframeAlignVerticalFilled } from "@tabler/icons-react";
-export { IconKeyframeFilled } from "@tabler/icons-react";
-export { IconKeyframesFilled } from "@tabler/icons-react";
-export { IconLabelImportantFilled } from "@tabler/icons-react";
-export { IconLabelFilled } from "@tabler/icons-react";
-export { IconLassoPolygonFilled } from "@tabler/icons-react";
-export { IconLaurelWreath1Filled } from "@tabler/icons-react";
-export { IconLaurelWreath2Filled } from "@tabler/icons-react";
-export { IconLaurelWreath3Filled } from "@tabler/icons-react";
-export { IconLaurelWreathFilled } from "@tabler/icons-react";
-export { IconLayout2Filled } from "@tabler/icons-react";
-export { IconLayoutAlignBottomFilled } from "@tabler/icons-react";
-export { IconLayoutAlignCenterFilled } from "@tabler/icons-react";
-export { IconLayoutAlignLeftFilled } from "@tabler/icons-react";
-export { IconLayoutAlignMiddleFilled } from "@tabler/icons-react";
-export { IconLayoutAlignRightFilled } from "@tabler/icons-react";
-export { IconLayoutAlignTopFilled } from "@tabler/icons-react";
-export { IconLayoutBoardSplitFilled } from "@tabler/icons-react";
-export { IconLayoutBoardFilled } from "@tabler/icons-react";
-export { IconLayoutBottombarCollapseFilled } from "@tabler/icons-react";
-export { IconLayoutBottombarExpandFilled } from "@tabler/icons-react";
-export { IconLayoutBottombarFilled } from "@tabler/icons-react";
-export { IconLayoutCardsFilled } from "@tabler/icons-react";
-export { IconLayoutDashboardFilled } from "@tabler/icons-react";
-export { IconLayoutDistributeHorizontalFilled } from "@tabler/icons-react";
-export { IconLayoutDistributeVerticalFilled } from "@tabler/icons-react";
-export { IconLayoutGridFilled } from "@tabler/icons-react";
-export { IconLayoutKanbanFilled } from "@tabler/icons-react";
-export { IconLayoutListFilled } from "@tabler/icons-react";
-export { IconLayoutNavbarCollapseFilled } from "@tabler/icons-react";
-export { IconLayoutNavbarExpandFilled } from "@tabler/icons-react";
-export { IconLayoutNavbarFilled } from "@tabler/icons-react";
-export { IconLayoutSidebarLeftCollapseFilled } from "@tabler/icons-react";
-export { IconLayoutSidebarLeftExpandFilled } from "@tabler/icons-react";
-export { IconLayoutSidebarRightCollapseFilled } from "@tabler/icons-react";
-export { IconLayoutSidebarRightExpandFilled } from "@tabler/icons-react";
-export { IconLayoutSidebarRightFilled } from "@tabler/icons-react";
-export { IconLayoutSidebarFilled } from "@tabler/icons-react";
-export { IconLayoutFilled } from "@tabler/icons-react";
-export { IconLeafFilled } from "@tabler/icons-react";
-export { IconLegoFilled } from "@tabler/icons-react";
-export { IconLemon2Filled } from "@tabler/icons-react";
-export { IconLibraryPlusFilled } from "@tabler/icons-react";
-export { IconLibraryFilled } from "@tabler/icons-react";
-export { IconLifebuoyFilled } from "@tabler/icons-react";
-export { IconLinkFilled } from "@tabler/icons-react";
-export { IconListCheckFilled } from "@tabler/icons-react";
-export { IconListDetailsFilled } from "@tabler/icons-react";
-export { IconListFilled } from "@tabler/icons-react";
-export { IconLivePhotoFilled } from "@tabler/icons-react";
-export { IconLiveViewFilled } from "@tabler/icons-react";
-export { IconLocationFilled } from "@tabler/icons-react";
-export { IconLockSquareRoundedFilled } from "@tabler/icons-react";
-export { IconLockFilled } from "@tabler/icons-react";
-export { IconLungsFilled } from "@tabler/icons-react";
-export { IconMacroFilled } from "@tabler/icons-react";
-export { IconMagnetFilled } from "@tabler/icons-react";
-export { IconMailOpenedFilled } from "@tabler/icons-react";
-export { IconMailFilled } from "@tabler/icons-react";
-export { IconManFilled } from "@tabler/icons-react";
-export { IconManualGearboxFilled } from "@tabler/icons-react";
-export { IconMapPinFilled } from "@tabler/icons-react";
-export { IconMedicalCrossFilled } from "@tabler/icons-react";
-export { IconMeepleFilled } from "@tabler/icons-react";
-export { IconMelonFilled } from "@tabler/icons-react";
-export { IconMenu2Filled } from "@tabler/icons-react";
-export { IconMessage2Filled } from "@tabler/icons-react";
-export { IconMessageChatbotFilled } from "@tabler/icons-react";
-export { IconMessageCircleFilled } from "@tabler/icons-react";
-export { IconMessageReportFilled } from "@tabler/icons-react";
-export { IconMessageFilled } from "@tabler/icons-react";
-export { IconMessagesFilled } from "@tabler/icons-react";
-export { IconMeteorFilled } from "@tabler/icons-react";
-export { IconMichelinStarFilled } from "@tabler/icons-react";
-export { IconMickeyFilled } from "@tabler/icons-react";
-export { IconMicrophoneFilled } from "@tabler/icons-react";
-export { IconMicroscopeFilled } from "@tabler/icons-react";
-export { IconMicrowaveFilled } from "@tabler/icons-react";
-export { IconMilitaryRankFilled } from "@tabler/icons-react";
-export { IconMilkFilled } from "@tabler/icons-react";
-export { IconMoodAngryFilled } from "@tabler/icons-react";
-export { IconMoodConfusedFilled } from "@tabler/icons-react";
-export { IconMoodCrazyHappyFilled } from "@tabler/icons-react";
-export { IconMoodEmptyFilled } from "@tabler/icons-react";
-export { IconMoodHappyFilled } from "@tabler/icons-react";
-export { IconMoodKidFilled } from "@tabler/icons-react";
-export { IconMoodNeutralFilled } from "@tabler/icons-react";
-export { IconMoodSadFilled } from "@tabler/icons-react";
-export { IconMoodSmileFilled } from "@tabler/icons-react";
-export { IconMoodWrrrFilled } from "@tabler/icons-react";
-export { IconMoonFilled } from "@tabler/icons-react";
-export { IconMotorbikeFilled } from "@tabler/icons-react";
-export { IconMountainFilled } from "@tabler/icons-react";
-export { IconMouseFilled } from "@tabler/icons-react";
-export { IconMugFilled } from "@tabler/icons-react";
-export { IconMushroomFilled } from "@tabler/icons-react";
-export { IconNavigationFilled } from "@tabler/icons-react";
-export { IconNurseFilled } from "@tabler/icons-react";
-export { IconOctagonMinusFilled } from "@tabler/icons-react";
-export { IconOctagonPlusFilled } from "@tabler/icons-react";
-export { IconOctagonFilled } from "@tabler/icons-react";
-export { IconOvalVerticalFilled } from "@tabler/icons-react";
-export { IconOvalFilled } from "@tabler/icons-react";
-export { IconPacmanFilled } from "@tabler/icons-react";
-export { IconPaintFilled } from "@tabler/icons-react";
-export { IconPaletteFilled } from "@tabler/icons-react";
-export { IconPanoramaHorizontalFilled } from "@tabler/icons-react";
-export { IconPanoramaVerticalFilled } from "@tabler/icons-react";
-export { IconParkingCircleFilled } from "@tabler/icons-react";
-export { IconPawFilled } from "@tabler/icons-react";
-export { IconPencilFilled } from "@tabler/icons-react";
-export { IconPennant2Filled } from "@tabler/icons-react";
-export { IconPennantFilled } from "@tabler/icons-react";
-export { IconPentagonFilled } from "@tabler/icons-react";
-export { IconPhoneCallFilled } from "@tabler/icons-react";
-export { IconPhoneCallingFilled } from "@tabler/icons-react";
-export { IconPhoneCheckFilled } from "@tabler/icons-react";
-export { IconPhoneXFilled } from "@tabler/icons-react";
-export { IconPhoneFilled } from "@tabler/icons-react";
-export { IconPhotoFilled } from "@tabler/icons-react";
-export { IconPictureInPictureTopFilled } from "@tabler/icons-react";
-export { IconPictureInPictureFilled } from "@tabler/icons-react";
-export { IconPigFilled } from "@tabler/icons-react";
-export { IconPillFilled } from "@tabler/icons-react";
-export { IconPinFilled } from "@tabler/icons-react";
-export { IconPinnedFilled } from "@tabler/icons-react";
-export { IconPizzaFilled } from "@tabler/icons-react";
-export { IconPlaneArrivalFilled } from "@tabler/icons-react";
-export { IconPlaneDepartureFilled } from "@tabler/icons-react";
-export { IconPlaneTiltFilled } from "@tabler/icons-react";
-export { IconPlaneFilled } from "@tabler/icons-react";
-export { IconPlayCard1Filled } from "@tabler/icons-react";
-export { IconPlayCard10Filled } from "@tabler/icons-react";
-export { IconPlayCard2Filled } from "@tabler/icons-react";
-export { IconPlayCard3Filled } from "@tabler/icons-react";
-export { IconPlayCard4Filled } from "@tabler/icons-react";
-export { IconPlayCard5Filled } from "@tabler/icons-react";
-export { IconPlayCard6Filled } from "@tabler/icons-react";
-export { IconPlayCard7Filled } from "@tabler/icons-react";
-export { IconPlayCard8Filled } from "@tabler/icons-react";
-export { IconPlayCard9Filled } from "@tabler/icons-react";
-export { IconPlayCardAFilled } from "@tabler/icons-react";
-export { IconPlayCardJFilled } from "@tabler/icons-react";
-export { IconPlayCardKFilled } from "@tabler/icons-react";
-export { IconPlayCardQFilled } from "@tabler/icons-react";
-export { IconPlayCardStarFilled } from "@tabler/icons-react";
-export { IconPlayCardFilled } from "@tabler/icons-react";
-export { IconPlayerEjectFilled } from "@tabler/icons-react";
-export { IconPlayerPauseFilled } from "@tabler/icons-react";
-export { IconPlayerPlayFilled } from "@tabler/icons-react";
-export { IconPlayerRecordFilled } from "@tabler/icons-react";
-export { IconPlayerSkipBackFilled } from "@tabler/icons-react";
-export { IconPlayerSkipForwardFilled } from "@tabler/icons-react";
-export { IconPlayerStopFilled } from "@tabler/icons-react";
-export { IconPlayerTrackNextFilled } from "@tabler/icons-react";
-export { IconPlayerTrackPrevFilled } from "@tabler/icons-react";
-export { IconPlaylistFilled } from "@tabler/icons-react";
-export { IconPlusFilled } from "@tabler/icons-react";
-export { IconPointFilled } from "@tabler/icons-react";
-export { IconPointerFilled } from "@tabler/icons-react";
-export { IconPolaroidFilled } from "@tabler/icons-react";
-export { IconPooFilled } from "@tabler/icons-react";
-export { IconPresentationAnalyticsFilled } from "@tabler/icons-react";
-export { IconPresentationFilled } from "@tabler/icons-react";
-export { IconPuzzleFilled } from "@tabler/icons-react";
-export { IconQuoteFilled } from "@tabler/icons-react";
-export { IconRadarFilled } from "@tabler/icons-react";
-export { IconRadioactiveFilled } from "@tabler/icons-react";
-export { IconReceiptDollarFilled } from "@tabler/icons-react";
-export { IconReceiptEuroFilled } from "@tabler/icons-react";
-export { IconReceiptPoundFilled } from "@tabler/icons-react";
-export { IconReceiptRupeeFilled } from "@tabler/icons-react";
-export { IconReceiptYenFilled } from "@tabler/icons-react";
-export { IconReceiptYuanFilled } from "@tabler/icons-react";
-export { IconReceiptFilled } from "@tabler/icons-react";
-export { IconRectangleVerticalFilled } from "@tabler/icons-react";
-export { IconRectangleFilled } from "@tabler/icons-react";
-export { IconRegisteredFilled } from "@tabler/icons-react";
-export { IconRelationManyToManyFilled } from "@tabler/icons-react";
-export { IconRelationOneToManyFilled } from "@tabler/icons-react";
-export { IconRelationOneToOneFilled } from "@tabler/icons-react";
-export { IconReplaceFilled } from "@tabler/icons-react";
-export { IconReportAnalyticsFilled } from "@tabler/icons-react";
-export { IconReportMoneyFilled } from "@tabler/icons-react";
-export { IconRollercoasterFilled } from "@tabler/icons-react";
-export { IconRosetteDiscountCheckFilled } from "@tabler/icons-react";
-export { IconRosetteDiscountFilled } from "@tabler/icons-react";
-export { IconRosetteFilled } from "@tabler/icons-react";
-export { IconSaladFilled } from "@tabler/icons-react";
-export { IconSatelliteFilled } from "@tabler/icons-react";
-export { IconScaleFilled } from "@tabler/icons-react";
-export { IconSchoolFilled } from "@tabler/icons-react";
-export { IconScubaDivingTankFilled } from "@tabler/icons-react";
-export { IconSearchFilled } from "@tabler/icons-react";
-export { IconSectionFilled } from "@tabler/icons-react";
-export { IconSeedlingFilled } from "@tabler/icons-react";
-export { IconSendFilled } from "@tabler/icons-react";
-export { IconSettingsFilled } from "@tabler/icons-react";
-export { IconShieldCheckFilled } from "@tabler/icons-react";
-export { IconShieldCheckeredFilled } from "@tabler/icons-react";
-export { IconShieldHalfFilled } from "@tabler/icons-react";
-export { IconShieldLockFilled } from "@tabler/icons-react";
-export { IconShieldFilled } from "@tabler/icons-react";
-export { IconShirtFilled } from "@tabler/icons-react";
-export { IconShoppingCartFilled } from "@tabler/icons-react";
-export { IconSignLeftFilled } from "@tabler/icons-react";
-export { IconSignRightFilled } from "@tabler/icons-react";
-export { IconSitemapFilled } from "@tabler/icons-react";
-export { IconSortAscending2Filled } from "@tabler/icons-react";
-export { IconSortAscendingShapesFilled } from "@tabler/icons-react";
-export { IconSortDescending2Filled } from "@tabler/icons-react";
-export { IconSortDescendingShapesFilled } from "@tabler/icons-react";
-export { IconSoupFilled } from "@tabler/icons-react";
-export { IconSpadeFilled } from "@tabler/icons-react";
-export { IconSparkles2Filled } from "@tabler/icons-react";
-export { IconSparklesFilled } from "@tabler/icons-react";
-export { IconSpeedboatFilled } from "@tabler/icons-react";
-export { IconSpiderFilled } from "@tabler/icons-react";
-export { IconSquareArrowDownFilled } from "@tabler/icons-react";
-export { IconSquareArrowLeftFilled } from "@tabler/icons-react";
-export { IconSquareArrowRightFilled } from "@tabler/icons-react";
-export { IconSquareArrowUpFilled } from "@tabler/icons-react";
-export { IconSquareAsteriskFilled } from "@tabler/icons-react";
-export { IconSquareCheckFilled } from "@tabler/icons-react";
-export { IconSquareChevronDownFilled } from "@tabler/icons-react";
-export { IconSquareChevronLeftFilled } from "@tabler/icons-react";
-export { IconSquareChevronRightFilled } from "@tabler/icons-react";
-export { IconSquareChevronUpFilled } from "@tabler/icons-react";
-export { IconSquareChevronsDownFilled } from "@tabler/icons-react";
-export { IconSquareChevronsLeftFilled } from "@tabler/icons-react";
-export { IconSquareChevronsRightFilled } from "@tabler/icons-react";
-export { IconSquareChevronsUpFilled } from "@tabler/icons-react";
-export { IconSquareDotFilled } from "@tabler/icons-react";
-export { IconSquareF0Filled } from "@tabler/icons-react";
-export { IconSquareF1Filled } from "@tabler/icons-react";
-export { IconSquareF2Filled } from "@tabler/icons-react";
-export { IconSquareF3Filled } from "@tabler/icons-react";
-export { IconSquareF4Filled } from "@tabler/icons-react";
-export { IconSquareF5Filled } from "@tabler/icons-react";
-export { IconSquareF6Filled } from "@tabler/icons-react";
-export { IconSquareF7Filled } from "@tabler/icons-react";
-export { IconSquareF8Filled } from "@tabler/icons-react";
-export { IconSquareF9Filled } from "@tabler/icons-react";
-export { IconSquareLetterAFilled } from "@tabler/icons-react";
-export { IconSquareLetterBFilled } from "@tabler/icons-react";
-export { IconSquareLetterCFilled } from "@tabler/icons-react";
-export { IconSquareLetterDFilled } from "@tabler/icons-react";
-export { IconSquareLetterEFilled } from "@tabler/icons-react";
-export { IconSquareLetterFFilled } from "@tabler/icons-react";
-export { IconSquareLetterGFilled } from "@tabler/icons-react";
-export { IconSquareLetterHFilled } from "@tabler/icons-react";
-export { IconSquareLetterIFilled } from "@tabler/icons-react";
-export { IconSquareLetterJFilled } from "@tabler/icons-react";
-export { IconSquareLetterKFilled } from "@tabler/icons-react";
-export { IconSquareLetterLFilled } from "@tabler/icons-react";
-export { IconSquareLetterMFilled } from "@tabler/icons-react";
-export { IconSquareLetterNFilled } from "@tabler/icons-react";
-export { IconSquareLetterOFilled } from "@tabler/icons-react";
-export { IconSquareLetterPFilled } from "@tabler/icons-react";
-export { IconSquareLetterQFilled } from "@tabler/icons-react";
-export { IconSquareLetterRFilled } from "@tabler/icons-react";
-export { IconSquareLetterSFilled } from "@tabler/icons-react";
-export { IconSquareLetterTFilled } from "@tabler/icons-react";
-export { IconSquareLetterUFilled } from "@tabler/icons-react";
-export { IconSquareLetterVFilled } from "@tabler/icons-react";
-export { IconSquareLetterWFilled } from "@tabler/icons-react";
-export { IconSquareLetterXFilled } from "@tabler/icons-react";
-export { IconSquareLetterYFilled } from "@tabler/icons-react";
-export { IconSquareLetterZFilled } from "@tabler/icons-react";
-export { IconSquareMinusFilled } from "@tabler/icons-react";
-export { IconSquareNumber0Filled } from "@tabler/icons-react";
-export { IconSquareNumber1Filled } from "@tabler/icons-react";
-export { IconSquareNumber2Filled } from "@tabler/icons-react";
-export { IconSquareNumber3Filled } from "@tabler/icons-react";
-export { IconSquareNumber4Filled } from "@tabler/icons-react";
-export { IconSquareNumber5Filled } from "@tabler/icons-react";
-export { IconSquareNumber6Filled } from "@tabler/icons-react";
-export { IconSquareNumber7Filled } from "@tabler/icons-react";
-export { IconSquareNumber8Filled } from "@tabler/icons-react";
-export { IconSquareNumber9Filled } from "@tabler/icons-react";
-export { IconSquareRotatedFilled } from "@tabler/icons-react";
-export { IconSquareRoundedArrowDownFilled } from "@tabler/icons-react";
-export { IconSquareRoundedArrowLeftFilled } from "@tabler/icons-react";
-export { IconSquareRoundedArrowRightFilled } from "@tabler/icons-react";
-export { IconSquareRoundedArrowUpFilled } from "@tabler/icons-react";
-export { IconSquareRoundedCheckFilled } from "@tabler/icons-react";
-export { IconSquareRoundedChevronDownFilled } from "@tabler/icons-react";
-export { IconSquareRoundedChevronLeftFilled } from "@tabler/icons-react";
-export { IconSquareRoundedChevronRightFilled } from "@tabler/icons-react";
-export { IconSquareRoundedChevronUpFilled } from "@tabler/icons-react";
-export { IconSquareRoundedChevronsDownFilled } from "@tabler/icons-react";
-export { IconSquareRoundedChevronsLeftFilled } from "@tabler/icons-react";
-export { IconSquareRoundedChevronsRightFilled } from "@tabler/icons-react";
-export { IconSquareRoundedChevronsUpFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterAFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterBFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterCFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterDFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterEFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterFFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterGFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterHFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterIFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterJFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterKFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterLFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterMFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterNFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterOFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterPFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterQFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterRFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterSFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterTFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterUFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterVFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterWFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterXFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterYFilled } from "@tabler/icons-react";
-export { IconSquareRoundedLetterZFilled } from "@tabler/icons-react";
-export { IconSquareRoundedMinusFilled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber0Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber1Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber2Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber3Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber4Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber5Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber6Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber7Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber8Filled } from "@tabler/icons-react";
-export { IconSquareRoundedNumber9Filled } from "@tabler/icons-react";
-export { IconSquareRoundedPlusFilled } from "@tabler/icons-react";
-export { IconSquareRoundedXFilled } from "@tabler/icons-react";
-export { IconSquareRoundedFilled } from "@tabler/icons-react";
-export { IconSquareXFilled } from "@tabler/icons-react";
-export { IconSquareFilled } from "@tabler/icons-react";
-export { IconSquaresFilled } from "@tabler/icons-react";
-export { IconStack2Filled } from "@tabler/icons-react";
-export { IconStack3Filled } from "@tabler/icons-react";
-export { IconStackFilled } from "@tabler/icons-react";
-export { IconStarHalfFilled } from "@tabler/icons-react";
-export { IconStarFilled } from "@tabler/icons-react";
-export { IconStarsFilled } from "@tabler/icons-react";
-export { IconSteeringWheelFilled } from "@tabler/icons-react";
-export { IconSunHighFilled } from "@tabler/icons-react";
-export { IconSunLowFilled } from "@tabler/icons-react";
-export { IconSunFilled } from "@tabler/icons-react";
-export { IconSunglassesFilled } from "@tabler/icons-react";
-export { IconSunriseFilled } from "@tabler/icons-react";
-export { IconSunset2Filled } from "@tabler/icons-react";
-export { IconSunsetFilled } from "@tabler/icons-react";
-export { IconSwipeDownFilled } from "@tabler/icons-react";
-export { IconSwipeLeftFilled } from "@tabler/icons-react";
-export { IconSwipeRightFilled } from "@tabler/icons-react";
-export { IconSwipeUpFilled } from "@tabler/icons-react";
-export { IconTableFilled } from "@tabler/icons-react";
-export { IconTagFilled } from "@tabler/icons-react";
-export { IconTagsFilled } from "@tabler/icons-react";
-export { IconTemperatureMinusFilled } from "@tabler/icons-react";
-export { IconTemperaturePlusFilled } from "@tabler/icons-react";
-export { IconTemplateFilled } from "@tabler/icons-react";
-export { IconTestPipe2Filled } from "@tabler/icons-react";
-export { IconThumbDownFilled } from "@tabler/icons-react";
-export { IconThumbUpFilled } from "@tabler/icons-react";
-export { IconTicketFilled } from "@tabler/icons-react";
-export { IconTiltShiftFilled } from "@tabler/icons-react";
-export { IconTimelineEventFilled } from "@tabler/icons-react";
-export { IconToggleLeftFilled } from "@tabler/icons-react";
-export { IconToggleRightFilled } from "@tabler/icons-react";
-export { IconToolsKitchen2Filled } from "@tabler/icons-react";
-export { IconTrainFilled } from "@tabler/icons-react";
-export { IconTransformFilled } from "@tabler/icons-react";
-export { IconTransitionBottomFilled } from "@tabler/icons-react";
-export { IconTransitionLeftFilled } from "@tabler/icons-react";
-export { IconTransitionRightFilled } from "@tabler/icons-react";
-export { IconTransitionTopFilled } from "@tabler/icons-react";
-export { IconTrashXFilled } from "@tabler/icons-react";
-export { IconTrashFilled } from "@tabler/icons-react";
-export { IconTriangleInvertedFilled } from "@tabler/icons-react";
-export { IconTriangleSquareCircleFilled } from "@tabler/icons-react";
-export { IconTriangleFilled } from "@tabler/icons-react";
-export { IconTrolleyFilled } from "@tabler/icons-react";
-export { IconTrophyFilled } from "@tabler/icons-react";
-export { IconTruckFilled } from "@tabler/icons-react";
-export { IconUfoFilled } from "@tabler/icons-react";
-export { IconUmbrellaFilled } from "@tabler/icons-react";
-export { IconUserFilled } from "@tabler/icons-react";
-export { IconVersionsFilled } from "@tabler/icons-react";
-export { IconVideoMinusFilled } from "@tabler/icons-react";
-export { IconVideoPlusFilled } from "@tabler/icons-react";
-export { IconVideoFilled } from "@tabler/icons-react";
-export { IconWindmillFilled } from "@tabler/icons-react";
-export { IconWindsockFilled } from "@tabler/icons-react";
-export { IconWomanFilled } from "@tabler/icons-react";
-export { IconWorldFilled } from "@tabler/icons-react";
-export { IconWritingSignFilled } from "@tabler/icons-react";
-export { IconWritingFilled } from "@tabler/icons-react";
-export { IconXFilled } from "@tabler/icons-react";
-export { IconXboxAFilled } from "@tabler/icons-react";
-export { IconXboxBFilled } from "@tabler/icons-react";
-export { IconXboxXFilled } from "@tabler/icons-react";
-export { IconXboxYFilled } from "@tabler/icons-react";
-export { IconYinYangFilled } from "@tabler/icons-react";
-export { IconZeppelinFilled } from "@tabler/icons-react";
-export { IconZoomCancelFilled } from "@tabler/icons-react";
-export { IconZoomCheckFilled } from "@tabler/icons-react";
-export { IconZoomCodeFilled } from "@tabler/icons-react";
-export { IconZoomExclamationFilled } from "@tabler/icons-react";
-export { IconZoomInAreaFilled } from "@tabler/icons-react";
-export { IconZoomInFilled } from "@tabler/icons-react";
-export { IconZoomMoneyFilled } from "@tabler/icons-react";
-export { IconZoomOutAreaFilled } from "@tabler/icons-react";
-export { IconZoomOutFilled } from "@tabler/icons-react";
-export { IconZoomPanFilled } from "@tabler/icons-react";
-export { IconZoomQuestionFilled } from "@tabler/icons-react";
-export { IconZoomScanFilled } from "@tabler/icons-react";
-export { IconZoomFilled } from "@tabler/icons-react";
+export const ALL_ICONS: ReadonlyArray<readonly [string, IconComponent]> = [
+  ["a-b-2", IconAB2],
+  ["a-b-off", IconABOff],
+  ["a-b", IconAB],
+  ["abacus-off", IconAbacusOff],
+  ["abacus", IconAbacus],
+  ["abc", IconAbc],
+  ["access-point-off", IconAccessPointOff],
+  ["access-point", IconAccessPoint],
+  ["accessible-off", IconAccessibleOff],
+  ["accessible", IconAccessible],
+  ["acorn", IconAcorn],
+  ["acrobatic", IconAcrobatic],
+  ["activity-heartbeat", IconActivityHeartbeat],
+  ["activity", IconActivity],
+  ["ad-2", IconAd2],
+  ["ad-circle-off", IconAdCircleOff],
+  ["ad-circle", IconAdCircle],
+  ["ad-off", IconAdOff],
+  ["ad", IconAd],
+  ["address-book-off", IconAddressBookOff],
+  ["address-book", IconAddressBook],
+  ["adjustments-alt", IconAdjustmentsAlt],
+  ["adjustments-bolt", IconAdjustmentsBolt],
+  ["adjustments-cancel", IconAdjustmentsCancel],
+  ["adjustments-check", IconAdjustmentsCheck],
+  ["adjustments-code", IconAdjustmentsCode],
+  ["adjustments-cog", IconAdjustmentsCog],
+  ["adjustments-dollar", IconAdjustmentsDollar],
+  ["adjustments-down", IconAdjustmentsDown],
+  ["adjustments-exclamation", IconAdjustmentsExclamation],
+  ["adjustments-heart", IconAdjustmentsHeart],
+  ["adjustments-horizontal", IconAdjustmentsHorizontal],
+  ["adjustments-minus", IconAdjustmentsMinus],
+  ["adjustments-off", IconAdjustmentsOff],
+  ["adjustments-pause", IconAdjustmentsPause],
+  ["adjustments-pin", IconAdjustmentsPin],
+  ["adjustments-plus", IconAdjustmentsPlus],
+  ["adjustments-question", IconAdjustmentsQuestion],
+  ["adjustments-search", IconAdjustmentsSearch],
+  ["adjustments-share", IconAdjustmentsShare],
+  ["adjustments-spark", IconAdjustmentsSpark],
+  ["adjustments-star", IconAdjustmentsStar],
+  ["adjustments-up", IconAdjustmentsUp],
+  ["adjustments-x", IconAdjustmentsX],
+  ["adjustments", IconAdjustments],
+  ["aerial-lift", IconAerialLift],
+  ["affiliate", IconAffiliate],
+  ["ai-agent", IconAiAgent],
+  ["ai-agents", IconAiAgents],
+  ["ai-gateway", IconAiGateway],
+  ["ai", IconAi],
+  ["air-balloon", IconAirBalloon],
+  ["air-conditioning-disabled", IconAirConditioningDisabled],
+  ["air-conditioning", IconAirConditioning],
+  ["air-traffic-control", IconAirTrafficControl],
+  ["airpods-l", IconAirpodsL],
+  ["airpods-r", IconAirpodsR],
+  ["alarm-average", IconAlarmAverage],
+  ["alarm-minus", IconAlarmMinus],
+  ["alarm-off", IconAlarmOff],
+  ["alarm-plus", IconAlarmPlus],
+  ["alarm-smoke", IconAlarmSmoke],
+  ["alarm-snooze", IconAlarmSnooze],
+  ["alarm", IconAlarm],
+  ["album-off", IconAlbumOff],
+  ["album", IconAlbum],
+  ["alert-circle-off", IconAlertCircleOff],
+  ["alert-circle", IconAlertCircle],
+  ["alert-hexagon-off", IconAlertHexagonOff],
+  ["alert-hexagon", IconAlertHexagon],
+  ["alert-octagon", IconAlertOctagon],
+  ["alert-small-off", IconAlertSmallOff],
+  ["alert-small", IconAlertSmall],
+  ["alert-square-rounded-off", IconAlertSquareRoundedOff],
+  ["alert-square-rounded", IconAlertSquareRounded],
+  ["alert-square", IconAlertSquare],
+  ["alert-triangle-off", IconAlertTriangleOff],
+  ["alert-triangle", IconAlertTriangle],
+  ["alien", IconAlien],
+  ["align-box-bottom-center", IconAlignBoxBottomCenter],
+  ["align-box-bottom-left", IconAlignBoxBottomLeft],
+  ["align-box-bottom-right", IconAlignBoxBottomRight],
+  ["align-box-center-bottom", IconAlignBoxCenterBottom],
+  ["align-box-center-middle", IconAlignBoxCenterMiddle],
+  ["align-box-center-stretch", IconAlignBoxCenterStretch],
+  ["align-box-center-top", IconAlignBoxCenterTop],
+  ["align-box-left-bottom", IconAlignBoxLeftBottom],
+  ["align-box-left-middle", IconAlignBoxLeftMiddle],
+  ["align-box-left-stretch", IconAlignBoxLeftStretch],
+  ["align-box-left-top", IconAlignBoxLeftTop],
+  ["align-box-right-bottom", IconAlignBoxRightBottom],
+  ["align-box-right-middle", IconAlignBoxRightMiddle],
+  ["align-box-right-stretch", IconAlignBoxRightStretch],
+  ["align-box-right-top", IconAlignBoxRightTop],
+  ["align-box-top-center", IconAlignBoxTopCenter],
+  ["align-box-top-left", IconAlignBoxTopLeft],
+  ["align-box-top-right", IconAlignBoxTopRight],
+  ["align-center", IconAlignCenter],
+  ["align-justified", IconAlignJustified],
+  ["align-left-2", IconAlignLeft2],
+  ["align-left", IconAlignLeft],
+  ["align-right-2", IconAlignRight2],
+  ["align-right", IconAlignRight],
+  ["alpha", IconAlpha],
+  ["alphabet-arabic", IconAlphabetArabic],
+  ["alphabet-bangla", IconAlphabetBangla],
+  ["alphabet-chinese", IconAlphabetChinese],
+  ["alphabet-cyrillic", IconAlphabetCyrillic],
+  ["alphabet-devanagari", IconAlphabetDevanagari],
+  ["alphabet-ethiopic", IconAlphabetEthiopic],
+  ["alphabet-georgian", IconAlphabetGeorgian],
+  ["alphabet-greek", IconAlphabetGreek],
+  ["alphabet-hebrew", IconAlphabetHebrew],
+  ["alphabet-japanese", IconAlphabetJapanese],
+  ["alphabet-korean", IconAlphabetKorean],
+  ["alphabet-latin", IconAlphabetLatin],
+  ["alphabet-polish", IconAlphabetPolish],
+  ["alphabet-runes", IconAlphabetRunes],
+  ["alphabet-thai", IconAlphabetThai],
+  ["alt", IconAlt],
+  ["ambulance", IconAmbulance],
+  ["ampersand", IconAmpersand],
+  ["analyze-off", IconAnalyzeOff],
+  ["analyze", IconAnalyze],
+  ["anchor-off", IconAnchorOff],
+  ["anchor", IconAnchor],
+  ["angle", IconAngle],
+  ["ankh", IconAnkh],
+  ["antenna-bars-1", IconAntennaBars1],
+  ["antenna-bars-2", IconAntennaBars2],
+  ["antenna-bars-3", IconAntennaBars3],
+  ["antenna-bars-4", IconAntennaBars4],
+  ["antenna-bars-5", IconAntennaBars5],
+  ["antenna-bars-off", IconAntennaBarsOff],
+  ["antenna-off", IconAntennaOff],
+  ["antenna", IconAntenna],
+  ["aperture-off", IconApertureOff],
+  ["aperture", IconAperture],
+  ["api-app-off", IconApiAppOff],
+  ["api-app", IconApiApp],
+  ["api-book", IconApiBook],
+  ["api-off", IconApiOff],
+  ["api", IconApi],
+  ["app-window-bottom-left", IconAppWindowBottomLeft],
+  ["app-window-bottom-right", IconAppWindowBottomRight],
+  ["app-window-bottom", IconAppWindowBottom],
+  ["app-window-center", IconAppWindowCenter],
+  ["app-window", IconAppWindow],
+  ["apple", IconApple],
+  ["apps-off", IconAppsOff],
+  ["apps", IconApps],
+  ["archery-arrow", IconArcheryArrow],
+  ["archive-off", IconArchiveOff],
+  ["archive", IconArchive],
+  ["armchair-2-off", IconArmchair2Off],
+  ["armchair-2", IconArmchair2],
+  ["armchair-off", IconArmchairOff],
+  ["armchair", IconArmchair],
+  ["arrow-autofit-content", IconArrowAutofitContent],
+  ["arrow-autofit-down", IconArrowAutofitDown],
+  ["arrow-autofit-height", IconArrowAutofitHeight],
+  ["arrow-autofit-left", IconArrowAutofitLeft],
+  ["arrow-autofit-right", IconArrowAutofitRight],
+  ["arrow-autofit-up", IconArrowAutofitUp],
+  ["arrow-autofit-width", IconArrowAutofitWidth],
+  ["arrow-back-up-double", IconArrowBackUpDouble],
+  ["arrow-back-up", IconArrowBackUp],
+  ["arrow-back", IconArrowBack],
+  ["arrow-badge-down", IconArrowBadgeDown],
+  ["arrow-badge-left", IconArrowBadgeLeft],
+  ["arrow-badge-right", IconArrowBadgeRight],
+  ["arrow-badge-up", IconArrowBadgeUp],
+  ["arrow-bar-both", IconArrowBarBoth],
+  ["arrow-bar-down", IconArrowBarDown],
+  ["arrow-bar-left", IconArrowBarLeft],
+  ["arrow-bar-right", IconArrowBarRight],
+  ["arrow-bar-to-down-dashed", IconArrowBarToDownDashed],
+  ["arrow-bar-to-down", IconArrowBarToDown],
+  ["arrow-bar-to-left-dashed", IconArrowBarToLeftDashed],
+  ["arrow-bar-to-left", IconArrowBarToLeft],
+  ["arrow-bar-to-right-dashed", IconArrowBarToRightDashed],
+  ["arrow-bar-to-right", IconArrowBarToRight],
+  ["arrow-bar-to-up-dashed", IconArrowBarToUpDashed],
+  ["arrow-bar-to-up", IconArrowBarToUp],
+  ["arrow-bar-up", IconArrowBarUp],
+  ["arrow-bear-left-2", IconArrowBearLeft2],
+  ["arrow-bear-left", IconArrowBearLeft],
+  ["arrow-bear-right-2", IconArrowBearRight2],
+  ["arrow-bear-right", IconArrowBearRight],
+  ["arrow-big-down-line", IconArrowBigDownLine],
+  ["arrow-big-down-lines", IconArrowBigDownLines],
+  ["arrow-big-down", IconArrowBigDown],
+  ["arrow-big-left-line", IconArrowBigLeftLine],
+  ["arrow-big-left-lines", IconArrowBigLeftLines],
+  ["arrow-big-left", IconArrowBigLeft],
+  ["arrow-big-right-line", IconArrowBigRightLine],
+  ["arrow-big-right-lines", IconArrowBigRightLines],
+  ["arrow-big-right", IconArrowBigRight],
+  ["arrow-big-up-line", IconArrowBigUpLine],
+  ["arrow-big-up-lines", IconArrowBigUpLines],
+  ["arrow-big-up", IconArrowBigUp],
+  ["arrow-bounce", IconArrowBounce],
+  ["arrow-capsule", IconArrowCapsule],
+  ["arrow-curve-left", IconArrowCurveLeft],
+  ["arrow-curve-right", IconArrowCurveRight],
+  ["arrow-down-bar", IconArrowDownBar],
+  ["arrow-down-circle", IconArrowDownCircle],
+  ["arrow-down-dashed", IconArrowDownDashed],
+  ["arrow-down-from-arc", IconArrowDownFromArc],
+  ["arrow-down-left-circle", IconArrowDownLeftCircle],
+  ["arrow-down-left", IconArrowDownLeft],
+  ["arrow-down-rhombus", IconArrowDownRhombus],
+  ["arrow-down-right-circle", IconArrowDownRightCircle],
+  ["arrow-down-right", IconArrowDownRight],
+  ["arrow-down-square", IconArrowDownSquare],
+  ["arrow-down-tail", IconArrowDownTail],
+  ["arrow-down-to-arc", IconArrowDownToArc],
+  ["arrow-down", IconArrowDown],
+  ["arrow-elbow-left", IconArrowElbowLeft],
+  ["arrow-elbow-right", IconArrowElbowRight],
+  ["arrow-fork-triple", IconArrowForkTriple],
+  ["arrow-fork", IconArrowFork],
+  ["arrow-forward-up-double", IconArrowForwardUpDouble],
+  ["arrow-forward-up", IconArrowForwardUp],
+  ["arrow-forward", IconArrowForward],
+  ["arrow-guide", IconArrowGuide],
+  ["arrow-iteration", IconArrowIteration],
+  ["arrow-left-bar", IconArrowLeftBar],
+  ["arrow-left-circle", IconArrowLeftCircle],
+  ["arrow-left-dashed", IconArrowLeftDashed],
+  ["arrow-left-from-arc", IconArrowLeftFromArc],
+  ["arrow-left-rhombus", IconArrowLeftRhombus],
+  ["arrow-left-right", IconArrowLeftRight],
+  ["arrow-left-square", IconArrowLeftSquare],
+  ["arrow-left-tail", IconArrowLeftTail],
+  ["arrow-left-to-arc", IconArrowLeftToArc],
+  ["arrow-left", IconArrowLeft],
+  ["arrow-loop-left-2", IconArrowLoopLeft2],
+  ["arrow-loop-left", IconArrowLoopLeft],
+  ["arrow-loop-right-2", IconArrowLoopRight2],
+  ["arrow-loop-right", IconArrowLoopRight],
+  ["arrow-merge-alt-left", IconArrowMergeAltLeft],
+  ["arrow-merge-alt-right", IconArrowMergeAltRight],
+  ["arrow-merge-both", IconArrowMergeBoth],
+  ["arrow-merge-left", IconArrowMergeLeft],
+  ["arrow-merge-right", IconArrowMergeRight],
+  ["arrow-merge", IconArrowMerge],
+  ["arrow-move-down", IconArrowMoveDown],
+  ["arrow-move-left", IconArrowMoveLeft],
+  ["arrow-move-right", IconArrowMoveRight],
+  ["arrow-move-up", IconArrowMoveUp],
+  ["arrow-narrow-down-dashed", IconArrowNarrowDownDashed],
+  ["arrow-narrow-down", IconArrowNarrowDown],
+  ["arrow-narrow-left-dashed", IconArrowNarrowLeftDashed],
+  ["arrow-narrow-left", IconArrowNarrowLeft],
+  ["arrow-narrow-right-dashed", IconArrowNarrowRightDashed],
+  ["arrow-narrow-right", IconArrowNarrowRight],
+  ["arrow-narrow-up-dashed", IconArrowNarrowUpDashed],
+  ["arrow-narrow-up", IconArrowNarrowUp],
+  ["arrow-ramp-left-2", IconArrowRampLeft2],
+  ["arrow-ramp-left-3", IconArrowRampLeft3],
+  ["arrow-ramp-left", IconArrowRampLeft],
+  ["arrow-ramp-right-2", IconArrowRampRight2],
+  ["arrow-ramp-right-3", IconArrowRampRight3],
+  ["arrow-ramp-right", IconArrowRampRight],
+  ["arrow-right-bar", IconArrowRightBar],
+  ["arrow-right-circle", IconArrowRightCircle],
+  ["arrow-right-dashed", IconArrowRightDashed],
+  ["arrow-right-from-arc", IconArrowRightFromArc],
+  ["arrow-right-rhombus", IconArrowRightRhombus],
+  ["arrow-right-square", IconArrowRightSquare],
+  ["arrow-right-tail", IconArrowRightTail],
+  ["arrow-right-to-arc", IconArrowRightToArc],
+  ["arrow-right", IconArrowRight],
+  ["arrow-rotary-first-left", IconArrowRotaryFirstLeft],
+  ["arrow-rotary-first-right", IconArrowRotaryFirstRight],
+  ["arrow-rotary-last-left", IconArrowRotaryLastLeft],
+  ["arrow-rotary-last-right", IconArrowRotaryLastRight],
+  ["arrow-rotary-left", IconArrowRotaryLeft],
+  ["arrow-rotary-right", IconArrowRotaryRight],
+  ["arrow-rotary-straight", IconArrowRotaryStraight],
+  ["arrow-roundabout-left", IconArrowRoundaboutLeft],
+  ["arrow-roundabout-right", IconArrowRoundaboutRight],
+  ["arrow-sharp-turn-left", IconArrowSharpTurnLeft],
+  ["arrow-sharp-turn-right", IconArrowSharpTurnRight],
+  ["arrow-up-bar", IconArrowUpBar],
+  ["arrow-up-circle", IconArrowUpCircle],
+  ["arrow-up-dashed", IconArrowUpDashed],
+  ["arrow-up-from-arc", IconArrowUpFromArc],
+  ["arrow-up-left-circle", IconArrowUpLeftCircle],
+  ["arrow-up-left", IconArrowUpLeft],
+  ["arrow-up-rhombus", IconArrowUpRhombus],
+  ["arrow-up-right-circle", IconArrowUpRightCircle],
+  ["arrow-up-right", IconArrowUpRight],
+  ["arrow-up-square", IconArrowUpSquare],
+  ["arrow-up-tail", IconArrowUpTail],
+  ["arrow-up-to-arc", IconArrowUpToArc],
+  ["arrow-up", IconArrowUp],
+  ["arrow-wave-left-down", IconArrowWaveLeftDown],
+  ["arrow-wave-left-up", IconArrowWaveLeftUp],
+  ["arrow-wave-right-down", IconArrowWaveRightDown],
+  ["arrow-wave-right-up", IconArrowWaveRightUp],
+  ["arrow-zig-zag", IconArrowZigZag],
+  ["arrows-cross", IconArrowsCross],
+  ["arrows-diagonal-2", IconArrowsDiagonal2],
+  ["arrows-diagonal-minimize-2", IconArrowsDiagonalMinimize2],
+  ["arrows-diagonal-minimize", IconArrowsDiagonalMinimize],
+  ["arrows-diagonal", IconArrowsDiagonal],
+  ["arrows-diff", IconArrowsDiff],
+  ["arrows-double-ne-sw", IconArrowsDoubleNeSw],
+  ["arrows-double-nw-se", IconArrowsDoubleNwSe],
+  ["arrows-double-se-nw", IconArrowsDoubleSeNw],
+  ["arrows-double-sw-ne", IconArrowsDoubleSwNe],
+  ["arrows-down-up", IconArrowsDownUp],
+  ["arrows-down", IconArrowsDown],
+  ["arrows-exchange-2", IconArrowsExchange2],
+  ["arrows-exchange", IconArrowsExchange],
+  ["arrows-horizontal", IconArrowsHorizontal],
+  ["arrows-join-2", IconArrowsJoin2],
+  ["arrows-join", IconArrowsJoin],
+  ["arrows-left-down", IconArrowsLeftDown],
+  ["arrows-left-right", IconArrowsLeftRight],
+  ["arrows-left", IconArrowsLeft],
+  ["arrows-maximize", IconArrowsMaximize],
+  ["arrows-minimize", IconArrowsMinimize],
+  ["arrows-move-horizontal", IconArrowsMoveHorizontal],
+  ["arrows-move-vertical", IconArrowsMoveVertical],
+  ["arrows-move", IconArrowsMove],
+  ["arrows-random", IconArrowsRandom],
+  ["arrows-right-down", IconArrowsRightDown],
+  ["arrows-right-left", IconArrowsRightLeft],
+  ["arrows-right", IconArrowsRight],
+  ["arrows-shuffle-2", IconArrowsShuffle2],
+  ["arrows-shuffle", IconArrowsShuffle],
+  ["arrows-sort", IconArrowsSort],
+  ["arrows-split-2", IconArrowsSplit2],
+  ["arrows-split", IconArrowsSplit],
+  ["arrows-transfer-down", IconArrowsTransferDown],
+  ["arrows-transfer-up-down", IconArrowsTransferUpDown],
+  ["arrows-transfer-up", IconArrowsTransferUp],
+  ["arrows-up-down", IconArrowsUpDown],
+  ["arrows-up-left", IconArrowsUpLeft],
+  ["arrows-up-right", IconArrowsUpRight],
+  ["arrows-up", IconArrowsUp],
+  ["arrows-vertical", IconArrowsVertical],
+  ["artboard-off", IconArtboardOff],
+  ["artboard", IconArtboard],
+  ["article-off", IconArticleOff],
+  ["article", IconArticle],
+  ["aspect-ratio-off", IconAspectRatioOff],
+  ["aspect-ratio", IconAspectRatio],
+  ["assembly-off", IconAssemblyOff],
+  ["assembly", IconAssembly],
+  ["asset", IconAsset],
+  ["asterisk-simple", IconAsteriskSimple],
+  ["asterisk", IconAsterisk],
+  ["at-off", IconAtOff],
+  ["at", IconAt],
+  ["atom-2", IconAtom2],
+  ["atom-off", IconAtomOff],
+  ["atom", IconAtom],
+  ["augmented-reality-2", IconAugmentedReality2],
+  ["augmented-reality-off", IconAugmentedRealityOff],
+  ["augmented-reality", IconAugmentedReality],
+  ["auth-2fa", IconAuth2fa],
+  ["automatic-gearbox", IconAutomaticGearbox],
+  ["automation", IconAutomation],
+  ["avocado", IconAvocado],
+  ["award-off", IconAwardOff],
+  ["award", IconAward],
+  ["axe", IconAxe],
+  ["axis-x", IconAxisX],
+  ["axis-y", IconAxisY],
+  ["baby-bottle", IconBabyBottle],
+  ["baby-carriage", IconBabyCarriage],
+  ["background", IconBackground],
+  ["backhoe", IconBackhoe],
+  ["backpack-off", IconBackpackOff],
+  ["backpack", IconBackpack],
+  ["backslash", IconBackslash],
+  ["backspace", IconBackspace],
+  ["badge-2k", IconBadge2k],
+  ["badge-3d", IconBadge3d],
+  ["badge-3k", IconBadge3k],
+  ["badge-4k", IconBadge4k],
+  ["badge-5k", IconBadge5k],
+  ["badge-8k", IconBadge8k],
+  ["badge-ad-off", IconBadgeAdOff],
+  ["badge-ad", IconBadgeAd],
+  ["badge-ar", IconBadgeAr],
+  ["badge-cc", IconBadgeCc],
+  ["badge-hd", IconBadgeHd],
+  ["badge-off", IconBadgeOff],
+  ["badge-sd", IconBadgeSd],
+  ["badge-tm", IconBadgeTm],
+  ["badge-vo", IconBadgeVo],
+  ["badge-vr", IconBadgeVr],
+  ["badge-wc", IconBadgeWc],
+  ["badge", IconBadge],
+  ["badges-off", IconBadgesOff],
+  ["badges", IconBadges],
+  ["baguette", IconBaguette],
+  ["ball-american-football-off", IconBallAmericanFootballOff],
+  ["ball-american-football", IconBallAmericanFootball],
+  ["ball-baseball", IconBallBaseball],
+  ["ball-basketball", IconBallBasketball],
+  ["ball-bowling", IconBallBowling],
+  ["ball-football-off", IconBallFootballOff],
+  ["ball-football", IconBallFootball],
+  ["ball-tennis", IconBallTennis],
+  ["ball-volleyball", IconBallVolleyball],
+  ["balloon-off", IconBalloonOff],
+  ["balloon", IconBalloon],
+  ["ballpen-off", IconBallpenOff],
+  ["ballpen", IconBallpen],
+  ["ban", IconBan],
+  ["banana", IconBanana],
+  ["bandage-off", IconBandageOff],
+  ["bandage", IconBandage],
+  ["barbell-off", IconBarbellOff],
+  ["barbell", IconBarbell],
+  ["barcode-off", IconBarcodeOff],
+  ["barcode", IconBarcode],
+  ["barrel-off", IconBarrelOff],
+  ["barrel", IconBarrel],
+  ["barrier-block-off", IconBarrierBlockOff],
+  ["barrier-block", IconBarrierBlock],
+  ["baseline-density-large", IconBaselineDensityLarge],
+  ["baseline-density-medium", IconBaselineDensityMedium],
+  ["baseline-density-small", IconBaselineDensitySmall],
+  ["baseline", IconBaseline],
+  ["basket-bolt", IconBasketBolt],
+  ["basket-cancel", IconBasketCancel],
+  ["basket-check", IconBasketCheck],
+  ["basket-code", IconBasketCode],
+  ["basket-cog", IconBasketCog],
+  ["basket-discount", IconBasketDiscount],
+  ["basket-dollar", IconBasketDollar],
+  ["basket-down", IconBasketDown],
+  ["basket-exclamation", IconBasketExclamation],
+  ["basket-heart", IconBasketHeart],
+  ["basket-minus", IconBasketMinus],
+  ["basket-off", IconBasketOff],
+  ["basket-pause", IconBasketPause],
+  ["basket-pin", IconBasketPin],
+  ["basket-plus", IconBasketPlus],
+  ["basket-question", IconBasketQuestion],
+  ["basket-search", IconBasketSearch],
+  ["basket-share", IconBasketShare],
+  ["basket-star", IconBasketStar],
+  ["basket-up", IconBasketUp],
+  ["basket-x", IconBasketX],
+  ["basket", IconBasket],
+  ["bat", IconBat],
+  ["bath-off", IconBathOff],
+  ["bath", IconBath],
+  ["battery-1", IconBattery1],
+  ["battery-2", IconBattery2],
+  ["battery-3", IconBattery3],
+  ["battery-4", IconBattery4],
+  ["battery-automotive", IconBatteryAutomotive],
+  ["battery-charging-2", IconBatteryCharging2],
+  ["battery-charging", IconBatteryCharging],
+  ["battery-eco", IconBatteryEco],
+  ["battery-exclamation", IconBatteryExclamation],
+  ["battery-off", IconBatteryOff],
+  ["battery-spark", IconBatterySpark],
+  ["battery-vertical-1", IconBatteryVertical1],
+  ["battery-vertical-2", IconBatteryVertical2],
+  ["battery-vertical-3", IconBatteryVertical3],
+  ["battery-vertical-4", IconBatteryVertical4],
+  ["battery-vertical-charging-2", IconBatteryVerticalCharging2],
+  ["battery-vertical-charging", IconBatteryVerticalCharging],
+  ["battery-vertical-eco", IconBatteryVerticalEco],
+  ["battery-vertical-exclamation", IconBatteryVerticalExclamation],
+  ["battery-vertical-off", IconBatteryVerticalOff],
+  ["battery-vertical", IconBatteryVertical],
+  ["battery", IconBattery],
+  ["beach-off", IconBeachOff],
+  ["beach", IconBeach],
+  ["bed-flat", IconBedFlat],
+  ["bed-off", IconBedOff],
+  ["bed", IconBed],
+  ["beer-off", IconBeerOff],
+  ["beer", IconBeer],
+  ["bell-bolt", IconBellBolt],
+  ["bell-cancel", IconBellCancel],
+  ["bell-check", IconBellCheck],
+  ["bell-code", IconBellCode],
+  ["bell-cog", IconBellCog],
+  ["bell-dollar", IconBellDollar],
+  ["bell-down", IconBellDown],
+  ["bell-exclamation", IconBellExclamation],
+  ["bell-heart", IconBellHeart],
+  ["bell-minus", IconBellMinus],
+  ["bell-off", IconBellOff],
+  ["bell-pause", IconBellPause],
+  ["bell-pin", IconBellPin],
+  ["bell-plus", IconBellPlus],
+  ["bell-question", IconBellQuestion],
+  ["bell-ringing-2", IconBellRinging2],
+  ["bell-ringing", IconBellRinging],
+  ["bell-school", IconBellSchool],
+  ["bell-search", IconBellSearch],
+  ["bell-share", IconBellShare],
+  ["bell-star", IconBellStar],
+  ["bell-up", IconBellUp],
+  ["bell-x", IconBellX],
+  ["bell-z", IconBellZ],
+  ["bell", IconBell],
+  ["beta", IconBeta],
+  ["bible", IconBible],
+  ["bike-off", IconBikeOff],
+  ["bike", IconBike],
+  ["binary-off", IconBinaryOff],
+  ["binary-tree-2", IconBinaryTree2],
+  ["binary-tree", IconBinaryTree],
+  ["binary", IconBinary],
+  ["binoculars", IconBinoculars],
+  ["biohazard-off", IconBiohazardOff],
+  ["biohazard", IconBiohazard],
+  ["blade", IconBlade],
+  ["bleach-chlorine", IconBleachChlorine],
+  ["bleach-no-chlorine", IconBleachNoChlorine],
+  ["bleach-off", IconBleachOff],
+  ["bleach", IconBleach],
+  ["blend-mode", IconBlendMode],
+  ["blender", IconBlender],
+  ["blind", IconBlind],
+  ["blob-dashed", IconBlobDashed],
+  ["blob", IconBlob],
+  ["blockquote", IconBlockquote],
+  ["blocks", IconBlocks],
+  ["bluetooth-connected", IconBluetoothConnected],
+  ["bluetooth-off", IconBluetoothOff],
+  ["bluetooth-x", IconBluetoothX],
+  ["bluetooth", IconBluetooth],
+  ["blur-off", IconBlurOff],
+  ["blur", IconBlur],
+  ["bmp", IconBmp],
+  ["body-scan", IconBodyScan],
+  ["bold-off", IconBoldOff],
+  ["bold", IconBold],
+  ["bolt-off", IconBoltOff],
+  ["bolt", IconBolt],
+  ["bomb", IconBomb],
+  ["bone-off", IconBoneOff],
+  ["bone", IconBone],
+  ["bong-off", IconBongOff],
+  ["bong", IconBong],
+  ["book-2", IconBook2],
+  ["book-download", IconBookDownload],
+  ["book-off", IconBookOff],
+  ["book-upload", IconBookUpload],
+  ["book", IconBook],
+  ["bookmark-ai", IconBookmarkAi],
+  ["bookmark-edit", IconBookmarkEdit],
+  ["bookmark-minus", IconBookmarkMinus],
+  ["bookmark-off", IconBookmarkOff],
+  ["bookmark-plus", IconBookmarkPlus],
+  ["bookmark-question", IconBookmarkQuestion],
+  ["bookmark", IconBookmark],
+  ["bookmarks-off", IconBookmarksOff],
+  ["bookmarks", IconBookmarks],
+  ["books-off", IconBooksOff],
+  ["books", IconBooks],
+  ["boom", IconBoom],
+  ["border-all", IconBorderAll],
+  ["border-bottom-plus", IconBorderBottomPlus],
+  ["border-bottom", IconBorderBottom],
+  ["border-corner-ios", IconBorderCornerIos],
+  ["border-corner-pill", IconBorderCornerPill],
+  ["border-corner-rounded", IconBorderCornerRounded],
+  ["border-corner-square", IconBorderCornerSquare],
+  ["border-corners", IconBorderCorners],
+  ["border-horizontal", IconBorderHorizontal],
+  ["border-inner", IconBorderInner],
+  ["border-left-plus", IconBorderLeftPlus],
+  ["border-left", IconBorderLeft],
+  ["border-none", IconBorderNone],
+  ["border-outer", IconBorderOuter],
+  ["border-radius", IconBorderRadius],
+  ["border-right-plus", IconBorderRightPlus],
+  ["border-right", IconBorderRight],
+  ["border-sides", IconBorderSides],
+  ["border-style-2", IconBorderStyle2],
+  ["border-style", IconBorderStyle],
+  ["border-top-plus", IconBorderTopPlus],
+  ["border-top", IconBorderTop],
+  ["border-vertical", IconBorderVertical],
+  ["bot-id", IconBotId],
+  ["bottle-off", IconBottleOff],
+  ["bottle", IconBottle],
+  ["bounce-left", IconBounceLeft],
+  ["bounce-right", IconBounceRight],
+  ["bow", IconBow],
+  ["bowl-chopsticks", IconBowlChopsticks],
+  ["bowl-spoon", IconBowlSpoon],
+  ["bowl", IconBowl],
+  ["bowling", IconBowling],
+  ["box-align-bottom-left", IconBoxAlignBottomLeft],
+  ["box-align-bottom-right", IconBoxAlignBottomRight],
+  ["box-align-bottom", IconBoxAlignBottom],
+  ["box-align-left", IconBoxAlignLeft],
+  ["box-align-right", IconBoxAlignRight],
+  ["box-align-top-left", IconBoxAlignTopLeft],
+  ["box-align-top-right", IconBoxAlignTopRight],
+  ["box-align-top", IconBoxAlignTop],
+  ["box-margin", IconBoxMargin],
+  ["box-model-2-off", IconBoxModel2Off],
+  ["box-model-2", IconBoxModel2],
+  ["box-model-off", IconBoxModelOff],
+  ["box-model", IconBoxModel],
+  ["box-multiple-0", IconBoxMultiple0],
+  ["box-multiple-1", IconBoxMultiple1],
+  ["box-multiple-2", IconBoxMultiple2],
+  ["box-multiple-3", IconBoxMultiple3],
+  ["box-multiple-4", IconBoxMultiple4],
+  ["box-multiple-5", IconBoxMultiple5],
+  ["box-multiple-6", IconBoxMultiple6],
+  ["box-multiple-7", IconBoxMultiple7],
+  ["box-multiple-8", IconBoxMultiple8],
+  ["box-multiple-9", IconBoxMultiple9],
+  ["box-multiple", IconBoxMultiple],
+  ["box-off", IconBoxOff],
+  ["box-padding", IconBoxPadding],
+  ["box", IconBox],
+  ["braces-off", IconBracesOff],
+  ["braces", IconBraces],
+  ["brackets-angle-off", IconBracketsAngleOff],
+  ["brackets-angle", IconBracketsAngle],
+  ["brackets-contain-end", IconBracketsContainEnd],
+  ["brackets-contain-start", IconBracketsContainStart],
+  ["brackets-contain", IconBracketsContain],
+  ["brackets-off", IconBracketsOff],
+  ["brackets", IconBrackets],
+  ["braille", IconBraille],
+  ["brain", IconBrain],
+  ["brand-4chan", IconBrand4chan],
+  ["brand-abstract", IconBrandAbstract],
+  ["brand-adobe-after-effects", IconBrandAdobeAfterEffects],
+  ["brand-adobe-illustrator", IconBrandAdobeIllustrator],
+  ["brand-adobe-indesign", IconBrandAdobeIndesign],
+  ["brand-adobe-photoshop", IconBrandAdobePhotoshop],
+  ["brand-adobe-premiere", IconBrandAdobePremiere],
+  ["brand-adobe-xd", IconBrandAdobeXd],
+  ["brand-adobe", IconBrandAdobe],
+  ["brand-adonis-js", IconBrandAdonisJs],
+  ["brand-airbnb", IconBrandAirbnb],
+  ["brand-airtable", IconBrandAirtable],
+  ["brand-algolia", IconBrandAlgolia],
+  ["brand-alipay", IconBrandAlipay],
+  ["brand-alpine-js", IconBrandAlpineJs],
+  ["brand-amazon", IconBrandAmazon],
+  ["brand-amd", IconBrandAmd],
+  ["brand-amie", IconBrandAmie],
+  ["brand-amigo", IconBrandAmigo],
+  ["brand-among-us", IconBrandAmongUs],
+  ["brand-android", IconBrandAndroid],
+  ["brand-angular", IconBrandAngular],
+  ["brand-ansible", IconBrandAnsible],
+  ["brand-ao3", IconBrandAo3],
+  ["brand-appgallery", IconBrandAppgallery],
+  ["brand-apple-arcade", IconBrandAppleArcade],
+  ["brand-apple-news", IconBrandAppleNews],
+  ["brand-apple-podcast", IconBrandApplePodcast],
+  ["brand-apple", IconBrandApple],
+  ["brand-appstore", IconBrandAppstore],
+  ["brand-arc", IconBrandArc],
+  ["brand-asana", IconBrandAsana],
+  ["brand-astro", IconBrandAstro],
+  ["brand-audible", IconBrandAudible],
+  ["brand-auth0", IconBrandAuth0],
+  ["brand-aws", IconBrandAws],
+  ["brand-azure", IconBrandAzure],
+  ["brand-backbone", IconBrandBackbone],
+  ["brand-badoo", IconBrandBadoo],
+  ["brand-baidu", IconBrandBaidu],
+  ["brand-bandcamp", IconBrandBandcamp],
+  ["brand-bandlab", IconBrandBandlab],
+  ["brand-beats", IconBrandBeats],
+  ["brand-bebo", IconBrandBebo],
+  ["brand-behance", IconBrandBehance],
+  ["brand-bilibili", IconBrandBilibili],
+  ["brand-binance", IconBrandBinance],
+  ["brand-bing", IconBrandBing],
+  ["brand-bitbucket", IconBrandBitbucket],
+  ["brand-blackberry", IconBrandBlackberry],
+  ["brand-blender", IconBrandBlender],
+  ["brand-blogger", IconBrandBlogger],
+  ["brand-bluesky", IconBrandBluesky],
+  ["brand-booking", IconBrandBooking],
+  ["brand-bootstrap", IconBrandBootstrap],
+  ["brand-bulma", IconBrandBulma],
+  ["brand-bumble", IconBrandBumble],
+  ["brand-bunpo", IconBrandBunpo],
+  ["brand-c-sharp", IconBrandCSharp],
+  ["brand-cake", IconBrandCake],
+  ["brand-cakephp", IconBrandCakephp],
+  ["brand-campaignmonitor", IconBrandCampaignmonitor],
+  ["brand-carbon", IconBrandCarbon],
+  ["brand-cashapp", IconBrandCashapp],
+  ["brand-chrome", IconBrandChrome],
+  ["brand-cinema-4d", IconBrandCinema4d],
+  ["brand-citymapper", IconBrandCitymapper],
+  ["brand-cloudflare", IconBrandCloudflare],
+  ["brand-codecov", IconBrandCodecov],
+  ["brand-codepen", IconBrandCodepen],
+  ["brand-codesandbox", IconBrandCodesandbox],
+  ["brand-cohost", IconBrandCohost],
+  ["brand-coinbase", IconBrandCoinbase],
+  ["brand-comedy-central", IconBrandComedyCentral],
+  ["brand-coreos", IconBrandCoreos],
+  ["brand-couchdb", IconBrandCouchdb],
+  ["brand-couchsurfing", IconBrandCouchsurfing],
+  ["brand-cpp", IconBrandCpp],
+  ["brand-craft", IconBrandCraft],
+  ["brand-crunchbase", IconBrandCrunchbase],
+  ["brand-css3", IconBrandCss3],
+  ["brand-ctemplar", IconBrandCtemplar],
+  ["brand-cucumber", IconBrandCucumber],
+  ["brand-cupra", IconBrandCupra],
+  ["brand-cypress", IconBrandCypress],
+  ["brand-d3", IconBrandD3],
+  ["brand-databricks", IconBrandDatabricks],
+  ["brand-days-counter", IconBrandDaysCounter],
+  ["brand-dcos", IconBrandDcos],
+  ["brand-debian", IconBrandDebian],
+  ["brand-deezer", IconBrandDeezer],
+  ["brand-deliveroo", IconBrandDeliveroo],
+  ["brand-deno", IconBrandDeno],
+  ["brand-denodo", IconBrandDenodo],
+  ["brand-deviantart", IconBrandDeviantart],
+  ["brand-digg", IconBrandDigg],
+  ["brand-dingtalk", IconBrandDingtalk],
+  ["brand-discord", IconBrandDiscord],
+  ["brand-disney", IconBrandDisney],
+  ["brand-disqus", IconBrandDisqus],
+  ["brand-django", IconBrandDjango],
+  ["brand-docker", IconBrandDocker],
+  ["brand-doctrine", IconBrandDoctrine],
+  ["brand-dolby-digital", IconBrandDolbyDigital],
+  ["brand-douban", IconBrandDouban],
+  ["brand-dribbble", IconBrandDribbble],
+  ["brand-dropbox", IconBrandDropbox],
+  ["brand-drops", IconBrandDrops],
+  ["brand-drupal", IconBrandDrupal],
+  ["brand-edge", IconBrandEdge],
+  ["brand-elastic", IconBrandElastic],
+  ["brand-electronic-arts", IconBrandElectronicArts],
+  ["brand-ember", IconBrandEmber],
+  ["brand-envato", IconBrandEnvato],
+  ["brand-etsy", IconBrandEtsy],
+  ["brand-evernote", IconBrandEvernote],
+  ["brand-facebook", IconBrandFacebook],
+  ["brand-feedly", IconBrandFeedly],
+  ["brand-figma", IconBrandFigma],
+  ["brand-filezilla", IconBrandFilezilla],
+  ["brand-finder", IconBrandFinder],
+  ["brand-firebase", IconBrandFirebase],
+  ["brand-firefox", IconBrandFirefox],
+  ["brand-fiverr", IconBrandFiverr],
+  ["brand-flickr", IconBrandFlickr],
+  ["brand-flightradar24", IconBrandFlightradar24],
+  ["brand-flipboard", IconBrandFlipboard],
+  ["brand-flutter", IconBrandFlutter],
+  ["brand-fortnite", IconBrandFortnite],
+  ["brand-foursquare", IconBrandFoursquare],
+  ["brand-framer-motion", IconBrandFramerMotion],
+  ["brand-framer", IconBrandFramer],
+  ["brand-funimation", IconBrandFunimation],
+  ["brand-gatsby", IconBrandGatsby],
+  ["brand-git", IconBrandGit],
+  ["brand-github-copilot", IconBrandGithubCopilot],
+  ["brand-github", IconBrandGithub],
+  ["brand-gitlab", IconBrandGitlab],
+  ["brand-gmail", IconBrandGmail],
+  ["brand-golang", IconBrandGolang],
+  ["brand-google-analytics", IconBrandGoogleAnalytics],
+  ["brand-google-big-query", IconBrandGoogleBigQuery],
+  ["brand-google-drive", IconBrandGoogleDrive],
+  ["brand-google-fit", IconBrandGoogleFit],
+  ["brand-google-home", IconBrandGoogleHome],
+  ["brand-google-maps", IconBrandGoogleMaps],
+  ["brand-google-one", IconBrandGoogleOne],
+  ["brand-google-photos", IconBrandGooglePhotos],
+  ["brand-google-play", IconBrandGooglePlay],
+  ["brand-google-podcasts", IconBrandGooglePodcasts],
+  ["brand-google", IconBrandGoogle],
+  ["brand-grammarly", IconBrandGrammarly],
+  ["brand-graphql", IconBrandGraphql],
+  ["brand-gravatar", IconBrandGravatar],
+  ["brand-grindr", IconBrandGrindr],
+  ["brand-guardian", IconBrandGuardian],
+  ["brand-gumroad", IconBrandGumroad],
+  ["brand-hackerrank", IconBrandHackerrank],
+  ["brand-hbo", IconBrandHbo],
+  ["brand-headlessui", IconBrandHeadlessui],
+  ["brand-hexo", IconBrandHexo],
+  ["brand-hipchat", IconBrandHipchat],
+  ["brand-html5", IconBrandHtml5],
+  ["brand-inertia", IconBrandInertia],
+  ["brand-infakt", IconBrandInfakt],
+  ["brand-instagram", IconBrandInstagram],
+  ["brand-intercom", IconBrandIntercom],
+  ["brand-itch", IconBrandItch],
+  ["brand-javascript", IconBrandJavascript],
+  ["brand-jira", IconBrandJira],
+  ["brand-juejin", IconBrandJuejin],
+  ["brand-kakao-talk", IconBrandKakaoTalk],
+  ["brand-kbin", IconBrandKbin],
+  ["brand-kick", IconBrandKick],
+  ["brand-kickstarter", IconBrandKickstarter],
+  ["brand-kotlin", IconBrandKotlin],
+  ["brand-laravel", IconBrandLaravel],
+  ["brand-lastfm", IconBrandLastfm],
+  ["brand-leetcode", IconBrandLeetcode],
+  ["brand-letterboxd", IconBrandLetterboxd],
+  ["brand-line", IconBrandLine],
+  ["brand-linkedin", IconBrandLinkedin],
+  ["brand-linktree", IconBrandLinktree],
+  ["brand-linqpad", IconBrandLinqpad],
+  ["brand-livewire", IconBrandLivewire],
+  ["brand-loom", IconBrandLoom],
+  ["brand-mailgun", IconBrandMailgun],
+  ["brand-mantine", IconBrandMantine],
+  ["brand-mastercard", IconBrandMastercard],
+  ["brand-mastodon", IconBrandMastodon],
+  ["brand-matrix", IconBrandMatrix],
+  ["brand-mcdonalds", IconBrandMcdonalds],
+  ["brand-medium", IconBrandMedium],
+  ["brand-meetup", IconBrandMeetup],
+  ["brand-mercedes", IconBrandMercedes],
+  ["brand-messenger", IconBrandMessenger],
+  ["brand-meta", IconBrandMeta],
+  ["brand-metabrainz", IconBrandMetabrainz],
+  ["brand-minecraft", IconBrandMinecraft],
+  ["brand-miniprogram", IconBrandMiniprogram],
+  ["brand-mixpanel", IconBrandMixpanel],
+  ["brand-monday", IconBrandMonday],
+  ["brand-mongodb", IconBrandMongodb],
+  ["brand-my-oppo", IconBrandMyOppo],
+  ["brand-mysql", IconBrandMysql],
+  ["brand-national-geographic", IconBrandNationalGeographic],
+  ["brand-nem", IconBrandNem],
+  ["brand-netbeans", IconBrandNetbeans],
+  ["brand-netease-music", IconBrandNeteaseMusic],
+  ["brand-netflix", IconBrandNetflix],
+  ["brand-nexo", IconBrandNexo],
+  ["brand-nextcloud", IconBrandNextcloud],
+  ["brand-nextjs", IconBrandNextjs],
+  ["brand-nodejs", IconBrandNodejs],
+  ["brand-nord-vpn", IconBrandNordVpn],
+  ["brand-notion", IconBrandNotion],
+  ["brand-npm", IconBrandNpm],
+  ["brand-nuxt", IconBrandNuxt],
+  ["brand-nytimes", IconBrandNytimes],
+  ["brand-oauth", IconBrandOauth],
+  ["brand-office", IconBrandOffice],
+  ["brand-ok-ru", IconBrandOkRu],
+  ["brand-onedrive", IconBrandOnedrive],
+  ["brand-onlyfans", IconBrandOnlyfans],
+  ["brand-open-source", IconBrandOpenSource],
+  ["brand-openai", IconBrandOpenai],
+  ["brand-openvpn", IconBrandOpenvpn],
+  ["brand-opera", IconBrandOpera],
+  ["brand-pagekit", IconBrandPagekit],
+  ["brand-parsinta", IconBrandParsinta],
+  ["brand-patreon", IconBrandPatreon],
+  ["brand-paypal", IconBrandPaypal],
+  ["brand-paypay", IconBrandPaypay],
+  ["brand-peanut", IconBrandPeanut],
+  ["brand-pepsi", IconBrandPepsi],
+  ["brand-php", IconBrandPhp],
+  ["brand-picsart", IconBrandPicsart],
+  ["brand-pinterest", IconBrandPinterest],
+  ["brand-planetscale", IconBrandPlanetscale],
+  ["brand-pnpm", IconBrandPnpm],
+  ["brand-pocket", IconBrandPocket],
+  ["brand-polymer", IconBrandPolymer],
+  ["brand-powershell", IconBrandPowershell],
+  ["brand-printables", IconBrandPrintables],
+  ["brand-prisma", IconBrandPrisma],
+  ["brand-producthunt", IconBrandProducthunt],
+  ["brand-pushbullet", IconBrandPushbullet],
+  ["brand-pushover", IconBrandPushover],
+  ["brand-python", IconBrandPython],
+  ["brand-qq", IconBrandQq],
+  ["brand-radix-ui", IconBrandRadixUi],
+  ["brand-react-native", IconBrandReactNative],
+  ["brand-react", IconBrandReact],
+  ["brand-reason", IconBrandReason],
+  ["brand-reddit", IconBrandReddit],
+  ["brand-redhat", IconBrandRedhat],
+  ["brand-redux", IconBrandRedux],
+  ["brand-revolut", IconBrandRevolut],
+  ["brand-rumble", IconBrandRumble],
+  ["brand-rust", IconBrandRust],
+  ["brand-safari", IconBrandSafari],
+  ["brand-samsungpass", IconBrandSamsungpass],
+  ["brand-sass", IconBrandSass],
+  ["brand-sentry", IconBrandSentry],
+  ["brand-sharik", IconBrandSharik],
+  ["brand-shazam", IconBrandShazam],
+  ["brand-shopee", IconBrandShopee],
+  ["brand-signal", IconBrandSignal],
+  ["brand-sketch", IconBrandSketch],
+  ["brand-skype", IconBrandSkype],
+  ["brand-slack", IconBrandSlack],
+  ["brand-snapchat", IconBrandSnapchat],
+  ["brand-snapseed", IconBrandSnapseed],
+  ["brand-snowflake", IconBrandSnowflake],
+  ["brand-socket-io", IconBrandSocketIo],
+  ["brand-solidjs", IconBrandSolidjs],
+  ["brand-soundcloud", IconBrandSoundcloud],
+  ["brand-spacehey", IconBrandSpacehey],
+  ["brand-speedtest", IconBrandSpeedtest],
+  ["brand-spotify", IconBrandSpotify],
+  ["brand-stackoverflow", IconBrandStackoverflow],
+  ["brand-stackshare", IconBrandStackshare],
+  ["brand-steam", IconBrandSteam],
+  ["brand-stellar", IconBrandStellar],
+  ["brand-stocktwits", IconBrandStocktwits],
+  ["brand-storj", IconBrandStorj],
+  ["brand-storybook", IconBrandStorybook],
+  ["brand-storytel", IconBrandStorytel],
+  ["brand-strava", IconBrandStrava],
+  ["brand-stripe", IconBrandStripe],
+  ["brand-sublime-text", IconBrandSublimeText],
+  ["brand-sugarizer", IconBrandSugarizer],
+  ["brand-supabase", IconBrandSupabase],
+  ["brand-superhuman", IconBrandSuperhuman],
+  ["brand-supernova", IconBrandSupernova],
+  ["brand-surfshark", IconBrandSurfshark],
+  ["brand-svelte", IconBrandSvelte],
+  ["brand-swift", IconBrandSwift],
+  ["brand-symfony", IconBrandSymfony],
+  ["brand-tabler", IconBrandTabler],
+  ["brand-tabnine", IconBrandTabnine],
+  ["brand-tailwind", IconBrandTailwind],
+  ["brand-taobao", IconBrandTaobao],
+  ["brand-teams", IconBrandTeams],
+  ["brand-ted", IconBrandTed],
+  ["brand-telegram", IconBrandTelegram],
+  ["brand-terraform", IconBrandTerraform],
+  ["brand-tesla", IconBrandTesla],
+  ["brand-tether", IconBrandTether],
+  ["brand-thingiverse", IconBrandThingiverse],
+  ["brand-threads", IconBrandThreads],
+  ["brand-threejs", IconBrandThreejs],
+  ["brand-tidal", IconBrandTidal],
+  ["brand-tiktok", IconBrandTiktok],
+  ["brand-tinder", IconBrandTinder],
+  ["brand-topbuzz", IconBrandTopbuzz],
+  ["brand-torchain", IconBrandTorchain],
+  ["brand-toyota", IconBrandToyota],
+  ["brand-trello", IconBrandTrello],
+  ["brand-tripadvisor", IconBrandTripadvisor],
+  ["brand-tumblr", IconBrandTumblr],
+  ["brand-twilio", IconBrandTwilio],
+  ["brand-twitch", IconBrandTwitch],
+  ["brand-twitter", IconBrandTwitter],
+  ["brand-typescript", IconBrandTypescript],
+  ["brand-uber", IconBrandUber],
+  ["brand-ubuntu", IconBrandUbuntu],
+  ["brand-unity", IconBrandUnity],
+  ["brand-unsplash", IconBrandUnsplash],
+  ["brand-upwork", IconBrandUpwork],
+  ["brand-valorant", IconBrandValorant],
+  ["brand-vechain", IconBrandVechain],
+  ["brand-vercel", IconBrandVercel],
+  ["brand-vimeo", IconBrandVimeo],
+  ["brand-vinted", IconBrandVinted],
+  ["brand-visa", IconBrandVisa],
+  ["brand-visual-studio", IconBrandVisualStudio],
+  ["brand-vite", IconBrandVite],
+  ["brand-vivaldi", IconBrandVivaldi],
+  ["brand-vk", IconBrandVk],
+  ["brand-vlc", IconBrandVlc],
+  ["brand-volkswagen", IconBrandVolkswagen],
+  ["brand-vsco", IconBrandVsco],
+  ["brand-vscode", IconBrandVscode],
+  ["brand-vue", IconBrandVue],
+  ["brand-walmart", IconBrandWalmart],
+  ["brand-waze", IconBrandWaze],
+  ["brand-webflow", IconBrandWebflow],
+  ["brand-wechat", IconBrandWechat],
+  ["brand-weibo", IconBrandWeibo],
+  ["brand-whatsapp", IconBrandWhatsapp],
+  ["brand-wikipedia", IconBrandWikipedia],
+  ["brand-windows", IconBrandWindows],
+  ["brand-windy", IconBrandWindy],
+  ["brand-wish", IconBrandWish],
+  ["brand-wix", IconBrandWix],
+  ["brand-wordpress", IconBrandWordpress],
+  ["brand-x", IconBrandX],
+  ["brand-xamarin", IconBrandXamarin],
+  ["brand-xbox", IconBrandXbox],
+  ["brand-xdeep", IconBrandXdeep],
+  ["brand-xing", IconBrandXing],
+  ["brand-yahoo", IconBrandYahoo],
+  ["brand-yandex", IconBrandYandex],
+  ["brand-yarn", IconBrandYarn],
+  ["brand-yatse", IconBrandYatse],
+  ["brand-ycombinator", IconBrandYcombinator],
+  ["brand-youtube-kids", IconBrandYoutubeKids],
+  ["brand-youtube", IconBrandYoutube],
+  ["brand-zalando", IconBrandZalando],
+  ["brand-zapier", IconBrandZapier],
+  ["brand-zeit", IconBrandZeit],
+  ["brand-zhihu", IconBrandZhihu],
+  ["brand-zoom", IconBrandZoom],
+  ["brand-zulip", IconBrandZulip],
+  ["brand-zwift", IconBrandZwift],
+  ["bread-off", IconBreadOff],
+  ["bread", IconBread],
+  ["briefcase-2", IconBriefcase2],
+  ["briefcase-off", IconBriefcaseOff],
+  ["briefcase", IconBriefcase],
+  ["brightness-2", IconBrightness2],
+  ["brightness-auto", IconBrightnessAuto],
+  ["brightness-down", IconBrightnessDown],
+  ["brightness-half", IconBrightnessHalf],
+  ["brightness-off", IconBrightnessOff],
+  ["brightness-up", IconBrightnessUp],
+  ["brightness", IconBrightness],
+  ["broadcast-off", IconBroadcastOff],
+  ["broadcast", IconBroadcast],
+  ["browser-check", IconBrowserCheck],
+  ["browser-maximize", IconBrowserMaximize],
+  ["browser-minus", IconBrowserMinus],
+  ["browser-off", IconBrowserOff],
+  ["browser-plus", IconBrowserPlus],
+  ["browser-share", IconBrowserShare],
+  ["browser-x", IconBrowserX],
+  ["browser", IconBrowser],
+  ["brush-off", IconBrushOff],
+  ["brush", IconBrush],
+  ["bubble-minus", IconBubbleMinus],
+  ["bubble-plus", IconBubblePlus],
+  ["bubble-tea-2", IconBubbleTea2],
+  ["bubble-tea", IconBubbleTea],
+  ["bubble-text", IconBubbleText],
+  ["bubble-x", IconBubbleX],
+  ["bubble", IconBubble],
+  ["bucket-droplet", IconBucketDroplet],
+  ["bucket-off", IconBucketOff],
+  ["bucket", IconBucket],
+  ["bug-off", IconBugOff],
+  ["bug", IconBug],
+  ["building-airport", IconBuildingAirport],
+  ["building-arch", IconBuildingArch],
+  ["building-bank", IconBuildingBank],
+  ["building-bridge-2", IconBuildingBridge2],
+  ["building-bridge", IconBuildingBridge],
+  ["building-broadcast-tower", IconBuildingBroadcastTower],
+  ["building-burj-al-arab", IconBuildingBurjAlArab],
+  ["building-carousel", IconBuildingCarousel],
+  ["building-castle", IconBuildingCastle],
+  ["building-church", IconBuildingChurch],
+  ["building-circus", IconBuildingCircus],
+  ["building-cog", IconBuildingCog],
+  ["building-community", IconBuildingCommunity],
+  ["building-cottage", IconBuildingCottage],
+  ["building-eiffel-tower", IconBuildingEiffelTower],
+  ["building-estate", IconBuildingEstate],
+  ["building-factory-2", IconBuildingFactory2],
+  ["building-factory", IconBuildingFactory],
+  ["building-fortress", IconBuildingFortress],
+  ["building-hospital", IconBuildingHospital],
+  ["building-lighthouse", IconBuildingLighthouse],
+  ["building-minus", IconBuildingMinus],
+  ["building-monument", IconBuildingMonument],
+  ["building-mosque", IconBuildingMosque],
+  ["building-off", IconBuildingOff],
+  ["building-pavilion", IconBuildingPavilion],
+  ["building-plus", IconBuildingPlus],
+  ["building-skyscraper", IconBuildingSkyscraper],
+  ["building-stadium", IconBuildingStadium],
+  ["building-store", IconBuildingStore],
+  ["building-tunnel", IconBuildingTunnel],
+  ["building-warehouse", IconBuildingWarehouse],
+  ["building-wind-turbine", IconBuildingWindTurbine],
+  ["building", IconBuilding],
+  ["buildings", IconBuildings],
+  ["bulb-off", IconBulbOff],
+  ["bulb", IconBulb],
+  ["bulldozer", IconBulldozer],
+  ["burger", IconBurger],
+  ["bus-off", IconBusOff],
+  ["bus-stop", IconBusStop],
+  ["bus", IconBus],
+  ["businessplan", IconBusinessplan],
+  ["butterfly", IconButterfly],
+  ["cactus-off", IconCactusOff],
+  ["cactus", IconCactus],
+  ["cake-off", IconCakeOff],
+  ["cake-roll", IconCakeRoll],
+  ["cake", IconCake],
+  ["calculator-off", IconCalculatorOff],
+  ["calculator", IconCalculator],
+  ["calendar-bolt", IconCalendarBolt],
+  ["calendar-cancel", IconCalendarCancel],
+  ["calendar-check", IconCalendarCheck],
+  ["calendar-clock", IconCalendarClock],
+  ["calendar-code", IconCalendarCode],
+  ["calendar-cog", IconCalendarCog],
+  ["calendar-dollar", IconCalendarDollar],
+  ["calendar-dot", IconCalendarDot],
+  ["calendar-down", IconCalendarDown],
+  ["calendar-due", IconCalendarDue],
+  ["calendar-event", IconCalendarEvent],
+  ["calendar-exclamation", IconCalendarExclamation],
+  ["calendar-heart", IconCalendarHeart],
+  ["calendar-minus", IconCalendarMinus],
+  ["calendar-month", IconCalendarMonth],
+  ["calendar-off", IconCalendarOff],
+  ["calendar-pause", IconCalendarPause],
+  ["calendar-pin", IconCalendarPin],
+  ["calendar-plus", IconCalendarPlus],
+  ["calendar-question", IconCalendarQuestion],
+  ["calendar-repeat", IconCalendarRepeat],
+  ["calendar-sad", IconCalendarSad],
+  ["calendar-search", IconCalendarSearch],
+  ["calendar-share", IconCalendarShare],
+  ["calendar-smile", IconCalendarSmile],
+  ["calendar-star", IconCalendarStar],
+  ["calendar-stats", IconCalendarStats],
+  ["calendar-time", IconCalendarTime],
+  ["calendar-up", IconCalendarUp],
+  ["calendar-user", IconCalendarUser],
+  ["calendar-week", IconCalendarWeek],
+  ["calendar-x", IconCalendarX],
+  ["calendar", IconCalendar],
+  ["camera-ai", IconCameraAi],
+  ["camera-bitcoin", IconCameraBitcoin],
+  ["camera-bolt", IconCameraBolt],
+  ["camera-cancel", IconCameraCancel],
+  ["camera-check", IconCameraCheck],
+  ["camera-code", IconCameraCode],
+  ["camera-cog", IconCameraCog],
+  ["camera-dollar", IconCameraDollar],
+  ["camera-down", IconCameraDown],
+  ["camera-exclamation", IconCameraExclamation],
+  ["camera-heart", IconCameraHeart],
+  ["camera-minus", IconCameraMinus],
+  ["camera-moon", IconCameraMoon],
+  ["camera-off", IconCameraOff],
+  ["camera-pause", IconCameraPause],
+  ["camera-pin", IconCameraPin],
+  ["camera-plus", IconCameraPlus],
+  ["camera-question", IconCameraQuestion],
+  ["camera-rotate", IconCameraRotate],
+  ["camera-search", IconCameraSearch],
+  ["camera-selfie", IconCameraSelfie],
+  ["camera-share", IconCameraShare],
+  ["camera-spark", IconCameraSpark],
+  ["camera-star", IconCameraStar],
+  ["camera-up", IconCameraUp],
+  ["camera-x", IconCameraX],
+  ["camera", IconCamera],
+  ["camper", IconCamper],
+  ["campfire", IconCampfire],
+  ["canary", IconCanary],
+  ["cancel", IconCancel],
+  ["candle", IconCandle],
+  ["candy-off", IconCandyOff],
+  ["candy", IconCandy],
+  ["cane", IconCane],
+  ["cannabis", IconCannabis],
+  ["cap-projecting", IconCapProjecting],
+  ["cap-rounded", IconCapRounded],
+  ["cap-straight", IconCapStraight],
+  ["capsule-horizontal", IconCapsuleHorizontal],
+  ["capsule", IconCapsule],
+  ["capture-off", IconCaptureOff],
+  ["capture", IconCapture],
+  ["car-4wd", IconCar4wd],
+  ["car-crane", IconCarCrane],
+  ["car-crash", IconCarCrash],
+  ["car-door", IconCarDoor],
+  ["car-fan-1", IconCarFan1],
+  ["car-fan-2", IconCarFan2],
+  ["car-fan-3", IconCarFan3],
+  ["car-fan-auto", IconCarFanAuto],
+  ["car-fan", IconCarFan],
+  ["car-garage", IconCarGarage],
+  ["car-lifter", IconCarLifter],
+  ["car-off-road", IconCarOffRoad],
+  ["car-off", IconCarOff],
+  ["car-suspension", IconCarSuspension],
+  ["car-suv", IconCarSuv],
+  ["car-turbine", IconCarTurbine],
+  ["car", IconCar],
+  ["carambola", IconCarambola],
+  ["caravan", IconCaravan],
+  ["cardboards-off", IconCardboardsOff],
+  ["cardboards", IconCardboards],
+  ["cards", IconCards],
+  ["caret-down", IconCaretDown],
+  ["caret-left-right", IconCaretLeftRight],
+  ["caret-left", IconCaretLeft],
+  ["caret-right", IconCaretRight],
+  ["caret-up-down", IconCaretUpDown],
+  ["caret-up", IconCaretUp],
+  ["carousel-horizontal", IconCarouselHorizontal],
+  ["carousel-vertical", IconCarouselVertical],
+  ["carrot-off", IconCarrotOff],
+  ["carrot", IconCarrot],
+  ["cash-banknote-edit", IconCashBanknoteEdit],
+  ["cash-banknote-heart", IconCashBanknoteHeart],
+  ["cash-banknote-minus", IconCashBanknoteMinus],
+  ["cash-banknote-move-back", IconCashBanknoteMoveBack],
+  ["cash-banknote-move", IconCashBanknoteMove],
+  ["cash-banknote-off", IconCashBanknoteOff],
+  ["cash-banknote-plus", IconCashBanknotePlus],
+  ["cash-banknote", IconCashBanknote],
+  ["cash-coin", IconCashCoin],
+  ["cash-edit", IconCashEdit],
+  ["cash-heart", IconCashHeart],
+  ["cash-minus", IconCashMinus],
+  ["cash-move-back", IconCashMoveBack],
+  ["cash-move", IconCashMove],
+  ["cash-off", IconCashOff],
+  ["cash-plus", IconCashPlus],
+  ["cash-register", IconCashRegister],
+  ["cash", IconCash],
+  ["cast-off", IconCastOff],
+  ["cast", IconCast],
+  ["cat", IconCat],
+  ["category-2", IconCategory2],
+  ["category-minus", IconCategoryMinus],
+  ["category-plus", IconCategoryPlus],
+  ["category", IconCategory],
+  ["ce-off", IconCeOff],
+  ["ce", IconCe],
+  ["cell-signal-1", IconCellSignal1],
+  ["cell-signal-2", IconCellSignal2],
+  ["cell-signal-3", IconCellSignal3],
+  ["cell-signal-4", IconCellSignal4],
+  ["cell-signal-5", IconCellSignal5],
+  ["cell-signal-off", IconCellSignalOff],
+  ["cell", IconCell],
+  ["certificate-2-off", IconCertificate2Off],
+  ["certificate-2", IconCertificate2],
+  ["certificate-off", IconCertificateOff],
+  ["certificate", IconCertificate],
+  ["chair-director", IconChairDirector],
+  ["chalkboard-off", IconChalkboardOff],
+  ["chalkboard-teacher", IconChalkboardTeacher],
+  ["chalkboard", IconChalkboard],
+  ["charging-pile", IconChargingPile],
+  ["chart-arcs-3", IconChartArcs3],
+  ["chart-arcs", IconChartArcs],
+  ["chart-area-line", IconChartAreaLine],
+  ["chart-area", IconChartArea],
+  ["chart-arrows-vertical", IconChartArrowsVertical],
+  ["chart-arrows", IconChartArrows],
+  ["chart-bar-off", IconChartBarOff],
+  ["chart-bar-popular", IconChartBarPopular],
+  ["chart-bar", IconChartBar],
+  ["chart-bubble", IconChartBubble],
+  ["chart-candle", IconChartCandle],
+  ["chart-circles", IconChartCircles],
+  ["chart-cohort", IconChartCohort],
+  ["chart-column", IconChartColumn],
+  ["chart-covariate", IconChartCovariate],
+  ["chart-donut-2", IconChartDonut2],
+  ["chart-donut-3", IconChartDonut3],
+  ["chart-donut-4", IconChartDonut4],
+  ["chart-donut", IconChartDonut],
+  ["chart-dots-2", IconChartDots2],
+  ["chart-dots-3", IconChartDots3],
+  ["chart-dots", IconChartDots],
+  ["chart-funnel", IconChartFunnel],
+  ["chart-grid-dots", IconChartGridDots],
+  ["chart-histogram", IconChartHistogram],
+  ["chart-infographic", IconChartInfographic],
+  ["chart-line", IconChartLine],
+  ["chart-pie-2", IconChartPie2],
+  ["chart-pie-3", IconChartPie3],
+  ["chart-pie-4", IconChartPie4],
+  ["chart-pie-off", IconChartPieOff],
+  ["chart-pie", IconChartPie],
+  ["chart-ppf", IconChartPpf],
+  ["chart-radar", IconChartRadar],
+  ["chart-sankey", IconChartSankey],
+  ["chart-scatter-3d", IconChartScatter3d],
+  ["chart-scatter", IconChartScatter],
+  ["chart-treemap", IconChartTreemap],
+  ["check", IconCheck],
+  ["checkbox", IconCheckbox],
+  ["checklist", IconChecklist],
+  ["checks", IconChecks],
+  ["checkup-list", IconCheckupList],
+  ["cheese", IconCheese],
+  ["chef-hat-off", IconChefHatOff],
+  ["chef-hat", IconChefHat],
+  ["cherry", IconCherry],
+  ["chess-bishop", IconChessBishop],
+  ["chess-king", IconChessKing],
+  ["chess-knight", IconChessKnight],
+  ["chess-queen", IconChessQueen],
+  ["chess-rook", IconChessRook],
+  ["chess", IconChess],
+  ["chevron-compact-down", IconChevronCompactDown],
+  ["chevron-compact-left", IconChevronCompactLeft],
+  ["chevron-compact-right", IconChevronCompactRight],
+  ["chevron-compact-up", IconChevronCompactUp],
+  ["chevron-down-left", IconChevronDownLeft],
+  ["chevron-down-right", IconChevronDownRight],
+  ["chevron-down", IconChevronDown],
+  ["chevron-left-pipe", IconChevronLeftPipe],
+  ["chevron-left", IconChevronLeft],
+  ["chevron-right-pipe", IconChevronRightPipe],
+  ["chevron-right", IconChevronRight],
+  ["chevron-up-left", IconChevronUpLeft],
+  ["chevron-up-right", IconChevronUpRight],
+  ["chevron-up", IconChevronUp],
+  ["chevrons-down-left", IconChevronsDownLeft],
+  ["chevrons-down-right", IconChevronsDownRight],
+  ["chevrons-down", IconChevronsDown],
+  ["chevrons-left", IconChevronsLeft],
+  ["chevrons-right", IconChevronsRight],
+  ["chevrons-up-left", IconChevronsUpLeft],
+  ["chevrons-up-right", IconChevronsUpRight],
+  ["chevrons-up", IconChevronsUp],
+  ["chisel", IconChisel],
+  ["chocolate", IconChocolate],
+  ["christmas-ball", IconChristmasBall],
+  ["christmas-tree-off", IconChristmasTreeOff],
+  ["christmas-tree", IconChristmasTree],
+  ["circle-arrow-down-left", IconCircleArrowDownLeft],
+  ["circle-arrow-down-right", IconCircleArrowDownRight],
+  ["circle-arrow-down", IconCircleArrowDown],
+  ["circle-arrow-left", IconCircleArrowLeft],
+  ["circle-arrow-right", IconCircleArrowRight],
+  ["circle-arrow-up-left", IconCircleArrowUpLeft],
+  ["circle-arrow-up-right", IconCircleArrowUpRight],
+  ["circle-arrow-up", IconCircleArrowUp],
+  ["circle-asterisk", IconCircleAsterisk],
+  ["circle-caret-down", IconCircleCaretDown],
+  ["circle-caret-left", IconCircleCaretLeft],
+  ["circle-caret-right", IconCircleCaretRight],
+  ["circle-caret-up", IconCircleCaretUp],
+  ["circle-check", IconCircleCheck],
+  ["circle-chevron-down", IconCircleChevronDown],
+  ["circle-chevron-left", IconCircleChevronLeft],
+  ["circle-chevron-right", IconCircleChevronRight],
+  ["circle-chevron-up", IconCircleChevronUp],
+  ["circle-chevrons-down", IconCircleChevronsDown],
+  ["circle-chevrons-left", IconCircleChevronsLeft],
+  ["circle-chevrons-right", IconCircleChevronsRight],
+  ["circle-chevrons-up", IconCircleChevronsUp],
+  ["circle-dashed-check", IconCircleDashedCheck],
+  ["circle-dashed-letter-a", IconCircleDashedLetterA],
+  ["circle-dashed-letter-b", IconCircleDashedLetterB],
+  ["circle-dashed-letter-c", IconCircleDashedLetterC],
+  ["circle-dashed-letter-d", IconCircleDashedLetterD],
+  ["circle-dashed-letter-e", IconCircleDashedLetterE],
+  ["circle-dashed-letter-f", IconCircleDashedLetterF],
+  ["circle-dashed-letter-g", IconCircleDashedLetterG],
+  ["circle-dashed-letter-h", IconCircleDashedLetterH],
+  ["circle-dashed-letter-i", IconCircleDashedLetterI],
+  ["circle-dashed-letter-j", IconCircleDashedLetterJ],
+  ["circle-dashed-letter-k", IconCircleDashedLetterK],
+  ["circle-dashed-letter-l", IconCircleDashedLetterL],
+  ["circle-dashed-letter-m", IconCircleDashedLetterM],
+  ["circle-dashed-letter-n", IconCircleDashedLetterN],
+  ["circle-dashed-letter-o", IconCircleDashedLetterO],
+  ["circle-dashed-letter-p", IconCircleDashedLetterP],
+  ["circle-dashed-letter-q", IconCircleDashedLetterQ],
+  ["circle-dashed-letter-r", IconCircleDashedLetterR],
+  ["circle-dashed-letter-s", IconCircleDashedLetterS],
+  ["circle-dashed-letter-t", IconCircleDashedLetterT],
+  ["circle-dashed-letter-u", IconCircleDashedLetterU],
+  ["circle-dashed-letter-v", IconCircleDashedLetterV],
+  ["circle-dashed-letter-w", IconCircleDashedLetterW],
+  ["circle-dashed-letter-x", IconCircleDashedLetterX],
+  ["circle-dashed-letter-y", IconCircleDashedLetterY],
+  ["circle-dashed-letter-z", IconCircleDashedLetterZ],
+  ["circle-dashed-minus", IconCircleDashedMinus],
+  ["circle-dashed-number-0", IconCircleDashedNumber0],
+  ["circle-dashed-number-1", IconCircleDashedNumber1],
+  ["circle-dashed-number-2", IconCircleDashedNumber2],
+  ["circle-dashed-number-3", IconCircleDashedNumber3],
+  ["circle-dashed-number-4", IconCircleDashedNumber4],
+  ["circle-dashed-number-5", IconCircleDashedNumber5],
+  ["circle-dashed-number-6", IconCircleDashedNumber6],
+  ["circle-dashed-number-7", IconCircleDashedNumber7],
+  ["circle-dashed-number-8", IconCircleDashedNumber8],
+  ["circle-dashed-number-9", IconCircleDashedNumber9],
+  ["circle-dashed-percentage", IconCircleDashedPercentage],
+  ["circle-dashed-plus", IconCircleDashedPlus],
+  ["circle-dashed-x", IconCircleDashedX],
+  ["circle-dashed", IconCircleDashed],
+  ["circle-dot", IconCircleDot],
+  ["circle-dotted-letter-a", IconCircleDottedLetterA],
+  ["circle-dotted-letter-b", IconCircleDottedLetterB],
+  ["circle-dotted-letter-c", IconCircleDottedLetterC],
+  ["circle-dotted-letter-d", IconCircleDottedLetterD],
+  ["circle-dotted-letter-e", IconCircleDottedLetterE],
+  ["circle-dotted-letter-f", IconCircleDottedLetterF],
+  ["circle-dotted-letter-g", IconCircleDottedLetterG],
+  ["circle-dotted-letter-h", IconCircleDottedLetterH],
+  ["circle-dotted-letter-i", IconCircleDottedLetterI],
+  ["circle-dotted-letter-j", IconCircleDottedLetterJ],
+  ["circle-dotted-letter-k", IconCircleDottedLetterK],
+  ["circle-dotted-letter-l", IconCircleDottedLetterL],
+  ["circle-dotted-letter-m", IconCircleDottedLetterM],
+  ["circle-dotted-letter-n", IconCircleDottedLetterN],
+  ["circle-dotted-letter-o", IconCircleDottedLetterO],
+  ["circle-dotted-letter-p", IconCircleDottedLetterP],
+  ["circle-dotted-letter-q", IconCircleDottedLetterQ],
+  ["circle-dotted-letter-r", IconCircleDottedLetterR],
+  ["circle-dotted-letter-s", IconCircleDottedLetterS],
+  ["circle-dotted-letter-t", IconCircleDottedLetterT],
+  ["circle-dotted-letter-u", IconCircleDottedLetterU],
+  ["circle-dotted-letter-v", IconCircleDottedLetterV],
+  ["circle-dotted-letter-w", IconCircleDottedLetterW],
+  ["circle-dotted-letter-x", IconCircleDottedLetterX],
+  ["circle-dotted-letter-y", IconCircleDottedLetterY],
+  ["circle-dotted-letter-z", IconCircleDottedLetterZ],
+  ["circle-dotted", IconCircleDotted],
+  ["circle-half-2", IconCircleHalf2],
+  ["circle-half-vertical", IconCircleHalfVertical],
+  ["circle-half", IconCircleHalf],
+  ["circle-heart", IconCircleHeart],
+  ["circle-key", IconCircleKey],
+  ["circle-letter-a", IconCircleLetterA],
+  ["circle-letter-b", IconCircleLetterB],
+  ["circle-letter-c", IconCircleLetterC],
+  ["circle-letter-d", IconCircleLetterD],
+  ["circle-letter-e", IconCircleLetterE],
+  ["circle-letter-f", IconCircleLetterF],
+  ["circle-letter-g", IconCircleLetterG],
+  ["circle-letter-h", IconCircleLetterH],
+  ["circle-letter-i", IconCircleLetterI],
+  ["circle-letter-j", IconCircleLetterJ],
+  ["circle-letter-k", IconCircleLetterK],
+  ["circle-letter-l", IconCircleLetterL],
+  ["circle-letter-m", IconCircleLetterM],
+  ["circle-letter-n", IconCircleLetterN],
+  ["circle-letter-o", IconCircleLetterO],
+  ["circle-letter-p", IconCircleLetterP],
+  ["circle-letter-q", IconCircleLetterQ],
+  ["circle-letter-r", IconCircleLetterR],
+  ["circle-letter-s", IconCircleLetterS],
+  ["circle-letter-t", IconCircleLetterT],
+  ["circle-letter-u", IconCircleLetterU],
+  ["circle-letter-v", IconCircleLetterV],
+  ["circle-letter-w", IconCircleLetterW],
+  ["circle-letter-x", IconCircleLetterX],
+  ["circle-letter-y", IconCircleLetterY],
+  ["circle-letter-z", IconCircleLetterZ],
+  ["circle-minus-2", IconCircleMinus2],
+  ["circle-minus", IconCircleMinus],
+  ["circle-number-0", IconCircleNumber0],
+  ["circle-number-1", IconCircleNumber1],
+  ["circle-number-2", IconCircleNumber2],
+  ["circle-number-3", IconCircleNumber3],
+  ["circle-number-4", IconCircleNumber4],
+  ["circle-number-5", IconCircleNumber5],
+  ["circle-number-6", IconCircleNumber6],
+  ["circle-number-7", IconCircleNumber7],
+  ["circle-number-8", IconCircleNumber8],
+  ["circle-number-9", IconCircleNumber9],
+  ["circle-off", IconCircleOff],
+  ["circle-open-arrow-down", IconCircleOpenArrowDown],
+  ["circle-open-arrow-left", IconCircleOpenArrowLeft],
+  ["circle-open-arrow-right", IconCircleOpenArrowRight],
+  ["circle-open-arrow-up", IconCircleOpenArrowUp],
+  ["circle-pause", IconCirclePause],
+  ["circle-percentage", IconCirclePercentage],
+  ["circle-play", IconCirclePlay],
+  ["circle-plus-2", IconCirclePlus2],
+  ["circle-plus-minus", IconCirclePlusMinus],
+  ["circle-plus", IconCirclePlus],
+  ["circle-rectangle-off", IconCircleRectangleOff],
+  ["circle-rectangle", IconCircleRectangle],
+  ["circle-square", IconCircleSquare],
+  ["circle-stop", IconCircleStop],
+  ["circle-triangle", IconCircleTriangle],
+  ["circle-x", IconCircleX],
+  ["circle", IconCircle],
+  ["circles-relation", IconCirclesRelation],
+  ["circles", IconCircles],
+  ["circuit-ammeter", IconCircuitAmmeter],
+  ["circuit-battery", IconCircuitBattery],
+  ["circuit-bulb", IconCircuitBulb],
+  ["circuit-capacitor-polarized", IconCircuitCapacitorPolarized],
+  ["circuit-capacitor", IconCircuitCapacitor],
+  ["circuit-cell-plus", IconCircuitCellPlus],
+  ["circuit-cell", IconCircuitCell],
+  ["circuit-changeover", IconCircuitChangeover],
+  ["circuit-diode-zener", IconCircuitDiodeZener],
+  ["circuit-diode", IconCircuitDiode],
+  ["circuit-ground-digital", IconCircuitGroundDigital],
+  ["circuit-ground", IconCircuitGround],
+  ["circuit-inductor", IconCircuitInductor],
+  ["circuit-motor", IconCircuitMotor],
+  ["circuit-pushbutton", IconCircuitPushbutton],
+  ["circuit-resistor", IconCircuitResistor],
+  ["circuit-switch-closed", IconCircuitSwitchClosed],
+  ["circuit-switch-open", IconCircuitSwitchOpen],
+  ["circuit-voltmeter", IconCircuitVoltmeter],
+  ["clear-all", IconClearAll],
+  ["clear-formatting", IconClearFormatting],
+  ["clef-staff", IconClefStaff],
+  ["clef", IconClef],
+  ["click", IconClick],
+  ["cliff-jumping", IconCliffJumping],
+  ["clipboard-check", IconClipboardCheck],
+  ["clipboard-copy", IconClipboardCopy],
+  ["clipboard-data", IconClipboardData],
+  ["clipboard-heart", IconClipboardHeart],
+  ["clipboard-list", IconClipboardList],
+  ["clipboard-off", IconClipboardOff],
+  ["clipboard-plus", IconClipboardPlus],
+  ["clipboard-search", IconClipboardSearch],
+  ["clipboard-smile", IconClipboardSmile],
+  ["clipboard-text", IconClipboardText],
+  ["clipboard-typography", IconClipboardTypography],
+  ["clipboard-x", IconClipboardX],
+  ["clipboard", IconClipboard],
+  ["clock-12", IconClock12],
+  ["clock-2", IconClock2],
+  ["clock-24", IconClock24],
+  ["clock-bitcoin", IconClockBitcoin],
+  ["clock-bolt", IconClockBolt],
+  ["clock-cancel", IconClockCancel],
+  ["clock-check", IconClockCheck],
+  ["clock-code", IconClockCode],
+  ["clock-cog", IconClockCog],
+  ["clock-dollar", IconClockDollar],
+  ["clock-down", IconClockDown],
+  ["clock-edit", IconClockEdit],
+  ["clock-exclamation", IconClockExclamation],
+  ["clock-heart", IconClockHeart],
+  ["clock-hour-1", IconClockHour1],
+  ["clock-hour-10", IconClockHour10],
+  ["clock-hour-11", IconClockHour11],
+  ["clock-hour-12", IconClockHour12],
+  ["clock-hour-2", IconClockHour2],
+  ["clock-hour-3", IconClockHour3],
+  ["clock-hour-4", IconClockHour4],
+  ["clock-hour-5", IconClockHour5],
+  ["clock-hour-6", IconClockHour6],
+  ["clock-hour-7", IconClockHour7],
+  ["clock-hour-8", IconClockHour8],
+  ["clock-hour-9", IconClockHour9],
+  ["clock-minus", IconClockMinus],
+  ["clock-off", IconClockOff],
+  ["clock-pause", IconClockPause],
+  ["clock-pin", IconClockPin],
+  ["clock-play", IconClockPlay],
+  ["clock-plus", IconClockPlus],
+  ["clock-question", IconClockQuestion],
+  ["clock-record", IconClockRecord],
+  ["clock-search", IconClockSearch],
+  ["clock-share", IconClockShare],
+  ["clock-shield", IconClockShield],
+  ["clock-star", IconClockStar],
+  ["clock-stop", IconClockStop],
+  ["clock-up", IconClockUp],
+  ["clock-x", IconClockX],
+  ["clock", IconClock],
+  ["clothes-rack-off", IconClothesRackOff],
+  ["clothes-rack", IconClothesRack],
+  ["cloud-bitcoin", IconCloudBitcoin],
+  ["cloud-bolt", IconCloudBolt],
+  ["cloud-cancel", IconCloudCancel],
+  ["cloud-check", IconCloudCheck],
+  ["cloud-code", IconCloudCode],
+  ["cloud-cog", IconCloudCog],
+  ["cloud-computing", IconCloudComputing],
+  ["cloud-data-connection", IconCloudDataConnection],
+  ["cloud-dollar", IconCloudDollar],
+  ["cloud-down", IconCloudDown],
+  ["cloud-download", IconCloudDownload],
+  ["cloud-exclamation", IconCloudExclamation],
+  ["cloud-fog", IconCloudFog],
+  ["cloud-heart", IconCloudHeart],
+  ["cloud-lock-open", IconCloudLockOpen],
+  ["cloud-lock", IconCloudLock],
+  ["cloud-minus", IconCloudMinus],
+  ["cloud-network", IconCloudNetwork],
+  ["cloud-off", IconCloudOff],
+  ["cloud-pause", IconCloudPause],
+  ["cloud-pin", IconCloudPin],
+  ["cloud-plus", IconCloudPlus],
+  ["cloud-question", IconCloudQuestion],
+  ["cloud-rain", IconCloudRain],
+  ["cloud-search", IconCloudSearch],
+  ["cloud-share", IconCloudShare],
+  ["cloud-snow", IconCloudSnow],
+  ["cloud-star", IconCloudStar],
+  ["cloud-storm", IconCloudStorm],
+  ["cloud-up", IconCloudUp],
+  ["cloud-upload", IconCloudUpload],
+  ["cloud-x", IconCloudX],
+  ["cloud", IconCloud],
+  ["clover-2", IconClover2],
+  ["clover", IconClover],
+  ["clubs", IconClubs],
+  ["code-ai", IconCodeAi],
+  ["code-asterisk", IconCodeAsterisk],
+  ["code-circle-2", IconCodeCircle2],
+  ["code-circle", IconCodeCircle],
+  ["code-dots", IconCodeDots],
+  ["code-minus", IconCodeMinus],
+  ["code-off", IconCodeOff],
+  ["code-plus", IconCodePlus],
+  ["code-variable-minus", IconCodeVariableMinus],
+  ["code-variable-plus", IconCodeVariablePlus],
+  ["code-variable", IconCodeVariable],
+  ["code", IconCode],
+  ["codeblock", IconCodeblock],
+  ["coffee-off", IconCoffeeOff],
+  ["coffee", IconCoffee],
+  ["coffin", IconCoffin],
+  ["coin-bitcoin", IconCoinBitcoin],
+  ["coin-euro", IconCoinEuro],
+  ["coin-monero", IconCoinMonero],
+  ["coin-off", IconCoinOff],
+  ["coin-pound", IconCoinPound],
+  ["coin-rupee", IconCoinRupee],
+  ["coin-taka", IconCoinTaka],
+  ["coin-yen", IconCoinYen],
+  ["coin-yuan", IconCoinYuan],
+  ["coin", IconCoin],
+  ["coins", IconCoins],
+  ["color-filter", IconColorFilter],
+  ["color-picker-off", IconColorPickerOff],
+  ["color-picker", IconColorPicker],
+  ["color-swatch-off", IconColorSwatchOff],
+  ["color-swatch", IconColorSwatch],
+  ["column-insert-left", IconColumnInsertLeft],
+  ["column-insert-right", IconColumnInsertRight],
+  ["column-remove", IconColumnRemove],
+  ["columns-1", IconColumns1],
+  ["columns-2", IconColumns2],
+  ["columns-3", IconColumns3],
+  ["columns-off", IconColumnsOff],
+  ["columns", IconColumns],
+  ["comet", IconComet],
+  ["command-off", IconCommandOff],
+  ["command", IconCommand],
+  ["compass-off", IconCompassOff],
+  ["compass", IconCompass],
+  ["components-off", IconComponentsOff],
+  ["components", IconComponents],
+  ["cone-2", IconCone2],
+  ["cone-off", IconConeOff],
+  ["cone-plus", IconConePlus],
+  ["cone", IconCone],
+  ["confetti-off", IconConfettiOff],
+  ["confetti", IconConfetti],
+  ["confucius", IconConfucius],
+  ["congruent-to", IconCongruentTo],
+  ["connection", IconConnection],
+  ["container-off", IconContainerOff],
+  ["container", IconContainer],
+  ["contract", IconContract],
+  ["contrast-2-off", IconContrast2Off],
+  ["contrast-2", IconContrast2],
+  ["contrast-off", IconContrastOff],
+  ["contrast", IconContrast],
+  ["cooker", IconCooker],
+  ["cookie-man", IconCookieMan],
+  ["cookie-off", IconCookieOff],
+  ["cookie", IconCookie],
+  ["copy-check", IconCopyCheck],
+  ["copy-minus", IconCopyMinus],
+  ["copy-off", IconCopyOff],
+  ["copy-plus", IconCopyPlus],
+  ["copy-x", IconCopyX],
+  ["copy", IconCopy],
+  ["copyleft-off", IconCopyleftOff],
+  ["copyleft", IconCopyleft],
+  ["copyright-off", IconCopyrightOff],
+  ["copyright", IconCopyright],
+  ["corner-down-left-double", IconCornerDownLeftDouble],
+  ["corner-down-left", IconCornerDownLeft],
+  ["corner-down-right-double", IconCornerDownRightDouble],
+  ["corner-down-right", IconCornerDownRight],
+  ["corner-left-down-double", IconCornerLeftDownDouble],
+  ["corner-left-down", IconCornerLeftDown],
+  ["corner-left-up-double", IconCornerLeftUpDouble],
+  ["corner-left-up", IconCornerLeftUp],
+  ["corner-right-down-double", IconCornerRightDownDouble],
+  ["corner-right-down", IconCornerRightDown],
+  ["corner-right-up-double", IconCornerRightUpDouble],
+  ["corner-right-up", IconCornerRightUp],
+  ["corner-up-left-double", IconCornerUpLeftDouble],
+  ["corner-up-left", IconCornerUpLeft],
+  ["corner-up-right-double", IconCornerUpRightDouble],
+  ["corner-up-right", IconCornerUpRight],
+  ["cpu-2", IconCpu2],
+  ["cpu-off", IconCpuOff],
+  ["cpu", IconCpu],
+  ["crane-off", IconCraneOff],
+  ["crane", IconCrane],
+  ["creative-commons-by", IconCreativeCommonsBy],
+  ["creative-commons-nc", IconCreativeCommonsNc],
+  ["creative-commons-nd", IconCreativeCommonsNd],
+  ["creative-commons-off", IconCreativeCommonsOff],
+  ["creative-commons-sa", IconCreativeCommonsSa],
+  ["creative-commons-zero", IconCreativeCommonsZero],
+  ["creative-commons", IconCreativeCommons],
+  ["credit-card-hand", IconCreditCardHand],
+  ["credit-card-off", IconCreditCardOff],
+  ["credit-card-pay", IconCreditCardPay],
+  ["credit-card-refund", IconCreditCardRefund],
+  ["credit-card", IconCreditCard],
+  ["credits", IconCredits],
+  ["cricket", IconCricket],
+  ["crop-1-1", IconCrop11],
+  ["crop-16-9", IconCrop169],
+  ["crop-3-2", IconCrop32],
+  ["crop-5-4", IconCrop54],
+  ["crop-7-5", IconCrop75],
+  ["crop-landscape", IconCropLandscape],
+  ["crop-portrait", IconCropPortrait],
+  ["crop", IconCrop],
+  ["cross-off", IconCrossOff],
+  ["cross", IconCross],
+  ["crosshair", IconCrosshair],
+  ["crown-off", IconCrownOff],
+  ["crown", IconCrown],
+  ["crutches-off", IconCrutchesOff],
+  ["crutches", IconCrutches],
+  ["crystal-ball", IconCrystalBall],
+  ["csv", IconCsv],
+  ["cube-3d-sphere-off", IconCube3dSphereOff],
+  ["cube-3d-sphere", IconCube3dSphere],
+  ["cube-off", IconCubeOff],
+  ["cube-plus", IconCubePlus],
+  ["cube-send", IconCubeSend],
+  ["cube-spark", IconCubeSpark],
+  ["cube-unfolded", IconCubeUnfolded],
+  ["cube", IconCube],
+  ["cup-off", IconCupOff],
+  ["cup", IconCup],
+  ["curling", IconCurling],
+  ["curly-loop", IconCurlyLoop],
+  ["currency-afghani", IconCurrencyAfghani],
+  ["currency-bahraini", IconCurrencyBahraini],
+  ["currency-baht", IconCurrencyBaht],
+  ["currency-bitcoin", IconCurrencyBitcoin],
+  ["currency-cent", IconCurrencyCent],
+  ["currency-dinar", IconCurrencyDinar],
+  ["currency-dirham", IconCurrencyDirham],
+  ["currency-dogecoin", IconCurrencyDogecoin],
+  ["currency-dollar-australian", IconCurrencyDollarAustralian],
+  ["currency-dollar-brunei", IconCurrencyDollarBrunei],
+  ["currency-dollar-canadian", IconCurrencyDollarCanadian],
+  ["currency-dollar-guyanese", IconCurrencyDollarGuyanese],
+  ["currency-dollar-off", IconCurrencyDollarOff],
+  ["currency-dollar-singapore", IconCurrencyDollarSingapore],
+  ["currency-dollar-zimbabwean", IconCurrencyDollarZimbabwean],
+  ["currency-dollar", IconCurrencyDollar],
+  ["currency-dong", IconCurrencyDong],
+  ["currency-dram", IconCurrencyDram],
+  ["currency-ethereum", IconCurrencyEthereum],
+  ["currency-euro-off", IconCurrencyEuroOff],
+  ["currency-euro", IconCurrencyEuro],
+  ["currency-florin", IconCurrencyFlorin],
+  ["currency-forint", IconCurrencyForint],
+  ["currency-frank", IconCurrencyFrank],
+  ["currency-guarani", IconCurrencyGuarani],
+  ["currency-hryvnia", IconCurrencyHryvnia],
+  ["currency-husd", IconCurrencyHusd],
+  ["currency-iranian-rial", IconCurrencyIranianRial],
+  ["currency-kip", IconCurrencyKip],
+  ["currency-krone-czech", IconCurrencyKroneCzech],
+  ["currency-krone-danish", IconCurrencyKroneDanish],
+  ["currency-krone-swedish", IconCurrencyKroneSwedish],
+  ["currency-lari", IconCurrencyLari],
+  ["currency-leu", IconCurrencyLeu],
+  ["currency-lira", IconCurrencyLira],
+  ["currency-litecoin", IconCurrencyLitecoin],
+  ["currency-lyd", IconCurrencyLyd],
+  ["currency-manat", IconCurrencyManat],
+  ["currency-monero", IconCurrencyMonero],
+  ["currency-naira", IconCurrencyNaira],
+  ["currency-nano", IconCurrencyNano],
+  ["currency-off", IconCurrencyOff],
+  ["currency-paanga", IconCurrencyPaanga],
+  ["currency-peso", IconCurrencyPeso],
+  ["currency-pound-off", IconCurrencyPoundOff],
+  ["currency-pound", IconCurrencyPound],
+  ["currency-quetzal", IconCurrencyQuetzal],
+  ["currency-real", IconCurrencyReal],
+  ["currency-renminbi", IconCurrencyRenminbi],
+  ["currency-ripple", IconCurrencyRipple],
+  ["currency-riyal", IconCurrencyRiyal],
+  ["currency-ruble", IconCurrencyRuble],
+  ["currency-rufiyaa", IconCurrencyRufiyaa],
+  ["currency-rupee-nepalese", IconCurrencyRupeeNepalese],
+  ["currency-rupee", IconCurrencyRupee],
+  ["currency-shekel", IconCurrencyShekel],
+  ["currency-solana", IconCurrencySolana],
+  ["currency-som", IconCurrencySom],
+  ["currency-taka", IconCurrencyTaka],
+  ["currency-tenge", IconCurrencyTenge],
+  ["currency-tether", IconCurrencyTether],
+  ["currency-tugrik", IconCurrencyTugrik],
+  ["currency-won", IconCurrencyWon],
+  ["currency-xrp", IconCurrencyXrp],
+  ["currency-yen-off", IconCurrencyYenOff],
+  ["currency-yen", IconCurrencyYen],
+  ["currency-yuan", IconCurrencyYuan],
+  ["currency-zcash", IconCurrencyZcash],
+  ["currency-zloty", IconCurrencyZloty],
+  ["currency", IconCurrency],
+  ["current-location-off", IconCurrentLocationOff],
+  ["current-location", IconCurrentLocation],
+  ["cursor-off", IconCursorOff],
+  ["cursor-text", IconCursorText],
+  ["cut", IconCut],
+  ["cylinder-off", IconCylinderOff],
+  ["cylinder-plus", IconCylinderPlus],
+  ["cylinder", IconCylinder],
+  ["dashboard-off", IconDashboardOff],
+  ["dashboard", IconDashboard],
+  ["database-cog", IconDatabaseCog],
+  ["database-dollar", IconDatabaseDollar],
+  ["database-edit", IconDatabaseEdit],
+  ["database-exclamation", IconDatabaseExclamation],
+  ["database-export", IconDatabaseExport],
+  ["database-heart", IconDatabaseHeart],
+  ["database-import", IconDatabaseImport],
+  ["database-leak", IconDatabaseLeak],
+  ["database-minus", IconDatabaseMinus],
+  ["database-off", IconDatabaseOff],
+  ["database-plus", IconDatabasePlus],
+  ["database-search", IconDatabaseSearch],
+  ["database-share", IconDatabaseShare],
+  ["database-smile", IconDatabaseSmile],
+  ["database-star", IconDatabaseStar],
+  ["database-x", IconDatabaseX],
+  ["database", IconDatabase],
+  ["deaf", IconDeaf],
+  ["decimal", IconDecimal],
+  ["deer", IconDeer],
+  ["delta", IconDelta],
+  ["dental-broken", IconDentalBroken],
+  ["dental-off", IconDentalOff],
+  ["dental", IconDental],
+  ["deselect", IconDeselect],
+  ["desk", IconDesk],
+  ["details-off", IconDetailsOff],
+  ["details", IconDetails],
+  ["device-3d-camera", IconDevice3dCamera],
+  ["device-3d-lens", IconDevice3dLens],
+  ["device-airpods-case", IconDeviceAirpodsCase],
+  ["device-airpods", IconDeviceAirpods],
+  ["device-airtag", IconDeviceAirtag],
+  ["device-analytics", IconDeviceAnalytics],
+  ["device-audio-tape", IconDeviceAudioTape],
+  ["device-camera-phone", IconDeviceCameraPhone],
+  ["device-cctv-off", IconDeviceCctvOff],
+  ["device-cctv", IconDeviceCctv],
+  ["device-computer-camera-2", IconDeviceComputerCamera2],
+  ["device-computer-camera-off", IconDeviceComputerCameraOff],
+  ["device-computer-camera", IconDeviceComputerCamera],
+  ["device-desktop-analytics", IconDeviceDesktopAnalytics],
+  ["device-desktop-bolt", IconDeviceDesktopBolt],
+  ["device-desktop-cancel", IconDeviceDesktopCancel],
+  ["device-desktop-check", IconDeviceDesktopCheck],
+  ["device-desktop-code", IconDeviceDesktopCode],
+  ["device-desktop-cog", IconDeviceDesktopCog],
+  ["device-desktop-dollar", IconDeviceDesktopDollar],
+  ["device-desktop-down", IconDeviceDesktopDown],
+  ["device-desktop-exclamation", IconDeviceDesktopExclamation],
+  ["device-desktop-heart", IconDeviceDesktopHeart],
+  ["device-desktop-minus", IconDeviceDesktopMinus],
+  ["device-desktop-off", IconDeviceDesktopOff],
+  ["device-desktop-pause", IconDeviceDesktopPause],
+  ["device-desktop-pin", IconDeviceDesktopPin],
+  ["device-desktop-plus", IconDeviceDesktopPlus],
+  ["device-desktop-question", IconDeviceDesktopQuestion],
+  ["device-desktop-search", IconDeviceDesktopSearch],
+  ["device-desktop-share", IconDeviceDesktopShare],
+  ["device-desktop-star", IconDeviceDesktopStar],
+  ["device-desktop-up", IconDeviceDesktopUp],
+  ["device-desktop-x", IconDeviceDesktopX],
+  ["device-desktop", IconDeviceDesktop],
+  ["device-floppy", IconDeviceFloppy],
+  ["device-gamepad-2", IconDeviceGamepad2],
+  ["device-gamepad-3", IconDeviceGamepad3],
+  ["device-gamepad", IconDeviceGamepad],
+  ["device-heart-monitor", IconDeviceHeartMonitor],
+  ["device-imac-bolt", IconDeviceImacBolt],
+  ["device-imac-cancel", IconDeviceImacCancel],
+  ["device-imac-check", IconDeviceImacCheck],
+  ["device-imac-code", IconDeviceImacCode],
+  ["device-imac-cog", IconDeviceImacCog],
+  ["device-imac-dollar", IconDeviceImacDollar],
+  ["device-imac-down", IconDeviceImacDown],
+  ["device-imac-exclamation", IconDeviceImacExclamation],
+  ["device-imac-heart", IconDeviceImacHeart],
+  ["device-imac-minus", IconDeviceImacMinus],
+  ["device-imac-off", IconDeviceImacOff],
+  ["device-imac-pause", IconDeviceImacPause],
+  ["device-imac-pin", IconDeviceImacPin],
+  ["device-imac-plus", IconDeviceImacPlus],
+  ["device-imac-question", IconDeviceImacQuestion],
+  ["device-imac-search", IconDeviceImacSearch],
+  ["device-imac-share", IconDeviceImacShare],
+  ["device-imac-star", IconDeviceImacStar],
+  ["device-imac-up", IconDeviceImacUp],
+  ["device-imac-x", IconDeviceImacX],
+  ["device-imac", IconDeviceImac],
+  ["device-ipad-bolt", IconDeviceIpadBolt],
+  ["device-ipad-cancel", IconDeviceIpadCancel],
+  ["device-ipad-check", IconDeviceIpadCheck],
+  ["device-ipad-code", IconDeviceIpadCode],
+  ["device-ipad-cog", IconDeviceIpadCog],
+  ["device-ipad-dollar", IconDeviceIpadDollar],
+  ["device-ipad-down", IconDeviceIpadDown],
+  ["device-ipad-exclamation", IconDeviceIpadExclamation],
+  ["device-ipad-heart", IconDeviceIpadHeart],
+  ["device-ipad-horizontal-bolt", IconDeviceIpadHorizontalBolt],
+  ["device-ipad-horizontal-cancel", IconDeviceIpadHorizontalCancel],
+  ["device-ipad-horizontal-check", IconDeviceIpadHorizontalCheck],
+  ["device-ipad-horizontal-code", IconDeviceIpadHorizontalCode],
+  ["device-ipad-horizontal-cog", IconDeviceIpadHorizontalCog],
+  ["device-ipad-horizontal-dollar", IconDeviceIpadHorizontalDollar],
+  ["device-ipad-horizontal-down", IconDeviceIpadHorizontalDown],
+  ["device-ipad-horizontal-exclamation", IconDeviceIpadHorizontalExclamation],
+  ["device-ipad-horizontal-heart", IconDeviceIpadHorizontalHeart],
+  ["device-ipad-horizontal-minus", IconDeviceIpadHorizontalMinus],
+  ["device-ipad-horizontal-off", IconDeviceIpadHorizontalOff],
+  ["device-ipad-horizontal-pause", IconDeviceIpadHorizontalPause],
+  ["device-ipad-horizontal-pin", IconDeviceIpadHorizontalPin],
+  ["device-ipad-horizontal-plus", IconDeviceIpadHorizontalPlus],
+  ["device-ipad-horizontal-question", IconDeviceIpadHorizontalQuestion],
+  ["device-ipad-horizontal-search", IconDeviceIpadHorizontalSearch],
+  ["device-ipad-horizontal-share", IconDeviceIpadHorizontalShare],
+  ["device-ipad-horizontal-star", IconDeviceIpadHorizontalStar],
+  ["device-ipad-horizontal-up", IconDeviceIpadHorizontalUp],
+  ["device-ipad-horizontal-x", IconDeviceIpadHorizontalX],
+  ["device-ipad-horizontal", IconDeviceIpadHorizontal],
+  ["device-ipad-minus", IconDeviceIpadMinus],
+  ["device-ipad-off", IconDeviceIpadOff],
+  ["device-ipad-pause", IconDeviceIpadPause],
+  ["device-ipad-pin", IconDeviceIpadPin],
+  ["device-ipad-plus", IconDeviceIpadPlus],
+  ["device-ipad-question", IconDeviceIpadQuestion],
+  ["device-ipad-search", IconDeviceIpadSearch],
+  ["device-ipad-share", IconDeviceIpadShare],
+  ["device-ipad-star", IconDeviceIpadStar],
+  ["device-ipad-up", IconDeviceIpadUp],
+  ["device-ipad-x", IconDeviceIpadX],
+  ["device-ipad", IconDeviceIpad],
+  ["device-landline-phone", IconDeviceLandlinePhone],
+  ["device-laptop-off", IconDeviceLaptopOff],
+  ["device-laptop", IconDeviceLaptop],
+  ["device-mobile-bolt", IconDeviceMobileBolt],
+  ["device-mobile-cancel", IconDeviceMobileCancel],
+  ["device-mobile-charging", IconDeviceMobileCharging],
+  ["device-mobile-check", IconDeviceMobileCheck],
+  ["device-mobile-code", IconDeviceMobileCode],
+  ["device-mobile-cog", IconDeviceMobileCog],
+  ["device-mobile-dollar", IconDeviceMobileDollar],
+  ["device-mobile-down", IconDeviceMobileDown],
+  ["device-mobile-exclamation", IconDeviceMobileExclamation],
+  ["device-mobile-heart", IconDeviceMobileHeart],
+  ["device-mobile-message", IconDeviceMobileMessage],
+  ["device-mobile-minus", IconDeviceMobileMinus],
+  ["device-mobile-off", IconDeviceMobileOff],
+  ["device-mobile-pause", IconDeviceMobilePause],
+  ["device-mobile-pin", IconDeviceMobilePin],
+  ["device-mobile-plus", IconDeviceMobilePlus],
+  ["device-mobile-question", IconDeviceMobileQuestion],
+  ["device-mobile-rotated", IconDeviceMobileRotated],
+  ["device-mobile-search", IconDeviceMobileSearch],
+  ["device-mobile-share", IconDeviceMobileShare],
+  ["device-mobile-star", IconDeviceMobileStar],
+  ["device-mobile-up", IconDeviceMobileUp],
+  ["device-mobile-vibration", IconDeviceMobileVibration],
+  ["device-mobile-x", IconDeviceMobileX],
+  ["device-mobile", IconDeviceMobile],
+  ["device-nintendo-off", IconDeviceNintendoOff],
+  ["device-nintendo", IconDeviceNintendo],
+  ["device-projector", IconDeviceProjector],
+  ["device-remote", IconDeviceRemote],
+  ["device-screen", IconDeviceScreen],
+  ["device-sd-card", IconDeviceSdCard],
+  ["device-sim-1", IconDeviceSim1],
+  ["device-sim-2", IconDeviceSim2],
+  ["device-sim-3", IconDeviceSim3],
+  ["device-sim", IconDeviceSim],
+  ["device-speaker-off", IconDeviceSpeakerOff],
+  ["device-speaker", IconDeviceSpeaker],
+  ["device-tablet-bolt", IconDeviceTabletBolt],
+  ["device-tablet-cancel", IconDeviceTabletCancel],
+  ["device-tablet-check", IconDeviceTabletCheck],
+  ["device-tablet-code", IconDeviceTabletCode],
+  ["device-tablet-cog", IconDeviceTabletCog],
+  ["device-tablet-dollar", IconDeviceTabletDollar],
+  ["device-tablet-down", IconDeviceTabletDown],
+  ["device-tablet-exclamation", IconDeviceTabletExclamation],
+  ["device-tablet-heart", IconDeviceTabletHeart],
+  ["device-tablet-minus", IconDeviceTabletMinus],
+  ["device-tablet-off", IconDeviceTabletOff],
+  ["device-tablet-pause", IconDeviceTabletPause],
+  ["device-tablet-pin", IconDeviceTabletPin],
+  ["device-tablet-plus", IconDeviceTabletPlus],
+  ["device-tablet-question", IconDeviceTabletQuestion],
+  ["device-tablet-search", IconDeviceTabletSearch],
+  ["device-tablet-share", IconDeviceTabletShare],
+  ["device-tablet-star", IconDeviceTabletStar],
+  ["device-tablet-up", IconDeviceTabletUp],
+  ["device-tablet-x", IconDeviceTabletX],
+  ["device-tablet", IconDeviceTablet],
+  ["device-tv-off", IconDeviceTvOff],
+  ["device-tv-old", IconDeviceTvOld],
+  ["device-tv", IconDeviceTv],
+  ["device-unknown", IconDeviceUnknown],
+  ["device-usb", IconDeviceUsb],
+  ["device-vision-pro-wifi", IconDeviceVisionProWifi],
+  ["device-vision-pro", IconDeviceVisionPro],
+  ["device-watch-bolt", IconDeviceWatchBolt],
+  ["device-watch-cancel", IconDeviceWatchCancel],
+  ["device-watch-check", IconDeviceWatchCheck],
+  ["device-watch-code", IconDeviceWatchCode],
+  ["device-watch-cog", IconDeviceWatchCog],
+  ["device-watch-dollar", IconDeviceWatchDollar],
+  ["device-watch-down", IconDeviceWatchDown],
+  ["device-watch-exclamation", IconDeviceWatchExclamation],
+  ["device-watch-heart", IconDeviceWatchHeart],
+  ["device-watch-minus", IconDeviceWatchMinus],
+  ["device-watch-off", IconDeviceWatchOff],
+  ["device-watch-pause", IconDeviceWatchPause],
+  ["device-watch-pin", IconDeviceWatchPin],
+  ["device-watch-plus", IconDeviceWatchPlus],
+  ["device-watch-question", IconDeviceWatchQuestion],
+  ["device-watch-search", IconDeviceWatchSearch],
+  ["device-watch-share", IconDeviceWatchShare],
+  ["device-watch-star", IconDeviceWatchStar],
+  ["device-watch-stats-2", IconDeviceWatchStats2],
+  ["device-watch-stats", IconDeviceWatchStats],
+  ["device-watch-up", IconDeviceWatchUp],
+  ["device-watch-x", IconDeviceWatchX],
+  ["device-watch", IconDeviceWatch],
+  ["device-workstation", IconDeviceWorkstation],
+  ["devices-2", IconDevices2],
+  ["devices-bolt", IconDevicesBolt],
+  ["devices-cancel", IconDevicesCancel],
+  ["devices-check", IconDevicesCheck],
+  ["devices-code", IconDevicesCode],
+  ["devices-cog", IconDevicesCog],
+  ["devices-dollar", IconDevicesDollar],
+  ["devices-down", IconDevicesDown],
+  ["devices-exclamation", IconDevicesExclamation],
+  ["devices-heart", IconDevicesHeart],
+  ["devices-minus", IconDevicesMinus],
+  ["devices-off", IconDevicesOff],
+  ["devices-pause", IconDevicesPause],
+  ["devices-pc-off", IconDevicesPcOff],
+  ["devices-pc", IconDevicesPc],
+  ["devices-pin", IconDevicesPin],
+  ["devices-plus", IconDevicesPlus],
+  ["devices-question", IconDevicesQuestion],
+  ["devices-search", IconDevicesSearch],
+  ["devices-share", IconDevicesShare],
+  ["devices-star", IconDevicesStar],
+  ["devices-up", IconDevicesUp],
+  ["devices-x", IconDevicesX],
+  ["devices", IconDevices],
+  ["diabolo-off", IconDiaboloOff],
+  ["diabolo-plus", IconDiaboloPlus],
+  ["diabolo", IconDiabolo],
+  ["dialpad-off", IconDialpadOff],
+  ["dialpad", IconDialpad],
+  ["diamond-off", IconDiamondOff],
+  ["diamond", IconDiamond],
+  ["diamonds", IconDiamonds],
+  ["diaper", IconDiaper],
+  ["dice-1", IconDice1],
+  ["dice-2", IconDice2],
+  ["dice-3", IconDice3],
+  ["dice-4", IconDice4],
+  ["dice-5", IconDice5],
+  ["dice-6", IconDice6],
+  ["dice", IconDice],
+  ["dimensions", IconDimensions],
+  ["direction-arrows", IconDirectionArrows],
+  ["direction-horizontal", IconDirectionHorizontal],
+  ["direction-sign-off", IconDirectionSignOff],
+  ["direction-sign", IconDirectionSign],
+  ["direction", IconDirection],
+  ["directions-off", IconDirectionsOff],
+  ["directions", IconDirections],
+  ["disabled-2", IconDisabled2],
+  ["disabled-off", IconDisabledOff],
+  ["disabled", IconDisabled],
+  ["disc-golf", IconDiscGolf],
+  ["disc-off", IconDiscOff],
+  ["disc", IconDisc],
+  ["discount-off", IconDiscountOff],
+  ["discount", IconDiscount],
+  ["divide", IconDivide],
+  ["dna-2-off", IconDna2Off],
+  ["dna-2", IconDna2],
+  ["dna-off", IconDnaOff],
+  ["dna", IconDna],
+  ["dog-bowl", IconDogBowl],
+  ["dog", IconDog],
+  ["door-enter", IconDoorEnter],
+  ["door-exit", IconDoorExit],
+  ["door-hanger", IconDoorHanger],
+  ["door-off", IconDoorOff],
+  ["door", IconDoor],
+  ["dots-circle-horizontal", IconDotsCircleHorizontal],
+  ["dots-diagonal-2", IconDotsDiagonal2],
+  ["dots-diagonal", IconDotsDiagonal],
+  ["dots-vertical", IconDotsVertical],
+  ["dots", IconDots],
+  ["download-off", IconDownloadOff],
+  ["download", IconDownload],
+  ["drag-drop-2", IconDragDrop2],
+  ["drag-drop", IconDragDrop],
+  ["dragon", IconDragon],
+  ["drone-off", IconDroneOff],
+  ["drone", IconDrone],
+  ["drop-circle", IconDropCircle],
+  ["droplet-bolt", IconDropletBolt],
+  ["droplet-cancel", IconDropletCancel],
+  ["droplet-check", IconDropletCheck],
+  ["droplet-code", IconDropletCode],
+  ["droplet-cog", IconDropletCog],
+  ["droplet-dollar", IconDropletDollar],
+  ["droplet-down", IconDropletDown],
+  ["droplet-exclamation", IconDropletExclamation],
+  ["droplet-half-2", IconDropletHalf2],
+  ["droplet-half", IconDropletHalf],
+  ["droplet-heart", IconDropletHeart],
+  ["droplet-minus", IconDropletMinus],
+  ["droplet-off", IconDropletOff],
+  ["droplet-pause", IconDropletPause],
+  ["droplet-pin", IconDropletPin],
+  ["droplet-plus", IconDropletPlus],
+  ["droplet-question", IconDropletQuestion],
+  ["droplet-search", IconDropletSearch],
+  ["droplet-share", IconDropletShare],
+  ["droplet-star", IconDropletStar],
+  ["droplet-up", IconDropletUp],
+  ["droplet-x", IconDropletX],
+  ["droplet", IconDroplet],
+  ["droplets", IconDroplets],
+  ["dual-screen", IconDualScreen],
+  ["dumbbell", IconDumbbell],
+  ["dumpling", IconDumpling],
+  ["duplicate", IconDuplicate],
+  ["e-passport", IconEPassport],
+  ["ear-off", IconEarOff],
+  ["ear-scan", IconEarScan],
+  ["ear", IconEar],
+  ["earphone-bluetooth", IconEarphoneBluetooth],
+  ["ease-in-control-point", IconEaseInControlPoint],
+  ["ease-in-out-control-points", IconEaseInOutControlPoints],
+  ["ease-in-out", IconEaseInOut],
+  ["ease-in", IconEaseIn],
+  ["ease-out-control-point", IconEaseOutControlPoint],
+  ["ease-out", IconEaseOut],
+  ["edit-bulk", IconEditBulk],
+  ["edit-circle-off", IconEditCircleOff],
+  ["edit-circle", IconEditCircle],
+  ["edit-off", IconEditOff],
+  ["edit", IconEdit],
+  ["egg-cracked", IconEggCracked],
+  ["egg-fried", IconEggFried],
+  ["egg-off", IconEggOff],
+  ["egg", IconEgg],
+  ["eggs", IconEggs],
+  ["elevator-off", IconElevatorOff],
+  ["elevator", IconElevator],
+  ["email-stamp", IconEmailStamp],
+  ["emergency-bed", IconEmergencyBed],
+  ["empathize-off", IconEmpathizeOff],
+  ["empathize", IconEmpathize],
+  ["emphasis", IconEmphasis],
+  ["engine-off", IconEngineOff],
+  ["engine", IconEngine],
+  ["equal-double", IconEqualDouble],
+  ["equal-not", IconEqualNot],
+  ["equal", IconEqual],
+  ["eraser-off", IconEraserOff],
+  ["eraser", IconEraser],
+  ["error-404-off", IconError404Off],
+  ["error-404", IconError404],
+  ["escalator-down", IconEscalatorDown],
+  ["escalator-up", IconEscalatorUp],
+  ["escalator", IconEscalator],
+  ["exchange-off", IconExchangeOff],
+  ["exchange", IconExchange],
+  ["exclamation-circle", IconExclamationCircle],
+  ["exclamation-mark-off", IconExclamationMarkOff],
+  ["exclamation-mark", IconExclamationMark],
+  ["exercise-ball", IconExerciseBall],
+  ["explicit-off", IconExplicitOff],
+  ["explicit", IconExplicit],
+  ["exposure-0", IconExposure0],
+  ["exposure-minus-1", IconExposureMinus1],
+  ["exposure-minus-2", IconExposureMinus2],
+  ["exposure-off", IconExposureOff],
+  ["exposure-plus-1", IconExposurePlus1],
+  ["exposure-plus-2", IconExposurePlus2],
+  ["exposure", IconExposure],
+  ["external-link-off", IconExternalLinkOff],
+  ["external-link", IconExternalLink],
+  ["eye-bitcoin", IconEyeBitcoin],
+  ["eye-bolt", IconEyeBolt],
+  ["eye-cancel", IconEyeCancel],
+  ["eye-check", IconEyeCheck],
+  ["eye-closed", IconEyeClosed],
+  ["eye-code", IconEyeCode],
+  ["eye-cog", IconEyeCog],
+  ["eye-discount", IconEyeDiscount],
+  ["eye-dollar", IconEyeDollar],
+  ["eye-dotted", IconEyeDotted],
+  ["eye-down", IconEyeDown],
+  ["eye-edit", IconEyeEdit],
+  ["eye-exclamation", IconEyeExclamation],
+  ["eye-heart", IconEyeHeart],
+  ["eye-minus", IconEyeMinus],
+  ["eye-off", IconEyeOff],
+  ["eye-pause", IconEyePause],
+  ["eye-pin", IconEyePin],
+  ["eye-plus", IconEyePlus],
+  ["eye-question", IconEyeQuestion],
+  ["eye-search", IconEyeSearch],
+  ["eye-share", IconEyeShare],
+  ["eye-spark", IconEyeSpark],
+  ["eye-star", IconEyeStar],
+  ["eye-table", IconEyeTable],
+  ["eye-up", IconEyeUp],
+  ["eye-x", IconEyeX],
+  ["eye", IconEye],
+  ["eyeglass-2", IconEyeglass2],
+  ["eyeglass-off", IconEyeglassOff],
+  ["eyeglass", IconEyeglass],
+  ["face-id-error", IconFaceIdError],
+  ["face-id", IconFaceId],
+  ["face-mask-off", IconFaceMaskOff],
+  ["face-mask", IconFaceMask],
+  ["fall", IconFall],
+  ["favicon", IconFavicon],
+  ["feather-off", IconFeatherOff],
+  ["feather", IconFeather],
+  ["fence-off", IconFenceOff],
+  ["fence", IconFence],
+  ["ferry", IconFerry],
+  ["fidget-spinner", IconFidgetSpinner],
+  ["file-3d", IconFile3d],
+  ["file-ai", IconFileAi],
+  ["file-alert", IconFileAlert],
+  ["file-analytics", IconFileAnalytics],
+  ["file-arrow-left", IconFileArrowLeft],
+  ["file-arrow-right", IconFileArrowRight],
+  ["file-barcode", IconFileBarcode],
+  ["file-bitcoin", IconFileBitcoin],
+  ["file-broken", IconFileBroken],
+  ["file-certificate", IconFileCertificate],
+  ["file-chart", IconFileChart],
+  ["file-check", IconFileCheck],
+  ["file-code-2", IconFileCode2],
+  ["file-code", IconFileCode],
+  ["file-cv", IconFileCv],
+  ["file-database", IconFileDatabase],
+  ["file-delta", IconFileDelta],
+  ["file-description", IconFileDescription],
+  ["file-diff", IconFileDiff],
+  ["file-digit", IconFileDigit],
+  ["file-dislike", IconFileDislike],
+  ["file-dollar", IconFileDollar],
+  ["file-dots", IconFileDots],
+  ["file-download", IconFileDownload],
+  ["file-euro", IconFileEuro],
+  ["file-excel", IconFileExcel],
+  ["file-export", IconFileExport],
+  ["file-function", IconFileFunction],
+  ["file-horizontal", IconFileHorizontal],
+  ["file-import", IconFileImport],
+  ["file-infinity", IconFileInfinity],
+  ["file-info", IconFileInfo],
+  ["file-invoice", IconFileInvoice],
+  ["file-isr", IconFileIsr],
+  ["file-lambda", IconFileLambda],
+  ["file-like", IconFileLike],
+  ["file-lock", IconFileLock],
+  ["file-minus", IconFileMinus],
+  ["file-music", IconFileMusic],
+  ["file-neutral", IconFileNeutral],
+  ["file-off", IconFileOff],
+  ["file-orientation", IconFileOrientation],
+  ["file-pencil", IconFilePencil],
+  ["file-percent", IconFilePercent],
+  ["file-phone", IconFilePhone],
+  ["file-plus", IconFilePlus],
+  ["file-power", IconFilePower],
+  ["file-report", IconFileReport],
+  ["file-rss", IconFileRss],
+  ["file-sad", IconFileSad],
+  ["file-scissors", IconFileScissors],
+  ["file-search", IconFileSearch],
+  ["file-settings", IconFileSettings],
+  ["file-shredder", IconFileShredder],
+  ["file-signal", IconFileSignal],
+  ["file-smile", IconFileSmile],
+  ["file-spark", IconFileSpark],
+  ["file-spreadsheet", IconFileSpreadsheet],
+  ["file-stack", IconFileStack],
+  ["file-star", IconFileStar],
+  ["file-symlink", IconFileSymlink],
+  ["file-text-ai", IconFileTextAi],
+  ["file-text-shield", IconFileTextShield],
+  ["file-text-spark", IconFileTextSpark],
+  ["file-text", IconFileText],
+  ["file-time", IconFileTime],
+  ["file-type-bmp", IconFileTypeBmp],
+  ["file-type-css", IconFileTypeCss],
+  ["file-type-csv", IconFileTypeCsv],
+  ["file-type-doc", IconFileTypeDoc],
+  ["file-type-docx", IconFileTypeDocx],
+  ["file-type-html", IconFileTypeHtml],
+  ["file-type-jpg", IconFileTypeJpg],
+  ["file-type-js", IconFileTypeJs],
+  ["file-type-jsx", IconFileTypeJsx],
+  ["file-type-pdf", IconFileTypePdf],
+  ["file-type-php", IconFileTypePhp],
+  ["file-type-png", IconFileTypePng],
+  ["file-type-ppt", IconFileTypePpt],
+  ["file-type-rs", IconFileTypeRs],
+  ["file-type-sql", IconFileTypeSql],
+  ["file-type-svg", IconFileTypeSvg],
+  ["file-type-ts", IconFileTypeTs],
+  ["file-type-tsx", IconFileTypeTsx],
+  ["file-type-txt", IconFileTypeTxt],
+  ["file-type-vue", IconFileTypeVue],
+  ["file-type-xls", IconFileTypeXls],
+  ["file-type-xml", IconFileTypeXml],
+  ["file-type-zip", IconFileTypeZip],
+  ["file-typography", IconFileTypography],
+  ["file-unknown", IconFileUnknown],
+  ["file-upload", IconFileUpload],
+  ["file-vector", IconFileVector],
+  ["file-word", IconFileWord],
+  ["file-x", IconFileX],
+  ["file-zip", IconFileZip],
+  ["file", IconFile],
+  ["files-off", IconFilesOff],
+  ["files", IconFiles],
+  ["filter-2-bolt", IconFilter2Bolt],
+  ["filter-2-cancel", IconFilter2Cancel],
+  ["filter-2-check", IconFilter2Check],
+  ["filter-2-code", IconFilter2Code],
+  ["filter-2-cog", IconFilter2Cog],
+  ["filter-2-discount", IconFilter2Discount],
+  ["filter-2-dollar", IconFilter2Dollar],
+  ["filter-2-down", IconFilter2Down],
+  ["filter-2-edit", IconFilter2Edit],
+  ["filter-2-exclamation", IconFilter2Exclamation],
+  ["filter-2-minus", IconFilter2Minus],
+  ["filter-2-pause", IconFilter2Pause],
+  ["filter-2-pin", IconFilter2Pin],
+  ["filter-2-plus", IconFilter2Plus],
+  ["filter-2-question", IconFilter2Question],
+  ["filter-2-search", IconFilter2Search],
+  ["filter-2-share", IconFilter2Share],
+  ["filter-2-spark", IconFilter2Spark],
+  ["filter-2-up", IconFilter2Up],
+  ["filter-2-x", IconFilter2X],
+  ["filter-2", IconFilter2],
+  ["filter-bolt", IconFilterBolt],
+  ["filter-cancel", IconFilterCancel],
+  ["filter-check", IconFilterCheck],
+  ["filter-code", IconFilterCode],
+  ["filter-cog", IconFilterCog],
+  ["filter-discount", IconFilterDiscount],
+  ["filter-dollar", IconFilterDollar],
+  ["filter-down", IconFilterDown],
+  ["filter-edit", IconFilterEdit],
+  ["filter-exclamation", IconFilterExclamation],
+  ["filter-heart", IconFilterHeart],
+  ["filter-minus", IconFilterMinus],
+  ["filter-off", IconFilterOff],
+  ["filter-pause", IconFilterPause],
+  ["filter-pin", IconFilterPin],
+  ["filter-plus", IconFilterPlus],
+  ["filter-question", IconFilterQuestion],
+  ["filter-search", IconFilterSearch],
+  ["filter-share", IconFilterShare],
+  ["filter-spark", IconFilterSpark],
+  ["filter-star", IconFilterStar],
+  ["filter-up", IconFilterUp],
+  ["filter-x", IconFilterX],
+  ["filter", IconFilter],
+  ["filters", IconFilters],
+  ["fingerprint-off", IconFingerprintOff],
+  ["fingerprint-scan", IconFingerprintScan],
+  ["fingerprint", IconFingerprint],
+  ["fire-extinguisher", IconFireExtinguisher],
+  ["fire-hydrant-off", IconFireHydrantOff],
+  ["fire-hydrant", IconFireHydrant],
+  ["firetruck", IconFiretruck],
+  ["firewall-check", IconFirewallCheck],
+  ["firewall-flame", IconFirewallFlame],
+  ["first-aid-kit-off", IconFirstAidKitOff],
+  ["first-aid-kit", IconFirstAidKit],
+  ["fish-bone", IconFishBone],
+  ["fish-christianity", IconFishChristianity],
+  ["fish-hook-off", IconFishHookOff],
+  ["fish-hook", IconFishHook],
+  ["fish-off", IconFishOff],
+  ["fish", IconFish],
+  ["flag-2-off", IconFlag2Off],
+  ["flag-2", IconFlag2],
+  ["flag-3", IconFlag3],
+  ["flag-bitcoin", IconFlagBitcoin],
+  ["flag-bolt", IconFlagBolt],
+  ["flag-cancel", IconFlagCancel],
+  ["flag-check", IconFlagCheck],
+  ["flag-code", IconFlagCode],
+  ["flag-cog", IconFlagCog],
+  ["flag-discount", IconFlagDiscount],
+  ["flag-dollar", IconFlagDollar],
+  ["flag-down", IconFlagDown],
+  ["flag-exclamation", IconFlagExclamation],
+  ["flag-heart", IconFlagHeart],
+  ["flag-minus", IconFlagMinus],
+  ["flag-off", IconFlagOff],
+  ["flag-pause", IconFlagPause],
+  ["flag-pin", IconFlagPin],
+  ["flag-plus", IconFlagPlus],
+  ["flag-question", IconFlagQuestion],
+  ["flag-search", IconFlagSearch],
+  ["flag-share", IconFlagShare],
+  ["flag-spark", IconFlagSpark],
+  ["flag-star", IconFlagStar],
+  ["flag-up", IconFlagUp],
+  ["flag-x", IconFlagX],
+  ["flag", IconFlag],
+  ["flame-off", IconFlameOff],
+  ["flame", IconFlame],
+  ["flare", IconFlare],
+  ["flask-2-off", IconFlask2Off],
+  ["flask-2", IconFlask2],
+  ["flask-off", IconFlaskOff],
+  ["flask", IconFlask],
+  ["flip-flops", IconFlipFlops],
+  ["flip-horizontal", IconFlipHorizontal],
+  ["flip-vertical", IconFlipVertical],
+  ["float-center", IconFloatCenter],
+  ["float-left", IconFloatLeft],
+  ["float-none", IconFloatNone],
+  ["float-right", IconFloatRight],
+  ["flood", IconFlood],
+  ["flower-off", IconFlowerOff],
+  ["flower", IconFlower],
+  ["focus-2", IconFocus2],
+  ["focus-auto", IconFocusAuto],
+  ["focus-centered", IconFocusCentered],
+  ["focus", IconFocus],
+  ["fold-down", IconFoldDown],
+  ["fold-up", IconFoldUp],
+  ["fold", IconFold],
+  ["folder-ai", IconFolderAi],
+  ["folder-bolt", IconFolderBolt],
+  ["folder-cancel", IconFolderCancel],
+  ["folder-check", IconFolderCheck],
+  ["folder-code", IconFolderCode],
+  ["folder-cog", IconFolderCog],
+  ["folder-dollar", IconFolderDollar],
+  ["folder-down", IconFolderDown],
+  ["folder-exclamation", IconFolderExclamation],
+  ["folder-heart", IconFolderHeart],
+  ["folder-lock", IconFolderLock],
+  ["folder-minus", IconFolderMinus],
+  ["folder-off", IconFolderOff],
+  ["folder-open", IconFolderOpen],
+  ["folder-pause", IconFolderPause],
+  ["folder-pin", IconFolderPin],
+  ["folder-plus", IconFolderPlus],
+  ["folder-question", IconFolderQuestion],
+  ["folder-root", IconFolderRoot],
+  ["folder-search", IconFolderSearch],
+  ["folder-share", IconFolderShare],
+  ["folder-sparkle", IconFolderSparkle],
+  ["folder-star", IconFolderStar],
+  ["folder-stats", IconFolderStats],
+  ["folder-symlink", IconFolderSymlink],
+  ["folder-up", IconFolderUp],
+  ["folder-user", IconFolderUser],
+  ["folder-x", IconFolderX],
+  ["folder", IconFolder],
+  ["folders-off", IconFoldersOff],
+  ["folders", IconFolders],
+  ["footsteps", IconFootsteps],
+  ["forbid-2", IconForbid2],
+  ["forbid", IconForbid],
+  ["forklift", IconForklift],
+  ["forms", IconForms],
+  ["fountain-off", IconFountainOff],
+  ["fountain", IconFountain],
+  ["frame-off", IconFrameOff],
+  ["frame", IconFrame],
+  ["free-rights", IconFreeRights],
+  ["freeze-column", IconFreezeColumn],
+  ["freeze-row-column", IconFreezeRowColumn],
+  ["freeze-row", IconFreezeRow],
+  ["fridge-off", IconFridgeOff],
+  ["fridge", IconFridge],
+  ["friends-off", IconFriendsOff],
+  ["friends", IconFriends],
+  ["frustum-off", IconFrustumOff],
+  ["frustum-plus", IconFrustumPlus],
+  ["frustum", IconFrustum],
+  ["function-off", IconFunctionOff],
+  ["function", IconFunction],
+  ["galaxy", IconGalaxy],
+  ["garden-cart-off", IconGardenCartOff],
+  ["garden-cart", IconGardenCart],
+  ["gas-station-off", IconGasStationOff],
+  ["gas-station", IconGasStation],
+  ["gauge-off", IconGaugeOff],
+  ["gauge", IconGauge],
+  ["gavel", IconGavel],
+  ["gender-agender", IconGenderAgender],
+  ["gender-androgyne", IconGenderAndrogyne],
+  ["gender-bigender", IconGenderBigender],
+  ["gender-demiboy", IconGenderDemiboy],
+  ["gender-demigirl", IconGenderDemigirl],
+  ["gender-epicene", IconGenderEpicene],
+  ["gender-female", IconGenderFemale],
+  ["gender-femme", IconGenderFemme],
+  ["gender-genderfluid", IconGenderGenderfluid],
+  ["gender-genderless", IconGenderGenderless],
+  ["gender-genderqueer", IconGenderGenderqueer],
+  ["gender-hermaphrodite", IconGenderHermaphrodite],
+  ["gender-intergender", IconGenderIntergender],
+  ["gender-male", IconGenderMale],
+  ["gender-neutrois", IconGenderNeutrois],
+  ["gender-third", IconGenderThird],
+  ["gender-transgender", IconGenderTransgender],
+  ["gender-travesti", IconGenderTravesti],
+  ["geometry", IconGeometry],
+  ["ghost-2", IconGhost2],
+  ["ghost-3", IconGhost3],
+  ["ghost-off", IconGhostOff],
+  ["ghost", IconGhost],
+  ["gif", IconGif],
+  ["gift-card", IconGiftCard],
+  ["gift-off", IconGiftOff],
+  ["gift", IconGift],
+  ["git-branch-check", IconGitBranchCheck],
+  ["git-branch-deleted", IconGitBranchDeleted],
+  ["git-branch-x", IconGitBranchX],
+  ["git-branch", IconGitBranch],
+  ["git-cherry-pick", IconGitCherryPick],
+  ["git-commit", IconGitCommit],
+  ["git-compare", IconGitCompare],
+  ["git-fork", IconGitFork],
+  ["git-merge-queue", IconGitMergeQueue],
+  ["git-merge", IconGitMerge],
+  ["git-pull-request-closed", IconGitPullRequestClosed],
+  ["git-pull-request-conflict", IconGitPullRequestConflict],
+  ["git-pull-request-draft", IconGitPullRequestDraft],
+  ["git-pull-request-locked", IconGitPullRequestLocked],
+  ["git-pull-request-unlisted", IconGitPullRequestUnlisted],
+  ["git-pull-request", IconGitPullRequest],
+  ["gizmo", IconGizmo],
+  ["glass-champagne", IconGlassChampagne],
+  ["glass-cocktail", IconGlassCocktail],
+  ["glass-full", IconGlassFull],
+  ["glass-gin", IconGlassGin],
+  ["glass-off", IconGlassOff],
+  ["glass", IconGlass],
+  ["globe-off", IconGlobeOff],
+  ["globe", IconGlobe],
+  ["go-game", IconGoGame],
+  ["golf-off", IconGolfOff],
+  ["golf", IconGolf],
+  ["gps", IconGps],
+  ["gpu-2", IconGpu2],
+  ["gpu", IconGpu],
+  ["gradienter", IconGradienter],
+  ["grain", IconGrain],
+  ["grape", IconGrape],
+  ["graph-off", IconGraphOff],
+  ["graph", IconGraph],
+  ["grave-2", IconGrave2],
+  ["grave", IconGrave],
+  ["grid-3x3", IconGrid3x3],
+  ["grid-4x4", IconGrid4x4],
+  ["grid-dots", IconGridDots],
+  ["grid-goldenratio", IconGridGoldenratio],
+  ["grid-pattern", IconGridPattern],
+  ["grid-scan", IconGridScan],
+  ["grill-fork", IconGrillFork],
+  ["grill-off", IconGrillOff],
+  ["grill-spatula", IconGrillSpatula],
+  ["grill", IconGrill],
+  ["grip-horizontal", IconGripHorizontal],
+  ["grip-vertical", IconGripVertical],
+  ["growth", IconGrowth],
+  ["guitar-pick", IconGuitarPick],
+  ["gymnastics", IconGymnastics],
+  ["h-1", IconH1],
+  ["h-2", IconH2],
+  ["h-3", IconH3],
+  ["h-4", IconH4],
+  ["h-5", IconH5],
+  ["h-6", IconH6],
+  ["hammer-drill", IconHammerDrill],
+  ["hammer-off", IconHammerOff],
+  ["hammer", IconHammer],
+  ["hand-click-off", IconHandClickOff],
+  ["hand-click", IconHandClick],
+  ["hand-finger-down", IconHandFingerDown],
+  ["hand-finger-left", IconHandFingerLeft],
+  ["hand-finger-off", IconHandFingerOff],
+  ["hand-finger-right", IconHandFingerRight],
+  ["hand-finger", IconHandFinger],
+  ["hand-grab", IconHandGrab],
+  ["hand-little-finger", IconHandLittleFinger],
+  ["hand-love-you", IconHandLoveYou],
+  ["hand-middle-finger", IconHandMiddleFinger],
+  ["hand-move", IconHandMove],
+  ["hand-off", IconHandOff],
+  ["hand-ring-finger", IconHandRingFinger],
+  ["hand-sanitizer", IconHandSanitizer],
+  ["hand-stop", IconHandStop],
+  ["hand-three-fingers", IconHandThreeFingers],
+  ["hand-two-fingers", IconHandTwoFingers],
+  ["hanger-2", IconHanger2],
+  ["hanger-off", IconHangerOff],
+  ["hanger", IconHanger],
+  ["hash", IconHash],
+  ["haze-moon", IconHazeMoon],
+  ["haze", IconHaze],
+  ["hdr", IconHdr],
+  ["heading-off", IconHeadingOff],
+  ["heading", IconHeading],
+  ["headphones-off", IconHeadphonesOff],
+  ["headphones", IconHeadphones],
+  ["headset-off", IconHeadsetOff],
+  ["headset", IconHeadset],
+  ["health-recognition", IconHealthRecognition],
+  ["heart-bitcoin", IconHeartBitcoin],
+  ["heart-bolt", IconHeartBolt],
+  ["heart-broken", IconHeartBroken],
+  ["heart-cancel", IconHeartCancel],
+  ["heart-check", IconHeartCheck],
+  ["heart-code", IconHeartCode],
+  ["heart-cog", IconHeartCog],
+  ["heart-discount", IconHeartDiscount],
+  ["heart-dollar", IconHeartDollar],
+  ["heart-down", IconHeartDown],
+  ["heart-exclamation", IconHeartExclamation],
+  ["heart-handshake", IconHeartHandshake],
+  ["heart-minus", IconHeartMinus],
+  ["heart-off", IconHeartOff],
+  ["heart-pause", IconHeartPause],
+  ["heart-pin", IconHeartPin],
+  ["heart-plus", IconHeartPlus],
+  ["heart-question", IconHeartQuestion],
+  ["heart-rate-monitor", IconHeartRateMonitor],
+  ["heart-search", IconHeartSearch],
+  ["heart-share", IconHeartShare],
+  ["heart-spark", IconHeartSpark],
+  ["heart-star", IconHeartStar],
+  ["heart-up", IconHeartUp],
+  ["heart-x", IconHeartX],
+  ["heart", IconHeart],
+  ["heartbeat", IconHeartbeat],
+  ["hearts-off", IconHeartsOff],
+  ["hearts", IconHearts],
+  ["helicopter-landing", IconHelicopterLanding],
+  ["helicopter", IconHelicopter],
+  ["helmet-off", IconHelmetOff],
+  ["helmet", IconHelmet],
+  ["help-circle", IconHelpCircle],
+  ["help-hexagon", IconHelpHexagon],
+  ["help-octagon", IconHelpOctagon],
+  ["help-off", IconHelpOff],
+  ["help-small", IconHelpSmall],
+  ["help-square-rounded", IconHelpSquareRounded],
+  ["help-square", IconHelpSquare],
+  ["help-triangle", IconHelpTriangle],
+  ["help", IconHelp],
+  ["hemisphere-off", IconHemisphereOff],
+  ["hemisphere-plus", IconHemispherePlus],
+  ["hemisphere", IconHemisphere],
+  ["hexagon-3d", IconHexagon3d],
+  ["hexagon-asterisk", IconHexagonAsterisk],
+  ["hexagon-letter-a", IconHexagonLetterA],
+  ["hexagon-letter-b", IconHexagonLetterB],
+  ["hexagon-letter-c", IconHexagonLetterC],
+  ["hexagon-letter-d", IconHexagonLetterD],
+  ["hexagon-letter-e", IconHexagonLetterE],
+  ["hexagon-letter-f", IconHexagonLetterF],
+  ["hexagon-letter-g", IconHexagonLetterG],
+  ["hexagon-letter-h", IconHexagonLetterH],
+  ["hexagon-letter-i", IconHexagonLetterI],
+  ["hexagon-letter-j", IconHexagonLetterJ],
+  ["hexagon-letter-k", IconHexagonLetterK],
+  ["hexagon-letter-l", IconHexagonLetterL],
+  ["hexagon-letter-m", IconHexagonLetterM],
+  ["hexagon-letter-n", IconHexagonLetterN],
+  ["hexagon-letter-o", IconHexagonLetterO],
+  ["hexagon-letter-p", IconHexagonLetterP],
+  ["hexagon-letter-q", IconHexagonLetterQ],
+  ["hexagon-letter-r", IconHexagonLetterR],
+  ["hexagon-letter-s", IconHexagonLetterS],
+  ["hexagon-letter-t", IconHexagonLetterT],
+  ["hexagon-letter-u", IconHexagonLetterU],
+  ["hexagon-letter-v", IconHexagonLetterV],
+  ["hexagon-letter-w", IconHexagonLetterW],
+  ["hexagon-letter-x", IconHexagonLetterX],
+  ["hexagon-letter-y", IconHexagonLetterY],
+  ["hexagon-letter-z", IconHexagonLetterZ],
+  ["hexagon-minus-2", IconHexagonMinus2],
+  ["hexagon-minus", IconHexagonMinus],
+  ["hexagon-number-0", IconHexagonNumber0],
+  ["hexagon-number-1", IconHexagonNumber1],
+  ["hexagon-number-2", IconHexagonNumber2],
+  ["hexagon-number-3", IconHexagonNumber3],
+  ["hexagon-number-4", IconHexagonNumber4],
+  ["hexagon-number-5", IconHexagonNumber5],
+  ["hexagon-number-6", IconHexagonNumber6],
+  ["hexagon-number-7", IconHexagonNumber7],
+  ["hexagon-number-8", IconHexagonNumber8],
+  ["hexagon-number-9", IconHexagonNumber9],
+  ["hexagon-off", IconHexagonOff],
+  ["hexagon-plus-2", IconHexagonPlus2],
+  ["hexagon-plus", IconHexagonPlus],
+  ["hexagon", IconHexagon],
+  ["hexagonal-prism-off", IconHexagonalPrismOff],
+  ["hexagonal-prism-plus", IconHexagonalPrismPlus],
+  ["hexagonal-prism", IconHexagonalPrism],
+  ["hexagonal-pyramid-off", IconHexagonalPyramidOff],
+  ["hexagonal-pyramid-plus", IconHexagonalPyramidPlus],
+  ["hexagonal-pyramid", IconHexagonalPyramid],
+  ["hexagons-off", IconHexagonsOff],
+  ["hexagons", IconHexagons],
+  ["hierarchy-2", IconHierarchy2],
+  ["hierarchy-3", IconHierarchy3],
+  ["hierarchy-off", IconHierarchyOff],
+  ["hierarchy", IconHierarchy],
+  ["highlight-off", IconHighlightOff],
+  ["highlight", IconHighlight],
+  ["history-off", IconHistoryOff],
+  ["history-toggle", IconHistoryToggle],
+  ["history", IconHistory],
+  ["home-2", IconHome2],
+  ["home-bitcoin", IconHomeBitcoin],
+  ["home-bolt", IconHomeBolt],
+  ["home-cancel", IconHomeCancel],
+  ["home-check", IconHomeCheck],
+  ["home-cog", IconHomeCog],
+  ["home-dollar", IconHomeDollar],
+  ["home-dot", IconHomeDot],
+  ["home-down", IconHomeDown],
+  ["home-eco", IconHomeEco],
+  ["home-edit", IconHomeEdit],
+  ["home-exclamation", IconHomeExclamation],
+  ["home-hand", IconHomeHand],
+  ["home-heart", IconHomeHeart],
+  ["home-infinity", IconHomeInfinity],
+  ["home-link", IconHomeLink],
+  ["home-lock", IconHomeLock],
+  ["home-minus", IconHomeMinus],
+  ["home-move", IconHomeMove],
+  ["home-off", IconHomeOff],
+  ["home-plus", IconHomePlus],
+  ["home-question", IconHomeQuestion],
+  ["home-ribbon", IconHomeRibbon],
+  ["home-search", IconHomeSearch],
+  ["home-share", IconHomeShare],
+  ["home-shield", IconHomeShield],
+  ["home-signal", IconHomeSignal],
+  ["home-spark", IconHomeSpark],
+  ["home-star", IconHomeStar],
+  ["home-stats", IconHomeStats],
+  ["home-up", IconHomeUp],
+  ["home-x", IconHomeX],
+  ["home", IconHome],
+  ["horse-toy", IconHorseToy],
+  ["horse", IconHorse],
+  ["horseshoe", IconHorseshoe],
+  ["hospital-circle", IconHospitalCircle],
+  ["hospital", IconHospital],
+  ["hotel-service", IconHotelService],
+  ["hourglass-empty", IconHourglassEmpty],
+  ["hourglass-high", IconHourglassHigh],
+  ["hourglass-low", IconHourglassLow],
+  ["hourglass-off", IconHourglassOff],
+  ["hourglass", IconHourglass],
+  ["hours-12", IconHours12],
+  ["hours-24", IconHours24],
+  ["html", IconHtml],
+  ["http-connect-off", IconHttpConnectOff],
+  ["http-connect", IconHttpConnect],
+  ["http-delete-off", IconHttpDeleteOff],
+  ["http-delete", IconHttpDelete],
+  ["http-get-off", IconHttpGetOff],
+  ["http-get", IconHttpGet],
+  ["http-head-off", IconHttpHeadOff],
+  ["http-head", IconHttpHead],
+  ["http-options-off", IconHttpOptionsOff],
+  ["http-options", IconHttpOptions],
+  ["http-patch-off", IconHttpPatchOff],
+  ["http-patch", IconHttpPatch],
+  ["http-post-off", IconHttpPostOff],
+  ["http-post", IconHttpPost],
+  ["http-put-off", IconHttpPutOff],
+  ["http-put", IconHttpPut],
+  ["http-que-off", IconHttpQueOff],
+  ["http-que", IconHttpQue],
+  ["http-trace-off", IconHttpTraceOff],
+  ["http-trace", IconHttpTrace],
+  ["hula-hoop", IconHulaHoop],
+  ["ice-cream-2", IconIceCream2],
+  ["ice-cream-off", IconIceCreamOff],
+  ["ice-cream", IconIceCream],
+  ["ice-skating", IconIceSkating],
+  ["iceberg", IconIceberg],
+  ["icons-off", IconIconsOff],
+  ["icons", IconIcons],
+  ["icosahedron", IconIcosahedron],
+  ["id-badge-2", IconIdBadge2],
+  ["id-badge-off", IconIdBadgeOff],
+  ["id-badge", IconIdBadge],
+  ["id-off", IconIdOff],
+  ["id", IconId],
+  ["image-generation", IconImageGeneration],
+  ["image-in-picture", IconImageInPicture],
+  ["inbox-off", IconInboxOff],
+  ["inbox", IconInbox],
+  ["indent-decrease", IconIndentDecrease],
+  ["indent-increase", IconIndentIncrease],
+  ["infinity-2", IconInfinity2],
+  ["infinity-off", IconInfinityOff],
+  ["infinity", IconInfinity],
+  ["info-circle", IconInfoCircle],
+  ["info-hexagon", IconInfoHexagon],
+  ["info-octagon", IconInfoOctagon],
+  ["info-small", IconInfoSmall],
+  ["info-square-rounded", IconInfoSquareRounded],
+  ["info-square", IconInfoSquare],
+  ["info-triangle", IconInfoTriangle],
+  ["inner-shadow-bottom-left", IconInnerShadowBottomLeft],
+  ["inner-shadow-bottom-right", IconInnerShadowBottomRight],
+  ["inner-shadow-bottom", IconInnerShadowBottom],
+  ["inner-shadow-left", IconInnerShadowLeft],
+  ["inner-shadow-right", IconInnerShadowRight],
+  ["inner-shadow-top-left", IconInnerShadowTopLeft],
+  ["inner-shadow-top-right", IconInnerShadowTopRight],
+  ["inner-shadow-top", IconInnerShadowTop],
+  ["input-ai", IconInputAi],
+  ["input-check", IconInputCheck],
+  ["input-search", IconInputSearch],
+  ["input-spark", IconInputSpark],
+  ["input-x", IconInputX],
+  ["invoice", IconInvoice],
+  ["ironing-1", IconIroning1],
+  ["ironing-2", IconIroning2],
+  ["ironing-3", IconIroning3],
+  ["ironing-off", IconIroningOff],
+  ["ironing-steam-off", IconIroningSteamOff],
+  ["ironing-steam", IconIroningSteam],
+  ["ironing", IconIroning],
+  ["irregular-polyhedron-off", IconIrregularPolyhedronOff],
+  ["irregular-polyhedron-plus", IconIrregularPolyhedronPlus],
+  ["irregular-polyhedron", IconIrregularPolyhedron],
+  ["italic-off", IconItalicOff],
+  ["italic", IconItalic],
+  ["jacket", IconJacket],
+  ["jetpack", IconJetpack],
+  ["jetski", IconJetski],
+  ["jewish-star", IconJewishStar],
+  ["join-bevel", IconJoinBevel],
+  ["join-round", IconJoinRound],
+  ["join-straight", IconJoinStraight],
+  ["joker", IconJoker],
+  ["jpg", IconJpg],
+  ["json", IconJson],
+  ["jump-rope", IconJumpRope],
+  ["karate", IconKarate],
+  ["kayak", IconKayak],
+  ["kerning", IconKerning],
+  ["key-off", IconKeyOff],
+  ["key", IconKey],
+  ["keyboard-hide", IconKeyboardHide],
+  ["keyboard-off", IconKeyboardOff],
+  ["keyboard-show", IconKeyboardShow],
+  ["keyboard", IconKeyboard],
+  ["keyframe-align-center", IconKeyframeAlignCenter],
+  ["keyframe-align-horizontal", IconKeyframeAlignHorizontal],
+  ["keyframe-align-vertical", IconKeyframeAlignVertical],
+  ["keyframe", IconKeyframe],
+  ["keyframes", IconKeyframes],
+  ["label-important", IconLabelImportant],
+  ["label-off", IconLabelOff],
+  ["label", IconLabel],
+  ["ladder-off", IconLadderOff],
+  ["ladder", IconLadder],
+  ["ladle", IconLadle],
+  ["lambda", IconLambda],
+  ["lamp-2", IconLamp2],
+  ["lamp-off", IconLampOff],
+  ["lamp", IconLamp],
+  ["lane", IconLane],
+  ["language-hiragana", IconLanguageHiragana],
+  ["language-katakana", IconLanguageKatakana],
+  ["language-off", IconLanguageOff],
+  ["language", IconLanguage],
+  ["lasso-off", IconLassoOff],
+  ["lasso-polygon", IconLassoPolygon],
+  ["lasso", IconLasso],
+  ["laurel-wreath-1", IconLaurelWreath1],
+  ["laurel-wreath-2", IconLaurelWreath2],
+  ["laurel-wreath-3", IconLaurelWreath3],
+  ["laurel-wreath", IconLaurelWreath],
+  ["lawn-mower", IconLawnMower],
+  ["layers-difference", IconLayersDifference],
+  ["layers-intersect-2", IconLayersIntersect2],
+  ["layers-intersect", IconLayersIntersect],
+  ["layers-linked", IconLayersLinked],
+  ["layers-off", IconLayersOff],
+  ["layers-selected-bottom", IconLayersSelectedBottom],
+  ["layers-selected", IconLayersSelected],
+  ["layers-subtract", IconLayersSubtract],
+  ["layers-union", IconLayersUnion],
+  ["layout-2", IconLayout2],
+  ["layout-align-bottom", IconLayoutAlignBottom],
+  ["layout-align-center", IconLayoutAlignCenter],
+  ["layout-align-left", IconLayoutAlignLeft],
+  ["layout-align-middle", IconLayoutAlignMiddle],
+  ["layout-align-right", IconLayoutAlignRight],
+  ["layout-align-top", IconLayoutAlignTop],
+  ["layout-board-split", IconLayoutBoardSplit],
+  ["layout-board", IconLayoutBoard],
+  ["layout-bottombar-collapse", IconLayoutBottombarCollapse],
+  ["layout-bottombar-expand", IconLayoutBottombarExpand],
+  ["layout-bottombar-inactive", IconLayoutBottombarInactive],
+  ["layout-bottombar", IconLayoutBottombar],
+  ["layout-cards", IconLayoutCards],
+  ["layout-collage", IconLayoutCollage],
+  ["layout-columns", IconLayoutColumns],
+  ["layout-dashboard", IconLayoutDashboard],
+  ["layout-distribute-horizontal", IconLayoutDistributeHorizontal],
+  ["layout-distribute-vertical", IconLayoutDistributeVertical],
+  ["layout-grid-add", IconLayoutGridAdd],
+  ["layout-grid-remove", IconLayoutGridRemove],
+  ["layout-grid", IconLayoutGrid],
+  ["layout-kanban", IconLayoutKanban],
+  ["layout-list", IconLayoutList],
+  ["layout-navbar-collapse", IconLayoutNavbarCollapse],
+  ["layout-navbar-expand", IconLayoutNavbarExpand],
+  ["layout-navbar-inactive", IconLayoutNavbarInactive],
+  ["layout-navbar", IconLayoutNavbar],
+  ["layout-off", IconLayoutOff],
+  ["layout-rows", IconLayoutRows],
+  ["layout-sidebar-inactive", IconLayoutSidebarInactive],
+  ["layout-sidebar-left-collapse", IconLayoutSidebarLeftCollapse],
+  ["layout-sidebar-left-expand", IconLayoutSidebarLeftExpand],
+  ["layout-sidebar-right-collapse", IconLayoutSidebarRightCollapse],
+  ["layout-sidebar-right-expand", IconLayoutSidebarRightExpand],
+  ["layout-sidebar-right-inactive", IconLayoutSidebarRightInactive],
+  ["layout-sidebar-right", IconLayoutSidebarRight],
+  ["layout-sidebar", IconLayoutSidebar],
+  ["layout", IconLayout],
+  ["leaf-2", IconLeaf2],
+  ["leaf-maple", IconLeafMaple],
+  ["leaf-off", IconLeafOff],
+  ["leaf", IconLeaf],
+  ["lego-off", IconLegoOff],
+  ["lego", IconLego],
+  ["lemon-2", IconLemon2],
+  ["lemon", IconLemon],
+  ["lens-concave", IconLensConcave],
+  ["lens-convex", IconLensConvex],
+  ["letter-a-small", IconLetterASmall],
+  ["letter-a", IconLetterA],
+  ["letter-b-small", IconLetterBSmall],
+  ["letter-b", IconLetterB],
+  ["letter-c-small", IconLetterCSmall],
+  ["letter-c", IconLetterC],
+  ["letter-case-lower", IconLetterCaseLower],
+  ["letter-case-toggle", IconLetterCaseToggle],
+  ["letter-case-upper", IconLetterCaseUpper],
+  ["letter-case", IconLetterCase],
+  ["letter-d-small", IconLetterDSmall],
+  ["letter-d", IconLetterD],
+  ["letter-e-small", IconLetterESmall],
+  ["letter-e", IconLetterE],
+  ["letter-f-small", IconLetterFSmall],
+  ["letter-f", IconLetterF],
+  ["letter-g-small", IconLetterGSmall],
+  ["letter-g", IconLetterG],
+  ["letter-h-small", IconLetterHSmall],
+  ["letter-h", IconLetterH],
+  ["letter-i-small", IconLetterISmall],
+  ["letter-i", IconLetterI],
+  ["letter-j-small", IconLetterJSmall],
+  ["letter-j", IconLetterJ],
+  ["letter-k-small", IconLetterKSmall],
+  ["letter-k", IconLetterK],
+  ["letter-l-small", IconLetterLSmall],
+  ["letter-l", IconLetterL],
+  ["letter-m-small", IconLetterMSmall],
+  ["letter-m", IconLetterM],
+  ["letter-n-small", IconLetterNSmall],
+  ["letter-n", IconLetterN],
+  ["letter-o-small", IconLetterOSmall],
+  ["letter-o", IconLetterO],
+  ["letter-p-small", IconLetterPSmall],
+  ["letter-p", IconLetterP],
+  ["letter-q-small", IconLetterQSmall],
+  ["letter-q", IconLetterQ],
+  ["letter-r-small", IconLetterRSmall],
+  ["letter-r", IconLetterR],
+  ["letter-s-small", IconLetterSSmall],
+  ["letter-s", IconLetterS],
+  ["letter-spacing", IconLetterSpacing],
+  ["letter-t-small", IconLetterTSmall],
+  ["letter-t", IconLetterT],
+  ["letter-u-small", IconLetterUSmall],
+  ["letter-u", IconLetterU],
+  ["letter-v-small", IconLetterVSmall],
+  ["letter-v", IconLetterV],
+  ["letter-w-small", IconLetterWSmall],
+  ["letter-w", IconLetterW],
+  ["letter-x-small", IconLetterXSmall],
+  ["letter-x", IconLetterX],
+  ["letter-y-small", IconLetterYSmall],
+  ["letter-y", IconLetterY],
+  ["letter-z-small", IconLetterZSmall],
+  ["letter-z", IconLetterZ],
+  ["library-minus", IconLibraryMinus],
+  ["library-photo", IconLibraryPhoto],
+  ["library-plus", IconLibraryPlus],
+  ["library", IconLibrary],
+  ["license-off", IconLicenseOff],
+  ["license", IconLicense],
+  ["lifebuoy-off", IconLifebuoyOff],
+  ["lifebuoy", IconLifebuoy],
+  ["lighter", IconLighter],
+  ["line-dashed", IconLineDashed],
+  ["line-dotted", IconLineDotted],
+  ["line-height", IconLineHeight],
+  ["line-scan", IconLineScan],
+  ["line", IconLine],
+  ["link-minus", IconLinkMinus],
+  ["link-off", IconLinkOff],
+  ["link-plus", IconLinkPlus],
+  ["link", IconLink],
+  ["list-check", IconListCheck],
+  ["list-details", IconListDetails],
+  ["list-letters", IconListLetters],
+  ["list-numbers", IconListNumbers],
+  ["list-search", IconListSearch],
+  ["list-tree", IconListTree],
+  ["list", IconList],
+  ["live-photo-off", IconLivePhotoOff],
+  ["live-photo", IconLivePhoto],
+  ["live-view", IconLiveView],
+  ["load-balancer", IconLoadBalancer],
+  ["loader-2", IconLoader2],
+  ["loader-3", IconLoader3],
+  ["loader-4", IconLoader4],
+  ["loader-quarter", IconLoaderQuarter],
+  ["loader", IconLoader],
+  ["location-bolt", IconLocationBolt],
+  ["location-broken", IconLocationBroken],
+  ["location-cancel", IconLocationCancel],
+  ["location-check", IconLocationCheck],
+  ["location-code", IconLocationCode],
+  ["location-cog", IconLocationCog],
+  ["location-discount", IconLocationDiscount],
+  ["location-dollar", IconLocationDollar],
+  ["location-down", IconLocationDown],
+  ["location-exclamation", IconLocationExclamation],
+  ["location-heart", IconLocationHeart],
+  ["location-minus", IconLocationMinus],
+  ["location-off", IconLocationOff],
+  ["location-pause", IconLocationPause],
+  ["location-pin", IconLocationPin],
+  ["location-plus", IconLocationPlus],
+  ["location-question", IconLocationQuestion],
+  ["location-search", IconLocationSearch],
+  ["location-share", IconLocationShare],
+  ["location-star", IconLocationStar],
+  ["location-up", IconLocationUp],
+  ["location-x", IconLocationX],
+  ["location", IconLocation],
+  ["lock-access-off", IconLockAccessOff],
+  ["lock-access", IconLockAccess],
+  ["lock-bitcoin", IconLockBitcoin],
+  ["lock-bolt", IconLockBolt],
+  ["lock-cancel", IconLockCancel],
+  ["lock-check", IconLockCheck],
+  ["lock-code", IconLockCode],
+  ["lock-cog", IconLockCog],
+  ["lock-dollar", IconLockDollar],
+  ["lock-down", IconLockDown],
+  ["lock-exclamation", IconLockExclamation],
+  ["lock-heart", IconLockHeart],
+  ["lock-minus", IconLockMinus],
+  ["lock-off", IconLockOff],
+  ["lock-open-2", IconLockOpen2],
+  ["lock-open-off", IconLockOpenOff],
+  ["lock-open", IconLockOpen],
+  ["lock-password", IconLockPassword],
+  ["lock-pause", IconLockPause],
+  ["lock-pin", IconLockPin],
+  ["lock-plus", IconLockPlus],
+  ["lock-question", IconLockQuestion],
+  ["lock-search", IconLockSearch],
+  ["lock-share", IconLockShare],
+  ["lock-square-rounded", IconLockSquareRounded],
+  ["lock-square", IconLockSquare],
+  ["lock-star", IconLockStar],
+  ["lock-up", IconLockUp],
+  ["lock-x", IconLockX],
+  ["lock", IconLock],
+  ["logic-and", IconLogicAnd],
+  ["logic-buffer", IconLogicBuffer],
+  ["logic-nand", IconLogicNand],
+  ["logic-nor", IconLogicNor],
+  ["logic-not", IconLogicNot],
+  ["logic-or", IconLogicOr],
+  ["logic-xnor", IconLogicXnor],
+  ["logic-xor", IconLogicXor],
+  ["login-2", IconLogin2],
+  ["login", IconLogin],
+  ["logout-2", IconLogout2],
+  ["logout", IconLogout],
+  ["logs", IconLogs],
+  ["lollipop-off", IconLollipopOff],
+  ["lollipop", IconLollipop],
+  ["luggage-off", IconLuggageOff],
+  ["luggage", IconLuggage],
+  ["lungs-off", IconLungsOff],
+  ["lungs", IconLungs],
+  ["macro-off", IconMacroOff],
+  ["macro", IconMacro],
+  ["magnet-off", IconMagnetOff],
+  ["magnet", IconMagnet],
+  ["magnetic", IconMagnetic],
+  ["mail-ai", IconMailAi],
+  ["mail-bitcoin", IconMailBitcoin],
+  ["mail-bolt", IconMailBolt],
+  ["mail-cancel", IconMailCancel],
+  ["mail-check", IconMailCheck],
+  ["mail-code", IconMailCode],
+  ["mail-cog", IconMailCog],
+  ["mail-dollar", IconMailDollar],
+  ["mail-down", IconMailDown],
+  ["mail-exclamation", IconMailExclamation],
+  ["mail-fast", IconMailFast],
+  ["mail-forward", IconMailForward],
+  ["mail-heart", IconMailHeart],
+  ["mail-minus", IconMailMinus],
+  ["mail-off", IconMailOff],
+  ["mail-opened", IconMailOpened],
+  ["mail-pause", IconMailPause],
+  ["mail-pin", IconMailPin],
+  ["mail-plus", IconMailPlus],
+  ["mail-question", IconMailQuestion],
+  ["mail-search", IconMailSearch],
+  ["mail-share", IconMailShare],
+  ["mail-spark", IconMailSpark],
+  ["mail-star", IconMailStar],
+  ["mail-up", IconMailUp],
+  ["mail-x", IconMailX],
+  ["mail", IconMail],
+  ["mailbox-off", IconMailboxOff],
+  ["mailbox", IconMailbox],
+  ["man", IconMan],
+  ["manual-gearbox", IconManualGearbox],
+  ["map-2", IconMap2],
+  ["map-bolt", IconMapBolt],
+  ["map-cancel", IconMapCancel],
+  ["map-check", IconMapCheck],
+  ["map-code", IconMapCode],
+  ["map-cog", IconMapCog],
+  ["map-discount", IconMapDiscount],
+  ["map-dollar", IconMapDollar],
+  ["map-down", IconMapDown],
+  ["map-east", IconMapEast],
+  ["map-exclamation", IconMapExclamation],
+  ["map-heart", IconMapHeart],
+  ["map-lock", IconMapLock],
+  ["map-minus", IconMapMinus],
+  ["map-north", IconMapNorth],
+  ["map-off", IconMapOff],
+  ["map-pause", IconMapPause],
+  ["map-pin-2", IconMapPin2],
+  ["map-pin-bolt", IconMapPinBolt],
+  ["map-pin-cancel", IconMapPinCancel],
+  ["map-pin-check", IconMapPinCheck],
+  ["map-pin-code", IconMapPinCode],
+  ["map-pin-cog", IconMapPinCog],
+  ["map-pin-dollar", IconMapPinDollar],
+  ["map-pin-down", IconMapPinDown],
+  ["map-pin-exclamation", IconMapPinExclamation],
+  ["map-pin-heart", IconMapPinHeart],
+  ["map-pin-minus", IconMapPinMinus],
+  ["map-pin-off", IconMapPinOff],
+  ["map-pin-pause", IconMapPinPause],
+  ["map-pin-pin", IconMapPinPin],
+  ["map-pin-plus", IconMapPinPlus],
+  ["map-pin-question", IconMapPinQuestion],
+  ["map-pin-search", IconMapPinSearch],
+  ["map-pin-share", IconMapPinShare],
+  ["map-pin-star", IconMapPinStar],
+  ["map-pin-up", IconMapPinUp],
+  ["map-pin-x", IconMapPinX],
+  ["map-pin", IconMapPin],
+  ["map-pinned", IconMapPinned],
+  ["map-pins", IconMapPins],
+  ["map-plus", IconMapPlus],
+  ["map-question", IconMapQuestion],
+  ["map-route", IconMapRoute],
+  ["map-search", IconMapSearch],
+  ["map-share", IconMapShare],
+  ["map-shield", IconMapShield],
+  ["map-south", IconMapSouth],
+  ["map-star", IconMapStar],
+  ["map-up", IconMapUp],
+  ["map-west", IconMapWest],
+  ["map-x", IconMapX],
+  ["map", IconMap],
+  ["markdown-off", IconMarkdownOff],
+  ["markdown", IconMarkdown],
+  ["marquee-2", IconMarquee2],
+  ["marquee-off", IconMarqueeOff],
+  ["marquee", IconMarquee],
+  ["mars", IconMars],
+  ["mask-off", IconMaskOff],
+  ["mask", IconMask],
+  ["masks-theater-off", IconMasksTheaterOff],
+  ["masks-theater", IconMasksTheater],
+  ["massage", IconMassage],
+  ["matchstick", IconMatchstick],
+  ["math-1-divide-2", IconMath1Divide2],
+  ["math-1-divide-3", IconMath1Divide3],
+  ["math-avg", IconMathAvg],
+  ["math-cos", IconMathCos],
+  ["math-ctg", IconMathCtg],
+  ["math-equal-greater", IconMathEqualGreater],
+  ["math-equal-lower", IconMathEqualLower],
+  ["math-function-off", IconMathFunctionOff],
+  ["math-function-y", IconMathFunctionY],
+  ["math-function", IconMathFunction],
+  ["math-greater", IconMathGreater],
+  ["math-integral-x", IconMathIntegralX],
+  ["math-integral", IconMathIntegral],
+  ["math-integrals", IconMathIntegrals],
+  ["math-lower", IconMathLower],
+  ["math-max-min", IconMathMaxMin],
+  ["math-max", IconMathMax],
+  ["math-min", IconMathMin],
+  ["math-not", IconMathNot],
+  ["math-off", IconMathOff],
+  ["math-pi-divide-2", IconMathPiDivide2],
+  ["math-pi", IconMathPi],
+  ["math-sec", IconMathSec],
+  ["math-sin", IconMathSin],
+  ["math-symbols", IconMathSymbols],
+  ["math-tg", IconMathTg],
+  ["math-x-divide-2", IconMathXDivide2],
+  ["math-x-divide-y-2", IconMathXDivideY2],
+  ["math-x-divide-y", IconMathXDivideY],
+  ["math-x-floor-divide-y", IconMathXFloorDivideY],
+  ["math-x-minus-x", IconMathXMinusX],
+  ["math-x-minus-y", IconMathXMinusY],
+  ["math-x-plus-x", IconMathXPlusX],
+  ["math-x-plus-y", IconMathXPlusY],
+  ["math-xy", IconMathXy],
+  ["math-y-minus-y", IconMathYMinusY],
+  ["math-y-plus-y", IconMathYPlusY],
+  ["math", IconMath],
+  ["matrix", IconMatrix],
+  ["maximize-off", IconMaximizeOff],
+  ["maximize", IconMaximize],
+  ["meat-off", IconMeatOff],
+  ["meat", IconMeat],
+  ["medal-2", IconMedal2],
+  ["medal", IconMedal],
+  ["medical-cross-circle", IconMedicalCrossCircle],
+  ["medical-cross-off", IconMedicalCrossOff],
+  ["medical-cross", IconMedicalCross],
+  ["medicine-syrup", IconMedicineSyrup],
+  ["meeple", IconMeeple],
+  ["melon", IconMelon],
+  ["memory", IconMemory],
+  ["menorah", IconMenorah],
+  ["menu-2", IconMenu2],
+  ["menu-3", IconMenu3],
+  ["menu-4", IconMenu4],
+  ["menu-deep", IconMenuDeep],
+  ["menu-order", IconMenuOrder],
+  ["menu", IconMenu],
+  ["mesh", IconMesh],
+  ["message-2-ai", IconMessage2Ai],
+  ["message-2-bolt", IconMessage2Bolt],
+  ["message-2-cancel", IconMessage2Cancel],
+  ["message-2-check", IconMessage2Check],
+  ["message-2-code", IconMessage2Code],
+  ["message-2-cog", IconMessage2Cog],
+  ["message-2-dollar", IconMessage2Dollar],
+  ["message-2-down", IconMessage2Down],
+  ["message-2-exclamation", IconMessage2Exclamation],
+  ["message-2-heart", IconMessage2Heart],
+  ["message-2-minus", IconMessage2Minus],
+  ["message-2-off", IconMessage2Off],
+  ["message-2-pause", IconMessage2Pause],
+  ["message-2-pin", IconMessage2Pin],
+  ["message-2-plus", IconMessage2Plus],
+  ["message-2-question", IconMessage2Question],
+  ["message-2-search", IconMessage2Search],
+  ["message-2-share", IconMessage2Share],
+  ["message-2-sparkle", IconMessage2Sparkle],
+  ["message-2-star", IconMessage2Star],
+  ["message-2-up", IconMessage2Up],
+  ["message-2-x", IconMessage2X],
+  ["message-2", IconMessage2],
+  ["message-ai", IconMessageAi],
+  ["message-bolt", IconMessageBolt],
+  ["message-cancel", IconMessageCancel],
+  ["message-chatbot", IconMessageChatbot],
+  ["message-check", IconMessageCheck],
+  ["message-circle-bolt", IconMessageCircleBolt],
+  ["message-circle-cancel", IconMessageCircleCancel],
+  ["message-circle-check", IconMessageCircleCheck],
+  ["message-circle-code", IconMessageCircleCode],
+  ["message-circle-cog", IconMessageCircleCog],
+  ["message-circle-dollar", IconMessageCircleDollar],
+  ["message-circle-down", IconMessageCircleDown],
+  ["message-circle-exclamation", IconMessageCircleExclamation],
+  ["message-circle-heart", IconMessageCircleHeart],
+  ["message-circle-minus", IconMessageCircleMinus],
+  ["message-circle-off", IconMessageCircleOff],
+  ["message-circle-pause", IconMessageCirclePause],
+  ["message-circle-pin", IconMessageCirclePin],
+  ["message-circle-plus", IconMessageCirclePlus],
+  ["message-circle-question", IconMessageCircleQuestion],
+  ["message-circle-search", IconMessageCircleSearch],
+  ["message-circle-share", IconMessageCircleShare],
+  ["message-circle-star", IconMessageCircleStar],
+  ["message-circle-up", IconMessageCircleUp],
+  ["message-circle-user", IconMessageCircleUser],
+  ["message-circle-x", IconMessageCircleX],
+  ["message-circle", IconMessageCircle],
+  ["message-code", IconMessageCode],
+  ["message-cog", IconMessageCog],
+  ["message-dollar", IconMessageDollar],
+  ["message-dots", IconMessageDots],
+  ["message-down", IconMessageDown],
+  ["message-exclamation", IconMessageExclamation],
+  ["message-forward", IconMessageForward],
+  ["message-heart", IconMessageHeart],
+  ["message-language", IconMessageLanguage],
+  ["message-minus", IconMessageMinus],
+  ["message-off", IconMessageOff],
+  ["message-pause", IconMessagePause],
+  ["message-pin", IconMessagePin],
+  ["message-plus", IconMessagePlus],
+  ["message-question", IconMessageQuestion],
+  ["message-reply", IconMessageReply],
+  ["message-report", IconMessageReport],
+  ["message-search", IconMessageSearch],
+  ["message-share", IconMessageShare],
+  ["message-sparkle", IconMessageSparkle],
+  ["message-star", IconMessageStar],
+  ["message-up", IconMessageUp],
+  ["message-user", IconMessageUser],
+  ["message-x", IconMessageX],
+  ["message", IconMessage],
+  ["messages-off", IconMessagesOff],
+  ["messages", IconMessages],
+  ["meteor-off", IconMeteorOff],
+  ["meteor", IconMeteor],
+  ["meter-cube", IconMeterCube],
+  ["meter-square", IconMeterSquare],
+  ["metronome", IconMetronome],
+  ["michelin-bib-gourmand", IconMichelinBibGourmand],
+  ["michelin-star-green", IconMichelinStarGreen],
+  ["michelin-star", IconMichelinStar],
+  ["mickey", IconMickey],
+  ["microfrontends", IconMicrofrontends],
+  ["microphone-2-off", IconMicrophone2Off],
+  ["microphone-2", IconMicrophone2],
+  ["microphone-off", IconMicrophoneOff],
+  ["microphone", IconMicrophone],
+  ["microscope-off", IconMicroscopeOff],
+  ["microscope", IconMicroscope],
+  ["microwave-off", IconMicrowaveOff],
+  ["microwave", IconMicrowave],
+  ["middleware", IconMiddleware],
+  ["military-award", IconMilitaryAward],
+  ["military-rank", IconMilitaryRank],
+  ["milk-off", IconMilkOff],
+  ["milk", IconMilk],
+  ["milkshake", IconMilkshake],
+  ["minimize", IconMinimize],
+  ["minus-vertical", IconMinusVertical],
+  ["minus", IconMinus],
+  ["mist-off", IconMistOff],
+  ["mist", IconMist],
+  ["mobiledata-off", IconMobiledataOff],
+  ["mobiledata", IconMobiledata],
+  ["model-ai", IconModelAi],
+  ["moneybag-edit", IconMoneybagEdit],
+  ["moneybag-heart", IconMoneybagHeart],
+  ["moneybag-minus", IconMoneybagMinus],
+  ["moneybag-move-back", IconMoneybagMoveBack],
+  ["moneybag-move", IconMoneybagMove],
+  ["moneybag-plus", IconMoneybagPlus],
+  ["moneybag", IconMoneybag],
+  ["monkeybar", IconMonkeybar],
+  ["mood-angry", IconMoodAngry],
+  ["mood-annoyed-2", IconMoodAnnoyed2],
+  ["mood-annoyed", IconMoodAnnoyed],
+  ["mood-bitcoin", IconMoodBitcoin],
+  ["mood-boy", IconMoodBoy],
+  ["mood-check", IconMoodCheck],
+  ["mood-cog", IconMoodCog],
+  ["mood-confused", IconMoodConfused],
+  ["mood-crazy-happy", IconMoodCrazyHappy],
+  ["mood-cry", IconMoodCry],
+  ["mood-dollar", IconMoodDollar],
+  ["mood-edit", IconMoodEdit],
+  ["mood-empty", IconMoodEmpty],
+  ["mood-happy", IconMoodHappy],
+  ["mood-heart", IconMoodHeart],
+  ["mood-kid", IconMoodKid],
+  ["mood-look-down", IconMoodLookDown],
+  ["mood-look-left", IconMoodLookLeft],
+  ["mood-look-right", IconMoodLookRight],
+  ["mood-look-up", IconMoodLookUp],
+  ["mood-minus", IconMoodMinus],
+  ["mood-nerd", IconMoodNerd],
+  ["mood-nervous", IconMoodNervous],
+  ["mood-neutral", IconMoodNeutral],
+  ["mood-off", IconMoodOff],
+  ["mood-pin", IconMoodPin],
+  ["mood-plus", IconMoodPlus],
+  ["mood-puzzled", IconMoodPuzzled],
+  ["mood-sad-2", IconMoodSad2],
+  ["mood-sad-dizzy", IconMoodSadDizzy],
+  ["mood-sad-squint", IconMoodSadSquint],
+  ["mood-sad", IconMoodSad],
+  ["mood-search", IconMoodSearch],
+  ["mood-share", IconMoodShare],
+  ["mood-sick", IconMoodSick],
+  ["mood-silence", IconMoodSilence],
+  ["mood-sing", IconMoodSing],
+  ["mood-smile-beam", IconMoodSmileBeam],
+  ["mood-smile-dizzy", IconMoodSmileDizzy],
+  ["mood-smile", IconMoodSmile],
+  ["mood-spark", IconMoodSpark],
+  ["mood-surprised", IconMoodSurprised],
+  ["mood-tongue-wink-2", IconMoodTongueWink2],
+  ["mood-tongue-wink", IconMoodTongueWink],
+  ["mood-tongue", IconMoodTongue],
+  ["mood-unamused", IconMoodUnamused],
+  ["mood-up", IconMoodUp],
+  ["mood-wink-2", IconMoodWink2],
+  ["mood-wink", IconMoodWink],
+  ["mood-wrrr", IconMoodWrrr],
+  ["mood-x", IconMoodX],
+  ["mood-xd", IconMoodXd],
+  ["moon-2", IconMoon2],
+  ["moon-off", IconMoonOff],
+  ["moon-stars", IconMoonStars],
+  ["moon", IconMoon],
+  ["moped", IconMoped],
+  ["mosque", IconMosque],
+  ["motorbike", IconMotorbike],
+  ["mountain-off", IconMountainOff],
+  ["mountain", IconMountain],
+  ["mouse-2", IconMouse2],
+  ["mouse-off", IconMouseOff],
+  ["mouse", IconMouse],
+  ["moustache", IconMoustache],
+  ["movie-off", IconMovieOff],
+  ["movie", IconMovie],
+  ["mug-off", IconMugOff],
+  ["mug", IconMug],
+  ["multiplier-0-5x", IconMultiplier05x],
+  ["multiplier-1-5x", IconMultiplier15x],
+  ["multiplier-1x", IconMultiplier1x],
+  ["multiplier-2x", IconMultiplier2x],
+  ["mushroom-off", IconMushroomOff],
+  ["mushroom", IconMushroom],
+  ["music-bolt", IconMusicBolt],
+  ["music-cancel", IconMusicCancel],
+  ["music-check", IconMusicCheck],
+  ["music-code", IconMusicCode],
+  ["music-cog", IconMusicCog],
+  ["music-discount", IconMusicDiscount],
+  ["music-dollar", IconMusicDollar],
+  ["music-down", IconMusicDown],
+  ["music-exclamation", IconMusicExclamation],
+  ["music-heart", IconMusicHeart],
+  ["music-minus", IconMusicMinus],
+  ["music-off", IconMusicOff],
+  ["music-pause", IconMusicPause],
+  ["music-pin", IconMusicPin],
+  ["music-plus", IconMusicPlus],
+  ["music-question", IconMusicQuestion],
+  ["music-search", IconMusicSearch],
+  ["music-share", IconMusicShare],
+  ["music-star", IconMusicStar],
+  ["music-up", IconMusicUp],
+  ["music-x", IconMusicX],
+  ["music", IconMusic],
+  ["navigation-bolt", IconNavigationBolt],
+  ["navigation-cancel", IconNavigationCancel],
+  ["navigation-check", IconNavigationCheck],
+  ["navigation-code", IconNavigationCode],
+  ["navigation-cog", IconNavigationCog],
+  ["navigation-discount", IconNavigationDiscount],
+  ["navigation-dollar", IconNavigationDollar],
+  ["navigation-down", IconNavigationDown],
+  ["navigation-east", IconNavigationEast],
+  ["navigation-exclamation", IconNavigationExclamation],
+  ["navigation-heart", IconNavigationHeart],
+  ["navigation-minus", IconNavigationMinus],
+  ["navigation-north", IconNavigationNorth],
+  ["navigation-off", IconNavigationOff],
+  ["navigation-pause", IconNavigationPause],
+  ["navigation-pin", IconNavigationPin],
+  ["navigation-plus", IconNavigationPlus],
+  ["navigation-question", IconNavigationQuestion],
+  ["navigation-search", IconNavigationSearch],
+  ["navigation-share", IconNavigationShare],
+  ["navigation-south", IconNavigationSouth],
+  ["navigation-star", IconNavigationStar],
+  ["navigation-top", IconNavigationTop],
+  ["navigation-up", IconNavigationUp],
+  ["navigation-west", IconNavigationWest],
+  ["navigation-x", IconNavigationX],
+  ["navigation", IconNavigation],
+  ["needle-thread", IconNeedleThread],
+  ["needle", IconNeedle],
+  ["network-off", IconNetworkOff],
+  ["network", IconNetwork],
+  ["new-section", IconNewSection],
+  ["news-off", IconNewsOff],
+  ["news", IconNews],
+  ["nfc-off", IconNfcOff],
+  ["nfc", IconNfc],
+  ["no-copyright", IconNoCopyright],
+  ["no-creative-commons", IconNoCreativeCommons],
+  ["no-derivatives", IconNoDerivatives],
+  ["noise-reduction", IconNoiseReduction],
+  ["north-star", IconNorthStar],
+  ["notdef", IconNotdef],
+  ["note-off", IconNoteOff],
+  ["note", IconNote],
+  ["notebook-off", IconNotebookOff],
+  ["notebook", IconNotebook],
+  ["notes-off", IconNotesOff],
+  ["notes", IconNotes],
+  ["notification-off", IconNotificationOff],
+  ["notification", IconNotification],
+  ["number-0-small", IconNumber0Small],
+  ["number-0", IconNumber0],
+  ["number-1-small", IconNumber1Small],
+  ["number-1", IconNumber1],
+  ["number-10-small", IconNumber10Small],
+  ["number-10", IconNumber10],
+  ["number-100-small", IconNumber100Small],
+  ["number-11-small", IconNumber11Small],
+  ["number-11", IconNumber11],
+  ["number-12-small", IconNumber12Small],
+  ["number-123", IconNumber123],
+  ["number-13-small", IconNumber13Small],
+  ["number-14-small", IconNumber14Small],
+  ["number-15-small", IconNumber15Small],
+  ["number-16-small", IconNumber16Small],
+  ["number-17-small", IconNumber17Small],
+  ["number-18-small", IconNumber18Small],
+  ["number-19-small", IconNumber19Small],
+  ["number-2-small", IconNumber2Small],
+  ["number-2", IconNumber2],
+  ["number-20-small", IconNumber20Small],
+  ["number-21-small", IconNumber21Small],
+  ["number-22-small", IconNumber22Small],
+  ["number-23-small", IconNumber23Small],
+  ["number-24-small", IconNumber24Small],
+  ["number-25-small", IconNumber25Small],
+  ["number-26-small", IconNumber26Small],
+  ["number-27-small", IconNumber27Small],
+  ["number-28-small", IconNumber28Small],
+  ["number-29-small", IconNumber29Small],
+  ["number-3-small", IconNumber3Small],
+  ["number-3", IconNumber3],
+  ["number-30-small", IconNumber30Small],
+  ["number-31-small", IconNumber31Small],
+  ["number-32-small", IconNumber32Small],
+  ["number-33-small", IconNumber33Small],
+  ["number-34-small", IconNumber34Small],
+  ["number-35-small", IconNumber35Small],
+  ["number-36-small", IconNumber36Small],
+  ["number-37-small", IconNumber37Small],
+  ["number-38-small", IconNumber38Small],
+  ["number-39-small", IconNumber39Small],
+  ["number-4-small", IconNumber4Small],
+  ["number-4", IconNumber4],
+  ["number-40-small", IconNumber40Small],
+  ["number-41-small", IconNumber41Small],
+  ["number-42-small", IconNumber42Small],
+  ["number-43-small", IconNumber43Small],
+  ["number-44-small", IconNumber44Small],
+  ["number-45-small", IconNumber45Small],
+  ["number-46-small", IconNumber46Small],
+  ["number-47-small", IconNumber47Small],
+  ["number-48-small", IconNumber48Small],
+  ["number-49-small", IconNumber49Small],
+  ["number-5-small", IconNumber5Small],
+  ["number-5", IconNumber5],
+  ["number-50-small", IconNumber50Small],
+  ["number-51-small", IconNumber51Small],
+  ["number-52-small", IconNumber52Small],
+  ["number-53-small", IconNumber53Small],
+  ["number-54-small", IconNumber54Small],
+  ["number-55-small", IconNumber55Small],
+  ["number-56-small", IconNumber56Small],
+  ["number-57-small", IconNumber57Small],
+  ["number-58-small", IconNumber58Small],
+  ["number-59-small", IconNumber59Small],
+  ["number-6-small", IconNumber6Small],
+  ["number-6", IconNumber6],
+  ["number-60-small", IconNumber60Small],
+  ["number-61-small", IconNumber61Small],
+  ["number-62-small", IconNumber62Small],
+  ["number-63-small", IconNumber63Small],
+  ["number-64-small", IconNumber64Small],
+  ["number-65-small", IconNumber65Small],
+  ["number-66-small", IconNumber66Small],
+  ["number-67-small", IconNumber67Small],
+  ["number-68-small", IconNumber68Small],
+  ["number-69-small", IconNumber69Small],
+  ["number-7-small", IconNumber7Small],
+  ["number-7", IconNumber7],
+  ["number-70-small", IconNumber70Small],
+  ["number-71-small", IconNumber71Small],
+  ["number-72-small", IconNumber72Small],
+  ["number-73-small", IconNumber73Small],
+  ["number-74-small", IconNumber74Small],
+  ["number-75-small", IconNumber75Small],
+  ["number-76-small", IconNumber76Small],
+  ["number-77-small", IconNumber77Small],
+  ["number-78-small", IconNumber78Small],
+  ["number-79-small", IconNumber79Small],
+  ["number-8-small", IconNumber8Small],
+  ["number-8", IconNumber8],
+  ["number-80-small", IconNumber80Small],
+  ["number-81-small", IconNumber81Small],
+  ["number-82-small", IconNumber82Small],
+  ["number-83-small", IconNumber83Small],
+  ["number-84-small", IconNumber84Small],
+  ["number-85-small", IconNumber85Small],
+  ["number-86-small", IconNumber86Small],
+  ["number-87-small", IconNumber87Small],
+  ["number-88-small", IconNumber88Small],
+  ["number-89-small", IconNumber89Small],
+  ["number-9-small", IconNumber9Small],
+  ["number-9", IconNumber9],
+  ["number-90-small", IconNumber90Small],
+  ["number-91-small", IconNumber91Small],
+  ["number-92-small", IconNumber92Small],
+  ["number-93-small", IconNumber93Small],
+  ["number-94-small", IconNumber94Small],
+  ["number-95-small", IconNumber95Small],
+  ["number-96-small", IconNumber96Small],
+  ["number-97-small", IconNumber97Small],
+  ["number-98-small", IconNumber98Small],
+  ["number-99-small", IconNumber99Small],
+  ["number", IconNumber],
+  ["numbers", IconNumbers],
+  ["nurse", IconNurse],
+  ["nut", IconNut],
+  ["object-scan", IconObjectScan],
+  ["octagon-minus-2", IconOctagonMinus2],
+  ["octagon-minus", IconOctagonMinus],
+  ["octagon-off", IconOctagonOff],
+  ["octagon-plus-2", IconOctagonPlus2],
+  ["octagon-plus", IconOctagonPlus],
+  ["octagon", IconOctagon],
+  ["octahedron-off", IconOctahedronOff],
+  ["octahedron-plus", IconOctahedronPlus],
+  ["octahedron", IconOctahedron],
+  ["old", IconOld],
+  ["olympic-torch", IconOlympicTorch],
+  ["olympics-off", IconOlympicsOff],
+  ["olympics", IconOlympics],
+  ["om", IconOm],
+  ["omega", IconOmega],
+  ["option", IconOption],
+  ["orbit-vertical", IconOrbitVertical],
+  ["orbit", IconOrbit],
+  ["orbits", IconOrbits],
+  ["outbound", IconOutbound],
+  ["outlet", IconOutlet],
+  ["oval-vertical", IconOvalVertical],
+  ["oval", IconOval],
+  ["overline", IconOverline],
+  ["package-export", IconPackageExport],
+  ["package-import", IconPackageImport],
+  ["package-off", IconPackageOff],
+  ["package", IconPackage],
+  ["packages", IconPackages],
+  ["pacman", IconPacman],
+  ["page-break", IconPageBreak],
+  ["paint-off", IconPaintOff],
+  ["paint", IconPaint],
+  ["palette-off", IconPaletteOff],
+  ["palette", IconPalette],
+  ["panorama-horizontal-off", IconPanoramaHorizontalOff],
+  ["panorama-horizontal", IconPanoramaHorizontal],
+  ["panorama-vertical-off", IconPanoramaVerticalOff],
+  ["panorama-vertical", IconPanoramaVertical],
+  ["paper-bag-off", IconPaperBagOff],
+  ["paper-bag", IconPaperBag],
+  ["paperclip", IconPaperclip],
+  ["parachute-off", IconParachuteOff],
+  ["parachute", IconParachute],
+  ["parentheses-off", IconParenthesesOff],
+  ["parentheses", IconParentheses],
+  ["parking-circle", IconParkingCircle],
+  ["parking-meter", IconParkingMeter],
+  ["parking-off", IconParkingOff],
+  ["parking", IconParking],
+  ["password-fingerprint", IconPasswordFingerprint],
+  ["password-mobile-phone", IconPasswordMobilePhone],
+  ["password-user", IconPasswordUser],
+  ["password", IconPassword],
+  ["paw-off", IconPawOff],
+  ["paw", IconPaw],
+  ["paywall", IconPaywall],
+  ["pdf", IconPdf],
+  ["peace", IconPeace],
+  ["pencil-ai", IconPencilAi],
+  ["pencil-bolt", IconPencilBolt],
+  ["pencil-cancel", IconPencilCancel],
+  ["pencil-check", IconPencilCheck],
+  ["pencil-code", IconPencilCode],
+  ["pencil-cog", IconPencilCog],
+  ["pencil-discount", IconPencilDiscount],
+  ["pencil-dollar", IconPencilDollar],
+  ["pencil-down", IconPencilDown],
+  ["pencil-exclamation", IconPencilExclamation],
+  ["pencil-heart", IconPencilHeart],
+  ["pencil-minus", IconPencilMinus],
+  ["pencil-off", IconPencilOff],
+  ["pencil-pause", IconPencilPause],
+  ["pencil-pin", IconPencilPin],
+  ["pencil-plus", IconPencilPlus],
+  ["pencil-question", IconPencilQuestion],
+  ["pencil-search", IconPencilSearch],
+  ["pencil-share", IconPencilShare],
+  ["pencil-star", IconPencilStar],
+  ["pencil-up", IconPencilUp],
+  ["pencil-x", IconPencilX],
+  ["pencil", IconPencil],
+  ["pendulum", IconPendulum],
+  ["pennant-2", IconPennant2],
+  ["pennant-off", IconPennantOff],
+  ["pennant", IconPennant],
+  ["pentagon-minus", IconPentagonMinus],
+  ["pentagon-number-0", IconPentagonNumber0],
+  ["pentagon-number-1", IconPentagonNumber1],
+  ["pentagon-number-2", IconPentagonNumber2],
+  ["pentagon-number-3", IconPentagonNumber3],
+  ["pentagon-number-4", IconPentagonNumber4],
+  ["pentagon-number-5", IconPentagonNumber5],
+  ["pentagon-number-6", IconPentagonNumber6],
+  ["pentagon-number-7", IconPentagonNumber7],
+  ["pentagon-number-8", IconPentagonNumber8],
+  ["pentagon-number-9", IconPentagonNumber9],
+  ["pentagon-off", IconPentagonOff],
+  ["pentagon-plus", IconPentagonPlus],
+  ["pentagon-x", IconPentagonX],
+  ["pentagon", IconPentagon],
+  ["pentagram", IconPentagram],
+  ["pepper-off", IconPepperOff],
+  ["pepper", IconPepper],
+  ["percentage-0", IconPercentage0],
+  ["percentage-10", IconPercentage10],
+  ["percentage-100", IconPercentage100],
+  ["percentage-20", IconPercentage20],
+  ["percentage-25", IconPercentage25],
+  ["percentage-30", IconPercentage30],
+  ["percentage-33", IconPercentage33],
+  ["percentage-40", IconPercentage40],
+  ["percentage-50", IconPercentage50],
+  ["percentage-60", IconPercentage60],
+  ["percentage-66", IconPercentage66],
+  ["percentage-70", IconPercentage70],
+  ["percentage-75", IconPercentage75],
+  ["percentage-80", IconPercentage80],
+  ["percentage-90", IconPercentage90],
+  ["percentage", IconPercentage],
+  ["perfume", IconPerfume],
+  ["perspective-off", IconPerspectiveOff],
+  ["perspective", IconPerspective],
+  ["phone-call", IconPhoneCall],
+  ["phone-calling", IconPhoneCalling],
+  ["phone-check", IconPhoneCheck],
+  ["phone-done", IconPhoneDone],
+  ["phone-end", IconPhoneEnd],
+  ["phone-incoming", IconPhoneIncoming],
+  ["phone-off", IconPhoneOff],
+  ["phone-outgoing", IconPhoneOutgoing],
+  ["phone-pause", IconPhonePause],
+  ["phone-plus", IconPhonePlus],
+  ["phone-ringing", IconPhoneRinging],
+  ["phone-spark", IconPhoneSpark],
+  ["phone-x", IconPhoneX],
+  ["phone", IconPhone],
+  ["photo-ai", IconPhotoAi],
+  ["photo-alt", IconPhotoAlt],
+  ["photo-bitcoin", IconPhotoBitcoin],
+  ["photo-bolt", IconPhotoBolt],
+  ["photo-cancel", IconPhotoCancel],
+  ["photo-check", IconPhotoCheck],
+  ["photo-circle-minus", IconPhotoCircleMinus],
+  ["photo-circle-plus", IconPhotoCirclePlus],
+  ["photo-circle", IconPhotoCircle],
+  ["photo-code", IconPhotoCode],
+  ["photo-cog", IconPhotoCog],
+  ["photo-dollar", IconPhotoDollar],
+  ["photo-down", IconPhotoDown],
+  ["photo-edit", IconPhotoEdit],
+  ["photo-exclamation", IconPhotoExclamation],
+  ["photo-heart", IconPhotoHeart],
+  ["photo-hexagon", IconPhotoHexagon],
+  ["photo-minus", IconPhotoMinus],
+  ["photo-off", IconPhotoOff],
+  ["photo-pause", IconPhotoPause],
+  ["photo-pentagon", IconPhotoPentagon],
+  ["photo-pin", IconPhotoPin],
+  ["photo-plus", IconPhotoPlus],
+  ["photo-question", IconPhotoQuestion],
+  ["photo-scan", IconPhotoScan],
+  ["photo-search", IconPhotoSearch],
+  ["photo-sensor-2", IconPhotoSensor2],
+  ["photo-sensor-3", IconPhotoSensor3],
+  ["photo-sensor", IconPhotoSensor],
+  ["photo-share", IconPhotoShare],
+  ["photo-shield", IconPhotoShield],
+  ["photo-spark", IconPhotoSpark],
+  ["photo-square-rounded", IconPhotoSquareRounded],
+  ["photo-star", IconPhotoStar],
+  ["photo-up", IconPhotoUp],
+  ["photo-video", IconPhotoVideo],
+  ["photo-x", IconPhotoX],
+  ["photo", IconPhoto],
+  ["physiotherapist", IconPhysiotherapist],
+  ["piano", IconPiano],
+  ["pick", IconPick],
+  ["picnic-table", IconPicnicTable],
+  ["picture-in-picture-off", IconPictureInPictureOff],
+  ["picture-in-picture-on", IconPictureInPictureOn],
+  ["picture-in-picture-top", IconPictureInPictureTop],
+  ["picture-in-picture", IconPictureInPicture],
+  ["pig-money", IconPigMoney],
+  ["pig-off", IconPigOff],
+  ["pig", IconPig],
+  ["pilcrow-left", IconPilcrowLeft],
+  ["pilcrow-right", IconPilcrowRight],
+  ["pilcrow", IconPilcrow],
+  ["pill-off", IconPillOff],
+  ["pill", IconPill],
+  ["pillow", IconPillow],
+  ["pills", IconPills],
+  ["pin-end", IconPinEnd],
+  ["pin-invoke", IconPinInvoke],
+  ["pin", IconPin],
+  ["ping-pong", IconPingPong],
+  ["pinned-off", IconPinnedOff],
+  ["pinned", IconPinned],
+  ["pipeline", IconPipeline],
+  ["pizza-off", IconPizzaOff],
+  ["pizza", IconPizza],
+  ["placeholder", IconPlaceholder],
+  ["plane-arrival", IconPlaneArrival],
+  ["plane-departure", IconPlaneDeparture],
+  ["plane-inflight", IconPlaneInflight],
+  ["plane-off", IconPlaneOff],
+  ["plane-tilt", IconPlaneTilt],
+  ["plane", IconPlane],
+  ["planet-off", IconPlanetOff],
+  ["planet", IconPlanet],
+  ["plant-2-off", IconPlant2Off],
+  ["plant-2", IconPlant2],
+  ["plant-off", IconPlantOff],
+  ["plant", IconPlant],
+  ["play-basketball", IconPlayBasketball],
+  ["play-bug", IconPlayBug],
+  ["play-bugs", IconPlayBugs],
+  ["play-card-1", IconPlayCard1],
+  ["play-card-10", IconPlayCard10],
+  ["play-card-2", IconPlayCard2],
+  ["play-card-3", IconPlayCard3],
+  ["play-card-4", IconPlayCard4],
+  ["play-card-5", IconPlayCard5],
+  ["play-card-6", IconPlayCard6],
+  ["play-card-7", IconPlayCard7],
+  ["play-card-8", IconPlayCard8],
+  ["play-card-9", IconPlayCard9],
+  ["play-card-a", IconPlayCardA],
+  ["play-card-j", IconPlayCardJ],
+  ["play-card-k", IconPlayCardK],
+  ["play-card-off", IconPlayCardOff],
+  ["play-card-q", IconPlayCardQ],
+  ["play-card-star", IconPlayCardStar],
+  ["play-card", IconPlayCard],
+  ["play-football", IconPlayFootball],
+  ["play-handball", IconPlayHandball],
+  ["play-volleyball", IconPlayVolleyball],
+  ["player-eject", IconPlayerEject],
+  ["player-pause", IconPlayerPause],
+  ["player-play", IconPlayerPlay],
+  ["player-record", IconPlayerRecord],
+  ["player-skip-back", IconPlayerSkipBack],
+  ["player-skip-forward", IconPlayerSkipForward],
+  ["player-stop", IconPlayerStop],
+  ["player-track-next", IconPlayerTrackNext],
+  ["player-track-prev", IconPlayerTrackPrev],
+  ["playlist-add", IconPlaylistAdd],
+  ["playlist-off", IconPlaylistOff],
+  ["playlist-x", IconPlaylistX],
+  ["playlist", IconPlaylist],
+  ["playstation-circle", IconPlaystationCircle],
+  ["playstation-square", IconPlaystationSquare],
+  ["playstation-triangle", IconPlaystationTriangle],
+  ["playstation-x", IconPlaystationX],
+  ["plug-connected-x", IconPlugConnectedX],
+  ["plug-connected", IconPlugConnected],
+  ["plug-off", IconPlugOff],
+  ["plug-x", IconPlugX],
+  ["plug", IconPlug],
+  ["plunger", IconPlunger],
+  ["plus-equal", IconPlusEqual],
+  ["plus-minus", IconPlusMinus],
+  ["plus", IconPlus],
+  ["png", IconPng],
+  ["podium-off", IconPodiumOff],
+  ["podium", IconPodium],
+  ["point-off", IconPointOff],
+  ["point", IconPoint],
+  ["pointer-2", IconPointer2],
+  ["pointer-bolt", IconPointerBolt],
+  ["pointer-cancel", IconPointerCancel],
+  ["pointer-check", IconPointerCheck],
+  ["pointer-code", IconPointerCode],
+  ["pointer-cog", IconPointerCog],
+  ["pointer-collaboration-2", IconPointerCollaboration2],
+  ["pointer-collaboration", IconPointerCollaboration],
+  ["pointer-dollar", IconPointerDollar],
+  ["pointer-down", IconPointerDown],
+  ["pointer-exclamation", IconPointerExclamation],
+  ["pointer-heart", IconPointerHeart],
+  ["pointer-minus", IconPointerMinus],
+  ["pointer-off", IconPointerOff],
+  ["pointer-pause", IconPointerPause],
+  ["pointer-pin", IconPointerPin],
+  ["pointer-plus", IconPointerPlus],
+  ["pointer-question", IconPointerQuestion],
+  ["pointer-search", IconPointerSearch],
+  ["pointer-share", IconPointerShare],
+  ["pointer-star", IconPointerStar],
+  ["pointer-up", IconPointerUp],
+  ["pointer-x", IconPointerX],
+  ["pointer", IconPointer],
+  ["pokeball-off", IconPokeballOff],
+  ["pokeball", IconPokeball],
+  ["poker-chip", IconPokerChip],
+  ["polaroid", IconPolaroid],
+  ["polygon-off", IconPolygonOff],
+  ["polygon", IconPolygon],
+  ["poo", IconPoo],
+  ["pool-off", IconPoolOff],
+  ["pool", IconPool],
+  ["power", IconPower],
+  ["pray", IconPray],
+  ["premium-rights", IconPremiumRights],
+  ["prescription", IconPrescription],
+  ["presentation-analytics", IconPresentationAnalytics],
+  ["presentation-off", IconPresentationOff],
+  ["presentation", IconPresentation],
+  ["printer-off", IconPrinterOff],
+  ["printer", IconPrinter],
+  ["prism-light", IconPrismLight],
+  ["prism-off", IconPrismOff],
+  ["prism-plus", IconPrismPlus],
+  ["prism", IconPrism],
+  ["prison", IconPrison],
+  ["progress-alert", IconProgressAlert],
+  ["progress-bolt", IconProgressBolt],
+  ["progress-check", IconProgressCheck],
+  ["progress-down", IconProgressDown],
+  ["progress-help", IconProgressHelp],
+  ["progress-x", IconProgressX],
+  ["progress", IconProgress],
+  ["prompt", IconPrompt],
+  ["prong", IconProng],
+  ["propeller-off", IconPropellerOff],
+  ["propeller", IconPropeller],
+  ["protocol", IconProtocol],
+  ["pumpkin-scary", IconPumpkinScary],
+  ["puzzle-2", IconPuzzle2],
+  ["puzzle-off", IconPuzzleOff],
+  ["puzzle", IconPuzzle],
+  ["pyramid-off", IconPyramidOff],
+  ["pyramid-plus", IconPyramidPlus],
+  ["pyramid", IconPyramid],
+  ["qrcode-off", IconQrcodeOff],
+  ["qrcode", IconQrcode],
+  ["question-mark", IconQuestionMark],
+  ["queue-pop-in", IconQueuePopIn],
+  ["queue-pop-out", IconQueuePopOut],
+  ["quote-off", IconQuoteOff],
+  ["quote-open", IconQuoteOpen],
+  ["quote", IconQuote],
+  ["quotes", IconQuotes],
+  ["radar-2", IconRadar2],
+  ["radar-off", IconRadarOff],
+  ["radar", IconRadar],
+  ["radio-off", IconRadioOff],
+  ["radio", IconRadio],
+  ["radioactive-off", IconRadioactiveOff],
+  ["radioactive", IconRadioactive],
+  ["radius-bottom-left", IconRadiusBottomLeft],
+  ["radius-bottom-right", IconRadiusBottomRight],
+  ["radius-top-left", IconRadiusTopLeft],
+  ["radius-top-right", IconRadiusTopRight],
+  ["rainbow-off", IconRainbowOff],
+  ["rainbow", IconRainbow],
+  ["rating-12-plus", IconRating12Plus],
+  ["rating-14-plus", IconRating14Plus],
+  ["rating-16-plus", IconRating16Plus],
+  ["rating-18-plus", IconRating18Plus],
+  ["rating-21-plus", IconRating21Plus],
+  ["razor-electric", IconRazorElectric],
+  ["razor", IconRazor],
+  ["receipt-2", IconReceipt2],
+  ["receipt-bitcoin", IconReceiptBitcoin],
+  ["receipt-dollar", IconReceiptDollar],
+  ["receipt-euro", IconReceiptEuro],
+  ["receipt-off", IconReceiptOff],
+  ["receipt-pound", IconReceiptPound],
+  ["receipt-refund", IconReceiptRefund],
+  ["receipt-rupee", IconReceiptRupee],
+  ["receipt-tax", IconReceiptTax],
+  ["receipt-yen", IconReceiptYen],
+  ["receipt-yuan", IconReceiptYuan],
+  ["receipt", IconReceipt],
+  ["recharging", IconRecharging],
+  ["record-mail-off", IconRecordMailOff],
+  ["record-mail", IconRecordMail],
+  ["rectangle-rounded-bottom", IconRectangleRoundedBottom],
+  ["rectangle-rounded-top", IconRectangleRoundedTop],
+  ["rectangle-vertical", IconRectangleVertical],
+  ["rectangle", IconRectangle],
+  ["rectangular-prism-off", IconRectangularPrismOff],
+  ["rectangular-prism-plus", IconRectangularPrismPlus],
+  ["rectangular-prism", IconRectangularPrism],
+  ["recycle-off", IconRecycleOff],
+  ["recycle", IconRecycle],
+  ["reduce-motion", IconReduceMotion],
+  ["reference-image", IconReferenceImage],
+  ["refresh-alert", IconRefreshAlert],
+  ["refresh-dot", IconRefreshDot],
+  ["refresh-off", IconRefreshOff],
+  ["refresh", IconRefresh],
+  ["regex-off", IconRegexOff],
+  ["regex", IconRegex],
+  ["registered", IconRegistered],
+  ["relation-many-to-many", IconRelationManyToMany],
+  ["relation-one-to-many", IconRelationOneToMany],
+  ["relation-one-to-one", IconRelationOneToOne],
+  ["reload", IconReload],
+  ["remote-control", IconRemoteControl],
+  ["reorder", IconReorder],
+  ["repeat-off", IconRepeatOff],
+  ["repeat-once", IconRepeatOnce],
+  ["repeat", IconRepeat],
+  ["replace-off", IconReplaceOff],
+  ["replace-user", IconReplaceUser],
+  ["replace", IconReplace],
+  ["report-analytics", IconReportAnalytics],
+  ["report-medical", IconReportMedical],
+  ["report-money", IconReportMoney],
+  ["report-off", IconReportOff],
+  ["report-search", IconReportSearch],
+  ["report", IconReport],
+  ["reserved-line", IconReservedLine],
+  ["resize", IconResize],
+  ["restore", IconRestore],
+  ["rewind-backward-10", IconRewindBackward10],
+  ["rewind-backward-15", IconRewindBackward15],
+  ["rewind-backward-20", IconRewindBackward20],
+  ["rewind-backward-30", IconRewindBackward30],
+  ["rewind-backward-40", IconRewindBackward40],
+  ["rewind-backward-5", IconRewindBackward5],
+  ["rewind-backward-50", IconRewindBackward50],
+  ["rewind-backward-60", IconRewindBackward60],
+  ["rewind-forward-10", IconRewindForward10],
+  ["rewind-forward-15", IconRewindForward15],
+  ["rewind-forward-20", IconRewindForward20],
+  ["rewind-forward-30", IconRewindForward30],
+  ["rewind-forward-40", IconRewindForward40],
+  ["rewind-forward-5", IconRewindForward5],
+  ["rewind-forward-50", IconRewindForward50],
+  ["rewind-forward-60", IconRewindForward60],
+  ["ribbon-health", IconRibbonHealth],
+  ["rings", IconRings],
+  ["ripple-down", IconRippleDown],
+  ["ripple-off", IconRippleOff],
+  ["ripple-up", IconRippleUp],
+  ["ripple", IconRipple],
+  ["road-off", IconRoadOff],
+  ["road-sign", IconRoadSign],
+  ["road", IconRoad],
+  ["robot-face", IconRobotFace],
+  ["robot-off", IconRobotOff],
+  ["robot", IconRobot],
+  ["rocket-off", IconRocketOff],
+  ["rocket", IconRocket],
+  ["rocking-chair", IconRockingChair],
+  ["roller-skating", IconRollerSkating],
+  ["rollercoaster-off", IconRollercoasterOff],
+  ["rollercoaster", IconRollercoaster],
+  ["rosette-asterisk", IconRosetteAsterisk],
+  ["rosette-discount-check-off", IconRosetteDiscountCheckOff],
+  ["rosette-discount-check", IconRosetteDiscountCheck],
+  ["rosette-discount-off", IconRosetteDiscountOff],
+  ["rosette-discount", IconRosetteDiscount],
+  ["rosette-number-0", IconRosetteNumber0],
+  ["rosette-number-1", IconRosetteNumber1],
+  ["rosette-number-2", IconRosetteNumber2],
+  ["rosette-number-3", IconRosetteNumber3],
+  ["rosette-number-4", IconRosetteNumber4],
+  ["rosette-number-5", IconRosetteNumber5],
+  ["rosette-number-6", IconRosetteNumber6],
+  ["rosette-number-7", IconRosetteNumber7],
+  ["rosette-number-8", IconRosetteNumber8],
+  ["rosette-number-9", IconRosetteNumber9],
+  ["rosette", IconRosette],
+  ["rotate-2", IconRotate2],
+  ["rotate-360", IconRotate360],
+  ["rotate-3d", IconRotate3d],
+  ["rotate-clockwise-2", IconRotateClockwise2],
+  ["rotate-clockwise", IconRotateClockwise],
+  ["rotate-dot", IconRotateDot],
+  ["rotate-rectangle", IconRotateRectangle],
+  ["rotate", IconRotate],
+  ["roulette", IconRoulette],
+  ["route-2", IconRoute2],
+  ["route-alt-left", IconRouteAltLeft],
+  ["route-alt-right", IconRouteAltRight],
+  ["route-off", IconRouteOff],
+  ["route-scan", IconRouteScan],
+  ["route-square-2", IconRouteSquare2],
+  ["route-square", IconRouteSquare],
+  ["route-x-2", IconRouteX2],
+  ["route-x", IconRouteX],
+  ["route", IconRoute],
+  ["router-off", IconRouterOff],
+  ["router", IconRouter],
+  ["row-insert-bottom", IconRowInsertBottom],
+  ["row-insert-top", IconRowInsertTop],
+  ["row-remove", IconRowRemove],
+  ["rss", IconRss],
+  ["rubber-stamp-off", IconRubberStampOff],
+  ["rubber-stamp", IconRubberStamp],
+  ["rugby", IconRugby],
+  ["ruler-2-off", IconRuler2Off],
+  ["ruler-2", IconRuler2],
+  ["ruler-3", IconRuler3],
+  ["ruler-measure-2", IconRulerMeasure2],
+  ["ruler-measure", IconRulerMeasure],
+  ["ruler-off", IconRulerOff],
+  ["ruler", IconRuler],
+  ["run-sprint", IconRunSprint],
+  ["run", IconRun],
+  ["rv-truck", IconRvTruck],
+  ["s-turn-down", IconSTurnDown],
+  ["s-turn-left", IconSTurnLeft],
+  ["s-turn-right", IconSTurnRight],
+  ["s-turn-up", IconSTurnUp],
+  ["sailboat-2", IconSailboat2],
+  ["sailboat-off", IconSailboatOff],
+  ["sailboat", IconSailboat],
+  ["salad", IconSalad],
+  ["salt", IconSalt],
+  ["sandbox", IconSandbox],
+  ["satellite-off", IconSatelliteOff],
+  ["satellite", IconSatellite],
+  ["sausage", IconSausage],
+  ["scale-off", IconScaleOff],
+  ["scale-outline-off", IconScaleOutlineOff],
+  ["scale-outline", IconScaleOutline],
+  ["scale", IconScale],
+  ["scan-cube", IconScanCube],
+  ["scan-eye", IconScanEye],
+  ["scan-letter-a", IconScanLetterA],
+  ["scan-letter-t", IconScanLetterT],
+  ["scan-position", IconScanPosition],
+  ["scan-traces", IconScanTraces],
+  ["scan", IconScan],
+  ["schema-off", IconSchemaOff],
+  ["schema", IconSchema],
+  ["school-bell", IconSchoolBell],
+  ["school-off", IconSchoolOff],
+  ["school", IconSchool],
+  ["scissors-off", IconScissorsOff],
+  ["scissors", IconScissors],
+  ["scooter-electric", IconScooterElectric],
+  ["scooter", IconScooter],
+  ["scoreboard", IconScoreboard],
+  ["screen-share-off", IconScreenShareOff],
+  ["screen-share", IconScreenShare],
+  ["screenshot", IconScreenshot],
+  ["scribble-off", IconScribbleOff],
+  ["scribble", IconScribble],
+  ["script-minus", IconScriptMinus],
+  ["script-plus", IconScriptPlus],
+  ["script-x", IconScriptX],
+  ["script", IconScript],
+  ["scuba-diving-tank", IconScubaDivingTank],
+  ["scuba-diving", IconScubaDiving],
+  ["scuba-mask-off", IconScubaMaskOff],
+  ["scuba-mask", IconScubaMask],
+  ["sdk", IconSdk],
+  ["search-off", IconSearchOff],
+  ["search", IconSearch],
+  ["secret-phrases", IconSecretPhrases],
+  ["section-sign", IconSectionSign],
+  ["section", IconSection],
+  ["seedling-off", IconSeedlingOff],
+  ["seedling", IconSeedling],
+  ["segway", IconSegway],
+  ["select-all", IconSelectAll],
+  ["select", IconSelect],
+  ["selector", IconSelector],
+  ["send-2", IconSend2],
+  ["send-off", IconSendOff],
+  ["send", IconSend],
+  ["seo", IconSeo],
+  ["separator-horizontal", IconSeparatorHorizontal],
+  ["separator-vertical", IconSeparatorVertical],
+  ["separator", IconSeparator],
+  ["server-2", IconServer2],
+  ["server-bolt", IconServerBolt],
+  ["server-cog", IconServerCog],
+  ["server-off", IconServerOff],
+  ["server-spark", IconServerSpark],
+  ["server", IconServer],
+  ["serverless", IconServerless],
+  ["servicemark", IconServicemark],
+  ["settings-2", IconSettings2],
+  ["settings-ai", IconSettingsAi],
+  ["settings-automation", IconSettingsAutomation],
+  ["settings-bolt", IconSettingsBolt],
+  ["settings-cancel", IconSettingsCancel],
+  ["settings-check", IconSettingsCheck],
+  ["settings-code", IconSettingsCode],
+  ["settings-cog", IconSettingsCog],
+  ["settings-dollar", IconSettingsDollar],
+  ["settings-down", IconSettingsDown],
+  ["settings-exclamation", IconSettingsExclamation],
+  ["settings-heart", IconSettingsHeart],
+  ["settings-minus", IconSettingsMinus],
+  ["settings-off", IconSettingsOff],
+  ["settings-pause", IconSettingsPause],
+  ["settings-pin", IconSettingsPin],
+  ["settings-plus", IconSettingsPlus],
+  ["settings-question", IconSettingsQuestion],
+  ["settings-search", IconSettingsSearch],
+  ["settings-share", IconSettingsShare],
+  ["settings-spark", IconSettingsSpark],
+  ["settings-star", IconSettingsStar],
+  ["settings-up", IconSettingsUp],
+  ["settings-x", IconSettingsX],
+  ["settings", IconSettings],
+  ["shadow-off", IconShadowOff],
+  ["shadow", IconShadow],
+  ["shape-2", IconShape2],
+  ["shape-3", IconShape3],
+  ["shape-off", IconShapeOff],
+  ["shape", IconShape],
+  ["share-2", IconShare2],
+  ["share-3", IconShare3],
+  ["share-off", IconShareOff],
+  ["share", IconShare],
+  ["shareplay", IconShareplay],
+  ["shield-bolt", IconShieldBolt],
+  ["shield-cancel", IconShieldCancel],
+  ["shield-check", IconShieldCheck],
+  ["shield-checkered", IconShieldCheckered],
+  ["shield-chevron", IconShieldChevron],
+  ["shield-code", IconShieldCode],
+  ["shield-cog", IconShieldCog],
+  ["shield-dollar", IconShieldDollar],
+  ["shield-down", IconShieldDown],
+  ["shield-exclamation", IconShieldExclamation],
+  ["shield-half", IconShieldHalf],
+  ["shield-heart", IconShieldHeart],
+  ["shield-lock", IconShieldLock],
+  ["shield-minus", IconShieldMinus],
+  ["shield-off", IconShieldOff],
+  ["shield-pause", IconShieldPause],
+  ["shield-pin", IconShieldPin],
+  ["shield-plus", IconShieldPlus],
+  ["shield-question", IconShieldQuestion],
+  ["shield-search", IconShieldSearch],
+  ["shield-share", IconShieldShare],
+  ["shield-star", IconShieldStar],
+  ["shield-up", IconShieldUp],
+  ["shield-x", IconShieldX],
+  ["shield", IconShield],
+  ["ship-off", IconShipOff],
+  ["ship", IconShip],
+  ["shirt-off", IconShirtOff],
+  ["shirt-sport", IconShirtSport],
+  ["shirt", IconShirt],
+  ["shoe-off", IconShoeOff],
+  ["shoe", IconShoe],
+  ["shopping-bag-check", IconShoppingBagCheck],
+  ["shopping-bag-discount", IconShoppingBagDiscount],
+  ["shopping-bag-edit", IconShoppingBagEdit],
+  ["shopping-bag-exclamation", IconShoppingBagExclamation],
+  ["shopping-bag-heart", IconShoppingBagHeart],
+  ["shopping-bag-minus", IconShoppingBagMinus],
+  ["shopping-bag-plus", IconShoppingBagPlus],
+  ["shopping-bag-search", IconShoppingBagSearch],
+  ["shopping-bag-x", IconShoppingBagX],
+  ["shopping-bag", IconShoppingBag],
+  ["shopping-cart-bolt", IconShoppingCartBolt],
+  ["shopping-cart-cancel", IconShoppingCartCancel],
+  ["shopping-cart-check", IconShoppingCartCheck],
+  ["shopping-cart-code", IconShoppingCartCode],
+  ["shopping-cart-cog", IconShoppingCartCog],
+  ["shopping-cart-copy", IconShoppingCartCopy],
+  ["shopping-cart-discount", IconShoppingCartDiscount],
+  ["shopping-cart-dollar", IconShoppingCartDollar],
+  ["shopping-cart-down", IconShoppingCartDown],
+  ["shopping-cart-exclamation", IconShoppingCartExclamation],
+  ["shopping-cart-heart", IconShoppingCartHeart],
+  ["shopping-cart-minus", IconShoppingCartMinus],
+  ["shopping-cart-off", IconShoppingCartOff],
+  ["shopping-cart-pause", IconShoppingCartPause],
+  ["shopping-cart-pin", IconShoppingCartPin],
+  ["shopping-cart-plus", IconShoppingCartPlus],
+  ["shopping-cart-question", IconShoppingCartQuestion],
+  ["shopping-cart-search", IconShoppingCartSearch],
+  ["shopping-cart-share", IconShoppingCartShare],
+  ["shopping-cart-star", IconShoppingCartStar],
+  ["shopping-cart-up", IconShoppingCartUp],
+  ["shopping-cart-x", IconShoppingCartX],
+  ["shopping-cart", IconShoppingCart],
+  ["shovel-pitchforks", IconShovelPitchforks],
+  ["shovel", IconShovel],
+  ["shredder", IconShredder],
+  ["sign-left", IconSignLeft],
+  ["sign-right", IconSignRight],
+  ["signal-2g", IconSignal2g],
+  ["signal-3g", IconSignal3g],
+  ["signal-4g-plus", IconSignal4gPlus],
+  ["signal-4g", IconSignal4g],
+  ["signal-5g", IconSignal5g],
+  ["signal-6g", IconSignal6g],
+  ["signal-e", IconSignalE],
+  ["signal-g", IconSignalG],
+  ["signal-h-plus", IconSignalHPlus],
+  ["signal-h", IconSignalH],
+  ["signal-lte", IconSignalLte],
+  ["signature-off", IconSignatureOff],
+  ["signature", IconSignature],
+  ["sitemap-off", IconSitemapOff],
+  ["sitemap", IconSitemap],
+  ["skateboard-off", IconSkateboardOff],
+  ["skateboard", IconSkateboard],
+  ["skateboarding", IconSkateboarding],
+  ["sketching", IconSketching],
+  ["skew-x", IconSkewX],
+  ["skew-y", IconSkewY],
+  ["ski-jumping", IconSkiJumping],
+  ["skull", IconSkull],
+  ["slash", IconSlash],
+  ["slashes", IconSlashes],
+  ["sleigh", IconSleigh],
+  ["slice", IconSlice],
+  ["slideshow", IconSlideshow],
+  ["smart-home-off", IconSmartHomeOff],
+  ["smart-home", IconSmartHome],
+  ["smoking-no", IconSmokingNo],
+  ["smoking", IconSmoking],
+  ["snowboarding", IconSnowboarding],
+  ["snowflake-off", IconSnowflakeOff],
+  ["snowflake", IconSnowflake],
+  ["snowman", IconSnowman],
+  ["soccer-field", IconSoccerField],
+  ["social-off", IconSocialOff],
+  ["social", IconSocial],
+  ["sock", IconSock],
+  ["sofa-off", IconSofaOff],
+  ["sofa", IconSofa],
+  ["solar-electricity", IconSolarElectricity],
+  ["solar-panel-2", IconSolarPanel2],
+  ["solar-panel", IconSolarPanel],
+  ["sort-0-9", IconSort09],
+  ["sort-9-0", IconSort90],
+  ["sort-a-z", IconSortAZ],
+  ["sort-ascending-2", IconSortAscending2],
+  ["sort-ascending-letters", IconSortAscendingLetters],
+  ["sort-ascending-numbers", IconSortAscendingNumbers],
+  ["sort-ascending-shapes", IconSortAscendingShapes],
+  ["sort-ascending-small-big", IconSortAscendingSmallBig],
+  ["sort-ascending", IconSortAscending],
+  ["sort-descending-2", IconSortDescending2],
+  ["sort-descending-letters", IconSortDescendingLetters],
+  ["sort-descending-numbers", IconSortDescendingNumbers],
+  ["sort-descending-shapes", IconSortDescendingShapes],
+  ["sort-descending-small-big", IconSortDescendingSmallBig],
+  ["sort-descending", IconSortDescending],
+  ["sort-z-a", IconSortZA],
+  ["sos", IconSos],
+  ["soup-off", IconSoupOff],
+  ["soup", IconSoup],
+  ["source-code", IconSourceCode],
+  ["space-off", IconSpaceOff],
+  ["space", IconSpace],
+  ["spaces", IconSpaces],
+  ["spacing-horizontal", IconSpacingHorizontal],
+  ["spacing-vertical", IconSpacingVertical],
+  ["spade", IconSpade],
+  ["sparkle-2", IconSparkle2],
+  ["sparkle-highlight", IconSparkleHighlight],
+  ["sparkle", IconSparkle],
+  ["sparkles-2-off", IconSparkles2Off],
+  ["sparkles-2", IconSparkles2],
+  ["sparkles", IconSparkles],
+  ["speakerphone", IconSpeakerphone],
+  ["speedboat", IconSpeedboat],
+  ["sphere-2", IconSphere2],
+  ["sphere-off", IconSphereOff],
+  ["sphere-plus", IconSpherePlus],
+  ["sphere", IconSphere],
+  ["spider", IconSpider],
+  ["spiral-off", IconSpiralOff],
+  ["spiral", IconSpiral],
+  ["sport-billiard", IconSportBilliard],
+  ["spray", IconSpray],
+  ["spy-off", IconSpyOff],
+  ["spy", IconSpy],
+  ["sql", IconSql],
+  ["square-arrow-down", IconSquareArrowDown],
+  ["square-arrow-left", IconSquareArrowLeft],
+  ["square-arrow-right", IconSquareArrowRight],
+  ["square-arrow-up", IconSquareArrowUp],
+  ["square-asterisk", IconSquareAsterisk],
+  ["square-check", IconSquareCheck],
+  ["square-chevron-down", IconSquareChevronDown],
+  ["square-chevron-left", IconSquareChevronLeft],
+  ["square-chevron-right", IconSquareChevronRight],
+  ["square-chevron-up", IconSquareChevronUp],
+  ["square-chevrons-down", IconSquareChevronsDown],
+  ["square-chevrons-left", IconSquareChevronsLeft],
+  ["square-chevrons-right", IconSquareChevronsRight],
+  ["square-chevrons-up", IconSquareChevronsUp],
+  ["square-dashed-top-solid", IconSquareDashedTopSolid],
+  ["square-dashed-x", IconSquareDashedX],
+  ["square-dashed", IconSquareDashed],
+  ["square-dot", IconSquareDot],
+  ["square-f0", IconSquareF0],
+  ["square-f1", IconSquareF1],
+  ["square-f2", IconSquareF2],
+  ["square-f3", IconSquareF3],
+  ["square-f4", IconSquareF4],
+  ["square-f5", IconSquareF5],
+  ["square-f6", IconSquareF6],
+  ["square-f7", IconSquareF7],
+  ["square-f8", IconSquareF8],
+  ["square-f9", IconSquareF9],
+  ["square-forbid-2", IconSquareForbid2],
+  ["square-forbid", IconSquareForbid],
+  ["square-half", IconSquareHalf],
+  ["square-key", IconSquareKey],
+  ["square-letter-a", IconSquareLetterA],
+  ["square-letter-b", IconSquareLetterB],
+  ["square-letter-c", IconSquareLetterC],
+  ["square-letter-d", IconSquareLetterD],
+  ["square-letter-e", IconSquareLetterE],
+  ["square-letter-f", IconSquareLetterF],
+  ["square-letter-g", IconSquareLetterG],
+  ["square-letter-h", IconSquareLetterH],
+  ["square-letter-i", IconSquareLetterI],
+  ["square-letter-j", IconSquareLetterJ],
+  ["square-letter-k", IconSquareLetterK],
+  ["square-letter-l", IconSquareLetterL],
+  ["square-letter-m", IconSquareLetterM],
+  ["square-letter-n", IconSquareLetterN],
+  ["square-letter-o", IconSquareLetterO],
+  ["square-letter-p", IconSquareLetterP],
+  ["square-letter-q", IconSquareLetterQ],
+  ["square-letter-r", IconSquareLetterR],
+  ["square-letter-s", IconSquareLetterS],
+  ["square-letter-t", IconSquareLetterT],
+  ["square-letter-u", IconSquareLetterU],
+  ["square-letter-v", IconSquareLetterV],
+  ["square-letter-w", IconSquareLetterW],
+  ["square-letter-x", IconSquareLetterX],
+  ["square-letter-y", IconSquareLetterY],
+  ["square-letter-z", IconSquareLetterZ],
+  ["square-minus-2", IconSquareMinus2],
+  ["square-minus", IconSquareMinus],
+  ["square-number-0", IconSquareNumber0],
+  ["square-number-1", IconSquareNumber1],
+  ["square-number-2", IconSquareNumber2],
+  ["square-number-3", IconSquareNumber3],
+  ["square-number-4", IconSquareNumber4],
+  ["square-number-5", IconSquareNumber5],
+  ["square-number-6", IconSquareNumber6],
+  ["square-number-7", IconSquareNumber7],
+  ["square-number-8", IconSquareNumber8],
+  ["square-number-9", IconSquareNumber9],
+  ["square-off", IconSquareOff],
+  ["square-percentage", IconSquarePercentage],
+  ["square-plus-2", IconSquarePlus2],
+  ["square-plus", IconSquarePlus],
+  ["square-root-2", IconSquareRoot2],
+  ["square-root", IconSquareRoot],
+  ["square-rotated-asterisk", IconSquareRotatedAsterisk],
+  ["square-rotated-forbid-2", IconSquareRotatedForbid2],
+  ["square-rotated-forbid", IconSquareRotatedForbid],
+  ["square-rotated-off", IconSquareRotatedOff],
+  ["square-rotated", IconSquareRotated],
+  ["square-rounded-arrow-down", IconSquareRoundedArrowDown],
+  ["square-rounded-arrow-left", IconSquareRoundedArrowLeft],
+  ["square-rounded-arrow-right", IconSquareRoundedArrowRight],
+  ["square-rounded-arrow-up", IconSquareRoundedArrowUp],
+  ["square-rounded-check", IconSquareRoundedCheck],
+  ["square-rounded-chevron-down", IconSquareRoundedChevronDown],
+  ["square-rounded-chevron-left", IconSquareRoundedChevronLeft],
+  ["square-rounded-chevron-right", IconSquareRoundedChevronRight],
+  ["square-rounded-chevron-up", IconSquareRoundedChevronUp],
+  ["square-rounded-chevrons-down", IconSquareRoundedChevronsDown],
+  ["square-rounded-chevrons-left", IconSquareRoundedChevronsLeft],
+  ["square-rounded-chevrons-right", IconSquareRoundedChevronsRight],
+  ["square-rounded-chevrons-up", IconSquareRoundedChevronsUp],
+  ["square-rounded-letter-a", IconSquareRoundedLetterA],
+  ["square-rounded-letter-b", IconSquareRoundedLetterB],
+  ["square-rounded-letter-c", IconSquareRoundedLetterC],
+  ["square-rounded-letter-d", IconSquareRoundedLetterD],
+  ["square-rounded-letter-e", IconSquareRoundedLetterE],
+  ["square-rounded-letter-f", IconSquareRoundedLetterF],
+  ["square-rounded-letter-g", IconSquareRoundedLetterG],
+  ["square-rounded-letter-h", IconSquareRoundedLetterH],
+  ["square-rounded-letter-i", IconSquareRoundedLetterI],
+  ["square-rounded-letter-j", IconSquareRoundedLetterJ],
+  ["square-rounded-letter-k", IconSquareRoundedLetterK],
+  ["square-rounded-letter-l", IconSquareRoundedLetterL],
+  ["square-rounded-letter-m", IconSquareRoundedLetterM],
+  ["square-rounded-letter-n", IconSquareRoundedLetterN],
+  ["square-rounded-letter-o", IconSquareRoundedLetterO],
+  ["square-rounded-letter-p", IconSquareRoundedLetterP],
+  ["square-rounded-letter-q", IconSquareRoundedLetterQ],
+  ["square-rounded-letter-r", IconSquareRoundedLetterR],
+  ["square-rounded-letter-s", IconSquareRoundedLetterS],
+  ["square-rounded-letter-t", IconSquareRoundedLetterT],
+  ["square-rounded-letter-u", IconSquareRoundedLetterU],
+  ["square-rounded-letter-v", IconSquareRoundedLetterV],
+  ["square-rounded-letter-w", IconSquareRoundedLetterW],
+  ["square-rounded-letter-x", IconSquareRoundedLetterX],
+  ["square-rounded-letter-y", IconSquareRoundedLetterY],
+  ["square-rounded-letter-z", IconSquareRoundedLetterZ],
+  ["square-rounded-minus-2", IconSquareRoundedMinus2],
+  ["square-rounded-minus", IconSquareRoundedMinus],
+  ["square-rounded-number-0", IconSquareRoundedNumber0],
+  ["square-rounded-number-1", IconSquareRoundedNumber1],
+  ["square-rounded-number-2", IconSquareRoundedNumber2],
+  ["square-rounded-number-3", IconSquareRoundedNumber3],
+  ["square-rounded-number-4", IconSquareRoundedNumber4],
+  ["square-rounded-number-5", IconSquareRoundedNumber5],
+  ["square-rounded-number-6", IconSquareRoundedNumber6],
+  ["square-rounded-number-7", IconSquareRoundedNumber7],
+  ["square-rounded-number-8", IconSquareRoundedNumber8],
+  ["square-rounded-number-9", IconSquareRoundedNumber9],
+  ["square-rounded-percentage", IconSquareRoundedPercentage],
+  ["square-rounded-plus-2", IconSquareRoundedPlus2],
+  ["square-rounded-plus", IconSquareRoundedPlus],
+  ["square-rounded-x", IconSquareRoundedX],
+  ["square-rounded", IconSquareRounded],
+  ["square-toggle-horizontal", IconSquareToggleHorizontal],
+  ["square-toggle", IconSquareToggle],
+  ["square-x", IconSquareX],
+  ["square", IconSquare],
+  ["squares-diagonal", IconSquaresDiagonal],
+  ["squares-selected", IconSquaresSelected],
+  ["squares", IconSquares],
+  ["stack-2", IconStack2],
+  ["stack-3", IconStack3],
+  ["stack-back", IconStackBack],
+  ["stack-backward", IconStackBackward],
+  ["stack-check", IconStackCheck],
+  ["stack-forward", IconStackForward],
+  ["stack-front", IconStackFront],
+  ["stack-middle", IconStackMiddle],
+  ["stack-minus", IconStackMinus],
+  ["stack-plus", IconStackPlus],
+  ["stack-pop", IconStackPop],
+  ["stack-push", IconStackPush],
+  ["stack-x", IconStackX],
+  ["stack", IconStack],
+  ["stairs-down", IconStairsDown],
+  ["stairs-up", IconStairsUp],
+  ["stairs", IconStairs],
+  ["star-half", IconStarHalf],
+  ["star-off", IconStarOff],
+  ["star", IconStar],
+  ["stars-off", IconStarsOff],
+  ["stars", IconStars],
+  ["status-change", IconStatusChange],
+  ["steam", IconSteam],
+  ["steering-wheel-off", IconSteeringWheelOff],
+  ["steering-wheel", IconSteeringWheel],
+  ["step-into", IconStepInto],
+  ["step-out", IconStepOut],
+  ["stereo-glasses", IconStereoGlasses],
+  ["stethoscope-off", IconStethoscopeOff],
+  ["stethoscope", IconStethoscope],
+  ["sticker-2", IconSticker2],
+  ["sticker-smile", IconStickerSmile],
+  ["sticker", IconSticker],
+  ["stopwatch", IconStopwatch],
+  ["storm-off", IconStormOff],
+  ["storm", IconStorm],
+  ["stretching-2", IconStretching2],
+  ["stretching", IconStretching],
+  ["strikethrough", IconStrikethrough],
+  ["stroke-curved", IconStrokeCurved],
+  ["stroke-dynamic", IconStrokeDynamic],
+  ["stroke-straight", IconStrokeStraight],
+  ["submarine", IconSubmarine],
+  ["subscript", IconSubscript],
+  ["subtask", IconSubtask],
+  ["subtitles-ai", IconSubtitlesAi],
+  ["subtitles-edit", IconSubtitlesEdit],
+  ["subtitles-off", IconSubtitlesOff],
+  ["subtitles", IconSubtitles],
+  ["sum-off", IconSumOff],
+  ["sum", IconSum],
+  ["sun-electricity", IconSunElectricity],
+  ["sun-high", IconSunHigh],
+  ["sun-low", IconSunLow],
+  ["sun-moon", IconSunMoon],
+  ["sun-off", IconSunOff],
+  ["sun-wind", IconSunWind],
+  ["sun", IconSun],
+  ["sunglasses", IconSunglasses],
+  ["sunrise", IconSunrise],
+  ["sunset-2", IconSunset2],
+  ["sunset", IconSunset],
+  ["superscript", IconSuperscript],
+  ["svg", IconSvg],
+  ["swimming", IconSwimming],
+  ["swipe-down", IconSwipeDown],
+  ["swipe-left", IconSwipeLeft],
+  ["swipe-right", IconSwipeRight],
+  ["swipe-up", IconSwipeUp],
+  ["swipe", IconSwipe],
+  ["switch-2", IconSwitch2],
+  ["switch-3", IconSwitch3],
+  ["switch-horizontal", IconSwitchHorizontal],
+  ["switch-vertical", IconSwitchVertical],
+  ["switch", IconSwitch],
+  ["sword-off", IconSwordOff],
+  ["sword", IconSword],
+  ["swords", IconSwords],
+  ["tab-close", IconTabClose],
+  ["table-alias", IconTableAlias],
+  ["table-column", IconTableColumn],
+  ["table-dashed", IconTableDashed],
+  ["table-down", IconTableDown],
+  ["table-export", IconTableExport],
+  ["table-heart", IconTableHeart],
+  ["table-import", IconTableImport],
+  ["table-minus", IconTableMinus],
+  ["table-off", IconTableOff],
+  ["table-options", IconTableOptions],
+  ["table-plus", IconTablePlus],
+  ["table-row", IconTableRow],
+  ["table-share", IconTableShare],
+  ["table-shortcut", IconTableShortcut],
+  ["table-spark", IconTableSpark],
+  ["table", IconTable],
+  ["tabs", IconTabs],
+  ["tag-minus", IconTagMinus],
+  ["tag-off", IconTagOff],
+  ["tag-plus", IconTagPlus],
+  ["tag-starred", IconTagStarred],
+  ["tag", IconTag],
+  ["tags-chevron-down", IconTagsChevronDown],
+  ["tags-chevron-left", IconTagsChevronLeft],
+  ["tags-chevron-right", IconTagsChevronRight],
+  ["tags-chevron-up", IconTagsChevronUp],
+  ["tags-off", IconTagsOff],
+  ["tags", IconTags],
+  ["taiwan-dollar", IconTaiwanDollar],
+  ["tallymark-1", IconTallymark1],
+  ["tallymark-2", IconTallymark2],
+  ["tallymark-3", IconTallymark3],
+  ["tallymark-4", IconTallymark4],
+  ["tallymarks", IconTallymarks],
+  ["tank", IconTank],
+  ["target-2", IconTarget2],
+  ["target-arrow", IconTargetArrow],
+  ["target-off", IconTargetOff],
+  ["target", IconTarget],
+  ["tax-euro", IconTaxEuro],
+  ["tax-pound", IconTaxPound],
+  ["tax", IconTax],
+  ["teapot", IconTeapot],
+  ["telescope-off", IconTelescopeOff],
+  ["telescope", IconTelescope],
+  ["temperature-celsius", IconTemperatureCelsius],
+  ["temperature-fahrenheit", IconTemperatureFahrenheit],
+  ["temperature-minus", IconTemperatureMinus],
+  ["temperature-off", IconTemperatureOff],
+  ["temperature-plus", IconTemperaturePlus],
+  ["temperature-snow", IconTemperatureSnow],
+  ["temperature-sun", IconTemperatureSun],
+  ["temperature", IconTemperature],
+  ["template-off", IconTemplateOff],
+  ["template", IconTemplate],
+  ["tent-off", IconTentOff],
+  ["tent", IconTent],
+  ["terminal-2", IconTerminal2],
+  ["terminal", IconTerminal],
+  ["test-pipe-2", IconTestPipe2],
+  ["test-pipe-off", IconTestPipeOff],
+  ["test-pipe", IconTestPipe],
+  ["tex", IconTex],
+  ["text-caption", IconTextCaption],
+  ["text-color", IconTextColor],
+  ["text-decrease", IconTextDecrease],
+  ["text-direction-ltr", IconTextDirectionLtr],
+  ["text-direction-rtl", IconTextDirectionRtl],
+  ["text-grammar", IconTextGrammar],
+  ["text-increase", IconTextIncrease],
+  ["text-orientation", IconTextOrientation],
+  ["text-outline", IconTextOutline],
+  ["text-plus", IconTextPlus],
+  ["text-recognition", IconTextRecognition],
+  ["text-regex-asterisk", IconTextRegexAsterisk],
+  ["text-regex-end", IconTextRegexEnd],
+  ["text-regex-plus", IconTextRegexPlus],
+  ["text-regex-question", IconTextRegexQuestion],
+  ["text-regex-start", IconTextRegexStart],
+  ["text-resize", IconTextResize],
+  ["text-scan-2", IconTextScan2],
+  ["text-scan-ai", IconTextScanAi],
+  ["text-size", IconTextSize],
+  ["text-spellcheck", IconTextSpellcheck],
+  ["text-wrap-column", IconTextWrapColumn],
+  ["text-wrap-disabled", IconTextWrapDisabled],
+  ["text-wrap", IconTextWrap],
+  ["texture", IconTexture],
+  ["theater", IconTheater],
+  ["thermometer", IconThermometer],
+  ["thinking-high", IconThinkingHigh],
+  ["thinking-low", IconThinkingLow],
+  ["thinking-medium", IconThinkingMedium],
+  ["thumb-down-off", IconThumbDownOff],
+  ["thumb-down", IconThumbDown],
+  ["thumb-up-off", IconThumbUpOff],
+  ["thumb-up", IconThumbUp],
+  ["tic-tac", IconTicTac],
+  ["ticket-off", IconTicketOff],
+  ["ticket", IconTicket],
+  ["tie", IconTie],
+  ["tilde", IconTilde],
+  ["tilt-shift-off", IconTiltShiftOff],
+  ["tilt-shift", IconTiltShift],
+  ["time-duration-0", IconTimeDuration0],
+  ["time-duration-10", IconTimeDuration10],
+  ["time-duration-15", IconTimeDuration15],
+  ["time-duration-30", IconTimeDuration30],
+  ["time-duration-45", IconTimeDuration45],
+  ["time-duration-5", IconTimeDuration5],
+  ["time-duration-60", IconTimeDuration60],
+  ["time-duration-90", IconTimeDuration90],
+  ["time-duration-off", IconTimeDurationOff],
+  ["timeline-event-exclamation", IconTimelineEventExclamation],
+  ["timeline-event-minus", IconTimelineEventMinus],
+  ["timeline-event-plus", IconTimelineEventPlus],
+  ["timeline-event-text", IconTimelineEventText],
+  ["timeline-event-x", IconTimelineEventX],
+  ["timeline-event", IconTimelineEvent],
+  ["timeline", IconTimeline],
+  ["timezone", IconTimezone],
+  ["tip-jar-euro", IconTipJarEuro],
+  ["tip-jar-pound", IconTipJarPound],
+  ["tip-jar", IconTipJar],
+  ["tir", IconTir],
+  ["toggle-left", IconToggleLeft],
+  ["toggle-right", IconToggleRight],
+  ["toilet-paper-off", IconToiletPaperOff],
+  ["toilet-paper", IconToiletPaper],
+  ["toml", IconToml],
+  ["tool", IconTool],
+  ["tools-kitchen-2-off", IconToolsKitchen2Off],
+  ["tools-kitchen-2", IconToolsKitchen2],
+  ["tools-kitchen-3", IconToolsKitchen3],
+  ["tools-kitchen-off", IconToolsKitchenOff],
+  ["tools-kitchen", IconToolsKitchen],
+  ["tools-off", IconToolsOff],
+  ["tools", IconTools],
+  ["tooltip", IconTooltip],
+  ["topology-bus", IconTopologyBus],
+  ["topology-complex", IconTopologyComplex],
+  ["topology-full-hierarchy", IconTopologyFullHierarchy],
+  ["topology-full", IconTopologyFull],
+  ["topology-ring-2", IconTopologyRing2],
+  ["topology-ring-3", IconTopologyRing3],
+  ["topology-ring", IconTopologyRing],
+  ["topology-star-2", IconTopologyStar2],
+  ["topology-star-3", IconTopologyStar3],
+  ["topology-star-ring-2", IconTopologyStarRing2],
+  ["topology-star-ring-3", IconTopologyStarRing3],
+  ["topology-star-ring", IconTopologyStarRing],
+  ["topology-star", IconTopologyStar],
+  ["torii", IconTorii],
+  ["tornado", IconTornado],
+  ["tournament", IconTournament],
+  ["tower-off", IconTowerOff],
+  ["tower", IconTower],
+  ["track", IconTrack],
+  ["tractor", IconTractor],
+  ["trademark", IconTrademark],
+  ["traffic-cone-off", IconTrafficConeOff],
+  ["traffic-cone", IconTrafficCone],
+  ["traffic-lights-off", IconTrafficLightsOff],
+  ["traffic-lights", IconTrafficLights],
+  ["train", IconTrain],
+  ["transaction-bitcoin", IconTransactionBitcoin],
+  ["transaction-dollar", IconTransactionDollar],
+  ["transaction-euro", IconTransactionEuro],
+  ["transaction-pound", IconTransactionPound],
+  ["transaction-rupee", IconTransactionRupee],
+  ["transaction-yen", IconTransactionYen],
+  ["transaction-yuan", IconTransactionYuan],
+  ["transfer-in", IconTransferIn],
+  ["transfer-out", IconTransferOut],
+  ["transfer-vertical", IconTransferVertical],
+  ["transfer", IconTransfer],
+  ["transform-point-bottom-left", IconTransformPointBottomLeft],
+  ["transform-point-bottom-right", IconTransformPointBottomRight],
+  ["transform-point-top-left", IconTransformPointTopLeft],
+  ["transform-point-top-right", IconTransformPointTopRight],
+  ["transform-point", IconTransformPoint],
+  ["transform", IconTransform],
+  ["transition-bottom", IconTransitionBottom],
+  ["transition-left", IconTransitionLeft],
+  ["transition-right", IconTransitionRight],
+  ["transition-top", IconTransitionTop],
+  ["trash-off", IconTrashOff],
+  ["trash-x", IconTrashX],
+  ["trash", IconTrash],
+  ["treadmill", IconTreadmill],
+  ["treasure-chest", IconTreasureChest],
+  ["tree", IconTree],
+  ["trees", IconTrees],
+  ["trekking", IconTrekking],
+  ["trending-down-2", IconTrendingDown2],
+  ["trending-down-3", IconTrendingDown3],
+  ["trending-down", IconTrendingDown],
+  ["trending-up-2", IconTrendingUp2],
+  ["trending-up-3", IconTrendingUp3],
+  ["trending-up-down", IconTrendingUpDown],
+  ["trending-up", IconTrendingUp],
+  ["triangle-dashed", IconTriangleDashed],
+  ["triangle-inverted", IconTriangleInverted],
+  ["triangle-minus-2", IconTriangleMinus2],
+  ["triangle-minus", IconTriangleMinus],
+  ["triangle-off", IconTriangleOff],
+  ["triangle-plus-2", IconTrianglePlus2],
+  ["triangle-plus", IconTrianglePlus],
+  ["triangle-square-circle", IconTriangleSquareCircle],
+  ["triangle", IconTriangle],
+  ["triangles", IconTriangles],
+  ["trident", IconTrident],
+  ["trolley", IconTrolley],
+  ["trophy-off", IconTrophyOff],
+  ["trophy", IconTrophy],
+  ["trowel", IconTrowel],
+  ["truck-delivery", IconTruckDelivery],
+  ["truck-loading", IconTruckLoading],
+  ["truck-off", IconTruckOff],
+  ["truck-return", IconTruckReturn],
+  ["truck", IconTruck],
+  ["twig", IconTwig],
+  ["txt", IconTxt],
+  ["typeface", IconTypeface],
+  ["typography-off", IconTypographyOff],
+  ["typography", IconTypography],
+  ["u-turn-left", IconUTurnLeft],
+  ["u-turn-right", IconUTurnRight],
+  ["ufo-off", IconUfoOff],
+  ["ufo", IconUfo],
+  ["uhd", IconUhd],
+  ["umbrella-2", IconUmbrella2],
+  ["umbrella-closed-2", IconUmbrellaClosed2],
+  ["umbrella-closed", IconUmbrellaClosed],
+  ["umbrella-off", IconUmbrellaOff],
+  ["umbrella", IconUmbrella],
+  ["underline-off", IconUnderlineOff],
+  ["underline", IconUnderline],
+  ["unicycle", IconUnicycle],
+  ["universe", IconUniverse],
+  ["unlink", IconUnlink],
+  ["upload", IconUpload],
+  ["urgent", IconUrgent],
+  ["usb", IconUsb],
+  ["user-bitcoin", IconUserBitcoin],
+  ["user-bolt", IconUserBolt],
+  ["user-cancel", IconUserCancel],
+  ["user-check", IconUserCheck],
+  ["user-circle", IconUserCircle],
+  ["user-code", IconUserCode],
+  ["user-cog", IconUserCog],
+  ["user-dollar", IconUserDollar],
+  ["user-down", IconUserDown],
+  ["user-edit", IconUserEdit],
+  ["user-exclamation", IconUserExclamation],
+  ["user-heart", IconUserHeart],
+  ["user-hexagon", IconUserHexagon],
+  ["user-key", IconUserKey],
+  ["user-minus", IconUserMinus],
+  ["user-off", IconUserOff],
+  ["user-pause", IconUserPause],
+  ["user-pentagon", IconUserPentagon],
+  ["user-pin", IconUserPin],
+  ["user-plus", IconUserPlus],
+  ["user-question", IconUserQuestion],
+  ["user-scan", IconUserScan],
+  ["user-screen", IconUserScreen],
+  ["user-search", IconUserSearch],
+  ["user-share", IconUserShare],
+  ["user-shield", IconUserShield],
+  ["user-square-rounded", IconUserSquareRounded],
+  ["user-square", IconUserSquare],
+  ["user-star", IconUserStar],
+  ["user-up", IconUserUp],
+  ["user-x", IconUserX],
+  ["user", IconUser],
+  ["users-group", IconUsersGroup],
+  ["users-minus", IconUsersMinus],
+  ["users-plus", IconUsersPlus],
+  ["users", IconUsers],
+  ["uv-index", IconUvIndex],
+  ["ux-circle", IconUxCircle],
+  ["vaccine-bottle-off", IconVaccineBottleOff],
+  ["vaccine-bottle", IconVaccineBottle],
+  ["vaccine-off", IconVaccineOff],
+  ["vaccine", IconVaccine],
+  ["vacuum-cleaner", IconVacuumCleaner],
+  ["variable-minus", IconVariableMinus],
+  ["variable-off", IconVariableOff],
+  ["variable-plus", IconVariablePlus],
+  ["variable", IconVariable],
+  ["vault", IconVault],
+  ["vector-bezier-2", IconVectorBezier2],
+  ["vector-bezier-arc", IconVectorBezierArc],
+  ["vector-bezier-circle", IconVectorBezierCircle],
+  ["vector-bezier", IconVectorBezier],
+  ["vector-off", IconVectorOff],
+  ["vector-spline", IconVectorSpline],
+  ["vector-triangle-off", IconVectorTriangleOff],
+  ["vector-triangle", IconVectorTriangle],
+  ["vector", IconVector],
+  ["venus", IconVenus],
+  ["versions-off", IconVersionsOff],
+  ["versions", IconVersions],
+  ["video-minus", IconVideoMinus],
+  ["video-off", IconVideoOff],
+  ["video-plus", IconVideoPlus],
+  ["video", IconVideo],
+  ["view-360-arrow", IconView360Arrow],
+  ["view-360-number", IconView360Number],
+  ["view-360-off", IconView360Off],
+  ["view-360", IconView360],
+  ["viewfinder-off", IconViewfinderOff],
+  ["viewfinder", IconViewfinder],
+  ["viewport-narrow", IconViewportNarrow],
+  ["viewport-short", IconViewportShort],
+  ["viewport-tall", IconViewportTall],
+  ["viewport-wide", IconViewportWide],
+  ["vignette", IconVignette],
+  ["vinyl", IconVinyl],
+  ["vip-2", IconVip2],
+  ["vip-off", IconVipOff],
+  ["vip", IconVip],
+  ["virtual-space", IconVirtualSpace],
+  ["virus-off", IconVirusOff],
+  ["virus-search", IconVirusSearch],
+  ["virus", IconVirus],
+  ["vocabulary-off", IconVocabularyOff],
+  ["vocabulary", IconVocabulary],
+  ["voice-2", IconVoice2],
+  ["voice", IconVoice],
+  ["volcano", IconVolcano],
+  ["volume-2", IconVolume2],
+  ["volume-3", IconVolume3],
+  ["volume-4", IconVolume4],
+  ["volume-off", IconVolumeOff],
+  ["volume", IconVolume],
+  ["vs", IconVs],
+  ["walk", IconWalk],
+  ["wall-off", IconWallOff],
+  ["wall", IconWall],
+  ["wallet-off", IconWalletOff],
+  ["wallet", IconWallet],
+  ["wallpaper-off", IconWallpaperOff],
+  ["wallpaper", IconWallpaper],
+  ["wand-off", IconWandOff],
+  ["wand", IconWand],
+  ["wash-dry-1", IconWashDry1],
+  ["wash-dry-2", IconWashDry2],
+  ["wash-dry-3", IconWashDry3],
+  ["wash-dry-a", IconWashDryA],
+  ["wash-dry-dip", IconWashDryDip],
+  ["wash-dry-f", IconWashDryF],
+  ["wash-dry-flat", IconWashDryFlat],
+  ["wash-dry-hang", IconWashDryHang],
+  ["wash-dry-off", IconWashDryOff],
+  ["wash-dry-p", IconWashDryP],
+  ["wash-dry-shade", IconWashDryShade],
+  ["wash-dry-w", IconWashDryW],
+  ["wash-dry", IconWashDry],
+  ["wash-dryclean-off", IconWashDrycleanOff],
+  ["wash-dryclean", IconWashDryclean],
+  ["wash-eco", IconWashEco],
+  ["wash-gentle", IconWashGentle],
+  ["wash-hand", IconWashHand],
+  ["wash-machine", IconWashMachine],
+  ["wash-off", IconWashOff],
+  ["wash-press", IconWashPress],
+  ["wash-temperature-1", IconWashTemperature1],
+  ["wash-temperature-2", IconWashTemperature2],
+  ["wash-temperature-3", IconWashTemperature3],
+  ["wash-temperature-4", IconWashTemperature4],
+  ["wash-temperature-5", IconWashTemperature5],
+  ["wash-temperature-6", IconWashTemperature6],
+  ["wash-tumble-dry", IconWashTumbleDry],
+  ["wash-tumble-off", IconWashTumbleOff],
+  ["wash", IconWash],
+  ["waterpolo", IconWaterpolo],
+  ["wave-saw-tool", IconWaveSawTool],
+  ["wave-sine", IconWaveSine],
+  ["wave-square", IconWaveSquare],
+  ["waves-electricity", IconWavesElectricity],
+  ["webhook-off", IconWebhookOff],
+  ["webhook", IconWebhook],
+  ["weight", IconWeight],
+  ["wheat-off", IconWheatOff],
+  ["wheat", IconWheat],
+  ["wheel", IconWheel],
+  ["wheelchair-off", IconWheelchairOff],
+  ["wheelchair", IconWheelchair],
+  ["whirl", IconWhirl],
+  ["whisk", IconWhisk],
+  ["wifi-0", IconWifi0],
+  ["wifi-1", IconWifi1],
+  ["wifi-2", IconWifi2],
+  ["wifi-off", IconWifiOff],
+  ["wifi", IconWifi],
+  ["wind-electricity", IconWindElectricity],
+  ["wind-off", IconWindOff],
+  ["wind", IconWind],
+  ["windmill-off", IconWindmillOff],
+  ["windmill", IconWindmill],
+  ["window-maximize", IconWindowMaximize],
+  ["window-minimize", IconWindowMinimize],
+  ["window-off", IconWindowOff],
+  ["window", IconWindow],
+  ["windsock", IconWindsock],
+  ["wiper-wash", IconWiperWash],
+  ["wiper", IconWiper],
+  ["woman", IconWoman],
+  ["wood", IconWood],
+  ["world-bolt", IconWorldBolt],
+  ["world-cancel", IconWorldCancel],
+  ["world-check", IconWorldCheck],
+  ["world-code", IconWorldCode],
+  ["world-cog", IconWorldCog],
+  ["world-dollar", IconWorldDollar],
+  ["world-down", IconWorldDown],
+  ["world-download", IconWorldDownload],
+  ["world-exclamation", IconWorldExclamation],
+  ["world-heart", IconWorldHeart],
+  ["world-latitude", IconWorldLatitude],
+  ["world-longitude", IconWorldLongitude],
+  ["world-map", IconWorldMap],
+  ["world-minus", IconWorldMinus],
+  ["world-off", IconWorldOff],
+  ["world-pause", IconWorldPause],
+  ["world-pin", IconWorldPin],
+  ["world-plus", IconWorldPlus],
+  ["world-question", IconWorldQuestion],
+  ["world-search", IconWorldSearch],
+  ["world-share", IconWorldShare],
+  ["world-star", IconWorldStar],
+  ["world-up", IconWorldUp],
+  ["world-upload", IconWorldUpload],
+  ["world-www", IconWorldWww],
+  ["world-x", IconWorldX],
+  ["world", IconWorld],
+  ["wrecking-ball", IconWreckingBall],
+  ["writing-off", IconWritingOff],
+  ["writing-sign-off", IconWritingSignOff],
+  ["writing-sign", IconWritingSign],
+  ["writing", IconWriting],
+  ["x-mark", IconXMark],
+  ["x-power-y", IconXPowerY],
+  ["x", IconX],
+  ["xbox-a", IconXboxA],
+  ["xbox-b", IconXboxB],
+  ["xbox-x", IconXboxX],
+  ["xbox-y", IconXboxY],
+  ["xd", IconXd],
+  ["xxx", IconXxx],
+  ["yarn", IconYarn],
+  ["yin-yang", IconYinYang],
+  ["yoga", IconYoga],
+  ["zeppelin-off", IconZeppelinOff],
+  ["zeppelin", IconZeppelin],
+  ["zero-config", IconZeroConfig],
+  ["zip", IconZip],
+  ["zodiac-aquarius", IconZodiacAquarius],
+  ["zodiac-aries", IconZodiacAries],
+  ["zodiac-cancer", IconZodiacCancer],
+  ["zodiac-capricorn", IconZodiacCapricorn],
+  ["zodiac-gemini", IconZodiacGemini],
+  ["zodiac-leo", IconZodiacLeo],
+  ["zodiac-libra", IconZodiacLibra],
+  ["zodiac-pisces", IconZodiacPisces],
+  ["zodiac-sagittarius", IconZodiacSagittarius],
+  ["zodiac-scorpio", IconZodiacScorpio],
+  ["zodiac-taurus", IconZodiacTaurus],
+  ["zodiac-virgo", IconZodiacVirgo],
+  ["zoom-cancel", IconZoomCancel],
+  ["zoom-check", IconZoomCheck],
+  ["zoom-code", IconZoomCode],
+  ["zoom-exclamation", IconZoomExclamation],
+  ["zoom-in-area", IconZoomInArea],
+  ["zoom-in", IconZoomIn],
+  ["zoom-money", IconZoomMoney],
+  ["zoom-out-area", IconZoomOutArea],
+  ["zoom-out", IconZoomOut],
+  ["zoom-pan", IconZoomPan],
+  ["zoom-question", IconZoomQuestion],
+  ["zoom-replace", IconZoomReplace],
+  ["zoom-reset", IconZoomReset],
+  ["zoom-scan", IconZoomScan],
+  ["zoom", IconZoom],
+  ["zzz-off", IconZzzOff],
+  ["zzz", IconZzz],
+  ["accessible-filled", IconAccessibleFilled],
+  ["ad-circle-filled", IconAdCircleFilled],
+  ["ad-filled", IconAdFilled],
+  ["adjustments-horizontal-filled", IconAdjustmentsHorizontalFilled],
+  ["adjustments-filled", IconAdjustmentsFilled],
+  ["aerial-lift-filled", IconAerialLiftFilled],
+  ["affiliate-filled", IconAffiliateFilled],
+  ["air-balloon-filled", IconAirBalloonFilled],
+  ["alarm-minus-filled", IconAlarmMinusFilled],
+  ["alarm-plus-filled", IconAlarmPlusFilled],
+  ["alarm-snooze-filled", IconAlarmSnoozeFilled],
+  ["alarm-filled", IconAlarmFilled],
+  ["alert-circle-filled", IconAlertCircleFilled],
+  ["alert-hexagon-filled", IconAlertHexagonFilled],
+  ["alert-octagon-filled", IconAlertOctagonFilled],
+  ["alert-square-rounded-filled", IconAlertSquareRoundedFilled],
+  ["alert-square-filled", IconAlertSquareFilled],
+  ["alert-triangle-filled", IconAlertTriangleFilled],
+  ["alien-filled", IconAlienFilled],
+  ["align-box-bottom-center-filled", IconAlignBoxBottomCenterFilled],
+  ["align-box-bottom-left-filled", IconAlignBoxBottomLeftFilled],
+  ["align-box-bottom-right-filled", IconAlignBoxBottomRightFilled],
+  ["align-box-center-middle-filled", IconAlignBoxCenterMiddleFilled],
+  ["align-box-left-bottom-filled", IconAlignBoxLeftBottomFilled],
+  ["align-box-left-middle-filled", IconAlignBoxLeftMiddleFilled],
+  ["align-box-left-top-filled", IconAlignBoxLeftTopFilled],
+  ["align-box-right-bottom-filled", IconAlignBoxRightBottomFilled],
+  ["align-box-right-middle-filled", IconAlignBoxRightMiddleFilled],
+  ["align-box-right-top-filled", IconAlignBoxRightTopFilled],
+  ["align-box-top-center-filled", IconAlignBoxTopCenterFilled],
+  ["align-box-top-left-filled", IconAlignBoxTopLeftFilled],
+  ["align-box-top-right-filled", IconAlignBoxTopRightFilled],
+  ["analyze-filled", IconAnalyzeFilled],
+  ["app-window-filled", IconAppWindowFilled],
+  ["apple-filled", IconAppleFilled],
+  ["apps-filled", IconAppsFilled],
+  ["archive-filled", IconArchiveFilled],
+  ["arrow-autofit-content-filled", IconArrowAutofitContentFilled],
+  ["arrow-autofit-down-filled", IconArrowAutofitDownFilled],
+  ["arrow-autofit-height-filled", IconArrowAutofitHeightFilled],
+  ["arrow-autofit-left-filled", IconArrowAutofitLeftFilled],
+  ["arrow-autofit-right-filled", IconArrowAutofitRightFilled],
+  ["arrow-autofit-up-filled", IconArrowAutofitUpFilled],
+  ["arrow-autofit-width-filled", IconArrowAutofitWidthFilled],
+  ["arrow-badge-down-filled", IconArrowBadgeDownFilled],
+  ["arrow-badge-left-filled", IconArrowBadgeLeftFilled],
+  ["arrow-badge-right-filled", IconArrowBadgeRightFilled],
+  ["arrow-badge-up-filled", IconArrowBadgeUpFilled],
+  ["arrow-big-down-line-filled", IconArrowBigDownLineFilled],
+  ["arrow-big-down-lines-filled", IconArrowBigDownLinesFilled],
+  ["arrow-big-down-filled", IconArrowBigDownFilled],
+  ["arrow-big-left-line-filled", IconArrowBigLeftLineFilled],
+  ["arrow-big-left-lines-filled", IconArrowBigLeftLinesFilled],
+  ["arrow-big-left-filled", IconArrowBigLeftFilled],
+  ["arrow-big-right-line-filled", IconArrowBigRightLineFilled],
+  ["arrow-big-right-lines-filled", IconArrowBigRightLinesFilled],
+  ["arrow-big-right-filled", IconArrowBigRightFilled],
+  ["arrow-big-up-line-filled", IconArrowBigUpLineFilled],
+  ["arrow-big-up-lines-filled", IconArrowBigUpLinesFilled],
+  ["arrow-big-up-filled", IconArrowBigUpFilled],
+  ["arrow-down-circle-filled", IconArrowDownCircleFilled],
+  ["arrow-down-rhombus-filled", IconArrowDownRhombusFilled],
+  ["arrow-down-square-filled", IconArrowDownSquareFilled],
+  ["arrow-guide-filled", IconArrowGuideFilled],
+  ["arrow-left-circle-filled", IconArrowLeftCircleFilled],
+  ["arrow-left-rhombus-filled", IconArrowLeftRhombusFilled],
+  ["arrow-left-square-filled", IconArrowLeftSquareFilled],
+  ["arrow-move-down-filled", IconArrowMoveDownFilled],
+  ["arrow-move-left-filled", IconArrowMoveLeftFilled],
+  ["arrow-move-right-filled", IconArrowMoveRightFilled],
+  ["arrow-move-up-filled", IconArrowMoveUpFilled],
+  ["arrow-right-circle-filled", IconArrowRightCircleFilled],
+  ["arrow-right-rhombus-filled", IconArrowRightRhombusFilled],
+  ["arrow-right-square-filled", IconArrowRightSquareFilled],
+  ["arrow-up-circle-filled", IconArrowUpCircleFilled],
+  ["arrow-up-rhombus-filled", IconArrowUpRhombusFilled],
+  ["arrow-up-square-filled", IconArrowUpSquareFilled],
+  ["artboard-filled", IconArtboardFilled],
+  ["article-filled", IconArticleFilled],
+  ["aspect-ratio-filled", IconAspectRatioFilled],
+  ["assembly-filled", IconAssemblyFilled],
+  ["asset-filled", IconAssetFilled],
+  ["atom-2-filled", IconAtom2Filled],
+  ["automatic-gearbox-filled", IconAutomaticGearboxFilled],
+  ["award-filled", IconAwardFilled],
+  ["baby-carriage-filled", IconBabyCarriageFilled],
+  ["backspace-filled", IconBackspaceFilled],
+  ["badge-3d-filled", IconBadge3dFilled],
+  ["badge-4k-filled", IconBadge4kFilled],
+  ["badge-8k-filled", IconBadge8kFilled],
+  ["badge-ad-filled", IconBadgeAdFilled],
+  ["badge-ar-filled", IconBadgeArFilled],
+  ["badge-cc-filled", IconBadgeCcFilled],
+  ["badge-hd-filled", IconBadgeHdFilled],
+  ["badge-sd-filled", IconBadgeSdFilled],
+  ["badge-tm-filled", IconBadgeTmFilled],
+  ["badge-vo-filled", IconBadgeVoFilled],
+  ["badge-vr-filled", IconBadgeVrFilled],
+  ["badge-wc-filled", IconBadgeWcFilled],
+  ["badge-filled", IconBadgeFilled],
+  ["badges-filled", IconBadgesFilled],
+  ["ball-bowling-filled", IconBallBowlingFilled],
+  ["balloon-filled", IconBalloonFilled],
+  ["ballpen-filled", IconBallpenFilled],
+  ["bandage-filled", IconBandageFilled],
+  ["barbell-filled", IconBarbellFilled],
+  ["barrier-block-filled", IconBarrierBlockFilled],
+  ["basket-filled", IconBasketFilled],
+  ["bath-filled", IconBathFilled],
+  ["battery-1-filled", IconBattery1Filled],
+  ["battery-2-filled", IconBattery2Filled],
+  ["battery-3-filled", IconBattery3Filled],
+  ["battery-4-filled", IconBattery4Filled],
+  ["battery-automotive-filled", IconBatteryAutomotiveFilled],
+  ["battery-vertical-1-filled", IconBatteryVertical1Filled],
+  ["battery-vertical-2-filled", IconBatteryVertical2Filled],
+  ["battery-vertical-3-filled", IconBatteryVertical3Filled],
+  ["battery-vertical-4-filled", IconBatteryVertical4Filled],
+  ["battery-vertical-filled", IconBatteryVerticalFilled],
+  ["battery-filled", IconBatteryFilled],
+  ["bed-flat-filled", IconBedFlatFilled],
+  ["bed-filled", IconBedFilled],
+  ["beer-filled", IconBeerFilled],
+  ["bell-minus-filled", IconBellMinusFilled],
+  ["bell-plus-filled", IconBellPlusFilled],
+  ["bell-ringing-2-filled", IconBellRinging2Filled],
+  ["bell-ringing-filled", IconBellRingingFilled],
+  ["bell-x-filled", IconBellXFilled],
+  ["bell-z-filled", IconBellZFilled],
+  ["bell-filled", IconBellFilled],
+  ["bike-filled", IconBikeFilled],
+  ["binary-tree-2-filled", IconBinaryTree2Filled],
+  ["binary-tree-filled", IconBinaryTreeFilled],
+  ["binoculars-filled", IconBinocularsFilled],
+  ["biohazard-filled", IconBiohazardFilled],
+  ["blade-filled", IconBladeFilled],
+  ["blender-filled", IconBlenderFilled],
+  ["blob-filled", IconBlobFilled],
+  ["bolt-filled", IconBoltFilled],
+  ["bomb-filled", IconBombFilled],
+  ["bone-filled", IconBoneFilled],
+  ["bong-filled", IconBongFilled],
+  ["book-filled", IconBookFilled],
+  ["bookmark-filled", IconBookmarkFilled],
+  ["bookmarks-filled", IconBookmarksFilled],
+  ["boom-filled", IconBoomFilled],
+  ["bottle-filled", IconBottleFilled],
+  ["bounce-left-filled", IconBounceLeftFilled],
+  ["bounce-right-filled", IconBounceRightFilled],
+  ["bow-filled", IconBowFilled],
+  ["bowl-chopsticks-filled", IconBowlChopsticksFilled],
+  ["bowl-spoon-filled", IconBowlSpoonFilled],
+  ["bowl-filled", IconBowlFilled],
+  ["box-align-bottom-left-filled", IconBoxAlignBottomLeftFilled],
+  ["box-align-bottom-right-filled", IconBoxAlignBottomRightFilled],
+  ["box-align-bottom-filled", IconBoxAlignBottomFilled],
+  ["box-align-left-filled", IconBoxAlignLeftFilled],
+  ["box-align-right-filled", IconBoxAlignRightFilled],
+  ["box-align-top-left-filled", IconBoxAlignTopLeftFilled],
+  ["box-align-top-right-filled", IconBoxAlignTopRightFilled],
+  ["box-align-top-filled", IconBoxAlignTopFilled],
+  ["box-multiple-filled", IconBoxMultipleFilled],
+  ["brand-angular-filled", IconBrandAngularFilled],
+  ["brand-apple-filled", IconBrandAppleFilled],
+  ["brand-bitbucket-filled", IconBrandBitbucketFilled],
+  ["brand-discord-filled", IconBrandDiscordFilled],
+  ["brand-dribbble-filled", IconBrandDribbbleFilled],
+  ["brand-facebook-filled", IconBrandFacebookFilled],
+  ["brand-github-filled", IconBrandGithubFilled],
+  ["brand-google-filled", IconBrandGoogleFilled],
+  ["brand-instagram-filled", IconBrandInstagramFilled],
+  ["brand-kick-filled", IconBrandKickFilled],
+  ["brand-linkedin-filled", IconBrandLinkedinFilled],
+  ["brand-messenger-filled", IconBrandMessengerFilled],
+  ["brand-open-source-filled", IconBrandOpenSourceFilled],
+  ["brand-opera-filled", IconBrandOperaFilled],
+  ["brand-patreon-filled", IconBrandPatreonFilled],
+  ["brand-paypal-filled", IconBrandPaypalFilled],
+  ["brand-pinterest-filled", IconBrandPinterestFilled],
+  ["brand-signal-filled", IconBrandSignalFilled],
+  ["brand-sketch-filled", IconBrandSketchFilled],
+  ["brand-snapchat-filled", IconBrandSnapchatFilled],
+  ["brand-spotify-filled", IconBrandSpotifyFilled],
+  ["brand-steam-filled", IconBrandSteamFilled],
+  ["brand-stripe-filled", IconBrandStripeFilled],
+  ["brand-tabler-filled", IconBrandTablerFilled],
+  ["brand-tiktok-filled", IconBrandTiktokFilled],
+  ["brand-tinder-filled", IconBrandTinderFilled],
+  ["brand-tumblr-filled", IconBrandTumblrFilled],
+  ["brand-twitter-filled", IconBrandTwitterFilled],
+  ["brand-vercel-filled", IconBrandVercelFilled],
+  ["brand-vimeo-filled", IconBrandVimeoFilled],
+  ["brand-weibo-filled", IconBrandWeiboFilled],
+  ["brand-whatsapp-filled", IconBrandWhatsappFilled],
+  ["brand-windows-filled", IconBrandWindowsFilled],
+  ["brand-x-filled", IconBrandXFilled],
+  ["brand-youtube-filled", IconBrandYoutubeFilled],
+  ["bread-filled", IconBreadFilled],
+  ["briefcase-2-filled", IconBriefcase2Filled],
+  ["briefcase-filled", IconBriefcaseFilled],
+  ["brightness-auto-filled", IconBrightnessAutoFilled],
+  ["brightness-down-filled", IconBrightnessDownFilled],
+  ["brightness-up-filled", IconBrightnessUpFilled],
+  ["brightness-filled", IconBrightnessFilled],
+  ["bubble-text-filled", IconBubbleTextFilled],
+  ["bubble-filled", IconBubbleFilled],
+  ["bug-filled", IconBugFilled],
+  ["building-bridge-2-filled", IconBuildingBridge2Filled],
+  ["building-broadcast-tower-filled", IconBuildingBroadcastTowerFilled],
+  ["bulb-filled", IconBulbFilled],
+  ["bus-filled", IconBusFilled],
+  ["butterfly-filled", IconButterflyFilled],
+  ["cactus-filled", IconCactusFilled],
+  ["calculator-filled", IconCalculatorFilled],
+  ["calendar-event-filled", IconCalendarEventFilled],
+  ["calendar-month-filled", IconCalendarMonthFilled],
+  ["calendar-week-filled", IconCalendarWeekFilled],
+  ["calendar-filled", IconCalendarFilled],
+  ["camera-filled", IconCameraFilled],
+  ["campfire-filled", IconCampfireFilled],
+  ["candle-filled", IconCandleFilled],
+  ["cannabis-filled", IconCannabisFilled],
+  ["capsule-horizontal-filled", IconCapsuleHorizontalFilled],
+  ["capsule-filled", IconCapsuleFilled],
+  ["capture-filled", IconCaptureFilled],
+  ["car-4wd-filled", IconCar4wdFilled],
+  ["car-crane-filled", IconCarCraneFilled],
+  ["car-fan-filled", IconCarFanFilled],
+  ["car-suv-filled", IconCarSuvFilled],
+  ["car-filled", IconCarFilled],
+  ["carambola-filled", IconCarambolaFilled],
+  ["caravan-filled", IconCaravanFilled],
+  ["cardboards-filled", IconCardboardsFilled],
+  ["cards-filled", IconCardsFilled],
+  ["caret-down-filled", IconCaretDownFilled],
+  ["caret-left-right-filled", IconCaretLeftRightFilled],
+  ["caret-left-filled", IconCaretLeftFilled],
+  ["caret-right-filled", IconCaretRightFilled],
+  ["caret-up-down-filled", IconCaretUpDownFilled],
+  ["caret-up-filled", IconCaretUpFilled],
+  ["carousel-horizontal-filled", IconCarouselHorizontalFilled],
+  ["carousel-vertical-filled", IconCarouselVerticalFilled],
+  ["cash-banknote-filled", IconCashBanknoteFilled],
+  ["category-filled", IconCategoryFilled],
+  ["charging-pile-filled", IconChargingPileFilled],
+  ["chart-area-line-filled", IconChartAreaLineFilled],
+  ["chart-area-filled", IconChartAreaFilled],
+  ["chart-bubble-filled", IconChartBubbleFilled],
+  ["chart-candle-filled", IconChartCandleFilled],
+  ["chart-donut-filled", IconChartDonutFilled],
+  ["chart-dots-2-filled", IconChartDots2Filled],
+  ["chart-dots-3-filled", IconChartDots3Filled],
+  ["chart-dots-filled", IconChartDotsFilled],
+  ["chart-funnel-filled", IconChartFunnelFilled],
+  ["chart-grid-dots-filled", IconChartGridDotsFilled],
+  ["chart-pie-2-filled", IconChartPie2Filled],
+  ["chart-pie-3-filled", IconChartPie3Filled],
+  ["chart-pie-4-filled", IconChartPie4Filled],
+  ["chart-pie-filled", IconChartPieFilled],
+  ["check-filled", IconCheckFilled],
+  ["chef-hat-filled", IconChefHatFilled],
+  ["cherry-filled", IconCherryFilled],
+  ["chess-bishop-filled", IconChessBishopFilled],
+  ["chess-king-filled", IconChessKingFilled],
+  ["chess-knight-filled", IconChessKnightFilled],
+  ["chess-queen-filled", IconChessQueenFilled],
+  ["chess-rook-filled", IconChessRookFilled],
+  ["chess-filled", IconChessFilled],
+  ["chevron-down-filled", IconChevronDownFilled],
+  ["chevron-right-filled", IconChevronRightFilled],
+  ["christmas-tree-filled", IconChristmasTreeFilled],
+  ["circle-arrow-down-left-filled", IconCircleArrowDownLeftFilled],
+  ["circle-arrow-down-right-filled", IconCircleArrowDownRightFilled],
+  ["circle-arrow-down-filled", IconCircleArrowDownFilled],
+  ["circle-arrow-left-filled", IconCircleArrowLeftFilled],
+  ["circle-arrow-right-filled", IconCircleArrowRightFilled],
+  ["circle-arrow-up-left-filled", IconCircleArrowUpLeftFilled],
+  ["circle-arrow-up-right-filled", IconCircleArrowUpRightFilled],
+  ["circle-arrow-up-filled", IconCircleArrowUpFilled],
+  ["circle-caret-down-filled", IconCircleCaretDownFilled],
+  ["circle-caret-left-filled", IconCircleCaretLeftFilled],
+  ["circle-caret-right-filled", IconCircleCaretRightFilled],
+  ["circle-caret-up-filled", IconCircleCaretUpFilled],
+  ["circle-check-filled", IconCircleCheckFilled],
+  ["circle-chevron-down-filled", IconCircleChevronDownFilled],
+  ["circle-chevron-left-filled", IconCircleChevronLeftFilled],
+  ["circle-chevron-right-filled", IconCircleChevronRightFilled],
+  ["circle-chevron-up-filled", IconCircleChevronUpFilled],
+  ["circle-chevrons-down-filled", IconCircleChevronsDownFilled],
+  ["circle-chevrons-left-filled", IconCircleChevronsLeftFilled],
+  ["circle-chevrons-right-filled", IconCircleChevronsRightFilled],
+  ["circle-chevrons-up-filled", IconCircleChevronsUpFilled],
+  ["circle-dot-filled", IconCircleDotFilled],
+  ["circle-key-filled", IconCircleKeyFilled],
+  ["circle-letter-a-filled", IconCircleLetterAFilled],
+  ["circle-letter-b-filled", IconCircleLetterBFilled],
+  ["circle-letter-c-filled", IconCircleLetterCFilled],
+  ["circle-letter-d-filled", IconCircleLetterDFilled],
+  ["circle-letter-e-filled", IconCircleLetterEFilled],
+  ["circle-letter-f-filled", IconCircleLetterFFilled],
+  ["circle-letter-g-filled", IconCircleLetterGFilled],
+  ["circle-letter-h-filled", IconCircleLetterHFilled],
+  ["circle-letter-i-filled", IconCircleLetterIFilled],
+  ["circle-letter-j-filled", IconCircleLetterJFilled],
+  ["circle-letter-k-filled", IconCircleLetterKFilled],
+  ["circle-letter-l-filled", IconCircleLetterLFilled],
+  ["circle-letter-m-filled", IconCircleLetterMFilled],
+  ["circle-letter-n-filled", IconCircleLetterNFilled],
+  ["circle-letter-o-filled", IconCircleLetterOFilled],
+  ["circle-letter-p-filled", IconCircleLetterPFilled],
+  ["circle-letter-q-filled", IconCircleLetterQFilled],
+  ["circle-letter-r-filled", IconCircleLetterRFilled],
+  ["circle-letter-s-filled", IconCircleLetterSFilled],
+  ["circle-letter-t-filled", IconCircleLetterTFilled],
+  ["circle-letter-u-filled", IconCircleLetterUFilled],
+  ["circle-letter-v-filled", IconCircleLetterVFilled],
+  ["circle-letter-w-filled", IconCircleLetterWFilled],
+  ["circle-letter-x-filled", IconCircleLetterXFilled],
+  ["circle-letter-y-filled", IconCircleLetterYFilled],
+  ["circle-letter-z-filled", IconCircleLetterZFilled],
+  ["circle-number-0-filled", IconCircleNumber0Filled],
+  ["circle-number-1-filled", IconCircleNumber1Filled],
+  ["circle-number-2-filled", IconCircleNumber2Filled],
+  ["circle-number-3-filled", IconCircleNumber3Filled],
+  ["circle-number-4-filled", IconCircleNumber4Filled],
+  ["circle-number-5-filled", IconCircleNumber5Filled],
+  ["circle-number-6-filled", IconCircleNumber6Filled],
+  ["circle-number-7-filled", IconCircleNumber7Filled],
+  ["circle-number-8-filled", IconCircleNumber8Filled],
+  ["circle-number-9-filled", IconCircleNumber9Filled],
+  ["circle-percentage-filled", IconCirclePercentageFilled],
+  ["circle-plus-filled", IconCirclePlusFilled],
+  ["circle-rectangle-filled", IconCircleRectangleFilled],
+  ["circle-x-filled", IconCircleXFilled],
+  ["circle-filled", IconCircleFilled],
+  ["circles-filled", IconCirclesFilled],
+  ["click-filled", IconClickFilled],
+  ["clipboard-check-filled", IconClipboardCheckFilled],
+  ["clipboard-data-filled", IconClipboardDataFilled],
+  ["clipboard-list-filled", IconClipboardListFilled],
+  ["clipboard-plus-filled", IconClipboardPlusFilled],
+  ["clipboard-smile-filled", IconClipboardSmileFilled],
+  ["clipboard-text-filled", IconClipboardTextFilled],
+  ["clipboard-typography-filled", IconClipboardTypographyFilled],
+  ["clipboard-x-filled", IconClipboardXFilled],
+  ["clipboard-filled", IconClipboardFilled],
+  ["clock-hour-1-filled", IconClockHour1Filled],
+  ["clock-hour-10-filled", IconClockHour10Filled],
+  ["clock-hour-11-filled", IconClockHour11Filled],
+  ["clock-hour-12-filled", IconClockHour12Filled],
+  ["clock-hour-2-filled", IconClockHour2Filled],
+  ["clock-hour-3-filled", IconClockHour3Filled],
+  ["clock-hour-4-filled", IconClockHour4Filled],
+  ["clock-hour-5-filled", IconClockHour5Filled],
+  ["clock-hour-6-filled", IconClockHour6Filled],
+  ["clock-hour-7-filled", IconClockHour7Filled],
+  ["clock-hour-8-filled", IconClockHour8Filled],
+  ["clock-hour-9-filled", IconClockHour9Filled],
+  ["clock-filled", IconClockFilled],
+  ["cloud-computing-filled", IconCloudComputingFilled],
+  ["cloud-data-connection-filled", IconCloudDataConnectionFilled],
+  ["cloud-filled", IconCloudFilled],
+  ["clover-filled", IconCloverFilled],
+  ["clubs-filled", IconClubsFilled],
+  ["code-circle-2-filled", IconCodeCircle2Filled],
+  ["code-circle-filled", IconCodeCircleFilled],
+  ["coin-bitcoin-filled", IconCoinBitcoinFilled],
+  ["coin-euro-filled", IconCoinEuroFilled],
+  ["coin-monero-filled", IconCoinMoneroFilled],
+  ["coin-pound-filled", IconCoinPoundFilled],
+  ["coin-rupee-filled", IconCoinRupeeFilled],
+  ["coin-taka-filled", IconCoinTakaFilled],
+  ["coin-yen-filled", IconCoinYenFilled],
+  ["coin-yuan-filled", IconCoinYuanFilled],
+  ["coin-filled", IconCoinFilled],
+  ["columns-1-filled", IconColumns1Filled],
+  ["columns-2-filled", IconColumns2Filled],
+  ["columns-3-filled", IconColumns3Filled],
+  ["compass-filled", IconCompassFilled],
+  ["cone-2-filled", IconCone2Filled],
+  ["cone-filled", IconConeFilled],
+  ["confetti-filled", IconConfettiFilled],
+  ["container-filled", IconContainerFilled],
+  ["contrast-2-filled", IconContrast2Filled],
+  ["contrast-filled", IconContrastFilled],
+  ["cookie-man-filled", IconCookieManFilled],
+  ["cookie-filled", IconCookieFilled],
+  ["copy-check-filled", IconCopyCheckFilled],
+  ["copy-minus-filled", IconCopyMinusFilled],
+  ["copy-plus-filled", IconCopyPlusFilled],
+  ["copy-x-filled", IconCopyXFilled],
+  ["copy-filled", IconCopyFilled],
+  ["copyleft-filled", IconCopyleftFilled],
+  ["copyright-filled", IconCopyrightFilled],
+  ["credit-card-filled", IconCreditCardFilled],
+  ["crop-1-1-filled", IconCrop11Filled],
+  ["crop-16-9-filled", IconCrop169Filled],
+  ["crop-3-2-filled", IconCrop32Filled],
+  ["crop-5-4-filled", IconCrop54Filled],
+  ["crop-7-5-filled", IconCrop75Filled],
+  ["crop-landscape-filled", IconCropLandscapeFilled],
+  ["crop-portrait-filled", IconCropPortraitFilled],
+  ["cross-filled", IconCrossFilled],
+  ["crown-filled", IconCrownFilled],
+  ["current-location-filled", IconCurrentLocationFilled],
+  ["dashboard-filled", IconDashboardFilled],
+  ["database-filled", IconDatabaseFilled],
+  ["device-cctv-filled", IconDeviceCctvFilled],
+  ["device-desktop-filled", IconDeviceDesktopFilled],
+  ["device-floppy-filled", IconDeviceFloppyFilled],
+  ["device-gamepad-2-filled", IconDeviceGamepad2Filled],
+  ["device-gamepad-3-filled", IconDeviceGamepad3Filled],
+  ["device-gamepad-filled", IconDeviceGamepadFilled],
+  ["device-heart-monitor-filled", IconDeviceHeartMonitorFilled],
+  ["device-imac-filled", IconDeviceImacFilled],
+  ["device-ipad-filled", IconDeviceIpadFilled],
+  ["device-mobile-filled", IconDeviceMobileFilled],
+  ["device-remote-filled", IconDeviceRemoteFilled],
+  ["device-speaker-filled", IconDeviceSpeakerFilled],
+  ["device-tablet-filled", IconDeviceTabletFilled],
+  ["device-tv-old-filled", IconDeviceTvOldFilled],
+  ["device-tv-filled", IconDeviceTvFilled],
+  ["device-unknown-filled", IconDeviceUnknownFilled],
+  ["device-usb-filled", IconDeviceUsbFilled],
+  ["device-vision-pro-filled", IconDeviceVisionProFilled],
+  ["device-watch-filled", IconDeviceWatchFilled],
+  ["dialpad-filled", IconDialpadFilled],
+  ["diamond-filled", IconDiamondFilled],
+  ["diamonds-filled", IconDiamondsFilled],
+  ["dice-1-filled", IconDice1Filled],
+  ["dice-2-filled", IconDice2Filled],
+  ["dice-3-filled", IconDice3Filled],
+  ["dice-4-filled", IconDice4Filled],
+  ["dice-5-filled", IconDice5Filled],
+  ["dice-6-filled", IconDice6Filled],
+  ["dice-filled", IconDiceFilled],
+  ["direction-arrows-filled", IconDirectionArrowsFilled],
+  ["direction-sign-filled", IconDirectionSignFilled],
+  ["directions-filled", IconDirectionsFilled],
+  ["disc-filled", IconDiscFilled],
+  ["discount-filled", IconDiscountFilled],
+  ["dots-vertical-filled", IconDotsVerticalFilled],
+  ["dots-filled", IconDotsFilled],
+  ["download-filled", IconDownloadFilled],
+  ["drop-circle-filled", IconDropCircleFilled],
+  ["droplet-half-2-filled", IconDropletHalf2Filled],
+  ["droplet-half-filled", IconDropletHalfFilled],
+  ["droplet-filled", IconDropletFilled],
+  ["droplets-filled", IconDropletsFilled],
+  ["dual-screen-filled", IconDualScreenFilled],
+  ["dumpling-filled", IconDumplingFilled],
+  ["ease-in-control-point-filled", IconEaseInControlPointFilled],
+  ["ease-in-out-control-points-filled", IconEaseInOutControlPointsFilled],
+  ["ease-out-control-point-filled", IconEaseOutControlPointFilled],
+  ["edit-filled", IconEditFilled],
+  ["egg-cracked-filled", IconEggCrackedFilled],
+  ["egg-fried-filled", IconEggFriedFilled],
+  ["egg-filled", IconEggFilled],
+  ["elevator-filled", IconElevatorFilled],
+  ["engine-filled", IconEngineFilled],
+  ["escalator-down-filled", IconEscalatorDownFilled],
+  ["escalator-up-filled", IconEscalatorUpFilled],
+  ["escalator-filled", IconEscalatorFilled],
+  ["exchange-filled", IconExchangeFilled],
+  ["exclamation-circle-filled", IconExclamationCircleFilled],
+  ["explicit-filled", IconExplicitFilled],
+  ["exposure-filled", IconExposureFilled],
+  ["external-link-filled", IconExternalLinkFilled],
+  ["eye-table-filled", IconEyeTableFilled],
+  ["eye-filled", IconEyeFilled],
+  ["eyeglass-2-filled", IconEyeglass2Filled],
+  ["eyeglass-filled", IconEyeglassFilled],
+  ["face-mask-filled", IconFaceMaskFilled],
+  ["favicon-filled", IconFaviconFilled],
+  ["feather-filled", IconFeatherFilled],
+  ["fence-filled", IconFenceFilled],
+  ["ferry-filled", IconFerryFilled],
+  ["fidget-spinner-filled", IconFidgetSpinnerFilled],
+  ["file-analytics-filled", IconFileAnalyticsFilled],
+  ["file-check-filled", IconFileCheckFilled],
+  ["file-code-2-filled", IconFileCode2Filled],
+  ["file-code-filled", IconFileCodeFilled],
+  ["file-cv-filled", IconFileCvFilled],
+  ["file-delta-filled", IconFileDeltaFilled],
+  ["file-description-filled", IconFileDescriptionFilled],
+  ["file-diff-filled", IconFileDiffFilled],
+  ["file-digit-filled", IconFileDigitFilled],
+  ["file-dollar-filled", IconFileDollarFilled],
+  ["file-dots-filled", IconFileDotsFilled],
+  ["file-download-filled", IconFileDownloadFilled],
+  ["file-euro-filled", IconFileEuroFilled],
+  ["file-function-filled", IconFileFunctionFilled],
+  ["file-horizontal-filled", IconFileHorizontalFilled],
+  ["file-info-filled", IconFileInfoFilled],
+  ["file-invoice-filled", IconFileInvoiceFilled],
+  ["file-lambda-filled", IconFileLambdaFilled],
+  ["file-minus-filled", IconFileMinusFilled],
+  ["file-music-filled", IconFileMusicFilled],
+  ["file-neutral-filled", IconFileNeutralFilled],
+  ["file-pencil-filled", IconFilePencilFilled],
+  ["file-percent-filled", IconFilePercentFilled],
+  ["file-phone-filled", IconFilePhoneFilled],
+  ["file-power-filled", IconFilePowerFilled],
+  ["file-rss-filled", IconFileRssFilled],
+  ["file-sad-filled", IconFileSadFilled],
+  ["file-scissors-filled", IconFileScissorsFilled],
+  ["file-settings-filled", IconFileSettingsFilled],
+  ["file-signal-filled", IconFileSignalFilled],
+  ["file-smile-filled", IconFileSmileFilled],
+  ["file-star-filled", IconFileStarFilled],
+  ["file-text-filled", IconFileTextFilled],
+  ["file-time-filled", IconFileTimeFilled],
+  ["file-typography-filled", IconFileTypographyFilled],
+  ["file-unknown-filled", IconFileUnknownFilled],
+  ["file-upload-filled", IconFileUploadFilled],
+  ["file-vector-filled", IconFileVectorFilled],
+  ["file-x-filled", IconFileXFilled],
+  ["file-filled", IconFileFilled],
+  ["files-filled", IconFilesFilled],
+  ["filter-filled", IconFilterFilled],
+  ["filters-filled", IconFiltersFilled],
+  ["fish-bone-filled", IconFishBoneFilled],
+  ["flag-2-filled", IconFlag2Filled],
+  ["flag-3-filled", IconFlag3Filled],
+  ["flag-filled", IconFlagFilled],
+  ["flame-filled", IconFlameFilled],
+  ["flare-filled", IconFlareFilled],
+  ["flask-2-filled", IconFlask2Filled],
+  ["flask-filled", IconFlaskFilled],
+  ["flower-filled", IconFlowerFilled],
+  ["folder-open-filled", IconFolderOpenFilled],
+  ["folder-filled", IconFolderFilled],
+  ["folders-filled", IconFoldersFilled],
+  ["forbid-2-filled", IconForbid2Filled],
+  ["forbid-filled", IconForbidFilled],
+  ["fountain-filled", IconFountainFilled],
+  ["function-filled", IconFunctionFilled],
+  ["garden-cart-filled", IconGardenCartFilled],
+  ["gas-station-filled", IconGasStationFilled],
+  ["gauge-filled", IconGaugeFilled],
+  ["ghost-2-filled", IconGhost2Filled],
+  ["ghost-3-filled", IconGhost3Filled],
+  ["ghost-filled", IconGhostFilled],
+  ["gift-card-filled", IconGiftCardFilled],
+  ["gift-filled", IconGiftFilled],
+  ["glass-full-filled", IconGlassFullFilled],
+  ["glass-filled", IconGlassFilled],
+  ["globe-filled", IconGlobeFilled],
+  ["golf-filled", IconGolfFilled],
+  ["gps-filled", IconGpsFilled],
+  ["graph-filled", IconGraphFilled],
+  ["grid-pattern-filled", IconGridPatternFilled],
+  ["guitar-pick-filled", IconGuitarPickFilled],
+  ["hanger-2-filled", IconHanger2Filled],
+  ["headphones-filled", IconHeadphonesFilled],
+  ["headset-filled", IconHeadsetFilled],
+  ["heart-broken-filled", IconHeartBrokenFilled],
+  ["heart-filled", IconHeartFilled],
+  ["helicopter-landing-filled", IconHelicopterLandingFilled],
+  ["helicopter-filled", IconHelicopterFilled],
+  ["help-circle-filled", IconHelpCircleFilled],
+  ["help-hexagon-filled", IconHelpHexagonFilled],
+  ["help-octagon-filled", IconHelpOctagonFilled],
+  ["help-square-rounded-filled", IconHelpSquareRoundedFilled],
+  ["help-square-filled", IconHelpSquareFilled],
+  ["help-triangle-filled", IconHelpTriangleFilled],
+  ["help-filled", IconHelpFilled],
+  ["hexagon-letter-a-filled", IconHexagonLetterAFilled],
+  ["hexagon-letter-b-filled", IconHexagonLetterBFilled],
+  ["hexagon-letter-c-filled", IconHexagonLetterCFilled],
+  ["hexagon-letter-d-filled", IconHexagonLetterDFilled],
+  ["hexagon-letter-e-filled", IconHexagonLetterEFilled],
+  ["hexagon-letter-f-filled", IconHexagonLetterFFilled],
+  ["hexagon-letter-g-filled", IconHexagonLetterGFilled],
+  ["hexagon-letter-h-filled", IconHexagonLetterHFilled],
+  ["hexagon-letter-i-filled", IconHexagonLetterIFilled],
+  ["hexagon-letter-j-filled", IconHexagonLetterJFilled],
+  ["hexagon-letter-k-filled", IconHexagonLetterKFilled],
+  ["hexagon-letter-l-filled", IconHexagonLetterLFilled],
+  ["hexagon-letter-m-filled", IconHexagonLetterMFilled],
+  ["hexagon-letter-n-filled", IconHexagonLetterNFilled],
+  ["hexagon-letter-o-filled", IconHexagonLetterOFilled],
+  ["hexagon-letter-p-filled", IconHexagonLetterPFilled],
+  ["hexagon-letter-q-filled", IconHexagonLetterQFilled],
+  ["hexagon-letter-r-filled", IconHexagonLetterRFilled],
+  ["hexagon-letter-s-filled", IconHexagonLetterSFilled],
+  ["hexagon-letter-t-filled", IconHexagonLetterTFilled],
+  ["hexagon-letter-u-filled", IconHexagonLetterUFilled],
+  ["hexagon-letter-v-filled", IconHexagonLetterVFilled],
+  ["hexagon-letter-w-filled", IconHexagonLetterWFilled],
+  ["hexagon-letter-x-filled", IconHexagonLetterXFilled],
+  ["hexagon-letter-y-filled", IconHexagonLetterYFilled],
+  ["hexagon-letter-z-filled", IconHexagonLetterZFilled],
+  ["hexagon-minus-filled", IconHexagonMinusFilled],
+  ["hexagon-number-0-filled", IconHexagonNumber0Filled],
+  ["hexagon-number-1-filled", IconHexagonNumber1Filled],
+  ["hexagon-number-2-filled", IconHexagonNumber2Filled],
+  ["hexagon-number-3-filled", IconHexagonNumber3Filled],
+  ["hexagon-number-4-filled", IconHexagonNumber4Filled],
+  ["hexagon-number-5-filled", IconHexagonNumber5Filled],
+  ["hexagon-number-6-filled", IconHexagonNumber6Filled],
+  ["hexagon-number-7-filled", IconHexagonNumber7Filled],
+  ["hexagon-number-8-filled", IconHexagonNumber8Filled],
+  ["hexagon-number-9-filled", IconHexagonNumber9Filled],
+  ["hexagon-plus-filled", IconHexagonPlusFilled],
+  ["hexagon-filled", IconHexagonFilled],
+  ["home-2-filled", IconHome2Filled],
+  ["home-filled", IconHomeFilled],
+  ["hospital-circle-filled", IconHospitalCircleFilled],
+  ["hourglass-filled", IconHourglassFilled],
+  ["icons-filled", IconIconsFilled],
+  ["id-filled", IconIdFilled],
+  ["info-circle-filled", IconInfoCircleFilled],
+  ["info-hexagon-filled", IconInfoHexagonFilled],
+  ["info-octagon-filled", IconInfoOctagonFilled],
+  ["info-square-rounded-filled", IconInfoSquareRoundedFilled],
+  ["info-square-filled", IconInfoSquareFilled],
+  ["info-triangle-filled", IconInfoTriangleFilled],
+  ["inner-shadow-bottom-left-filled", IconInnerShadowBottomLeftFilled],
+  ["inner-shadow-bottom-right-filled", IconInnerShadowBottomRightFilled],
+  ["inner-shadow-bottom-filled", IconInnerShadowBottomFilled],
+  ["inner-shadow-left-filled", IconInnerShadowLeftFilled],
+  ["inner-shadow-right-filled", IconInnerShadowRightFilled],
+  ["inner-shadow-top-left-filled", IconInnerShadowTopLeftFilled],
+  ["inner-shadow-top-right-filled", IconInnerShadowTopRightFilled],
+  ["inner-shadow-top-filled", IconInnerShadowTopFilled],
+  ["ironing-1-filled", IconIroning1Filled],
+  ["ironing-2-filled", IconIroning2Filled],
+  ["ironing-3-filled", IconIroning3Filled],
+  ["ironing-steam-filled", IconIroningSteamFilled],
+  ["ironing-filled", IconIroningFilled],
+  ["jetpack-filled", IconJetpackFilled],
+  ["jewish-star-filled", IconJewishStarFilled],
+  ["key-filled", IconKeyFilled],
+  ["keyboard-filled", IconKeyboardFilled],
+  ["keyframe-align-center-filled", IconKeyframeAlignCenterFilled],
+  ["keyframe-align-horizontal-filled", IconKeyframeAlignHorizontalFilled],
+  ["keyframe-align-vertical-filled", IconKeyframeAlignVerticalFilled],
+  ["keyframe-filled", IconKeyframeFilled],
+  ["keyframes-filled", IconKeyframesFilled],
+  ["label-important-filled", IconLabelImportantFilled],
+  ["label-filled", IconLabelFilled],
+  ["lasso-polygon-filled", IconLassoPolygonFilled],
+  ["laurel-wreath-1-filled", IconLaurelWreath1Filled],
+  ["laurel-wreath-2-filled", IconLaurelWreath2Filled],
+  ["laurel-wreath-3-filled", IconLaurelWreath3Filled],
+  ["laurel-wreath-filled", IconLaurelWreathFilled],
+  ["layout-2-filled", IconLayout2Filled],
+  ["layout-align-bottom-filled", IconLayoutAlignBottomFilled],
+  ["layout-align-center-filled", IconLayoutAlignCenterFilled],
+  ["layout-align-left-filled", IconLayoutAlignLeftFilled],
+  ["layout-align-middle-filled", IconLayoutAlignMiddleFilled],
+  ["layout-align-right-filled", IconLayoutAlignRightFilled],
+  ["layout-align-top-filled", IconLayoutAlignTopFilled],
+  ["layout-board-split-filled", IconLayoutBoardSplitFilled],
+  ["layout-board-filled", IconLayoutBoardFilled],
+  ["layout-bottombar-collapse-filled", IconLayoutBottombarCollapseFilled],
+  ["layout-bottombar-expand-filled", IconLayoutBottombarExpandFilled],
+  ["layout-bottombar-filled", IconLayoutBottombarFilled],
+  ["layout-cards-filled", IconLayoutCardsFilled],
+  ["layout-dashboard-filled", IconLayoutDashboardFilled],
+  ["layout-distribute-horizontal-filled", IconLayoutDistributeHorizontalFilled],
+  ["layout-distribute-vertical-filled", IconLayoutDistributeVerticalFilled],
+  ["layout-grid-filled", IconLayoutGridFilled],
+  ["layout-kanban-filled", IconLayoutKanbanFilled],
+  ["layout-list-filled", IconLayoutListFilled],
+  ["layout-navbar-collapse-filled", IconLayoutNavbarCollapseFilled],
+  ["layout-navbar-expand-filled", IconLayoutNavbarExpandFilled],
+  ["layout-navbar-filled", IconLayoutNavbarFilled],
+  ["layout-sidebar-left-collapse-filled", IconLayoutSidebarLeftCollapseFilled],
+  ["layout-sidebar-left-expand-filled", IconLayoutSidebarLeftExpandFilled],
+  ["layout-sidebar-right-collapse-filled", IconLayoutSidebarRightCollapseFilled],
+  ["layout-sidebar-right-expand-filled", IconLayoutSidebarRightExpandFilled],
+  ["layout-sidebar-right-filled", IconLayoutSidebarRightFilled],
+  ["layout-sidebar-filled", IconLayoutSidebarFilled],
+  ["layout-filled", IconLayoutFilled],
+  ["leaf-filled", IconLeafFilled],
+  ["lego-filled", IconLegoFilled],
+  ["lemon-2-filled", IconLemon2Filled],
+  ["library-plus-filled", IconLibraryPlusFilled],
+  ["library-filled", IconLibraryFilled],
+  ["lifebuoy-filled", IconLifebuoyFilled],
+  ["link-filled", IconLinkFilled],
+  ["list-check-filled", IconListCheckFilled],
+  ["list-details-filled", IconListDetailsFilled],
+  ["list-filled", IconListFilled],
+  ["live-photo-filled", IconLivePhotoFilled],
+  ["live-view-filled", IconLiveViewFilled],
+  ["location-filled", IconLocationFilled],
+  ["lock-square-rounded-filled", IconLockSquareRoundedFilled],
+  ["lock-filled", IconLockFilled],
+  ["lungs-filled", IconLungsFilled],
+  ["macro-filled", IconMacroFilled],
+  ["magnet-filled", IconMagnetFilled],
+  ["mail-opened-filled", IconMailOpenedFilled],
+  ["mail-filled", IconMailFilled],
+  ["man-filled", IconManFilled],
+  ["manual-gearbox-filled", IconManualGearboxFilled],
+  ["map-pin-filled", IconMapPinFilled],
+  ["medical-cross-filled", IconMedicalCrossFilled],
+  ["meeple-filled", IconMeepleFilled],
+  ["melon-filled", IconMelonFilled],
+  ["menu-2-filled", IconMenu2Filled],
+  ["message-2-filled", IconMessage2Filled],
+  ["message-chatbot-filled", IconMessageChatbotFilled],
+  ["message-circle-filled", IconMessageCircleFilled],
+  ["message-report-filled", IconMessageReportFilled],
+  ["message-filled", IconMessageFilled],
+  ["messages-filled", IconMessagesFilled],
+  ["meteor-filled", IconMeteorFilled],
+  ["michelin-star-filled", IconMichelinStarFilled],
+  ["mickey-filled", IconMickeyFilled],
+  ["microphone-filled", IconMicrophoneFilled],
+  ["microscope-filled", IconMicroscopeFilled],
+  ["microwave-filled", IconMicrowaveFilled],
+  ["military-rank-filled", IconMilitaryRankFilled],
+  ["milk-filled", IconMilkFilled],
+  ["mood-angry-filled", IconMoodAngryFilled],
+  ["mood-confused-filled", IconMoodConfusedFilled],
+  ["mood-crazy-happy-filled", IconMoodCrazyHappyFilled],
+  ["mood-empty-filled", IconMoodEmptyFilled],
+  ["mood-happy-filled", IconMoodHappyFilled],
+  ["mood-kid-filled", IconMoodKidFilled],
+  ["mood-neutral-filled", IconMoodNeutralFilled],
+  ["mood-sad-filled", IconMoodSadFilled],
+  ["mood-smile-filled", IconMoodSmileFilled],
+  ["mood-wrrr-filled", IconMoodWrrrFilled],
+  ["moon-filled", IconMoonFilled],
+  ["motorbike-filled", IconMotorbikeFilled],
+  ["mountain-filled", IconMountainFilled],
+  ["mouse-filled", IconMouseFilled],
+  ["mug-filled", IconMugFilled],
+  ["mushroom-filled", IconMushroomFilled],
+  ["navigation-filled", IconNavigationFilled],
+  ["nurse-filled", IconNurseFilled],
+  ["octagon-minus-filled", IconOctagonMinusFilled],
+  ["octagon-plus-filled", IconOctagonPlusFilled],
+  ["octagon-filled", IconOctagonFilled],
+  ["oval-vertical-filled", IconOvalVerticalFilled],
+  ["oval-filled", IconOvalFilled],
+  ["pacman-filled", IconPacmanFilled],
+  ["paint-filled", IconPaintFilled],
+  ["palette-filled", IconPaletteFilled],
+  ["panorama-horizontal-filled", IconPanoramaHorizontalFilled],
+  ["panorama-vertical-filled", IconPanoramaVerticalFilled],
+  ["parking-circle-filled", IconParkingCircleFilled],
+  ["paw-filled", IconPawFilled],
+  ["pencil-filled", IconPencilFilled],
+  ["pennant-2-filled", IconPennant2Filled],
+  ["pennant-filled", IconPennantFilled],
+  ["pentagon-filled", IconPentagonFilled],
+  ["phone-call-filled", IconPhoneCallFilled],
+  ["phone-calling-filled", IconPhoneCallingFilled],
+  ["phone-check-filled", IconPhoneCheckFilled],
+  ["phone-x-filled", IconPhoneXFilled],
+  ["phone-filled", IconPhoneFilled],
+  ["photo-filled", IconPhotoFilled],
+  ["picture-in-picture-top-filled", IconPictureInPictureTopFilled],
+  ["picture-in-picture-filled", IconPictureInPictureFilled],
+  ["pig-filled", IconPigFilled],
+  ["pill-filled", IconPillFilled],
+  ["pin-filled", IconPinFilled],
+  ["pinned-filled", IconPinnedFilled],
+  ["pizza-filled", IconPizzaFilled],
+  ["plane-arrival-filled", IconPlaneArrivalFilled],
+  ["plane-departure-filled", IconPlaneDepartureFilled],
+  ["plane-tilt-filled", IconPlaneTiltFilled],
+  ["plane-filled", IconPlaneFilled],
+  ["play-card-1-filled", IconPlayCard1Filled],
+  ["play-card-10-filled", IconPlayCard10Filled],
+  ["play-card-2-filled", IconPlayCard2Filled],
+  ["play-card-3-filled", IconPlayCard3Filled],
+  ["play-card-4-filled", IconPlayCard4Filled],
+  ["play-card-5-filled", IconPlayCard5Filled],
+  ["play-card-6-filled", IconPlayCard6Filled],
+  ["play-card-7-filled", IconPlayCard7Filled],
+  ["play-card-8-filled", IconPlayCard8Filled],
+  ["play-card-9-filled", IconPlayCard9Filled],
+  ["play-card-a-filled", IconPlayCardAFilled],
+  ["play-card-j-filled", IconPlayCardJFilled],
+  ["play-card-k-filled", IconPlayCardKFilled],
+  ["play-card-q-filled", IconPlayCardQFilled],
+  ["play-card-star-filled", IconPlayCardStarFilled],
+  ["play-card-filled", IconPlayCardFilled],
+  ["player-eject-filled", IconPlayerEjectFilled],
+  ["player-pause-filled", IconPlayerPauseFilled],
+  ["player-play-filled", IconPlayerPlayFilled],
+  ["player-record-filled", IconPlayerRecordFilled],
+  ["player-skip-back-filled", IconPlayerSkipBackFilled],
+  ["player-skip-forward-filled", IconPlayerSkipForwardFilled],
+  ["player-stop-filled", IconPlayerStopFilled],
+  ["player-track-next-filled", IconPlayerTrackNextFilled],
+  ["player-track-prev-filled", IconPlayerTrackPrevFilled],
+  ["playlist-filled", IconPlaylistFilled],
+  ["plus-filled", IconPlusFilled],
+  ["point-filled", IconPointFilled],
+  ["pointer-filled", IconPointerFilled],
+  ["polaroid-filled", IconPolaroidFilled],
+  ["poo-filled", IconPooFilled],
+  ["presentation-analytics-filled", IconPresentationAnalyticsFilled],
+  ["presentation-filled", IconPresentationFilled],
+  ["puzzle-filled", IconPuzzleFilled],
+  ["quote-filled", IconQuoteFilled],
+  ["radar-filled", IconRadarFilled],
+  ["radioactive-filled", IconRadioactiveFilled],
+  ["receipt-dollar-filled", IconReceiptDollarFilled],
+  ["receipt-euro-filled", IconReceiptEuroFilled],
+  ["receipt-pound-filled", IconReceiptPoundFilled],
+  ["receipt-rupee-filled", IconReceiptRupeeFilled],
+  ["receipt-yen-filled", IconReceiptYenFilled],
+  ["receipt-yuan-filled", IconReceiptYuanFilled],
+  ["receipt-filled", IconReceiptFilled],
+  ["rectangle-vertical-filled", IconRectangleVerticalFilled],
+  ["rectangle-filled", IconRectangleFilled],
+  ["registered-filled", IconRegisteredFilled],
+  ["relation-many-to-many-filled", IconRelationManyToManyFilled],
+  ["relation-one-to-many-filled", IconRelationOneToManyFilled],
+  ["relation-one-to-one-filled", IconRelationOneToOneFilled],
+  ["replace-filled", IconReplaceFilled],
+  ["report-analytics-filled", IconReportAnalyticsFilled],
+  ["report-money-filled", IconReportMoneyFilled],
+  ["rollercoaster-filled", IconRollercoasterFilled],
+  ["rosette-discount-check-filled", IconRosetteDiscountCheckFilled],
+  ["rosette-discount-filled", IconRosetteDiscountFilled],
+  ["rosette-filled", IconRosetteFilled],
+  ["salad-filled", IconSaladFilled],
+  ["satellite-filled", IconSatelliteFilled],
+  ["scale-filled", IconScaleFilled],
+  ["school-filled", IconSchoolFilled],
+  ["scuba-diving-tank-filled", IconScubaDivingTankFilled],
+  ["search-filled", IconSearchFilled],
+  ["section-filled", IconSectionFilled],
+  ["seedling-filled", IconSeedlingFilled],
+  ["send-filled", IconSendFilled],
+  ["settings-filled", IconSettingsFilled],
+  ["shield-check-filled", IconShieldCheckFilled],
+  ["shield-checkered-filled", IconShieldCheckeredFilled],
+  ["shield-half-filled", IconShieldHalfFilled],
+  ["shield-lock-filled", IconShieldLockFilled],
+  ["shield-filled", IconShieldFilled],
+  ["shirt-filled", IconShirtFilled],
+  ["shopping-cart-filled", IconShoppingCartFilled],
+  ["sign-left-filled", IconSignLeftFilled],
+  ["sign-right-filled", IconSignRightFilled],
+  ["sitemap-filled", IconSitemapFilled],
+  ["sort-ascending-2-filled", IconSortAscending2Filled],
+  ["sort-ascending-shapes-filled", IconSortAscendingShapesFilled],
+  ["sort-descending-2-filled", IconSortDescending2Filled],
+  ["sort-descending-shapes-filled", IconSortDescendingShapesFilled],
+  ["soup-filled", IconSoupFilled],
+  ["spade-filled", IconSpadeFilled],
+  ["sparkles-2-filled", IconSparkles2Filled],
+  ["sparkles-filled", IconSparklesFilled],
+  ["speedboat-filled", IconSpeedboatFilled],
+  ["spider-filled", IconSpiderFilled],
+  ["square-arrow-down-filled", IconSquareArrowDownFilled],
+  ["square-arrow-left-filled", IconSquareArrowLeftFilled],
+  ["square-arrow-right-filled", IconSquareArrowRightFilled],
+  ["square-arrow-up-filled", IconSquareArrowUpFilled],
+  ["square-asterisk-filled", IconSquareAsteriskFilled],
+  ["square-check-filled", IconSquareCheckFilled],
+  ["square-chevron-down-filled", IconSquareChevronDownFilled],
+  ["square-chevron-left-filled", IconSquareChevronLeftFilled],
+  ["square-chevron-right-filled", IconSquareChevronRightFilled],
+  ["square-chevron-up-filled", IconSquareChevronUpFilled],
+  ["square-chevrons-down-filled", IconSquareChevronsDownFilled],
+  ["square-chevrons-left-filled", IconSquareChevronsLeftFilled],
+  ["square-chevrons-right-filled", IconSquareChevronsRightFilled],
+  ["square-chevrons-up-filled", IconSquareChevronsUpFilled],
+  ["square-dot-filled", IconSquareDotFilled],
+  ["square-f0-filled", IconSquareF0Filled],
+  ["square-f1-filled", IconSquareF1Filled],
+  ["square-f2-filled", IconSquareF2Filled],
+  ["square-f3-filled", IconSquareF3Filled],
+  ["square-f4-filled", IconSquareF4Filled],
+  ["square-f5-filled", IconSquareF5Filled],
+  ["square-f6-filled", IconSquareF6Filled],
+  ["square-f7-filled", IconSquareF7Filled],
+  ["square-f8-filled", IconSquareF8Filled],
+  ["square-f9-filled", IconSquareF9Filled],
+  ["square-letter-a-filled", IconSquareLetterAFilled],
+  ["square-letter-b-filled", IconSquareLetterBFilled],
+  ["square-letter-c-filled", IconSquareLetterCFilled],
+  ["square-letter-d-filled", IconSquareLetterDFilled],
+  ["square-letter-e-filled", IconSquareLetterEFilled],
+  ["square-letter-f-filled", IconSquareLetterFFilled],
+  ["square-letter-g-filled", IconSquareLetterGFilled],
+  ["square-letter-h-filled", IconSquareLetterHFilled],
+  ["square-letter-i-filled", IconSquareLetterIFilled],
+  ["square-letter-j-filled", IconSquareLetterJFilled],
+  ["square-letter-k-filled", IconSquareLetterKFilled],
+  ["square-letter-l-filled", IconSquareLetterLFilled],
+  ["square-letter-m-filled", IconSquareLetterMFilled],
+  ["square-letter-n-filled", IconSquareLetterNFilled],
+  ["square-letter-o-filled", IconSquareLetterOFilled],
+  ["square-letter-p-filled", IconSquareLetterPFilled],
+  ["square-letter-q-filled", IconSquareLetterQFilled],
+  ["square-letter-r-filled", IconSquareLetterRFilled],
+  ["square-letter-s-filled", IconSquareLetterSFilled],
+  ["square-letter-t-filled", IconSquareLetterTFilled],
+  ["square-letter-u-filled", IconSquareLetterUFilled],
+  ["square-letter-v-filled", IconSquareLetterVFilled],
+  ["square-letter-w-filled", IconSquareLetterWFilled],
+  ["square-letter-x-filled", IconSquareLetterXFilled],
+  ["square-letter-y-filled", IconSquareLetterYFilled],
+  ["square-letter-z-filled", IconSquareLetterZFilled],
+  ["square-minus-filled", IconSquareMinusFilled],
+  ["square-number-0-filled", IconSquareNumber0Filled],
+  ["square-number-1-filled", IconSquareNumber1Filled],
+  ["square-number-2-filled", IconSquareNumber2Filled],
+  ["square-number-3-filled", IconSquareNumber3Filled],
+  ["square-number-4-filled", IconSquareNumber4Filled],
+  ["square-number-5-filled", IconSquareNumber5Filled],
+  ["square-number-6-filled", IconSquareNumber6Filled],
+  ["square-number-7-filled", IconSquareNumber7Filled],
+  ["square-number-8-filled", IconSquareNumber8Filled],
+  ["square-number-9-filled", IconSquareNumber9Filled],
+  ["square-rotated-filled", IconSquareRotatedFilled],
+  ["square-rounded-arrow-down-filled", IconSquareRoundedArrowDownFilled],
+  ["square-rounded-arrow-left-filled", IconSquareRoundedArrowLeftFilled],
+  ["square-rounded-arrow-right-filled", IconSquareRoundedArrowRightFilled],
+  ["square-rounded-arrow-up-filled", IconSquareRoundedArrowUpFilled],
+  ["square-rounded-check-filled", IconSquareRoundedCheckFilled],
+  ["square-rounded-chevron-down-filled", IconSquareRoundedChevronDownFilled],
+  ["square-rounded-chevron-left-filled", IconSquareRoundedChevronLeftFilled],
+  ["square-rounded-chevron-right-filled", IconSquareRoundedChevronRightFilled],
+  ["square-rounded-chevron-up-filled", IconSquareRoundedChevronUpFilled],
+  ["square-rounded-chevrons-down-filled", IconSquareRoundedChevronsDownFilled],
+  ["square-rounded-chevrons-left-filled", IconSquareRoundedChevronsLeftFilled],
+  ["square-rounded-chevrons-right-filled", IconSquareRoundedChevronsRightFilled],
+  ["square-rounded-chevrons-up-filled", IconSquareRoundedChevronsUpFilled],
+  ["square-rounded-letter-a-filled", IconSquareRoundedLetterAFilled],
+  ["square-rounded-letter-b-filled", IconSquareRoundedLetterBFilled],
+  ["square-rounded-letter-c-filled", IconSquareRoundedLetterCFilled],
+  ["square-rounded-letter-d-filled", IconSquareRoundedLetterDFilled],
+  ["square-rounded-letter-e-filled", IconSquareRoundedLetterEFilled],
+  ["square-rounded-letter-f-filled", IconSquareRoundedLetterFFilled],
+  ["square-rounded-letter-g-filled", IconSquareRoundedLetterGFilled],
+  ["square-rounded-letter-h-filled", IconSquareRoundedLetterHFilled],
+  ["square-rounded-letter-i-filled", IconSquareRoundedLetterIFilled],
+  ["square-rounded-letter-j-filled", IconSquareRoundedLetterJFilled],
+  ["square-rounded-letter-k-filled", IconSquareRoundedLetterKFilled],
+  ["square-rounded-letter-l-filled", IconSquareRoundedLetterLFilled],
+  ["square-rounded-letter-m-filled", IconSquareRoundedLetterMFilled],
+  ["square-rounded-letter-n-filled", IconSquareRoundedLetterNFilled],
+  ["square-rounded-letter-o-filled", IconSquareRoundedLetterOFilled],
+  ["square-rounded-letter-p-filled", IconSquareRoundedLetterPFilled],
+  ["square-rounded-letter-q-filled", IconSquareRoundedLetterQFilled],
+  ["square-rounded-letter-r-filled", IconSquareRoundedLetterRFilled],
+  ["square-rounded-letter-s-filled", IconSquareRoundedLetterSFilled],
+  ["square-rounded-letter-t-filled", IconSquareRoundedLetterTFilled],
+  ["square-rounded-letter-u-filled", IconSquareRoundedLetterUFilled],
+  ["square-rounded-letter-v-filled", IconSquareRoundedLetterVFilled],
+  ["square-rounded-letter-w-filled", IconSquareRoundedLetterWFilled],
+  ["square-rounded-letter-x-filled", IconSquareRoundedLetterXFilled],
+  ["square-rounded-letter-y-filled", IconSquareRoundedLetterYFilled],
+  ["square-rounded-letter-z-filled", IconSquareRoundedLetterZFilled],
+  ["square-rounded-minus-filled", IconSquareRoundedMinusFilled],
+  ["square-rounded-number-0-filled", IconSquareRoundedNumber0Filled],
+  ["square-rounded-number-1-filled", IconSquareRoundedNumber1Filled],
+  ["square-rounded-number-2-filled", IconSquareRoundedNumber2Filled],
+  ["square-rounded-number-3-filled", IconSquareRoundedNumber3Filled],
+  ["square-rounded-number-4-filled", IconSquareRoundedNumber4Filled],
+  ["square-rounded-number-5-filled", IconSquareRoundedNumber5Filled],
+  ["square-rounded-number-6-filled", IconSquareRoundedNumber6Filled],
+  ["square-rounded-number-7-filled", IconSquareRoundedNumber7Filled],
+  ["square-rounded-number-8-filled", IconSquareRoundedNumber8Filled],
+  ["square-rounded-number-9-filled", IconSquareRoundedNumber9Filled],
+  ["square-rounded-plus-filled", IconSquareRoundedPlusFilled],
+  ["square-rounded-x-filled", IconSquareRoundedXFilled],
+  ["square-rounded-filled", IconSquareRoundedFilled],
+  ["square-x-filled", IconSquareXFilled],
+  ["square-filled", IconSquareFilled],
+  ["squares-filled", IconSquaresFilled],
+  ["stack-2-filled", IconStack2Filled],
+  ["stack-3-filled", IconStack3Filled],
+  ["stack-filled", IconStackFilled],
+  ["star-half-filled", IconStarHalfFilled],
+  ["star-filled", IconStarFilled],
+  ["stars-filled", IconStarsFilled],
+  ["steering-wheel-filled", IconSteeringWheelFilled],
+  ["sun-high-filled", IconSunHighFilled],
+  ["sun-low-filled", IconSunLowFilled],
+  ["sun-filled", IconSunFilled],
+  ["sunglasses-filled", IconSunglassesFilled],
+  ["sunrise-filled", IconSunriseFilled],
+  ["sunset-2-filled", IconSunset2Filled],
+  ["sunset-filled", IconSunsetFilled],
+  ["swipe-down-filled", IconSwipeDownFilled],
+  ["swipe-left-filled", IconSwipeLeftFilled],
+  ["swipe-right-filled", IconSwipeRightFilled],
+  ["swipe-up-filled", IconSwipeUpFilled],
+  ["table-filled", IconTableFilled],
+  ["tag-filled", IconTagFilled],
+  ["tags-filled", IconTagsFilled],
+  ["temperature-minus-filled", IconTemperatureMinusFilled],
+  ["temperature-plus-filled", IconTemperaturePlusFilled],
+  ["template-filled", IconTemplateFilled],
+  ["test-pipe-2-filled", IconTestPipe2Filled],
+  ["thumb-down-filled", IconThumbDownFilled],
+  ["thumb-up-filled", IconThumbUpFilled],
+  ["ticket-filled", IconTicketFilled],
+  ["tilt-shift-filled", IconTiltShiftFilled],
+  ["timeline-event-filled", IconTimelineEventFilled],
+  ["toggle-left-filled", IconToggleLeftFilled],
+  ["toggle-right-filled", IconToggleRightFilled],
+  ["tools-kitchen-2-filled", IconToolsKitchen2Filled],
+  ["train-filled", IconTrainFilled],
+  ["transform-filled", IconTransformFilled],
+  ["transition-bottom-filled", IconTransitionBottomFilled],
+  ["transition-left-filled", IconTransitionLeftFilled],
+  ["transition-right-filled", IconTransitionRightFilled],
+  ["transition-top-filled", IconTransitionTopFilled],
+  ["trash-x-filled", IconTrashXFilled],
+  ["trash-filled", IconTrashFilled],
+  ["triangle-inverted-filled", IconTriangleInvertedFilled],
+  ["triangle-square-circle-filled", IconTriangleSquareCircleFilled],
+  ["triangle-filled", IconTriangleFilled],
+  ["trolley-filled", IconTrolleyFilled],
+  ["trophy-filled", IconTrophyFilled],
+  ["truck-filled", IconTruckFilled],
+  ["ufo-filled", IconUfoFilled],
+  ["umbrella-filled", IconUmbrellaFilled],
+  ["user-filled", IconUserFilled],
+  ["versions-filled", IconVersionsFilled],
+  ["video-minus-filled", IconVideoMinusFilled],
+  ["video-plus-filled", IconVideoPlusFilled],
+  ["video-filled", IconVideoFilled],
+  ["windmill-filled", IconWindmillFilled],
+  ["windsock-filled", IconWindsockFilled],
+  ["woman-filled", IconWomanFilled],
+  ["world-filled", IconWorldFilled],
+  ["writing-sign-filled", IconWritingSignFilled],
+  ["writing-filled", IconWritingFilled],
+  ["x-filled", IconXFilled],
+  ["xbox-a-filled", IconXboxAFilled],
+  ["xbox-b-filled", IconXboxBFilled],
+  ["xbox-x-filled", IconXboxXFilled],
+  ["xbox-y-filled", IconXboxYFilled],
+  ["yin-yang-filled", IconYinYangFilled],
+  ["zeppelin-filled", IconZeppelinFilled],
+  ["zoom-cancel-filled", IconZoomCancelFilled],
+  ["zoom-check-filled", IconZoomCheckFilled],
+  ["zoom-code-filled", IconZoomCodeFilled],
+  ["zoom-exclamation-filled", IconZoomExclamationFilled],
+  ["zoom-in-area-filled", IconZoomInAreaFilled],
+  ["zoom-in-filled", IconZoomInFilled],
+  ["zoom-money-filled", IconZoomMoneyFilled],
+  ["zoom-out-area-filled", IconZoomOutAreaFilled],
+  ["zoom-out-filled", IconZoomOutFilled],
+  ["zoom-pan-filled", IconZoomPanFilled],
+  ["zoom-question-filled", IconZoomQuestionFilled],
+  ["zoom-scan-filled", IconZoomScanFilled],
+  ["zoom-filled", IconZoomFilled],
+];

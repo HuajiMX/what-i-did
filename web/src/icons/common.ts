@@ -137,3 +137,13 @@ export const COMMON_ICONS: Record<string, IconComponent> = {
 };
 
 export type CommonIconName = keyof typeof COMMON_ICONS;
+
+/**
+ * 按名取常用图标。
+ * 用 `Object.hasOwn` 而不是 `COMMON_ICONS[name]`：后者对 `constructor` / `toString`
+ * 这类名字会命中 Object.prototype，把一个原生函数当成图标组件去渲染。
+ * 目前的图标名不会出现这些词，但"名字查不到就崩溃"这类事故不值得留口子。
+ */
+export function commonIcon(name: string): IconComponent | null {
+  return Object.hasOwn(COMMON_ICONS, name) ? (COMMON_ICONS[name] ?? null) : null;
+}

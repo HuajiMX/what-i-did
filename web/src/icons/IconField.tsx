@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { COMMON_ICONS } from "./common";
+import { commonIcon } from "./common";
 import { Icon, IconOf } from "./Icon";
 const IconPicker = lazy(() => import("./IconPicker"));
 
@@ -46,7 +46,7 @@ export default function IconField({ icon, color, onIconChange, onColorChange, co
 
       <p className="faint tiny">
         当前图标名：<code>{icon}</code>
-        {icon in COMMON_ICONS ? "（常用，随页面直接加载）" : "（按需加载，首次显示会多一次请求）"}
+        {commonIcon(icon) ? "（常用，随页面直接加载）" : "（按需加载，首次显示会多一次请求）"}
       </p>
     </div>
   );
