@@ -39,3 +39,11 @@ CREATE TABLE IF NOT EXISTS sessions (
   ip         TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_sessions_expires ON sessions(expires_at);
+
+-- 运行期可改的站点配置（key-value）。目前只存站点 title / subtitle / description，
+-- 未写入时由 server/src/site.js 提供默认值，因此不需要 seed 数据。
+CREATE TABLE IF NOT EXISTS settings (
+  key        TEXT PRIMARY KEY,
+  value      TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);

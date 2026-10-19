@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ApiError, endpoints, type TagWithUsage } from "../api";
 import ConfirmDialog from "../components/ConfirmDialog";
+import SiteSettingsForm from "../components/SiteSettingsForm";
 import IconField from "../icons/IconField";
 import { Icon } from "../icons/Icon";
 import { useAsync } from "../lib/useAsync";
@@ -32,11 +33,11 @@ export default function TagsPage() {
       <div className="narrow stack">
         <div className="page-head">
           <div>
-            <h1 className="page-title">Tag 管理</h1>
-            <p className="page-sub">只有管理员可以增删改 Tag。</p>
+            <h1 className="page-title">管理</h1>
+            <p className="page-sub">站点信息与 Tag 管理，只有管理员可以修改。</p>
           </div>
         </div>
-        <div className="alert">当前是公开浏览模式。登录后即可管理 Tag。</div>
+        <div className="alert">当前是公开浏览模式。登录后即可管理站点信息与 Tag。</div>
       </div>
     );
   }
@@ -69,7 +70,16 @@ export default function TagsPage() {
     <div className="stack">
       <div className="page-head">
         <div>
-          <h1 className="page-title">Tag 管理</h1>
+          <h1 className="page-title">管理</h1>
+          <p className="page-sub">站点信息与 Tag 管理。只有管理员可以修改。</p>
+        </div>
+      </div>
+
+      <SiteSettingsForm />
+
+      <div className="page-head">
+        <div>
+          <h2>Tag 管理</h2>
           <p className="page-sub">Tag 是日历与统计的维度。删除会一并移除它的历史记录。</p>
         </div>
         <button type="button" className="btn btn-primary" onClick={() => setDraft({ ...EMPTY_DRAFT })}>

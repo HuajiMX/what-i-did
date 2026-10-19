@@ -41,12 +41,23 @@
 .brand-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   line-height: 1.25;
 }
 
+/* 站点名/副标题可在后台改，超长时省略，不能把侧栏撑宽 */
 .brand-title {
   font-weight: 600;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brand-text .faint {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .nav {
@@ -105,9 +116,45 @@
   border-bottom: 1px solid var(--border);
 }
 
+/* 站点名 + 副标题。max-width 交给 flex，超长时省略而不是把右侧操作挤出屏幕。 */
+.topbar-brand {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.2;
+}
+
 .topbar-title {
   font-size: 16px;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topbar-subtitle {
+  font-size: 11px;
+  color: var(--text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 顶栏右侧：登录 / 管理 / 退出。不参与收缩，窄屏时由左侧标题让位。 */
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.topbar-actions .btn {
+  min-height: 32px;
+  padding: 0 8px;
+}
+
+.topbar-actions a.btn:hover {
+  text-decoration: none;
 }
 
 /* ── 底部 Tab Bar（移动） ───────────────────────────────────────────────── */

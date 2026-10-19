@@ -15,9 +15,9 @@
 | 日历 | 月网格，每格显示当天活动次数与各 Tag 的色点；点开某天可 `+1` / `−1` 记录；可按 Tag 筛选，筛选状态写在 URL 里，可直接分享 |
 | 统计 | 本月 / 今年 / 自定义时段 × 多 Tag 筛选；汇总卡（总次数、活跃天数、当前连续、最活跃 Tag）、趋势折线图、Tag 分布环形图、Tag 明细表 |
 | 随手记 | GitHub 风格贡献图（53 周，按当天条数着色），点格子筛选当天的随手记并直接增删改 |
-| Tag 管理 | 管理员专属：新建 / 编辑（名称、图标、颜色）/ 删除，删除前提示将影响的记录条数 |
+| 管理 | 管理员专属：修改站点标题 / 副标题 / 描述；新建 / 编辑（名称、图标、颜色）/ 删除 Tag，删除前提示将影响的记录条数 |
 
-响应式：≥ 900px 用左侧栏 + 右侧抽屉，< 900px 用底部 Tab Bar + 底部抽屉。
+响应式：≥ 900px 用左侧栏 + 右侧内容区，< 900px 用顶部栏 + 底部 Tab Bar。移动端顶部栏右侧始终有进入后台的入口：未登录显示「登录」，已登录显示「管理」。
 
 ---
 
@@ -26,7 +26,7 @@
 | 选择 | 理由 |
 | --- | --- |
 | SQLite（better-sqlite3） | 数据量是"个人 × 每天几条"，十年也就几万行。不需要数据库服务 |
-| 无 ORM，`schema.sql` + `db.prepare()` | 只有 4 张表、5 种查询模式，`CREATE TABLE IF NOT EXISTS` 幂等执行即可，不需要迁移引擎 |
+| 无 ORM，`schema.sql` + `db.prepare()` | 只有 5 张表、几种固定查询，`CREATE TABLE IF NOT EXISTS` 幂等执行即可，不需要迁移引擎 |
 | 统计在 JS 纯函数里算 | 每个统计口径都能被单测覆盖（连续天数这类边界密集的逻辑尤其需要），写复杂 SQL 反而难测 |
 | 自绘 SVG 图表 | 只需要一条折线 + 一个环形，图表库是 200 KB+ 依赖和一整套要覆盖的默认样式 |
 | 手写 CSS + CSS 变量 | 视觉完全可控，深色模式跟随系统偏好，无 UI 框架 |
@@ -76,8 +76,8 @@ npm run dev:web               # 前端 http://127.0.0.1:5173（/api 自动代理
 ### 测试
 
 ```bash
-npm test          # server 单测：日期边界、统计口径、鉴权、接口行为（45 个用例）
-npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真静态文件（29 项检查）
+npm test          # web + server 单测：日期边界、统计口径、鉴权、接口行为、favicon（65 个用例）
+npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真静态文件（39 项检查）
 ```
 
 `test:smoke` 会在 8791 端口用独立的临时数据库起一个真实服务实例，覆盖跨年连续天数、
@@ -86,7 +86,7 @@ npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真
 
 前端类型检查：`npm run typecheck --workspace web`。
 
-构建时还会自动执行三项静态检查（`npm run build` 里串联，任一项失败即构建失败）：
+构建时还会自动执行四项静态检查（`npm run build` 里串联，任一项失败即构建失败）：
 
 | 检查 | 拦截的问题 |
 | --- | --- |
@@ -126,6 +126,8 @@ BASE=http://127.0.0.1:8787 node scripts/screenshot-admin.mjs --password '你的�
 | `SESSION_DAYS` | `30` | 会话有效期 |
 | `COOKIE_SECURE` | `true` | 是否给会话 cookie 加 `Secure`。走 HTTPS 时保持 `true` |
 | `NODE_ENV` | 无 | `production` 时会强制校验上面的密钥类配置 |
+
+站点标题、副标题与描述不属于环境变量：它们存在数据库的 `settings` 表里，在后台「管理」页修改，保存后立即生效，无需重启服务。副标题与描述可以留空（留空后不显示 / 不输出 meta description）。
 
 ### 写入频率上限（批量补记历史时需要注意）
 
@@ -248,6 +250,8 @@ Tag 图标来自 [@tabler/icons-react](https://tabler.io/icons)（MIT，共 6238
 
 服务端的图标名白名单由 `scripts/gen-icon-catalog.mjs` 从图标包生成到 `server/src/icon-names.json`，改图标库版本后执行 `npm run icons` 重新生成。
 
+浏览器图标同时提供 `web/public/favicon.svg` 与 `web/public/favicon.ico`：支持 SVG 的浏览器用矢量版，不支持的回退到 ICO。两处图形必须一致，改完 SVG 后执行 `npm run favicon` 重新生成 ICO。
+
 ---
 
 ## 目录结构
@@ -257,16 +261,17 @@ server/src/
   app.js         应用组装：中间件、路由挂载、静态托管、错误处理
   index.js       入口：配置自检、启动、优雅关闭
   db.js          SQLite 打开与 schema 执行
-  schema.sql     4 张表，全部幂等
+  schema.sql     5 张表，全部幂等
   dates.js       日期纯函数（月末钳制、闰年、周对齐）
   stats.js       统计纯函数（聚合、连续天数、趋势分桶）
   auth.js        scrypt 校验、会话、限速
+  site.js        站点信息默认值与读取
   validate.js    入参校验与 Tag 调色板
-  routes/        tags / activities / notes / stats / auth
-server/test/     45 个用例（node --test）
+  routes/        site / tags / activities / notes / stats / auth
+server/test/     49 个用例（node --test）
 web/src/
   icons/         图标三层结构
-  pages/         日历 / 统计 / 随手记 / Tag 管理 / 登录
+  pages/         日历 / 统计 / 随手记 / 管理 / 登录
   components/    当天面板、确认弹窗、趋势图、环形图
   lib/           日期工具、useAsync
   state/         登录态、提示条
@@ -284,12 +289,13 @@ scripts/         图标清单生成、密码哈希、体积断言、类名与对
 ### 首次部署后的人工核对清单
 
 1. 桌面端（≥ 900px）：左侧栏导航可切换；日历每格显示当天活动的缩略图标与次数（只记 1 次不显示数字）；点某天，**下方**的"当天活动"即时切到该日，`+` / `−` 能改变格子里的预览。
-2. 移动端（< 900px，浏览器开发者工具切设备视图）：底部 Tab Bar 三项可切换；日历格子里的图标自动换行且不溢出；当天活动在下方单列显示。
+2. 移动端（< 900px，浏览器开发者工具切设备视图）：顶部栏左侧显示站点标题/副标题，右侧未登录为「登录」、已登录为「管理」+「退出」；底部 Tab Bar 三项可切换；日历格子里的图标自动换行且不溢出；当天活动在下方单列显示。
 3. 统计页："本月 / 今年 / 自定义"切换后汇总卡、折线图、环形图、明细表同时更新；Tag 筛选 chip 点击后有计数变化。
 4. 随手记：热力图点格子后，下方列表切换该日并滚动到位；管理员可在同一张卡片里新增、编辑、删除（`Ctrl/⌘ + Enter` 保存）。
-5. Tag 管理：新建 Tag 时图标选择器能打开（首次打开会下载约 2.4 MB 的图标 chunk），"全部图标"标签页可搜索英文名；删除 Tag 时弹窗显示将影响的记录条数。
-6. 深色模式：切换系统偏好后刷新，页面配色随之变化且文字仍清晰（对比度已由 `audit-contrast.mjs` 校验）。
-7. 登录：登录后出现"Tag 管理"入口与各处的编辑控件；退出后写操作入口消失。
+5. 管理：修改站点标题 / 副标题 / 描述并保存，侧栏、移动端顶栏、浏览器标签页与 meta description 立即变化；留空副标题与描述后不再显示。
+6. Tag 管理：新建 Tag 时图标选择器能打开（首次打开会下载约 2.4 MB 的图标 chunk），"全部图标"标签页可搜索英文名；删除 Tag 时弹窗显示将影响的记录条数。
+7. 深色模式：切换系统偏好后刷新，页面配色随之变化且文字仍清晰（对比度已由 `audit-contrast.mjs` 校验）。
+8. 登录：登录后出现「管理」入口（桌面侧栏 + 移动端顶栏）与各处的编辑控件；退出后写操作入口消失。
 
 ### Docker 方案的实测结论
 

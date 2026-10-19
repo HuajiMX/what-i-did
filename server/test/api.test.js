@@ -84,6 +84,7 @@ test("未登录可以读取全部公开数据", async () => {
   const c = client();
   for (const url of [
     "/api/health",
+    "/api/site",
     "/api/tags",
     "/api/activities?from=2026-05-01&to=2026-05-31",
     "/api/activities/day?date=2026-05-12",
@@ -107,11 +108,56 @@ test("/api/me 对匿名用户返回 admin=false", async () => {
   assert.equal(res.body.admin, false);
 });
 
+test("站点信息默认值可公开读取，且只有管理员能修改", async () => {
+  const anonymous = client();
+  const initial = await anonymous.get("/api/site");
+  assert.equal(initial.status, 200);
+  assert.deepEqual(initial.body.site, {
+    title: "我做了什么",
+    subtitle: "生活记录与统计",
+    description: "个人生活记录与统计：日历活动、随手记与时段统计",
+  });
+
+  const admin = await adminClient();
+  const updated = await admin.fetch("PATCH", "/api/site", {
+    title: "每日记录",
+    subtitle: "生活切片",
+    description: "记录每天做过的事",
+  });
+  assert.equal(updated.status, 200);
+  assert.deepEqual(updated.body.site, {
+    title: "每日记录",
+    subtitle: "生活切片",
+    description: "记录每天做过的事",
+  });
+
+  // 公开读端立刻读到新值，不需要重启或刷新服务
+  assert.deepEqual((await anonymous.get("/api/site")).body.site, updated.body.site);
+});
+
+test("站点信息允许留空副标题与描述，但不允许空标题或超长字段", async () => {
+  const admin = await adminClient();
+
+  const cleared = await admin.fetch("PATCH", "/api/site", { subtitle: "", description: "" });
+  assert.equal(cleared.status, 200);
+  assert.equal(cleared.body.site.subtitle, "");
+  assert.equal(cleared.body.site.description, "");
+  // 未提供的字段保持原值
+  assert.equal(cleared.body.site.title, "我做了什么");
+
+  assert.equal((await admin.fetch("PATCH", "/api/site", { title: "   " })).status, 400);
+  assert.equal((await admin.fetch("PATCH", "/api/site", { title: "x".repeat(41) })).status, 400);
+  assert.equal((await admin.fetch("PATCH", "/api/site", { subtitle: "x".repeat(61) })).status, 400);
+  assert.equal((await admin.fetch("PATCH", "/api/site", { description: "x".repeat(201) })).status, 400);
+  assert.equal((await admin.fetch("PATCH", "/api/site", { title: 123 })).status, 400);
+});
+
 // ── 未授权写入必须被拒 ───────────────────────────────────────────────────
 
 test("未登录的任何写操作都返回 401", async () => {
   const c = client();
   const attempts = [
+    ["PATCH", "/api/site", { title: "偷改站点" }],
     ["POST", "/api/tags", { name: "编程", icon: "code", color: "#0091ff" }],
     ["PATCH", "/api/tags/1", { name: "改名" }],
     ["DELETE", "/api/tags/1", undefined],

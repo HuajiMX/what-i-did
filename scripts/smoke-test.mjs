@@ -72,9 +72,24 @@ try {
   check("未登录读健康检查", (await call("GET", "/api/health")).status === 200);
   check("未登录写活动被拒 401", (await call("POST", "/api/activities", { date: "2026-05-12", tag_id: 1 })).status === 401);
   check("未登录建 Tag 被拒 401", (await call("POST", "/api/tags", { name: "x", icon: "run", color: "#0091ff" })).status === 401);
+  check("未登录改站点信息被拒 401", (await call("PATCH", "/api/site", { title: "偷改" })).status === 401);
+  check("站点信息默认值公开可读", (await call("GET", "/api/site")).body.site.title === "我做了什么");
   check("错误密码 401", (await call("POST", "/api/auth/login", { password: "wrong" })).status === 401);
   check("正确密码登录成功", (await call("POST", "/api/auth/login", { password: PASSWORD })).status === 200);
   check("/api/me 变成 admin", (await call("GET", "/api/me")).body.admin === true);
+
+  console.log("\n--- 站点信息 ---");
+  const siteUpdated = await call("PATCH", "/api/site", {
+    title: "E2E 站点",
+    subtitle: "E2E 副标题",
+    description: "E2E 描述",
+  });
+  check("管理员可更新站点信息", siteUpdated.status === 200 && siteUpdated.body.site.title === "E2E 站点");
+  const sitePublic = await call("GET", "/api/site");
+  check(
+    "公开端立刻读到新站点信息",
+    sitePublic.body.site.subtitle === "E2E 副标题" && sitePublic.body.site.description === "E2E 描述",
+  );
 
   console.log("\n--- Tag 管理 ---");
   const coding = await call("POST", "/api/tags", { name: "编程", icon: "code", color: "#0091ff" });
@@ -131,10 +146,21 @@ try {
   check("级联后当天明细为空", (await call("GET", "/api/activities/day?date=2026-01-02")).body.activities.length === 0);
   const page = await fetch(`${BASE}/stats`);
   check("深层路由返回 index.html", page.status === 200 && (await page.text()).includes('id="root"'));
-  const assetName = (await (await fetch(`${BASE}/`)).text()).match(/assets\/(index-[^"]+\.js)/)?.[1];
+  const indexHtml = await (await fetch(`${BASE}/`)).text();
+  const assetName = indexHtml.match(/assets\/(index-[^"]+\.js)/)?.[1];
   const asset = await fetch(`${BASE}/assets/${assetName}`);
   check("静态资源长缓存头", (asset.headers.get("cache-control") ?? "").includes("immutable"), asset.headers.get("cache-control") ?? "");
   check("静态资源带 CSP", (asset.headers.get("content-security-policy") ?? "").includes("default-src 'self'"));
+  const favicon = await fetch(`${BASE}/favicon.ico`);
+  check(
+    "favicon.ico 可访问且 MIME 正确",
+    favicon.status === 200 && (favicon.headers.get("content-type") ?? "").includes("icon"),
+    favicon.headers.get("content-type") ?? "",
+  );
+  check(
+    "index.html 同时声明 ico 与 svg favicon",
+    indexHtml.includes('href="/favicon.ico"') && indexHtml.includes('href="/favicon.svg"'),
+  );
 
   console.log("\n--- 退出登录 ---");
   await call("POST", "/api/auth/logout");

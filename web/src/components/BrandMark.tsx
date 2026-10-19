@@ -1,5 +1,6 @@
 /**
- * 品牌标记：与 web/public/favicon.svg 同一个图形（3×3 格点，点亮的三个组成对角线）。
+ * 品牌标记：与 web/public/favicon.svg、favicon.ico 同一个图形（3×3 格点，点亮的三个组成对角线）。
+ * ICO 由 scripts/gen-favicon.mjs 生成，改图形时三处一起改。
  *
  * 这里不直接引 favicon.svg，而是内联绘制，原因是：
  *  ① 侧栏的方块底色由 CSS 变量控制（--accent），内联 SVG 能跟着主题走，<img> 不能；

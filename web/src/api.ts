@@ -65,6 +65,13 @@ export interface TagWithUsage extends Tag {
   usage_count: number;
 }
 
+/** 可在后台修改的站点信息。subtitle / description 允许为空。 */
+export interface SiteSettings {
+  title: string;
+  subtitle: string;
+  description: string;
+}
+
 export interface Activity {
   id: number;
   tag_id: number;
@@ -113,6 +120,9 @@ export const endpoints = {
   me: () => api.get<{ admin: boolean; configured: boolean }>("/api/me"),
   login: (password: string) => api.post<{ admin: boolean }>("/api/auth/login", { password }),
   logout: () => api.post<{ admin: boolean }>("/api/auth/logout"),
+
+  site: () => api.get<{ site: SiteSettings }>("/api/site"),
+  updateSite: (input: Partial<SiteSettings>) => api.patch<{ site: SiteSettings }>("/api/site", input),
 
   tags: () => api.get<{ tags: TagWithUsage[] }>("/api/tags"),
   createTag: (input: { name: string; icon: string; color: string }) => api.post<{ tag: Tag }>("/api/tags", input),

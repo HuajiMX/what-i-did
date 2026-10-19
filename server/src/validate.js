@@ -41,6 +41,14 @@ export function requireString(value, field, { min = 1, max = 200 } = {}) {
   return trimmed;
 }
 
+/** 允许空字符串的可选文本：副标题、描述留空表示不显示。 */
+export function requireOptionalString(value, field, { max = 200 } = {}) {
+  if (typeof value !== "string") throw new ValidationError(`${field} 必须是字符串`);
+  const trimmed = value.trim();
+  if (trimmed.length > max) throw new ValidationError(`${field} 长度不能超过 ${max} 个字符`);
+  return trimmed;
+}
+
 export function requireInt(value, field, { min = Number.MIN_SAFE_INTEGER, max = Number.MAX_SAFE_INTEGER } = {}) {
   if (typeof value !== "number" || !Number.isInteger(value)) {
     throw new ValidationError(`${field} 必须是整数`);

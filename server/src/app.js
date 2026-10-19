@@ -15,6 +15,7 @@ import { nowIso } from "./db.js";
 import { activityRoutes } from "./routes/activities.js";
 import { authRoutes } from "./routes/auth.js";
 import { noteRoutes } from "./routes/notes.js";
+import { siteRoutes } from "./routes/site.js";
 import { statsRoutes } from "./routes/stats.js";
 import { tagRoutes } from "./routes/tags.js";
 import { ValidationError } from "./validate.js";
@@ -83,6 +84,7 @@ export function createApp({ db, clock = () => new Date() } = {}) {
 
   // ── 路由 ────────────────────────────────────────────────────────────────
   app.route("/api/auth", authRoutes({ sessions, rateLimiter, isAdmin }));
+  app.route("/api/site", siteRoutes({ db }));
   app.route("/api/tags", tagRoutes({ db, iconNames }));
   app.route("/api/activities", activityRoutes({ db }));
   app.route("/api/notes", noteRoutes({ db }));

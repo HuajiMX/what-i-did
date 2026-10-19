@@ -204,7 +204,7 @@ try {
     returnByValue: true,
   });
   if (loggedIn.value) {
-    console.log("✓ 登录成功（侧栏出现 Tag 管理入口）");
+    console.log("✓ 登录成功（侧栏出现管理入口）");
   } else {
     failures += 1;
     console.error("✗ 登录失败，后续截图可能是未登录视角");

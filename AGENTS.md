@@ -22,12 +22,13 @@
 npm ci                    # 装依赖（postinstall 会生成 server/src/icon-names.json）
 npm run build             # 构建前端，串联 5 项检查，任一失败即中断
 npm start                 # 起服务（默认 http://127.0.0.1:8787）
-npm test                  # 单元测试：web 7 个 + server 47 个
-npm run test:smoke        # 端到端冒烟：真端口、真 HTTP、真 cookie，34 项检查
+npm test                  # 单元测试：web 16 个 + server 49 个
+npm run test:smoke        # 端到端冒烟：真端口、真 HTTP、真 cookie，39 项检查
 npm run typecheck --workspace web    # 三份 tsconfig 都要过
 npm run dev:server        # 后端带 --watch
 npm run dev:web           # 前端 5173，/api 代理到 8787
 npm run icons             # 重新生成图标清单（改图标库版本后执行）
+npm run favicon           # 由 favicon.svg 的同一图形重新生成 favicon.ico
 npm run hash-password -- '你的密码'
 ```
 
@@ -37,7 +38,7 @@ npm run hash-password -- '你的密码'
 
 ## 提交之前必须满足
 
-1. `npm test` 全绿（54 个用例）
+1. `npm test` 全绿（65 个用例）
 2. `npm run typecheck --workspace web` 零错误
 3. `npm run build` 五项检查全绿（体积、图标名、类名、对比度）
 4. 涉及界面/尺寸的改动，**实测数值而不是看截图**（见下面的"验证方法"）
@@ -56,14 +57,15 @@ server/src/
   index.js      入口：配置自检、启动、优雅关闭
   config.js     .env 解析（已存在的环境变量优先，不会被文件覆盖）
   db.js         SQLite 打开 + schema 执行（WAL 模式）
-  schema.sql    4 张表，全部 CREATE TABLE IF NOT EXISTS
+  schema.sql    5 张表，全部 CREATE TABLE IF NOT EXISTS
   dates.js      日期纯函数
   stats.js      统计纯函数（聚合、连续天数、趋势分桶）
+  site.js       站点信息默认值与读取
   auth.js       scrypt 校验、会话、限速、clientIp
-  routes/       tags / activities / notes / stats / auth
+  routes/       site / tags / activities / notes / stats / auth
 web/src/
   icons/        图标三层结构（见下）
-  pages/        日历 / 统计 / 随手记 / Tag 管理 / 登录
+  pages/        日历 / 统计 / 随手记 / 管理 / 登录
   components/   当天面板、确认弹窗、趋势图、环形图、品牌标记
   lib/          日期工具、useAsync、preview（预览取舍规则）
   state/        登录态、提示条
@@ -76,6 +78,7 @@ web/src/
 - **活动一行一条记录**，次数由 `COUNT(*)` 得出。不要加冗余的 `count` 列。
 - **统计在 JS 纯函数里算**，不写复杂 SQL。每个口径都要能被单测覆盖（连续天数这类边界密集的逻辑尤其如此）。
 - **单管理员、无用户表**。鉴权是一个二值判断，不是权限系统。
+- **站点文案（title / subtitle / description）存 `settings` 表**，不写 `.env`：后台保存即生效，且能跟着数据库一起备份。默认值在 `server/src/site.js`，前端加载失败时的兜底值在 `web/src/state/site.tsx`，改动时两处同步。
 - **`config.adminPasswordHash` 是 getter**，运行时读环境变量。别改成启动时快照，否则轮换密码需要重启。
 
 ---
@@ -120,7 +123,7 @@ const C = Icons["Icon" + name];
 
 | 层 | 位置 | 谁加载 |
 | --- | --- | --- |
-| 常用 58 个 | `web/src/icons/common.ts` 显式具名 import | 所有访客（入口包） |
+| 常用 60 个 | `web/src/icons/common.ts` 显式具名 import | 所有访客（入口包） |
 | 全库 6238 个 | `web/src/icons/generated/`（生成物） | 真用到冷门图标的访客，懒加载 chunk |
 | 选择器 | `IconPicker` | 仅管理员，点开时 |
 
