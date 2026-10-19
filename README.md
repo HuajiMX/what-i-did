@@ -76,8 +76,8 @@ npm run dev:web               # 前端 http://127.0.0.1:5173（/api 自动代理
 ### 测试
 
 ```bash
-npm test          # web + server 单测：日期边界、统计口径、鉴权、接口行为、favicon（65 个用例）
-npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真静态文件（39 项检查）
+npm test          # web + server 单测：日期边界、统计口径、鉴权、接口行为、favicon（66 个用例）
+npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真静态文件（42 项检查）
 ```
 
 `test:smoke` 会在 8791 端口用独立的临时数据库起一个真实服务实例，覆盖跨年连续天数、
@@ -128,6 +128,8 @@ BASE=http://127.0.0.1:8787 node scripts/screenshot-admin.mjs --password '你的�
 | `NODE_ENV` | 无 | `production` 时会强制校验上面的密钥类配置 |
 
 站点标题、副标题与描述不属于环境变量：它们存在数据库的 `settings` 表里，在后台「管理」页修改，保存后立即生效，无需重启服务。副标题与描述可以留空（留空后不显示 / 不输出 meta description）。
+
+服务端会在返回 `index.html` 前把当前配置的 title 与 meta description 注入首屏 HTML，因此搜索引擎和其他不执行 JS 的抓取器也能读到后台设置的值；前端仍会在 SPA 路由切换时更新 `document.title`。
 
 ### 写入频率上限（批量补记历史时需要注意）
 
@@ -265,10 +267,10 @@ server/src/
   dates.js       日期纯函数（月末钳制、闰年、周对齐）
   stats.js       统计纯函数（聚合、连续天数、趋势分桶）
   auth.js        scrypt 校验、会话、限速
-  site.js        站点信息默认值与读取
+  site.js        站点信息默认值、读取与首屏 HTML 注入
   validate.js    入参校验与 Tag 调色板
   routes/        site / tags / activities / notes / stats / auth
-server/test/     49 个用例（node --test）
+server/test/     50 个用例（node --test）
 web/src/
   icons/         图标三层结构
   pages/         日历 / 统计 / 随手记 / 管理 / 登录

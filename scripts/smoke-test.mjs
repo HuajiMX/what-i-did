@@ -90,6 +90,14 @@ try {
     "公开端立刻读到新站点信息",
     sitePublic.body.site.subtitle === "E2E 副标题" && sitePublic.body.site.description === "E2E 描述",
   );
+  const homeHtml = await (await fetch(`${BASE}/`)).text();
+  check("首页 HTML 已注入配置后的 title", homeHtml.includes("<title>日历 · E2E 站点</title>"));
+  check(
+    "首页 HTML 已注入配置后的 description",
+    homeHtml.includes('<meta name="description" content="E2E 描述" />'),
+  );
+  const statsHtml = await (await fetch(`${BASE}/stats`)).text();
+  check("深层路由 HTML 按页面名注入 title", statsHtml.includes("<title>统计 · E2E 站点</title>"));
 
   console.log("\n--- Tag 管理 ---");
   const coding = await call("POST", "/api/tags", { name: "编程", icon: "code", color: "#0091ff" });

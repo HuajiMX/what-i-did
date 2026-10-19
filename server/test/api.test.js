@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { createApp } from "../src/app.js";
 import { hashPassword, SESSION_COOKIE } from "../src/auth.js";
 import { createDatabase } from "../src/db.js";
+import { renderIndexHtml } from "../src/site.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const iconNames = JSON.parse(readFileSync(path.join(here, "..", "src", "icon-names.json"), "utf8")).names;
@@ -150,6 +151,35 @@ test("站点信息允许留空副标题与描述，但不允许空标题或超�
   assert.equal((await admin.fetch("PATCH", "/api/site", { subtitle: "x".repeat(61) })).status, 400);
   assert.equal((await admin.fetch("PATCH", "/api/site", { description: "x".repeat(201) })).status, 400);
   assert.equal((await admin.fetch("PATCH", "/api/site", { title: 123 })).status, 400);
+});
+
+test("服务端把站点信息注入首屏 HTML，并按页面名与转义规则输出", () => {
+  const source = `<!doctype html><html><head><title>旧标题</title><meta name="description" content="旧描述"></head><body></body></html>`;
+  const site = { title: "每日记录", subtitle: "生活切片", description: "记录每天做过的事" };
+
+  const home = renderIndexHtml(source, site, "/");
+  assert.match(home, /<title>日历 · 每日记录<\/title>/);
+  assert.match(home, /<meta name="description" content="记录每天做过的事" \/>/);
+
+  const stats = renderIndexHtml(source, site, "/stats");
+  assert.match(stats, /<title>统计 · 每日记录<\/title>/);
+
+  // 标题与描述来自后台输入，必须转义后再拼进 HTML
+  const escaped = renderIndexHtml(
+    source,
+    { ...site, title: `<script>"x"</script>`, description: `a"b&c` },
+    "/calendar",
+  );
+  assert.ok(!escaped.includes("<script>"), "标题里的 script 标签必须被转义");
+  assert.match(escaped, /&lt;script&gt;&quot;x&quot;&lt;\/script&gt;/);
+  assert.match(escaped, /content="a&quot;b&amp;c"/);
+
+  // 描述留空时整条 meta 移除；标题/meta 缺失时会补在 </head> 前
+  assert.ok(!renderIndexHtml(source, { ...site, description: "" }, "/notes").includes('name="description"'));
+  const bare = "<!doctype html><html><head></head><body></body></html>";
+  const injected = renderIndexHtml(bare, site, "/login");
+  assert.match(injected, /<title>登录 · 每日记录<\/title>/);
+  assert.match(injected, /<meta name="description" content="记录每天做过的事" \/>/);
 });
 
 // ── 未授权写入必须被拒 ───────────────────────────────────────────────────

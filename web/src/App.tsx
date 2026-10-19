@@ -165,7 +165,11 @@ function TopBar({ admin, ready }: { admin: boolean; ready: boolean }) {
   );
 }
 
-/** 页面名用于浏览器标签标题：保持"页面 · 站点"的层级，站点名可配置。 */
+/**
+ * 页面名用于浏览器标签标题：保持"页面 · 站点"的层级，站点名可配置。
+ * 与 server/src/site.js 的 pageLabel 保持一致：服务端负责首屏 title，前端负责 SPA 切换，
+ * 两边不一致会导致刷新时标题跳一下。
+ */
 function pageLabel(pathname: string): string {
   if (pathname.startsWith("/stats")) return "统计";
   if (pathname.startsWith("/notes")) return "随手记";

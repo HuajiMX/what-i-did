@@ -12,6 +12,7 @@ import {
 } from "./auth.js";
 import { config } from "./config.js";
 import { nowIso } from "./db.js";
+import { readSiteSettings, renderIndexHtml } from "./site.js";
 import { activityRoutes } from "./routes/activities.js";
 import { authRoutes } from "./routes/auth.js";
 import { noteRoutes } from "./routes/notes.js";
@@ -96,10 +97,6 @@ export function createApp({ db, clock = () => new Date() } = {}) {
   // ── 静态前端 ────────────────────────────────────────────────────────────
   const hasWebDist = existsSync(config.webDist);
   if (hasWebDist) {
-    // 带内容哈希的产物可以长缓存；index.html 必须每次校验，否则更新后用户会一直看到旧版本
-    app.use("/assets/*", serveStatic({ root: config.webDist, onFound: (p, c) => c.header("Cache-Control", "public, max-age=31536000, immutable") }));
-    app.use("/*", serveStatic({ root: config.webDist }));
-
     // 前端路由深链接（/stats、/notes）在服务端没有对应文件，回退到 index.html。
     //
     // index.html 按修改时间缓存：重建后无需重启服务即可生效。
@@ -117,11 +114,28 @@ export function createApp({ db, clock = () => new Date() } = {}) {
       return cached.body;
     };
 
-    app.notFound((c) => {
-      if (c.req.path.startsWith("/api/")) return c.json({ error: "接口不存在" }, 404);
+    /**
+     * 首屏 HTML 在服务端注入站点 title / description。
+     * 不能只靠前端 useEffect：爬虫通常不执行 JS，抓到的会是打包时的默认文案。
+     */
+    const sendIndex = (c) => {
+      const html = renderIndexHtml(readIndex().toString("utf8"), readSiteSettings(db), c.req.path);
       c.header("Content-Type", "text/html; charset=utf-8");
       c.header("Cache-Control", "no-cache");
-      return c.body(readIndex());
+      return c.req.method === "HEAD" ? c.body(null) : c.body(html);
+    };
+
+    // 首页与 /index.html 会被 serveStatic 直接命中，必须显式注册在静态中间件之前。
+    app.on(["GET", "HEAD"], "/", sendIndex);
+    app.on(["GET", "HEAD"], "/index.html", sendIndex);
+
+    // 带内容哈希的产物可以长缓存；index.html 必须每次校验，否则更新后用户会一直看到旧版本
+    app.use("/assets/*", serveStatic({ root: config.webDist, onFound: (p, c) => c.header("Cache-Control", "public, max-age=31536000, immutable") }));
+    app.use("/*", serveStatic({ root: config.webDist }));
+
+    app.notFound((c) => {
+      if (c.req.path.startsWith("/api/")) return c.json({ error: "接口不存在" }, 404);
+      return sendIndex(c);
     });
   } else {
     app.notFound((c) =>
