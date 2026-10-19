@@ -19,11 +19,14 @@ const NAV = [
 
 export default function App() {
   const { admin, ready } = useAuth();
-  const { site } = useSite();
+  const { site, ready: siteReady } = useSite();
   const location = useLocation();
 
   // 站点 title / description 是可配置的：浏览器标签页与 meta 描述跟随当前页面变化。
+  // 必须等服务端注入值或接口返回后再写，否则会先用兜底值覆盖首屏 title，造成可见的跳变。
   useEffect(() => {
+    if (!siteReady) return;
+
     const page = pageLabel(location.pathname);
     document.title = site.title ? `${page} · ${site.title}` : page;
 
@@ -31,7 +34,7 @@ export default function App() {
     if (!meta) return;
     if (site.description) meta.setAttribute("content", site.description);
     else meta.removeAttribute("content");
-  }, [location.pathname, site.title, site.description]);
+  }, [location.pathname, site.title, site.description, siteReady]);
 
   return (
     <div className="app">

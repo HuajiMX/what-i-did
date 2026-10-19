@@ -77,7 +77,7 @@ npm run dev:web               # 前端 http://127.0.0.1:5173（/api 自动代理
 
 ```bash
 npm test          # web + server 单测：日期边界、统计口径、鉴权、接口行为、favicon（66 个用例）
-npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真静态文件（42 项检查）
+npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真静态文件（43 项检查）
 ```
 
 `test:smoke` 会在 8791 端口用独立的临时数据库起一个真实服务实例，覆盖跨年连续天数、
@@ -130,6 +130,8 @@ BASE=http://127.0.0.1:8787 node scripts/screenshot-admin.mjs --password '你的�
 站点标题、副标题与描述不属于环境变量：它们存在数据库的 `settings` 表里，在后台「管理」页修改，保存后立即生效，无需重启服务。副标题与描述可以留空（留空后不显示 / 不输出 meta description）。
 
 服务端会在返回 `index.html` 前把当前配置的 title 与 meta description 注入首屏 HTML，因此搜索引擎和其他不执行 JS 的抓取器也能读到后台设置的值；前端仍会在 SPA 路由切换时更新 `document.title`。
+
+同时会注入 `site-title` / `site-subtitle` / `site-description` 三条 meta，前端首屏直接读取它们完成水合。这样 `/api/site` 返回前不会先用兜底文案渲染，浏览器标签页与侧栏也就不会先闪一下「我做了什么」再变成配置值。
 
 ### 写入频率上限（批量补记历史时需要注意）
 

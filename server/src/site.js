@@ -66,6 +66,13 @@ export function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (char) => HTML_ESCAPES[char]);
 }
 
+/** 替换或插入一条 meta。name 是程序常量，不参与转义；content 必须转义。 */
+function setMetaTag(html, name, value) {
+  const pattern = new RegExp(`<meta\\s+name=["']${name}["'][^>]*>`, "i");
+  const tag = `<meta name="${name}" content="${escapeHtml(value)}" />`;
+  return pattern.test(html) ? html.replace(pattern, () => tag) : html.replace(/<\/head>/i, () => `  ${tag}\n</head>`);
+}
+
 /**
  * 把数据库里的站点信息写进 index.html 的 <title> 与 meta description。
  *
@@ -96,6 +103,13 @@ export function renderIndexHtml(html, site, pathname = "/") {
   } else {
     output = output.replace(descriptionPattern, "");
   }
+
+  // 给前端首屏水合用的原始值。不能用 <title> 反推：它带「页面名 ·」前缀。
+  // 这三条始终输出（即使值为空），SiteProvider 才能区分"服务端已注入"和"没有这份数据"，
+  // 否则它会在接口返回前先闪一下打包时的默认文案。
+  output = setMetaTag(output, "site-title", site.title ?? "");
+  output = setMetaTag(output, "site-subtitle", site.subtitle ?? "");
+  output = setMetaTag(output, "site-description", site.description ?? "");
 
   return output;
 }

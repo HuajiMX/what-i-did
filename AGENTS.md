@@ -23,7 +23,7 @@ npm ci                    # 装依赖（postinstall 会生成 server/src/icon-na
 npm run build             # 构建前端，串联 5 项检查，任一失败即中断
 npm start                 # 起服务（默认 http://127.0.0.1:8787）
 npm test                  # 单元测试：web 16 个 + server 50 个
-npm run test:smoke        # 端到端冒烟：真端口、真 HTTP、真 cookie，42 项检查
+npm run test:smoke        # 端到端冒烟：真端口、真 HTTP、真 cookie，43 项检查
 npm run typecheck --workspace web    # 三份 tsconfig 都要过
 npm run dev:server        # 后端带 --watch
 npm run dev:web           # 前端 5173，/api 代理到 8787
@@ -79,7 +79,7 @@ web/src/
 - **统计在 JS 纯函数里算**，不写复杂 SQL。每个口径都要能被单测覆盖（连续天数这类边界密集的逻辑尤其如此）。
 - **单管理员、无用户表**。鉴权是一个二值判断，不是权限系统。
 - **站点文案（title / subtitle / description）存 `settings` 表**，不写 `.env`：后台保存即生效，且能跟着数据库一起备份。默认值在 `server/src/site.js`，前端加载失败时的兜底值在 `web/src/state/site.tsx`，改动时两处同步。
-- **首屏 title / meta description 由服务端注入**（`renderIndexHtml`），不能只靠前端 `useEffect`——爬虫通常不执行 JS，否则抓到的还是打包时的默认文案。首页与 `/index.html` 必须注册在 `serveStatic` 之前，SPA 深链接走 `notFound` 时也要注入。
+- **首屏 title / meta description 由服务端注入**（`renderIndexHtml`），不能只靠前端 `useEffect`——爬虫通常不执行 JS，否则抓到的还是打包时的默认文案。首页与 `/index.html` 必须注册在 `serveStatic` 之前，SPA 深链接走 `notFound` 时也要注入。同时注入 `site-title` / `site-subtitle` / `site-description` 三条 meta 供 `SiteProvider` 首屏水合；否则接口返回前会先按兜底值渲染，标签页会闪一下「我做了什么」。
 - **`config.adminPasswordHash` 是 getter**，运行时读环境变量。别改成启动时快照，否则轮换密码需要重启。
 
 ---

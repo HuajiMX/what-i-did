@@ -160,6 +160,10 @@ test("服务端把站点信息注入首屏 HTML，并按页面名与转义规则
   const home = renderIndexHtml(source, site, "/");
   assert.match(home, /<title>日历 · 每日记录<\/title>/);
   assert.match(home, /<meta name="description" content="记录每天做过的事" \/>/);
+  // 前端首屏水合用的原始值：没有「页面名 ·」前缀
+  assert.match(home, /<meta name="site-title" content="每日记录" \/>/);
+  assert.match(home, /<meta name="site-subtitle" content="生活切片" \/>/);
+  assert.match(home, /<meta name="site-description" content="记录每天做过的事" \/>/);
 
   const stats = renderIndexHtml(source, site, "/stats");
   assert.match(stats, /<title>统计 · 每日记录<\/title>/);
@@ -173,13 +177,17 @@ test("服务端把站点信息注入首屏 HTML，并按页面名与转义规则
   assert.ok(!escaped.includes("<script>"), "标题里的 script 标签必须被转义");
   assert.match(escaped, /&lt;script&gt;&quot;x&quot;&lt;\/script&gt;/);
   assert.match(escaped, /content="a&quot;b&amp;c"/);
+  assert.match(escaped, /<meta name="site-title" content="&lt;script&gt;&quot;x&quot;&lt;\/script&gt;" \/>/);
 
-  // 描述留空时整条 meta 移除；标题/meta 缺失时会补在 </head> 前
-  assert.ok(!renderIndexHtml(source, { ...site, description: "" }, "/notes").includes('name="description"'));
+  // 描述留空时 SEO meta 整条移除，但水合用 meta 仍输出空值
+  const noDescription = renderIndexHtml(source, { ...site, description: "" }, "/notes");
+  assert.ok(!noDescription.includes('name="description"'));
+  assert.match(noDescription, /<meta name="site-description" content="" \/>/);
   const bare = "<!doctype html><html><head></head><body></body></html>";
   const injected = renderIndexHtml(bare, site, "/login");
   assert.match(injected, /<title>登录 · 每日记录<\/title>/);
   assert.match(injected, /<meta name="description" content="记录每天做过的事" \/>/);
+  assert.match(injected, /<meta name="site-title" content="每日记录" \/>/);
 });
 
 // ── 未授权写入必须被拒 ───────────────────────────────────────────────────

@@ -96,6 +96,12 @@ try {
     "首页 HTML 已注入配置后的 description",
     homeHtml.includes('<meta name="description" content="E2E 描述" />'),
   );
+  check(
+    "首页 HTML 带水合用的 site-* meta",
+    homeHtml.includes('<meta name="site-title" content="E2E 站点" />') &&
+      homeHtml.includes('<meta name="site-subtitle" content="E2E 副标题" />') &&
+      homeHtml.includes('<meta name="site-description" content="E2E 描述" />'),
+  );
   const statsHtml = await (await fetch(`${BASE}/stats`)).text();
   check("深层路由 HTML 按页面名注入 title", statsHtml.includes("<title>统计 · E2E 站点</title>"));
 
