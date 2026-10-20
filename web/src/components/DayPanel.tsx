@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ApiError, endpoints, type Tag } from "../api";
 import { Icon } from "../icons/Icon";
 import { useAsync } from "../lib/useAsync";
+import { dayPanelTags } from "../lib/dayPanel";
 import { humanDate } from "../lib/date";
 import { useAuth } from "../state/auth";
 import { useToast } from "../state/toast";
@@ -68,7 +69,11 @@ export default function DayPanel({ date, tags, onChanged, showNotes = true, auto
   for (const activity of day.data?.activities ?? []) {
     counts.set(activity.tag_id, (counts.get(activity.tag_id) ?? 0) + 1);
   }
-  const ordered = [...tags].sort((a, b) => a.sort_order - b.sort_order || a.id - b.id);
+  // 访客只看有记录的 Tag；管理员要能记录任意 Tag，所以列全部，有记录的排在前面。
+  // 取舍规则抽在 lib/dayPanel.ts 里，有单测覆盖。
+  // 等当天数据回来再列：否则面板会先闪一排 0，再变成正确的列表
+  const listed = day.data ? dayPanelTags(tags, counts, admin) : [];
+  const knownTags = tags.length;
   const totalCount = day.data?.activities.length ?? 0;
   const dayNotes = notes.data?.notes ?? [];
 
@@ -86,22 +91,25 @@ export default function DayPanel({ date, tags, onChanged, showNotes = true, auto
           {admin ? <span className="card-head-sub">点 + 记录，点 − 撤销</span> : null}
         </div>
 
-        {ordered.length === 0 ? (
-          <div className="alert">
-            还没有任何 Tag。
-            {admin ? (
-              <>
-                {" "}
-                先去 <Link to="/tags">Tag 管理</Link> 建几个，例如「编程」「运动」「学习」。
-              </>
-            ) : (
-              " 等管理员创建 Tag 后就能记录了。"
-            )}
-          </div>
+        {listed.length === 0 ? (
+          knownTags === 0 ? (
+            <div className="alert">
+              还没有任何 Tag。
+              {admin ? (
+                <>
+                  {" "}
+                  先去 <Link to="/tags">Tag 管理</Link> 建几个，例如「编程」「运动」「学习」。
+                </>
+              ) : (
+                " 等管理员创建 Tag 后就能记录了。"
+              )}
+            </div>
+          ) : (
+            <p className="faint tiny">这天还没有记录。</p>
+          )
         ) : (
           <ul className="record-grid">
-            {ordered.map((tag) => {
-              const count = counts.get(tag.id) ?? 0;
+            {listed.map(({ tag, count }) => {
               return (
                 <li key={tag.id} className={`record-item ${count > 0 ? "record-item-on" : ""}`}>
                   <span className="tag-icon" style={{ color: tag.color, background: `${tag.color}1a` }}>

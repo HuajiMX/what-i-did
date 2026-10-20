@@ -22,7 +22,7 @@
 npm ci                    # 装依赖（postinstall 会生成 server/src/icon-names.json）
 npm run build             # 构建前端，串联 5 项检查，任一失败即中断
 npm start                 # 起服务（默认 http://127.0.0.1:8787）
-npm test                  # 单元测试：web 16 个 + server 50 个
+npm test                  # 单元测试：web 22 个 + server 50 个
 npm run test:smoke        # 端到端冒烟：真端口、真 HTTP、真 cookie，43 项检查
 npm run typecheck --workspace web    # 三份 tsconfig 都要过
 npm run dev:server        # 后端带 --watch
@@ -38,7 +38,7 @@ npm run hash-password -- '你的密码'
 
 ## 提交之前必须满足
 
-1. `npm test` 全绿（66 个用例）
+1. `npm test` 全绿（72 个用例）
 2. `npm run typecheck --workspace web` 零错误
 3. `npm run build` 五项检查全绿（体积、图标名、类名、对比度）
 4. 涉及界面/尺寸的改动，**实测数值而不是看截图**（见下面的"验证方法"）

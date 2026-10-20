@@ -75,8 +75,6 @@ export default function TagsPage() {
         </div>
       </div>
 
-      <SiteSettingsForm />
-
       <div className="page-head">
         <div>
           <h2>Tag 管理</h2>
@@ -131,6 +129,9 @@ export default function TagsPage() {
       ) : null}
 
       {draft ? <TagDraft draft={draft} setDraft={setDraft} onDone={() => { setDraft(null); tags.reload(); }} /> : null}
+
+      {/* 站点信息是低频配置，排在 Tag 管理之后 */}
+      <SiteSettingsForm />
 
       <ConfirmDialog
         open={pendingDelete !== null}
