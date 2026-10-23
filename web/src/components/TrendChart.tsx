@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 import type { TrendPoint } from "../api";
+import { niceChartAxis } from "../lib/chartAxis";
 import { bucketLabel } from "../lib/date";
 
 interface Props {
@@ -63,11 +64,14 @@ export default function TrendChart({ points, bucketType }: Props) {
     const innerW = Math.max(1, unit - PAD_LEFT - PAD_RIGHT);
     const innerH = HEIGHT - PAD_TOP - PAD_BOTTOM;
     const max = Math.max(1, ...points.map((point) => point.count));
+    // 纵轴刻度必须按"刻度值"定位，不能按 max 的百分比四舍五入。max=3 时
+    // 旧写法会把标签 2 画在 1.5 的位置；这里生成 0/1/2/3 四档等距刻度。
+    const axis = niceChartAxis(max);
     const stepX = points.length > 1 ? innerW / (points.length - 1) : 0;
 
     const coords = points.map((point, index) => ({
       x: PAD_LEFT + (points.length > 1 ? index * stepX : innerW / 2),
-      y: PAD_TOP + innerH - (point.count / max) * innerH,
+      y: PAD_TOP + innerH - (point.count / axis.max) * innerH,
       point,
     }));
 
@@ -79,9 +83,9 @@ export default function TrendChart({ points, bucketType }: Props) {
       first && last ? `${line} L${last.x.toFixed(1)},${bottom} L${first.x.toFixed(1)},${bottom} Z` : "";
 
     const labelStride = Math.max(1, Math.ceil(points.length / 8));
-    const gridValues = [0, 0.5, 1].map((ratio) => ({
-      y: PAD_TOP + innerH - ratio * innerH,
-      value: Math.round(max * ratio),
+    const gridValues = axis.values.map((value) => ({
+      y: PAD_TOP + innerH - (value / axis.max) * innerH,
+      value,
     }));
 
     /*
@@ -92,7 +96,7 @@ export default function TrendChart({ points, bucketType }: Props) {
      */
     const labelRatios = coords.map((c) => c.x / unit);
 
-    return { unit, coords, line, area, labelStride, gridValues, max, labelRatios };
+    return { unit, coords, line, area, labelStride, gridValues, max, axisMax: axis.max, labelRatios };
   }, [points, viewWidth]);
 
   if (points.length === 0) {

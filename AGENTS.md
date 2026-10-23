@@ -22,7 +22,7 @@
 npm ci                    # 装依赖（postinstall 会生成 server/src/icon-names.json）
 npm run build             # 构建前端，串联 5 项检查，任一失败即中断
 npm start                 # 起服务（默认 http://127.0.0.1:8787）
-npm test                  # 单元测试：web 22 个 + server 50 个
+npm test                  # 单元测试：web 25 个 + server 50 个
 npm run test:smoke        # 端到端冒烟：真端口、真 HTTP、真 cookie，43 项检查
 npm run typecheck --workspace web    # 三份 tsconfig 都要过
 npm run dev:server        # 后端带 --watch
@@ -38,7 +38,7 @@ npm run hash-password -- '你的密码'
 
 ## 提交之前必须满足
 
-1. `npm test` 全绿（72 个用例）
+1. `npm test` 全绿（75 个用例）
 2. `npm run typecheck --workspace web` 零错误
 3. `npm run build` 五项检查全绿（体积、图标名、类名、对比度）
 4. 涉及界面/尺寸的改动，**实测数值而不是看截图**（见下面的"验证方法"）
@@ -107,6 +107,8 @@ web/src/
 那会让宽高独立缩放，折线被压扁、圆点变椭圆。高度固定、宽度交给 CSS（`width: 100%`），只有窄屏用 `min-width` + 横向滚动。
 
 **`min-width` 必须设在 SVG 自己身上**，设在滚动容器上不会让子元素超出。
+
+纵轴刻度要按"刻度值"定位，不能取 max 的 0/50%/100% 再四舍五入。max=3 时那是 0/1.5/3，标签却会写成 0/2/3，2 就落在半高——见 `web/src/lib/chartAxis.ts`。
 
 ### 坐标轴对齐：用同一个坐标系算绝对位置
 

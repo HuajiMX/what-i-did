@@ -76,7 +76,7 @@ npm run dev:web               # 前端 http://127.0.0.1:5173（/api 自动代理
 ### 测试
 
 ```bash
-npm test          # web + server 单测：日期边界、统计口径、鉴权、接口行为、当天面板取舍、favicon（72 个用例）
+npm test          # web + server 单测：日期边界、统计口径、图表纵轴刻度、鉴权、接口行为、当天面板取舍、favicon（75 个用例）
 npm run test:smoke   # 端到端冒烟：真端口、真 HTTP、真 cookie、真静态文件（43 项检查）
 ```
 
